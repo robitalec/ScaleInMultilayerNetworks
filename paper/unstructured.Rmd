@@ -1,0 +1,35 @@
+---
+output: 
+  github_document:
+    toc: true
+author: Alec Robitaille, Quinn M.R. Webber, Julie Turner and Eric Vander Wal
+date: "-- `r Sys.Date()`"
+---
+
+#### From issue organisers
+
+* Appreciate ambition to link LE and SNA.
+* Like the idea of reviewing different kinds of spatial data relevant to ML framework
+* Hope simulations will be as relevant to movement and SNA data typically collected
+* Manuscript will be relevant to both theoreticians and empiricists
+
+
+## Keywords
+
+1. spatial scale
+1. social systems
+1. multilayer networks
+1. landscape ecology
+1. network theory
+
+
+## Boxes / paper layout
+
+* Abstract
+* Intro
+* Box 1: Mathematical + language definitions of multilayer networks
+* Box 2: Types of spatiotemporally explicit data and considerations relevant to these e.g. fix rate/grouping with GPS and gambit of the group, etc (table)
+* Spatial variables - example of GPS data, sampling landcover and networks across landcover classes?
+* Temporal variables - example of GoG data, chunked seasonally maybe?
+* Relevant multilayer metrics with above two? 
+* Conclusion/fin
