@@ -30,6 +30,5 @@ date: "-- `r Sys.Date()`"
 * Box 1: Mathematical + language definitions of multilayer networks
 * Box 2: Types of spatiotemporally explicit data and considerations relevant to these e.g. fix rate/grouping with GPS and gambit of the group, etc (table)
 * Spatial variables - example of GPS data, sampling landcover and networks across landcover classes?
-* Temporal variables - example of GoG data, chunked seasonally maybe?
-* Relevant multilayer metrics with above two? 
+* Relevant multilayer metrics 
 * Conclusion/fin
