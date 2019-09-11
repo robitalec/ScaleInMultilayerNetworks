@@ -13,6 +13,7 @@ date: "-- `r Sys.Date()`"
 * Hope simulations will be as relevant to movement and SNA data typically collected
 * Manuscript will be relevant to both theoreticians and empiricists
 
+**Conservation implications**
 
 ## Keywords
 
@@ -23,12 +24,35 @@ date: "-- `r Sys.Date()`"
 1. network theory
 
 
-## Boxes / paper layout
+## Skeleton
+* Abstract
+* Brief introduction
+  * Networks, social networks, animal social systems 
+  * Landscape ecology, scale
+* Multilayer Networks
+  * What is a ML network
+  * What kinds of ML nets exist
+  * Which are relevant to spatial variables
+* Scale 
+  * What is scale
+  * In LE lit, how has scale been investigated
+  * Elements of scale relevant to animal social systems, animal movement data, landcover data
+* Box 1: Types of spatiotemporally explicit data and considerations relevant to these e.g. fix rate/grouping with GPS and gambit of the group, etc (table)
+* Box 2: Mathematical + language definitions of multilayer networks, metrics and measures of ML networks that are relevant to spatial data
+* Simulations
+* Discussion/results
+* Brief conclusion
+
+
+---
+
+From a sample of CZ papers:
 
 * Abstract
-* Intro
-* Box 1: Mathematical + language definitions of multilayer networks
-* Box 2: Types of spatiotemporally explicit data and considerations relevant to these e.g. fix rate/grouping with GPS and gambit of the group, etc (table)
-* Spatial variables - example of GPS data, sampling landcover and networks across landcover classes?
-* Relevant multilayer metrics 
-* Conclusion/fin
+* Materials and Methods
+* Results
+* Discussion
+
+and sometimes
+* Conservation implications
+* Conclusion
