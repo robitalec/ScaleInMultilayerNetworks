@@ -77,20 +77,28 @@ What kinds of spatial scale are there
 
 # Box 1: Types of spatiotemporally explicit data
 
-Spatial can be
+Spatial data can be:
 
-how associations are measured: e.g. spatsoc how relocations are
-categorized: e.g. landcover
+  - how associations are measured: e.g. spatsoc
+  - how relocations are categorized: e.g. landcover
 
-Multilayer networks incoroprate spatial variables in two ways: 1. for
-determining association between individuals in a social system 1. for
-characterizing spatial context of social systems
+Multilayer networks incoroprate spatial variables in two ways:
 
-For example, association is determined between individuals Telemetry,
-e.g. GPS or radiotelemetry, is used to
+1.  for determining association between individuals in a social system
+2.  for characterizing the spatial context of social systems
 
-proximity based social networks (PBSNs) are association networks based
-on close proximity between individuals (Spiegel et al. 2016)
+For example, association between individuals can be determined using
+georeferenced biologging devices such as radio‐frequency identification
+tags, radiotelemetry, and global positioning system (GPS) devices.
+Proximity based social networks (PBSNs) are association networks based
+on close proximity between individuals (Spiegel et al. 2016).
+
+The spatial context of social systems can be defined as all
+
+what is the spatial context of an animal social system
+
+explicit spatial locations habitat patches landscape/habitat
+connectivity
 
 # References
 

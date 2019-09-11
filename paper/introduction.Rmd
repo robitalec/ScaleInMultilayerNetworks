@@ -9,6 +9,8 @@ bibliography: ../references/refs.bib
 ---
 
 
+
+
 # Introduction
 
 Animal social systems are complex and multifaceted
@@ -24,6 +26,9 @@ along with spatial variables, comes a large history of landscape ecology explori
 
 here we'll use simulations to evaluate the impact of scale on social and spatial variables 
 to better understand it's impact, implications in ML networks
+
+
+
 
 
 # Multilayer Networks
@@ -52,6 +57,9 @@ fix rate and
 spatial variables defined by 
 
 
+
+
+
 # Scale
 What is scale
 
@@ -66,19 +74,40 @@ How might scale influence results
 What kinds of spatial scale are there
 
 
+
+
 # Box 1: Types of spatiotemporally explicit data
 
-Spatial data can be 
+Spatial data can be:
 
-how associations are measured: e.g. spatsoc
-how relocations are categorized: e.g. landcover
+* how associations are measured: e.g. spatsoc
+* how relocations are categorized: e.g. landcover
 
 Multilayer networks incoroprate spatial variables in two ways:
+
 1. for determining association between individuals in a social system
 1. for characterizing the spatial context of social systems
 
 
-For example, association between individuals can be determined using georeferenced biologging devices such as radio‐frequency identification tags, radiotelemetry, and global positioning system (GPS) devices. Proximity based social networks (PBSNs) are association networks based on close proximity between individuals [@spiegel2016]. 
+## Measuring association
+For example, association between individuals can be determined using georeferenced biologging devices such as radio‐frequency identification tags, radiotelemetry, and global positioning system (GPS) devices. 
+
+Proximity based social networks (PBSNs) are association networks based on close proximity between individuals [@spiegel2016]. 
+
+Biologging with GPS allows for simultaneous spatiotemporal sampling of multiple individuals in a group or population 
+
+
+
+
+## Spatial context
+The spatial context of social systems can be defined as all
+
+what is the spatial context of an animal social system
+
+explicit spatial locations
+habitat patches
+landscape/habitat connectivity
+social variable + home range overlap = opportunity to interact
 
 
 
