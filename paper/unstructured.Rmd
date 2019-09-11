@@ -37,7 +37,7 @@ date: "-- `r Sys.Date()`"
   * What is scale
   * In LE lit, how has scale been investigated
   * Elements of scale relevant to animal social systems, animal movement data, landcover data
-* Box 1: Types of spatiotemporally explicit data and considerations relevant to these e.g. fix rate/grouping with GPS and gambit of the group, etc (table)
+* Box 1: Types of spatially explicit data and considerations relevant to these e.g. fix rate/grouping with GPS and gambit of the group, etc (table)
 * Box 2: Mathematical + language definitions of multilayer networks, metrics and measures of ML networks that are relevant to spatial data
 * Simulations
 * Discussion/results
