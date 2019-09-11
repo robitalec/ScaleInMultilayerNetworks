@@ -27,9 +27,12 @@ to better understand it's impact, implications in ML networks
 
 
 # Multilayer Networks
+Multilayer networks combine network layers with interlayer edges
 
+Two main types of multilayer networks exist: multiplex networks and interconnected networks. Layers in multiplex networks consist of the same entities with each layer representing either a different type of interaction (as in multirelational networks) or a different time point or window (as in temporal networks). Layers in interconnected networks consist of the same or different entities with layers representing different subsystems (as in networks of networks), different types of entities (as in intercontextual networks), or different spatial locations (as in spatial networks). 
 
-Multilayer networks combine multiple networks layers with interlayer edges
+Of these, we have identified multirelational networks, networks of networks, intercontextual networks and spatial networks as likely to have spatial and scale considerations
+
 
 Layers in multilayer networks can be
 Animal social systems are 
@@ -37,8 +40,6 @@ Animal social systems are
 What is a network
 
 How does a ML network build on that
-
-What kinds of ML nets exist
 
 Which can include spatial variables
 
@@ -52,10 +53,15 @@ spatial variables defined by
 
 
 # Scale
-Scale 
+What is scale
 
-in grain and extent
+in LE lit, how has scale been investigated
 
-grain is this
+Elements of scale relevant to animal social systems, animal movement data, landcover data
 
-extent is this
+Grain is this, extent is this
+
+How might scale influence results
+
+What kinds of spatial scale are there
+
