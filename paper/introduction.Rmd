@@ -9,6 +9,53 @@ bibliography: ../references/refs.bib
 ---
 
 
+# Introduction
+
+Animal social systems are complex and multifaceted
+
+traditionally, animal social systems are measured using direct observation, telemetry or pit tags
+interactions, e.g. grooming, aggression, etc,  between individuals are quantified by simplified measures 
+and often lacking any indication of the spatial context of the interaction
+
+recently the multilayer has been used to 
+
+along with spatial variables, comes a large history of landscape ecology exploring and evaluating sensitivity to scale
 
 
+here we'll use simulations to evaluate the impact of scale on social and spatial variables 
+to better understand it's impact, implications in ML networks
 
+
+# Multilayer Networks
+
+
+Multilayer networks combine multiple networks layers with interlayer edges
+
+Layers in multilayer networks can be
+Animal social systems are 
+
+What is a network
+
+How does a ML network build on that
+
+What kinds of ML nets exist
+
+Which can include spatial variables
+
+
+Multifaceted nature of animal social systems 
+many variables having a spatial component
+including landcover and habitat type
+fix rate and 
+
+spatial variables defined by 
+
+
+# Scale
+Scale 
+
+in grain and extent
+
+grain is this
+
+extent is this
