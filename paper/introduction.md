@@ -1,16 +1,22 @@
 The problem and promise of scale in multilayer networks
 ================
 Alec Robitaille, Quinn M.R. Webber, Julie Turner and Eric Vander Wal
-– 2019-09-11
+– 2019-09-12
 
   - [Introduction](#introduction)
   - [Multilayer Networks](#multilayer-networks)
   - [Scale](#scale)
-  - [Box 1: Types of spatiotemporally explicit
-    data](#box-1-types-of-spatiotemporally-explicit-data)
+  - [Box 1: Types of spatial
+    variables](#box-1-types-of-spatial-variables)
+      - [Measuring association](#measuring-association)
+      - [Spatial context](#spatial-context)
   - [References](#references)
 
 # Introduction
+
+*Animal social systems are complex and multifaceted*
+
+Social network analysis is a tool for
 
 Animal social systems are complex and multifaceted
 
@@ -75,9 +81,28 @@ How might scale influence results
 
 What kinds of spatial scale are there
 
-# Box 1: Types of spatiotemporally explicit data
+# Box 1: Types of spatial variables
 
-Spatial data can be:
+Multilayer networks can incorporate spatial variables to define edges
+between nodes and to characterize the spatial context of network layers.
+Edges connect different entities in the same layer or across layers as
+well as to the same entities across layers. The spatial context of a
+network layer is defined here as the landscape elements, generally
+abiotic, that an animal social system exists within. Depending on the
+type, a multilayer network may include one or both of these types of
+spatial variables to better understand the complex connections between
+social systems and the landscapes they
+
+The main types of spatial data that can be included in multilayer
+networks are georeferenced biologging data and *landscape scale data. *
+Georeferenced biologging data, including radio-frequency identification
+tags, radiotelemetry, and Global Positioning System (GPS) devices,
+provide an alternative to time and labour intensive direct observations
+of individuals and their interactions (Krause, Wilson, and Croft 2011)
+
+Land cover, land use
+
+Edges between nodes can define individual’s associations, preda
 
   - how associations are measured: e.g. spatsoc
   - how relocations are categorized: e.g. landcover
@@ -87,18 +112,27 @@ Multilayer networks incoroprate spatial variables in two ways:
 1.  for determining association between individuals in a social system
 2.  for characterizing the spatial context of social systems
 
+## Measuring association
+
 For example, association between individuals can be determined using
 georeferenced biologging devices such as radio‐frequency identification
 tags, radiotelemetry, and global positioning system (GPS) devices.
+
 Proximity based social networks (PBSNs) are association networks based
 on close proximity between individuals (Spiegel et al. 2016).
+
+Biologging with GPS allows for simultaneous spatiotemporal sampling of
+multiple individuals in a group or population
+
+## Spatial context
 
 The spatial context of social systems can be defined as all
 
 what is the spatial context of an animal social system
 
 explicit spatial locations habitat patches landscape/habitat
-connectivity
+connectivity social variable + home range overlap = opportunity to
+interact
 
 # References
 
@@ -110,6 +144,14 @@ Finn, Kelly R., Matthew J. Silk, Mason A. Porter, and Noa
 Pinter-Wollman. 2019. “The Use of Multilayer Network Analysis in Animal
 Behaviour.” *Animal Behaviour* 149 (March): 7–22.
 <https://doi.org/10.1016/j.anbehav.2018.12.016>.
+
+</div>
+
+<div id="ref-krause2011">
+
+Krause, Jens, Alexander D. M. Wilson, and Darren P. Croft. 2011. “New
+Technology Facilitates the Study of Social Networks.” *Trends in Ecology
+& Evolution* 26 (1): 5–6. <https://doi.org/10.1016/j.tree.2010.10.004>.
 
 </div>
 
