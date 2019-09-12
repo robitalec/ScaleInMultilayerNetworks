@@ -12,7 +12,6 @@ bibliography: ../references/refs.bib
 
 
 # Introduction
-
 Animal social systems are complex and multifaceted
 
 traditionally, animal social systems are measured using direct observation, telemetry or pit tags
@@ -76,9 +75,21 @@ What kinds of spatial scale are there
 
 
 
-# Box 1: Types of spatiotemporally explicit data
+# Box 1: Types of spatial variables 
+Multilayer networks can incorporate spatial variables to define edges between nodes and to characterize the spatial context of network layers. Edges connect different entities in the same layer or across layers as well as to the same entities across layers. The spatial context of a network layer is defined here as the landscape elements, generally abiotic, that an animal social system exists within. Depending on the type, a multilayer network may include one or both of these types of spatial variables to better understand the complex connections between social systems and the landscapes they 
 
-Spatial data can be:
+
+The main types of spatial data that can be included in multilayer networks are georeferenced biologging data and *landscape scale data. * Georeferenced biologging data, including radio-frequency identification tags, radiotelemetry, and Global Positioning System (GPS) devices, provide an alternative to time and labour intensive direct observations of individuals and their interactions [@krause2011]
+
+Land cover, land use 
+
+
+
+Edges between nodes can define individual's associations, preda
+
+
+
+
 
 * how associations are measured: e.g. spatsoc
 * how relocations are categorized: e.g. landcover
