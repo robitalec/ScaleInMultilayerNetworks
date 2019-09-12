@@ -14,10 +14,6 @@ Alec Robitaille, Quinn M.R. Webber, Julie Turner and Eric Vander Wal
 
 # Introduction
 
-*Animal social systems are complex and multifaceted*
-
-Social network analysis is a tool for
-
 Animal social systems are complex and multifaceted
 
 traditionally, animal social systems are measured using direct
@@ -94,15 +90,49 @@ spatial variables to better understand the complex connections between
 social systems and the landscapes they
 
 The main types of spatial data that can be included in multilayer
-networks are georeferenced biologging data and *landscape scale data. *
+networks are georeferenced biologging data and landscape level data.
 Georeferenced biologging data, including radio-frequency identification
-tags, radiotelemetry, and Global Positioning System (GPS) devices,
-provide an alternative to time and labour intensive direct observations
-of individuals and their interactions (Krause, Wilson, and Croft 2011)
+tags (RFID), passive integrated transponder (PIT), radiotelemetry, and
+Global Positioning System (GPS) devices, provide an alternative to
+intensive direct observations of individuals and their interactions. In
+addition, some animals are not easily observed, e.g.: marine mammals and
+birds, and these data provide an inside look. Some derived products can
+be generated from these data as well, including home ranges, utilization
+distributions and habitat patches. Landscape level data include
+relatively stable measures of a lanscape such as land cover, land use
+and elevation, and more variable measures such as temperature,
+precipitation and snow cover.
 
-Land cover, land use
+Given the variety of multilayer networks and types of spatial data that
+can be included, there are a large number of ways to combine them.
+Multilayer networks may be composed of categorical and unordered layers
+(termed ‘categorical coupling’), including spatial variables such as
+land cover, land use, and explicit habitat patches. Multiplex networks,
+where each layer represents a different type of interaction, may be
+composed of a layer defined by an association index and another one by
+home range overlap. A network of networks may be used to represent
+communities as layers with interlayer edges defined by their spatial
+connectivity and intralayer edges defined by a spatially derived
+association index.
 
-Edges between nodes can define individual’s associations, preda
+<!-- it's complicated -->
+
+Spatial scale influences all of these types of spatial data and the
+inferences derived when combining them in a multilayer network
+
+All biologging sensors have some spatial error
+
+In addition, biologging sensors vary in terms of fix rate or data
+collection rate. GPS collars can be programmed but will inevitably vary
+Temporal grouping
+
+All remotely sensed imagery is an average of area on land, reported by
+the
+
+Matching scale of imagery to resolution of fix rate
+
+PIT tags have \<1m reading distance (Krause et al. 2013) GPS collars
+have challenges due to dense vegetation Telemetry \>10m location error
 
   - how associations are measured: e.g. spatsoc
   - how relocations are categorized: e.g. landcover
@@ -147,11 +177,12 @@ Behaviour.” *Animal Behaviour* 149 (March): 7–22.
 
 </div>
 
-<div id="ref-krause2011">
+<div id="ref-krause2013">
 
-Krause, Jens, Alexander D. M. Wilson, and Darren P. Croft. 2011. “New
-Technology Facilitates the Study of Social Networks.” *Trends in Ecology
-& Evolution* 26 (1): 5–6. <https://doi.org/10.1016/j.tree.2010.10.004>.
+Krause, Jens, Stefan Krause, Robert Arlinghaus, Ioannis Psorakis,
+Stephen Roberts, and Christian Rutz. 2013. “Reality Mining of Animal
+Social Systems.” *Trends in Ecology & Evolution* 28 (9): 541–51.
+<https://doi.org/10.1016/j.tree.2013.06.002>.
 
 </div>
 
