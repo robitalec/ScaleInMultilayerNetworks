@@ -16,3 +16,23 @@ group_pts(
 
 
 # make graphs by landcover
+
+
+
+# ----
+
+predatorMCP <- mcp
+
+gOverlap(points, predatorMCP)
+
+
+# points has column overlapPredator TRUE/FALSE indicating spatial overlap/
+# is point within predator HR
+
+group_pts(
+  splitBy = 'overlapPred'
+)
+
+# two graphs, in or not in predator HR
+# result is: degree of sociality within/outside predator HR
+
