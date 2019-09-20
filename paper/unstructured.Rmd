@@ -15,6 +15,19 @@ date: "-- `r Sys.Date()`"
 
 **Conservation implications**
 
+
+## To add
+
+### Introduction?
+We determined three types of multilayer networks most relevant to spatial variables
+Multilayer networks with layers defined by spatially explicit locations, interspecific interactions, and community or subpopulation structure. 
+Other types of networks, such as intercontexual networks or temporal networks, are likely only to incorporate spatial variables in a hybrid multilayer network and considerations for including those variables will be explored here 
+
+
+
+
+
+
 ## Keywords
 
 1. spatial scale
