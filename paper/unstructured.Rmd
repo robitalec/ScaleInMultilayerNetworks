@@ -25,6 +25,21 @@ Other types of networks, such as intercontexual networks or temporal networks, a
 
 ### Table 1
 
+In table 1, we define three types of multilayer networks that incorporate spatial variables. 
+How are layers defined, nodes defined, inter layer edges
+
+We list variables affected by spatial and social scale
+
+We use a definition of spatial scale from LE, 
+
+social scale is 
+
+TODO: find pictures of ML nets to include
+
+
+
+
+
 |               | Spatial                                                           | Net of nets                                      | Interspecific                                              |
 |---------------|-------------------------------------------------------------------|--------------------------------------------------|------------------------------------------------------------|
 | layer         | spatially explicit                                                | subpops, fuzzy patches                           | dif species                                                |
