@@ -1,4 +1,4 @@
-Type of multilayer network,Spatial network,Network of networks,Interspecific network
+" ",Spatial network,Network of networks,Interspecific network
 Layer,"Spatially explicit patches, areas, landcovers","Subpopulations, fuzzy patches",Different species
 Entities,Individuals,Individuals,Individuals
 Nodes,Individual,Individuals and sub-networks,Individuals and species-specific networks
