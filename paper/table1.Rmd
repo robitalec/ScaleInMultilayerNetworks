@@ -29,14 +29,8 @@ social scale is
 TODO: find pictures of ML nets to include
 
 
-
-
-|               | Spatial                                                           | Net of nets                                      | Interspecific                                              |
-|---------------|-------------------------------------------------------------------|--------------------------------------------------|------------------------------------------------------------|
-| layer         | spatially explicit                                                | subpops, fuzzy patches                           | dif species                                                |
-| node          | individuals                                                       | ind + nets                                       | ind + species nets                                         |
-| inter edges   | to self                                                           | to nets                                          | to species                                                 |
-| intra edges   | association to other                                              | association                                      | association                                                |
-| social grain  | type of interaction, chain rule, spatsoc threshold, hyena session | for intra, see left. for inter: define community |  for intra, see left. for inter: similarity, vulnerability |
-| spatial grain | resolution                                                        | patches, k=                                      | connectivity, clusters                                     |
-
+```{r, echo = FALSE}
+library(data.table)
+tab1 <- fread('table1.csv')
+knitr::kable(tab1)
+```
