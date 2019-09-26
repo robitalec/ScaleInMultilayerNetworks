@@ -6,3 +6,5 @@ Interlayer edges,Connect individuals to themselves,Connect networks to networks,
 Intralayer edges,Association to other individuals within network,Association to other individuals within network,Association to other individuals within network
 Social grain,"types of interaction, chain rule, spatsoc threshold, hyena sessions",For intra: see left. For inter: define community,"For intra: see left. For inter: similarity, vulnerability"
 Spatial grain,resolution,"patches, k=","connectivity, clusters"
+Example,![](../graphics/spatial.png),![](../graphics/netofnets.png),![](../graphics/interspecific.png)
+Example2,\includegraphics[width=0.3\textwidth]{../graphics/spatial.png},\includegraphics[width=0.3\textwidth]{../graphics/netofnets.png},\includegraphics[width=0.3\textwidth]{../graphics/interspecific.png}
