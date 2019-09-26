@@ -36,12 +36,5 @@ TODO: find pictures of ML nets to include
 | Intralayer edges | Association to other individuals within network                     | Association to other individuals within network  | Association to other individuals within network           |
 | Social grain     | types of interaction, chain rule, spatsoc threshold, hyena sessions | For intra: see left. For inter: define community | For intra: see left. For inter: similarity, vulnerability |
 | Spatial grain    | resolution                                                          | patches, k=                                      | connectivity, clusters                                    |
-
-|               | Spatial                                                           | Net of nets                                      | Interspecific                                             |
-| ------------- | ----------------------------------------------------------------- | ------------------------------------------------ | --------------------------------------------------------- |
-| layer         | spatially explicit                                                | subpops, fuzzy patches                           | dif species                                               |
-| node          | individuals                                                       | ind + nets                                       | ind + species nets                                        |
-| inter edges   | to self                                                           | to nets                                          | to species                                                |
-| intra edges   | association to other                                              | association                                      | association                                               |
-| social grain  | type of interaction, chain rule, spatsoc threshold, hyena session | for intra, see left. for inter: define community | for intra, see left. for inter: similarity, vulnerability |
-| spatial grain | resolution                                                        | patches, k=                                      | connectivity, clusters                                    |
+| Example          | ![](../graphics/spatial.png)                                        | ![](../graphics/netofnets.png)                   | ![](../graphics/interspecific.png)                        |
+| Example2         |                                                                     |                                                  |                                                           |

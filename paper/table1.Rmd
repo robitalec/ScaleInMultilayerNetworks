@@ -34,3 +34,4 @@ library(data.table)
 tab1 <- fread('table1.csv')
 knitr::kable(tab1)
 ```
+
