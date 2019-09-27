@@ -1,9 +1,10 @@
 Type of network,Spatial network,Network of networks,Interspecific network
-Layer,"Spatially explicit patches, areas, landcovers","Subpopulations, fuzzy patches",Different species
-Entities,Individuals,Individuals,Individuals
-Nodes,Individual,Individuals and sub-networks,Individuals and species-specific networks
-Interlayer edges,Connect individuals to themselves,Connect networks to networks,Connect species to species
-Intralayer edges,Association to other individuals within network,Association to other individuals within network,Association to other individuals within network
-Social grain,"types of interaction, chain rule, spatsoc threshold, hyena sessions","For intra: see left. For inter: similarity, vulnerability",
-Spatial grain,resolution,,"connectivity, clusters"
+Layer,"Defined by spatially explicit areas (e.g. discrete patches, landcover classes)","Defined by sub-networks (e.g.: subpopulations, communities, fuzzy patches)",Defined by different species
+Nodes,1. Individuals <br/> 2. Spatially explicit layers,1. Individuals <br/> 2. Sub-network layers,1. Individuals  <br/> 2. Species-specific layers
+Interlayer edges,1. Connect individuals to themselves across layers <br/>  2. Connect spatially explicit layers to each other (e.g.: defined by euclidean distance),1. Connect individuals across sub-networks <br/> 2. Connect sub-networks to each other ,1. Connect individuals across species layers
+Intralayer edges,1. Connect individuals to other individuals within layers,1. Connect individuals to other individuals within layers,1. Connect individuals to other individuals within species layers
+Social grain – intralayer,&bull; Type of interaction between individuals [@dale2017applying; <br/>&bull; Chain rule  [@croft2008] <br/>&bull; Spatiotemporal grouping threshold [@farine2015; @robitaille2019] <br/>&bull; Temporal window of social interactions [@cantor2012],&bull; Type of interaction between individuals <br/>&bull; Chain rule  [@croft2008] <br/>&bull; Spatiotemporal grouping threshold <br/>&bull; Temporal window of social interactions,&bull; Type of interaction between individuals <br/>&bull; Chain rule  [@croft2008] <br/>&bull; Spatiotemporal grouping threshold <br/>&bull; Temporal window of social interactions
+Social grain – interlayer,,"Similarity, vulnerability",
+Spatial grain,Resolution,"Number of fuzzy patches, subpopulation or community definition,","Spatial connectivity, "
+Examples,,,[@farine2012;
 Image,![](../graphics/spatial.png),![](../graphics/netofnets.png),![](../graphics/interspecific.png)
