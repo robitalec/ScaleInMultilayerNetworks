@@ -1,12 +1,12 @@
 ---
 output: 
-#   pdf_document
+  # pdf_document
 # classoption: landscape
-  # word_document:
-  #   reference_docx: template.docx
-  github_document
+  word_document:
+    reference_docx: template.docx
+  # github_document
 author: Alec Robitaille, Quinn M.R. Webber, Julie Turner and Eric Vander Wal
-date: "-- `r Sys.Date()`"
+date: "`r Sys.Date()`"
 ---
 
 ### Table 1
@@ -58,5 +58,5 @@ tab1 <- fread('table1.csv')
 
 options(knitr.table.format = "markdown")
 
-knitr::kable(tab1[c(1:7, 9)])
+knitr::kable(tab1)
 ```
