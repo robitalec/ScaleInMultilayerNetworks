@@ -1,16 +1,29 @@
 ---
 output: 
-  # pdf_document
-# classoption: landscape
-  word_document:
-    reference_docx: template.docx
-  # github_document
+  # word_document:
+  #   reference_docx: template.docx
+  github_document
 author: Alec Robitaille, Quinn M.R. Webber, Julie Turner and Eric Vander Wal
 date: "`r Sys.Date()`"
+bibliography: ../references/refs.bib
+
 ---
 
 ### Table 1
-In Table 1, we define three types of multilayer networks that incorporate spatial variables. Multilayer networks are composed of layers, nodes, interlayer edges and intralayer edges. Layers represent the different types of relationships, individuals or contexts of the social system. Nodes represent individual entities in the network, connected by some association or relationship with edges. Interlayer edges connect layers to other layers or individuals across layers. Intralayer edges connect individuals to other individuals within a network layer. 
+In Table 1, we describe three types of multilayer networks that incorporate spatial variables. Multilayer networks are composed of layers, nodes and edges. Layers represent different types of relationships
+
+The edges are often abstracted because they no longer in the sense that they represent a specific spatial and temporal context, which
+
+
+[@dale2017applying]
+
+Layers represent the different types of relationships, individuals or contexts of the social system. Nodes represent individual entities in the network, connected by some association or relationship with edges. Interlayer edges connect layers to other layers or individuals across layers. Intralayer edges connect individuals to other individuals within a network layer. 
+
+
+Relationships between individuals can be differentiated by their physical distance: communication or other high distance, grooming (physical contact), association (threshold distance)
+
+
+Layers represent a type of edge (e.g.: grooming and association), entity (e.g.: male and female, or different species), or spatial context (e.g.: landcover type, patch).
 
 
 
@@ -27,9 +40,6 @@ An animal's social network is multifaceted and complex, though this system is of
 
 
 
-
-
-
 How are layers defined, nodes defined, inter layer edges
 
 We list variables affected by spatial and social scale
@@ -38,21 +48,9 @@ We use a definition of spatial scale from LE,
 
 social scale is 
 
-TODO: find pictures of ML nets to include
-
 
 ```{r, echo = FALSE, warning = FALSE}
-# library(pander)
-# panderOptions('table.alignment.default', function(df)
-#     ifelse(sapply(df, is.numeric), 'right', 'left'))
-# panderOptions('table.split.table', Inf)
-# panderOptions('big.mark', ",")
-# panderOptions('keep.trailing.zeros', TRUE)
-
-
 library(data.table)
-library(magrittr)
-library(kableExtra)
 
 tab1 <- fread('table1.csv')
 
