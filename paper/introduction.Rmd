@@ -4,6 +4,37 @@ bibliography: ../references/refs.bib
 ---
 
 # Introduction
+
+<!-- Landscape spatial scale -->
+<!-- Social proximity scale -->
+<!-- Regular networks -->
+<!-- Multilayer networks -->
+<!-- Case study -->
+
+
+
+
+
+---
+
+Spatial scale is a central consideration in the way we understand landscape ecology and animal space use. 
+
+Despite the interplay between social networks and how animals use space, there remains an important biological and methodological gap in our understanding of how an animals perception of spatial scale, e.g., grain and extent, 
+
+
+We will simulate animal movement data coupled with emergent social networks on increasingly heterogenous landscapes across spatial scales. Furthermore, we review specific examples of spatially explicit data types to include in multilayer networks and explore the relevant nuances of these data. Our simulations will highlight the need to carefully select scales for measuring spatial processes and appropriately weight layers and edges representing different types of data. Effective integration of spatial processes, including biologically meaningful scales, into animal social networks is an emerging area of research. Our contribution will incorporate landscape ecology theory as a way to link different scales of social and spatial processes in a multilayer network. Based on social network and landscape ecology theory as well as our simulations we demonstrate potential for interconnectedness among individual animals and the landscapes they occupy.
+
+
+
+---
+
+
+
+
+
+potential for interconnectedness among individual animals and the landscapes they occupy.
+
+
 Animal social systems are complex and multifaceted
 
 traditionally, animal social systems are measured using direct observation, telemetry or pit tags
