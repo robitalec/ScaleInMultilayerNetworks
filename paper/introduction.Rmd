@@ -26,6 +26,14 @@ Scale can be considered for all measured quantities [@schneider2009] including s
 <!-- Social proximity scale 
 sociality exists 
 -->
+Sociality is important because conspecifics have positive and negative benefits
+
+
+
+
+Sociality is accompanied by positive and negative effects, and evolves when the net benefit is greater than the cost [@silk2007]. Positive effects include protection from predators, mating opportunities, and resource location and access [@silk2007]. Negative effects include increased competition, risk of disease transfer and infection [@silk2007].
+
+
 Social scale is the type of social relationship measured and how this relationship is defined [@farine2015]. If the greater range of a social relationship is the entire social system for an organism, a particular social scale may focus on only a limited type of relationship like grooming or aggression. 
 
 <!-- Regular networks
