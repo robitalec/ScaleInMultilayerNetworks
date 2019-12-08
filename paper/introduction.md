@@ -4,8 +4,7 @@
 <!-- Landscape spatial scale -->
 
 Our understanding of ecological patterns and processes are directly
-linked to the scale at which they are observed
-(<span class="citeproc-not-found" data-reference-id="levin1992">**???**</span>).
+linked to the scale at which they are observed (Levin 1992).
 
 heteroneity of landscapes within seemingly homogeneous patches, exist
 lower level processes including species interactions, resource
@@ -32,6 +31,16 @@ including spatial and temporal variables as well as domain specific
 <!-- Social proximity scale 
 sociality exists 
 -->
+
+Sociality is important because conspecifics have positive and negative
+benefits
+
+Sociality is accompanied by positive and negative effects, and evolves
+when the net benefit is greater than the cost (Silk 2007). Positive
+effects include protection from predators, mating opportunities, and
+resource location and access (Silk 2007). Negative effects include
+increased competition, risk of disease transfer and infection (Silk
+2007).
 
 Social scale is the type of social relationship measured and how this
 relationship is defined (Farine 2015). If the greater range of a social
@@ -213,6 +222,13 @@ Paradigm?” *Ecology* 74 (6): 1659–73. <https://doi.org/10.2307/1939924>.
 
 </div>
 
+<div id="ref-levin1992problem">
+
+Levin, Simon A. 1992. “The Problem of Pattern and Scale in Ecology: The
+Robert H. MacArthur Award Lecture.” *Ecology* 73 (6): 1943–67.
+
+</div>
+
 <div id="ref-mayor2007">
 
 Mayor, S. J., J. A. Schaefer, D. C. Schneider, and S. P. Mahoney. 2007.
@@ -226,6 +242,14 @@ SCALE-DEPENDENT RESPONSE TO HABITAT.” *Ecology* 88 (7): 1634–40.
 
 Schneider, David C. 2009. *Quantitative Ecology: Measurement, Models and
 Scaling*. Academic Press.
+
+</div>
+
+<div id="ref-silk2007">
+
+Silk, Joan B. 2007. “The Adaptive Value of Sociality in Mammalian
+Groups.” *Philosophical Transactions of the Royal Society B: Biological
+Sciences* 362 (1480): 539–59. <https://doi.org/10.1098/rstb.2006.1994>.
 
 </div>
 

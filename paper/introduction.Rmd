@@ -23,7 +23,11 @@ the scales that influence animals and the patterns of their landscapes may be di
 Scale can be considered for all measured quantities [@schneider2009] including spatial and temporal variables as well as domain specific <!--lead into social-->
 
 
-<!-- Social proximity scale 
+Spatial scale is a central consideration in the way we understand landscape ecology and animal space use. 
+
+
+
+<!-- ### Social proximity scale 
 sociality exists 
 -->
 Sociality is important because conspecifics have positive and negative benefits
@@ -36,12 +40,21 @@ Sociality is accompanied by positive and negative effects, and evolves when the 
 
 Social scale is the type of social relationship measured and how this relationship is defined [@farine2015]. If the greater range of a social relationship is the entire social system for an organism, a particular social scale may focus on only a limited type of relationship like grooming or aggression. 
 
-<!-- Regular networks
+<!-- ### Regular networks
 * SNA significant outcomes
 -->
+Network theory and social network analysis allows one to scale across dyads, groups, etc from pairwise interactions to social units, networks etc[@krause2009]
+
+infer process from large scale pattern [@krause2009]
 
 
-<!-- Multilayer networks
+Structure of social networks affects evolutionary processes, population dynamics, [@kurvers2014]
+
+
+
+
+
+<!-- ### Multilayer networks
 used across disciplines
 -->
 Multilayer networks explicitly consider social systems across temporal, spatial and social contexts [@pilosof2017a]. They are made up of multiple layers, each representing relationships, individuals, spatial areas or temporal windows [@kivela2014; @porter2018a]. <!--GENERALLY INTERESTING Recently used in animal behaviour studies, multilayer networks have the potential to better characterize complex social systems [@silk2018a; @finn2019].-->
@@ -49,7 +62,7 @@ Multilayer networks explicitly consider social systems across temporal, spatial 
 
 For multilayer social networks, three types of scale are relevant: spatial, temporal and social scale.
 
-<!-- Case study 
+<!-- ### Case study 
 deer
 fogo caribou
 -->
@@ -63,7 +76,6 @@ explore sensitivity of network measures to scale
 
 ---
 
-Spatial scale is a central consideration in the way we understand landscape ecology and animal space use. 
 
 Despite the interplay between social networks and how animals use space, there remains an important biological and methodological gap in our understanding of how an animals perception of spatial scale, e.g., grain and extent, 
 
