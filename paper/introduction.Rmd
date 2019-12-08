@@ -5,8 +5,8 @@ bibliography: ../references/refs.bib
 
 # Introduction
 
-<!-- Landscape spatial scale -->
-Our understanding of ecological patterns and processes are directly linked to the scale at which they are observed [@levin1992]. 
+<!-- ### Landscape spatial scale -->
+Our understanding of ecological patterns and processes are directly linked to the scale at which they are observed [@levin1992problem]. 
 
 heteroneity of landscapes
 within seemingly homogeneous patches, exist lower level processes including species interactions, resource availability, disease transfer [@legendre1993]
