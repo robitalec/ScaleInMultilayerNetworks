@@ -6,10 +6,27 @@ bibliography: ../references/refs.bib
 # Introduction
 
 <!-- Landscape spatial scale -->
+Our understanding of ecological patterns and processes are directly linked to the scale at which they are observed [@levin1992]. 
+
+heteroneity of landscapes
+within seemingly homogeneous patches, exist lower level processes including species interactions, resource availability, disease transfer [@legendre1993]
+
+Animals may be influenced by processes at multiple scales 
+
+<!-- observational scales of landscapes do not necessarily correspond to the "scale of effect" of species-landscape relationships, or the scale at which there is the strongest relationship [@jackson2015]-->
+
+the scales that influence animals and the patterns of their landscapes may be disjoint [@chave2013]. The effects of scale have been explicitly investigated across many ecological studies including habitat selection [@mayor2007], evaluating satellite imagery [@benson1995] and    of ecology including landscape ecology, movement ecology, earth observation [@benson1995], habitat selection[@mayor2007]
+
+<!-- observers bias their perspective when selecting a scale,often unknowingly or without considering the implications [@allen2015].  -->
 
 
-<!-- Social proximity scale -->
+Scale can be considered for all measured quantities [@schneider2009] including spatial and temporal variables as well as domain specific <!--lead into social-->
 
+
+<!-- Social proximity scale 
+sociality exists 
+-->
+Social scale is the type of social relationship measured and how this relationship is defined [@farine2015]. If the greater range of a social relationship is the entire social system for an organism, a particular social scale may focus on only a limited type of relationship like grooming or aggression. 
 
 <!-- Regular networks
 * SNA significant outcomes
@@ -19,12 +36,18 @@ bibliography: ../references/refs.bib
 <!-- Multilayer networks
 used across disciplines
 -->
-Multilayer networks explicitly consider social systems across temporal, spatial and social contexts [@pilosof2017a]. They are made up of multiple layers, each representing relationships, individuals, spatial areas or temporal windows [@kivela2014; @porter2018a]. Recently used in animal behaviour studies, multilayer networks have the potential to better characterize complex social systems [@silk2018a; @finn2019].
+Multilayer networks explicitly consider social systems across temporal, spatial and social contexts [@pilosof2017a]. They are made up of multiple layers, each representing relationships, individuals, spatial areas or temporal windows [@kivela2014; @porter2018a]. <!--GENERALLY INTERESTING Recently used in animal behaviour studies, multilayer networks have the potential to better characterize complex social systems [@silk2018a; @finn2019].-->
+
+
+For multilayer social networks, three types of scale are relevant: spatial, temporal and social scale.
 
 <!-- Case study 
 deer
 fogo caribou
 -->
+
+integrating networks across scales
+explore sensitivity of network measures to scale
 
 
 
