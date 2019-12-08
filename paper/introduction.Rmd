@@ -6,10 +6,25 @@ bibliography: ../references/refs.bib
 # Introduction
 
 <!-- Landscape spatial scale -->
+
+
 <!-- Social proximity scale -->
-<!-- Regular networks -->
-<!-- Multilayer networks -->
-<!-- Case study -->
+
+
+<!-- Regular networks
+* SNA significant outcomes
+-->
+
+
+<!-- Multilayer networks
+used across disciplines
+-->
+Multilayer networks explicitly consider social systems across temporal, spatial and social contexts [@pilosof2017a]. They are made up of multiple layers, each representing relationships, individuals, spatial areas or temporal windows [@kivela2014; @porter2018a]. Recently used in animal behaviour studies, multilayer networks have the potential to better characterize complex social systems [@silk2018a; @finn2019].
+
+<!-- Case study 
+deer
+fogo caribou
+-->
 
 
 
