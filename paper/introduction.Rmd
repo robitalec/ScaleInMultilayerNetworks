@@ -28,15 +28,15 @@ Sociality, defined simply as the degree of shared space use among conspecifics [
 * SNA significant outcomes
 -->
 
-Rooted in mathematical graph theory, animal social networks measures the relationships of individuals and organization of animal social systems [@krause2009; @Wey2008; @croft2008]. Social network analyses provide insight into mating behaviours, species interactions, and community structures. 
+Rooted in mathematical graph theory, animal social networks measure the relationships of individuals and organization of social systems [@krause2009; @wey2008a; @croft2008]. Social network analyses provide insight into mating behaviours, interspecific interactions, and community structures [@pinter-wollman2014]. 
+The structure of social networks influences population dynamics and evolutionary processes [@kurvers2014]. Nevertheless, social network analyses usually only consider a single measure of sociality, drastically simplifying the complexity of animal social systems [@finn2019]. 
 
 
-Network theory and social network analysis allows one to scale across dyads, groups, etc from pairwise interactions to social units, networks etc[@krause2009]
+<!-- Network theory and social network analysis allows one to scale across dyads, groups, etc from pairwise interactions to social units, networks etc[@krause2009] -->
 
-infer process from large scale pattern [@krause2009]
+<!-- infer process from large scale pattern [@krause2009] -->
 
 
-Structure of social networks affects evolutionary processes, population dynamics, [@kurvers2014]
 
 
 
