@@ -27,15 +27,37 @@ domain specific variables such as sociality.
 sociality exists 
 -->
 
-Sociality is important because conspecifics have positive and negative
-benefits
+<!-- Sociality exists across scales -->
 
-Sociality is accompanied by positive and negative effects, and evolves
-when the net benefit is greater than the cost (Silk 2007). Positive
-effects include protection from predators, mating opportunities, and
-resource location and access (Silk 2007). Negative effects include
-increased competition, risk of disease transfer and infection (Silk
-2007).
+<!-- How do consider shared space use -->
+
+<!-- Spatial proximity as a proxy for interactions  -->
+
+<!-- Social association -->
+
+<!-- Home range overlap  -->
+
+<!-- Connection of individuals within a social structure can be formalized/analyzed as a social network -->
+
+co-occurrence is used in social network studies as a synonym for social
+association (Farine and Whitehead 2015).
+
+Sociality, defined simply as some degree of shared space use among
+conspecifics (Tinbergen 1951), exists across scales. Social scale is the
+type of social relationship observed and how this relationship is
+defined (Farine and Whitehead 2015). For example, grooming and mating
+relationships require immediate proximity between conspecifics whereas
+home range overlap occurs over much larger spatial and temporal scales.
+
+Shared space is a requirement for social interaction, however, it
+remains unclear whether spatial proximity scales predictably with social
+interactions (Castles et al. 2014; Farine 2015).
+
+<!-- Sociality is defined here as by @tinbergen1951: "an animal is called social when it strives to be in the neighbourhood of fellow members of its species when performing some, or all, of its instinctive activities". -->
+
+<!-- Sociality is important because conspecifics have positive and negative benefits -->
+
+<!-- Sociality is accompanied by positive and negative effects, and evolves when the net benefit is greater than the cost [@silk2007]. Positive effects include protection from predators, mating opportunities, and resource location and access [@silk2007]. Negative effects include increased competition, risk of disease transfer and infection [@silk2007]. -->
 
 Social scale is the type of social relationship measured and how this
 relationship is defined (Farine and Whitehead 2015). If the greater
@@ -73,6 +95,10 @@ spatial, temporal and social scale.
 deer
 fogo caribou
 -->
+
+We will use two case studies to explore the sensitivity of multilayer
+network measures across scales. One, using an island population of
+caribou (*Rangifer tarandus*)
 
 integrating networks across scales explore sensitivity of network
 measures to scale
@@ -290,19 +316,17 @@ Scaling*. Academic Press.
 
 </div>
 
-<div id="ref-silk2007">
-
-Silk, Joan B. 2007. “The Adaptive Value of Sociality in Mammalian
-Groups.” *Philosophical Transactions of the Royal Society B: Biological
-Sciences* 362 (1480): 539–59. <https://doi.org/10.1098/rstb.2006.1994>.
-
-</div>
-
 <div id="ref-sugihara1989b">
 
 Sugihara, George, Kenneth Schoenly, and Alan Trombla. 1989. “Scale
 Invariance in Food Web Properties.” *Science, New Series* 245 (4913,):
 48–52.
+
+</div>
+
+<div id="ref-tinbergen1951">
+
+Tinbergen, Niko. 1951. “The Study of Instinct.”
 
 </div>
 
