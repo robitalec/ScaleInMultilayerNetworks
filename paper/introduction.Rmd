@@ -45,16 +45,15 @@ The structure of social networks influences population dynamics and evolutionary
 <!-- ### Multilayer networks
 used across disciplines
 -->
-Multilayer networks explicitly consider social systems across temporal, spatial and social contexts [@pilosof2017a]. They are made up of multiple layers, each representing relationships, individuals, spatial areas or temporal windows [@kivela2014; @porter2018a]. <!--GENERALLY INTERESTING Recently used in animal behaviour studies, multilayer networks have the potential to better characterize complex social systems [@silk2018a; @finn2019].-->
+Multilayer networks explicitly consider social systems across contexts [@pilosof2017a]. They are made up of multiple layers, each representing types of relationships or individuals, spatial areas and temporal windows [@kivela2014; @porter2018a]. Multilayer networks have been used to described multidimensional human social systems, complex transportation networks and the complete neural network of an organism [@boccaletti2014]. Recently, multilayer networks have been highlighted as a way to better characterize complex social systems in animal behaviour studies [@silk2018a; @finn2019].
 
-
-For multilayer social networks, three types of scale are relevant: spatial, temporal and social scale.
+<!-- For multilayer social networks, three types of scale are relevant: spatial, temporal and social scale. -->
 
 <!-- ### Case study 
 deer
 fogo caribou
 -->
-We will use two case studies to explore the sensitivity of multilayer network measures across scales. One, using an island population of caribou (*Rangifer tarandus*)
+We will use two case studies to explore the sensitivity of multilayer network measures across scales. One, using a population of caribou (*Rangifer tarandus*) on Fogo Island, Newfoundland, Canada with seasonal differences in resource availability and social association [@peignier2019]. The second using a small group of white-tailed deer (*Odocoileus virginianus*)
 
 
 
