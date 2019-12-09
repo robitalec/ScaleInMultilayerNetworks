@@ -4,16 +4,15 @@
 <!-- ### Landscape spatial scale -->
 
 Our understandings of ecological pattern and process are directly linked
-to the scale at which they are observed (Levin 1992). Animals and
-landscapes are influenced across scales by higher level processes,
-e.g. climate and productivity (Field et al. 2009), and lower level
-processes, e.g. species interactions and resource availability (Legendre
-1993; Chave 2013). The effect of scale has been explicity considered in
-ecology including in species distribution (Elith and Leathwick 2009),
-habitat selection (Mayor et al. 2007) and food webs (Sugihara, Schoenly,
-and Trombla 1989). Scale can be considered for all measured quantities
-(Schneider 2009) including spatial and temporal variables as well as
-domain specific variables such as sociality.
+to the scale at which they are observed.<sup>1,2</sup> Animals and
+landscapes are influenced across scales by higher level processes, such
+as climate and productivity,<sup>3</sup> and lower level processes, such
+as species interactions and resource availability.<sup>4,5</sup> The
+effect of scale has been explicity considered in ecology including in
+species distribution,<sup>6</sup> habitat selection<sup>7</sup> and food
+webs.<sup>8</sup> Scale can be considered for all measured
+quantities<sup>9</sup> including spatial and temporal variables as well
+as domain specific variables such as sociality.
 
 <!-- observational scales of landscapes do not necessarily correspond to the "scale of effect" of species-landscape relationships, or the scale at which there is the strongest relationship [@jackson2015]-->
 
@@ -23,69 +22,46 @@ domain specific variables such as sociality.
 
 <!-- Spatial scale is a central consideration in the way we understand landscape ecology and animal space use.  -->
 
-<!-- ### Social proximity scale 
-sociality exists 
--->
+<!-- ### Social proximity scale  -->
 
-<!-- Sociality exists across scales -->
-
-<!-- How do consider shared space use -->
-
-<!-- Spatial proximity as a proxy for interactions  -->
-
-<!-- Social association -->
-
-<!-- Home range overlap  -->
-
-<!-- Connection of individuals within a social structure can be formalized/analyzed as a social network -->
-
-co-occurrence is used in social network studies as a synonym for social
-association (Farine and Whitehead 2015).
-
-Sociality, defined simply as some degree of shared space use among
-conspecifics (Tinbergen 1951), exists across scales. Social scale is the
-type of social relationship observed and how this relationship is
-defined (Farine and Whitehead 2015). For example, grooming and mating
-relationships require immediate proximity between conspecifics whereas
-home range overlap occurs over much larger spatial and temporal scales.
-
-Shared space is a requirement for social interaction, however, it
-remains unclear whether spatial proximity scales predictably with social
-interactions (Castles et al. 2014; Farine 2015).
-
-<!-- Sociality is defined here as by @tinbergen1951: "an animal is called social when it strives to be in the neighbourhood of fellow members of its species when performing some, or all, of its instinctive activities". -->
-
-<!-- Sociality is important because conspecifics have positive and negative benefits -->
-
-<!-- Sociality is accompanied by positive and negative effects, and evolves when the net benefit is greater than the cost [@silk2007]. Positive effects include protection from predators, mating opportunities, and resource location and access [@silk2007]. Negative effects include increased competition, risk of disease transfer and infection [@silk2007]. -->
-
-Social scale is the type of social relationship measured and how this
-relationship is defined (Farine and Whitehead 2015). If the greater
-range of a social relationship is the entire social system for an
-organism, a particular social scale may focus on only a limited type of
-relationship like grooming or aggression.
+Sociality, defined simply as the degree of shared space use among
+conspecifics,<sup>10</sup> exists across scales. For example, grooming
+and mating relationships requires close proximity between conspecifics
+and occurs over brief time periods whereas home range overlap occurs
+over larger spatial and temporal scales. Shared space is a requirement
+for social interaction, however, it remains unclear whether spatial
+proximity scales predictably with social interactions.<sup>11,12</sup>
+Social scale can be defined as the type of relationship
+observed<sup>12</sup> and these relationships can be explicitly defined
+and measured in social network analyses.<sup>13</sup>
 
 <!-- ### Regular networks
 * SNA significant outcomes
 -->
 
+Rooted in mathematical graph theory, animal social networks measures the
+relationships of individuals and organization of animal social
+systems.<sup><span class="citeproc-not-found" data-reference-id="Wey2008">**???**</span>,14,15</sup>
+Social network analyses provide insight into mating behaviours, species
+interactions, and community structures.
+
 Network theory and social network analysis allows one to scale across
 dyads, groups, etc from pairwise interactions to social units, networks
-etc(Krause, Lusseau, and James 2009)
+etc<sup>14</sup>
 
-infer process from large scale pattern (Krause, Lusseau, and James 2009)
+infer process from large scale pattern<sup>14</sup>
 
 Structure of social networks affects evolutionary processes, population
-dynamics, (Kurvers et al. 2014)
+dynamics,<sup>16</sup>
 
 <!-- ### Multilayer networks
 used across disciplines
 -->
 
 Multilayer networks explicitly consider social systems across temporal,
-spatial and social contexts (Pilosof et al. 2017). They are made up of
-multiple layers, each representing relationships, individuals, spatial
-areas or temporal windows (Kivela et al. 2014; Porter 2018).
+spatial and social contexts.<sup>17</sup> They are made up of multiple
+layers, each representing relationships, individuals, spatial areas or
+temporal windows.<sup>18,19</sup>
 <!--GENERALLY INTERESTING Recently used in animal behaviour studies, multilayer networks have the potential to better characterize complex social systems [@silk2018a; @finn2019].-->
 
 For multilayer social networks, three types of scale are relevant:
@@ -160,7 +136,7 @@ or window (as in temporal networks). Layers in interconnected networks
 consist of the same or different entities with layers representing
 different subsystems (as in networks of networks), different types of
 entities (as in intercontextual networks), or different spatial
-locations (as in spatial networks) (Finn et al. 2019).
+locations (as in spatial networks).<sup>20</sup>
 
 Of these, we have identified multirelational networks, networks of
 networks, intercontextual networks and spatial networks as likely to
@@ -200,133 +176,128 @@ What kinds of spatial scale are there
 
 <div id="refs" class="references">
 
-<div id="ref-chave2013">
+<div id="ref-levin1992problem">
 
-Chave, Jérôme. 2013. “The Problem of Pattern and Scale in Ecology: What
-Have We Learned in 20 Years?” *Ecology Letters* 16 (s1): 4–16.
-<https://doi.org/10.1111/ele.12048>.
+**1** Levin, S. A. Ecology 73, 1943–1967 (1992)
 
 </div>
 
-<div id="ref-elith2009">
+<div id="ref-allen2015">
 
-Elith, Jane, and John R. Leathwick. 2009. “Species Distribution Models:
-Ecological Explanation and Prediction Across Space and Time.” *Annual
-Review of Ecology, Evolution, and Systematics* 40 (1): 677–97.
-<https://doi.org/10.1146/annurev.ecolsys.110308.120159>.
-
-</div>
-
-<div id="ref-farine2015">
-
-Farine, D. R., and H. Whitehead. 2015. “Constructing, Conducting and
-Interpreting Animal Social Network Analysis.” *Journal of Animal
-Ecology* 84 (5): 1144–63. <https://doi.org/10.1111/1365-2656.12418>.
+**2** Allen, T. F. H. *et al.* (Columbia University Press, 2015)
 
 </div>
 
 <div id="ref-field2009">
 
-Field, Richard, Bradford A. Hawkins, Howard V. Cornell, David J. Currie,
-J. Alexandre F. Diniz-Filho, Jean-François Guégan, Dawn M. Kaufman, et
-al. 2009. “Spatial Species-Richness Gradients Across Scales: A
-Meta-Analysis.” *Journal of Biogeography* 36 (1): 132–47.
-<https://doi.org/10.1111/j.1365-2699.2008.01963.x>.
-
-</div>
-
-<div id="ref-finn2019">
-
-Finn, Kelly R., Matthew J. Silk, Mason A. Porter, and Noa
-Pinter-Wollman. 2019. “The Use of Multilayer Network Analysis in Animal
-Behaviour.” *Animal Behaviour* 149 (March): 7–22.
-<https://doi.org/10.1016/j.anbehav.2018.12.016>.
-
-</div>
-
-<div id="ref-kivela2014">
-
-Kivela, M., A. Arenas, M. Barthelemy, J. P. Gleeson, Y. Moreno, and M.
-A. Porter. 2014. “Multilayer Networks.” *Journal of Complex Networks* 2
-(3): 203–71. <https://doi.org/10.1093/comnet/cnu016>.
-
-</div>
-
-<div id="ref-krause2009">
-
-Krause, Jens, David Lusseau, and Richard James. 2009. “Animal Social
-Networks: An Introduction.” *Behavioral Ecology and Sociobiology* 63
-(7): 967–73. <https://doi.org/10.1007/s00265-009-0747-0>.
-
-</div>
-
-<div id="ref-kurvers2014">
-
-Kurvers, Ralf H. J. M., Jens Krause, Darren P. Croft, Alexander D. M.
-Wilson, and Max Wolf. 2014. “The Evolutionary and Ecological
-Consequences of Animal Social Networks: Emerging Issues.” *Trends in
-Ecology & Evolution* 29 (6): 326–35.
-<https://doi.org/10.1016/j.tree.2014.04.002>.
+**3** Field, R. *et al.* Journal of Biogeography 36, 132–147 (2009)
 
 </div>
 
 <div id="ref-legendre1993">
 
-Legendre, Pierre. 1993. “Spatial Autocorrelation: Trouble or New
-Paradigm?” *Ecology* 74 (6): 1659–73. <https://doi.org/10.2307/1939924>.
+**4** Legendre, P. Ecology 74, 1659–1673 (1993)
 
 </div>
 
-<div id="ref-levin1992problem">
+<div id="ref-chave2013">
 
-Levin, Simon A. 1992. “The Problem of Pattern and Scale in Ecology: The
-Robert H. MacArthur Award Lecture.” *Ecology* 73 (6): 1943–67.
+**5** Chave, J. Ecology Letters 16, 4–16 (2013)
+
+</div>
+
+<div id="ref-elith2009">
+
+**6** Elith, J. *et al.* Annual Review of Ecology, Evolution, and
+Systematics 40, 677–697 (2009)
 
 </div>
 
 <div id="ref-mayor2007">
 
-Mayor, S. J., J. A. Schaefer, D. C. Schneider, and S. P. Mahoney. 2007.
-“SPECTRUM OF SELECTION: NEW APPROACHES TO DETECTING THE
-SCALE-DEPENDENT RESPONSE TO HABITAT.” *Ecology* 88 (7): 1634–40.
-<https://doi.org/10.1890/06-1672.1>.
-
-</div>
-
-<div id="ref-pilosof2017a">
-
-Pilosof, Shai, Mason A. Porter, Mercedes Pascual, and Sonia Kéfi. 2017.
-“The Multilayer Nature of Ecological Networks.” *Nature Ecology &
-Evolution* 1 (4). <https://doi.org/10.1038/s41559-017-0101>.
-
-</div>
-
-<div id="ref-porter2018a">
-
-Porter, Mason A. 2018. “What Is... A Multilayer Network?” *Notices of
-the American Mathematical Society* 65 (11): 1.
-<https://doi.org/10.1090/noti1746>.
-
-</div>
-
-<div id="ref-schneider2009">
-
-Schneider, David C. 2009. *Quantitative Ecology: Measurement, Models and
-Scaling*. Academic Press.
+**7** Mayor, S. J. *et al.* Ecology 88, 1634–1640 (2007)
 
 </div>
 
 <div id="ref-sugihara1989b">
 
-Sugihara, George, Kenneth Schoenly, and Alan Trombla. 1989. “Scale
-Invariance in Food Web Properties.” *Science, New Series* 245 (4913,):
-48–52.
+**8** Sugihara, G. *et al.* Science, New Series 245, 48–52 (1989)
+
+</div>
+
+<div id="ref-schneider2009">
+
+**9** Schneider, D. C. (Academic Press, 2009)
 
 </div>
 
 <div id="ref-tinbergen1951">
 
-Tinbergen, Niko. 1951. “The Study of Instinct.”
+**10** Tinbergen, N. (1951)
+
+</div>
+
+<div id="ref-castles2014a">
+
+**11** Castles, M. *et al.* Animal Behaviour 96, 59–67 (2014)
+
+</div>
+
+<div id="ref-farine2015a">
+
+**12** Farine, D. Animal Behaviour 104, e1–e5 (2015)
+
+</div>
+
+<div id="ref-farine2015b">
+
+**13** Farine, D. R. *et al.* Journal of Animal Ecology 84, 1144–1163
+(2015)
+
+</div>
+
+<div id="ref-krause2009">
+
+**14** Krause, J. *et al.* Behavioral Ecology and Sociobiology 63,
+967–973 (2009)
+
+</div>
+
+<div id="ref-croft2008">
+
+**15** Croft, D. P. *et al.* (Princeton University Press, 2008)
+
+</div>
+
+<div id="ref-kurvers2014">
+
+**16** Kurvers, R. H. J. M. *et al.* Trends in Ecology & Evolution 29,
+326–335 (2014)
+
+</div>
+
+<div id="ref-pilosof2017a">
+
+**17** Pilosof, S. *et al.* Nature Ecology & Evolution 1, (2017)
+
+</div>
+
+<div id="ref-kivela2014">
+
+**18** Kivela, M. *et al.* Journal of Complex Networks 2, 203–271 (2014)
+
+</div>
+
+<div id="ref-porter2018a">
+
+**19** Porter, M. A. Notices of the American Mathematical Society 65, 1
+(2018)
+
+</div>
+
+<div id="ref-finn2019">
+
+**20** Finn, K. R. *et al.* Animal Behaviour 149, 7–22 (2019)
 
 </div>
 

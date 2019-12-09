@@ -1,12 +1,13 @@
 ---
 output: github_document
 bibliography: ../references/refs.bib
+csl: cite.csl
 ---
 
 # Introduction
 
 <!-- ### Landscape spatial scale -->
-Our understandings of ecological pattern and process are directly linked to the scale at which they are observed [@levin1992problem]. Animals and landscapes are influenced across scales by higher level processes, e.g. climate and productivity [@field2009], and lower level processes, e.g. species interactions and resource availability [@legendre1993; @chave2013]. The effect of scale has been explicity considered in ecology including in species distribution [@elith2009], habitat selection [@mayor2007] and food webs [@sugihara1989b]. Scale can be considered for all measured quantities [@schneider2009] including spatial and temporal variables as well as domain specific variables such as sociality.
+Our understandings of ecological pattern and process are directly linked to the scale at which they are observed [@levin1992problem; @allen2015]. Animals and landscapes are influenced across scales by higher level processes, such as climate and productivity [@field2009], and lower level processes, such as species interactions and resource availability [@legendre1993; @chave2013]. The effect of scale has been explicity considered in ecology including in species distribution [@elith2009], habitat selection [@mayor2007] and food webs [@sugihara1989b]. Scale can be considered for all measured quantities [@schneider2009] including spatial and temporal variables as well as domain specific variables such as sociality.
 
 
 <!-- observational scales of landscapes do not necessarily correspond to the "scale of effect" of species-landscape relationships, or the scale at which there is the strongest relationship [@jackson2015]-->
@@ -19,45 +20,17 @@ Our understandings of ecological pattern and process are directly linked to the 
 
 
 
-<!-- ### Social proximity scale 
-sociality exists 
--->
+<!-- ### Social proximity scale  -->
+Sociality, defined simply as the degree of shared space use among conspecifics [@tinbergen1951], exists across scales. For example, grooming and mating relationships requires close proximity between conspecifics and occurs over brief time periods whereas home range overlap occurs over larger spatial and temporal scales. Shared space is a requirement for social interaction, however, it remains unclear whether spatial proximity scales predictably with social interactions [@castles2014a; @farine2015a]. Social scale can be defined as the type of relationship observed [@farine2015a] and these relationships can be explicitly defined and measured in social network analyses [@farine2015b]. 
 
-<!-- Sociality exists across scales -->
-
-<!-- How do consider shared space use -->
-
-<!-- Spatial proximity as a proxy for interactions  -->
-
-<!-- Social association -->
-
-<!-- Home range overlap  -->
-
-<!-- Connection of individuals within a social structure can be formalized/analyzed as a social network -->
-
-co-occurrence is used in social network studies as a synonym for social association (Farine and Whitehead 2015).
-
-
-Sociality, defined simply as some degree of shared space use among conspecifics [@tinbergen1951], exists across scales. Social scale is the type of social relationship observed and how this relationship is defined [@farine2015]. For example, grooming and mating relationships require immediate proximity between conspecifics whereas home range overlap occurs over much larger spatial and temporal scales. 
-
-
-Shared space is a requirement for social interaction, however, it remains unclear whether spatial proximity scales predictably with social interactions (Castles et al. 2014; Farine 2015). 
-
-
-
-<!-- Sociality is defined here as by @tinbergen1951: "an animal is called social when it strives to be in the neighbourhood of fellow members of its species when performing some, or all, of its instinctive activities". -->
-
-<!-- Sociality is important because conspecifics have positive and negative benefits -->
-
-
-<!-- Sociality is accompanied by positive and negative effects, and evolves when the net benefit is greater than the cost [@silk2007]. Positive effects include protection from predators, mating opportunities, and resource location and access [@silk2007]. Negative effects include increased competition, risk of disease transfer and infection [@silk2007]. -->
-
-
-Social scale is the type of social relationship measured and how this relationship is defined [@farine2015]. If the greater range of a social relationship is the entire social system for an organism, a particular social scale may focus on only a limited type of relationship like grooming or aggression. 
 
 <!-- ### Regular networks
 * SNA significant outcomes
 -->
+
+Rooted in mathematical graph theory, animal social networks measures the relationships of individuals and organization of animal social systems [@krause2009; @Wey2008; @croft2008]. Social network analyses provide insight into mating behaviours, species interactions, and community structures. 
+
+
 Network theory and social network analysis allows one to scale across dyads, groups, etc from pairwise interactions to social units, networks etc[@krause2009]
 
 infer process from large scale pattern [@krause2009]
