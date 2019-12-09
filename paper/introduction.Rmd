@@ -6,24 +6,16 @@ bibliography: ../references/refs.bib
 # Introduction
 
 <!-- ### Landscape spatial scale -->
-Our understanding of ecological patterns and processes are directly linked to the scale at which they are observed [@levin1992problem]. 
+Our understandings of ecological pattern and process are directly linked to the scale at which they are observed [@levin1992problem]. Animals and landscapes are influenced across scales by higher level processes, e.g. climate and productivity [@field2009], and lower level processes, e.g. species interactions and resource availability [@legendre1993; @chave2013]. The effect of scale has been explicity considered in ecology including in species distribution [@elith2009], habitat selection [@mayor2007] and food webs [@sugihara1989b]. Scale can be considered for all measured quantities [@schneider2009] including spatial and temporal variables as well as domain specific variables such as sociality.
 
-heteroneity of landscapes
-within seemingly homogeneous patches, exist lower level processes including species interactions, resource availability, disease transfer [@legendre1993]
-
-Animals may be influenced by processes at multiple scales 
 
 <!-- observational scales of landscapes do not necessarily correspond to the "scale of effect" of species-landscape relationships, or the scale at which there is the strongest relationship [@jackson2015]-->
 
-the scales that influence animals and the patterns of their landscapes may be disjoint [@chave2013]. The effects of scale have been explicitly investigated across many ecological studies including habitat selection [@mayor2007], evaluating satellite imagery [@benson1995] and    of ecology including landscape ecology, movement ecology, earth observation [@benson1995], habitat selection[@mayor2007]
+<!-- the scales that influence animals and the patterns of their landscapes may be disjoint [@chave2013].  -->
 
 <!-- observers bias their perspective when selecting a scale,often unknowingly or without considering the implications [@allen2015].  -->
 
-
-Scale can be considered for all measured quantities [@schneider2009] including spatial and temporal variables as well as domain specific <!--lead into social-->
-
-
-Spatial scale is a central consideration in the way we understand landscape ecology and animal space use. 
+<!-- Spatial scale is a central consideration in the way we understand landscape ecology and animal space use.  -->
 
 
 
@@ -72,15 +64,17 @@ explore sensitivity of network measures to scale
 
 
 
+Despite the interplay between social networks and how animals use space, there remains an important biological and methodological gap in our understanding of how an animals perception of spatial scale, e.g., grain and extent, 
+
+We will simulate animal movement data coupled with emergent social networks on increasingly heterogenous landscapes across spatial scales. 
 
 
 ---
 
 
-Despite the interplay between social networks and how animals use space, there remains an important biological and methodological gap in our understanding of how an animals perception of spatial scale, e.g., grain and extent, 
 
 
-We will simulate animal movement data coupled with emergent social networks on increasingly heterogenous landscapes across spatial scales. Furthermore, we review specific examples of spatially explicit data types to include in multilayer networks and explore the relevant nuances of these data. Our simulations will highlight the need to carefully select scales for measuring spatial processes and appropriately weight layers and edges representing different types of data. Effective integration of spatial processes, including biologically meaningful scales, into animal social networks is an emerging area of research. Our contribution will incorporate landscape ecology theory as a way to link different scales of social and spatial processes in a multilayer network. Based on social network and landscape ecology theory as well as our simulations we demonstrate potential for interconnectedness among individual animals and the landscapes they occupy.
+Furthermore, we review specific examples of spatially explicit data types to include in multilayer networks and explore the relevant nuances of these data. Our simulations will highlight the need to carefully select scales for measuring spatial processes and appropriately weight layers and edges representing different types of data. Effective integration of spatial processes, including biologically meaningful scales, into animal social networks is an emerging area of research. Our contribution will incorporate landscape ecology theory as a way to link different scales of social and spatial processes in a multilayer network. Based on social network and landscape ecology theory as well as our simulations we demonstrate potential for interconnectedness among individual animals and the landscapes they occupy.
 
 
 
