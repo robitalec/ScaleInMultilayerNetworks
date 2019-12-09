@@ -58,6 +58,9 @@ For multilayer social networks, three types of scale are relevant: spatial, temp
 deer
 fogo caribou
 -->
+We will use two case studies to explore the sensitivity of multilayer network measures across scales. One, using an island population of caribou (*Rangifer tarandus*)
+
+
 
 integrating networks across scales
 explore sensitivity of network measures to scale
