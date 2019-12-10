@@ -5,6 +5,7 @@
 pkgs <- c('data.table',
 					'ggplot2',
 					'spatsoc',
+					'multinet',
 					'rgdal',
 					'asnipe',
 					'raster',
@@ -13,9 +14,9 @@ pkgs <- c('data.table',
 p <- lapply(pkgs, library, character.only = TRUE)
 
 ### Data ----
-DT <- fread('input/FogoCaribou.csv')
+DT <- fread('data/FogoCaribou.csv')
 
-lc <- raster('input/Landcover/FogoSDSS_RS.tif')
+lc <- raster('data/Landcover/FogoSDSS_RS.tif')
 
 
 ### Reclassify raster ----
@@ -81,12 +82,6 @@ group_pts(
 )
 
 ### Group by individual matrices + networks ----
-# gbi <- get_gbi(
-# 	DT = sub,
-# 	group = 'group',
-# 	id = idcol
-# )
-
 ulc <- sub[!is.na(get(splitBy)), unique(get(splitBy))]
 gbiLs <- lapply(ulc, function(l) {
 	get_gbi(
@@ -122,26 +117,41 @@ names(gLs) <- ulc
 
 
 ### Calculate multidegree and strength across networks ----
-ml <- rbindlist(lapply(gLs, function(g) {
+multideg <- rbindlist(lapply(gLs, function(g) {
 	d <- degree(g)
 	s <- strength(g)
 	list(deg = d, ANIMAL_ID = names(d), strg = s)
 }), idcol = splitBy)
 
 
+### Construct multilayer network
+## multinet
+ml <- ml_empty()
+
+add_layers_ml(ml, ulc, directed = FALSE)
+
+add_vertices_ml(ml, unique(na.omit(sub[, .(get(idcol), relc)])))
+
+edges <- rbindlist(lapply(gLs, function(g) data.table(get.edgelist(g))),
+                   idcol = 'relc')
+
+add_edges_ml(ml, edges[, .(V1, relc, V2, relc)])
+
+plot(ml)
+
 ### Plots ----
-ggplot(ml) +
+ggplot(multideg) +
 	geom_histogram(aes(deg)) +
 	facet_wrap(~get(splitBy))
 
 
-ggplot(ml) +
+ggplot(multideg) +
 	geom_line(aes(factor(get(splitBy), levels = rclnms, labels = names(rclnms)),
 								deg, group = get(idcol), color = get(idcol))) +
 	labs(x = 'Landcover', y =  'Degree') +
 	guides(color = FALSE)
 
-ggplot(ml) +
+ggplot(multideg) +
 	geom_line(aes(factor(get(splitBy), levels = rclnms, labels = names(rclnms)),
 								strg, group = get(idcol), color = get(idcol))) +
 	labs(x = 'Landcover', y =  'Strength') +
