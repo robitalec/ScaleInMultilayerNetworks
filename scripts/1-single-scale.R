@@ -132,12 +132,18 @@ add_layers_ml(ml, ulc, directed = FALSE)
 
 add_vertices_ml(ml, unique(na.omit(sub[, .(get(idcol), relc)])))
 
-edges <- rbindlist(lapply(gLs, function(g) data.table(get.edgelist(g))),
-                   idcol = 'relc')
+edges <- rbindlist(
+  lapply(gLs, function(g) {
+    data.table(get.edgelist(g), w = E(g)$weight)}),
+  idcol = 'relc')
 
 add_edges_ml(ml, edges[, .(V1, relc, V2, relc)])
 
 plot(ml)
+
+
+### Output ----
+fwrite(edges, 'data/edgels.csv')
 
 ### Plots ----
 ggplot(multideg) +
