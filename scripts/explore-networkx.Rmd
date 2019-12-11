@@ -1,0 +1,24 @@
+---
+title: "explore networkx"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+source('../scripts/1-single-scale.R')
+```
+
+Expectation is an edge list
+
+```{python}
+import pandas as pd
+import networkx as nx
+
+edges = pd.read_csv('../data/edgels.csv')
+edges
+G=nx.from_pandas_edgelist(edges, 'V1', 'V2', edge_attr='w')
+```
