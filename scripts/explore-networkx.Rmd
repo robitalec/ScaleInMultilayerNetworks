@@ -17,10 +17,14 @@ Expectation is an edge list
 ```{python}
 import pandas as pd
 import networkx as nx
-import multiNetX as ml
+import multinetx as ml
 
 edges = pd.read_csv('../data/edgels.csv')
-edges
-G=nx.from_pandas_edgelist(edges, 'V1', 'V2', edge_attr='w')
+
+print(edges['relc'].unique())
+
+G1 = nx.from_pandas_edgelist(edges[edges['relc'] == 1], 'V1', 'V2', edge_attr='w')
+G2 = nx.from_pandas_edgelist(edges[edges['relc'] == 2], 'V1', 'V2', edge_attr='w')
+G3 = nx.from_pandas_edgelist(edges[edges['relc'] == 3], 'V1', 'V2', edge_attr='w')
 
 ```
