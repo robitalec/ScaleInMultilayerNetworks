@@ -104,5 +104,8 @@ graphs <- lapply(seq(2, 6), function(n) {
 })
 
 ### Multilayer network metrics ----
-
+lapply(graphs, function(g) {
+  deg <- lapply(g, degree)[1]
+  rbindlist(lapply(deg, stack), idcol = 'season')
+})
 
