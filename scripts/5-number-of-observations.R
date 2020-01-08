@@ -56,12 +56,12 @@ group_times(
 # TODO: rm 1 since no cross season with one sample
 # TODO: even sample n by season
 
-
 nobs <- sub[, unique(timegroup), season]
 
-graphs <- lapply(nobs[2:5], function(n) {
+#sub[, uniqueN(timegroup)]), 
+graphs <- lapply(seq(2, 6), function(n) {
   # Randomly select n observations
-  nsub <- sub[timegroup %in% sample(timegroup, size = n)]
+  nsub <- sub[timegroup %in% sub[, sample(timegroup, size = 2), season]$V1]
   
   group_pts(
     nsub,
@@ -102,8 +102,6 @@ graphs <- lapply(nobs[2:5], function(n) {
   
   gLs
 })
-  
-### Generate networks for each n observations ----
 
 ### Multilayer network metrics ----
 
