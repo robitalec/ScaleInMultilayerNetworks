@@ -57,7 +57,7 @@ group_times(
 # TODO: even sample n by season
 
 #sub[, uniqueN(timegroup)]), 
-graphs <- lapply(seq(2, 6, by = 2), function(n) {
+graphs <- lapply(seq(2, 30, by = 2), function(n) {
   # Randomly select n observations
   nsub <- sub[timegroup %in% sub[, sample(timegroup, size = 2), season]$V1]
   
@@ -115,7 +115,8 @@ multdeg[, mdeg := sum(deg), by = c('by', idcol)]
 
 ggplot(multdeg) + 
   geom_line(aes(nobs, mdeg, color = get(idcol), group = get(idcol))) +
-  facet_wrap(~get(idcol))
+  facet_wrap(~get(idcol)) +
+  guides(color = FALSE)
 
 
 ggplot(multdeg) + 
