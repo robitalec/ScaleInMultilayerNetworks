@@ -56,10 +56,8 @@ group_times(
 # TODO: rm 1 since no cross season with one sample
 # TODO: even sample n by season
 
-nobs <- sub[, unique(timegroup), season]
-
 #sub[, uniqueN(timegroup)]), 
-graphs <- lapply(seq(2, 6), function(n) {
+graphs <- lapply(seq(2, 6, by = 2), function(n) {
   # Randomly select n observations
   nsub <- sub[timegroup %in% sub[, sample(timegroup, size = 2), season]$V1]
   
@@ -98,14 +96,29 @@ graphs <- lapply(seq(2, 6), function(n) {
     diag = FALSE,
     weighted = TRUE
   )
-  names(gLs) <- usplit
-  
+  names(gLs) <- paste(n, usplit, sep = '-')
   gLs
 })
 
 ### Multilayer network metrics ----
-lapply(graphs, function(g) {
-  deg <- lapply(g, degree)[1]
-  rbindlist(lapply(deg, stack), idcol = 'season')
-})
+multdeg <- rbindlist(lapply(graphs, function(g) {
+  deg <- lapply(g, degree)
+  rbindlist(lapply(deg, stack), idcol = 'by')
+}))
+
+setnames(multdeg, c('by', 'deg', idcol))
+
+multdeg[, c('nobs', 'season') := tstrsplit(by, '-', type.convert = TRUE)]
+
+multdeg[, mdeg := sum(deg), by = c('by', idcol)]
+
+
+ggplot(multdeg) + 
+  geom_line(aes(nobs, mdeg, color = get(idcol), group = get(idcol))) +
+  facet_wrap(~get(idcol))
+
+
+ggplot(multdeg) + 
+  geom_line(aes(nobs, deg, color = get(idcol), group = get(idcol))) +
+  facet_wrap(~get(idcol) + season)
 
