@@ -48,21 +48,17 @@ group_times(
   threshold = tempthresh
 )
 
-
-
-
 ### Generate networks for each n observations ----
-# TODO: rm [1:5]
-# TODO: rm 1 since no cross season with one sample
-# TODO: even sample n by season
 maxn <- 300 #sub[, uniqueN(timegroup)])
+# Randomly select n max observations
 randobs <- sub[, sample(timegroup, size = maxn), season]$V1
 
-#sub[, uniqueN(timegroup)]), 
 graphs <- lapply(seq(2, maxn, by = 2), function(n) {
-  # Randomly select n observations
+  # Select first n random timegroups, 
+  #  adding new observations to the tail with each iteration
   nsub <- sub[timegroup %in% randobs[1:n]]
-  # nsub[, uniqueN(timegroup)]
+
+  # Spatial grouping with spatsoc
   group_pts(
     nsub,
     threshold = spatthresh,
@@ -115,6 +111,7 @@ multdeg[, c('nobs', 'season') := tstrsplit(by, '-', type.convert = TRUE)]
 multdeg[, mdeg := sum(deg), by = c('by', idcol)]
 
 
+### Plots ----
 ggplot(multdeg) + 
   geom_line(aes(nobs, mdeg, color = get(idcol), group = get(idcol))) +
   facet_wrap(~get(idcol)) +
