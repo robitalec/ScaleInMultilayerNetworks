@@ -14,11 +14,11 @@ p <- lapply(pkgs, library, character.only = TRUE)
 
 
 ### Data ----
-DT <- fread('input/FogoCaribou.csv')
+DT <- fread('data/FogoCaribou.csv')
 
-lc <- raster('input/Landcover/FogoSDSS_RS.tif')
+lc <- raster('data/Landcover/FogoSDSS_RS.tif')
 
-water <- readOGR('input/Landcover/FogoPoly.shp')
+water <- readOGR('data/Landcover/FogoPoly.shp')
 
 ### Reclassify raster ----
 mlc <- mask(lc, water)
