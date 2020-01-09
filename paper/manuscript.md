@@ -8,13 +8,13 @@ Scale remains a seminal concept in ecology. Spatial scale, for instance,
 has become a central consideration in the way we understand landscape
 ecology and animal space use. Multilayer networks promise the
 integration of monolayer animal social networks with the complexity and
-importance of animal movement and space use in heterogenous landscapes.
+importance of animal movement and space use in heterogeneous landscapes.
 Despite the complex interplay between social networks and how animals
 use space, there remains an important biological and methodological gap
-in our understanding of an animals perception of spatial scale, e.g.,
+in our understanding of an animal’s perception of spatial scale, e.g.,
 grain and extent, can affect multilayer network dynamics. Here, we test
 how multilayer network metrics (e.g., versatility, multi-degree,
-similarity) are sensitive to variation in an animals perception of
+similarity) are sensitive to variation in an animal’s perception of
 scale. We will simulate animal movement data coupled with emergent
 social networks on increasingly heterogenous landscapes across spatial
 scales. Furthermore, we review specific examples of spatially explicit
@@ -41,26 +41,26 @@ level processes, such as species interactions and resource availability
 (Legendre 1993; Chave 2013). The effect of scale in ecology has been
 explored through species distributions (Elith et al 2009) habitat
 selection (Mayor et al 2007) and food webs (Sugihara et al 1989). Scale
-can be considered for all types of measured quantities9 including
-spatial and temporal variables, as well as behavioural variables
-including sociality.
+can be considered for all types of measured quantities including spatial
+and temporal variables, as well as behavioural variables, including
+sociality.
 
 Sociality exists across scales (Whitehead 2008). For example, grooming
-and mating relationships requires close proximity between conspecifics
+and mating relationships require close proximity between conspecifics
 and occur over brief time periods (e.g. Carter et al. 2015), whereas
 social association represents shared space use by members of the same
 social group (Franks et al. 2010). Further, home range overlap among
 individuals is a coarse scale of sociality, where individuals share
 space over larger spatial and temporal scales (e.g. Piza-Roca et
 al. 2018). Shared space is a requirement for most types of social
-interactions, however, it remains unclear whether coarser scales of
+interactions. However, it remains unclear whether coarser scales of
 sociality, including social association and home range overlap, vary
 predictably with social interaction (Castles et al. 2014; Farine 2015).
 Social scale can be defined as the type of relationship observed (Farine
 2015) and these relationships can be explicitly defined and measured in
 social network analyses (Farine et al. 2015).
 
-Animal social network analysis are a well-developed tool used to measure
+Animal social network analysis is a well-developed tool used to measure
 the relationships of individuals and organization of social systems
 (Krause et al 2009; Wey et al. 2008; Croft et al. 2008). Social network
 analyses provide insight into interspecific interactions and the
@@ -83,22 +83,24 @@ al. 2019; Silk et al. 2018), although they have been used to describe
 multidimensional human social systems, complex transportation networks,
 and the complete neural network of an organism (Silk et al. 2018). The
 role of scale within a multilayer social network context remains
-unexplored, but provides a unique opportunity to develop novel
+unexplored but provides a unique opportunity to develop novel
 understanding of variation in the temporal or spatial scales associated
-with social systems. Here, we discuss and integrate variation in
-temporal and spatial scales within a multilayer network framework. We
-borrow from behavioural, landscape, and spatial ecology to build a
-conceptual and analytical framework for scale-dependent multilayer
-networks and we apply this framework seasonally variable social system
-case study of caribou (Rangifer tarandus) in Newfoundland, Canada
-(Peignier et al. 2019). We use this case study to address two principal
-questions associated with scale-dependent multilayer networks. First, to
-what degree does the spatial scale of landscapes, temporal windows of
-analysis, and social scale of relationships, influence our ability to
-interpret complex social systems? Second, can variation in spatial,
-temporal, and social scale improve predictions associated with seasonal
-differences in resource availability and social association. We conclude
-with perspectives for further development and application of scale in
+with social systems.
+
+Here, we discuss and integrate variation in temporal and spatial scales
+within a multilayer network framework. We borrow from behavioural,
+landscape, and spatial ecology to build a conceptual and analytical
+framework for scale-dependent multilayer networks and we apply this
+framework seasonally variable social system case study of caribou
+(*Rangifer tarandus*) in Newfoundland, Canada (Peignier et al. 2019). We
+use this case study to address two principal questions associated with
+scale-dependent multilayer networks. First, to what degree does the
+spatial scale of landscapes, temporal windows of analysis, and social
+scale of relationships, influence our ability to interpret complex
+social systems? Second, can variation in spatial, temporal, and social
+scale improve predictions associated with seasonal differences in
+resource availability and social association? We conclude with
+perspectives for further development and application of scale in
 multilayer networks by discussing the problem and promise of scale from
 the perspective of social systems (Castles et al. 2014; Farine 2015) and
 landscape ecology (Schneider 2009).
@@ -107,26 +109,26 @@ landscape ecology (Schneider 2009).
 
 ### Caribou socioecology
 
-Here, we use caribou (Rangifer tarandus) as a case study to develop
-scale-dependent multilayer networks based on temporal (seasonal),
-spatial (habitat type), and social (visual and auditory perception).
-Caribou are gregarious ungulates with fission-fusion dynamics
-(Lesmerises et al. 2018) that display temporal (Peignier et al. 2019)
-and spatial (Webber et al. unpublished data) variation in social
-networks. In winter, caribou dig holes in the snow, termed craters to
-access forage (Bergerud 1974). As a result, caribou tend to occupy and
-re-use craters once they are established. The average area of craters
-dug by caribou in Newfoundland was 0.41 m2 (SD = 0.48; Mayor et
-al. 2009) and crater density, which varies based on snow condition,
-depth, and local caribou density, can range from 366–1980 craters/ha
-(Bergerud 1974). There is therefore considerably less access to forage
-than when the landscape is snow-free. Importantly, craters exist on the
-landscape at multiple scales: the carter scale (a single crater), the
-feeding area scale (multiple craters in close proximity), and the winter
-range scale (all craters within an individual’s range) (Mayor et
-al. 2009). The distribution of craters on the landscape is therefore
-heterogeneous and access to vegetation in winter is highly variable
-among individual caribou.
+Here, we use caribou as a case study to develop scale-dependent
+multilayer networks based on temporal (seasonal), spatial (habitat
+type), and social (visual and auditory perception). Caribou are
+gregarious ungulates with fission-fusion dynamics (Lesmerises et
+al. 2018) that display temporal (Peignier et al. 2019) and spatial
+(Webber et al. unpublished data) variation in social networks. In
+winter, caribou dig holes in the snow, termed craters to access forage
+(Bergerud 1974). As a result, caribou tend to occupy and re-use craters
+once they are established. The average area of craters dug by caribou in
+Newfoundland was 0.41 m2 (SD = 0.48; Mayor et al. 2009) and crater
+density, which varies based on snow condition, depth, and local caribou
+density, can range from 366–1980 craters/ha (Bergerud 1974). There is
+therefore considerably less access to forage than when the landscape is
+snow-free. Importantly, craters exist on the landscape at multiple
+scales: the crater scale (a single crater), the feeding area scale
+(multiple craters in close proximity), and the winter range scale (all
+craters within an individual’s range) (Mayor et al. 2009). The
+distribution of craters on the landscape is therefore heterogeneous and
+access to vegetation in winter is highly variable among individual
+caribou.
 
 ### Caribou location data
 
@@ -137,8 +139,8 @@ Inc., Newmarket, ON, Canada, GPS4400M collars, 1,250 g) as described by
 Schaefer and Mahoney (2013). Collars were programmed to collect location
 fixes every 2 hours. Prior to analyses, we subset GPS fixes into a
 discrete removed all erroneous and outlier GPS fixes following
-Bjørneraas et al. (2010). We did not collar all female caribou in the
-herd, however, we assumed that our sample of collared animals was
+Bjørneraas et al. (2010). We did not collar all female caribou in the
+herd. However, we assumed that our sample of collared animals was
 random. Although associations between collared and uncollared animals
 were unrecorded, we assumed that our networks (see below) were unbiased
 representations of the relative degree of social association among all
