@@ -49,6 +49,8 @@ group_times(
 )
 
 ### Generate networks for each n observations ----
+# TODO: change to across lc by season (dont combine seasons)
+
 maxn <- 300 #sub[, uniqueN(timegroup)])
 # Randomly select n max observations
 randobs <- sub[, sample(timegroup, size = maxn), season]$V1
