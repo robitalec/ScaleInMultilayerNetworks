@@ -55,12 +55,14 @@ group_times(
 # TODO: rm [1:5]
 # TODO: rm 1 since no cross season with one sample
 # TODO: even sample n by season
+maxn <- 300 #sub[, uniqueN(timegroup)])
+randobs <- sub[, sample(timegroup, size = maxn), season]$V1
 
 #sub[, uniqueN(timegroup)]), 
-graphs <- lapply(seq(2, 30, by = 2), function(n) {
+graphs <- lapply(seq(2, maxn, by = 2), function(n) {
   # Randomly select n observations
-  nsub <- sub[timegroup %in% sub[, sample(timegroup, size = 2), season]$V1]
-  
+  nsub <- sub[timegroup %in% randobs[1:n]]
+  # nsub[, uniqueN(timegroup)]
   group_pts(
     nsub,
     threshold = spatthresh,
@@ -69,9 +71,9 @@ graphs <- lapply(seq(2, 30, by = 2), function(n) {
     timegroup = 'timegroup',
     splitBy = splitBy
   )
-  
+
   usplit <- unique(nsub[[splitBy]])
-  
+
   # GBI for each season
   gbiLs <- lapply(usplit, function(u) {
     gbi <- get_gbi(
