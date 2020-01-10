@@ -60,11 +60,15 @@ rclnms <- list(open = 1, forest = 2, lichen = 3)
 
 reclass <- reclassify(mlc, rcl)
 
-lsres <- c(100, 250, 500, 1000)
+lsres <- c(0, 100, 250)#, 500, 1000)
 lslc <- lapply(lsres, function(res) {
-  winmove(reclass, res, type = 'circle', win_fun = modal)
+  if (res == 0) {
+    reclass
+  } else {
+    winmove(reclass, res, type = 'circle', win_fun = modal)  
+  }
+  
 })
-
 
 ### Sample landcover ----
 # landcover
