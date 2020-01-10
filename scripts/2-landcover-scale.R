@@ -1,4 +1,4 @@
-### Scale in multilayer networks - landcover networks
+### Scale in multilayer networks - landcover scale
 # Alec Robitaille
 
 ### Packages ----
@@ -19,6 +19,23 @@ DT <- fread('data/FogoCaribou.csv')
 lc <- raster('data/Landcover/FogoSDSS_RS.tif')
 
 water <- readOGR('data/Landcover/FogoPoly.shp')
+
+### Sub data ----
+# TODO: add season? 
+sub <- DT[Year == 2018]
+
+idcol <- 'ANIMAL_ID'
+# keepids <- sub[, .N, c(idcol, 'season')][, .N, idcol][N == 2][[idcol]]
+# sub <- sub[get(idcol) %chin% keepids]
+
+
+### Project relocations ----
+# UTM zone 21N
+projCols <- c('EASTING', 'NORTHING')
+utm21N <- '+proj=utm +zone=21 ellps=WGS84'
+
+sub[, (projCols) := as.data.table(project(cbind(X_COORD, Y_COORD), utm21N))]
+
 
 ### Reclassify raster ----
 mlc <- mask(lc, water)
