@@ -28,6 +28,9 @@ idcol <- 'ANIMAL_ID'
 # keepids <- sub[, .N, c(idcol, 'season')][, .N, idcol][N == 2][[idcol]]
 # sub <- sub[get(idcol) %chin% keepids]
 
+### Cast columns ----
+sub[, idate := as.IDate(idate)]
+sub[, itime := as.ITime(itime)]
 
 ### Project relocations ----
 # UTM zone 21N
