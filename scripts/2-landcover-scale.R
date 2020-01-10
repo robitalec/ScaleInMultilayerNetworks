@@ -57,101 +57,101 @@ rclnms <- list(open = 1, forest = 2, lichen = 3)
 
 reclass <- reclassify(mlc, rcl)
 
-scale1 <- reclass
-scale2 <- winmove(scale1, 100, type = 'circle', win_fun = modal)
-scale3 <- winmove(scale1, 1000, type = 'circle', win_fun = modal)
+lsres <- c(100, 250, 500, 1000)
+lslc <- lapply(lsres, function(res) {
+  winmove(reclass, res, type = 'circle', win_fun = modal)
+})
 
-### Sub data ----
-idcol <- 'ANIMAL_ID'
-
-dropid <- c('FO2016011', 'FO2017001', 'FO2017013', 'FO2016006')
-sub <- DT[Year == 2018 & JDate < 75][!(ANIMAL_ID %in% dropid)]
-sub[, c('idate', 'itime') := .(as.IDate(idate), as.ITime(itime))]
-
-
-### Project relocations ----
-# UTM zone 21N
-projCols <- c('EASTING', 'NORTHING')
-utm21N <- '+proj=utm +zone=21 ellps=WGS84'
-
-sub[, (projCols) := as.data.table(project(cbind(X_COORD, Y_COORD), utm21N))]
 
 ### Sample landcover ----
 # landcover
-sub[, landcov := extract(lc,
-												 matrix(c(EASTING, NORTHING),
-												 			 ncol = 2))]
+sub[, landcov := extract(lc, matrix(c(EASTING, NORTHING), ncol = 2))]
 
-sub[, relc := extract(reclass,
-												 matrix(c(EASTING, NORTHING),
-												 			 ncol = 2))]
+sub[, (paste0('lc', lsres)) := 
+      lapply(lslc, function(lc) extract(lc, matrix(c(EASTING, NORTHING), ncol = 2)))]
 
-splitBy <- 'relc'
+rescols <- colnames(sub)[grepl('lc', colnames(sub))]
 
 
-### Spatiotemporal grouping with spatsoc ----
+### Temporal grouping with spatsoc ----
+tempthresh <- '5 minutes'
+
 group_times(
-	sub,
-	datetime =  c('idate', 'itime'),
-	threshold = '10 minutes'
+  sub,
+  datetime =  c('idate', 'itime'),
+  threshold = tempthresh
 )
 
-group_pts(
-	sub,
-	threshold = 50,
-	id = idcol,
-	coords = projCols,
-	timegroup = 'timegroup',
-	splitBy = splitBy
-)
 
-### Group by individual matrices + networks ----
-# gbi <- get_gbi(
-# 	DT = sub,
-# 	group = 'group',
-# 	id = idcol
-# )
+### Generate networks for each n observations ----
+spatthresh <- 50
 
-ulc <- sub[!is.na(get(splitBy)), unique(get(splitBy))]
-gbiLs <- lapply(ulc, function(l) {
-	get_gbi(
-		DT = sub[get(splitBy) == l],
-		group = 'group',
-		id = idcol
-	)
+graphs <- lapply(rescols, function(rescol) {
+  # Spatial grouping with spatsoc
+  group_pts(
+    nsub,
+    threshold = spatthresh,
+    id = idcol,
+    coords = projCols,
+    timegroup = 'timegroup',
+    splitBy = rescol
+  )
+  
+  usplit <- unique(nsub[[splitBy]])
+  
+  # GBI for each season
+  gbiLs <- lapply(usplit, function(u) {
+    gbi <- get_gbi(
+      DT = nsub[get(splitBy) == u],
+      group = 'group',
+      id = idcol
+    )
+  })
+  
+  # Generate networks for each season
+  netLs <- lapply(
+    gbiLs,
+    get_network,
+    data_format = 'GBI',
+    association_index = 'SRI'
+  )
+  
+  gLs <- lapply(
+    netLs,
+    graph.adjacency,
+    mode = 'undirected',
+    diag = FALSE,
+    weighted = TRUE
+  )
+  names(gLs) <- paste(n, usplit, sep = '-')
+  gLs
 })
 
-# net <- get_network(
-# 	gbi,
-# 	data_format = 'GBI',
-# 	association_index = 'SRI'
-# )
+### Multilayer network metrics ----
+multdeg <- rbindlist(lapply(graphs, function(g) {
+  deg <- lapply(g, degree)
+  rbindlist(lapply(deg, stack), idcol = 'by')
+}))
 
-## All individuals are in each network
-netLs <- lapply(
-	gbiLs,
-	get_network,
-	data_format = 'GBI',
-	association_index = 'SRI'
-)
+setnames(multdeg, c('by', 'deg', idcol))
 
-gLs <- lapply(
-	netLs,
-	graph.adjacency,
-	mode = 'undirected',
-	diag = FALSE,
-	weighted = TRUE
-)
-names(gLs) <- ulc
+multdeg[, c('nobs', 'season') := tstrsplit(by, '-', type.convert = TRUE)]
+
+multdeg[, mdeg := sum(deg), by = c('by', idcol)]
 
 
+### Plots ----
+ggplot(multdeg) + 
+  geom_line(aes(nobs, mdeg, color = get(idcol), group = get(idcol))) +
+  facet_wrap(~get(idcol)) +
+  guides(color = FALSE)
 
-### Calculate multidegree and strength across networks ----
-ml <- rbindlist(lapply(gLs, function(g) {
-	d <- degree(g)
-	s <- strength(g)
-	list(deg = d, ANIMAL_ID = names(d), strg = s)
-}), idcol = splitBy)
+
+ggplot(multdeg) + 
+  geom_line(aes(nobs, deg, color = get(idcol), group = get(idcol))) +
+  facet_wrap(~get(idcol) + season)
+
+
 
 
 ### Plots ----
