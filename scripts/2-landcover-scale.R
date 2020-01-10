@@ -146,14 +146,18 @@ multdeg[, c('res', 'lc') := tstrsplit(by, '-', type.convert = TRUE)]
 
 multdeg[, mdeg := sum(deg), by = c('res', idcol)]
 
+multdeg[, var(deg), by = .(ANIMAL_ID, lc)][order(V1)]
 
 ### Plots ----
+ggplot(multdeg[ANIMAL_ID == 'FO2016002']) + 
+  geom_line(aes(lc, deg, color = res)) +
+  facet_wrap(~ANIMAL_ID)
+  guides(color = FALSE)
+
 ggplot(multdeg) + 
   geom_line(aes(lc, deg)) +
   facet_grid(res~get(idcol)) +
   guides(color = FALSE)
-
-
 
 ggplot(multdeg) + 
   geom_line(aes(res, mdeg, color = get(idcol), group = get(idcol))) +
