@@ -96,7 +96,7 @@ spatthresh <- 50
 graphs <- lapply(rescols, function(rescol) {
   # Spatial grouping with spatsoc
   group_pts(
-    nsub,
+    sub,
     threshold = spatthresh,
     id = idcol,
     coords = projCols,
@@ -104,18 +104,18 @@ graphs <- lapply(rescols, function(rescol) {
     splitBy = rescol
   )
   
-  usplit <- unique(nsub[[splitBy]])
+  usplit <- unique(na.omit(sub, cols = rescol)[[rescol]])
   
-  # GBI for each season
+  # GBI for each lc
   gbiLs <- lapply(usplit, function(u) {
     gbi <- get_gbi(
-      DT = nsub[get(splitBy) == u],
+      DT = sub[get(rescol) == u],
       group = 'group',
       id = idcol
     )
   })
   
-  # Generate networks for each season
+  # Generate networks for each lc
   netLs <- lapply(
     gbiLs,
     get_network,
@@ -130,7 +130,7 @@ graphs <- lapply(rescols, function(rescol) {
     diag = FALSE,
     weighted = TRUE
   )
-  names(gLs) <- paste(n, usplit, sep = '-')
+  names(gLs) <- paste0(rescol, '-', usplit)
   gLs
 })
 
@@ -142,14 +142,21 @@ multdeg <- rbindlist(lapply(graphs, function(g) {
 
 setnames(multdeg, c('by', 'deg', idcol))
 
-multdeg[, c('nobs', 'season') := tstrsplit(by, '-', type.convert = TRUE)]
+multdeg[, c('res', 'lc') := tstrsplit(by, '-', type.convert = TRUE)]
 
-multdeg[, mdeg := sum(deg), by = c('by', idcol)]
+multdeg[, mdeg := sum(deg), by = c('res', idcol)]
 
 
 ### Plots ----
 ggplot(multdeg) + 
-  geom_line(aes(nobs, mdeg, color = get(idcol), group = get(idcol))) +
+  geom_line(aes(lc, deg)) +
+  facet_grid(res~get(idcol)) +
+  guides(color = FALSE)
+
+
+
+ggplot(multdeg) + 
+  geom_line(aes(res, mdeg, color = get(idcol), group = get(idcol))) +
   facet_wrap(~get(idcol)) +
   guides(color = FALSE)
 
