@@ -12,15 +12,16 @@ p <- lapply(pkgs, library, character.only = TRUE)
 
 
 ### Data ----
-DT <- fread('input/FogoCaribou.csv')
+DT <- fread('data/FogoCaribou.csv')
 
 ### Sub data ----
+sub <- DT[Year == 2018]
+
 idcol <- 'ANIMAL_ID'
 
-dropid <- c('FO2016011', 'FO2017001', 'FO2017013', 'FO2016006')
-sub <- DT[Year == 2018 & JDate < 75][!(ANIMAL_ID %in% dropid)]
-sub[, c('idate', 'itime') := .(as.IDate(idate), as.ITime(itime))]
-
+### Cast columns ----
+sub[, idate := as.IDate(idate)]
+sub[, itime := as.ITime(itime)]
 
 ### Project relocations ----
 # UTM zone 21N
