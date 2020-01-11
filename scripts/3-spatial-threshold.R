@@ -1,4 +1,4 @@
-### Scale in multilayer networks - sensitivity of thresholds
+### Scale in multilayer networks - spatial threshold
 # Alec Robitaille
 
 ### Packages ----
