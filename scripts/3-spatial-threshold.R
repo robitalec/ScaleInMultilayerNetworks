@@ -50,8 +50,8 @@ lapply(thresholds, function(t) {
 			timegroup = 'timegroup'
 	)
 	setnames(sub, 'group', paste0('group_', t))
+	print(t)
 })
-
 
 
 ### Group by individual matrices + networks ----
@@ -88,10 +88,9 @@ ml <- rbindlist(lapply(gLs, function(g) {
 	list(ANIMAL_ID = names(s), strg = s)
 }), idcol = 'group')
 
-ml[, tempscale := tstrsplit(group, '_', keep = 2, type.convert = TRUE)]
-ml[, spatscale := tstrsplit(group, '_', keep = 4, type.convert = TRUE)]
+ml[, spatscale := tstrsplit(group, '_', keep = 2, type.convert = TRUE)]
 
-dcast(ml[tempscale == tempscale[[1]]], ANIMAL_ID ~ spatscale, value.var = 'strg')
+dcast(ml, ANIMAL_ID ~ spatscale, value.var = 'strg')
 
 
 ### Plots ----
