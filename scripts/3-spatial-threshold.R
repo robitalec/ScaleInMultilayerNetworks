@@ -32,14 +32,16 @@ sub[, (projCols) := as.data.table(project(cbind(X_COORD, Y_COORD), utm21N))]
 
 ### Spatiotemporal grouping with spatsoc ----
 # list spatial thresholds
-thresholds <- seq(10, 500, by = 10)
+thresholds <- c(5, seq(50, 500, by = 50))
 
+group_times(
+  sub,
+  datetime =  c('idate', 'itime'),
+  threshold = '10 minutes'
+)
+
+# TODO: why duplicate ids
 lapply(thresholds, function(t) {
-	group_times(
-			sub,
-			datetime =  c('idate', 'itime'),
-			threshold = '10 minutes'
-	)
 	group_pts(
 			sub,
 			threshold = t,
