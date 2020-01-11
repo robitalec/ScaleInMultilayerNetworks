@@ -100,20 +100,5 @@ dcast(ml, ANIMAL_ID ~ spatscale, value.var = 'strg')
 
 ### Plots ----
 ggplot(ml) +
-	geom_line(aes(tempscale, strg, group = get(idcol))) +
-	facet_grid(~spatscale)
-
-ggplot(ml[tempscale == tempscale[[1]]]) +
-	geom_line(aes(spatscale, strg, color = get(idcol))) +
-	facet_grid(~tempscale) +
-	guides(color = FALSE)
-
-
-### checks
-
-sub[, range(group)]
-sub[, .N, group][order(N)]
-sub[, .N, landcov]
-sub[, .N, group][, hist(N)]
-ggplot(sub) +
-	geom_point(aes(X_COORD, Y_COORD, color = ANIMAL_ID))
+  geom_line(aes(spatscale, strg, color = get(idcol))) +
+  guides(color = FALSE)
