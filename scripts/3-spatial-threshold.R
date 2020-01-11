@@ -31,31 +31,23 @@ utm21N <- '+proj=utm +zone=21 ellps=WGS84'
 sub[, (projCols) := as.data.table(project(cbind(X_COORD, Y_COORD), utm21N))]
 
 ### Spatiotemporal grouping with spatsoc ----
-# list temporal thresholds
-tempThresholds <- paste(c(10, 30, 60), 'minutes')
-
 # list spatial thresholds
-spatThresholds <- c(20, 60, 180)
+thresholds <- seq(10, 500, by = 10)
 
-thresholds <- data.table(expand.grid(tempThresholds, spatThresholds,
-																		 stringsAsFactors = FALSE))
-setnames(thresholds, c('temp', 'spat'))
-
-lapply(seq_len(nrow(thresholds)), function(i) {
+lapply(thresholds, function(t) {
 	group_times(
 			sub,
 			datetime =  c('idate', 'itime'),
-			threshold = thresholds[i, temp]
+			threshold = '10 minutes'
 	)
 	group_pts(
 			sub,
-			threshold = thresholds[i, spat],
+			threshold = t,
 			id = idcol,
 			coords = projCols,
 			timegroup = 'timegroup'
 	)
-	setnames(sub, 'group',
-					 paste0('group_', gsub(' ', '_', paste0(thresholds[i], collapse = '_'))))
+	setnames(sub, 'group', paste0('group_', t))
 })
 
 
