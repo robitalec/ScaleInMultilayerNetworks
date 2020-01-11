@@ -90,6 +90,9 @@ ml <- rbindlist(lapply(gLs, function(g) {
 	list(ANIMAL_ID = names(s), strg = s)
 }), idcol = 'group')
 
+# TODO: rm this
+ml <- unique(ml)
+
 ml[, spatscale := tstrsplit(group, '_', keep = 2, type.convert = TRUE)]
 
 dcast(ml, ANIMAL_ID ~ spatscale, value.var = 'strg')
