@@ -1,0 +1,12 @@
+---
+output: github_document
+bibliography: ../references/refs.bib
+csl: cite.csl
+---
+
+# Perspectives
+## Landscape ecology
+
+
+# References
+
