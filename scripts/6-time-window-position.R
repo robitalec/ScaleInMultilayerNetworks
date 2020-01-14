@@ -114,7 +114,7 @@ multdeg <- rbindlist(lapply(graphs, function(g) {
 setnames(multdeg, c('by', 'deg', idcol))
 
 multdeg[, c('winpos', 'season') := tstrsplit(by, '-', type.convert = TRUE)]
-multdeg[, winpos := as.integer(gsub('season', '', winlength))]
+multdeg[, winpos := as.integer(gsub('season', '', winpos))]
 multdeg[, mdeg := sum(deg), by = c('by', idcol)]
 
 
@@ -122,6 +122,14 @@ multdeg[, mdeg := sum(deg), by = c('by', idcol)]
 ggplot(multdeg) + 
   geom_line(aes(winpos, deg)) +
   facet_grid(season~ANIMAL_ID)
+
+
+# TODO: careful if inconsistent number of individuals
+multdeg[, meandeg := mean(deg), .(winpos, season)]
+ggplot(multdeg) + 
+  geom_line(aes(winpos, meandeg)) +
+  facet_wrap(~season)
+
 
 
 
