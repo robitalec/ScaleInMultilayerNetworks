@@ -1,4 +1,4 @@
-### Scale in multilayer networks - time windows
+### Scale in multilayer networks - time window length
 # Alec Robitaille
 
 ### Packages ----
