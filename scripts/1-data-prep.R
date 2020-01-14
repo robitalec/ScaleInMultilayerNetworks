@@ -17,6 +17,16 @@ p <- lapply(pkgs, library, character.only = TRUE)
 DT <- fread('data/FogoCaribou.csv')
 
 
+# TODO: add seasons
+# TODO: output to rds
+# TODO: read in as rds everywhere else
+# TODO: rm old prep from all
+# TODO: confirm seasons
+# TODO: dont drop if na season here
+# TODO: only 2018
+# TODO: which individuals are dropped
+
+
 ### Date and time columns ----
 DT[, c('idate', 'itime') := .(as.IDate(idate), as.ITime(itime))]
 
