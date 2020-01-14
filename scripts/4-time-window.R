@@ -60,7 +60,7 @@ spatthresh <- 50
 # TODO: Careful not including "season" and "season75" after prep
 seasoncols <- colnames(sub)[grepl('^season', colnames(sub))]
 
-graphs <- lapply(seasoncols[1:2], function(col) {
+graphs <- lapply(seasoncols, function(col) {
   # Spatial grouping with spatsoc
   group_pts(
     sub,
@@ -97,10 +97,30 @@ graphs <- lapply(seasoncols[1:2], function(col) {
     diag = FALSE,
     weighted = TRUE
   )
-  names(gLs) <- usplit
+  names(gLs) <- paste0(col, '-', usplit)
   gLs
 })
 
+### Multilayer network metrics ----
+# TODO: difference in degree? between seasons
+
+# TODO: why multiple for same individual
+multdeg <- rbindlist(lapply(graphs, function(g) {
+  deg <- lapply(g, degree)
+  rbindlist(lapply(deg, stack), idcol = 'by')
+}))
+
+setnames(multdeg, c('by', 'deg', idcol))
+
+multdeg[, c('winlength', 'season') := tstrsplit(by, '-', type.convert = TRUE)]
+multdeg[, winlength := as.integer(gsub('season', '', winlength))]
+multdeg[, mdeg := sum(deg), by = c('by', idcol)]
+
+
+### Plots ----
+ggplot(multdeg) + 
+  geom_line(aes(winlength, deg)) +
+  facet_grid(season~ANIMAL_ID)
 
 
 
