@@ -60,7 +60,7 @@ spatthresh <- 50
 # TODO: Careful not including "season" and "season75" after prep
 seasoncols <- colnames(sub)[grepl('^season', colnames(sub))]
 
-graphs <- lapply(seasoncols, function(col) {
+graphs <- lapply(seasoncols[1:2], function(col) {
   # Spatial grouping with spatsoc
   group_pts(
     sub,
@@ -71,34 +71,34 @@ graphs <- lapply(seasoncols, function(col) {
     splitBy = col
   )
   
-  usplit <- unique(sub[[col]])
+  usplit <- unique(na.omit(sub, cols = col)[[col]])
   
   # GBI for each season
-  # gbiLs <- lapply(usplit, function(u) {
-  #   gbi <- get_gbi(
-  #     DT = sub[get(col) == u],
-  #     group = 'group',
-  #     id = idcol
-  #   )
-  # })
-  # 
-  # # Generate networks for each season
-  # netLs <- lapply(
-  #   gbiLs,
-  #   get_network,
-  #   data_format = 'GBI',
-  #   association_index = 'SRI'
-  # )
-  # 
-  # gLs <- lapply(
-  #   netLs,
-  #   graph.adjacency,
-  #   mode = 'undirected',
-  #   diag = FALSE,
-  #   weighted = TRUE
-  # )
-  # names(gLs) <- usplit
-  # gLs
+  gbiLs <- lapply(usplit, function(u) {
+    gbi <- get_gbi(
+      DT = sub[get(col) == u],
+      group = 'group',
+      id = idcol
+    )
+  })
+
+  # Generate networks for each season
+  netLs <- lapply(
+    gbiLs,
+    get_network,
+    data_format = 'GBI',
+    association_index = 'SRI'
+  )
+
+  gLs <- lapply(
+    netLs,
+    graph.adjacency,
+    mode = 'undirected',
+    diag = FALSE,
+    weighted = TRUE
+  )
+  names(gLs) <- usplit
+  gLs
 })
 
 
