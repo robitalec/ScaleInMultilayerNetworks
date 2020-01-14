@@ -1,4 +1,4 @@
-### Scale in multilayer networks - time window
+### Scale in multilayer networks - time windows
 # Alec Robitaille
 
 ### Packages ----
@@ -33,3 +33,26 @@ utm21N <- '+proj=utm +zone=21 ellps=WGS84'
 
 sub[, (projCols) := as.data.table(project(cbind(X_COORD, Y_COORD), utm21N))]
 
+
+### Variable time window length ----
+lengths <- seq(75, 150, 5)
+  
+lapply(lengths, function(l) {
+  col <- paste0('season', l)
+  
+  sub[between(JDate, 1, 1 + l), (col) := 'winter']
+  sub[between(JDate, 215, 215 + l), (col) := 'summer']
+})
+
+
+### Temporal grouping ----
+tempthresh <- '5 minutes'
+
+group_times(
+  sub,
+  datetime =  c('idate', 'itime'),
+  threshold = tempthresh
+)
+
+### Generate networks for each n observations ----
+spatthresh <- 50
