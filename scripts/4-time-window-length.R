@@ -18,8 +18,6 @@ DT <- fread('data/FogoCaribou.csv')
 sub <- DT[Year == 2018]
 
 idcol <- 'ANIMAL_ID'
-# keepids <- sub[, .N, c(idcol, 'season')][, .N, idcol][N == 2][[idcol]]
-# sub <- sub[get(idcol) %chin% keepids]
 
 ### Cast columns ----
 sub[, idate := as.IDate(idate)]
