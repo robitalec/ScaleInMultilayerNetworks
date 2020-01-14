@@ -35,9 +35,9 @@ sub[, (projCols) := as.data.table(project(cbind(X_COORD, Y_COORD), utm21N))]
 
 
 ### Variable time window length ----
-lengths <- seq(75, 150, 5)
+winlengths <- seq(75, 150, 5)
   
-lapply(lengths, function(l) {
+lapply(winlengths, function(l) {
   col <- paste0('season', l)
   
   sub[between(JDate, 1, 1 + l), (col) := 'winter']
