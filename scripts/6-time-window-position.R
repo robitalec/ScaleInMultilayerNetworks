@@ -98,6 +98,9 @@ graphs <- lapply(seasoncols, function(col) {
   names(gLs) <- paste0(col, '-', usplit)
   gLs
 })
+# TODO: check why different number of individuals as seasons move
+
+
 
 ### Multilayer network metrics ----
 # TODO: difference in degree? between seasons
@@ -110,14 +113,14 @@ multdeg <- rbindlist(lapply(graphs, function(g) {
 
 setnames(multdeg, c('by', 'deg', idcol))
 
-multdeg[, c('winlength', 'season') := tstrsplit(by, '-', type.convert = TRUE)]
-multdeg[, winlength := as.integer(gsub('season', '', winlength))]
+multdeg[, c('winpos', 'season') := tstrsplit(by, '-', type.convert = TRUE)]
+multdeg[, winpos := as.integer(gsub('season', '', winlength))]
 multdeg[, mdeg := sum(deg), by = c('by', idcol)]
 
 
 ### Plots ----
 ggplot(multdeg) + 
-  geom_line(aes(winlength, deg)) +
+  geom_line(aes(winpos, deg)) +
   facet_grid(season~ANIMAL_ID)
 
 
