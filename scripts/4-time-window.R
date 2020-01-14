@@ -56,3 +56,52 @@ group_times(
 
 ### Generate networks for each n observations ----
 spatthresh <- 50
+
+# TODO: Careful not including "season" and "season75" after prep
+seasoncols <- colnames(sub)[grepl('^season', colnames(sub))]
+
+graphs <- lapply(seasoncols, function(col) {
+  # Spatial grouping with spatsoc
+  group_pts(
+    sub,
+    threshold = spatthresh,
+    id = idcol,
+    coords = projCols,
+    timegroup = 'timegroup',
+    splitBy = col
+  )
+  
+  usplit <- unique(sub[[col]])
+  
+  # GBI for each season
+  # gbiLs <- lapply(usplit, function(u) {
+  #   gbi <- get_gbi(
+  #     DT = sub[get(col) == u],
+  #     group = 'group',
+  #     id = idcol
+  #   )
+  # })
+  # 
+  # # Generate networks for each season
+  # netLs <- lapply(
+  #   gbiLs,
+  #   get_network,
+  #   data_format = 'GBI',
+  #   association_index = 'SRI'
+  # )
+  # 
+  # gLs <- lapply(
+  #   netLs,
+  #   graph.adjacency,
+  #   mode = 'undirected',
+  #   diag = FALSE,
+  #   weighted = TRUE
+  # )
+  # names(gLs) <- usplit
+  # gLs
+})
+
+
+
+
+
