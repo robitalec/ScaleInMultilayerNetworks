@@ -1,4 +1,4 @@
-### Scale in multilayer networks - time windows
+### Scale in multilayer networks - time window position
 # Alec Robitaille
 
 ### Packages ----
@@ -33,14 +33,15 @@ utm21N <- '+proj=utm +zone=21 ellps=WGS84'
 sub[, (projCols) := as.data.table(project(cbind(X_COORD, Y_COORD), utm21N))]
 
 
-### Variable time window length ----
-winlengths <- seq(75, 150, 5)
+### Variable time window position ----
+winlength <- 75
+winpositions <- seq(1, 75, by = 1)
   
-lapply(winlengths, function(l) {
-  col <- paste0('season', l)
+lapply(winpositions, function(pos) {
+  col <- paste0('season', pos)
   
-  sub[between(JDate, 1, 1 + l), (col) := 'winter']
-  sub[between(JDate, 215, 215 + l), (col) := 'summer']
+  sub[between(JDate, 1 + pos, 1 + pos + winlength), (col) := 'winter']
+  sub[between(JDate, 215 + pos, 215 + pos + winlength), (col) := 'summer']
 })
 
 
