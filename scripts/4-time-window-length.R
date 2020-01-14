@@ -15,7 +15,6 @@ p <- lapply(pkgs, library, character.only = TRUE)
 DT <- fread('data/FogoCaribou.csv')
 
 ### Sub data ----
-# TODO: add season? 
 sub <- DT[Year == 2018]
 
 idcol <- 'ANIMAL_ID'
