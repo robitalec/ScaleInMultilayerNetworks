@@ -100,7 +100,6 @@ graphs <- lapply(seasoncols, function(col) {
 
 ### Multilayer network metrics ----
 # TODO: difference in degree? between seasons
-
 # TODO: why multiple for same individual
 multdeg <- rbindlist(lapply(graphs, function(g) {
   deg <- lapply(g, degree)

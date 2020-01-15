@@ -189,13 +189,3 @@ ggplot(ml) +
 								strg, group = get(idcol), color = get(idcol))) +
 	labs(x = 'Landcover', y =  'Strength') +
 	guides(color = FALSE)
-
-
-### checks
-
-sub[, range(group)]
-sub[, .N, group][order(N)]
-sub[, .N, landcov]
-sub[, .N, group][, hist(N)]
-ggplot(sub) +
-	geom_point(aes(X_COORD, Y_COORD, color = ANIMAL_ID))

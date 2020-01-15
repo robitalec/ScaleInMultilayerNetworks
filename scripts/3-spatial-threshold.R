@@ -41,7 +41,7 @@ group_times(
 )
 
 # TODO: why duplicate ids.. check new data
-#TODO: drop this 
+# TODO: drop this 
 sub <- sub[!(timegroup %in% sub[, .N, .(ANIMAL_ID, timegroup)][N > 1, unique(timegroup)])]
 
 lapply(thresholds, function(t) {
