@@ -84,21 +84,27 @@ names(gLs) <- groupcols
 
 
 
-### Calculate multidegree and strength across networks ----
+### Calculate degree, centrality across networks ----
 ml <- rbindlist(lapply(gLs, function(g) {
-	s <- strength(g)
-	list(ANIMAL_ID = names(s), strg = s)
+	deg <- degree(g)
+  cent <- centr_eigen(g, directed = FALSE)
+	list(ANIMAL_ID = names(deg), deg = deg, cent = cent$vector)
 }), idcol = 'group')
 
 # TODO: rm this
-ml <- unique(ml)
+# ml <- unique(ml)
 
 ml[, spatscale := tstrsplit(group, '_', keep = 2, type.convert = TRUE)]
 
-dcast(ml, ANIMAL_ID ~ spatscale, value.var = 'strg')
+dcast(ml, ANIMAL_ID ~ spatscale, value.var = 'cent')
 
 
 ### Plots ----
 ggplot(ml) +
-  geom_line(aes(spatscale, strg, color = get(idcol))) +
+  geom_line(aes(spatscale, deg, color = get(idcol))) +
   guides(color = FALSE)
+
+ggplot(ml) +
+  geom_line(aes(spatscale, cent, color = get(idcol))) +
+  guides(color = FALSE)
+
