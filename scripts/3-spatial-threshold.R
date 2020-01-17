@@ -99,7 +99,18 @@ ml[, spatscale := tstrsplit(group, '_', keep = 2, type.convert = TRUE)]
 dcast(ml, ANIMAL_ID ~ spatscale, value.var = 'cent')
 
 
+# Network correlations
+netcors <- data.table(
+  cornet = vapply(seq_along(netLs)[-length(netLs)], function(i) {
+  cor(c(netLs[[i]]), c(netLs[[i + 1]]))
+}, FUN.VALUE = 42.0),
+spatscale = unique(ml$spatscale)[-length(netLs)])
+
+
 ### Plots ----
+ggplot(netcors) +
+  geom_line(aes(spatscale, cornet))
+
 ggplot(ml) +
   geom_line(aes(spatscale, deg, color = get(idcol))) +
   guides(color = FALSE)
