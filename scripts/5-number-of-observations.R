@@ -70,8 +70,10 @@ nets <- lapply(seq(1, maxn, by = nstep), function(n) {
     timegroup = 'timegroup',
     splitBy = splitBy
   )
-  
+
   usplit <- unique(nsub[[splitBy]])
+  
+  # GBI for each season
   gbiLs <- lapply(usplit, function(u) {
     gbi <- get_gbi(
       DT = nsub[get(splitBy) == u],
@@ -79,27 +81,85 @@ nets <- lapply(seq(1, maxn, by = nstep), function(n) {
       id = idcol
     )
   })
-  
+
+  # Generate networks for each season
   netLs <- lapply(
     gbiLs,
     get_network,
     data_format = 'GBI',
     association_index = 'SRI'
   )
-  cor(c(netLs[[1]]), c(netLs[[2]]))
+  names(netLs) <- paste(n, usplit, sep = '-')
+  netLs
 })
-netcors <- data.table(
-  cornet = vapply(seq_along(netLs)[-length(netLs)], function(i) {
-    cor(c(netLs[[i]]), c(netLs[[i + 1]]))
-  }, FUN.VALUE = 42.0),
-  spatscale = unique(ml$nobs)[-length(netLs)]
-)
+
+
+
+
+### Multilayer network metrics ----
+multdeg <- rbindlist(lapply(nets, function(net) {
+  gLs <- lapply(
+    net,
+    graph.adjacency,
+    mode = 'undirected',
+    diag = FALSE,
+    weighted = TRUE
+  )
+  names(gLs) <- names(net)
+  
+  deg <- lapply(gLs, degree)
+  rbindlist(lapply(deg, stack), idcol = 'by')
+}))
+
+  
+setnames(multdeg, c('by', 'deg', idcol))
+
+multdeg[, c('nobs', 'season') := tstrsplit(by, '-', type.convert = TRUE)]
+
+multdeg[, mdeg := sum(deg), by = c('by', idcol)]
+
+
+# Network correlations
+# netcors <- lapply(seq(2, maxn, by = 2), function(n) {
+#   nsub <- sub[timegroup %in% randobs[1:n]]
+#   group_pts(
+#     nsub,
+#     threshold = spatthresh,
+#     id = idcol,
+#     coords = projCols,
+#     timegroup = 'timegroup',
+#     splitBy = splitBy
+#   )
+#   
+#   usplit <- unique(nsub[[splitBy]])
+#   gbiLs <- lapply(usplit, function(u) {
+#     gbi <- get_gbi(
+#       DT = nsub[get(splitBy) == u],
+#       group = 'group',
+#       id = idcol
+#     )
+#   })
+#   
+#   netLs <- lapply(
+#     gbiLs,
+#     get_network,
+#     data_format = 'GBI',
+#     association_index = 'SRI'
+#   )
+#   cor(c(netLs[[1]]), c(netLs[[2]]))
+# })
+# netcors <- data.table(
+#   cornet = vapply(seq_along(netLs)[-length(netLs)], function(i) {
+#     cor(c(netLs[[i]]), c(netLs[[i + 1]]))
+#   }, FUN.VALUE = 42.0),
+#   spatscale = unique(ml$nobs)[-length(netLs)]
+# )
 
 
 
 ### Plots ----
-ggplot(netcors) +
-  geom_line(aes(spatscale, cornet))
+# ggplot(netcors) +
+#   geom_line(aes(spatscale, cornet))
 
 
 ggplot(multdeg) + 
