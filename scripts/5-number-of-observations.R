@@ -53,25 +53,26 @@ group_times(
 
 maxn <- 300 #sub[, uniqueN(timegroup)])
 # Randomly select n max observations
-randobs <- sub[, sample(timegroup, size = maxn), season]
+randobs <- sub[, sample(unique(timegroup), size = maxn), season]
 
 # TODO: fix this seq 2, by 2 to even season
 graphs <- lapply(seq(1, maxn, by = 1), function(n) {
   # Select first n random timegroups, 
   #  adding new observations to the tail with each iteration
-  nsub <- sub[timegroup %in% randobs[, .SD[1:n], season]$V1]
+  sub[timegroup %in% randobs[, .SD[1:n], season]$V1, uniqueN(timegroup)]
+  # nsub <- sub[timegroup %in% randobs[, .SD[1:n], season]$V1]
 
   # Spatial grouping with spatsoc
-  group_pts(
-    nsub,
-    threshold = spatthresh,
-    id = idcol,
-    coords = projCols,
-    timegroup = 'timegroup',
-    splitBy = splitBy
-  )
-
-  usplit <- unique(nsub[[splitBy]])
+  # group_pts(
+  #   nsub,
+  #   threshold = spatthresh,
+  #   id = idcol,
+  #   coords = projCols,
+  #   timegroup = 'timegroup',
+  #   splitBy = splitBy
+  # )
+  # 
+  # usplit <- unique(nsub[[splitBy]])
   
   # # GBI for each season
   # gbiLs <- lapply(usplit, function(u) {
