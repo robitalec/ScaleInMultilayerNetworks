@@ -53,12 +53,13 @@ group_times(
 
 maxn <- 300 #sub[, uniqueN(timegroup)])
 # Randomly select n max observations
-randobs <- sub[, sample(timegroup, size = maxn), season]$V1
+randobs <- sub[, sample(timegroup, size = maxn), season]
 
-graphs <- lapply(seq(2, maxn, by = 2), function(n) {
+# TODO: fix this seq 2, by 2 to even season
+graphs <- lapply(seq(1, maxn, by = 1), function(n) {
   # Select first n random timegroups, 
   #  adding new observations to the tail with each iteration
-  nsub <- sub[timegroup %in% randobs[1:n]]
+  nsub <- sub[timegroup %in% randobs[, .SD[1:n], season]$V1]
 
   # Spatial grouping with spatsoc
   group_pts(
@@ -71,33 +72,33 @@ graphs <- lapply(seq(2, maxn, by = 2), function(n) {
   )
 
   usplit <- unique(nsub[[splitBy]])
-
-  # GBI for each season
-  gbiLs <- lapply(usplit, function(u) {
-    gbi <- get_gbi(
-      DT = nsub[get(splitBy) == u],
-      group = 'group',
-      id = idcol
-    )
-  })
-
-  # Generate networks for each season
-  netLs <- lapply(
-    gbiLs,
-    get_network,
-    data_format = 'GBI',
-    association_index = 'SRI'
-  )
-
-  gLs <- lapply(
-    netLs,
-    graph.adjacency,
-    mode = 'undirected',
-    diag = FALSE,
-    weighted = TRUE
-  )
-  names(gLs) <- paste(n, usplit, sep = '-')
-  gLs
+  
+  # # GBI for each season
+  # gbiLs <- lapply(usplit, function(u) {
+  #   gbi <- get_gbi(
+  #     DT = nsub[get(splitBy) == u],
+  #     group = 'group',
+  #     id = idcol
+  #   )
+  # })
+  # 
+  # # Generate networks for each season
+  # netLs <- lapply(
+  #   gbiLs,
+  #   get_network,
+  #   data_format = 'GBI',
+  #   association_index = 'SRI'
+  # )
+  # 
+  # gLs <- lapply(
+  #   netLs,
+  #   graph.adjacency,
+  #   mode = 'undirected',
+  #   diag = FALSE,
+  #   weighted = TRUE
+  # )
+  # names(gLs) <- paste(n, usplit, sep = '-')
+  # gLs
 })
 
 ### Multilayer network metrics ----
