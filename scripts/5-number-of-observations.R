@@ -97,7 +97,7 @@ nets <- lapply(seq(1, maxn, by = nstep), function(n) {
 
 
 ### Multilayer network metrics ----
-ml <- rbindlist(lapply(nets, function(net) {
+ml <- (lapply(nets, function(net) {
   
   gLs <- lapply(
     net,
@@ -106,11 +106,12 @@ ml <- rbindlist(lapply(nets, function(net) {
     diag = FALSE,
     weighted = TRUE
   )
-  names(gLs) <- names(net)
-
-  deg <- lapply(lapply(gLs, degree), stack)
-  cbind(rbindlist(deg, idcol = 'by'), 
-        netcor = cor(c(net[[1]]), c(net[[2]])))
+  metrics <- lapply(gLs, function(g) {
+    cbind(stack(degree(g)),
+          neigh = ego_size(g),
+          netcor = cor(c(net[[1]]), c(net[[2]])))
+  })
+  rbindlist(metrics, idcol = 'by')
 }))
 
   
