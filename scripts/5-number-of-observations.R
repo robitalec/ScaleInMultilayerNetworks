@@ -162,13 +162,17 @@ multdeg[, mdeg := sum(deg), by = c('by', idcol)]
 #   geom_line(aes(spatscale, cornet))
 
 
-ggplot(multdeg) + 
-  geom_line(aes(nobs, mdeg, color = get(idcol), group = get(idcol))) +
-  facet_wrap(~get(idcol)) +
-  guides(color = FALSE)
+# ggplot(multdeg) + 
+#   geom_line(aes(nobs, mdeg, color = get(idcol), group = get(idcol))) +
+#   facet_wrap(~get(idcol)) +
+#   guides(color = FALSE)
 
 
-ggplot(multdeg) + 
+ggplot(multdeg[season == 'winter']) +
   geom_line(aes(nobs, deg, color = get(idcol), group = get(idcol))) +
-  facet_wrap(~get(idcol) + season)
+  facet_wrap(~get(idcol))
 
+
+ggplot(multdeg[season == 'summer']) +
+  geom_line(aes(nobs, deg, color = get(idcol), group = get(idcol))) +
+  facet_wrap(~get(idcol))
