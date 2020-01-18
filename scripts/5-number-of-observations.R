@@ -118,7 +118,7 @@ setnames(ml, c('by', 'deg', idcol, 'netcor'))
 
 ml[, c('nobs', 'season') := tstrsplit(by, '-', type.convert = TRUE)]
 
-ml[, mdeg := sum(deg), by = c('by', idcol)]
+ml[, mdeg := sum(deg), by = c('nobs', idcol)]
 
 
 # Network correlations
@@ -164,10 +164,10 @@ ml[, mdeg := sum(deg), by = c('by', idcol)]
 #   geom_line(aes(spatscale, cornet))
 
 
-# ggplot(ml) + 
-#   geom_line(aes(nobs, mdeg, color = get(idcol), group = get(idcol))) +
-#   facet_wrap(~get(idcol)) +
-#   guides(color = FALSE)
+ggplot(ml) +
+  geom_line(aes(nobs, mdeg, color = get(idcol), group = get(idcol))) +
+  facet_wrap(~get(idcol)) +
+  guides(color = FALSE)
 
 
 ggplot(ml[season == 'winter']) +
