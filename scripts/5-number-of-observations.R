@@ -121,43 +121,6 @@ ml[, c('nobs', 'season') := tstrsplit(by, '-', type.convert = TRUE)]
 ml[, mdeg := sum(deg), by = c('nobs', idcol)]
 
 
-# Network correlations
-# netcors <- lapply(seq(2, maxn, by = 2), function(n) {
-#   nsub <- sub[timegroup %in% randobs[1:n]]
-#   group_pts(
-#     nsub,
-#     threshold = spatthresh,
-#     id = idcol,
-#     coords = projCols,
-#     timegroup = 'timegroup',
-#     splitBy = splitBy
-#   )
-#   
-#   usplit <- unique(nsub[[splitBy]])
-#   gbiLs <- lapply(usplit, function(u) {
-#     gbi <- get_gbi(
-#       DT = nsub[get(splitBy) == u],
-#       group = 'group',
-#       id = idcol
-#     )
-#   })
-#   
-#   netLs <- lapply(
-#     gbiLs,
-#     get_network,
-#     data_format = 'GBI',
-#     association_index = 'SRI'
-#   )
-#   cor(c(netLs[[1]]), c(netLs[[2]]))
-# })
-# netcors <- data.table(
-#   cornet = vapply(seq_along(netLs)[-length(netLs)], function(i) {
-#     cor(c(netLs[[i]]), c(netLs[[i + 1]]))
-#   }, FUN.VALUE = 42.0),
-#   spatscale = unique(ml$nobs)[-length(netLs)]
-# )
-
-
 
 ### Plots ----
 # ggplot(netcors) +
