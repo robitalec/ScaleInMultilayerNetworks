@@ -27,3 +27,4 @@
 
 
 # layer similarity = correlation of association matrices. (ensuring row order same)
+cor(c(net[[1]]), c(net[[2]]))
