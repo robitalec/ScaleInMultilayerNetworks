@@ -52,7 +52,7 @@ group_times(
 # TODO: change to across lc by season (dont combine seasons)
 
 maxn <- 500 #sub[, uniqueN(timegroup)])
-nstep <- 50
+nstep <- 20
 # Randomly select n max observations
 randobs <- sub[, sample(unique(timegroup), size = maxn), season]
 
