@@ -97,7 +97,8 @@ nets <- lapply(seq(1, maxn, by = nstep), function(n) {
 
 
 ### Multilayer network metrics ----
-multdeg <- rbindlist(lapply(nets, function(net) {
+ml <- rbindlist(lapply(nets, function(net) {
+  
   gLs <- lapply(
     net,
     graph.adjacency,
@@ -106,17 +107,18 @@ multdeg <- rbindlist(lapply(nets, function(net) {
     weighted = TRUE
   )
   names(gLs) <- names(net)
-  
-  deg <- lapply(gLs, degree)
-  rbindlist(lapply(deg, stack), idcol = 'by')
+
+  deg <- lapply(lapply(gLs, degree), stack)
+  cbind(rbindlist(deg, idcol = 'by'), 
+        netcor = cor(c(net[[1]]), c(net[[2]])))
 }))
 
   
-setnames(multdeg, c('by', 'deg', idcol))
+setnames(ml, c('by', 'deg', idcol, 'netcor'))
 
-multdeg[, c('nobs', 'season') := tstrsplit(by, '-', type.convert = TRUE)]
+ml[, c('nobs', 'season') := tstrsplit(by, '-', type.convert = TRUE)]
 
-multdeg[, mdeg := sum(deg), by = c('by', idcol)]
+ml[, mdeg := sum(deg), by = c('by', idcol)]
 
 
 # Network correlations
@@ -162,17 +164,17 @@ multdeg[, mdeg := sum(deg), by = c('by', idcol)]
 #   geom_line(aes(spatscale, cornet))
 
 
-# ggplot(multdeg) + 
+# ggplot(ml) + 
 #   geom_line(aes(nobs, mdeg, color = get(idcol), group = get(idcol))) +
 #   facet_wrap(~get(idcol)) +
 #   guides(color = FALSE)
 
 
-ggplot(multdeg[season == 'winter']) +
+ggplot(ml[season == 'winter']) +
   geom_line(aes(nobs, deg, color = get(idcol), group = get(idcol))) +
   facet_wrap(~get(idcol))
 
 
-ggplot(multdeg[season == 'summer']) +
+ggplot(ml[season == 'summer']) +
   geom_line(aes(nobs, deg, color = get(idcol), group = get(idcol))) +
   facet_wrap(~get(idcol))
