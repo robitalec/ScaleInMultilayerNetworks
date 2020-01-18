@@ -123,8 +123,8 @@ ml[, mdeg := sum(deg), by = c('nobs', idcol)]
 
 
 ### Plots ----
-# ggplot(netcors) +
-#   geom_line(aes(spatscale, cornet))
+ggplot(ml) +
+  geom_line(aes(nobs, netcor))
 
 
 ggplot(ml) +
