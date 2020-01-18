@@ -97,7 +97,7 @@ nets <- lapply(seq(1, maxn, by = nstep), function(n) {
 
 
 ### Multilayer network metrics ----
-ml <- (lapply(nets, function(net) {
+ml <- rbindlist(lapply(nets, function(net) {
   
   gLs <- lapply(
     net,
@@ -108,14 +108,14 @@ ml <- (lapply(nets, function(net) {
   )
   metrics <- lapply(gLs, function(g) {
     cbind(stack(degree(g)),
-          neigh = ego_size(g),
+          neigh = ego_size(g) - 1,
           netcor = cor(c(net[[1]]), c(net[[2]])))
   })
   rbindlist(metrics, idcol = 'by')
 }))
 
   
-setnames(ml, c('by', 'deg', idcol, 'netcor'))
+setnames(ml, c('by', 'deg', idcol, 'neigh', 'netcor'))
 
 ml[, c('nobs', 'season') := tstrsplit(by, '-', type.convert = TRUE)]
 
