@@ -51,73 +51,17 @@ group_times(
 ### Generate networks for each n observations ----
 # TODO: change to across lc by season (dont combine seasons)
 
-maxn <- 300 #sub[, uniqueN(timegroup)])
+maxn <- 500 #sub[, uniqueN(timegroup)])
+nstep <- 50
 # Randomly select n max observations
 randobs <- sub[, sample(unique(timegroup), size = maxn), season]
 
-# TODO: fix this seq 2, by 2 to even season
-graphs <- lapply(seq(1, maxn, by = 1), function(n) {
+nets <- lapply(seq(1, maxn, by = nstep), function(n) {
   # Select first n random timegroups, 
   #  adding new observations to the tail with each iteration
-  sub[timegroup %in% randobs[, .SD[1:n], season]$V1, uniqueN(timegroup)]
-  # nsub <- sub[timegroup %in% randobs[, .SD[1:n], season]$V1]
+  nsub <- sub[timegroup %in% randobs[, .SD[1:n], season]$V1]
 
   # Spatial grouping with spatsoc
-  # group_pts(
-  #   nsub,
-  #   threshold = spatthresh,
-  #   id = idcol,
-  #   coords = projCols,
-  #   timegroup = 'timegroup',
-  #   splitBy = splitBy
-  # )
-  # 
-  # usplit <- unique(nsub[[splitBy]])
-  
-  # # GBI for each season
-  # gbiLs <- lapply(usplit, function(u) {
-  #   gbi <- get_gbi(
-  #     DT = nsub[get(splitBy) == u],
-  #     group = 'group',
-  #     id = idcol
-  #   )
-  # })
-  # 
-  # # Generate networks for each season
-  # netLs <- lapply(
-  #   gbiLs,
-  #   get_network,
-  #   data_format = 'GBI',
-  #   association_index = 'SRI'
-  # )
-  # 
-  # gLs <- lapply(
-  #   netLs,
-  #   graph.adjacency,
-  #   mode = 'undirected',
-  #   diag = FALSE,
-  #   weighted = TRUE
-  # )
-  # names(gLs) <- paste(n, usplit, sep = '-')
-  # gLs
-})
-
-### Multilayer network metrics ----
-multdeg <- rbindlist(lapply(graphs, function(g) {
-  deg <- lapply(g, degree)
-  rbindlist(lapply(deg, stack), idcol = 'by')
-}))
-
-setnames(multdeg, c('by', 'deg', idcol))
-
-multdeg[, c('nobs', 'season') := tstrsplit(by, '-', type.convert = TRUE)]
-
-multdeg[, mdeg := sum(deg), by = c('by', idcol)]
-
-
-# Network correlations
-netcors <- lapply(seq(2, maxn, by = 2), function(n) {
-  nsub <- sub[timegroup %in% randobs[1:n]]
   group_pts(
     nsub,
     threshold = spatthresh,
