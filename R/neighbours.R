@@ -1,7 +1,7 @@
 nsub
 
 
-neigh <- function(DT, id, splitBy) {
+neigh <- function(DT, id, splitBy = NULL) {
   if (any(!(c(id, 'group', splitBy) %in% colnames(DT)))) {
     stop(paste0(
       as.character(paste(setdiff(
@@ -12,28 +12,26 @@ neigh <- function(DT, id, splitBy) {
   }
   
   # with splitBy
-  }
-  DT[, {
-    g <- group
-    DT[group %in% g, data.table::uniqueN(get(id))]
-  },
-  by = c(splitBy, id)][
-    DT[, {
+  if (is.null(splitBy)) {
+    DT[, neighborhood := {
+        g <- group
+        DT[group %in% g, data.table::uniqueN(get(id))]
+      },
+      by = id][]
+  } else {
+    DT[, neighborhood := {
       g <- group
       DT[group %in% g, data.table::uniqueN(get(id))]
-      },
-      by = id],
-  on = id]
-  
-  # 
-  # DT[, {
-  #   g <- group
-  #   DT[group %in% g, data.table::uniqueN(get(id))]
-  # },
-  # c(splitBy, id)]
-  
-  
-  
+    },
+    by = id][]
+    
+    
+    DT[, splitNeighborhood := {
+      g <- group
+      DT[group %in% g, data.table::uniqueN(get(id))]
+    },
+    by = c(splitBy, id)][]
+  }
 }
 
 neigh(nsub, 'ANIMAL_ID', 'season')
