@@ -1,6 +1,3 @@
-nsub
-
-
 neigh <- function(DT, id, splitBy = NULL) {
   if (any(!(c(id, 'group', splitBy) %in% colnames(DT)))) {
     stop(paste0(
@@ -35,12 +32,10 @@ neigh <- function(DT, id, splitBy = NULL) {
 }
 
 neigh(nsub, 'ANIMAL_ID', 'season')
-# nsub[, {
-#   g <- group
-#   nsub[group %in% g, uniqueN(ANIMAL_ID)]}, 
-#      .(season, ANIMAL_ID)]
 
-
-# nsub[group %in% nsub[ANIMAL_ID == 'FO2017003', group],
-#      uniqueN(ANIMAL_ID)]
+ggplot(nsub) +
+  geom_point(aes(ANIMAL_ID, neighborhood), size = 3) + 
+  geom_point(aes(ANIMAL_ID, splitNeighborhood),
+             color = 'red', size = 1) +
+  facet_wrap(~ season)
 

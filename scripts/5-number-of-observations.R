@@ -144,3 +144,11 @@ ggplot(ml[season == 'winter']) +
 ggplot(ml[season == 'summer']) +
   geom_line(aes(nobs, deg, color = get(idcol), group = get(idcol))) +
   facet_wrap(~get(idcol))
+
+
+
+# ggplot(nsub) +
+#   geom_point(aes(ANIMAL_ID, neighborhood), size = 3) + 
+#   geom_point(aes(ANIMAL_ID, splitNeighborhood),
+#              color = 'red', size = 1) +
+#   facet_wrap(~ season)
