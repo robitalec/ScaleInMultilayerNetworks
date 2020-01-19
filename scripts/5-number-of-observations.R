@@ -106,12 +106,14 @@ ml <- rbindlist(lapply(nets, function(net) {
     diag = FALSE,
     weighted = TRUE
   )
-  metrics <- lapply(gLs, function(g) {
-    cbind(stack(degree(g)),
-          neigh = ego_size(g) - 1,
-          netcor = cor(c(net[[1]]), c(net[[2]])))
-  })
-  rbindlist(metrics, idcol = 'by')
+  lapply(gLs, ego)
+  # metrics <- lapply(gLs, function(g) {
+  #   cbind(stack(degree(g)),
+  #         neigh = ego_size(g),
+  #         ego = ego(g),
+  #         netcor = cor(c(net[[1]]), c(net[[2]])))
+  # })
+  # rbindlist(metrics, idcol = 'by')
 }))
 
   
