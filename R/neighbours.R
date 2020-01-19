@@ -1,3 +1,12 @@
+#' Neighbourhood
+#'
+#' @inheritParams group_pts 
+#'
+#' @return
+#' @export
+#'
+#' @examples
+#' neigh(DT, 'id', splitBy = 'season')
 neigh <- function(DT, id, splitBy = NULL) {
   if (any(!(c(id, 'group', splitBy) %in% colnames(DT)))) {
     stop(paste0(
@@ -8,7 +17,7 @@ neigh <- function(DT, id, splitBy = NULL) {
     ))
   }
   
-  # with splitBy
+  # flex splitBy
   if (is.null(splitBy)) {
     DT[, neighborhood := {
         g <- group
@@ -30,12 +39,4 @@ neigh <- function(DT, id, splitBy = NULL) {
     by = c(splitBy, id)][]
   }
 }
-
-neigh(nsub, 'ANIMAL_ID', 'season')
-
-ggplot(nsub) +
-  geom_point(aes(ANIMAL_ID, neighborhood), size = 3) + 
-  geom_point(aes(ANIMAL_ID, splitNeighborhood),
-             color = 'red', size = 1) +
-  facet_wrap(~ season)
 
