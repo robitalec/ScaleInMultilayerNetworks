@@ -52,7 +52,7 @@ group_times(
 # TODO: change to across lc by season (dont combine seasons)
 
 maxn <- 500 #sub[, uniqueN(timegroup)])
-nstep <- 20
+nstep <- 100
 # Randomly select n max observations
 randobs <- sub[, sample(unique(timegroup), size = maxn), season]
 
@@ -89,12 +89,33 @@ nets <- lapply(seq(1, maxn, by = nstep), function(n) {
     data_format = 'GBI',
     association_index = 'SRI'
   )
-  names(netLs) <- paste(n, usplit, sep = '-')
-  netLs
+  
+  gLs <- lapply(
+    netLs,
+    graph.adjacency,
+    mode = 'undirected',
+    diag = FALSE,
+    weighted = TRUE
+  )
+  
+  names(gLs) <- paste(n, usplit, sep = '-')
+  
+  neigh(nsub, idcol, splitBy)
+  
+  out <- unique(nsub[, .SD, 
+                   .SDcols = c('neighborhood', 'splitNeighborhood', idcol, splitBy)])
+  set(out, j = 'n', value = n)
+  
 })
 
-
-
+DT <- rbindlist(nets)
+DT[, connredund := 1 - (splitNeighborhood / neighborhood), 
+   by = n]
+# TODO hmm
+DT[, multdeg := sum(splitNeighborhood - 1), 
+   by = c(idcol, 'n')]
+DT[, relevance := splitNeighborhood / multdeg, 
+   by = c(idcol, 'n', splitBy)]
 
 ### Multilayer network metrics ----
 ml <- rbindlist(lapply(nets, function(net) {
