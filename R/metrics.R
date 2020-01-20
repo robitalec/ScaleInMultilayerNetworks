@@ -29,7 +29,7 @@ neigh <- function(DT, id, splitBy = NULL) {
       g <- group
       DT[group %in% g, data.table::uniqueN(get(id))]
     },
-    by = id][]
+    by = id]
     
     
     DT[, splitNeighborhood := {
@@ -38,6 +38,14 @@ neigh <- function(DT, id, splitBy = NULL) {
     },
     by = c(splitBy, id)][]
   }
+}
+
+
+
+redundancy <- function(DT, id, var) {
+  # Check cols
+  DT[, connredund := 1 - (splitNeighborhood / neighborhood), 
+     by = nobs]
 }
 
 
