@@ -55,3 +55,12 @@ multidegree <- function(DT, degreeCol, id, var) {
      by = c(idcol, 'nobs')]
 }
 
+relevance <- function(DT, id, var, splitBy) {
+  # check for splitNeighborhood variable and multidegree
+  
+  DT[, relevance := splitNeighborhood / multdeg, 
+     by = c(idcol, 'nobs', splitBy)]
+  
+}
+
+
