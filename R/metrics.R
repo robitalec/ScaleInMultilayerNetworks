@@ -50,3 +50,8 @@ redundancy <- function(DT, id, var) {
 
 
 
+multidegree <- function(DT, degreeCol, id, var) {
+  DT[, multdeg := sum(splitNeighborhood - 1), 
+     by = c(idcol, 'nobs')]
+}
+
