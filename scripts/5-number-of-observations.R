@@ -139,30 +139,34 @@ ml <- DT
   #         netcor = cor(c(net[[1]]), c(net[[2]])))
   # })
   # rbindlist(metrics, idcol = 'by')
-}))
+# }))
 
   
-setnames(ml, c('by', 'deg', idcol, 'neigh', 'netcor'))
+# setnames(ml, c('by', 'deg', idcol, 'neigh', 'netcor'))
 
-ml[, c('nobs', 'season') := tstrsplit(by, '-', type.convert = TRUE)]
+# ml[, c('nobs', 'season') := tstrsplit(by, '-', type.convert = TRUE)]
 
-ml[, mdeg := sum(deg), by = c('nobs', idcol)]
+# ml[, mdeg := sum(deg), by = c('nobs', idcol)]
 
 
 
 ### Plots ----
-ggplot(ml) +
-  geom_line(aes(nobs, netcor))
+# ggplot(ml) +
+  # geom_line(aes(nobs, netcor))
+
+ggplot(ml) + 
+  geom_line(aes(nobs, relevance, group  = get(idcol), color = get(idcol))) + 
+  facet_wrap(~season)
 
 
 ggplot(ml) +
-  geom_line(aes(nobs, mdeg, color = get(idcol), group = get(idcol))) +
+  geom_line(aes(nobs, multdeg, color = get(idcol), group = get(idcol))) +
   facet_wrap(~get(idcol)) +
   guides(color = FALSE)
 
 
 ggplot(ml[season == 'winter']) +
-  geom_line(aes(nobs, deg, color = get(idcol), group = get(idcol))) +
+  geom_line(aes(nobs, neighborhood, color = get(idcol), group = get(idcol))) +
   facet_wrap(~get(idcol))
 
 
