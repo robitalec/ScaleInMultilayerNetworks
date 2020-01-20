@@ -104,30 +104,34 @@ nets <- lapply(seq(1, maxn, by = nstep), function(n) {
   
   out <- unique(nsub[, .SD, 
                    .SDcols = c('neighborhood', 'splitNeighborhood', idcol, splitBy)])
-  set(out, j = 'n', value = n)
+  set(out, j = 'nobs', value = n)
   
 })
 
 DT <- rbindlist(nets)
 DT[, connredund := 1 - (splitNeighborhood / neighborhood), 
-   by = n]
-# TODO hmm
+   by = nobs]
+# TODO why relevance > 1
 DT[, multdeg := sum(splitNeighborhood - 1), 
-   by = c(idcol, 'n')]
-DT[, relevance := splitNeighborhood / multdeg, 
-   by = c(idcol, 'n', splitBy)]
+   by = c(idcol, 'nobs')]
+DT[, relevance := splitNeighborhood / multideg, 
+   by = c(idcol, 'nobs', splitBy)]
+
+
+
+ml <- DT
 
 ### Multilayer network metrics ----
-ml <- rbindlist(lapply(nets, function(net) {
-  
-  gLs <- lapply(
-    net,
-    graph.adjacency,
-    mode = 'undirected',
-    diag = FALSE,
-    weighted = TRUE
-  )
-  lapply(gLs, ego)
+# ml <- rbindlist(lapply(nets, function(net) {
+#   
+#   gLs <- lapply(
+#     net,
+#     graph.adjacency,
+#     mode = 'undirected',
+#     diag = FALSE,
+#     weighted = TRUE
+#   )
+#   lapply(gLs, ego)
   # metrics <- lapply(gLs, function(g) {
   #   cbind(stack(degree(g)),
   #         neigh = ego_size(g),
