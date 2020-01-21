@@ -1,0 +1,16 @@
+---
+output: 
+  word_document:
+    reference_docx: template.docx
+  # github_document
+author: Alec Robitaille, Quinn M.R. Webber, Julie Turner and Eric Vander Wal
+date: "`r Sys.Date()`"
+bibliography: ../references/refs.bib
+csl: vancouver.csl
+---
+
+## Glossary
+
+
+
+# References
