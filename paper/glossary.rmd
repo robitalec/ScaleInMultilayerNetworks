@@ -17,6 +17,10 @@ csl: vancouver.csl
 
 **Monolayer**:
 
+**Social environment**: Social life of an individual (or group of individuals) described by social interactions (Saltz et al. 2016).
+
+**Spatial network**: Networks of locations, which be linked with social networks of animals that move between the locations (Silk et al. 2018.
+
 
 
 # References
