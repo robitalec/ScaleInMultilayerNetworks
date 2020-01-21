@@ -83,6 +83,20 @@ multidegree <- function(DT, degree, id, splitBy) {
      by = c(id, splitBy)]
 }
 
+
+#' Relevance
+#' 
+#' Proportion of neighbours present on each layer.  
+#'
+#' @param DT 
+#' @param id 
+#' @param var 
+#' @param splitBy 
+#'
+#' @return
+#' @export
+#'
+#' @examples
 relevance <- function(DT, id, var, splitBy) {
   # check for splitNeighborhood variable and multidegree
   
