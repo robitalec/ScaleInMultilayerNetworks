@@ -11,6 +11,12 @@ csl: vancouver.csl
 
 ## Glossary
 
+**Interlayer edge**: 
+
+**Intralayer edge**:
+
+**Monolayer**:
+
 
 
 # References
