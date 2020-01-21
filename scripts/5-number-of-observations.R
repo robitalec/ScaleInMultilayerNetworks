@@ -125,39 +125,8 @@ multidegree(DT, 'splitNeighborhood', idcol, 'nobs')
 degdeviation(DT, 'splitNeighborhood', idcol, 'nobs')
 
 # Relevance
-# TODO why relevance > 1
 relevance(DT, idcol, splitBy = c('nobs', splitBy))
-
-
-ml <- DT
-
-### Multilayer network metrics ----
-# ml <- rbindlist(lapply(nets, function(net) {
-#   
-#   gLs <- lapply(
-#     net,
-#     graph.adjacency,
-#     mode = 'undirected',
-#     diag = FALSE,
-#     weighted = TRUE
-#   )
-#   lapply(gLs, ego)
-  # metrics <- lapply(gLs, function(g) {
-  #   cbind(stack(degree(g)),
-  #         neigh = ego_size(g),
-  #         ego = ego(g),
-  #         netcor = cor(c(net[[1]]), c(net[[2]])))
-  # })
-  # rbindlist(metrics, idcol = 'by')
-# }))
-
-  
-# setnames(ml, c('by', 'deg', idcol, 'neigh', 'netcor'))
-
-# ml[, c('nobs', 'season') := tstrsplit(by, '-', type.convert = TRUE)]
-
-# ml[, mdeg := sum(deg), by = c('nobs', idcol)]
-
+stopifnot(DT[!between(relev, 0, 1), .N] == 0)
 
 
 ### Plots ----
