@@ -104,7 +104,7 @@ degdeviation <- function(DT, degree, id, splitBy = NULL) {
   # TODO: check columns
   # TODO: warn overwrite
   
-  DT[, degdev := sum(.SD),
+  DT[, degdev := sd(.SD[[1]]),
      .SDcol = degree,
      by = c(id, splitBy)][]
 }
