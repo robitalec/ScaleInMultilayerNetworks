@@ -74,6 +74,7 @@ redundancy <- function(DT) {
 #' @param id 
 #'
 #' @return
+#' Column added named multideg
 #' @export
 #'
 #' @examples
@@ -82,6 +83,28 @@ multidegree <- function(DT, degree, id, splitBy = NULL) {
   # TODO: warn overwrite
   
   DT[, multideg := sum(.SD),
+     .SDcol = degree,
+     by = c(id, splitBy)][]
+}
+
+
+#' Degree Deviation
+#'
+#' @param DT 
+#' @param degree 
+#' @param splitBy this is not the splitBy (eg season)
+#' @param id 
+#'
+#' @return
+#' Column added named degdev
+#' @export
+#'
+#' @examples
+degdeviation <- function(DT, degree, id, splitBy = NULL) {
+  # TODO: check columns
+  # TODO: warn overwrite
+  
+  DT[, degdev := sum(.SD),
      .SDcol = degree,
      by = c(id, splitBy)][]
 }

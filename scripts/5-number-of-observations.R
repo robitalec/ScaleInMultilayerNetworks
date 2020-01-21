@@ -117,6 +117,9 @@ stopifnot(DT[, between(connredund, 0, 1)])
 # Multidegree
 multidegree(DT, 'splitNeighborhood', idcol, 'nobs')
 
+# Degree deviation
+degdeviation(DT, 'splitNeighborhood', idcol, 'nobs')
+
 # Relevance
 # TODO why relevance > 1
 relevance(DT, idcol, splitBy = c('nobs', splitBy))
