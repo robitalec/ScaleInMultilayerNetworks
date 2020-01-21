@@ -109,11 +109,18 @@ nets <- lapply(seq(10, maxn, by = nstep), function(n) {
 })
 
 DT <- rbindlist(nets)
-DT[, connredund := 1 - (splitNeighborhood / neighborhood), 
-   by = nobs]
+
+redundancy(DT)
+stopifnot(DT[, between(connredund, 0, 1)])
+
+# Degree = number of neighbors - 1, since neighorhood calculated with order 1 includes focal actors
+DT[, deg := splitNeighborhood - 1]
+
+multidegree(DT, 'deg', idcol)
+
 # TODO why relevance > 1
-DT[, multdeg := sum(splitNeighborhood - 1), 
-   by = c(idcol, 'nobs')]
+DT[, multdeg := sum(deg), by = c(idcol, 'nobs')]
+
 DT[, relevance := splitNeighborhood / multideg, 
    by = c(idcol, 'nobs', splitBy)]
 

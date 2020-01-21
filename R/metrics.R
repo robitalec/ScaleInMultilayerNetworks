@@ -51,17 +51,15 @@ neigh <- function(DT, id, splitBy = NULL) {
 #' and "neighborhood"
 #' 
 #' @param DT 
-#' @param id 
-#' @param splitBy
-#'
 #' @return
 #' @export
 #'
 #' @examples
-redundancy <- function(DT, id, splitBy) {
-  # Check cols
-  DT[, connredund := 1 - (splitNeighborhood / neighborhood), 
-     by = splitBy]
+redundancy <- function(DT) {
+  # TODO: Check cols
+  # TODO: warn overwrite 
+  
+  DT[, connredund := 1 - (splitNeighborhood / neighborhood)][]
 }
 
 
@@ -77,10 +75,10 @@ redundancy <- function(DT, id, splitBy) {
 #' @export
 #'
 #' @examples
-multidegree <- function(DT, degree, id, splitBy) {
+multidegree <- function(DT, degree, id, splitBy = NULL) {
   DT[, multdeg := sum(.SD),
      .SDcol = degree,
-     by = c(id, splitBy)]
+     by = c(id, splitBy)][]
 }
 
 
