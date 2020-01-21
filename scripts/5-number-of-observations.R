@@ -11,6 +11,9 @@ pkgs <- c('data.table',
 p <- lapply(pkgs, library, character.only = TRUE)
 
 
+# TODO: make this a package
+source('R/metrics.R')
+
 ### Data ----
 DT <- fread('data/FogoCaribou.csv')
 
