@@ -115,14 +115,11 @@ redundancy(DT)
 stopifnot(DT[, between(connredund, 0, 1)])
 
 # Multidegree
-multidegree(DT, 'deg', idcol, 'nobs')
+multidegree(DT, 'splitNeighborhood', idcol, 'nobs')
 
-
+# Relevance
 # TODO why relevance > 1
-
-DT[, relev := splitNeighborhood / multideg, 
-   by = c(idcol, 'nobs', splitBy)]
-
+relevance(DT, idcol, splitBy = c('nobs', splitBy))
 
 
 ml <- DT
