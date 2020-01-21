@@ -132,13 +132,14 @@ stopifnot(DT[!between(relev, 0, 1), .N] == 0)
 # ggplot(DT) +
   # geom_line(aes(nobs, netcor))
 
-metriccols <- c('multideg', 'degdev', 'splitNeighborhood', 'relev')
-DT[, (metriccols) := lapply(.SD, mean), .SDcols = metriccols, by = nobs]
+# To average columns...
+# metriccols <- c('multideg', 'degdev', 'splitNeighborhood', 'relev')
+# DT[, (metriccols) := lapply(.SD, mean), .SDcols = metriccols, by = nobs]
 
 ## Plots that combine seasons
-g <- ggplot(DT, aes(x = nobs))+#,
-                    # color = get(idcol),
-                    # group = get(idcol))) + 
+g <- ggplot(DT, aes(x = nobs,
+                    color = get(idcol),
+                    group = get(idcol))) + 
   guides(color = FALSE)
 
 # Number of observations vs multidegree
