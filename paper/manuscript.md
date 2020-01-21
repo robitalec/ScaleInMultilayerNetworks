@@ -101,9 +101,9 @@ social systems? Second, can variation in spatial, temporal, and social
 scale improve predictions associated with seasonal differences in
 resource availability and social association? We conclude with
 perspectives for further development and application of scale in
-multilayer networks by discussing the problem and promise of scale from
-the perspective of social systems (Castles et al. 2014; Farine 2015) and
-landscape ecology (Schneider 2009).
+multilayer networks with respect to landscape ecology (Schneider 2009),
+individual fitness and phenotypes (Ref), and movement ecology and
+collective movement (Jolles et al. 2019).
 
 ## Scale in multilayer networks: a case study
 
