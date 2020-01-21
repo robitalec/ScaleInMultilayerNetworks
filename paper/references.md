@@ -5,6 +5,8 @@ AuthorYear (as in text) - Title
 
 Bode NWF, Wood AJ, Franks DW (2011) Social networks and models for collective motion in animals. Behav Ecol Sociobiol 65:117–130. doi: 10.1007/s00265-010-1111-0
 
+Chamaillé-Jammes S, Fritz H, Valeix M, et al (2008) Resource variability, aggregation and direct density dependence in an open context: The local regulation of an African elephant population. J Anim Ecol 77:135–144. doi: 10.1111/j.1365-2656.2007.01307.x
+
 Cleasby IR, Wakefield ED, Morrissey BJ, et al (2019) Using time-series similarity measures to compare animal movement trajectories in ecology. Behav Ecol Sociobiol 73:151
 
 Flack A, Nagy M, Fiedler W, et al (2018) From local collective behavior to global migratory patterns in white storks. Science (80- ) 914:911–914
