@@ -90,6 +90,9 @@ multidegree <- function(DT, degree, id, splitBy = NULL) {
 #' Relevance
 #' 
 #' Proportion of neighbours present on each layer.  
+#' 
+#' 
+#' @references Berlingerio, Michele, et al. "Foundations of multidimensional network analysis." 2011 international conference on advances in social networks analysis and mining. IEEE, 2011.
 #'
 #' @param DT 
 #' @param id 
