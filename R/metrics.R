@@ -1,4 +1,6 @@
 #' Neighbourhood
+#' 
+#' Number of neighbors adjacent to each actor. Calculated excluding self from set of neighbors. 
 #'
 #' @inheritParams group_pts 
 #'
@@ -21,20 +23,20 @@ neigh <- function(DT, id, splitBy = NULL) {
   if (is.null(splitBy)) {
     DT[, neighborhood := {
         g <- group
-        DT[group %in% g, data.table::uniqueN(get(id))]
+        DT[group %in% g, data.table::uniqueN(get(id)) - 1]
       },
       by = id][]
   } else {
     DT[, neighborhood := {
       g <- group
-      DT[group %in% g, data.table::uniqueN(get(id))]
+      DT[group %in% g, data.table::uniqueN(get(id)) - 1]
     },
     by = id]
     
     
     DT[, splitNeighborhood := {
       g <- group
-      DT[group %in% g, data.table::uniqueN(get(id))]
+      DT[group %in% g, data.table::uniqueN(get(id)) - 1]
     },
     by = c(splitBy, id)][]
   }
