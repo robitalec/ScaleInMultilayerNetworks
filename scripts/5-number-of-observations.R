@@ -166,11 +166,6 @@ g1 <- ggplot(DT) +
   # facet_wrap(~season)
   # facet_wrap(~get(idcol)) 
 
-# Number of observations vs degree (by layer) (same plot as split neighborhod)
-g2 <- ggplot(DT) +
-  geom_line(aes(nobs, degree, color = get(idcol), group = get(idcol)))# +
-  # facet_wrap(~season)
-
 
 g <- ggplot(DT, aes(x = nobs,
                     color = get(idcol),
