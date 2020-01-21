@@ -139,7 +139,7 @@ Inc., Newmarket, ON, Canada, GPS4400M collars, 1,250 g) as described by
 Schaefer and Mahoney (2013). Collars were programmed to collect location
 fixes every 2 hours. Prior to analyses, we subset GPS fixes into a
 discrete removed all erroneous and outlier GPS fixes following
-Bjørneraas et al. (2010). We did not collar all female caribou in the
+Bjørneraas et al. (2010). We did not collar all female caribou in the
 herd. However, we assumed that our sample of collared animals was
 random. Although associations between collared and uncollared animals
 were unrecorded, we assumed that our networks (see below) were unbiased
@@ -188,5 +188,10 @@ strength).
 
 ## Scale in multilayer networks in practice: case study results
 
+## Perspectives from behavioural ecology to advance multilayer networks
 
-## Perspectives from behavioural ecology to advance multilayer networks 
+### Landscape ecology
+
+### Individual fitness
+
+### Movement
