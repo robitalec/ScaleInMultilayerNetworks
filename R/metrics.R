@@ -1,4 +1,6 @@
 #' Neighbourhood
+#' 
+#' Number of neighbors adjacent to each actor. Calculated excluding self from set of neighbors. 
 #'
 #' @inheritParams group_pts 
 #'
@@ -21,20 +23,20 @@ neigh <- function(DT, id, splitBy = NULL) {
   if (is.null(splitBy)) {
     DT[, neighborhood := {
         g <- group
-        DT[group %in% g, data.table::uniqueN(get(id))]
+        DT[group %in% g, data.table::uniqueN(get(id)) - 1]
       },
       by = id][]
   } else {
     DT[, neighborhood := {
       g <- group
-      DT[group %in% g, data.table::uniqueN(get(id))]
+      DT[group %in% g, data.table::uniqueN(get(id)) - 1]
     },
     by = id]
     
     
     DT[, splitNeighborhood := {
       g <- group
-      DT[group %in% g, data.table::uniqueN(get(id))]
+      DT[group %in% g, data.table::uniqueN(get(id)) - 1]
     },
     by = c(splitBy, id)][]
   }
@@ -88,6 +90,9 @@ multidegree <- function(DT, degree, id, splitBy = NULL) {
 #' Relevance
 #' 
 #' Proportion of neighbours present on each layer.  
+#' 
+#' 
+#' @references Berlingerio, Michele, et al. "Foundations of multidimensional network analysis." 2011 international conference on advances in social networks analysis and mining. IEEE, 2011.
 #'
 #' @param DT 
 #' @param id 
@@ -99,11 +104,11 @@ multidegree <- function(DT, degree, id, splitBy = NULL) {
 #'
 #' @examples
 relevance <- function(DT, id, var, splitBy) {
-  # check for splitNeighborhood variable and multidegree
+  # TODO: check for splitNeighborhood variable and multidegree
+  # TODO: check overwrite
   
-  DT[, relev := splitNeighborhood / multdeg, 
-     by = c(idcol, 'nobs', splitBy)]
-  
+  DT[, relev := splitNeighborhood / multideg, 
+     by = c(id, splitBy)][]
 }
 
 
