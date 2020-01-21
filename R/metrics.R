@@ -42,17 +42,45 @@ neigh <- function(DT, id, splitBy = NULL) {
 
 
 
-redundancy <- function(DT, id, var) {
+#' Connective Redundancy
+#'
+#' When connective redundancy is 0, all edges on all layers 
+#' are necessary to preserve the social ties
+#' 
+#' DT must be result of `neigh()` function, having columns "splitNeighborhood" 
+#' and "neighborhood"
+#' 
+#' @param DT 
+#' @param id 
+#' @param splitBy
+#'
+#' @return
+#' @export
+#'
+#' @examples
+redundancy <- function(DT, id, splitBy) {
   # Check cols
   DT[, connredund := 1 - (splitNeighborhood / neighborhood), 
-     by = nobs]
+     by = splitBy]
 }
 
 
 
-multidegree <- function(DT, degreeCol, id, var) {
-  DT[, multdeg := sum(splitNeighborhood - 1), 
-     by = c(idcol, 'nobs')]
+#' Multidegree
+#'
+#' @param DT 
+#' @param degreeCol 
+#' @param id 
+#' @param var 
+#'
+#' @return
+#' @export
+#'
+#' @examples
+multidegree <- function(DT, degree, id, splitBy) {
+  DT[, multdeg := sum(.SD),
+     .SDcol = degree,
+     by = c(id, splitBy)]
 }
 
 relevance <- function(DT, id, var, splitBy) {
