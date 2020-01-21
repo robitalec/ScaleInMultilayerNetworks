@@ -116,11 +116,10 @@ stopifnot(DT[, between(connredund, 0, 1)])
 # Degree = number of neighbors - 1, since neighorhood calculated with order 1 includes focal actors
 DT[, deg := splitNeighborhood - 1]
 
-multidegree(DT, 'deg', idcol)
+multidegree(DT, 'deg', idcol, 'nobs')
+
 
 # TODO why relevance > 1
-DT[, multdeg := sum(deg), by = c(idcol, 'nobs')]
-
 DT[, relevance := splitNeighborhood / multideg, 
    by = c(idcol, 'nobs', splitBy)]
 

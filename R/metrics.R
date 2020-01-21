@@ -67,15 +67,18 @@ redundancy <- function(DT) {
 #' Multidegree
 #'
 #' @param DT 
-#' @param degreeCol 
+#' @param degree 
+#' @param splitBy 
 #' @param id 
-#' @param var 
 #'
 #' @return
 #' @export
 #'
 #' @examples
 multidegree <- function(DT, degree, id, splitBy = NULL) {
+  # TODO: check columns
+  # TODO: warn overwrite
+  
   DT[, multdeg := sum(.SD),
      .SDcol = degree,
      by = c(id, splitBy)][]
