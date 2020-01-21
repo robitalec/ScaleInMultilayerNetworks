@@ -120,7 +120,7 @@ multidegree(DT, 'deg', idcol, 'nobs')
 
 
 # TODO why relevance > 1
-DT[, relevance := splitNeighborhood / multideg, 
+DT[, relev := splitNeighborhood / multideg, 
    by = c(idcol, 'nobs', splitBy)]
 
 
