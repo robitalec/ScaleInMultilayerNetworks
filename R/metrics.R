@@ -104,11 +104,11 @@ multidegree <- function(DT, degree, id, splitBy = NULL) {
 #'
 #' @examples
 relevance <- function(DT, id, var, splitBy) {
-  # check for splitNeighborhood variable and multidegree
+  # TODO: check for splitNeighborhood variable and multidegree
+  # TODO: check overwrite
   
-  DT[, relev := splitNeighborhood / multdeg, 
-     by = c(idcol, 'nobs', splitBy)]
-  
+  DT[, relev := splitNeighborhood / multideg, 
+     by = c(id, splitBy)][]
 }
 
 
