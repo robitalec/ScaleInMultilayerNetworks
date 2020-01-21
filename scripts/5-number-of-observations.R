@@ -128,28 +128,36 @@ degdeviation(DT, 'splitNeighborhood', idcol, 'nobs')
 relevance(DT, idcol, splitBy = c('nobs', splitBy))
 stopifnot(DT[!between(relev, 0, 1), .N] == 0)
 
+# TODO: network correlation
 
 ### Plots ----
-# ggplot(ml) +
+# ggplot(DT) +
   # geom_line(aes(nobs, netcor))
 
-ggplot(ml) + 
-  geom_line(aes(nobs, relevance, group  = get(idcol), color = get(idcol))) + 
+ggplot(DT) + 
+  geom_line(aes(nobs, relev, group  = get(idcol), color = get(idcol))) + 
   facet_wrap(~season)
 
 
-ggplot(ml) +
-  geom_line(aes(nobs, multdeg, color = get(idcol), group = get(idcol))) +
-  facet_wrap(~get(idcol)) +
+# Plots that combine seasons
+ggplot(DT) +
+  geom_line(aes(nobs, multideg, color = get(idcol), group = get(idcol))) +
+  # facet_wrap(~get(idcol)) +
   guides(color = FALSE)
 
+ggplot(DT) +
+  geom_line(aes(nobs, degdev, color = get(idcol), group = get(idcol))) +
+  # facet_wrap(~get(idcol)) +
+  guides(color = FALSE)
 
-ggplot(ml[season == 'winter']) +
+# Plots that separate seasons
+
+ggplot(DT[season == 'winter']) +
   geom_line(aes(nobs, neighborhood, color = get(idcol), group = get(idcol))) +
   facet_wrap(~get(idcol))
 
 
-ggplot(ml[season == 'summer']) +
+ggplot(DT[season == 'summer']) +
   geom_line(aes(nobs, deg, color = get(idcol), group = get(idcol))) +
   facet_wrap(~get(idcol))
 
