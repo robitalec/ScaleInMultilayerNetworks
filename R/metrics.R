@@ -79,7 +79,7 @@ multidegree <- function(DT, degree, id, splitBy = NULL) {
   # TODO: check columns
   # TODO: warn overwrite
   
-  DT[, multdeg := sum(.SD),
+  DT[, multideg := sum(.SD),
      .SDcol = degree,
      by = c(id, splitBy)][]
 }
