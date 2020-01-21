@@ -187,3 +187,6 @@ strength generated from PBSNs as an index of sociality (i.e., social
 strength).
 
 ## Scale in multilayer networks in practice: case study results
+
+
+## Perspectives from behavioural ecology to advance multilayer networks 
