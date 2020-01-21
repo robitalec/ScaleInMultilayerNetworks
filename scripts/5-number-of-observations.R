@@ -132,45 +132,42 @@ stopifnot(DT[!between(relev, 0, 1), .N] == 0)
 # ggplot(DT) +
   # geom_line(aes(nobs, netcor))
 
+metriccols <- c('multideg', 'degdev', 'splitNeighborhood', 'relev')
+DT[, (metriccols) := lapply(.SD, mean), .SDcols = metriccols, by = nobs]
 
 ## Plots that combine seasons
-# Number of observations vs multidegree
-ggplot(DT) +
-  geom_line(aes(nobs, multideg, color = get(idcol), group = get(idcol))) +
-  # facet_wrap(~get(idcol)) +
+g <- ggplot(DT, aes(x = nobs))+#,
+                    # color = get(idcol),
+                    # group = get(idcol))) + 
   guides(color = FALSE)
+
+# Number of observations vs multidegree
+g1 <- g + geom_line(aes(y = multideg))
 
 # Number of observations vs degree deviation
-ggplot(DT) +
-  geom_line(aes(nobs, degdev, color = get(idcol), group = get(idcol))) +
-  # facet_wrap(~get(idcol)) +
-  guides(color = FALSE)
+g2 <- g + geom_line(aes(y = degdev))
 
 # Number of observations vs neighborhood (combined layers)
-ggplot(DT) +
-  geom_line(aes(nobs, neighborhood, color = get(idcol), group = get(idcol))) +
-  # facet_wrap(~get(idcol)) +
-  guides(color = FALSE)
-
+g3 <- g + geom_line(aes(y = neighborhood))
 
 ## Plots that separate seasons
-# Number of observations vs layer relevance
-ggplot(DT) + 
-  geom_line(aes(nobs, relev, group  = get(idcol), color = get(idcol))) + 
+g <- g +
   facet_wrap(~season) +
   guides(color = FALSE)
 
 # Number of observations vs split neighborhood (by layer) 
-g1 <- ggplot(DT) +
-  geom_line(aes(nobs, splitNeighborhood, color = get(idcol), group = get(idcol)))# +
-  # facet_wrap(~season)
-  # facet_wrap(~get(idcol)) 
+g4 <- g + geom_line(aes(y = splitNeighborhood))
+
+# Number of observations vs layer relevance
+g5 <- g + geom_line(aes(y = relev))
 
 
-g <- ggplot(DT, aes(x = nobs,
-                    color = get(idcol),
-                    group = get(idcol))) + 
-  facet_wrap(~season)
+library(patchwork)
 
-g1 <- g + geom_line(aes(y = splitNeighborhood))
-g2 <- g + geom_line(aes(y = deg))
+# TODO: problem is not of these are weighted, they are all integer, so not varying after all individuals
+g1 / 
+  g2 / 
+  # g3 / 
+  g4 / 
+  g5 
+
