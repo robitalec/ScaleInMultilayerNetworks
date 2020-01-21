@@ -113,9 +113,10 @@ nets <- lapply(seq(10, maxn, by = nstep), function(n) {
 
 DT <- rbindlist(nets)
 
+### Multilayer network metrics ----
 # Redundancy
 redundancy(DT)
-stopifnot(DT[, between(connredund, 0, 1)])
+stopifnot(DT[!between(connredund, 0, 1), .N] == 0)
 
 # Multidegree
 multidegree(DT, 'splitNeighborhood', idcol, 'nobs')
