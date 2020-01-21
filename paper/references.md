@@ -30,7 +30,7 @@ Strandburg-Peshkin A, Farine DR, Crofoot MC, Couzin ID (2017) Habitat structure 
 
 Van Moorter B, Rolandsen CM, Basille M, Gaillard J-M (2016) Movement is the glue connecting home ranges and habitat selection. J Anim Ecol 85:21–31. doi: 10.1111/1365-2656.12394
 
-
+Webber QMR, Vander Wal E (2018) An evolutionary framework outlining the integration of individual social and spatial ecology. J Anim Ecol 113–127. doi: 10.1111/1365-2656.12773
 
 
 
