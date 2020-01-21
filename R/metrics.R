@@ -68,7 +68,7 @@ redundancy <- function(DT) {
 #'
 #' @param DT 
 #' @param degree 
-#' @param splitBy 
+#' @param splitBy this is not the splitBy (eg season)
 #' @param id 
 #'
 #' @return
