@@ -20,6 +20,8 @@ Papageorgiou D, Christensen C, Gall GEC, et al (2019) The multilevel society of 
 
 Silk MJ, Finn KR, Porter MA, Pinter-Wollman N (2018) Can Multilayer Networks Advance Animal Behavior Research? Trends Ecol Evol 1–3. doi: 10.1016/j.tree.2018.03.008
 
+Smith-Aguilar SE, Aureli F, Busia L, et al (2019) Using multiplex networks to capture the multidimensional nature of social structure. Primates 60:277–295. doi: 10.1007/s10329-018-0686-3
+
 Strandburg-Peshkin A, Farine DR, Couzin ID, Crofoot MC (2015) Shared decision-making drives collective movement in wild baboons. Science (80- ) 348:1358–1361
 
 Strandburg-Peshkin A, Farine DR, Crofoot MC, Couzin ID (2017) Habitat structure shapes individual decisions and emergent group structure in collectively moving wild baboons. Elife 6:e19505. doi: 10.7554/eLife.19505
