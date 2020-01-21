@@ -134,37 +134,42 @@ stopifnot(DT[!between(relev, 0, 1), .N] == 0)
 # ggplot(DT) +
   # geom_line(aes(nobs, netcor))
 
-ggplot(DT) + 
-  geom_line(aes(nobs, relev, group  = get(idcol), color = get(idcol))) + 
-  facet_wrap(~season)
 
-
-# Plots that combine seasons
+## Plots that combine seasons
+# Number of observations vs multidegree
 ggplot(DT) +
   geom_line(aes(nobs, multideg, color = get(idcol), group = get(idcol))) +
   # facet_wrap(~get(idcol)) +
   guides(color = FALSE)
 
+# Number of observations vs degree deviation
 ggplot(DT) +
   geom_line(aes(nobs, degdev, color = get(idcol), group = get(idcol))) +
   # facet_wrap(~get(idcol)) +
   guides(color = FALSE)
 
-# Plots that separate seasons
-
-ggplot(DT[season == 'winter']) +
+# Number of observations vs neighborhood (combined layers)
+ggplot(DT) +
   geom_line(aes(nobs, neighborhood, color = get(idcol), group = get(idcol))) +
-  facet_wrap(~get(idcol))
+  # facet_wrap(~get(idcol)) +
+  guides(color = FALSE)
 
 
-ggplot(DT[season == 'summer']) +
-  geom_line(aes(nobs, deg, color = get(idcol), group = get(idcol))) +
-  facet_wrap(~get(idcol))
+## Plots that separate seasons
+# Number of observations vs layer relevance
+ggplot(DT) + 
+  geom_line(aes(nobs, relev, group  = get(idcol), color = get(idcol))) + 
+  facet_wrap(~season) +
+  guides(color = FALSE)
 
+# Number of observations vs split neighborhood (by layer) 
+ggplot(DT) +
+  geom_line(aes(nobs, splitNeighborhood, color = get(idcol), group = get(idcol))) +
+  facet_wrap(~season)
+  # facet_wrap(~get(idcol)) 
 
+# Number of observations vs degree (by layer) (same plot as split neighborhod)
+ggplot(DT) +
+  geom_line(aes(nobs, splitNeighborhood, color = get(idcol), group = get(idcol))) +
+  facet_wrap(~season)
 
-# ggplot(nsub) +
-#   geom_point(aes(ANIMAL_ID, neighborhood), size = 3) + 
-#   geom_point(aes(ANIMAL_ID, splitNeighborhood),
-#              color = 'red', size = 1) +
-#   facet_wrap(~ season)
