@@ -195,3 +195,39 @@ strength).
 ### Individual fitness and phenotypes
 
 ### Movement ecology and collective movement
+
+Animal movement undoubtedly affects the social environment
+(Strandburg-Peshkin et al. 2015) and multilayer networks are no
+exception (Mourier et al. 2019). Movement is a dynamic process and is
+related to an individual’s space use as well as the resources consumed
+within their home range (Van Moorter et al. 2016). Collective movement
+can reduce group-level predation via detection-dilution trade-offs,
+while it can also improve information transfer about the quality or
+location of resources (Jolles et al. 2019). Social processes, movement
+decisions, and space use are therefore inextricably linked.
+
+Although multilayer animal social networks are relatively novel (Silk et
+al. 2018), integrating movement behaviour within multilayer networks has
+not yet been widely applied. In gunieafowl (*Acryllium vulturinum*), GPS
+movement data were used to generate *monolayer* association networks
+within a multilayer network (Papageorgiou et al. 2019). In addition,
+*spatial networks* are networks of locations, which are connected in a
+network when individuals move between locations. For example, spatial
+networks were applied to monitor movement of sharks between fixed
+location autonomous arrays, where nodes represent locations within the
+array, *intralayer edges* represent individual movement frequency, and
+*interlayer edges* represent contact probability among individuals at a
+given node (Mourier et al. 2019). While both studies integrate movement
+in some capacity, neither generate networks based on continuous measures
+of collective, or dyadic, movement (Long et al. 2014).
+
+Continuous collection of animal relocation data using GPS technology can
+be used to measure how groups of animals make movement decisions in the
+context of their local environment (Strandburg-Peshkin et al. 2015,
+2017) and across scales. A collective movement layer could constitute
+similarity in movement for dyads (Long et al. 2014) or groups (Bode et
+al. 2011) as well as at a fine (i.e. minute-to-minute: Cleasby et
+al. 2019) or coarse (global migration: Flack et al. 2018) scales.
+Importantly, the key to incorporating movement in multilayer networks
+across scales is the technological advancements available to overcome
+previous limitations (see Hughey et al. 2018).
