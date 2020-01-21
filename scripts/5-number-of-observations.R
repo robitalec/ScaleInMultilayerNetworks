@@ -56,7 +56,7 @@ nstep <- 100
 # Randomly select n max observations
 randobs <- sub[, sample(unique(timegroup), size = maxn), season]
 
-nets <- lapply(seq(1, maxn, by = nstep), function(n) {
+nets <- lapply(seq(10, maxn, by = nstep), function(n) {
   # Select first n random timegroups, 
   #  adding new observations to the tail with each iteration
   nsub <- sub[timegroup %in% randobs[, .SD[1:n], season]$V1]
