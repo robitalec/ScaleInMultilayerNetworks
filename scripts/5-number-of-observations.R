@@ -165,7 +165,8 @@ g5 <- g + geom_line(aes(y = relev))
 
 library(patchwork)
 
-# TODO: problem is not of these are weighted, they are all integer, so not varying after all individuals
+# TODO: problem is none of these are weighted, they are all integer, so not varying after all individuals
+# TODO: think about cutting these off where they settle and including extended versions in supplemental
 g1 / 
   g2 / 
   # g3 / 
