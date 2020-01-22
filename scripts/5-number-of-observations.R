@@ -88,6 +88,8 @@ nets <- lapply(seq(10, maxn, by = nstep), function(n) {
 out <- rbindlist(nets)
 
 ### Multilayer network metrics ----
+var <- 'nobs'
+
 # Redundancy
 redundancy(out)
 stopifnot(out[!between(connredund, 0, 1), .N] == 0)
