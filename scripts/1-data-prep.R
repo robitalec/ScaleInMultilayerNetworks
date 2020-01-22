@@ -17,7 +17,9 @@ p <- lapply(pkgs, library, character.only = TRUE)
 DT <- fread('data/raw-data/FogoCaribou.csv')
 
 idcol <- 'ANIMAL_ID'
+source('scripts/0-variables.R')
 # TODO: read in as rds everywhere else
+# TODO: timezone
 # TODO: rm old prep from all
 # TODO: confirm seasons
 # TODO: dont drop if na season here
@@ -27,9 +29,9 @@ idcol <- 'ANIMAL_ID'
 ### Date and time columns ----
 DT[, c('idate', 'itime') := .(as.IDate(idate), as.ITime(itime))]
 
-## Seasons - Winter: 1-75, Summer: 215-290
-DT[between(JDate, 1, 75), season := 'winter']
-DT[between(JDate, 215, 290), season := 'summer']
+## Seasons
+DT[between(JDate, winterlow, winterhigh), season := 'winter']
+DT[between(JDate, summerlow, summerhigh), season := 'summer']
 
 splitBy <- 'season'
 
