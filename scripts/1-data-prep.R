@@ -34,7 +34,7 @@ sub2018 <- DT[Year == 2018]
 
 # Sub only individuals with data in both seasons
 keepids <- sub2018[, .N, c(idcol, 'season')][!is.na(season), .N, idcol][N == 2][[idcol]]
-subSeasons <- sub2018[get(idcol) %chin% keepids]
+subSeasons <- sub2018[!is.na(season)][get(idcol) %chin% keepids]
 
 
 ### Output ----
