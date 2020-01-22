@@ -42,6 +42,27 @@ $$ SRI = \frac{x}{x + y_{AB} + y_{A} + y_{B}} $$
 where x is the number of fixes where individuals A and B were within 50 m of each other, yA is the number of fixes from individual A when individual B did not have a simultaneous fix, yB is the number of fixes from individual B when individual A did not have a simultaneous fix, and yAB is the number of simultaneous fixes from individuals A and B that were separated by >50 m (Farine & Whitehead 2015). Social groups were designated if two or more individuals occurred within 50 m of one another at any given time point. We generated social networks with the igraph package in R, version 1.2.2 (Csárdi & Nepusz 2006). For each network, we calculated graph strength, defined as the sum of the edge weights for each individual in each network. We considered graph strength generated from PBSNs as an index of sociality (i.e., social strength).
 
 
+### Variables/sensitivity
+
+1. landcover scale
+
+Sample same landcover product at different scales. Landcover is the Fogo landcover product. Resampled using `grainchanger` from regular resolution (believe it's 30m), to 100m, 250m, 500m, 1000m, 2500m (tentative numbers). Resampling method was modal moving window. Water areas were masked before resampling. Landcover reclassified to open, forest and lichen. 
+
+```
+open <- c(1, 6, 7, 9)
+forest <- c(2, 3, 4, 5)
+lichen <- 8
+```
+
+1. spatial threshold
+1. number of observations
+1. time window length
+1. time window position
+
+
+### Metrics
+
+
 ## Scale in multilayer networks in practice: case study results
 
 
