@@ -45,7 +45,7 @@ group_times(
 )
 
 ### Generate networks for each n observations ----
-graphs <- lapply(winlengths, function(len) {
+nets <- lapply(winlengths, function(len) {
   col <- paste0('season', len)
   
   # Spatial grouping with spatsoc
@@ -91,29 +91,75 @@ graphs <- lapply(winlengths, function(len) {
   
   outcols <- c('neighborhood', 'splitNeighborhood', idcol, col)
   out <- unique(DT[, .SD, .SDcols = outcols])
+  setnames(out, col, 'season')
   set(out, j = 'winlength', value = len)
 })
 
+# TODO: fix new data 'found duplicate id in a timegroup and/or splitBy - does your group_times threshold match the fix rate?'
+
+out <- rbindlist(nets)
+
 ### Multilayer network metrics ----
-# TODO: difference in degree? between seasons
-# TODO: why multiple for same individual
-multdeg <- rbindlist(lapply(graphs, function(g) {
-  deg <- lapply(g, degree)
-  rbindlist(lapply(deg, stack), idcol = 'by')
-}))
+var <- 'winlength'
 
-setnames(multdeg, c('by', 'deg', idcol))
+# Redundancy
+redundancy(out)
+stopifnot(out[!between(connredund, 0, 1), .N] == 0)
 
-multdeg[, c('winlength', 'season') := tstrsplit(by, '-', type.convert = TRUE)]
-multdeg[, winlength := as.integer(gsub('season', '', winlength))]
-multdeg[, mdeg := sum(deg), by = c('by', idcol)]
+# Multidegree
+multidegree(out, 'splitNeighborhood', idcol, 'nobs')
 
+# Degree deviation
+degdeviation(out, 'splitNeighborhood', idcol, 'nobs')
+
+# Relevance
+relevance(out, idcol, var, splitBy = splitBy)
+stopifnot(out[!between(relev, 0, 1), .N] == 0)
+
+# TODO: network correlation
 
 ### Plots ----
-ggplot(multdeg) + 
-  geom_line(aes(winlength, deg)) +
-  facet_grid(season~ANIMAL_ID)
+# ggplot(DT) +
+# geom_line(aes(nobs, netcor))
+
+# To average columns...
+# metriccols <- c('multideg', 'degdev', 'splitNeighborhood', 'relev')
+# DT[, (metriccols) := lapply(.SD, mean), .SDcols = metriccols, by = nobs]
+
+## Plots that combine seasons
+g <- ggplot(out, aes(x = nobs,
+                     color = get(idcol),
+                     group = get(idcol))) + 
+  guides(color = FALSE)
+
+# Number of observations vs multidegree
+g1 <- g + geom_line(aes(y = multideg))
+
+# Number of observations vs degree deviation
+g2 <- g + geom_line(aes(y = degdev))
+
+# Number of observations vs neighborhood (combined layers)
+g3 <- g + geom_line(aes(y = neighborhood))
+
+## Plots that separate seasons
+g <- g +
+  facet_wrap(~season) +
+  guides(color = FALSE)
+
+# Number of observations vs split neighborhood (by layer) 
+g4 <- g + geom_line(aes(y = splitNeighborhood))
+
+# Number of observations vs layer relevance
+g5 <- g + geom_line(aes(y = relev))
 
 
+library(patchwork)
 
+# TODO: problem is none of these are weighted, they are all integer, so not varying after all individuals
+# TODO: think about cutting these off where they settle and including extended versions in supplemental
+g1 / 
+  g2 / 
+  # g3 / 
+  g4 / 
+  g5 
 
