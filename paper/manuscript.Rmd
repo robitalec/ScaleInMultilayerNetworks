@@ -31,7 +31,7 @@ Here, we use caribou as a case study to develop scale-dependent multilayer netwo
 We used GPS location data collected from Fogo Island caribou in winter 2018 (1 January – 16 March). Adult female caribou were immobilized and fitted with global positioning system (GPS) collars (Lotek Wireless Inc., Newmarket, ON, Canada, GPS4400M collars, 1,250 g) as described by Schaefer and Mahoney (2013). Collars were programmed to collect location fixes every 2 hours. Prior to analyses, we subset GPS fixes into a discrete removed all erroneous and outlier GPS fixes following Bjørneraas et al. (2010). We did not collar all female caribou in the herd; however, we assumed that our sample of collared animals was random.
 
 ### Landscape data and habitat classification
-Landscape classification data were provided by the Newfoundland and Labrador Wildlife Division. Available landcover classification included nine habitat types at 30x30m resolution. We distilled the landcover types into three broad categories: foraging habitat, open habitat, and closed habitat. Foraging habitat consisted of lichen habitat, open habitat consisted of wetland, rocky barrens, frozen lakes, and anthropogenic habitat types, while closed habitat consisted of coniferous forest, conifer scrub, broadleaf forest, and mixed-wood forest habitat types.
+Landscape classification data were provided by the Newfoundland and Labrador Wildlife Division. Available landcover classification included nine habitat types at 30 x 30m resolution. We distilled the landcover types into three broad categories: foraging habitat, open habitat, and closed habitat. Foraging habitat consisted of lichen habitat, open habitat consisted of wetland, rocky barrens, frozen lakes, and anthropogenic habitat types, while closed habitat consisted of coniferous forest, conifer scrub, broadleaf forest, and mixed-wood forest habitat types.
 
 ### Generating multilayer social networks
 We used R package spatsoc (Robitaille et al. 2019) in *R version* (R CITATION) to generate proximity-based social network layers from GPS telemetry data (see above). We generated monolayer association networks for caribou in each habitat and season based on proximity of GPS fixes for individual caribou: we assumed association between two individuals if simultaneous GPS fixes (i.e., recorded within 5 minutes of each other) were within 50 m of one another (Lesmerises et al. 2018). We represented individuals in our networks by nodes and associations between individuals were represented by edges.
@@ -44,9 +44,9 @@ where x is the number of fixes where individuals A and B were within 50 m of eac
 
 Our multilayer social network therefore consisted of social association networks generated in two habitat types (open and closed) and in two seasons (winter and summer). 
 
-#### Landcover scale
+#### Altering landcover scale
 
-Sample same landcover product at different scales. Landcover is the Fogo landcover product. Resampled using `grainchanger` from regular resolution (believe it's 30m), to 100m, 250m, 500m, 1000m, 2500m (tentative numbers). Resampling method was modal moving window. Water areas were masked before resampling. Landcover reclassified to open, forest and lichen. 
+To assess the influence of landcover scale on multilayer networks, we re-sampled our landcover classification map at varying scales. Specifically, we selected scales relevant to caribou ecology. We re-sampled landcover using the **`grainchanger` package[???]** at five scales: 100m, 250m, 500m, 1000m, 2500m. Sampling at 100 and 250m represents fine-scale decision making for caribou during foraging (REF), while re-sampling at 1000m and 2500m represents the scale at which caribou tend to select and avoid habitat (Bastille-Rousseau et al. 2017). represents the local foraging Resampling method was modal moving window. Water areas were masked before resampling. Landcover reclassified to open, forest and lichen. 
 
 ```
 open <- c(1, 6, 7, 9)
