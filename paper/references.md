@@ -24,6 +24,8 @@ Silk MJ, Finn KR, Porter MA, Pinter-Wollman N (2018) Can Multilayer Networks Adv
 
 Smith-Aguilar SE, Aureli F, Busia L, et al (2019) Using multiplex networks to capture the multidimensional nature of social structure. Primates 60:277–295. doi: 10.1007/s10329-018-0686-3
 
+Spiegel O, Leu ST, Sih A, Bull CM (2016) Socially interacting or indifferent neighbours? Randomization of movement paths to tease apart social preference and spatial constraints. Methods Ecol Evol 7:971–979. doi: 10.1111/2041-210X.12553
+
 Strandburg-Peshkin A, Farine DR, Couzin ID, Crofoot MC (2015) Shared decision-making drives collective movement in wild baboons. Science (80- ) 348:1358–1361
 
 Strandburg-Peshkin A, Farine DR, Crofoot MC, Couzin ID (2017) Habitat structure shapes individual decisions and emergent group structure in collectively moving wild baboons. Elife 6:e19505. doi: 10.7554/eLife.19505
