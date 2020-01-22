@@ -70,7 +70,7 @@ nets <- lapply(seq(10, maxn, by = nstep), function(n) {
     splitBy = splitBy
   )
 
-  usplit <- unique(nsub[[splitBy]])
+  usplit <- unique(na.omit(DT, cols = splitBy)[[splitBy]])
   
   # GBI for each season
   gbiLs <- lapply(usplit, function(u) {
