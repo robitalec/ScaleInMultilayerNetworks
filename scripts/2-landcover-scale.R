@@ -30,6 +30,7 @@ idcol <- 'ANIMAL_ID'
 # sub <- sub[get(idcol) %chin% keepids]
 
 ### Cast columns ----
+# TODO: move this prep
 sub[, idate := as.IDate(idate)]
 sub[, itime := as.ITime(itime)]
 

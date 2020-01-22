@@ -14,16 +14,13 @@ pkgs <- c('data.table',
 p <- lapply(pkgs, library, character.only = TRUE)
 
 ### Data ----
-DT <- fread('data/FogoCaribou.csv')
+DT <- fread('data/raw-data/FogoCaribou.csv')
 
-
-# TODO: add seasons
-# TODO: output to rds
+idcol <- 'ANIMAL_ID'
 # TODO: read in as rds everywhere else
 # TODO: rm old prep from all
 # TODO: confirm seasons
 # TODO: dont drop if na season here
-# TODO: only 2018
 # TODO: which individuals are dropped
 
 
@@ -41,7 +38,7 @@ sub <- DT[Year == 2018  & !is.na(season)]
 
 idcol <- 'ANIMAL_ID'
 keepids <- sub[, .N, c(idcol, 'season')][, .N, idcol][N == 2][[idcol]]
-sub <- sub[get(idcol) %chin% keepids]
+# sub <- sub[get(idcol) %chin% keepids]
 
 ### Project relocations ----
 # UTM zone 21N
@@ -52,3 +49,4 @@ sub[, (projCols) := as.data.table(project(cbind(X_COORD, Y_COORD), utm21N))]
 
 
 ### Output ----
+saveRDS('data/derived-data/prep-fogo-caribou.Rds')
