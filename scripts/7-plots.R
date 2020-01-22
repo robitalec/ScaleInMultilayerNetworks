@@ -16,14 +16,15 @@ source('scripts/0-variables.R')
 ### Data ----
 var <- 'winlength'
 
-if (var == 'winlength') {
-  DT <- readRDS('data/derived-data/4-time-window-length.Rds')
-} else if (var == 'lcres') {
+if (var == 'lcres') {
   DT <- readRDS('data/derived-data/2-landcover-scale.Rds')
-  
+} else if (var == 'spatialthreshold') {
+  DT <- readRDS('data/derived-data/3-spatial-threshold.Rds')
+} else if (var == 'winlength') {
+  DT <- readRDS('data/derived-data/4-time-window-length.Rds')
+} else if (var == 'winlength') {
+  DT <- readRDS('data/derived-data/4-time-window-length.Rds')
 }
-
-
 alloc.col(DT)
 
 
