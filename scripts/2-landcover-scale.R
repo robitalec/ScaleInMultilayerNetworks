@@ -58,7 +58,7 @@ lslc <- lapply(lsres, function(res) {
 DT[, (paste0('lc', lsres)) := 
       lapply(lslc, function(lc) extract(lc, matrix(c(EASTING, NORTHING), ncol = 2)))]
 
-rescols <- colnames(DT)[grepl('lc', colnames(DT))]
+rescols <- paste0('lc', lsres)
 
 
 ### Temporal grouping with spatsoc ----
@@ -72,7 +72,7 @@ group_times(
 
 
 ### Generate networks for each landcover resolution ----
-graphs <- lapply(rescols, function(rescol) {
+graphs <- lapply(lsres, function(res) {
   # Spatial grouping with spatsoc
   group_pts(
     DT,
