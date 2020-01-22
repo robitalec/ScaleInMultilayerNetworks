@@ -9,7 +9,10 @@ Chamaillé-Jammes S, Fritz H, Valeix M, et al (2008) Resource variability, aggre
 
 Cleasby IR, Wakefield ED, Morrissey BJ, et al (2019) Using time-series similarity measures to compare animal movement trajectories in ecology. Behav Ecol Sociobiol 73:151
 
+Finn KR, Silk MJ, Porter MA, Pinter-wollman N (2019) The use of multilayer network analysis in animal behaviour. Anim Behav 149:7–22. doi: 10.1016/j.anbehav.2018.12.016
+
 Flack A, Nagy M, Fiedler W, et al (2018) From local collective behavior to global migratory patterns in white storks. Science (80- ) 914:911–914
+
 Hughey LF, Hein AM, Strandburg-Peshkin A, Jensen FH (2018) Challenges and solutions for studying collective animal behavior in the wild. Philos Trans R Soc B 373:20170005. doi: 10.1098/rstb.2017.0005
 
 Jolles JW, King AJ, Killen SS (2019) The role of individual heterogeneity in collective animal behaviour. Trends Ecol Evol 1–14. doi: 10.1016/j.tree.2019.11.001
@@ -17,6 +20,8 @@ Jolles JW, King AJ, Killen SS (2019) The role of individual heterogeneity in col
 Long JA, Nelson TA, Webb SL, Gee KL (2014) A critical examination of indices of dynamic interaction for wildlife telemetry studies. J Anim Ecol 83:1216–1233. doi: 10.1111/1365-2656.12198
 
 Mourier J, Ledee EJI, Jacoby DMP (2019) A multilayer perspective for inferring spatial and social functioning in animal movement networks. bioRxiv 1–26
+
+Muller Z, Cantor M, Cuthill IC, Harris S (2018) Giraffe social preferences are context dependent. Anim Behav 146:37–49. doi: 10.1016/j.anbehav.2018.10.006
 
 Papageorgiou D, Christensen C, Gall GEC, et al (2019) The multilevel society of a small-brained bird. Curr Biol 29:R1120–R1121. doi: 10.1016/j.cub.2019.09.072
 
