@@ -13,6 +13,8 @@ Finn KR, Silk MJ, Porter MA, Pinter-wollman N (2019) The use of multilayer netwo
 
 Flack A, Nagy M, Fiedler W, et al (2018) From local collective behavior to global migratory patterns in white storks. Science (80- ) 914:911–914
 
+He P, Maldonado-Chaparro AA, Farine DR (2019) The role of habitat configuration in shaping social structure: a gap in studies of animal social complexity. Behav Ecol Sociobiol 73:9
+
 Hughey LF, Hein AM, Strandburg-Peshkin A, Jensen FH (2018) Challenges and solutions for studying collective animal behavior in the wild. Philos Trans R Soc B 373:20170005. doi: 10.1098/rstb.2017.0005
 
 Jolles JW, King AJ, Killen SS (2019) The role of individual heterogeneity in collective animal behaviour. Trends Ecol Evol 1–14. doi: 10.1016/j.tree.2019.11.001
