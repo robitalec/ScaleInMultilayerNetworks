@@ -109,10 +109,10 @@ redundancy(out)
 stopifnot(out[!between(connredund, 0, 1), .N] == 0)
 
 # Multidegree
-multidegree(out, 'splitNeighborhood', idcol, 'nobs')
+multidegree(out, 'splitNeighborhood', idcol, var)
 
 # Degree deviation
-degdeviation(out, 'splitNeighborhood', idcol, 'nobs')
+degdeviation(out, 'splitNeighborhood', idcol, var)
 
 # Relevance
 relevance(out, idcol, var, splitBy = splitBy)
@@ -122,17 +122,18 @@ stopifnot(out[!between(relev, 0, 1), .N] == 0)
 
 ### Plots ----
 # ggplot(DT) +
-# geom_line(aes(nobs, netcor))
+# geom_line(aes(get(var), netcor))
 
 # To average columns...
 # metriccols <- c('multideg', 'degdev', 'splitNeighborhood', 'relev')
-# DT[, (metriccols) := lapply(.SD, mean), .SDcols = metriccols, by = nobs]
+# DT[, (metriccols) := lapply(.SD, mean), .SDcols = metriccols, by = get(var)]
 
 ## Plots that combine seasons
-g <- ggplot(out, aes(x = nobs,
+g <- ggplot(out, aes(x = get(var),
                      color = get(idcol),
                      group = get(idcol))) + 
-  guides(color = FALSE)
+  guides(color = FALSE) + 
+  labs(x = var)
 
 # Number of observations vs multidegree
 g1 <- g + geom_line(aes(y = multideg))
