@@ -19,6 +19,8 @@ csl: vancouver.csl
 
 **Social environment**: Social life of an individual (or group of individuals) described by social interactions (Saltz et al. 2016).
 
+**Social scale**: The type of social relationship observed that can be explicitly defined and measured in social network analyses (Farine 2015). For example, social interactions where animals come in direct contact (e.g. grooming) constitute the finest social scale, while co-occurrence or social association constitute an intermediate social scale, and home range overlap constitutes a coarse social scale.
+
 **Spatial network**: Networks of locations, which be linked with social networks of animals that move between the locations (Silk et al. 2018.
 
 
