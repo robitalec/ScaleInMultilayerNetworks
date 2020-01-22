@@ -48,9 +48,11 @@ group_times(
 nets <- lapply(winlengths, function(len) {
   col <- paste0('season', len)
   
+  sub <- DT[!is.na(get(col))]
+  
   # Spatial grouping with spatsoc
   group_pts(
-    DT,
+    sub,
     threshold = spatthresh,
     id = idcol,
     coords = projCols,
@@ -87,10 +89,10 @@ nets <- lapply(winlengths, function(len) {
   # names(gLs) <- paste0(col, '-', usplit)
   # gLs
   
-  neigh(DT, idcol, col)
+  neigh(sub, idcol, col)
   
   outcols <- c('neighborhood', 'splitNeighborhood', idcol, col)
-  out <- unique(DT[, .SD, .SDcols = outcols])
+  out <- unique(sub[, .SD, .SDcols = outcols])
   setnames(out, col, 'season')
   set(out, j = 'winlength', value = len)
 })
