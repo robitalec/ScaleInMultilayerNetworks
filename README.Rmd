@@ -22,6 +22,7 @@ Alec Robitaille, Quinn M.R. Webber, Julie Turner and Eric Vander Wal
 ## TODO
 ```{bash}
 grep -rni 'R/' -e 'TODO' || true;
+grep -rni 'scripts/' -e 'TODO' || true;
 ```
 
 
