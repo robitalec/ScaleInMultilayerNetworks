@@ -13,6 +13,9 @@ pkgs <- c('data.table',
 p <- lapply(pkgs, library, character.only = TRUE)
 
 
+### Variables ----
+source('scripts/0-variables.R')
+
 ### Data ----
 DT <- readRDS('data/derived-data/sub-seasons-fogo-caribou.Rds')
 
@@ -20,9 +23,6 @@ lc <- raster('data/Landcover/FogoSDSS_RS.tif')
 
 water <- readOGR('data/Landcover/FogoPoly.shp')
 
-
-### Variables ----
-source('scripts/0-variables.R')
 
 ### Reclassify raster ----
 mlc <- mask(lc, water)
