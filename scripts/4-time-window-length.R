@@ -41,7 +41,7 @@ l <- lapply(winlengths, function(l) {
 ### Temporal grouping ----
 group_times(
   DT,
-  datetime =  c('idate', 'itime'),
+  datetime =  c(datecol, timecol),
   threshold = tempthresh
 )
 

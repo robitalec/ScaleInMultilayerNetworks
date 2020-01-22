@@ -24,7 +24,7 @@ thresholds <- c(5, seq(50, 500, by = 50))
 
 group_times(
   DT,
-  datetime =  c('idate', 'itime'),
+  datetime =  c(datecol, timecol),
   threshold = '10 minutes'
 )
 
