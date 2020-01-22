@@ -54,8 +54,16 @@ forest <- c(2, 3, 4, 5)
 lichen <- 8
 ```
 
+Each modal landcover, and the original are sampled and separate network layers constructed for each. 
+
 1. spatial threshold
+
+Social networks constructed using spatsoc. Multilayer networks constructed for each season. Variable modified is the spatial buffer. Series from 5 to 500. 
+
+
 1. number of observations
+
+
 1. time window length
 1. time window position
 
