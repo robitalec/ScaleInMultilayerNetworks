@@ -44,6 +44,9 @@ where x is the number of fixes where individuals A and B were within 50 m of eac
 
 ### Variables/sensitivity
 
+Unless otherwise mentioned, the spatial threshold is 50 and the temporal threshold is 5 minutes. 
+
+
 1. landcover scale
 
 Sample same landcover product at different scales. Landcover is the Fogo landcover product. Resampled using `grainchanger` from regular resolution (believe it's 30m), to 100m, 250m, 500m, 1000m, 2500m (tentative numbers). Resampling method was modal moving window. Water areas were masked before resampling. Landcover reclassified to open, forest and lichen. 
