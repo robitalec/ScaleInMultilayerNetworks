@@ -14,17 +14,20 @@ source('scripts/0-variables.R')
 
 
 ### Data ----
-whichvar <- 'winlength'
+var <- 'winlength'
 
 if (whichvar == 'winlength') {
   DT <- readRDS('data/derived-data/4-time-window-length.Rds')
-}
+} 
 
 
 alloc.col(DT)
 
 
 ### Plots ----
+# TODO: problem is none of these are weighted, they are all integer, so not varying after all individuals
+# TODO: think about cutting these off where they settle and including extended versions in supplemental
+
 # ggplot(DT) +
 # geom_line(aes(get(var), netcor))
 
@@ -60,10 +63,6 @@ g4 <- g + geom_line(aes(y = splitNeighborhood))
 g5 <- g + geom_line(aes(y = relev))
 
 
-library(patchwork)
-
-# TODO: problem is none of these are weighted, they are all integer, so not varying after all individuals
-# TODO: think about cutting these off where they settle and including extended versions in supplemental
 g1 / 
   g2 / 
   # g3 / 
