@@ -3,6 +3,8 @@ AuthorYear (as in text) - Title
 
 # Quinn
 
+Bastille-Rousseau et al. (2017) Spatial scales of habitat selection decisions: implications for telemetry-based movement modelling. Ecography. 
+
 Bode NWF, Wood AJ, Franks DW (2011) Social networks and models for collective motion in animals. Behav Ecol Sociobiol 65:117–130. doi: 10.1007/s00265-010-1111-0
 
 Chamaillé-Jammes S, Fritz H, Valeix M, et al (2008) Resource variability, aggregation and direct density dependence in an open context: The local regulation of an African elephant population. J Anim Ecol 77:135–144. doi: 10.1111/j.1365-2656.2007.01307.x
