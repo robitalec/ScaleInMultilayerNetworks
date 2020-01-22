@@ -1,6 +1,8 @@
 idcol <- 'ANIMAL_ID'
 datecol <- 'idate'
-timecol <-'itime'
+timecol <- 'itime'
+
+splitBy <- 'season'
 
 # Seasons
 winterlow <- 1
