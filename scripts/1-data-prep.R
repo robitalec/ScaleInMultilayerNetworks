@@ -27,13 +27,11 @@ source('scripts/0-variables.R')
 
 
 ### Date and time columns ----
-DT[, c('idate', 'itime') := .(as.IDate(idate), as.ITime(itime))]
+DT[, c(datecol, timecol) := .(as.IDate(get(datecol)), as.ITime(get(timecol)))]
 
 ## Seasons
 DT[between(JDate, winterlow, winterhigh), season := 'winter']
 DT[between(JDate, summerlow, summerhigh), season := 'summer']
-
-splitBy <- 'season'
 
 ### Sub data ----
 sub <- DT[Year == 2018  & !is.na(season)]
@@ -51,4 +49,5 @@ sub[, (projCols) := as.data.table(project(cbind(X_COORD, Y_COORD), utm21N))]
 
 
 ### Output ----
-saveRDS('data/derived-data/prep-fogo-caribou.Rds')
+saveRDS(DT, 'data/derived-data/prep-full-fogo-caribou.Rds')
+saveRDS(sub, 'data/derived-data/prep-sub-fogo-caribou.Rds')
