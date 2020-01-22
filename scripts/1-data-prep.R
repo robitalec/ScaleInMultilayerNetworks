@@ -16,7 +16,6 @@ p <- lapply(pkgs, library, character.only = TRUE)
 ### Data ----
 DT <- fread('data/raw-data/FogoCaribou.csv')
 
-idcol <- 'ANIMAL_ID'
 source('scripts/0-variables.R')
 # TODO: read in as rds everywhere else
 # TODO: timezones
@@ -33,21 +32,19 @@ DT[, c(datecol, timecol) := .(as.IDate(get(datecol)), as.ITime(get(timecol)))]
 DT[between(JDate, winterlow, winterhigh), season := 'winter']
 DT[between(JDate, summerlow, summerhigh), season := 'summer']
 
-### Sub data ----
-sub <- DT[Year == 2018  & !is.na(season)]
-
-idcol <- 'ANIMAL_ID'
-keepids <- sub[, .N, c(idcol, 'season')][, .N, idcol][N == 2][[idcol]]
-# sub <- sub[get(idcol) %chin% keepids]
-
 ### Project relocations ----
-# UTM zone 21N
-projCols <- c('EASTING', 'NORTHING')
-utm21N <- '+proj=utm +zone=21 ellps=WGS84'
+DT[, (projCols) := as.data.table(project(cbind(get(xcol), get(ycol)), utm21N))]
 
-sub[, (projCols) := as.data.table(project(cbind(X_COORD, Y_COORD), utm21N))]
+### Sub data ----
+# Sub only 2018 data
+sub2018 <- DT[Year == 2018]
+
+# Sub only individuals with data in both seasons
+keepids <- sub[, .N, c(idcol, 'season')][!is.na(season), .N, idcol][N == 2][[idcol]]
+subseasons <- sub[get(idcol) %chin% keepids]
+
 
 
 ### Output ----
-saveRDS(DT, 'data/derived-data/prep-full-fogo-caribou.Rds')
-saveRDS(sub, 'data/derived-data/prep-sub-fogo-caribou.Rds')
+saveRDS(DT, 'data/derived-data/sub-2018-fogo-caribou.Rds')
+saveRDS(sub, 'data/derived-data/sub-seasons-fogo-caribou.Rds')
