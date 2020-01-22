@@ -7,15 +7,13 @@ pkgs <- c('data.table',
           'spatsoc',
           'rgdal',
           'asnipe',
-          'igraph')
+          'igraph',
+          'ScaleInMultilayerNetworks')
 p <- lapply(pkgs, library, character.only = TRUE)
 
 
-# TODO: make this a package
-source('R/metrics.R')
-
 ### Data ----
-DT <- fread('data/FogoCaribou.csv')
+DT <- readRDS('data/FogoCaribou.csv')
 
 
 ### Date and time columns ----
