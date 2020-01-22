@@ -17,13 +17,10 @@ source('scripts/0-variables.R')
 
 ### Data ----
 DT <- readRDS('data/derived-data/sub-seasons-fogo-caribou.Rds')
+alloc.col(DT)
 
 
 ### Temporal grouping with spatsoc ----
-tempthresh <- '5 minutes'
-spatthresh <- 50
-
-alloc.col(DT)
 group_times(
   DT,
   datetime =  c('idate', 'itime'),
