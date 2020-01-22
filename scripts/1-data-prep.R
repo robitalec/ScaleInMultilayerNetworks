@@ -2,27 +2,21 @@
 # Alec Robitaille
 
 ### Packages ----
-pkgs <- c('data.table',
-					'ggplot2',
-					'spatsoc',
-					'multinet',
-					'rgdal',
-					'asnipe',
-					'raster',
-					'igraph',
-					'grainchanger')
+pkgs <- c('data.table', 'rgdal')
 p <- lapply(pkgs, library, character.only = TRUE)
 
-### Data ----
-DT <- fread('data/raw-data/FogoCaribou.csv')
-
-source('scripts/0-variables.R')
 # TODO: read in as rds everywhere else
 # TODO: timezones
 # TODO: rm old prep from all
 # TODO: confirm seasons
 # TODO: dont drop if na season here
 # TODO: which individuals are dropped
+
+### Data ----
+DT <- fread('data/raw-data/FogoCaribou.csv')
+
+source('scripts/0-variables.R')
+
 
 
 ### Date and time columns ----
@@ -40,11 +34,10 @@ DT[, (projCols) := as.data.table(project(cbind(get(xcol), get(ycol)), utm21N))]
 sub2018 <- DT[Year == 2018]
 
 # Sub only individuals with data in both seasons
-keepids <- sub[, .N, c(idcol, 'season')][!is.na(season), .N, idcol][N == 2][[idcol]]
-subseasons <- sub[get(idcol) %chin% keepids]
-
+keepids <- sub2018[, .N, c(idcol, 'season')][!is.na(season), .N, idcol][N == 2][[idcol]]
+subSeasons <- sub2018[get(idcol) %chin% keepids]
 
 
 ### Output ----
-saveRDS(DT, 'data/derived-data/sub-2018-fogo-caribou.Rds')
-saveRDS(sub, 'data/derived-data/sub-seasons-fogo-caribou.Rds')
+saveRDS(sub2018, 'data/derived-data/sub-2018-fogo-caribou.Rds')
+saveRDS(subSeasons, 'data/derived-data/sub-seasons-fogo-caribou.Rds')
