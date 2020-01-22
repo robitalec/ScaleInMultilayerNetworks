@@ -18,3 +18,6 @@ summerlow <- 215
 summerhigh <- 290
 
 splitBy <- 'season'
+
+## spatsoc
+spatthresh <- 50
