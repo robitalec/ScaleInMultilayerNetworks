@@ -66,12 +66,40 @@ Social networks constructed using spatsoc. Multilayer networks constructed for e
 
 1. number of observations
 
+Randomly select max number of observations - timegroups -  (right now 750). For each iteration, include n observations for each season for all individuals. Subsequent iterations include nstep more (right now 25), along with previously included to remove stochasticity. Parallels with observation data. 
+
 
 1. time window length
-1. time window position
 
+Varying length of time window (used to define seasons). From 75 to 150 right now. Fixed start julian day for winter is day 1 and for summer is 215. Network layers for winter and summer are calculated for each window length. 
+
+
+1. time window position
+Varying position of time window (used to define seasons). Fixed length at 75. Window positions starting at 1, to + 75. So 1-75 is first iteration for winter and 75-150 is second iteration for "winter". Same for summer, starting at 215. Network layers for each season are constructed. 
 
 ### Metrics
+
+Right now, we calculate mostly degree/neighborhood based metrics. 
+
+* Degree centrality
+* Multidegree
+* Degree deviation: standard deviation of degree across layers
+
+* Neighbors/neighborhood (number of unique actors directly connected to each focal)
+
+Neighbors = degree within a network layer
+But across a multilayer network with multiple layers, some neighbors are repeated. 
+
+So the difference between neighbors and degree is the basis for 
+
+* Connective redundancy: 1 - (neighborhood / degree) When connective redundancy is 0, all edges on all layers are necessary to preserve the social ties
+
+* Relevance: neighborhood of specific layer  / neighbourhood of full ml net. This is the proportion of neighbors present on the layer of focus. Comparing across, it tells you which layers are most important for each individual. 
+
+
+Then there will be some layer similarity. Right now it's just a correlation of each season's asnipe SRI matrix
+
+Finally, some weighted variable. 
 
 
 ## Scale in multilayer networks in practice: case study results
