@@ -80,69 +80,69 @@ graphs <- lapply(lsres, function(res) {
     id = idcol,
     coords = projCols,
     timegroup = 'timegroup',
-    splitBy = rescol
+    splitBy = paste0('lc', res)
   )
   
-  usplit <- unique(na.omit(DT, cols = rescol)[[rescol]])
-  
-  # GBI for each lc
-  gbiLs <- lapply(usplit, function(u) {
-    gbi <- get_gbi(
-      DT = DT[get(rescol) == u],
-      group = 'group',
-      id = idcol
-    )
-  })
-  
-  # Generate networks for each lc
-  netLs <- lapply(
-    gbiLs,
-    get_network,
-    data_format = 'GBI',
-    association_index = 'SRI'
-  )
-  
-  gLs <- lapply(
-    netLs,
-    graph.adjacency,
-    mode = 'undirected',
-    diag = FALSE,
-    weighted = TRUE
-  )
-  names(gLs) <- paste(rescol, usplit, sep = '-')
+  # usplit <- unique(na.omit(DT, cols = rescol)[[rescol]])
+  # 
+  # # GBI for each lc
+  # gbiLs <- lapply(usplit, function(u) {
+  #   gbi <- get_gbi(
+  #     DT = DT[get(rescol) == u],
+  #     group = 'group',
+  #     id = idcol
+  #   )
+  # })
+  # 
+  # # Generate networks for each lc
+  # netLs <- lapply(
+  #   gbiLs,
+  #   get_network,
+  #   data_format = 'GBI',
+  #   association_index = 'SRI'
+  # )
+  # 
+  # gLs <- lapply(
+  #   netLs,
+  #   graph.adjacency,
+  #   mode = 'undirected',
+  #   diag = FALSE,
+  #   weighted = TRUE
+  # )
+  # names(gLs) <- paste(rescol, usplit, sep = '-')
   
   neigh(DT, idcol, splitBy)
   
   out <- unique(DT[, .SD, 
                      .SDcols = c('neighborhood', 'splitNeighborhood', idcol, splitBy)])
-  set(out, j = 'rescol', value = rescol)
+  set(out, j = 'lcres', value = res)
 })
 
 out <- rbindlist(nets)
 
 
 ### Multilayer network metrics ----
-out[, lcres := tstrsplit()]
-var <- 'lc'
+var <- 'lcres'
+
 # Redundancy
 redundancy(out)
 stopifnot(out[!between(connredund, 0, 1), .N] == 0)
 
 # Multidegree
-multidegree(out, 'splitNeighborhood', idcol, 'nobs')
+multidegree(out, 'splitNeighborhood', idcol, var)
 
 # Degree deviation
-degdeviation(out, 'splitNeighborhood', idcol, 'nobs')
+degdeviation(out, 'splitNeighborhood', idcol, var)
 
 # Relevance
-relevance(out, idcol, splitBy = c('nobs', splitBy))
+relevance(out, idcol, splitBy = c(var, splitBy))
 stopifnot(out[!between(relev, 0, 1), .N] == 0)
 
 # TODO: network correlation
 
 ### Plots ----
 ## Plots that combine seasons
-g <- ggplot(DT, aes(x = nobs,
+g <- ggplot(DT, aes(x = lcres,
                     color = get(idcol),
                     group = get(idcol))) + 
   guides(color = FALSE)
