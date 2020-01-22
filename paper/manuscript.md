@@ -147,6 +147,14 @@ caribou.
 
 ### Landscape data and habitat classification
 
+Landscape classification data were provided by the Newfoundland and
+Labrador Wildlife Division. Available landcover classification included
+nine habitat types, which we distilled into two broad categories: open
+and closed habitat types. Open habitat consisted of lichen, wetland,
+rocky barrens, frozen lakes, and anthropogenic habitat types, while
+closed habitat consisted of coniferous forest, conifer scrub, broadleaf
+forest, and mixed-wood forest habitat types.
+
 ### Social network analysis
 
 We used R package spatsoc (Robitaille et al. 2019) in *R version* (R
@@ -184,6 +192,86 @@ network, we calculated graph strength, defined as the sum of the edge
 weights for each individual in each network. We considered graph
 strength generated from PBSNs as an index of sociality (i.e., social
 strength).
+
+### Variables/sensitivity
+
+Unless otherwise mentioned, the spatial threshold is 50 and the temporal
+threshold is 5 minutes.
+
+1.  landcover scale
+
+Sample same landcover product at different scales. Landcover is the Fogo
+landcover product. Resampled using `grainchanger` from regular
+resolution (believe it’s 30m), to 100m, 250m, 500m, 1000m, 2500m
+(tentative numbers). Resampling method was modal moving window. Water
+areas were masked before resampling. Landcover reclassified to open,
+forest and lichen.
+
+    open <- c(1, 6, 7, 9)
+    forest <- c(2, 3, 4, 5)
+    lichen <- 8
+
+Each modal landcover, and the original are sampled and separate network
+layers constructed for each.
+
+1.  spatial threshold
+
+Social networks constructed using spatsoc. Multilayer networks
+constructed for each season. Variable modified is the spatial buffer.
+Series from 5 to 500.
+
+1.  number of observations
+
+Randomly select max number of observations - timegroups - (right now
+750). For each iteration, include n observations for each season for all
+individuals. Subsequent iterations include nstep more (right now 25),
+along with previously included to remove stochasticity. Parallels with
+observation data.
+
+1.  time window length
+
+Varying length of time window (used to define seasons). From 75 to 150
+right now. Fixed start julian day for winter is day 1 and for summer is
+215. Network layers for winter and summer are calculated for each window
+length.
+
+1.  time window position Varying position of time window (used to define
+    seasons). Fixed length at 75. Window positions starting at 1, to +
+    75. So 1-75 is first iteration for winter and 75-150 is second
+    iteration for “winter”. Same for summer, starting at 215. Network
+    layers for each season are constructed.
+
+### Metrics
+
+Right now, we calculate mostly degree/neighborhood based metrics.
+
+  - Degree centrality
+
+  - Multidegree
+
+  - Degree deviation: standard deviation of degree across layers
+
+  - Neighbors/neighborhood (number of unique actors directly connected
+    to each focal)
+
+Neighbors = degree within a network layer But across a multilayer
+network with multiple layers, some neighbors are repeated.
+
+So the difference between neighbors and degree is the basis for
+
+  - Connective redundancy: 1 - (neighborhood / degree) When connective
+    redundancy is 0, all edges on all layers are necessary to preserve
+    the social ties
+
+  - Relevance: neighborhood of specific layer / neighbourhood of full ml
+    net. This is the proportion of neighbors present on the layer of
+    focus. Comparing across, it tells you which layers are most
+    important for each individual.
+
+Then there will be some layer similarity. Right now it’s just a
+correlation of each season’s asnipe SRI matrix
+
+Finally, some weighted variable.
 
 ## Scale in multilayer networks in practice: case study results
 
