@@ -5,46 +5,27 @@
 pkgs <- c('data.table',
           'ggplot2',
           'spatsoc',
-          'rgdal',
           'asnipe',
           'igraph',
           'ScaleInMultilayerNetworks')
 p <- lapply(pkgs, library, character.only = TRUE)
 
 
+### Variables ----
+source('scripts/0-variables.R')
+
+
 ### Data ----
-DT <- readRDS('data/FogoCaribou.csv')
+DT <- readRDS('data/derived-data/sub-seasons-fogo-caribou.Rds')
 
-
-### Date and time columns ----
-DT[, c('idate', 'itime') := .(as.IDate(idate), as.ITime(itime))]
-
-## Seasons - Winter: 1-75, Summer: 215-290
-DT[between(JDate, 1, 75), season := 'winter']
-DT[between(JDate, 215, 290), season := 'summer']
-
-splitBy <- 'season'
-
-### Sub data ----
-sub <- DT[Year == 2018  & !is.na(season)]
-
-idcol <- 'ANIMAL_ID'
-keepids <- sub[, .N, c(idcol, 'season')][, .N, idcol][N == 2][[idcol]]
-sub <- sub[get(idcol) %chin% keepids]
-
-### Project relocations ----
-# UTM zone 21N
-projCols <- c('EASTING', 'NORTHING')
-utm21N <- '+proj=utm +zone=21 ellps=WGS84'
-
-sub[, (projCols) := as.data.table(project(cbind(X_COORD, Y_COORD), utm21N))]
 
 ### Temporal grouping with spatsoc ----
 tempthresh <- '5 minutes'
 spatthresh <- 50
 
+alloc.col(DT)
 group_times(
-  sub,
+  DT,
   datetime =  c('idate', 'itime'),
   threshold = tempthresh
 )
@@ -53,12 +34,12 @@ group_times(
 maxn <- 750 #sub[, uniqueN(timegroup)]
 nstep <- 25
 # Randomly select n max observations
-randobs <- sub[, sample(unique(timegroup), size = maxn), season]
+randobs <- DT[, sample(unique(timegroup), size = maxn), season]
 
 nets <- lapply(seq(10, maxn, by = nstep), function(n) {
   # Select first n random timegroups, 
   #  adding new observations to the tail with each iteration
-  nsub <- sub[timegroup %in% randobs[, .SD[1:n], season]$V1]
+  nsub <- DT[timegroup %in% randobs[, .SD[1:n], season]$V1]
 
   # Spatial grouping with spatsoc
   group_pts(
