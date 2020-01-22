@@ -227,9 +227,14 @@ context of their local environment (Strandburg-Peshkin et al. 2015,
 2017) and across scales. A collective movement layer could constitute
 similarity in movement for dyads (Long et al. 2014) or groups (Bode et
 al. 2011) as well as at a fine (i.e. minute-to-minute: Cleasby et
-al. 2019) or coarse (global migration: Flack et al. 2018) scales. In
-contrast to spatial networks, movement networks could assimilate dyadic
-movement metrics into a network representing the continuous and
+al. 2019) or coarse (global migration: Flack et al. 2018) scales.
+Another potential application would be to generate social networks
+during times when animals are engaged in different behaviours, including
+moving, interacting, or foraging (e.g. Muller et al. 2018; Finn et
+al. 2019) and construct a multilayer networks based on
+behaviour-specific monolayer networks (e.g. Smith-Aguilar et al. 2019)
+In contrast to spatial networks, movement networks could assimilate
+dyadic movement metrics into a network representing the continuous and
 simultaneous movement trajectories of animals. Importantly, the key to
 incorporating movement in multilayer networks across scales is the
 technological advancements available to overcome previous limitations
@@ -238,13 +243,19 @@ technological advancements available to overcome previous limitations
 Given the existing framework for constructing multilayer networks from
 behavioural layers (e.g. Smith-Aguilar et al. 2019), movement layers
 could be integrated with interaction or association layers. Integrating
-movement layers with habitat-specific association layers could further
-shed light on the role of movement as a driver of the social and spatial
-environments an individual experiences (Webber and Vander Wal 2018). In
-our case study, we generated multilayer networks based on
-habitat-specific monolayers. Dyadic movement could XXX \[not done here
-yet\]. The approach we outline could be used to explore mechanisms
-linking the social and spatial environments. For example, social
-processes may be an emergent property of the landscape because animals
-aggregate at resources, such as waterholes (Chamaillé-Jammes et
-al. 2008). For example, XXXX.
+movement layers with habitat-specific social association layers could
+further shed light on the role of movement as a driver of the social and
+spatial environments an individual experiences (Webber and Vander Wal
+2018). In our case study, we generated multilayer networks based on
+habitat-specific monolayers. Coordinated movement of dyads, or groups,
+could vary based on habitat and the approach we outline could be used to
+explore mechanisms linking the social and spatial environments. For
+example, social processes may be an emergent property of the landscape
+because animals aggregate at resources, such as waterholes
+(Chamaillé-Jammes et al. 2008), while movement to, from, or within
+habitat patches can also contribute to the formation of the social
+environment (Spiegel et al. 2016). Incorporating movement ecology within
+a multilayer network framework is a logical next step for a burgeoning
+field. In particular, when association networks are habitat-specific, we
+suggest the integration of movement and space use in multilayer networks
+provides novel insight into the
