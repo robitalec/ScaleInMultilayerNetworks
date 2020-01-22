@@ -117,18 +117,8 @@ multdeg[, mdeg := sum(deg), by = c('by', idcol)]
 
 
 ### Plots ----
-ggplot(multdeg) + 
-  geom_line(aes(winpos, deg)) +
-  facet_grid(season~ANIMAL_ID)
-
-
 # TODO: careful if inconsistent number of individuals
-multdeg[, meandeg := mean(deg), .(winpos, season)]
-ggplot(multdeg) + 
-  geom_line(aes(winpos, meandeg)) +
-  facet_wrap(~season)
 
 
-
-
-
+### Output ----
+saveRDS(out, 'data/derived-data/6-time-window-position.Rds')

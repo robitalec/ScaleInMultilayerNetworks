@@ -24,11 +24,9 @@ if (var == 'lcres') {
   DT <- readRDS('data/derived-data/4-time-window-length.Rds')
 } else if (var == 'nobs') {
   DT <- readRDS('data/derived-data/5-number-of-observations.Rds')
-} else if (var == 'nobs') {
-  DT <- readRDS('data/derived-data/5-number-of-observations.Rds')
-} else if (var == 'nobs') {
-  DT <- readRDS('data/derived-data/5-number-of-observations.Rds')
-} 
+} else if (var == 'winpos') {
+  DT <- readRDS('data/derived-data/6-time-window-position.Rds')
+}
 
 alloc.col(DT)
 
