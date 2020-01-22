@@ -19,7 +19,7 @@ DT <- fread('data/raw-data/FogoCaribou.csv')
 idcol <- 'ANIMAL_ID'
 source('scripts/0-variables.R')
 # TODO: read in as rds everywhere else
-# TODO: timezone
+# TODO: timezones
 # TODO: rm old prep from all
 # TODO: confirm seasons
 # TODO: dont drop if na season here
