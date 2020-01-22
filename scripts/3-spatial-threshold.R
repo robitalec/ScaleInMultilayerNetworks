@@ -53,7 +53,7 @@ out <- rbindlist(nets)
 
 
 ### Multilayer network metrics ----
-var <- 'lcres'
+var <- 'spatialthreshold'
 
 # Redundancy
 redundancy(out)
@@ -66,6 +66,7 @@ multidegree(out, 'splitNeighborhood', idcol, var)
 degdeviation(out, 'splitNeighborhood', idcol, var)
 
 # Relevance
+# TODO: fix implementation of var
 relevance(out, idcol, splitBy = c(var, splitBy))
 stopifnot(out[!between(relev, 0, 1), .N] == 0)
 
@@ -73,7 +74,7 @@ stopifnot(out[!between(relev, 0, 1), .N] == 0)
 
 ### Plots ----
 ## Plots that combine seasons
-g <- ggplot(DT, aes(x = lcres,
+g <- ggplot(DT, aes(x = get(var),
                     color = get(idcol),
                     group = get(idcol))) + 
   guides(color = FALSE)
@@ -111,7 +112,7 @@ g1 /
 
 
 ## ARCHIVE
-dcast(ml, ANIMAL_ID ~ spatscale, value.var = 'cent')
+dcast(ml, ANIMAL_ID ~ get(var), value.var = 'cent')
 
 # Network correlations
 netcors <- data.table(
