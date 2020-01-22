@@ -55,17 +55,17 @@ lslc <- lapply(lsres, function(res) {
 })
 
 ### Sample landcover ----
-sub[, (paste0('lc', lsres)) := 
+DT[, (paste0('lc', lsres)) := 
       lapply(lslc, function(lc) extract(lc, matrix(c(EASTING, NORTHING), ncol = 2)))]
 
-rescols <- colnames(sub)[grepl('lc', colnames(sub))]
+rescols <- colnames(DT)[grepl('lc', colnames(DT))]
 
 
 ### Temporal grouping with spatsoc ----
 tempthresh <- '5 minutes'
 
 group_times(
-  sub,
+  DT,
   datetime =  c('idate', 'itime'),
   threshold = tempthresh
 )
@@ -75,7 +75,7 @@ group_times(
 graphs <- lapply(rescols, function(rescol) {
   # Spatial grouping with spatsoc
   group_pts(
-    sub,
+    DT,
     threshold = spatthresh,
     id = idcol,
     coords = projCols,
@@ -83,12 +83,12 @@ graphs <- lapply(rescols, function(rescol) {
     splitBy = rescol
   )
   
-  usplit <- unique(na.omit(sub, cols = rescol)[[rescol]])
+  usplit <- unique(na.omit(DT, cols = rescol)[[rescol]])
   
   # GBI for each lc
   gbiLs <- lapply(usplit, function(u) {
     gbi <- get_gbi(
-      DT = sub[get(rescol) == u],
+      DT = DT[get(rescol) == u],
       group = 'group',
       id = idcol
     )
@@ -109,62 +109,72 @@ graphs <- lapply(rescols, function(rescol) {
     diag = FALSE,
     weighted = TRUE
   )
-  names(gLs) <- paste0(rescol, '-', usplit)
-  gLs
+  names(gLs) <- paste(rescol, usplit, sep = '-')
+  
+  neigh(DT, idcol, splitBy)
+  
+  out <- unique(DT[, .SD, 
+                     .SDcols = c('neighborhood', 'splitNeighborhood', idcol, splitBy)])
+  set(out, j = 'rescol', value = rescol)
 })
 
+out <- rbindlist(nets)
+
+
 ### Multilayer network metrics ----
-multdeg <- rbindlist(lapply(graphs, function(g) {
-  deg <- lapply(g, degree)
-  rbindlist(lapply(deg, stack), idcol = 'by')
-}))
+out[, lcres := tstrsplit()]
+var <- 'lc'
+# Redundancy
+redundancy(out)
+stopifnot(out[!between(connredund, 0, 1), .N] == 0)
 
-setnames(multdeg, c('by', 'deg', idcol))
+# Multidegree
+multidegree(out, 'splitNeighborhood', idcol, 'nobs')
 
-multdeg[, c('res', 'lc') := tstrsplit(by, '-', type.convert = TRUE)]
+# Degree deviation
+degdeviation(out, 'splitNeighborhood', idcol, 'nobs')
 
-multdeg[, mdeg := sum(deg), by = c('res', idcol)]
+# Relevance
+relevance(out, idcol, splitBy = c('nobs', splitBy))
+stopifnot(out[!between(relev, 0, 1), .N] == 0)
 
-multdeg[, var(deg), by = .(ANIMAL_ID, lc)][order(V1)]
-
-### Plots ----
-ggplot(multdeg[ANIMAL_ID == 'FO2016002']) + 
-  geom_line(aes(lc, deg, color = res)) +
-  facet_wrap(~ANIMAL_ID)
-  guides(color = FALSE)
-
-ggplot(multdeg) + 
-  geom_line(aes(lc, deg)) +
-  facet_grid(res~get(idcol)) +
-  guides(color = FALSE)
-
-ggplot(multdeg) + 
-  geom_line(aes(res, mdeg, color = get(idcol), group = get(idcol))) +
-  facet_wrap(~get(idcol)) +
-  guides(color = FALSE)
-
-
-ggplot(multdeg) + 
-  geom_line(aes(nobs, deg, color = get(idcol), group = get(idcol))) +
-  facet_wrap(~get(idcol) + season)
-
-
-
+# TODO: network correlation
 
 ### Plots ----
-ggplot(ml) +
-	geom_histogram(aes(deg)) +
-	facet_wrap(~get(splitBy))
+## Plots that combine seasons
+g <- ggplot(DT, aes(x = nobs,
+                    color = get(idcol),
+                    group = get(idcol))) + 
+  guides(color = FALSE)
+
+# Number of observations vs multidegree
+g1 <- g + geom_line(aes(y = multideg))
+
+# Number of observations vs degree deviation
+g2 <- g + geom_line(aes(y = degdev))
+
+# Number of observations vs neighborhood (combined layers)
+g3 <- g + geom_line(aes(y = neighborhood))
+
+## Plots that separate seasons
+g <- g +
+  facet_wrap(~season) +
+  guides(color = FALSE)
+
+# Number of observations vs split neighborhood (by layer) 
+g4 <- g + geom_line(aes(y = splitNeighborhood))
+
+# Number of observations vs layer relevance
+g5 <- g + geom_line(aes(y = relev))
 
 
-ggplot(ml) +
-	geom_line(aes(factor(get(splitBy), levels = rclnms, labels = names(rclnms)),
-								deg, group = get(idcol), color = get(idcol))) +
-	labs(x = 'Landcover', y =  'Degree') +
-	guides(color = FALSE)
+library(patchwork)
 
-ggplot(ml) +
-	geom_line(aes(factor(get(splitBy), levels = rclnms, labels = names(rclnms)),
-								strg, group = get(idcol), color = get(idcol))) +
-	labs(x = 'Landcover', y =  'Strength') +
-	guides(color = FALSE)
+# TODO: problem is none of these are weighted, they are all integer, so not varying after all individuals
+# TODO: think about cutting these off where they settle and including extended versions in supplemental
+g1 / 
+  g2 / 
+  # g3 / 
+  g4 / 
+  g5 
+
