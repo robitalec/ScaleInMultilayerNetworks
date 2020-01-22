@@ -34,7 +34,7 @@ l <- lapply(winpositions, function(pos) {
   DT[between(JDate, 215 + pos, 215 + pos + winlength), (col) := 'summer']
   
   # Fake output
-  l
+  pos
 })
 
 
