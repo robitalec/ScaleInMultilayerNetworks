@@ -22,9 +22,14 @@ if (var == 'lcres') {
   DT <- readRDS('data/derived-data/3-spatial-threshold.Rds')
 } else if (var == 'winlength') {
   DT <- readRDS('data/derived-data/4-time-window-length.Rds')
-} else if (var == 'winlength') {
-  DT <- readRDS('data/derived-data/4-time-window-length.Rds')
-}
+} else if (var == 'nobs') {
+  DT <- readRDS('data/derived-data/5-number-of-observations.Rds')
+} else if (var == 'nobs') {
+  DT <- readRDS('data/derived-data/5-number-of-observations.Rds')
+} else if (var == 'nobs') {
+  DT <- readRDS('data/derived-data/5-number-of-observations.Rds')
+} 
+
 alloc.col(DT)
 
 

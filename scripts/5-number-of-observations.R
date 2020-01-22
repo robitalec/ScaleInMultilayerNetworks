@@ -106,48 +106,5 @@ stopifnot(out[!between(relev, 0, 1), .N] == 0)
 
 # TODO: network correlation
 
-### Plots ----
-# ggplot(DT) +
-  # geom_line(aes(nobs, netcor))
-
-# To average columns...
-# metriccols <- c('multideg', 'degdev', 'splitNeighborhood', 'relev')
-# DT[, (metriccols) := lapply(.SD, mean), .SDcols = metriccols, by = nobs]
-
-## Plots that combine seasons
-g <- ggplot(out, aes(x = nobs,
-                    color = get(idcol),
-                    group = get(idcol))) + 
-  guides(color = FALSE)
-
-# Number of observations vs multidegree
-g1 <- g + geom_line(aes(y = multideg))
-
-# Number of observations vs degree deviation
-g2 <- g + geom_line(aes(y = degdev))
-
-# Number of observations vs neighborhood (combined layers)
-g3 <- g + geom_line(aes(y = neighborhood))
-
-## Plots that separate seasons
-g <- g +
-  facet_wrap(~season) +
-  guides(color = FALSE)
-
-# Number of observations vs split neighborhood (by layer) 
-g4 <- g + geom_line(aes(y = splitNeighborhood))
-
-# Number of observations vs layer relevance
-g5 <- g + geom_line(aes(y = relev))
-
-
-library(patchwork)
-
-# TODO: problem is none of these are weighted, they are all integer, so not varying after all individuals
-# TODO: think about cutting these off where they settle and including extended versions in supplemental
-g1 / 
-  g2 / 
-  # g3 / 
-  g4 / 
-  g5 
-
+### Output ----
+saveRDS(out, 'data/derived-data/5-number-of-observations.Rds')

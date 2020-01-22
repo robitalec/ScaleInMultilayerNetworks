@@ -3,7 +3,6 @@
 
 ### Packages ----
 pkgs <- c('data.table',
-					'ggplot2',
 					'spatsoc',
 					'rgdal',
 					'asnipe',
