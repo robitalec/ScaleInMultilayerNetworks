@@ -24,6 +24,7 @@ alloc.col(DT)
 # Remove season column from 1-data-prep.R
 DT[, season := NULL]
 
+# TODO: should this be a smaller min window size?
 winlengths <- seq(75, 150, 5)
   
 l <- lapply(winlengths, function(l) {
