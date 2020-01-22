@@ -18,7 +18,6 @@ DT <- fread('data/raw-data/FogoCaribou.csv')
 source('scripts/0-variables.R')
 
 
-
 ### Date and time columns ----
 DT[, c(datecol, timecol) := .(as.IDate(get(datecol)), as.ITime(get(timecol)))]
 

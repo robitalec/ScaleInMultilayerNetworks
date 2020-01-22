@@ -14,33 +14,15 @@ p <- lapply(pkgs, library, character.only = TRUE)
 
 
 ### Data ----
-DT <- fread('data/FogoCaribou.csv')
+DT <- readRDS('data/derived-data/sub-seasons-fogo-caribou.Rds')
 
 lc <- raster('data/Landcover/FogoSDSS_RS.tif')
 
 water <- readOGR('data/Landcover/FogoPoly.shp')
 
-### Sub data ----
-# TODO: move this prep
-# TODO: add season? 
-sub <- DT[Year == 2018]
 
-idcol <- 'ANIMAL_ID'
-# keepids <- sub[, .N, c(idcol, 'season')][, .N, idcol][N == 2][[idcol]]
-# sub <- sub[get(idcol) %chin% keepids]
-
-### Cast columns ----
-# TODO: move this prep
-sub[, idate := as.IDate(idate)]
-sub[, itime := as.ITime(itime)]
-
-### Project relocations ----
-# UTM zone 21N
-projCols <- c('EASTING', 'NORTHING')
-utm21N <- '+proj=utm +zone=21 ellps=WGS84'
-
-sub[, (projCols) := as.data.table(project(cbind(X_COORD, Y_COORD), utm21N))]
-
+### Variables ----
+source('scripts/0-variables.R')
 
 ### Reclassify raster ----
 mlc <- mask(lc, water)
@@ -73,9 +55,6 @@ lslc <- lapply(lsres, function(res) {
 })
 
 ### Sample landcover ----
-# landcover
-sub[, landcov := extract(lc, matrix(c(EASTING, NORTHING), ncol = 2))]
-
 sub[, (paste0('lc', lsres)) := 
       lapply(lslc, function(lc) extract(lc, matrix(c(EASTING, NORTHING), ncol = 2)))]
 
@@ -92,9 +71,7 @@ group_times(
 )
 
 
-### Generate networks for each n observations ----
-spatthresh <- 50
-
+### Generate networks for each landcover resolution ----
 graphs <- lapply(rescols, function(rescol) {
   # Spatial grouping with spatsoc
   group_pts(
