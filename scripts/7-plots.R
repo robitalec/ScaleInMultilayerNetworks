@@ -16,9 +16,12 @@ source('scripts/0-variables.R')
 ### Data ----
 var <- 'winlength'
 
-if (whichvar == 'winlength') {
+if (var == 'winlength') {
   DT <- readRDS('data/derived-data/4-time-window-length.Rds')
-} 
+} else if (var == 'lcres') {
+  DT <- readRDS('data/derived-data/2-landcover-scale.Rds')
+  
+}
 
 
 alloc.col(DT)
