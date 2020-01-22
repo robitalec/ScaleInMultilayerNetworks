@@ -21,6 +21,9 @@ alloc.col(DT)
 
 
 ### Variable time window position ----
+# Remove season column from 1-prep
+DT[, season := NULL]
+
 winlength <- 75
 winpositions <- seq(1, 75, by = 1)
   
