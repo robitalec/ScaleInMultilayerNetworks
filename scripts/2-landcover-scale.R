@@ -21,6 +21,7 @@ lc <- raster('data/Landcover/FogoSDSS_RS.tif')
 water <- readOGR('data/Landcover/FogoPoly.shp')
 
 ### Sub data ----
+# TODO: move this prep
 # TODO: add season? 
 sub <- DT[Year == 2018]
 

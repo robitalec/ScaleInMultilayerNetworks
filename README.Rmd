@@ -19,6 +19,12 @@ knitr::opts_chunk$set(
 # The problem and promise of scale in multilayer networks
 Alec Robitaille, Quinn M.R. Webber, Julie Turner and Eric Vander Wal
 
+## TODO
+```{bash}
+grep -rni 'R/' -e 'TODO' || true;
+```
+
+
 ## Info
 [Special Column info](https://academic.oup.com/CZ/pages/animal_social_system)
 

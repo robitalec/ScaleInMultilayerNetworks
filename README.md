@@ -9,6 +9,20 @@
 
 Alec Robitaille, Quinn M.R. Webber, Julie Turner and Eric Vander Wal
 
+## TODO
+
+``` bash
+grep -rni 'R/' -e 'TODO' || true;
+#> R/metrics.R:83:  # TODO: Check cols
+#> R/metrics.R:84:  # TODO: warn overwrite 
+#> R/metrics.R:104:  # TODO: check columns
+#> R/metrics.R:105:  # TODO: warn overwrite
+#> R/metrics.R:126:  # TODO: check columns
+#> R/metrics.R:127:  # TODO: warn overwrite
+#> R/metrics.R:152:  # TODO: check for splitNeighborhood variable and multidegree
+#> R/metrics.R:153:  # TODO: check overwrite
+```
+
 ## Info
 
 [Special Column
