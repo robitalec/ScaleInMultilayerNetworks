@@ -11,93 +11,107 @@ pkgs <- c('data.table',
 p <- lapply(pkgs, library, character.only = TRUE)
 
 
+### Variables ----
+source('scripts/0-variables.R')
+
+
 ### Data ----
-DT <- fread('data/FogoCaribou.csv')
+DT <- readRDS('data/derived-data/sub-seasons-fogo-caribou.Rds')
 
-### Sub data ----
-sub <- DT[Year == 2018]
-
-idcol <- 'ANIMAL_ID'
-
-### Cast columns ----
-sub[, idate := as.IDate(idate)]
-sub[, itime := as.ITime(itime)]
-
-### Project relocations ----
-# UTM zone 21N
-projCols <- c('EASTING', 'NORTHING')
-utm21N <- '+proj=utm +zone=21 ellps=WGS84'
-
-sub[, (projCols) := as.data.table(project(cbind(X_COORD, Y_COORD), utm21N))]
 
 ### Spatiotemporal grouping with spatsoc ----
 # list spatial thresholds
 thresholds <- c(5, seq(50, 500, by = 50))
 
 group_times(
-  sub,
+  DT,
   datetime =  c('idate', 'itime'),
   threshold = '10 minutes'
 )
 
 # TODO: why duplicate ids.. check new data
 # TODO: drop this 
-sub <- sub[!(timegroup %in% sub[, .N, .(ANIMAL_ID, timegroup)][N > 1, unique(timegroup)])]
+DT <- DT[!(timegroup %in% sub[, .N, .(ANIMAL_ID, timegroup)][N > 1, unique(timegroup)])]
 
 lapply(thresholds, function(t) {
 	group_pts(
-			sub,
+	  DT,
 			threshold = t,
 			id = idcol,
 			coords = projCols,
 			timegroup = 'timegroup'
 	)
-	setnames(sub, 'group', paste0('group_', t))
+
+	neigh(DT, idcol, splitBy)
+	
+	out <- unique(DT[, .SD, 
+	                 .SDcols = c('neighborhood', 'splitNeighborhood', idcol, splitBy)])
+	set(out, j = 'spatialthreshold', value = t)
 })
 
-
-### Group by individual matrices + networks ----
-groupcols <- colnames(sub)[grepl('^group', colnames(sub))]
-gbiLs <- lapply(groupcols, function(groupcol) {
-	gbi <- get_gbi(
-		DT = sub,
-		group = groupcol,
-		id = idcol
-	)
-})
-
-netLs <- lapply(
-	gbiLs,
-	get_network,
-	data_format = 'GBI',
-	association_index = 'SRI'
-)
-
-gLs <- lapply(
-	netLs,
-	graph.adjacency,
-	mode = 'undirected',
-	diag = FALSE,
-	weighted = TRUE
-)
-names(gLs) <- groupcols
+out <- rbindlist(nets)
 
 
+### Multilayer network metrics ----
+var <- 'lcres'
 
-### Calculate degree, centrality across networks ----
-ml <- rbindlist(lapply(gLs, function(g) {
-	deg <- degree(g)
-  cent <- centr_eigen(g, directed = FALSE)
-	list(ANIMAL_ID = names(deg), deg = deg, cent = cent$vector)
-}), idcol = 'group')
+# Redundancy
+redundancy(out)
+stopifnot(out[!between(connredund, 0, 1), .N] == 0)
 
-# TODO: rm this
-# ml <- unique(ml)
+# Multidegree
+multidegree(out, 'splitNeighborhood', idcol, var)
 
-ml[, spatscale := tstrsplit(group, '_', keep = 2, type.convert = TRUE)]
+# Degree deviation
+degdeviation(out, 'splitNeighborhood', idcol, var)
 
+# Relevance
+relevance(out, idcol, splitBy = c(var, splitBy))
+stopifnot(out[!between(relev, 0, 1), .N] == 0)
+
+# TODO: network correlation
+
+### Plots ----
+## Plots that combine seasons
+g <- ggplot(DT, aes(x = lcres,
+                    color = get(idcol),
+                    group = get(idcol))) + 
+  guides(color = FALSE)
+
+# Number of observations vs multidegree
+g1 <- g + geom_line(aes(y = multideg))
+
+# Number of observations vs degree deviation
+g2 <- g + geom_line(aes(y = degdev))
+
+# Number of observations vs neighborhood (combined layers)
+g3 <- g + geom_line(aes(y = neighborhood))
+
+## Plots that separate seasons
+g <- g +
+  facet_wrap(~season) +
+  guides(color = FALSE)
+
+# Number of observations vs split neighborhood (by layer) 
+g4 <- g + geom_line(aes(y = splitNeighborhood))
+
+# Number of observations vs layer relevance
+g5 <- g + geom_line(aes(y = relev))
+
+
+library(patchwork)
+
+# TODO: problem is none of these are weighted, they are all integer, so not varying after all individuals
+# TODO: think about cutting these off where they settle and including extended versions in supplemental
+g1 / 
+  g2 / 
+  # g3 / 
+  g4 / 
+  g5 
+
+
+## ARCHIVE
 dcast(ml, ANIMAL_ID ~ spatscale, value.var = 'cent')
-
 
 # Network correlations
 netcors <- data.table(
@@ -105,17 +119,3 @@ netcors <- data.table(
   cor(c(netLs[[i]]), c(netLs[[i + 1]]))
 }, FUN.VALUE = 42.0),
 spatscale = unique(ml$spatscale)[-length(netLs)])
-
-
-### Plots ----
-ggplot(netcors) +
-  geom_line(aes(spatscale, cornet))
-
-ggplot(ml) +
-  geom_line(aes(spatscale, deg, color = get(idcol))) +
-  guides(color = FALSE)
-
-ggplot(ml) +
-  geom_line(aes(spatscale, cent, color = get(idcol))) +
-  guides(color = FALSE)
-
