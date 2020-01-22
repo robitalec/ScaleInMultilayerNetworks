@@ -127,7 +127,9 @@ al. 2009). The distribution of forage for caribou is therefore
 seasonally heterogeneous, with greater access in snow-free seasons
 compared to winter as well as spatially heterogeneous in winter because
 the distribution of craters on the landscape varies meaning that access
-to vegetation in winter is highly variable for caribou.
+to vegetation in winter is highly variable for caribou. We therefore
+partitioned data into two discrete seasons: summer (DATES) and winter
+(DATES) based on caribou socioecology (Peignier et al. 2019).
 
 ### Caribou location data
 
@@ -139,11 +141,8 @@ Schaefer and Mahoney (2013). Collars were programmed to collect location
 fixes every 2 hours. Prior to analyses, we subset GPS fixes into a
 discrete removed all erroneous and outlier GPS fixes following
 Bjørneraas et al. (2010). We did not collar all female caribou in the
-herd. However, we assumed that our sample of collared animals was
-random. Although associations between collared and uncollared animals
-were unrecorded, we assumed that our networks (see below) were unbiased
-representations of the relative degree of social association among all
-caribou.
+herd; however, we assumed that our sample of collared animals was
+random.
 
 ### Landscape data and habitat classification
 
@@ -155,17 +154,17 @@ rocky barrens, frozen lakes, and anthropogenic habitat types, while
 closed habitat consisted of coniferous forest, conifer scrub, broadleaf
 forest, and mixed-wood forest habitat types.
 
-### Social network analysis
+### Generating multilayer social networks
 
 We used R package spatsoc (Robitaille et al. 2019) in *R version* (R
-CITATION) to generate proximity-based social networks (PBSN) from GPS
-telemetry data. We generated social networks for each herd in each
-season based on proximity of GPS fixes for individual caribou: we
-assumed association between two individuals if simultaneous GPS fixes
-(i.e., recorded within 5 minutes of each other) were within 50 m of one
-another (Lesmerises et al. 2018). We represented individuals in our
-networks by nodes and associations between individuals were represented
-by edges.
+CITATION) to generate proximity-based social network layers from GPS
+telemetry data (see above). We generated monolayer association networks
+for caribou in each habitat and season based on proximity of GPS fixes
+for individual caribou: we assumed association between two individuals
+if simultaneous GPS fixes (i.e., recorded within 5 minutes of each
+other) were within 50 m of one another (Lesmerises et al. 2018). We
+represented individuals in our networks by nodes and associations
+between individuals were represented by edges.
 
 We applied the ‘chain rule’, where each discrete spatiotemporal GPS fix
 was buffered by 50 m and we considered individuals in the same group if
@@ -193,10 +192,11 @@ weights for each individual in each network. We considered graph
 strength generated from PBSNs as an index of sociality (i.e., social
 strength).
 
-### Variables/sensitivity
+Our multilayer social network therefore consisted of social association
+networks generated in two habitat types (open and closed) and in two
+seasons (winter and summer)
 
-Unless otherwise mentioned, the spatial threshold is 50 and the temporal
-threshold is 5 minutes.
+#### Generating multilayer social networks
 
 1.  landcover scale
 
