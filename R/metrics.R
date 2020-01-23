@@ -30,12 +30,13 @@
 #' group_pts(DT, threshold = 5, id = 'ID',
 #'           coords = c('X', 'Y'), timegroup = 'timegroup')
 #' 
-#' neigh(DT, 'id', splitBy = 'season')
-layer_neighbors <- function(DT, id, splitBy = NULL) {
-  if (any(!(c(id, 'group', splitBy) %in% colnames(DT)))) {
+#' neigh(DT, 'id', var, splitBy = 'season')
+layer_neighbors <- function(DT, id, var = NULL, splitBy = NULL) {
+  cols <- c(id, 'group', var, splitBy)
+  if (any(!(cols %in% colnames(DT)))) {
     stop(paste0(
       as.character(paste(setdiff(
-        c(id, 'group', splitBy), colnames(DT)
+        cols, colnames(DT)
       ), collapse = ", ")),
       " field(s) provided are not present in input DT"
     ))
@@ -161,13 +162,12 @@ layer_relevance <- function(DT, id, var, splitBy) {
 #' Calculate eigenvector centrality for each graph in a list
 #'
 #' @param graphLs 
-#' @param idcol 
 #'
 #' @return
 #' @export
 #'
 #' @examples
-layer_eigen <- function(graphLs, idcol) {
+layer_eigen <- function(graphLs) {
   data.table::rbindlist(
     lapply(
       lapply(graphLs, function(g) {
@@ -178,8 +178,6 @@ layer_eigen <- function(graphLs, idcol) {
 
 
 #' Layer correlation
-#'
-#'
 #' @param gLs Expects a list of two weighted graphs 
 #' @param attr Graph attribute to use, default assuming the weight is stored. 
 #'
