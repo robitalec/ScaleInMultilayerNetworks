@@ -11,11 +11,17 @@ csl: vancouver.csl
 
 ## Glossary
 
+**Degree centrality**:
+
+**Degree deviation**:
+
 **Interlayer edge**: 
 
 **Intralayer edge**:
 
 **Monolayer**:
+
+**Multidegree**: 
 
 **Social environment**: Social life of an individual (or group of individuals) described by social interactions (Saltz et al. 2016).
 
