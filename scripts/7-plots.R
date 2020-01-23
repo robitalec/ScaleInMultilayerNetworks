@@ -14,7 +14,7 @@ source('scripts/0-variables.R')
 
 
 ### Data ----
-var <- 'winpos'
+var <- 'winlength'
 
 if (var == 'lcres') {
   DT <- readRDS('data/derived-data/2-landcover-scale.Rds')
@@ -32,7 +32,6 @@ alloc.col(DT)
 
 
 ### Plots ----
-# TODO: problem is none of these are weighted, they are all integer, so not varying after all individuals
 # TODO: think about cutting these off where they settle and including extended versions in supplemental
 
 # ggplot(DT) +
@@ -69,9 +68,13 @@ g4 <- g + geom_line(aes(y = splitNeighborhood))
 # Number of observations vs layer relevance
 g5 <- g + geom_line(aes(y = relev))
 
+# Number of observations vs eigenvector centrality
+g6 <- g + geom_line(aes(y = eigcent))
+
 
 g1 / 
   g2 / 
   # g3 / 
   g4 / 
-  g5 
+  # g5 /
+  g6
