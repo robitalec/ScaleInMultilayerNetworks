@@ -50,6 +50,8 @@ Webber QMR, Vander Wal E (2018) An evolutionary framework outlining the integrat
 # Julie
 
 # Alec
-Laura Graham (2019). grainchanger: Moving-Window and Direct Data Aggregation. R package version 0.3.0.
-
 Berlingerio, Michele, et al. "Foundations of multidimensional network analysis." 2011 international conference on advances in social networks analysis and mining. IEEE, 2011.
+
+Boccaletti, Stefano, et al. "The structure and dynamics of multilayer networks." Physics Reports 544.1 (2014): 1-122.
+
+Laura Graham (2019). grainchanger: Moving-Window and Direct Data Aggregation. R package version 0.3.0.

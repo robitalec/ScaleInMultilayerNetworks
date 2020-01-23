@@ -74,7 +74,9 @@ So the difference between neighbors and degree is the basis for
 
 Then there will be some layer similarity. Right now it's just a correlation of each season's asnipe SRI matrix
 
-Finally, some weighted variable. 
+Finally, some weighted variables:
+
+* eigenvector centrality, summed across layers as described in Boccaletti, Stefano, et al. "The structure and dynamics of multilayer networks." Physics Reports 544.1 (2014): 1-122.
 
 
 ### Scale in multilayer networks
