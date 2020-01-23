@@ -179,8 +179,9 @@ layer_eigen <- function(graphLs, idcol) {
 
 #' Layer correlation
 #'
-#' @param gLs 
-#' @param attr 
+#'
+#' @param gLs Expects a list of two weighted graphs 
+#' @param attr Graph attribute to use, default assuming the weight is stored. 
 #'
 #' @return
 #' @export
