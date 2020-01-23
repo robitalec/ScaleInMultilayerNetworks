@@ -128,43 +128,55 @@ seasonally heterogeneous, with greater access in snow-free seasons
 compared to winter as well as spatially heterogeneous in winter because
 the distribution of craters on the landscape varies meaning that access
 to vegetation in winter is highly variable for caribou. We therefore
-partitioned data into two discrete seasons: summer (DATES) and winter
-(DATES) based on caribou socioecology (Peignier et al. 2019).
+partitioned data into two discrete seasons: summer (DATES) and winter (1
+January – 16 March) based on caribou socioecology (Peignier et
+al. 2019).
 
 ### Caribou location data
 
-We used GPS location data collected from Fogo Island caribou in winter
-2018 (1 January – 16 March). Adult female caribou were immobilized and
-fitted with global positioning system (GPS) collars (Lotek Wireless
-Inc., Newmarket, ON, Canada, GPS4400M collars, 1,250 g) as described by
-Schaefer and Mahoney (2013). Collars were programmed to collect location
-fixes every 2 hours. Prior to analyses, we subset GPS fixes into a
-discrete removed all erroneous and outlier GPS fixes following
-Bjørneraas et al. (2010). We did not collar all female caribou in the
-herd; however, we assumed that our sample of collared animals was
-random.
+We used GPS location data collected from Fogo Island caribou in 2018.
+Adult female caribou were immobilized and fitted with global positioning
+system (GPS) collars (Lotek Wireless Inc., Newmarket, ON, Canada,
+GPS4400M collars, 1,250 g) as described by Schaefer and Mahoney (2013).
+Collars were programmed to collect location fixes every 2 hours. Prior
+to analyses, we subset GPS fixes into a discrete removed all erroneous
+and outlier GPS fixes following Bjørneraas et al. (2010). We did not
+collar all female caribou in the herd; however, we assumed that our
+sample of collared animals was random.
 
 ### Landscape data and habitat classification
 
 Landscape classification data were provided by the Newfoundland and
 Labrador Wildlife Division. Available landcover classification included
-nine habitat types, which we distilled into two broad categories: open
-and closed habitat types. Open habitat consisted of lichen, wetland,
-rocky barrens, frozen lakes, and anthropogenic habitat types, while
-closed habitat consisted of coniferous forest, conifer scrub, broadleaf
-forest, and mixed-wood forest habitat types.
+nine habitat types at 30 x 30m resolution. We distilled the landcover
+types into three broad categories: foraging habitat, open habitat, and
+closed habitat. Foraging habitat consisted of lichen habitat, open
+habitat consisted of wetland, rocky barrens, and anthropogenic habitat
+types, while closed habitat consisted of coniferous forest, conifer
+scrub, broadleaf forest, and mixed-wood forest habitat types. Water
+habitat was excluded from all subsequent
+analyses.
 
-### Generating multilayer social networks
+### Caribou multilayer social networks
 
-We used R package spatsoc (Robitaille et al. 2019) in *R version* (R
-CITATION) to generate proximity-based social network layers from GPS
-telemetry data (see above). We generated monolayer association networks
-for caribou in each habitat and season based on proximity of GPS fixes
-for individual caribou: we assumed association between two individuals
-if simultaneous GPS fixes (i.e., recorded within 5 minutes of each
-other) were within 50 m of one another (Lesmerises et al. 2018). We
-represented individuals in our networks by nodes and associations
-between individuals were represented by edges.
+#### Network types and construction (defining layers for the multilayer network)
+
+We generated seasonal multilayer social networks consisting of
+habitat-specific monolayers. Each layer was the social association
+network generated in one of three habitat types (lichen, open, and
+closed). Briefly, all GPS relocations were assigned to the corresponding
+habitat type and proximity-based social network layers were generated
+using the R package spatsoc (Robitaille et al. 2019) in *R version* (R
+CITATION).
+
+We generated monolayer association networks for caribou for each
+habitat-by-season combination based on proximity of GPS fixes for
+individual caribou: we assumed association between two individuals if
+simultaneous GPS fixes (i.e., recorded within 5 minutes of each other)
+were within 50 m of one another (Lesmerises et al. 2018). In all
+networks, nodes represented individuals, intralayer edges represented
+associations between individuals in a given habitat type, and interlayer
+edges represented **XXXX \[ALEC??\]**.
 
 We applied the ‘chain rule’, where each discrete spatiotemporal GPS fix
 was buffered by 50 m and we considered individuals in the same group if
@@ -179,51 +191,54 @@ Cairns and Schwager 1987):
 \[ SRI = \frac{x}{x + y_{AB} + y_{A} + y_{B}} \]
 
 where x is the number of fixes where individuals A and B were within 50
-m of each other, yA is the number of fixes from individual A when
-individual B did not have a simultaneous fix, yB is the number of fixes
-from individual B when individual A did not have a simultaneous fix, and
-yAB is the number of simultaneous fixes from individuals A and B that
-were separated by \>50 m (Farine & Whitehead 2015). Social groups were
-designated if two or more individuals occurred within 50 m of one
-another at any given time point. We generated social networks with the
-igraph package in R, version 1.2.2 (Csárdi & Nepusz 2006). For each
-network, we calculated graph strength, defined as the sum of the edge
-weights for each individual in each network. We considered graph
-strength generated from PBSNs as an index of sociality (i.e., social
-strength).
+m of each other, y<sub>A</sub> is the number of fixes from individual A
+when individual B did not have a simultaneous fix, y<sub>B</sub> is the
+number of fixes from individual B when individual A did not have a
+simultaneous fix, and y<sub>AB</sub> is the number of simultaneous fixes
+from individuals A and B that were separated by \>50 m (Farine &
+Whitehead 2015). Social groups were designated if two or more
+individuals occurred within 50 m of one another at any given time point.
+We generated social networks with the igraph package in R, version 1.2.2
+(Csárdi & Nepusz 2006). For each multilayer network, we calculated XXX
+metrics (see below).
 
-Our multilayer social network therefore consisted of social association
-networks generated in two habitat types (open and closed) and in two
-seasons (winter and summer)
+#### Altering spatial scale
 
-#### Generating multilayer social networks
+To assess the influence of landcover scale on multilayer networks, we
+re-sampled our landcover classification map at varying scales.
+Specifically, we selected scales relevant to caribou ecology. We
+re-sampled landcover using the **`grainchanger`
+package/function\[???\]** (REF) at five scales: 100m, 250m, 500m, 1000m,
+2500m. Sampling at 100 and 250m represents fine-scale decision making
+for caribou during foraging (REF), while re-sampling at 1000m and 2500m
+represents the scale at which caribou tend to select and avoid habitat
+(Bastille-Rousseau et al. 2017). Resampling occurred based on a modal
+moving window method, where XXXXX. \[ALEC YOU’RE GOING TO HAVE TO ADD
+DETAIL HERE\]
 
-1.  landcover scale
+**Each modal landcover, and the original are sampled and separate
+network layers constructed for each. \[QW: NOT SURE WHAT THIS MEANS\]**
 
-Sample same landcover product at different scales. Landcover is the Fogo
-landcover product. Resampled using `grainchanger` from regular
-resolution (believe it’s 30m), to 100m, 250m, 500m, 1000m, 2500m
-(tentative numbers). Resampling method was modal moving window. Water
-areas were masked before resampling. Landcover reclassified to open,
-forest and lichen.
+#### Altering social scale
 
-    open <- c(1, 6, 7, 9)
-    forest <- c(2, 3, 4, 5)
-    lichen <- 8
+As above, we generated social association networks in three habitat
+types and two seasons. For our baseline networks, we assumed individuals
+were in the same group if they were within a 50m spatial buffer of one
+another (see above). Based on visual (short distance) and auditory (long
+distnace) sensory modalities of caribou (REF?), we modified the spatial
+buffer and re-assigned groups at incremental distance between 5 and 500.
+Thus, at the finest social scale, only individuals within 5m of one
+another were considered in the same group, whereas at the coarset social
+scale, only individuals within 500m of one another were considered in
+the same group. Modifying social scale enabled us to assess the
 
-Each modal landcover, and the original are sampled and separate network
-layers constructed for each.
+#### Altering the number of observations
 
-1.  spatial threshold
-
-Social networks constructed using spatsoc. Multilayer networks
-constructed for each season. Variable modified is the spatial buffer.
-Series from 5 to 500.
-
-1.  number of observations
-
-Randomly select max number of observations - timegroups - (right now
-750). For each iteration, include n observations for each season for all
+Studies of social network analysis vary in the number and frequency of
+observations as well as the data collection technique used to generate
+networks (Davis et al. 2018; Webber and Vander Wal 2019). Randomly
+select max number of observations - timegroups - (right now 750). For
+each iteration, include n observations for each season for all
 individuals. Subsequent iterations include nstep more (right now 25),
 along with previously included to remove stochasticity. Parallels with
 observation data.
@@ -241,15 +256,18 @@ length.
     iteration for “winter”. Same for summer, starting at 215. Network
     layers for each season are constructed.
 
-### Metrics
+### Network metrics
 
-Right now, we calculate mostly degree/neighborhood based metrics.
+We used Muxviz blah blag whatever to generate XX number of multilayer
+network metrics. These include four neighborhood-based metrics: degree
+centrality, multidegree, degree deviation, and neighbours as well as two
+multilayer \[need better term here?\] metrics: connective redundancy and
+relevance (see Glossary for definitions). GOING TO NEED MORE HERE (SEE
+SMITH-AGUILAR ET AL 2019 PAPER FOR REFERENCE)
 
-  - Degree centrality
-
-  - Multidegree
-
-  - Degree deviation: standard deviation of degree across layers
+We generated all networks Right now, we calculate mostly
+degree/neighborhood based metrics. \* Degree centrality \* Multidegree
+\* Degree deviation: standard deviation of degree across layers
 
   - Neighbors/neighborhood (number of unique actors directly connected
     to each focal)
