@@ -97,6 +97,10 @@ nets <- lapply(winlengths[1:2], function(len) {
   eig[, winlength := as.integer(gsub('season', '', winlength))]
   setnames(eig, c('ind', 'values'), c(idcol, 'eigcent'))
   
+  # TODO: modify neigh so it's working on a by
+  # TODO: remove it from this lapply and merge afterwards
+  # TODO: just return eig centrality and network correlation etc
+  # TODO: then merge onto neigh output from above
   neigh(sub, idcol, col)
   
   outcols <- c('neighborhood', 'splitNeighborhood', idcol, col)
