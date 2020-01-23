@@ -1,4 +1,15 @@
-# Graph/network b'y
+# Graph/network/gbi b'y
+
+list_gbi <- function(DT, idcol, splitList, splitBy, groupcol = 'group') {
+  lapply(splitList, function(s) {
+    gbi <- spatsoc::get_gbi(
+      DT = DT[get(splitBy) == s],
+      group = groupcol,
+      id = idcol
+    )
+  })
+}
+
 
 list_nets <- function(gbiLs, format = 'GBI', ai = 'SRI') {
   lapply(
