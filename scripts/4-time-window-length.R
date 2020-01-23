@@ -81,18 +81,24 @@ graphLs <- lapply(winlengths[1:2], function(len) {
 ### Multilayer network metrics ----
 var <- 'winlength'
 
+layer_correlation <- function(gLs, attr = 'weight') {
+  if (length(gLs) != 2) {
+    stop('gLs must be length 2')
+  }
+  cor(c(igraph::as_adj(
+    gLs[[1]], attr = attr, sparse = FALSE
+  )), c(igraph::as_adj(
+    gLs[[2]], attr = attr, sparse = FALSE
+  )))
+}
+vapply(graphLs, layer_correlation, FUN.VALUE = 42.0)
+
+
 gLs <- unlist(graphLs, recursive = FALSE)
 eig <- layer_eigen(gLs, idcol)
 
 eig[, c(var, splitBy) := tstrsplit(layer, '-', type.convert = TRUE)]
 
-
-# eig <- rbindlist(
-#   lapply(lapply(gLs, function(g) eigen_centrality(g)$vector), stack),
-#   idcol = 'lenseason')
-# eig[, c('winlength', 'season') := tstrsplit(lenseason, '-')]
-# eig[, winlength := as.integer(gsub('season', '', winlength))]
-# setnames(eig, c('ind', 'values'), c(idcol, 'eigcent'))
 
 # TODO: modify neigh so it's working on a by
 # TODO: remove it from this lapply and merge afterwards
