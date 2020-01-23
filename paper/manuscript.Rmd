@@ -53,9 +53,9 @@ $$ SRI = \frac{x}{x + y_{AB} + y_{A} + y_{B}} $$
 where x is the number of fixes where individuals A and B were within 50 m of each other, yA is the number of fixes from individual A when individual B did not have a simultaneous fix, yB is the number of fixes from individual B when individual A did not have a simultaneous fix, and yAB is the number of simultaneous fixes from individuals A and B that were separated by >50 m (Farine & Whitehead 2015). Social groups were designated if two or more individuals occurred within 50 m of one another at any given time point. We generated social networks with the igraph package in R, version 1.2.2 (Csárdi & Nepusz 2006). For each network, we calculated graph strength, defined as the sum of the edge weights for each individual in each network. We considered graph strength generated from PBSNs as an index of sociality (i.e., social strength).
 
 
-#### Altering landcover scale
+#### Altering spatial scale
 
-To assess the influence of landcover scale on multilayer networks, we re-sampled our landcover classification map at varying scales. Specifically, we selected scales relevant to caribou ecology. We re-sampled landcover using the **`grainchanger` package/function[???]** (REF) at five scales: 100m, 250m, 500m, 1000m, 2500m. Sampling at 100 and 250m represents fine-scale decision making for caribou during foraging (REF), while re-sampling at 1000m and 2500m represents the scale at which caribou tend to select and avoid habitat (Bastille-Rousseau et al. 2017). Resampling occurred based on a modal moving window method, where XXXXX. 
+To assess the influence of landcover scale on multilayer networks, we re-sampled our landcover classification map at varying scales. Specifically, we selected scales relevant to caribou ecology. We re-sampled landcover using the **`grainchanger` package/function[???]** (REF) at five scales: 100m, 250m, 500m, 1000m, 2500m. Sampling at 100 and 250m represents fine-scale decision making for caribou during foraging (REF), while re-sampling at 1000m and 2500m represents the scale at which caribou tend to select and avoid habitat (Bastille-Rousseau et al. 2017). Resampling occurred based on a modal moving window method, where XXXXX. [ALEC YOU'RE GOING TO HAVE TO ADD DETAIL HERE]
 
 
 **Each modal landcover, and the original are sampled and separate network layers constructed for each. [QW: NOT SURE WHAT THIS MEANS]**
@@ -77,7 +77,11 @@ Varying length of time window (used to define seasons). From 75 to 150 right now
 1. time window position
 Varying position of time window (used to define seasons). Fixed length at 75. Window positions starting at 1, to + 75. So 1-75 is first iteration for winter and 75-150 is second iteration for "winter". Same for summer, starting at 215. Network layers for each season are constructed. 
 
-### Metrics
+### Network metrics
+
+We used Muxviz blah blag whatever to generate XX number of multilayer network metrics. These include three neighborhood-based metrics: degree centrality, multidegree, and degree deviation and 
+
+We generated all networks 
 
 Right now, we calculate mostly degree/neighborhood based metrics. 
 
@@ -103,7 +107,6 @@ Finally, some weighted variable.
 
 
 ## Scale in multilayer networks in practice: case study results
-
 
 ## Perspectives  to advance multilayer networks 
 
