@@ -51,3 +51,5 @@ Webber QMR, Vander Wal E (2018) An evolutionary framework outlining the integrat
 
 # Alec
 Laura Graham (2019). grainchanger: Moving-Window and Direct Data Aggregation. R package version 0.3.0.
+
+Berlingerio, Michele, et al. "Foundations of multidimensional network analysis." 2011 international conference on advances in social networks analysis and mining. IEEE, 2011.

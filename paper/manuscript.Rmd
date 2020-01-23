@@ -53,6 +53,10 @@ For each multilayer network, we calculated XXX metrics.These included four neigh
 
 We generated all networks 
 Right now, we calculate mostly degree/neighborhood based metrics. 
+
+Reference for extending degree centrality to multilayer, neighbors, connective redundancy and relevance: Berlingerio 2011 "Foundations of multidimensional..."
+
+
 * Degree centrality
 * Multidegree
 * Degree deviation: standard deviation of degree across layers
