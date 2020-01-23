@@ -81,16 +81,6 @@ graphLs <- lapply(winlengths[1:2], function(len) {
 ### Multilayer network metrics ----
 var <- 'winlength'
 
-layer_correlation <- function(gLs, attr = 'weight') {
-  if (length(gLs) != 2) {
-    stop('gLs must be length 2')
-  }
-  cor(c(igraph::as_adj(
-    gLs[[1]], attr = attr, sparse = FALSE
-  )), c(igraph::as_adj(
-    gLs[[2]], attr = attr, sparse = FALSE
-  )))
-}
 vapply(graphLs, layer_correlation, FUN.VALUE = 42.0)
 
 

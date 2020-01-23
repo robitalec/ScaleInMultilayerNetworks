@@ -174,3 +174,25 @@ layer_eigen <- function(graphLs, idcol) {
         igraph::eigen_centrality(g)$vector}), stack),
     idcol = 'layer')
 }
+
+
+
+#' Layer correlation
+#'
+#' @param gLs 
+#' @param attr 
+#'
+#' @return
+#' @export
+#'
+#' @examples
+layer_correlation <- function(gLs, attr = 'weight') {
+  if (length(gLs) != 2) {
+    stop('gLs must be length 2')
+  }
+  cor(c(igraph::as_adj(
+    gLs[[1]], attr = attr, sparse = FALSE
+  )), c(igraph::as_adj(
+    gLs[[2]], attr = attr, sparse = FALSE
+  )))
+}
