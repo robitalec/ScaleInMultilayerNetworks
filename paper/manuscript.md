@@ -145,7 +145,7 @@ system (GPS) collars (Lotek Wireless Inc., Newmarket, ON, Canada,
 GPS4400M collars, 1,250 g) as described by Schaefer and Mahoney (2013).
 Collars were programmed to collect location fixes every 2 hours. Prior
 to analyses, we subset GPS fixes into a discrete removed all erroneous
-and outlier GPS fixes following Bjørneraas et al. (2010). We did not
+and outlier GPS fixes following Bjørneraas et al. (2010). We did not
 collar all female caribou in the herd; however, we assumed that our
 sample of collared animals was random.
 
@@ -159,8 +159,7 @@ closed habitat. Foraging habitat consisted of lichen habitat, open
 habitat consisted of wetland, rocky barrens, and anthropogenic habitat
 types, while closed habitat consisted of coniferous forest, conifer
 scrub, broadleaf forest, and mixed-wood forest habitat types. Water
-habitat was excluded from all subsequent
-analyses.
+habitat was excluded from all subsequent analyses.
 
 ### Caribou multilayer social networks
 
@@ -265,14 +264,13 @@ length.
 To assess the influence of spatial scale on multilayer networks, we
 re-sampled our landcover classification map at varying scales.
 Specifically, we selected scales relevant to caribou ecology. We
-re-sampled landcover using the `grainchanger`
-**package/function\[???\]** (REF) at **five** scales: 100m, 250m, 500m,
-1000m, 2500m. Sampling at 100 and 250m represents fine-scale decision
-making for caribou during foraging (REF), while re-sampling at 1000m and
-2500m represents the scale at which caribou tend to select and avoid
-habitat (Bastille-Rousseau et al. 2017). Resampling occurred based on a
-modal moving window method, where **XXXXX. \[ALEC YOU’RE GOING TO HAVE
-TO ADD DETAIL HERE\]**
+re-sampled landcover using the `grainchanger` **package** (Graham 2019)
+at **five** scales: 100m, 250m, 500m, 1000m, 2500m. Sampling at 100 and
+250m represents fine-scale decision making for caribou during foraging
+(REF), while re-sampling at 1000m and 2500m represents the scale at
+which caribou tend to select and avoid habitat (Bastille-Rousseau et
+al. 2017). Resampling occurred based on a modal moving window method,
+where **XXXXX. \[ALEC YOU’RE GOING TO HAVE TO ADD DETAIL HERE\]**
 
 For each landcover (the original resolution and modal resampled
 resolutions), seasonal network layers are combined in a multilayer
