@@ -144,7 +144,14 @@ Continuous collection of animal relocation data using GPS technology can be used
 
 Given the existing framework for constructing multilayer networks from behavioural layers (e.g. Smith-Aguilar et al. 2019), movement layers could be integrated with interaction or association layers. Integrating movement layers with habitat-specific social association layers could further shed light on the role of movement as a driver of the social and spatial environments an individual experiences (Webber and Vander Wal 2018). In our case study, we generated multilayer networks based on habitat-specific monolayers. Coordinated movement of dyads, or groups, could vary based on habitat and the approach we outline could be used to explore mechanisms linking the social and spatial environments. For example, social processes may be an emergent property of the landscape because animals aggregate at resources, such as waterholes (Chamaillé-Jammes et al. 2008), while movement to, from, or within habitat patches can also contribute to the formation of the social environment (Spiegel et al. 2016). Incorporating movement ecology within a multilayer network framework is a logical next step for a burgeoning field. In particular, when association networks are habitat-specific, we suggest the integration of movement and space use in multilayer networks provides novel insight into the effects of habitat configuration on the formation of the social environment (He et al. 2019).
 
-## Conclusion
+## Conclusions
 
-### 
-Future analyses should explore the differences in how well each of these methods describe and predict fitness outcomes of the complex social network positions of individuals.
+something something blah blah.
+
+Silk et al. (2018) presented some key multilayer questions in animal behaviour research. While these questions represent an importanting starting point for multilayer networks, we present an additional set of questions relevant to the promise and problem of scale in mutlilayer networks:
+
+  1) How do social phenotypes across scales differently influence fitness? Are some social scales better predictors for different fitness metrics?
+
+  2) Why do individuals associate more strongly with certain conspecifics in some habitats? What, if any, is the role of movement in the context of habitat networks? 
+  
+  3) 
