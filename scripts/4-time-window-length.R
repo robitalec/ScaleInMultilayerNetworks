@@ -73,9 +73,8 @@ graphLs <- lapply(winlengths[1:2], function(len) {
   
   # Generate graphs for each season
   gLs <- list_graphs(netLs)
-  names(gLs) <- paste0(col, '-', usplit)
+  names(gLs) <- paste0(len, '-', usplit)
   gLs
-  
 })
 
 
@@ -85,7 +84,7 @@ var <- 'winlength'
 gLs <- unlist(graphLs, recursive = FALSE)
 eig <- layer_eigen(gLs, idcol)
 
-eig[, c(var, 'season') := tstrsplit(lenseason, '-')]
+eig[, c(var, splitBy) := tstrsplit(layer, '-', type.convert = TRUE)]
 
 
 # eig <- rbindlist(
