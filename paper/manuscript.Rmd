@@ -62,12 +62,11 @@ To assess the influence of landcover scale on multilayer networks, we re-sampled
 
 #### Altering social scale
 
-As above, we generated social association networks in three habitat types and two seasons. We generated separate multilayer networks consisting of  for each season. Variable modified is the spatial buffer. Series from 5 to 500. 
-
+As above, we generated social association networks in three habitat types and two seasons. For our baseline networks, we assumed individuals were in the same group if they were within a 50m spatial buffer of one another (see above). Based on visual (short distance) and auditory (long distnace) sensory modalities of caribou (REF?), we modified the spatial buffer and re-assigned groups at incremental distance between 5 and 500. Thus, at the finest social scale, only individuals within 5m of one another were considered in the same group, whereas at the coarset social scale, only individuals within 500m of one another were considered in the same group. Modifying social scale enabled us to assess the 
 
 #### Altering the number of observations
 
-Randomly select max number of observations - timegroups -  (right now 750). For each iteration, include n observations for each season for all individuals. Subsequent iterations include nstep more (right now 25), along with previously included to remove stochasticity. Parallels with observation data. 
+Studies of social network analysis vary in the number and frequency of observations as well as the data collection technique used to generate networks (Davis et al. 2018; Webber and Vander Wal 2019). Randomly select max number of observations - timegroups -  (right now 750). For each iteration, include n observations for each season for all individuals. Subsequent iterations include nstep more (right now 25), along with previously included to remove stochasticity. Parallels with observation data. 
 
 
 1. time window length
