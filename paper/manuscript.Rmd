@@ -1,6 +1,8 @@
 ---
 title: The problem and promise of scale in multilayer networks
-author: Alec L. Robitaille, Quinn M.R. Webber, Julie W. Turner, Eric Vander Wal
+author: Alec L. Robitaille^1^, Quinn M.R. Webber^2^, Julie W. Turner^1^, Eric Vander Wal^1,2^
+header-includes: ^1^Department of Biology, Memorial University of Newfoundland, Canada; ^2^Cognitive and Behavioural Ecology Interdisciplinary Program, Memorial University of Newfoundland
+
 output: 
     #word_document
     github_document

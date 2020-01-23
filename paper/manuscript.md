@@ -1,6 +1,11 @@
 The problem and promise of scale in multilayer networks
 ================
-Alec L. Robitaille, Quinn M.R. Webber, Julie W. Turner, Eric Vander Wal
+Alec L. Robitaille<sup>1</sup>, Quinn M.R. Webber<sup>2</sup>, Julie W.
+Turner<sup>1</sup>, Eric Vander Wal<sup>1,2</sup>
+
+<sup>1</sup>Department of Biology, Memorial University of Newfoundland,
+Canada; <sup>2</sup>Cognitive and Behavioural Ecology Interdisciplinary
+Program, Memorial University of Newfoundland
 
 ## Abstract
 
@@ -140,7 +145,7 @@ system (GPS) collars (Lotek Wireless Inc., Newmarket, ON, Canada,
 GPS4400M collars, 1,250 g) as described by Schaefer and Mahoney (2013).
 Collars were programmed to collect location fixes every 2 hours. Prior
 to analyses, we subset GPS fixes into a discrete removed all erroneous
-and outlier GPS fixes following Bjørneraas et al. (2010). We did not
+and outlier GPS fixes following Bjørneraas et al. (2010). We did not
 collar all female caribou in the herd; however, we assumed that our
 sample of collared animals was random.
 
@@ -154,7 +159,8 @@ closed habitat. Foraging habitat consisted of lichen habitat, open
 habitat consisted of wetland, rocky barrens, and anthropogenic habitat
 types, while closed habitat consisted of coniferous forest, conifer
 scrub, broadleaf forest, and mixed-wood forest habitat types. Water
-habitat was excluded from all subsequent analyses.
+habitat was excluded from all subsequent
+analyses.
 
 ### Caribou multilayer social networks
 
