@@ -79,11 +79,9 @@ Varying position of time window (used to define seasons). Fixed length at 75. Wi
 
 ### Network metrics
 
-We used Muxviz blah blag whatever to generate XX number of multilayer network metrics. These include four neighborhood-based metrics: degree centrality, multidegree, degree deviation, and neighbours as well as two
+We used Muxviz blah blag whatever to generate XX number of multilayer network metrics. These include four neighborhood-based metrics: degree centrality, multidegree, degree deviation, and neighbours as well as two multilayer [need better term here?] metrics: connective redundancy and relevance (see Glossary for definitions). GOING TO NEED MORE HERE (SEE SMITH-AGUILAR ET AL 2019 PAPER FOR REFERENCE)
 
 We generated all networks 
-
-
 Right now, we calculate mostly degree/neighborhood based metrics. 
 * Degree centrality
 * Multidegree
