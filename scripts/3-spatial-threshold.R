@@ -17,7 +17,7 @@ source('scripts/0-variables.R')
 
 ### Data ----
 DT <- readRDS('data/derived-data/sub-seasons-fogo-caribou.Rds')
-
+alloc.col(DT)
 
 ### Spatiotemporal grouping with spatsoc ----
 # list spatial thresholds
