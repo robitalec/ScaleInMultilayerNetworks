@@ -46,7 +46,8 @@ group_times(
 )
 
 ### Generate networks for each n observations ----
-nets <- lapply(winlengths, function(len) {
+# TODO: rm [1:2]
+nets <- lapply(winlengths[1:2], function(len) {
   col <- paste0('season', len)
   
   sub <- DT[!is.na(get(col))]
