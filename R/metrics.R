@@ -158,3 +158,19 @@ layer_relevance <- function(DT, id, var, splitBy) {
 
 
 
+#' Calculate eigenvector centrality for each graph in a list
+#'
+#' @param graphLs 
+#' @param idcol 
+#'
+#' @return
+#' @export
+#'
+#' @examples
+layer_eigen <- function(graphLs, idcol) {
+  data.table::rbindlist(
+    lapply(
+      lapply(graphLs, function(g) {
+        igraph::eigen_centrality(g)$vector}), stack),
+    idcol = 'layer')
+}
