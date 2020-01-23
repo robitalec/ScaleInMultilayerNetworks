@@ -128,9 +128,9 @@ seasonally heterogeneous, with greater access in snow-free seasons
 compared to winter as well as spatially heterogeneous in winter because
 the distribution of craters on the landscape varies meaning that access
 to vegetation in winter is highly variable for caribou. We therefore
-partitioned data into two discrete seasons: summer (DATES) and winter (1
-January – 16 March) based on caribou socioecology (Peignier et
-al. 2019).
+partitioned data into two discrete seasons: summer (3 August - 17
+October) and winter (1 January – 16 March) based on caribou socioecology
+(Peignier et al. 2019).
 
 ### Caribou location data
 
@@ -140,7 +140,7 @@ system (GPS) collars (Lotek Wireless Inc., Newmarket, ON, Canada,
 GPS4400M collars, 1,250 g) as described by Schaefer and Mahoney (2013).
 Collars were programmed to collect location fixes every 2 hours. Prior
 to analyses, we subset GPS fixes into a discrete removed all erroneous
-and outlier GPS fixes following Bjørneraas et al. (2010). We did not
+and outlier GPS fixes following Bjørneraas et al. (2010). We did not
 collar all female caribou in the herd; however, we assumed that our
 sample of collared animals was random.
 
@@ -154,8 +154,7 @@ closed habitat. Foraging habitat consisted of lichen habitat, open
 habitat consisted of wetland, rocky barrens, and anthropogenic habitat
 types, while closed habitat consisted of coniferous forest, conifer
 scrub, broadleaf forest, and mixed-wood forest habitat types. Water
-habitat was excluded from all subsequent
-analyses.
+habitat was excluded from all subsequent analyses.
 
 ### Caribou multilayer social networks
 
@@ -200,70 +199,14 @@ did not have a simultaneous fix, and y<sub>AB</sub> is the number of
 simultaneous fixes from individuals A and B that were separated by more
 than the given distance (Farine & Whitehead 2015). Social groups were
 designated if two or more individuals occurred within a given distance
-of one another at any given time point. For each multilayer network, we
-calculated XXX metrics (see below).
+of one another at any given time point.
 
-#### Altering spatial scale
-
-To assess the influence of landcover scale on multilayer networks, we
-re-sampled our landcover classification map at varying scales.
-Specifically, we selected scales relevant to caribou ecology. We
-re-sampled landcover using the **`grainchanger`
-package/function\[???\]** (REF) at five scales: 100m, 250m, 500m, 1000m,
-2500m. Sampling at 100 and 250m represents fine-scale decision making
-for caribou during foraging (REF), while re-sampling at 1000m and 2500m
-represents the scale at which caribou tend to select and avoid habitat
-(Bastille-Rousseau et al. 2017). Resampling occurred based on a modal
-moving window method, where XXXXX. \[ALEC YOU’RE GOING TO HAVE TO ADD
-DETAIL HERE\]
-
-**Each modal landcover, and the original are sampled and separate
-network layers constructed for each. \[QW: NOT SURE WHAT THIS MEANS\]**
-
-#### Altering social scale
-
-We altered social scale based on visual (short distance) and auditory
-(long distnace) sensory modalities of caribou (REF?). Specifically, we
-modified the distance threshold required for group assignment (see
-above) and re-assigned groups at incremental distance between 5-500m.
-For example, at the finest social scale, only individuals within 5m of
-one another were considered in the same group, whereas at the coarset
-social scale, only individuals within 500m of one another were
-considered in the same group.
-
-#### Altering the number of observations
-
-Studies of social network analysis vary in the number and frequency of
-observations as well as the data collection technique used to generate
-networks (Davis et al. 2018; Webber and Vander Wal 2019).
-
-Randomly select max number of observations - timegroups - (right now
-750). For each iteration, include n observations for each season for all
-individuals. Subsequent iterations include nstep more (right now 25),
-along with previously included to remove stochasticity. Parallels with
-observation data.
-
-1.  time window length
-
-Varying length of time window (used to define seasons). From 75 to 150
-right now. Fixed start julian day for winter is day 1 and for summer is
-215. Network layers for winter and summer are calculated for each window
-length.
-
-1.  time window position Varying position of time window (used to define
-    seasons). Fixed length at 75. Window positions starting at 1, to +
-    75. So 1-75 is first iteration for winter and 75-150 is second
-    iteration for “winter”. Same for summer, starting at 215. Network
-    layers for each season are constructed.
-
-### Network metrics
-
-We used Muxviz blah blag whatever to generate XX number of multilayer
-network metrics. These include four neighborhood-based metrics: degree
-centrality, multidegree, degree deviation, and neighbours as well as two
-multilayer \[need better term here?\] metrics: connective redundancy and
-relevance (see Glossary for definitions). GOING TO NEED MORE HERE (SEE
-SMITH-AGUILAR ET AL 2019 PAPER FOR REFERENCE)
+For each multilayer network, we calculated XXX metrics.These included
+four neighborhood-based metrics: degree centrality, multidegree, degree
+deviation, and neighbours as well as two multilayer \[need better term
+here?\] metrics: connective redundancy and relevance (see Glossary for
+definitions). GOING TO NEED MORE HERE (SEE SMITH-AGUILAR ET AL 2019
+PAPER FOR REFERENCE ON EXPLAINING THESE).
 
 We generated all networks Right now, we calculate mostly
 degree/neighborhood based metrics. \* Degree centrality \* Multidegree
@@ -290,6 +233,68 @@ Then there will be some layer similarity. Right now it’s just a
 correlation of each season’s asnipe SRI matrix
 
 Finally, some weighted variable.
+
+### Scale in multilayer networks
+
+#### Temporal scale
+
+We altered the temporal scale of mutlilayer networks using a moving
+time-window approach to define seasons.
+
+1.  time window length
+
+Varying length of time window (used to define seasons). From 75 to 150
+right now. Fixed start julian day for winter is day 1 and for summer is
+215. Network layers for winter and summer are calculated for each window
+length.
+
+1.  time window position Varying position of time window (used to define
+    seasons). Fixed length at 75. Window positions starting at 1, to +
+    75. So 1-75 is first iteration for winter and 75-150 is second
+    iteration for “winter”. Same for summer, starting at 215. Network
+    layers for each season are constructed.
+
+#### Spatial scale
+
+To assess the influence of spatial scale on multilayer networks, we
+re-sampled our landcover classification map at varying scales.
+Specifically, we selected scales relevant to caribou ecology. We
+re-sampled landcover using the `grainchanger`
+**package/function\[???\]** (REF) at **five** scales: 100m, 250m, 500m,
+1000m, 2500m. Sampling at 100 and 250m represents fine-scale decision
+making for caribou during foraging (REF), while re-sampling at 1000m and
+2500m represents the scale at which caribou tend to select and avoid
+habitat (Bastille-Rousseau et al. 2017). Resampling occurred based on a
+modal moving window method, where **XXXXX. \[ALEC YOU’RE GOING TO HAVE
+TO ADD DETAIL HERE\]**
+
+For each landcover (the original resolution and modal resampled
+resolutions), seasonal network layers are combined in a multilayer
+network
+<!-- Each modal landcover, and the original are sampled and separate network layers constructed for each. **[QW: NOT SURE WHAT THIS MEANS]** -->
+
+#### Altering social scale
+
+We altered social scale based on visual (short distance) and auditory
+(long distnace) sensory modalities of caribou (REF?). Specifically, we
+modified the distance threshold required for group assignment (see
+above) and re-assigned groups at incremental distance between 5-500m.
+For example, at the finest social scale, only individuals within 5m of
+one another were considered in the same group, whereas at the coarset
+social scale, only individuals within 500m of one another were
+considered in the same group.
+
+#### Altering observational scale
+
+Studies of social network analysis vary in the number and frequency of
+observations as well as the data collection technique used to generate
+networks (Davis et al. 2018; Webber and Vander Wal 2019).
+
+Randomly select max number of observations - timegroups - (right now
+750). For each iteration, include n observations for each season for all
+individuals. Subsequent iterations include nstep more (right now 25),
+along with previously included to remove stochasticity. Parallels with
+observation data.
 
 ## Scale in multilayer networks in practice: case study results
 

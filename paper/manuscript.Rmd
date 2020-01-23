@@ -90,8 +90,8 @@ Varying position of time window (used to define seasons). Fixed length at 75. Wi
 
 To assess the influence of spatial scale on multilayer networks, we re-sampled our landcover classification map at varying scales. Specifically, we selected scales relevant to caribou ecology. We re-sampled landcover using the `grainchanger` **package/function[???]** (REF) at **five** scales: 100m, 250m, 500m, 1000m, 2500m. Sampling at 100 and 250m represents fine-scale decision making for caribou during foraging (REF), while re-sampling at 1000m and 2500m represents the scale at which caribou tend to select and avoid habitat (Bastille-Rousseau et al. 2017). Resampling occurred based on a modal moving window method, where **XXXXX. [ALEC YOU'RE GOING TO HAVE TO ADD DETAIL HERE]**
 
-
-Each modal landcover, and the original are sampled and separate network layers constructed for each. **[QW: NOT SURE WHAT THIS MEANS]**
+For each landcover (the original resolution and modal resampled resolutions), seasonal network layers are combined in a multilayer network
+<!-- Each modal landcover, and the original are sampled and separate network layers constructed for each. **[QW: NOT SURE WHAT THIS MEANS]** -->
 
 #### Altering social scale
 
