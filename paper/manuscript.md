@@ -145,7 +145,7 @@ system (GPS) collars (Lotek Wireless Inc., Newmarket, ON, Canada,
 GPS4400M collars, 1,250 g) as described by Schaefer and Mahoney (2013).
 Collars were programmed to collect location fixes every 2 hours. Prior
 to analyses, we subset GPS fixes into a discrete removed all erroneous
-and outlier GPS fixes following Bjørneraas et al. (2010). We did not
+and outlier GPS fixes following Bjørneraas et al. (2010). We did not
 collar all female caribou in the herd; however, we assumed that our
 sample of collared animals was random.
 
@@ -159,7 +159,8 @@ closed habitat. Foraging habitat consisted of lichen habitat, open
 habitat consisted of wetland, rocky barrens, and anthropogenic habitat
 types, while closed habitat consisted of coniferous forest, conifer
 scrub, broadleaf forest, and mixed-wood forest habitat types. Water
-habitat was excluded from all subsequent analyses.
+habitat was excluded from all subsequent
+analyses.
 
 ### Caribou multilayer social networks
 
@@ -249,7 +250,7 @@ correlation of each season’s asnipe SRI matrix
 Finally, some weighted variables:
 
   - eigenvector centrality, summed across layers as described in
-    Boccaletti, Stefano, et al. “The structure and dynamics of
+    Boccaletti, Stefano, et al. “The structure and dynamics of
     multilayer networks.” Physics Reports 544.1 (2014): 1-122.
 
 ### Scale in multilayer networks
@@ -322,51 +323,50 @@ observation data.
 ### Individual fitness and phenotypes
 
 Social network positions are frequently used to represent the social
-environment that an individual experiences or their social phenotype,
-and they are increasingly linked to important fitness outcomes for
-individuals among species ranging from primates (e.g. Brent,
-Ruiz-Lambides, & Platt, 2017; Thompson, 2019) to dolphins (e.g. Stanton
-& Mann, 2012; Stanton, Gibson, & Mann, 2011) to birds (e.g. McDonald,
-2007; Royle, Pike, Heeb, Richner, & Kolliker, 2012). But there are many
-ways that scale comes into play in determining how characteristics of an
-individual’s social network position are related to fitness that depend
-on the hypotheses being tested and logistical constraints. The two
-scales that repeatedly come across as important for understanding
-fitness consequences are temporal and social scale (Almeling,
-Hammerschmidt, Sennhenn-Reulen, Freund, & Fischer, 2016; Berger,
-Lemaître, Allainé, Gaillard, & Cohas, 2015; Brent et al., 2017).
+environment that an individual experiences or their social phenotype.
+Social phenotypes are increasingly linked to important fitness for
+individuals of various species, including primates (e.g. Brent,
+Ruiz-Lambides, & Platt, 2017; Thompson, 2019), dolphins (e.g. Stanton &
+Mann, 2012; Stanton, Gibson, & Mann, 2011), and birds (e.g. McDonald,
+2007; Royle, Pike, Heeb, Richner, & Kolliker, 2012). The effect of scale
+on the relationship between an individual’s social network position and
+fitness may depend on the hypotheses being tested and logistical
+constraints. Two scales that are important for understanding fitness
+consequences in the context of social network positions are temporal and
+social scales (Almeling, Hammerschmidt, Sennhenn-Reulen, Freund, &
+Fischer, 2016; Berger, Lemaître, Allainé, Gaillard, & Cohas, 2015; Brent
+et al., 2017).
 
-Social network structures depend on the time frame used to create them,
-which can make different networks difficult to compare (Castles et al.,
-2014). Furthermore, social network structures can vary by season and
-indicate social environments that an individual experiences (e.g. Brent,
+Social network structure depends on the timeframe of observation, which
+can make networks difficult to compare (Castles et al., 2014).
+Furthermore, social network structure can vary seasonally and indicate
+social environments that an individual experiences (e.g. Brent,
 MacLarnon, Platt, & Semple, 2013; Hamede, Bashford, McCallum, & Jones,
 2009; Holekamp, Smith, Strelioff, Van Horn, & Watts, 2012), or they can
 be consistent across time, which can be used to reflect social
 phenotypes (Aplin et al., 2015; Stanley, Mettke-Hofmann, Hager, &
 Shultz, 2018). Seasonal fluctuations have the potential to have disease
 transmission and fitness effects for individuals (Balasubramaniam et
-al., 2019; Chen et al., 2014).
+al., 2019; Chen et al., 2014). **\[QW: I’m not sure what this paragraph
+adds - I think if we need to save space we could cut it\]**
 
-Additionally, in long-lived species especially, social network metrics
-of individuals can change over their lifetimes in ways that can have
-impacts on their reproductive success and longevity (Berger et al.,
-2015; Brent et al., 2017). These findings highlight the necessity to
-think carefully about the temporal scale that is meaningful for the
-proposed hypotheses, especially for understanding individual social
-phenotypes or environments and how they relate to that individual’s
-fitness. Further complicating the issue, social network metrics can
-change over stages of ontogeny, but individuals progress through
-development at different rates (Tarka, Guenther, Niemelä, Nakagawa, &
-Noble, 2018). This variation can make defining appropriate temporal
-scales for testing the fitness implications of an individual’s social
-network position over different stages of ontogeny even more difficult.
-However, thinking about temporal scales at such a fine level can provide
-insights for important stages of development that may have otherwise
-been missed (CITE-myself??). However, multilayer networks provide a
-framework to test hypotheses about how social dynamics over time relate
-to fitness. Because of the non-independent nature of social
-interactions, especially over time, it is hard to test hypotheses about
+In long-lived species, social phenotypes can change over their lifetimes
+in ways that can have affect fitness (Berger et al., 2015; Brent et al.,
+2017). These findings highlight the necessity to carefully consider the
+temporal scale that is meaningful for the proposed hypotheses,
+especially for understanding the relationship between an individuals
+social phenotypes and fitness. Further complicating the issue, social
+phenotypes can change over stages of ontogeny, although it is important
+to note that individuals progress through development at different rates
+(Tarka, Guenther, Niemelä, Nakagawa, & Noble, 2018). This variation can
+make defining appropriate temporal scales for testing the fitness
+implications of an individual’s social phenotype over different stages
+of ontogeny even more difficult. However, considering fine temporal
+scales may provide insight across development stages that may otherwise
+be missed (CITE-myself??). Multilayer networks provide a framework to
+test hypotheses linking social phenotypes and fitness across temporal
+scales. Because of the non-independent nature of social interactions and
+associations, especially over time, it is hard to test hypotheses about
 social dynamics with a suitable null control (Farine, 2017; Proskurnikov
 & Tempo, 2017). Using the framework of multilayer networks, making
 layers of different temporal periods provides a way to make appropriate
@@ -374,58 +374,55 @@ null models to test questions about the dynamics of an individual’s
 social network position over multiple aggregated time periods.
 
 Social scale is another major consideration for social network analysis,
-especially when thinking about different types of interactions and
+especially in the context of different types of interactions and
 associations in the same analysis (Carter, Lee, & Marshall, 2015;
 Castles et al., 2014; Farine, 2015). It is a common trope that
-individuals need to be associating in order to interact and an
-assumption that proximity is proxy for interacting (Farine, 2015). For
+individuals must be associating to interact and most studies therefore
+assume that proximity is proxy for interacting (Farine, 2015). For
 instance, baboons need to be in proximity in order to groom each other,
-but this trope is only thinking about interactions that humans are most
-prone to seeing and valuing with our bias toward visual perception.
-Animals have certain interactions that do not require proximity such as
-long-distance vocalization and olfactory signals (Carter et al., 2015).
-With improved and more affordable technology, we can now start to
-understand some of these interactions that do not require proximity,
-particularly long-distance communication networks with devices like
-microphone arrays (Snijders & Naguib, 2017). The multilayer network
-framework further enables researchers to look at these different social
-scales and test how good a proxy proximity is for various forms of
-interacting in a holistic way.
+but this trope highlights human bias toward interactions that can be
+readily observed in the field. Animals have certain interactions that do
+not require proximity such as long-distance vocalization and olfactory
+signals (Carter et al., 2015). With the advancement of bio-logging
+technology, our ability to record social interactions that do not
+require proximity, particularly long-distance communication networks
+with devices like microphone arrays (Snijders & Naguib, 2017). The
+multilayer network framework further enables researchers to examine the
+relationship between social phenotypes and fitness across social scales
+and to test how good a social proximity as a proxy for social
+interactions in a holistic way.
 
 These different social scales can have different fitness repercussions
 for individuals. Rhesus macaques (*Macaca mulatta*) that had stronger,
-more stable associates and grooming partners but not more partners in
-general had greater survivorship than those who did not (Ellis,
+more stable social associates and grooming partners, but not more social
+partners, had higher survivorship than those who did not (Ellis,
 Snyder-Mackler, Ruiz-Lambides, Platt, & Brent, 2019). This finding
-highlights the need to look at social network positions at both multiple
-temporal and social scales to understand the social positions and
-fitness repercussions of individuals, and multilayer networks provide an
-avenue to do so considering the whole social system rather than just one
-type of social interaction at a time, which is what has been done under
-most circumstances but is not very realistic.
+highlights the need to investigate the effect of temporal and social
+scales on the relationship between social network positions and fitness.
+Multilayer networks provide an avenue to do so considering the whole
+social system rather than just one type of social interaction at a time,
+which is what has been done under most circumstances but is not very
+realistic.
 
 Multilayer networks further provide unique challenges and opportunities
 for understanding the social phenotypes and environments of individuals
 and their fitness outcomes. Picking the proper temporal scale is
 important but a challenge because all layers in the multilayer network
-should be made for the same time period, and the period needs to be long
+should reflect the same time period, and the period should be long
 enough for each layer to have enough data for robust networks (Farine,
 2017). These considerations may be limiting factors when answering
 questions that require timeframes that are relevant to different
 individuals. On the other hand, multilayer network metrics provide an
-opportunity to help simplify statistical models. Interactions that
-happen mere meters apart, proximity associations, and long-distance
-interactions can be encapsulated in one network to gain a single metric
-to describe the various social scales of an individual’s network
-position. This multilevel network metric would be a meaningful
-simplification of many network metrics that could help simplify
-statistical analyses and deal with the frequent correlations between
-social network metrics in different types of networks (Castles et al.,
-2014). This method could be an alternative to using PCA to simplify many
-social network metrics into one social phenotype (e.g. Foster et al.,
-2012; Oldham et al., 2019). Future analyses should explore the
-differences in how well each of these methods describe and predict
-fitness outcomes of the complex social network positions of individuals.
+opportunity to simplify statistical models. Interactions that happen
+meters apart, proximity associations, and long-distance interactions can
+be encapsulated in a single multilayer network and a single metric can
+be used to describe the various social scales of an individual’s network
+position. This multilevel network metric could be used to assess the
+relationship between an individuals social phenotype and fitness. It
+would also be a meaningful simplification of many network metrics that
+could help simplify statistical analyses and deal with the frequent
+correlations between social network metrics in different types of
+networks (Castles et al., 2014).
 
 ### Movement ecology and collective movement
 
@@ -495,3 +492,23 @@ field. In particular, when association networks are habitat-specific, we
 suggest the integration of movement and space use in multilayer networks
 provides novel insight into the effects of habitat configuration on the
 formation of the social environment (He et al. 2019).
+
+## Conclusions
+
+something something blah blah.
+
+Silk et al. (2018) presented some key multilayer questions in animal
+behaviour research. While these questions represent an importanting
+starting point for multilayer networks, we present an additional set of
+questions relevant to the promise and problem of scale in mutlilayer
+networks:
+
+1)  How do social phenotypes across scales differently influence
+    fitness? Are some social scales better predictors for different
+    fitness metrics?
+
+2)  Why do individuals associate more strongly with certain conspecifics
+    in some habitats? What, if any, is the role of movement in the
+    context of habitat networks?
+
+3)
