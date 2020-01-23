@@ -38,8 +38,13 @@ open <- c(1, 6, 7, 9)
 forest <- c(2, 3, 4, 5)
 lichen <- 8
 ```
-### Generating multilayer social networks
-We used R package spatsoc (Robitaille et al. 2019) in *R version* (R CITATION) to generate proximity-based social network layers from GPS telemetry data (see above). We generated monolayer association networks for caribou in each habitat and season based on proximity of GPS fixes for individual caribou: we assumed association between two individuals if simultaneous GPS fixes (i.e., recorded within 5 minutes of each other) were within 50 m of one another (Lesmerises et al. 2018). We represented individuals in our networks by nodes and associations between individuals were represented by edges.
+### Caribou multilayer social networks
+
+#### Network types and construction (defining layers for the multilayer network)
+
+We generated seasonal multilayer social networks consisting of habitat-specific monolayers. Each layer was the social association network generated in one of three habitat types (lichen, open, and closed). Briefly, all GPS relocations were assigned to the corresponding habitat type and proximity-based social network layers were generated using the R package spatsoc (Robitaille et al. 2019) in *R version* (R CITATION).
+
+We generated monolayer association networks for caribou in each habitat and season based on proximity of GPS fixes for individual caribou: we assumed association between two individuals if simultaneous GPS fixes (i.e., recorded within 5 minutes of each other) were within 50 m of one another (Lesmerises et al. 2018). We represented individuals in our networks by nodes and associations between individuals were represented by edges.
 
 We applied the ‘chain rule’, where each discrete spatiotemporal GPS fix was buffered by 50 m and we considered individuals in the same group if 50 m buffers for two or more individuals were contiguous, even if some individuals within the buffer were not within 50 m of one another. Group assignment based on the chain rule has commonly been applied to gregarious mammals, including caribou (Peignier et al. 2019; Lesmerises et al. 2018). We weighted edges of social networks by the strength of association between dyads of caribou using the simple ratio index (SRI, Cairns and Schwager 1987):
 
@@ -47,7 +52,6 @@ $$ SRI = \frac{x}{x + y_{AB} + y_{A} + y_{B}} $$
 
 where x is the number of fixes where individuals A and B were within 50 m of each other, yA is the number of fixes from individual A when individual B did not have a simultaneous fix, yB is the number of fixes from individual B when individual A did not have a simultaneous fix, and yAB is the number of simultaneous fixes from individuals A and B that were separated by >50 m (Farine & Whitehead 2015). Social groups were designated if two or more individuals occurred within 50 m of one another at any given time point. We generated social networks with the igraph package in R, version 1.2.2 (Csárdi & Nepusz 2006). For each network, we calculated graph strength, defined as the sum of the edge weights for each individual in each network. We considered graph strength generated from PBSNs as an index of sociality (i.e., social strength).
 
-Our multilayer social network therefore consisted of social association networks generated in two habitat types (open and closed) and in two seasons (winter and summer). 
 
 #### Altering landcover scale
 
@@ -58,7 +62,7 @@ To assess the influence of landcover scale on multilayer networks, we re-sampled
 
 #### Altering social scale
 
-Social networks constructed using spatsoc (Robitaille et al. 2019). Multilayer networks constructed for each season. Variable modified is the spatial buffer. Series from 5 to 500. 
+As above, we generated social association networks in three habitat types and two seasons. We generated separate multilayer networks consisting of  for each season. Variable modified is the spatial buffer. Series from 5 to 500. 
 
 
 #### Altering the number of observations
