@@ -11,6 +11,8 @@ csl: vancouver.csl
 
 ## Glossary
 
+**Connective redundancy**: 1 - (neighborhood / degree) When connective redundancy is 0, all edges on all layers are necessary to preserve the social ties.[QW: FROM ALEC'S WRITING IN THE MS]
+
 **Degree centrality**:
 
 **Degree deviation**:
@@ -22,6 +24,10 @@ csl: vancouver.csl
 **Monolayer**:
 
 **Multidegree**: 
+
+**Neighbours**: degree within a network layer.[QW: FROM ALEC'S WRITING IN THE MS]
+
+**Relevance**: neighborhood of specific layer  / neighbourhood of full ml net. This is the proportion of neighbors present on the layer of focus. Comparing across, it tells you which layers are most important for each individual. [QW: FROM ALEC'S WRITING IN THE MS]
 
 **Social environment**: Social life of an individual (or group of individuals) described by social interactions (Saltz et al. 2016).
 
