@@ -48,6 +48,56 @@ Webber QMR, Vander Wal E (2018) An evolutionary framework outlining the integrat
 
 
 # Julie
+Almeling, L., Hammerschmidt, K., Sennhenn-Reulen, H., Freund, A. M., & Fischer, J. (2016). Motivational Shifts in Aging Monkeys and the Origins of Social Selectivity. Current Biology, 26(13), 1744–1749. http://doi.org/10.1016/j.cub.2016.04.066
+
+Aplin, L. M., Firth, J. A., Farine, D. R., Voelkl, B., Crates, R. A., Culina, A., et al. (2015). Consistent individual differences in the social phenotypes of wild great tits, Parus major. Yanbe, 108(C), 117–127. http://doi.org/10.1016/j.anbehav.2015.07.016
+
+Balasubramaniam, K. N., Beisner, B. A., Hubbard, J. A., Vandeleest, J. J., Atwill, E. R., & McCowan, B. (2019). Affiliation and disease risk: social networks mediate gut microbial transmission among rhesus macaques. Yanbe, 151, 131–143. http://doi.org/10.1016/j.anbehav.2019.03.009
+
+Berger, V., Lemaître, J.-F., Allainé, D., Gaillard, J.-M., & Cohas, A. (2015). Early and adult social environments have independent effects on individual fitness in a social vertebrate. Proceedings of the Royal Society B, 282(1813), 20151167. http://doi.org/10.1111/j.1365-2656.2007.01351.x
+
+Brent, L. J. N., MacLarnon, A., Platt, M. L., & Semple, S. (2013). Seasonal changes in the structure of rhesus macaque social networks. Behavioral Ecology and Sociobiology, 67(3), 349–359. http://doi.org/10.1007/s00265-012-1455-8
+
+Brent, L. J. N., Ruiz-Lambides, A., & Platt, M. L. (2017). Family network size and survival across the lifespan of female macaques. Proceedings of the Royal Society B, 284(1854), 20170515–7. http://doi.org/10.1098/rspb.2017.0515
+
+Carter, A. J., Lee, A., & Marshall, H. H. (2015). Research questions should drive edge definitions in social network studies. Animal Behaviour, 104, e7–e11. http://doi.org/10.1016/j.anbehav.2015.03.020
+
+Castles, M., Heinsohn, R., Marshall, H. H., Lee, A. E. G., Cowlishaw, G., & Carter, A. J. (2014). Social networks created with different techniques are not comparable. Yanbe, 96(C), 59–67. http://doi.org/10.1016/j.anbehav.2014.07.023
+
+Chen, S., White, B. J., Sanderson, M. W., Amrine, D. E., Ilany, A., & Lanzas, C. (2014). Highly dynamic animal contact network and implications on disease transmission. Scientific Reports, 4, 4472. http://doi.org/10.1038/srep04472
+
+Ellis, S., Snyder-Mackler, N., Ruiz-Lambides, A., Platt, M. L., & Brent, L. J. N. (2019). Deconstructing sociality: the types of social connections that predict longevity in a group-living primate. Proceedings of the Royal Society B, 286(1917), 20191991–10. http://doi.org/10.1098/rspb.2019.1991
+
+Farine, D. R. (2015). Proximity as a proxy for interactions: issues of scale in social network analysis. Yanbe, 104, e1–e5. http://doi.org/10.1016/j.anbehav.2014.11.019
+
+Farine, D. R. (2017). When to choose dynamic vs. static social network analysis. Journal of Animal Ecology, 87(1), 128–138. http://doi.org/10.1111/1365-2656.12764
+
+Foster, E. A., Franks, D. W., Morrell, L. J., Balcomb, K. C., PARSONS, K. M., van Ginneken, A., & Croft, D. P. (2012). Social network correlates of food availability in an endangered population of killer whales, Orcinus orca. Animal Behaviour, 83(3), 731–736. http://doi.org/10.1016/j.anbehav.2011.12.021
+
+Hamede, R. K., Bashford, J., McCallum, H., & Jones, M. (2009). Contact networks in a wild Tasmanian devil (Sarcophilus harrisii) population: using social network analysis to reveal seasonal variability in social behaviour and its implications for transmission of devil facial tumour disease. Ecology Letters, 12(11), 1147–1157. http://doi.org/10.1111/j.1461-0248.2009.01370.x
+
+Holekamp, K. E., Smith, J. E., Strelioff, C. C., Van Horn, R. C., & Watts, H. E. (2012). Society, demography and genetic structure in the spotted hyena. Molecular Ecology, 21(3), 613–632. http://doi.org/10.1111/j.1365-294X.2011.05240.x
+
+McDonald, D. B. (2007). Predicting fate from early connectivity in a social network. Proceedings of the National Academy of Sciences, 104(26), 10910–10914. http://doi.org/10.1073/pnas.0701159104
+
+Oldham, S., Fulcher, B., Parkes, L., Arnatkevic̆iūtė, A., Suo, C., & Fornito, A. (2019). Consistency and differences between centrality measures across distinct classes of networks. PLoS ONE, 14(7), e0220061–23. http://doi.org/10.1371/journal.pone.0220061
+
+Proskurnikov, A. V., & Tempo, R. (2017). A tutorial on modeling and analysis of dynamic social networks. Part I. Annual Reviews in Control, 43, 65–79. http://doi.org/10.1016/j.arcontrol.2017.03.002
+
+Royle, N. J., Pike, T. W., Heeb, P., Richner, H., & Kolliker, M. (2012). Offspring social network structure predicts fitness in families. Proceedings of the Royal Society B, 279(1749), 4914–4922. http://doi.org/10.1098/rspb.2012.1701
+
+Snijders, L., & Naguib, M. (2017). Communication in Animal Social Networks (Vol. 49, pp. 297–359). Elsevier. http://doi.org/10.1016/bs.asb.2017.02.004
+
+Stanley, C. R., Mettke-Hofmann, C., Hager, R., & Shultz, S. (2018). Social stability in semiferal ponies: networks show interannual stability alongside seasonal flexibility. Yanbe, 136, 175–184. http://doi.org/10.1016/j.anbehav.2017.04.013
+
+Stanton, M. A., & Mann, J. (2012). Early social networks predict survival in wild bottlenose dolphins. PLoS ONE, 7(10), e47508. http://doi.org/10.1371/journal.pone.0047508
+
+Stanton, M. A., Gibson, Q. A., & Mann, J. (2011). When mum’s away: a study of mother and calf ego networks during separations in wild bottlenose dolphins (Tursiops sp.). Animal Behaviour, 82(2), 405–412. http://doi.org/10.1016/j.anbehav.2011.05.026
+
+Tarka, M., Guenther, A., Niemelä, P. T., Nakagawa, S., & Noble, D. W. A. (2018). Sex differences in life history, behavior, and physiology along a slow-fast continuum: a meta-analysis. Behavioral Ecology and Sociobiology, 72(8), 1–13. http://doi.org/10.1007/s00265-018-2534-2
+
+Thompson, N. A. (2019). Understanding the links between social ties and fitness over the life cycle in primates. Behaviour, 1–50. http://doi.org/10.1163/1568539X-00003552
+
 
 # Alec
 Berlingerio, Michele, et al. "Foundations of multidimensional network analysis." 2011 international conference on advances in social networks analysis and mining. IEEE, 2011.
