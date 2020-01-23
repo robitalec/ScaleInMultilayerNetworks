@@ -6,7 +6,8 @@ pkgs <- c('data.table',
 					'spatsoc',
 					'rgdal',
 					'asnipe',
-					'igraph')
+					'igraph', 
+					'ScaleInMultilayerNetworks')
 p <- lapply(pkgs, library, character.only = TRUE)
 
 
