@@ -25,7 +25,7 @@ Here, we discuss and integrate variation in temporal and spatial scales within a
 ## Scale in multilayer networks: a case study
 
 ### Caribou socioecology
-Here, we use caribou as a case study to develop scale-dependent multilayer networks based on temporal (seasonal), spatial (habitat type), and social (visual and auditory perception). Caribou are gregarious ungulates with fission-fusion dynamics (Lesmerises et al. 2018) that display temporal (Peignier et al. 2019) and spatial (Webber et al. unpublished data) variation in social networks. In winter, caribou dig holes in the snow, termed craters to access forage (Bergerud 1974). As a result, caribou tend to occupy and re-use craters once they are established and there is considerably less access to forage than when the landscape is snow-free. Importantly, craters exist on the landscape at multiple scales: the crater scale (a single crater), the feeding area scale (multiple craters in close proximity), and the winter range scale (all craters within an individual’s range) (Mayor et al. 2009). The distribution of forage for caribou is therefore seasonally heterogeneous, with greater access in snow-free seasons compared to winter as well as spatially heterogeneous in winter because the distribution of craters on the landscape varies meaning that access to vegetation in winter is highly variable for caribou. We therefore partitioned data into two discrete seasons: summer (DATES) and winter (1 January – 16 March) based on caribou socioecology (Peignier et al. 2019).
+Here, we use caribou as a case study to develop scale-dependent multilayer networks based on temporal (seasonal), spatial (habitat type), and social (visual and auditory perception). Caribou are gregarious ungulates with fission-fusion dynamics (Lesmerises et al. 2018) that display temporal (Peignier et al. 2019) and spatial (Webber et al. unpublished data) variation in social networks. In winter, caribou dig holes in the snow, termed craters to access forage (Bergerud 1974). As a result, caribou tend to occupy and re-use craters once they are established and there is considerably less access to forage than when the landscape is snow-free. Importantly, craters exist on the landscape at multiple scales: the crater scale (a single crater), the feeding area scale (multiple craters in close proximity), and the winter range scale (all craters within an individual’s range) (Mayor et al. 2009). The distribution of forage for caribou is therefore seasonally heterogeneous, with greater access in snow-free seasons compared to winter as well as spatially heterogeneous in winter because the distribution of craters on the landscape varies meaning that access to vegetation in winter is highly variable for caribou. We therefore partitioned data into two discrete seasons: summer (3 August - 17 October) and winter (1 January – 16 March) based on caribou socioecology (Peignier et al. 2019).
 
 ### Caribou location data
 We used GPS location data collected from Fogo Island caribou in 2018. Adult female caribou were immobilized and fitted with global positioning system (GPS) collars (Lotek Wireless Inc., Newmarket, ON, Canada, GPS4400M collars, 1,250 g) as described by Schaefer and Mahoney (2013). Collars were programmed to collect location fixes every 2 hours. Prior to analyses, we subset GPS fixes into a discrete removed all erroneous and outlier GPS fixes following Bjørneraas et al. (2010). We did not collar all female caribou in the herd; however, we assumed that our sample of collared animals was random.
@@ -66,21 +66,29 @@ So the difference between neighbors and degree is the basis for
 
 * Relevance: neighborhood of specific layer  / neighbourhood of full ml net. This is the proportion of neighbors present on the layer of focus. Comparing across, it tells you which layers are most important for each individual. 
 
-
 Then there will be some layer similarity. Right now it's just a correlation of each season's asnipe SRI matrix
 
 Finally, some weighted variable. 
-
 
 
 ### Scale in multilayer networks
 
 #### Temporal scale
 
+We altered the temporal scale of mutlilayer networks using a moving time-window approach to define seasons. 
+
+1. time window length
+
+Varying length of time window (used to define seasons). From 75 to 150 right now. Fixed start julian day for winter is day 1 and for summer is 215. Network layers for winter and summer are calculated for each window length. 
+
+
+1. time window position
+Varying position of time window (used to define seasons). Fixed length at 75. Window positions starting at 1, to + 75. So 1-75 is first iteration for winter and 75-150 is second iteration for "winter". Same for summer, starting at 215. Network layers for each season are constructed. 
+
 
 #### Spatial scale
 
-To assess the influence of landcover scale on multilayer networks, we re-sampled our landcover classification map at varying scales. Specifically, we selected scales relevant to caribou ecology. We re-sampled landcover using the `grainchanger` **package/function[???]** (REF) at **five** scales: 100m, 250m, 500m, 1000m, 2500m. Sampling at 100 and 250m represents fine-scale decision making for caribou during foraging (REF), while re-sampling at 1000m and 2500m represents the scale at which caribou tend to select and avoid habitat (Bastille-Rousseau et al. 2017). Resampling occurred based on a modal moving window method, where **XXXXX. [ALEC YOU'RE GOING TO HAVE TO ADD DETAIL HERE]**
+To assess the influence of spatial scale on multilayer networks, we re-sampled our landcover classification map at varying scales. Specifically, we selected scales relevant to caribou ecology. We re-sampled landcover using the `grainchanger` **package/function[???]** (REF) at **five** scales: 100m, 250m, 500m, 1000m, 2500m. Sampling at 100 and 250m represents fine-scale decision making for caribou during foraging (REF), while re-sampling at 1000m and 2500m represents the scale at which caribou tend to select and avoid habitat (Bastille-Rousseau et al. 2017). Resampling occurred based on a modal moving window method, where **XXXXX. [ALEC YOU'RE GOING TO HAVE TO ADD DETAIL HERE]**
 
 
 Each modal landcover, and the original are sampled and separate network layers constructed for each. **[QW: NOT SURE WHAT THIS MEANS]**
@@ -96,13 +104,6 @@ Studies of social network analysis vary in the number and frequency of observati
 Randomly select max number of observations - timegroups -  (right now 750). For each iteration, include n observations for each season for all individuals. Subsequent iterations include nstep more (right now 25), along with previously included to remove stochasticity. Parallels with observation data. 
 
 
-1. time window length
-
-Varying length of time window (used to define seasons). From 75 to 150 right now. Fixed start julian day for winter is day 1 and for summer is 215. Network layers for winter and summer are calculated for each window length. 
-
-
-1. time window position
-Varying position of time window (used to define seasons). Fixed length at 75. Window positions starting at 1, to + 75. So 1-75 is first iteration for winter and 75-150 is second iteration for "winter". Same for summer, starting at 215. Network layers for each season are constructed. 
 
 ## Scale in multilayer networks in practice: case study results
 
