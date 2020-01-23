@@ -31,7 +31,7 @@
 #'           coords = c('X', 'Y'), timegroup = 'timegroup')
 #' 
 #' neigh(DT, 'id', splitBy = 'season')
-neigh <- function(DT, id, splitBy = NULL) {
+layer_neighbors <- function(DT, id, splitBy = NULL) {
   if (any(!(c(id, 'group', splitBy) %in% colnames(DT)))) {
     stop(paste0(
       as.character(paste(setdiff(
@@ -79,7 +79,7 @@ neigh <- function(DT, id, splitBy = NULL) {
 #' @export
 #'
 #' @examples
-redundancy <- function(DT) {
+connective_redudancy <- function(DT) {
   # TODO: Check cols
   # TODO: warn overwrite 
   
@@ -100,7 +100,7 @@ redundancy <- function(DT) {
 #' @export
 #'
 #' @examples
-multidegree <- function(DT, degree, id, splitBy = NULL) {
+multi_degree <- function(DT, degree, id, splitBy = NULL) {
   # TODO: check columns
   # TODO: warn overwrite
   
@@ -122,7 +122,7 @@ multidegree <- function(DT, degree, id, splitBy = NULL) {
 #' @export
 #'
 #' @examples
-degdeviation <- function(DT, degree, id, splitBy = NULL) {
+deviation_degree <- function(DT, degree, id, splitBy = NULL) {
   # TODO: check columns
   # TODO: warn overwrite
   
@@ -148,10 +148,13 @@ degdeviation <- function(DT, degree, id, splitBy = NULL) {
 #' @export
 #'
 #' @examples
-relevance <- function(DT, id, var, splitBy) {
+layer_relevance <- function(DT, id, var, splitBy) {
   # TODO: check for splitNeighborhood variable and multidegree
   # TODO: check overwrite
   
   DT[, relev := splitNeighborhood / multideg, 
      by = c(id, splitBy)][]
 }
+
+
+
