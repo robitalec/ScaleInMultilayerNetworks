@@ -62,34 +62,40 @@ nets <- lapply(winlengths[1:2], function(len) {
     splitBy = col
   )
   
-  # usplit <- unique(na.omit(DT, cols = col)[[col]])
-  # 
-  # # GBI for each season
-  # gbiLs <- lapply(usplit, function(u) {
-  #   gbi <- get_gbi(
-  #     DT = DT[get(col) == u],
-  #     group = 'group',
-  #     id = idcol
-  #   )
-  # })
-  # 
-  # # Generate networks for each season
-  # netLs <- lapply(
-  #   gbiLs,
-  #   get_network,
-  #   data_format = 'GBI',
-  #   association_index = 'SRI'
-  # )
-  # 
-  # gLs <- lapply(
-  #   netLs,
-  #   graph.adjacency,
-  #   mode = 'undirected',
-  #   diag = FALSE,
-  #   weighted = TRUE
-  # )
-  # names(gLs) <- paste0(col, '-', usplit)
-  # gLs
+  usplit <- unique(na.omit(sub, cols = col)[[col]])
+
+  # GBI for each season
+  gbiLs <- lapply(usplit, function(u) {
+    gbi <- get_gbi(
+      DT = sub[get(col) == u],
+      group = 'group',
+      id = idcol
+    )
+  })
+
+  # Generate networks for each season
+  netLs <- lapply(
+    gbiLs,
+    get_network,
+    data_format = 'GBI',
+    association_index = 'SRI'
+  )
+
+  gLs <- lapply(
+    netLs,
+    graph.adjacency,
+    mode = 'undirected',
+    diag = FALSE,
+    weighted = TRUE
+  )
+  names(gLs) <- paste0(col, '-', usplit)
+
+  eig <- rbindlist(
+    lapply(lapply(gLs, function(g) eigen_centrality(g)$vector), stack),
+    idcol = 'lenseason')
+  eig[, c('winlength', 'season') := tstrsplit(lenseason, '-')]
+  eig[, winlength := as.integer(gsub('season', '', winlength))]
+  setnames(eig, c('ind', 'values'), c(idcol, 'eigcent'))
   
   neigh(sub, idcol, col)
   
@@ -97,6 +103,8 @@ nets <- lapply(winlengths[1:2], function(len) {
   out <- unique(sub[, .SD, .SDcols = outcols])
   setnames(out, col, 'season')
   set(out, j = 'winlength', value = len)
+  
+  out[eig, on = c(idcol, 'season', 'winlength')]
 })
 
 # TODO: fix new data 'found duplicate id in a timegroup and/or splitBy - does your group_times threshold match the fix rate?'
