@@ -29,11 +29,7 @@ group_times(
   threshold = '10 minutes'
 )
 
-# TODO: why duplicate ids.. check new data
-# TODO: drop this 
-DT <- DT[!(timegroup %in% sub[, .N, .(ANIMAL_ID, timegroup)][N > 1, unique(timegroup)])]
-
-lapply(thresholds, function(t) {
+nets <- lapply(thresholds, function(t) {
 	group_pts(
 	  DT,
 			threshold = t,
