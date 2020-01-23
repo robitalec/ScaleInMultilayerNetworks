@@ -11,6 +11,8 @@ Chamaillé-Jammes S, Fritz H, Valeix M, et al (2008) Resource variability, aggre
 
 Cleasby IR, Wakefield ED, Morrissey BJ, et al (2019) Using time-series similarity measures to compare animal movement trajectories in ecology. Behav Ecol Sociobiol 73:151
 
+Davis et al. (2018) Estimating the robustness and uncertainty of animal social networks using different observational methods. Animal Behaviour.
+
 Finn KR, Silk MJ, Porter MA, Pinter-wollman N (2019) The use of multilayer network analysis in animal behaviour. Anim Behav 149:7–22. doi: 10.1016/j.anbehav.2018.12.016
 
 Flack A, Nagy M, Fiedler W, et al (2018) From local collective behavior to global migratory patterns in white storks. Science (80- ) 914:911–914
