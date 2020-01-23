@@ -66,32 +66,16 @@ nets <- lapply(winlengths[1:2], function(len) {
   usplit <- unique(na.omit(sub, cols = col)[[col]])
 
   # GBI for each season
-  gbiLs <- lapply(usplit, function(u) {
-    gbi <- get_gbi(
-      DT = sub[get(col) == u],
-      group = 'group',
-      id = idcol
-    )
-  })
+  gbiLs <- list_gbi(sub, idcol, usplit, col)
 
   # Generate networks for each season
-  # net_ls <- 
-  netLs <- lapply(
-    gbiLs,
-    get_network,
-    data_format = 'GBI',
-    association_index = 'SRI'
-  )
-
-  gLs <- lapply(
-    netLs,
-    graph.adjacency,
-    mode = 'undirected',
-    diag = FALSE,
-    weighted = TRUE
-  )
+  netLs <- list_nets(gbiLs)
+  
+  # Generate graphs for each season
+  gLs <- list_graphs(netLs)
   names(gLs) <- paste0(col, '-', usplit)
   gLs
+  
   # eig <- rbindlist(
   #   lapply(lapply(gLs, function(g) eigen_centrality(g)$vector), stack),
   #   idcol = 'lenseason')
