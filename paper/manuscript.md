@@ -164,43 +164,44 @@ analyses.
 We generated seasonal multilayer social networks consisting of
 habitat-specific monolayers. Each layer was the social association
 network generated in one of three habitat types (lichen, open, and
-closed). Briefly, all GPS relocations were assigned to the corresponding
-habitat type and proximity-based social network layers were generated
-using the R package spatsoc (Robitaille et al. 2019) in *R version* (R
-CITATION).
+closed). For habitat-specific networks, all GPS relocations were
+assigned to the corresponding habitat type and proximity-based social
+network layers were generated using the R package spatsoc (Robitaille et
+al. 2019) in *R version* (R CITATION).
 
-We generated monolayer association networks for caribou for each
-habitat-by-season combination based on proximity of GPS fixes for
-individual caribou: we assumed association between two individuals if
-simultaneous GPS fixes (i.e., recorded within 5 minutes of each other)
-were within 50 m of one another (Lesmerises et al. 2018). In all
-networks, nodes represented individuals, intralayer edges represented
-associations between individuals in a given habitat type, and interlayer
-edges represented **XXXX \[ALEC??\]**.
+Within each habitat-specific monolayer network, we assumed individuals
+were associating if simultaneous GPS fixes (i.e., recorded within 5
+minutes of each other) were within a given distance of one another.
+Typically for ungulates and other gregarious mammals, the ‘chain rule’
+is applied for group assignment. For GPS data, the chain rule is applied
+if discrete spatiotemporal GPS fixes buffered by a given distance formed
+a contiguous buffer for two or more individuals, even if some
+individuals within the buffer were not within the given distance of one
+another (Robitaille et al. 2019). Group assignment based on the chain
+rule has previously been applied to caribou at a distance of 50m
+(Peignier et al. 2019; Lesmerises et al. 2018). To assess the role of
+social scale in multilayer networks, we varied the threshold distance
+for group assignment between 5-500m (see *Social scale* section below).
+In all networks, nodes represented individuals, intralayer edges
+represented associations between individuals in a given habitat type,
+and interlayer edges represented **XXXX \[ALEC??\]**.
 
-We applied the ‘chain rule’, where each discrete spatiotemporal GPS fix
-was buffered by 50 m and we considered individuals in the same group if
-50 m buffers for two or more individuals were contiguous, even if some
-individuals within the buffer were not within 50 m of one another. Group
-assignment based on the chain rule has commonly been applied to
-gregarious mammals, including caribou (Peignier et al. 2019; Lesmerises
-et al. 2018). We weighted edges of social networks by the strength of
-association between dyads of caribou using the simple ratio index (SRI,
-Cairns and Schwager 1987):
+We weighted edges of social networks by the strength of association
+between caribou using the simple ratio index (SRI, Cairns and Schwager
+1987):
 
 \[ SRI = \frac{x}{x + y_{AB} + y_{A} + y_{B}} \]
 
-where x is the number of fixes where individuals A and B were within 50
-m of each other, y<sub>A</sub> is the number of fixes from individual A
-when individual B did not have a simultaneous fix, y<sub>B</sub> is the
-number of fixes from individual B when individual A did not have a
-simultaneous fix, and y<sub>AB</sub> is the number of simultaneous fixes
-from individuals A and B that were separated by \>50 m (Farine &
-Whitehead 2015). Social groups were designated if two or more
-individuals occurred within 50 m of one another at any given time point.
-We generated social networks with the igraph package in R, version 1.2.2
-(Csárdi & Nepusz 2006). For each multilayer network, we calculated XXX
-metrics (see below).
+where x is the number of fixes where individuals A and B were within a
+given distance of each other, y<sub>A</sub> is the number of fixes from
+individual A when individual B did not have a simultaneous fix,
+y<sub>B</sub> is the number of fixes from individual B when individual A
+did not have a simultaneous fix, and y<sub>AB</sub> is the number of
+simultaneous fixes from individuals A and B that were separated by more
+than the given distance (Farine & Whitehead 2015). Social groups were
+designated if two or more individuals occurred within a given distance
+of one another at any given time point. For each multilayer network, we
+calculated XXX metrics (see below).
 
 #### Altering spatial scale
 
@@ -221,24 +222,23 @@ network layers constructed for each. \[QW: NOT SURE WHAT THIS MEANS\]**
 
 #### Altering social scale
 
-As above, we generated social association networks in three habitat
-types and two seasons. For our baseline networks, we assumed individuals
-were in the same group if they were within a 50m spatial buffer of one
-another (see above). Based on visual (short distance) and auditory (long
-distnace) sensory modalities of caribou (REF?), we modified the spatial
-buffer and re-assigned groups at incremental distance between 5 and 500.
-Thus, at the finest social scale, only individuals within 5m of one
-another were considered in the same group, whereas at the coarset social
-scale, only individuals within 500m of one another were considered in
-the same group. Modifying social scale enabled us to assess the
+We altered social scale based on visual (short distance) and auditory
+(long distnace) sensory modalities of caribou (REF?). Specifically, we
+modified the distance threshold required for group assignment (see
+above) and re-assigned groups at incremental distance between 5-500m.
+For example, at the finest social scale, only individuals within 5m of
+one another were considered in the same group, whereas at the coarset
+social scale, only individuals within 500m of one another were
+considered in the same group.
 
 #### Altering the number of observations
 
 Studies of social network analysis vary in the number and frequency of
 observations as well as the data collection technique used to generate
-networks (Davis et al. 2018; Webber and Vander Wal 2019). Randomly
-select max number of observations - timegroups - (right now 750). For
-each iteration, include n observations for each season for all
+networks (Davis et al. 2018; Webber and Vander Wal 2019).
+
+Randomly select max number of observations - timegroups - (right now
+750). For each iteration, include n observations for each season for all
 individuals. Subsequent iterations include nstep more (right now 25),
 along with previously included to remove stochasticity. Parallels with
 observation data.
