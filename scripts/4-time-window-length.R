@@ -47,6 +47,7 @@ group_times(
 
 ### Generate networks for each n observations ----
 # TODO: rm [1:2]
+# TODO: there shouldnt be 22 vs 17... 
 nets <- lapply(winlengths[1:2], function(len) {
   col <- paste0('season', len)
   
@@ -74,6 +75,7 @@ nets <- lapply(winlengths[1:2], function(len) {
   })
 
   # Generate networks for each season
+  # net_ls <- 
   netLs <- lapply(
     gbiLs,
     get_network,
@@ -89,30 +91,32 @@ nets <- lapply(winlengths[1:2], function(len) {
     weighted = TRUE
   )
   names(gLs) <- paste0(col, '-', usplit)
-
-  eig <- rbindlist(
-    lapply(lapply(gLs, function(g) eigen_centrality(g)$vector), stack),
-    idcol = 'lenseason')
-  eig[, c('winlength', 'season') := tstrsplit(lenseason, '-')]
-  eig[, winlength := as.integer(gsub('season', '', winlength))]
-  setnames(eig, c('ind', 'values'), c(idcol, 'eigcent'))
+  gLs
+  # eig <- rbindlist(
+  #   lapply(lapply(gLs, function(g) eigen_centrality(g)$vector), stack),
+  #   idcol = 'lenseason')
+  # eig[, c('winlength', 'season') := tstrsplit(lenseason, '-')]
+  # eig[, winlength := as.integer(gsub('season', '', winlength))]
+  # setnames(eig, c('ind', 'values'), c(idcol, 'eigcent'))
   
   # TODO: modify neigh so it's working on a by
   # TODO: remove it from this lapply and merge afterwards
   # TODO: just return eig centrality and network correlation etc
   # TODO: then merge onto neigh output from above
-  neigh(sub, idcol, col)
-  
-  outcols <- c('neighborhood', 'splitNeighborhood', idcol, col)
-  out <- unique(sub[, .SD, .SDcols = outcols])
-  setnames(out, col, 'season')
-  set(out, j = 'winlength', value = len)
-  
-  out[eig, on = c(idcol, 'season', 'winlength')]
+  # neigh(sub, idcol, col)
+  # 
+  # outcols <- c('neighborhood', 'splitNeighborhood', idcol, col)
+  # out <- unique(sub[, .SD, .SDcols = outcols])
+  # setnames(out, col, 'season')
+  # set(out, j = 'winlength', value = len)
+  # 
+  # out[eig, on = c(idcol, 'season', 'winlength')]
 })
 
 # TODO: fix new data 'found duplicate id in a timegroup and/or splitBy - does your group_times threshold match the fix rate?'
-
+nnets <- unlist(nets, recursive = FALSE)
+layer_eigen(nnets)
+layer_
 out <- rbindlist(nets)
 
 ### Multilayer network metrics ----

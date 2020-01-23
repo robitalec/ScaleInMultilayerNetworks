@@ -30,19 +30,74 @@ group_times(
 )
 
 nets <- lapply(thresholds, function(t) {
-	group_pts(
-	  DT,
-			threshold = t,
-			id = idcol,
-			coords = projCols,
-			timegroup = 'timegroup'
-	)
 
 	neigh(DT, idcol, splitBy)
 	
 	out <- unique(DT[, .SD, 
 	                 .SDcols = c('neighborhood', 'splitNeighborhood', idcol, splitBy)])
 	set(out, j = 'spatialthreshold', value = t)
+})
+
+nets <- lapply(thresholds, function(t) {
+  group_pts(
+    DT,
+    threshold = t,
+    id = idcol,
+    coords = projCols,
+    timegroup = 'timegroup'
+  )
+  
+  usplit <- unique(na.omit(sub, cols = col)[[col]])
+  
+  # GBI for each season
+  gbiLs <- lapply(usplit, function(u) {
+    gbi <- get_gbi(
+      DT = sub[get(col) == u],
+      group = 'group',
+      id = idcol
+    )
+  })
+  
+  # Generate networks for each season
+  netLs <- lapply(
+    gbiLs,
+    get_network,
+    data_format = 'GBI',
+    association_index = 'SRI'
+  )
+  
+  gLs <- lapply(
+    netLs,
+    graph.adjacency,
+    mode = 'undirected',
+    diag = FALSE,
+    weighted = TRUE
+  )
+  names(gLs) <- paste0(col, '-', usplit)
+  
+  eig <- rbindlist(
+    lapply(lapply(gLs, function(g) eigen_centrality(g)$vector), stack),
+    idcol = 'lenseason')
+  eig[, c('winlength', 'season') := tstrsplit(lenseason, '-')]
+  eig[, winlength := as.integer(gsub('season', '', winlength))]
+  setnames(eig, c('ind', 'values'), c(idcol, 'eigcent'))
+  
+  # TODO: modify neigh so it's working on a by
+  # TODO: remove it from this lapply and merge afterwards
+  # TODO: just return eig centrality and network correlation etc
+  # TODO: then merge onto neigh output from above
+  neigh(sub, idcol, col)
+  
+  outcols <- c('neighborhood', 'splitNeighborhood', idcol, col)
+  out <- unique(sub[, .SD, .SDcols = outcols])
+  setnames(out, col, 'season')
+  set(out, j = 'winlength', value = len)
+  
+  out <- unique(DT[, .SD, 
+                   .SDcols = c('neighborhood', 'splitNeighborhood', idcol, splitBy)])
+  set(out, j = 'spatialthreshold', value = t)
+  
+  out[eig, on = c(idcol, 'season', 'winlength')]
 })
 
 out <- rbindlist(nets)
