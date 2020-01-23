@@ -48,3 +48,6 @@ Webber QMR, Vander Wal E (2018) An evolutionary framework outlining the integrat
 
 
 # Julie
+
+# Alec
+Laura Graham (2019). grainchanger: Moving-Window and Direct Data Aggregation. R package version 0.3.0.
