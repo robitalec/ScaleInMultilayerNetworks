@@ -79,10 +79,16 @@ graphLs <- lapply(winlengths[1:2], function(len) {
 
 
 ### Multilayer network metrics ----
+# TODO: run neigh in lapply, combine with corr with eigen
+# TODO: 
+
+
 var <- 'winlength'
 
-vapply(graphLs, layer_correlation, FUN.VALUE = 42.0)
-
+corrs <- data.table(
+  winlength = winlengths,
+  layercorr = vapply(graphLs, layer_correlation, FUN.VALUE = 42.0)
+)
 
 gLs <- unlist(graphLs, recursive = FALSE)
 eig <- layer_eigen(gLs, idcol)
@@ -90,11 +96,11 @@ eig <- layer_eigen(gLs, idcol)
 eig[, c(var, splitBy) := tstrsplit(layer, '-', type.convert = TRUE)]
 
 
+layer_neighbors(sub, idcol, var, col)
+
+
 # TODO: modify neigh so it's working on a by
-# TODO: remove it from this lapply and merge afterwards
-# TODO: just return eig centrality and network correlation etc
 # TODO: then merge onto neigh output from above
-# neigh(sub, idcol, col)
 # 
 # outcols <- c('neighborhood', 'splitNeighborhood', idcol, col)
 # out <- unique(sub[, .SD, .SDcols = outcols])
