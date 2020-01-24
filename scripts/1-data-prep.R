@@ -24,7 +24,7 @@ DT[, c(datecol, timecol) := .(as.IDate(get(datecol)), as.ITime(get(timecol)))]
 ## Seasons
 DT[between(JDate, winterlow, winterhigh), season := 'winter']
 DT[between(JDate, summerlow, summerhigh), season := 'summer']
-
+DT[!is.na(season)]
 ### Project relocations ----
 DT[, (projCols) := as.data.table(project(cbind(get(xcol), get(ycol)), utm21N))]
 
