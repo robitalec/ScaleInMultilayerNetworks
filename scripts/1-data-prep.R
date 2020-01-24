@@ -6,8 +6,6 @@ pkgs <- c('data.table', 'rgdal')
 p <- lapply(pkgs, library, character.only = TRUE)
 
 # TODO: timezones
-# TODO: rm old prep from all
-# TODO: confirm seasons
 # TODO: which individuals are dropped
 
 ### Data ----
