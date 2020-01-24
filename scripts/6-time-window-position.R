@@ -63,7 +63,7 @@ nets <- lapply(winpositions, function(pos) {
     timegroup = 'timegroup',
     splitBy = col
   )
-  
+  print(sub[, unique(ANIMAL_ID)])
   usplit <- unique(na.omit(sub, cols = col)[[col]])
   
   # GBI for each season
