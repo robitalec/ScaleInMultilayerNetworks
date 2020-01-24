@@ -98,24 +98,10 @@ nets <- lapply(winlengths[1:200], function(len) {
 })
 
 
-### Multilayer network metrics ----
 # TODO: fix new data 'found duplicate id in a timegroup and/or splitBy - does your group_times threshold match the fix rate?'
 
 out <- rbindlist(nets)
 
-# Redundancy
-connective_redudancy(out)
-stopifnot(out[!between(connredund, 0, 1), .N] == 0)
-
-# Multidegree
-multi_degree(out, 'splitNeigh', idcol, var)
-
-# Degree deviation
-deviation_degree(out, 'splitNeigh', idcol, var)
-
-# Relevance
-layer_relevance(out, idcol, var, splitBy = splitBy)
-stopifnot(out[!between(relev, 0, 1), .N] == 0)
 
 ### Output ----
 saveRDS(out, 'data/derived-data/4-time-window-length.Rds')

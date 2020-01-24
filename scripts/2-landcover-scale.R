@@ -57,9 +57,6 @@ lslc <- lapply(lsres, function(res) {
 DT[, (paste0('lc', lsres)) := 
       lapply(lslc, function(lc) extract(lc, matrix(c(EASTING, NORTHING), ncol = 2)))]
 
-rescols <- paste0('lc', lsres)
-
-
 ### Temporal grouping with spatsoc ----
 tempthresh <- '5 minutes'
 
@@ -71,7 +68,11 @@ group_times(
 
 
 ### Generate networks for each landcover resolution ----
-graphs <- lapply(lsres, function(res) {
+var <- 'lcres'
+
+nets <- lapply(lsres, function(res) {
+  col <- paste0('lc', res)
+  
   # Spatial grouping with spatsoc
   group_pts(
     DT,
@@ -79,65 +80,42 @@ graphs <- lapply(lsres, function(res) {
     id = idcol,
     coords = projCols,
     timegroup = 'timegroup',
-    splitBy = paste0('lc', res)
+    splitBy = col
   )
   
-  # usplit <- unique(na.omit(DT, cols = rescol)[[rescol]])
-  # 
-  # # GBI for each lc
-  # gbiLs <- lapply(usplit, function(u) {
-  #   gbi <- get_gbi(
-  #     DT = DT[get(rescol) == u],
-  #     group = 'group',
-  #     id = idcol
-  #   )
-  # })
-  # 
-  # # Generate networks for each lc
-  # netLs <- lapply(
-  #   gbiLs,
-  #   get_network,
-  #   data_format = 'GBI',
-  #   association_index = 'SRI'
-  # )
-  # 
-  # gLs <- lapply(
-  #   netLs,
-  #   graph.adjacency,
-  #   mode = 'undirected',
-  #   diag = FALSE,
-  #   weighted = TRUE
-  # )
-  # names(gLs) <- paste(rescol, usplit, sep = '-')
+  usplit <- unique(na.omit(sub, cols = col)[[col]])
   
-  neigh(DT, idcol, splitBy)
+  # GBI for each season
+  gbiLs <- list_gbi(sub, idcol, usplit, col)
   
-  out <- unique(DT[, .SD, 
-                     .SDcols = c('neighborhood', 'splitNeighborhood', idcol, splitBy)])
-  set(out, j = 'lcres', value = res)
+  # Generate networks for each season
+  netLs <- list_nets(gbiLs)
+  
+  # Generate graphs for each season
+  gLs <- list_graphs(netLs)
+  names(gLs) <- paste0(res, '-', usplit)
+  
+  # Calculate eigenvector centrality for each season
+  eig <- layer_eigen(gLs)
+  
+  # Calculate correlation of season layers
+  set(eig, j = 'layercorr', value = layer_correlation(gLs))
+  eig[, c(var, splitBy) := tstrsplit(layer, '-', type.convert = TRUE)]
+  setnames(eig, 'ind', idcol)
+  
+  # Calculate neighbors
+  layer_neighbors(sub, idcol, splitBy = col)
+  
+  # and tidy output, prep for merge
+  outcols <- c('neigh', 'splitNeigh', idcol, col)
+  out <- unique(sub[, .SD, .SDcols = outcols])
+  setnames(out, col, splitBy)
+  
+  # Merge eigcent+correlations with neighbors
+  out[eig, on = c(idcol, splitBy)]
 })
 
 out <- rbindlist(nets)
-
-
-### Multilayer network metrics ----
-var <- 'lcres'
-
-# Redundancy
-redundancy(out)
-stopifnot(out[!between(connredund, 0, 1), .N] == 0)
-
-# Multidegree
-multidegree(out, 'splitNeighborhood', idcol, var)
-
-# Degree deviation
-degdeviation(out, 'splitNeighborhood', idcol, var)
-
-# Relevance
-relevance(out, idcol, splitBy = c(var, splitBy))
-stopifnot(out[!between(relev, 0, 1), .N] == 0)
-
-# TODO: network correlation
 
 
 ### Output ----
