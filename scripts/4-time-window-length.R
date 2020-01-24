@@ -17,7 +17,7 @@ source('scripts/0-variables.R')
 
 
 ### Data ----
-DT <- readRDS('data/derived-data/sub-2018-fogo-caribou.Rds')
+DT <- readRDS('data/derived-data/sub-fogo-caribou.Rds')
 alloc.col(DT)
 
 ### Variable time window length ----
