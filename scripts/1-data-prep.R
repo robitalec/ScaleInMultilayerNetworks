@@ -23,7 +23,6 @@ DT[, c(datecol, timecol) := .(as.IDate(get(datecol)), as.ITime(get(timecol)))]
 ## Seasons
 DT[between(JDate, winterlow, winterhigh), season := 'winter']
 DT[between(JDate, summerlow, summerhigh), season := 'summer']
-DT[!is.na(season)]
 ### Project relocations ----
 DT[, (projCols) := as.data.table(project(cbind(get(xcol), get(ycol)), utm21N))]
 
@@ -33,9 +32,9 @@ sub <- DT[Year >= 2017 & JDate > summerlow | Year == 2018]
 
 # Sub only individuals with data in both seasons
 keepids <- sub[, .N, c(idcol, 'season')][!is.na(season), .N, idcol][N == 2][[idcol]]
-subSeasons <- sub2018[!is.na(season)][get(idcol) %chin% keepids]
+subSeasons <- sub[!is.na(season)][get(idcol) %chin% keepids]
 
 
 ### Output ----
-saveRDS(sub2018, 'data/derived-data/sub-2018-fogo-caribou.Rds')
+saveRDS(sub, 'data/derived-data/sub-fogo-caribou.Rds')
 saveRDS(subSeasons, 'data/derived-data/sub-seasons-fogo-caribou.Rds')
