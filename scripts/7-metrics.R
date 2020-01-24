@@ -35,6 +35,21 @@ if (var == 'lcres') {
 
 alloc.col(DT)
 
-### Metrics ----
+### Multilayer network metrics ----
+# Redundancy
+connective_redudancy(DT)
+stopifnot(DT[!between(connredund, 0, 1), .N] == 0)
+
+# Multidegree
+multi_degree(DT, 'splitNeigh', idcol, var)
+
+# Degree deviation
+deviation_degree(DT, 'splitNeigh', idcol, var)
+
+# Relevance
+layer_relevance(DT, idcol, var, splitBy = splitBy)
+stopifnot(DT[!between(relev, 0, 1), .N] == 0)
 
 
+### Output (overwrite)
+saveRDS(DT, path)
