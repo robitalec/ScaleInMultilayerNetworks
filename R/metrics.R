@@ -174,7 +174,7 @@ layer_eigen <- function(graphLs) {
     lapply(
       lapply(graphLs, function(g) {
         igraph::eigen_centrality(g)$vector}), stack),
-    idcol = 'layer')
+    idcol = 'layer')[, ind := as.character(ind)]
 }
 
 
