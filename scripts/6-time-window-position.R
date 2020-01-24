@@ -46,6 +46,9 @@ group_times(
 )
 
 ### Generate networks for each n observations ----
+var <- 'winpos'
+
+
 nets <- lapply(winpositions, function(pos) {
   col <- paste0('season', pos)
   
@@ -61,41 +64,36 @@ nets <- lapply(winpositions, function(pos) {
     splitBy = col
   )
   
-  # usplit <- unique(na.omit(sub, cols = col)[[col]])
-  # 
-  # # GBI for each season
-  # gbiLs <- lapply(usplit, function(u) {
-  #   gbi <- get_gbi(
-  #     DT = sub[get(col) == u],
-  #     group = 'group',
-  #     id = idcol
-  #   )
-  # })
-  # 
-  # # Generate networks for each season
-  # netLs <- lapply(
-  #   gbiLs,
-  #   get_network,
-  #   data_format = 'GBI',
-  #   association_index = 'SRI'
-  # )
-  # 
-  # gLs <- lapply(
-  #   netLs,
-  #   graph.adjacency,
-  #   mode = 'undirected',
-  #   diag = FALSE,
-  #   weighted = TRUE
-  # )
-  # names(gLs) <- paste0(col, '-', usplit)
-  # gLs
+  usplit <- unique(na.omit(sub, cols = col)[[col]])
   
-  neigh(sub, idcol, col)
+  # GBI for each season
+  gbiLs <- list_gbi(sub, idcol, usplit, col)
   
-  outcols <- c('neighborhood', 'splitNeighborhood', idcol, col)
+  # Generate networks for each season
+  netLs <- list_nets(gbiLs)
+  
+  # Generate graphs for each season
+  gLs <- list_graphs(netLs)
+  names(gLs) <- paste0(pos, '-', usplit)
+  
+  # Calculate eigenvector centrality for each season
+  eig <- layer_eigen(gLs)
+  
+  # Calculate correlation of season layers
+  set(eig, j = 'layercorr', value = layer_correlation(gLs))
+  eig[, c(var, splitBy) := tstrsplit(layer, '-', type.convert = TRUE)]
+  setnames(eig, 'ind', idcol)
+  
+  # Calculate neighbors
+  layer_neighbors(sub, idcol, splitBy = col)
+  
+  # and tidy output, prep for merge
+  outcols <- c('neigh', 'splitNeigh', idcol, col)
   out <- unique(sub[, .SD, .SDcols = outcols])
-  setnames(out, col, 'season')
-  set(out, j = 'winpos', value = pos)
+  setnames(out, col, splitBy)
+  
+  # Merge eigcent+correlations with neighbors
+  out[eig, on = c(idcol, splitBy)]
   
 })
 # TODO: check why different number of individuals as seasons move
@@ -104,26 +102,6 @@ nets <- lapply(winpositions, function(pos) {
 # TODO: careful if inconsistent number of individuals
 
 out <- rbindlist(nets)
-
-### Multilayer network metrics ----
-var <- 'winpos'
-
-# Redundancy
-redundancy(out)
-stopifnot(out[!between(connredund, 0, 1), .N] == 0)
-
-# Multidegree
-multidegree(out, 'splitNeighborhood', idcol, var)
-
-# Degree deviation
-degdeviation(out, 'splitNeighborhood', idcol, var)
-
-# Relevance
-relevance(out, idcol, var, splitBy = splitBy)
-stopifnot(out[!between(relev, 0, 1), .N] == 0)
-
-# TODO: network correlation
-
 
 ### Output ----
 saveRDS(out, 'data/derived-data/6-time-window-position.Rds')
