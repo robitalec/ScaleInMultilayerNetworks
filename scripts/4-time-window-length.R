@@ -74,7 +74,14 @@ graphLs <- lapply(winlengths[1:2], function(len) {
   # Generate graphs for each season
   gLs <- list_graphs(netLs)
   names(gLs) <- paste0(len, '-', usplit)
-  gLs
+  
+  # Calculate eigenvector centrality for each season
+  eig <- layer_eigen(gLs)
+  
+  # Calculate correlation of season layers
+  set(eig, j = 'layercorr', value = layer_correlation(gLs))
+
+  
 })
 
 
