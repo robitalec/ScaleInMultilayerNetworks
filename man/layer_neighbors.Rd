@@ -39,5 +39,5 @@ group_times(DT, datetime = 'datetime', threshold = '20 minutes')
 group_pts(DT, threshold = 5, id = 'ID',
           coords = c('X', 'Y'), timegroup = 'timegroup')
 
-neigh(DT, 'id', var, splitBy = 'season')
+layer_neighbors(DT, 'id', var, splitBy = 'season')
 }

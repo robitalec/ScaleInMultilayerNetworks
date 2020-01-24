@@ -31,7 +31,7 @@
 #' group_pts(DT, threshold = 5, id = 'ID',
 #'           coords = c('X', 'Y'), timegroup = 'timegroup')
 #' 
-#' neigh(DT, 'id', var, splitBy = 'season')
+#' layer_neighbors(DT, 'id', var, splitBy = 'season')
 layer_neighbors <- function(DT, id, var = NULL, splitBy = NULL) {
   cols <- c(id, 'group', var, splitBy)
   
