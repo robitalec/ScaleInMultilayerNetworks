@@ -16,7 +16,7 @@ list_gbi <- function(DT, id, splitList, splitBy, group = 'group') {
   lapply(splitList, function(s) {
     gbi <- spatsoc::get_gbi(
       DT = DT[get(splitBy) == s],
-      group = groupcol,
+      group = group,
       id = id
     )
   })
