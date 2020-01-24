@@ -351,11 +351,11 @@ al., 2019; Chen et al., 2014). **\[QW: I’m not sure what this paragraph
 adds - I think if we need to save space we could cut it\]**
 
 In long-lived species, social phenotypes can change over their lifetimes
-in ways that can have affect fitness (Berger et al., 2015; Brent et al.,
+in ways that can affect fitness (Berger et al., 2015; Brent et al.,
 2017). These findings highlight the necessity to carefully consider the
 temporal scale that is meaningful for the proposed hypotheses,
 especially for understanding the relationship between an individuals
-social phenotypes and fitness. Further complicating the issue, social
+social phenotype and fitness. Further complicating the issue, social
 phenotypes can change over stages of ontogeny, although it is important
 to note that individuals progress through development at different rates
 (Tarka, Guenther, Niemelä, Nakagawa, & Noble, 2018). This variation can
@@ -384,12 +384,12 @@ but this trope highlights human bias toward interactions that can be
 readily observed in the field. Animals have certain interactions that do
 not require proximity such as long-distance vocalization and olfactory
 signals (Carter et al., 2015). With the advancement of bio-logging
-technology, our ability to record social interactions that do not
-require proximity, particularly long-distance communication networks
+technology, we have the ability to record social interactions that do
+not require proximity, particularly long-distance communication networks
 with devices like microphone arrays (Snijders & Naguib, 2017). The
 multilayer network framework further enables researchers to examine the
 relationship between social phenotypes and fitness across social scales
-and to test how good a social proximity as a proxy for social
+and to test how good social proximity is as a proxy for social
 interactions in a holistic way.
 
 These different social scales can have different fitness repercussions
@@ -415,10 +415,10 @@ questions that require timeframes that are relevant to different
 individuals. On the other hand, multilayer network metrics provide an
 opportunity to simplify statistical models. Interactions that happen
 meters apart, proximity associations, and long-distance interactions can
-be encapsulated in a single multilayer network and a single metric can
+be encapsulated in a single multilayer network, and a single metric can
 be used to describe the various social scales of an individual’s network
 position. This multilevel network metric could be used to assess the
-relationship between an individuals social phenotype and fitness. It
+relationship between an individual’s social phenotype and fitness. It
 would also be a meaningful simplification of many network metrics that
 could help simplify statistical analyses and deal with the frequent
 correlations between social network metrics in different types of
@@ -427,47 +427,50 @@ networks (Castles et al., 2014).
 ### Movement ecology and collective movement
 
 Animal movement undoubtedly affects the social environment
-(Strandburg-Peshkin et al. 2015) and multilayer networks are no
-exception (Mourier et al. 2019). Movement is a dynamic process and is
-related to an individual’s space use as well as the resources consumed
-within their home range (Van Moorter et al. 2016). Collective movement
-can reduce group-level predation via detection-dilution trade-offs,
-while it can also improve information transfer about the quality or
-location of resources (Jolles et al. 2019). Social processes, movement
-decisions, and space use are therefore inextricably linked.
+(Strandburg-Peshkin et al. 2015), and multilayer networks are no
+exception (Mourier et al. 2019). Movement is a dynamic process that is
+related to the resources an individual consumes within their home range
+and their general space use (Van Moorter et al. 2016). Collective
+movement can reduce group-level predation via detection-dilution
+trade-offs and improve information transfer about the quality or
+location of resources to other group members (Jolles et al. 2019).
+Social processes, movement decisions, and space use are therefore
+inextricably linked.
 
 Although multilayer animal social networks are relatively novel (Silk et
 al. 2018), movement behaviour within multilayer networks has already
-been considered in a handful of studies. In gunieafowl (*Acryllium
+been considered in a couple studies. In vulturine gunieafowl (*Acryllium
 vulturinum*), GPS movement data were used to generate *monolayer*
 association networks within a multilayer network (Papageorgiou et
-al. 2019). In addition, *spatial networks* are networks of locations,
-which are connected in a network when individuals move between
-locations. For example, spatial networks were applied to monitor
-movement of sharks (*Carcharhinus amblyrhynchos* and *Carcharhinus
-melanopterus*) between between fixed location autonomous arrays, where
-nodes represent locations within the array, *intralayer edges* represent
-individual movement frequency, and *interlayer edges* represent contact
-probability among individuals at a given node (Mourier et al. 2019).
-While both studies integrate movement in some capacity, neither generate
-networks based on continuous measures of collective, or dyadic, movement
-(Long et al. 2014).
+al. 2019). In addition, *spatial networks* are physical locations
+(nodes) which are connected in a network when individuals move between
+said locations (ties). For example, spatial networks were applied to
+monitor movement of sharks (*Carcharhinus amblyrhynchos* and
+*Carcharhinus melanopterus*) between fixed location autonomous arrays,
+where nodes represent locations within the array, *intralayer edges*
+represent individual movement frequency, and *interlayer edges*
+represent contact probability among individuals at a given node (Mourier
+et al. 2019). While both studies integrate movement in some capacity,
+neither generate networks based on continuous measures of dyadic or
+collective movement (Long et al. 2014).
 
 Continuous collection of animal relocation data using GPS technology can
 be used to measure how groups of animals make movement decisions in the
 context of their local environment (Strandburg-Peshkin et al. 2015,
 2017) and across scales. A collective movement layer could constitute
 similarity in movement for dyads (Long et al. 2014) or groups (Bode et
-al. 2011) as well as at a fine (i.e. minute-to-minute: Cleasby et
-al. 2019) or coarse (global migration: Flack et al. 2018) scales.
-Another potential application would be to generate social networks
-during times when animals are engaged in different behaviours, including
-moving, interacting, or foraging (e.g. Muller et al. 2018; Finn et
-al. 2019) and construct a multilayer networks based on
-behaviour-specific monolayer networks (e.g. Smith-Aguilar et al. 2019)
-In contrast to spatial networks, movement networks could assimilate
-dyadic movement metrics into a network representing the continuous and
-simultaneous movement trajectories of animals. Importantly, the key to
+al. 2011). This movement layer could be made at a fine
+(i.e. minute-to-minute: Cleasby et al. 2019) or coarse (global
+migration: Flack et al. 2018) scale. In contrast to spatial networks,
+movement networks could assimilate dyadic movement metrics into a
+network representing the continuous and simultaneous movement
+trajectories of animals. Another potential application would be to
+generate social networks during times when animals are engaged in
+different behaviours, including traveling, interacting, or foraging
+**\[JWT: these are not mutually exclusive behaviors, which may not
+matter here\]** (e.g. Muller et al. 2018; Finn et al. 2019) and
+construct a multilayer network based on behaviour-specific monolayer
+networks (e.g. Smith-Aguilar et al. 2019). Importantly, the key to
 incorporating movement in multilayer networks across scales is the
 technological advancements available to overcome previous limitations
 (see Hughey et al. 2018).
@@ -480,17 +483,18 @@ further shed light on the role of movement as a driver of the social and
 spatial environments an individual experiences (Webber and Vander Wal
 2018). In our case study, we generated multilayer networks based on
 habitat-specific monolayers. Coordinated movement of dyads, or groups,
-could vary based on habitat and the approach we outline could be used to
-explore mechanisms linking the social and spatial environments. For
+could vary based on habitat, and the approach we outline could be used
+to explore mechanisms linking the social and spatial environments. For
 example, social processes may be an emergent property of the landscape
 because animals aggregate at resources, such as waterholes
-(Chamaillé-Jammes et al. 2008), while movement to, from, or within
-habitat patches can also contribute to the formation of the social
-environment (Spiegel et al. 2016). Incorporating movement ecology within
-a multilayer network framework is a logical next step for a burgeoning
-field. In particular, when association networks are habitat-specific, we
-suggest the integration of movement and space use in multilayer networks
-provides novel insight into the effects of habitat configuration on the
+(Chamaillé-Jammes et al. 2008). Movement to, from, or within habitat
+patches can also contribute to the formation of the social environment
+**\[JWT: how? I think it would help to clarify the example\]**(Spiegel
+et al. 2016). Incorporating movement ecology within a multilayer network
+framework is a logical next step for a burgeoning field. In particular,
+when association networks are habitat-specific, we suggest the
+integration of movement and space use in multilayer networks provides
+novel insights into the effects of habitat configuration on the
 formation of the social environment (He et al. 2019).
 
 ## Conclusions
