@@ -5,7 +5,6 @@
 pkgs <- c('data.table', 'rgdal')
 p <- lapply(pkgs, library, character.only = TRUE)
 
-# TODO: read in as rds everywhere else
 # TODO: timezones
 # TODO: rm old prep from all
 # TODO: confirm seasons
