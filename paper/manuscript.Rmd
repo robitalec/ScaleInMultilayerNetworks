@@ -87,7 +87,7 @@ We altered the temporal scale of mutlilayer networks using a moving time-window 
 
 1. time window length
 
-Varying length of time window (used to define seasons). From 75 to 150 right now. Fixed start julian day for winter is day 1 and for summer is 215. Network layers for winter and summer are calculated for each window length. 
+Varying length of time window (used to define seasons). Starting with a window of day 1-40 and using a moving window to go to day 1-100. Fixed start julian day for winter is day 1 and for summer is 215. Network layers for winter and summer are calculated for each window length. 
 
 
 1. time window position
