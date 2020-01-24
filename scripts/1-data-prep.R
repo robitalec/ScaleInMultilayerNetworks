@@ -9,7 +9,6 @@ p <- lapply(pkgs, library, character.only = TRUE)
 # TODO: timezones
 # TODO: rm old prep from all
 # TODO: confirm seasons
-# TODO: dont drop if na season here
 # TODO: which individuals are dropped
 
 ### Data ----
@@ -29,11 +28,11 @@ DT[!is.na(season)]
 DT[, (projCols) := as.data.table(project(cbind(get(xcol), get(ycol)), utm21N))]
 
 ### Sub data ----
-# Sub only 2018 data
-sub2018 <- DT[Year == 2018]
+## 2017 summer and 2018 winter
+sub <- DT[Year >= 2017 & JDate > summerlow | Year == 2018]
 
 # Sub only individuals with data in both seasons
-keepids <- sub2018[, .N, c(idcol, 'season')][!is.na(season), .N, idcol][N == 2][[idcol]]
+keepids <- sub[, .N, c(idcol, 'season')][!is.na(season), .N, idcol][N == 2][[idcol]]
 subSeasons <- sub2018[!is.na(season)][get(idcol) %chin% keepids]
 
 
