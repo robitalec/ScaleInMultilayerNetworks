@@ -99,13 +99,6 @@ graphLs <- lapply(winlengths[1:2], function(len) {
 
 
 ### Multilayer network metrics ----
-# TODO: run neigh in lapply, combine with corr with eigen
-# TODO: 
-
-corrs <- data.table(
-  winlength = winlengths,
-  layercorr = vapply(graphLs, layer_correlation, FUN.VALUE = 42.0)
-)
 
 gLs <- unlist(graphLs, recursive = FALSE)
 eig <- layer_eigen(gLs, idcol)
