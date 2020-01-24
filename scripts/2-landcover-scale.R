@@ -24,6 +24,8 @@ water <- readOGR('data/Landcover/FogoPoly.shp')
 
 
 ### Reclassify raster ----
+# TODO: move this to prep
+# TODO: include landcover raw resolution in prepared data
 mlc <- mask(lc, water)
 
 open <- c(1, 6, 7, 9)
