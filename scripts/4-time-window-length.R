@@ -50,7 +50,7 @@ var <- 'winlength'
 
 # TODO: rm [1:2]
 # TODO: there shouldnt be 22 vs 17... 
-graphLs <- lapply(winlengths[1:2], function(len) {
+nets <- lapply(winlengths[1:200], function(len) {
   col <- paste0('season', len)
   
   sub <- DT[!is.na(get(col))]
