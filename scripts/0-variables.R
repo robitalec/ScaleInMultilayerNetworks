@@ -13,9 +13,9 @@ timecol <- 'itime'
 
 # Seasons
 winterlow <- 1
-winterhigh <- 75
+winterhigh <- 48
 summerlow <- 215
-summerhigh <- 290
+summerhigh <- 263
 
 splitBy <- 'season'
 
