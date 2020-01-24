@@ -64,34 +64,34 @@ scales of sociality, including social association and home range
 overlap, vary predictably with social interaction (Castles et al. 2014;
 Farine 2015). Here, we define *social scale* as the type of social
 relationship observed that can be explicitly defined and measured in
-social network analyses (Farine et al. 2015).
+social network analyses (see Glossary; Farine et al. 2015).
 
 Animal social network analysis is a well-developed tool used to measure
 the relationships of individuals and organization of social systems
 (Krause et al. 2009; Wey et al. 2008; Croft et al. 2008). Social network
-analysis provides insight into intra-specific interactions and the
-structure of social communities and social network properties can
-influences population dynamics and evolutionary processes
-(Pinter-Wollman et al. 2014; Kurvers et al. 2014). Despite the
-widespread use and innovation of traditional social network analysis
-(Webber & Vander Wal 2019), it typically considers a single scale of
-sociality in a given network, drastically simplifying the complexity of
-animal social systems (Finn et al. 2019).
+analysis provides insight into the structure of social communities and
+social network properties can influences population dynamics and
+evolutionary processes (Pinter-Wollman et al. 2014; Kurvers et
+al. 2014). Despite the widespread use and innovation of traditional
+social network analysis (Webber & Vander Wal 2019), it typically
+considers a single scale of sociality in a given network, drastically
+simplifying the complexity of animal social systems (Finn et al. 2019).
 
-Unlike traditional social networks, multilayer networks explicitly
-consider social systems across contexts, including scale-dependent
-contexts (Pilosof et al. 2017). Multilayer networks are made up of
-multiple layers, each representing different classes of individuals
-(e.g. male or female), types of behaviours (e.g. grooming, travelling,
-or foraging), spatial areas (e.g. local or regional), or temporal
-windows (e.g. daily or seasonal) (Kivela et al. 2014; Porter 2018).
-Multilayer networks are relatively novel to studies of animal behaviour
-(Finn et al. 2019; Silk et al. 2018), although they have been used to
-describe multidimensional human social systems, complex transportation
-networks, and organismal neural networks (Silk et al. 2018). The role of
-scale within multilayer social networks remains unexplored but provides
-a unique opportunity to develop novel understanding of variation in the
-temporal or spatial scales associated with social systems.
+Unlike traditional *monolayer* social networks, multilayer networks
+explicitly consider social systems across contexts, including
+scale-dependent contexts (Pilosof et al. 2017). Multilayer networks are
+made up of multiple layers, each representing different classes of
+individuals (e.g. male or female), types of behaviours (e.g. grooming,
+travelling, or foraging), spatial areas (e.g. local or regional), or
+temporal windows (e.g. daily or seasonal) (Kivela et al. 2014; Porter
+2018). Multilayer networks are relatively novel to studies of animal
+behaviour (Finn et al. 2019; Silk et al. 2018), although they have been
+used to describe multidimensional human social systems, complex
+transportation networks, and neural networks (Silk et al. 2018). The
+role of scale within multilayer social networks remains unexplored but
+provides a unique opportunity to develop novel understanding of
+variation in the temporal or spatial scales associated with social
+systems.
 
 Here, we discuss and integrate variation in temporal and spatial scales
 within a multilayer network framework. We borrow from behavioural,
@@ -108,8 +108,8 @@ scale improve predictions associated with seasonal differences in
 resource availability and social association? We conclude with
 perspectives for further development and application of scale in
 multilayer networks with respect to landscape ecology (Schneider 2009),
-individual fitness and phenotypes (Ref), and movement ecology and
-collective movement (Jolles et al. 2019).
+individual fitness and phenotypes (Webber & Vander Wal 2018), and
+movement ecology and collective movement (Jolles et al. 2019).
 
 ## Scale in multilayer networks: a case study
 
@@ -172,7 +172,7 @@ network generated in one of three habitat types (lichen, open, and
 closed). For habitat-specific networks, all GPS relocations were
 assigned to the corresponding habitat type and proximity-based social
 network layers were generated using the R package spatsoc (Robitaille et
-al. 2019) in *R version* (R CITATION).
+al. 2019) in *R version* (R Core Team 2020).
 
 Within each habitat-specific monolayer network, we assumed individuals
 were associating if simultaneous GPS fixes (i.e., recorded within 5
@@ -184,12 +184,10 @@ a contiguous buffer for two or more individuals, even if some
 individuals within the buffer were not within the given distance of one
 another (Robitaille et al. 2019). Group assignment based on the chain
 rule has previously been applied to caribou at a distance of 50m
-(Peignier et al. 2019; Lesmerises et al. 2018). To assess the role of
-social scale in multilayer networks, we varied the threshold distance
-for group assignment between 5-500m (see *Social scale* section below).
-In all networks, nodes represented individuals, intralayer edges
-represented associations between individuals in a given habitat type,
-and interlayer edges represented **XXXX \[ALEC??\]**.
+(Peignier et al. 2019; Lesmerises et al. 2018). In all networks, nodes
+represented individuals, intralayer edges represented associations
+between individuals in a given habitat type, and interlayer edges
+represented **XXXX \[ALEC??\]**.
 
 We weighted edges of social networks by the strength of association
 between caribou using the simple ratio index (SRI, Cairns and Schwager
@@ -253,7 +251,7 @@ Finally, some weighted variables:
     Boccaletti, Stefano, et al. “The structure and dynamics of
     multilayer networks.” Physics Reports 544.1 (2014): 1-122.
 
-### Scale in multilayer networks
+### Varying scale in multilayer networks
 
 #### Temporal scale
 
@@ -291,7 +289,7 @@ resolutions), seasonal network layers are combined in a multilayer
 network
 <!-- Each modal landcover, and the original are sampled and separate network layers constructed for each. **[QW: NOT SURE WHAT THIS MEANS]** -->
 
-#### Altering social scale
+#### Social scale
 
 We altered social scale based on visual (short distance) and auditory
 (long distnace) sensory modalities of caribou (REF?). Specifically, we
@@ -302,7 +300,7 @@ one another were considered in the same group, whereas at the coarset
 social scale, only individuals within 500m of one another were
 considered in the same group.
 
-#### Altering observational scale
+#### Observational scale
 
 Studies of social network analysis vary in the number and frequency of
 observations as well as the data collection technique used to generate
@@ -312,9 +310,16 @@ Randomly select max number of observations - timegroups - (right now
 750). For each iteration, include n observations for each season for all
 individuals. Subsequent iterations include nstep more (right now 25),
 along with previously included to remove stochasticity. Parallels with
-observation data.
+observation
+data.
 
-## Scale in multilayer networks in practice: case study results
+## Scale in multilayer networks in practice: case study results and discussion
+
+Results and interpretation of temporal scale - balh
+
+Results and interpretation of spatial scale - blah blah
+
+Results and interpretation of social scale - blah blah blah
 
 ## Perspectives to advance multilayer networks
 
