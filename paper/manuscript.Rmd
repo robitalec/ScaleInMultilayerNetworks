@@ -121,7 +121,17 @@ Results and interpretation of social scale - blah blah blah
 
 ## Perspectives  to advance multilayer networks 
 
-### Landscape ecology
+### Habitat selection and space use 
+
+Mayor et al. 2009 paper 
+
+MRSF Laforge paper 
+
+van Beest et al. 2014 scale paper 
+
+1st/2nd/3rd order selection blah blah 
+
+Paper: Habitat–performance relationships: finding the right metric at a given spatial scale Jean-Michel Gaillard1,*, Mark Hebblewhite2, Anne Loison3, Mark Fuller4, Roger Powell5, Mathieu Basille1,6 and Bram Van Moorter1
 
 ### Individual fitness and phenotypes
 
