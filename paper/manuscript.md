@@ -508,8 +508,8 @@ questions relevant to the promise and problem of scale in mutlilayer
 networks:
 
 1)  How do social phenotypes across scales differently influence
-    fitness? Are some social scales better predictors for different
-    fitness metrics?
+    fitness? Are some temporal or social scales better predictors for
+    different fitness metrics?
 
 2)  Why do individuals associate more strongly with certain conspecifics
     in some habitats? What, if any, is the role of movement in the
