@@ -133,9 +133,9 @@ seasonally heterogeneous, with greater access in snow-free seasons
 compared to winter as well as spatially heterogeneous in winter because
 the distribution of craters on the landscape varies meaning that access
 to vegetation in winter is highly variable for caribou. We therefore
-partitioned data into two discrete seasons: summer (3 August - 17
-October) and winter (1 January – 16 March) based on caribou socioecology
-(Peignier et al. 2019).
+partitioned data into two discrete seasons: <!-- TODO update these -->
+*summer (3 August - 17 October) and winter (1 January – 16 March)* based
+on caribou socioecology (Peignier et al. 2019).
 
 ### Caribou location data
 
@@ -145,7 +145,7 @@ system (GPS) collars (Lotek Wireless Inc., Newmarket, ON, Canada,
 GPS4400M collars, 1,250 g) as described by Schaefer and Mahoney (2013).
 Collars were programmed to collect location fixes every 2 hours. Prior
 to analyses, we subset GPS fixes into a discrete removed all erroneous
-and outlier GPS fixes following Bjørneraas et al. (2010). We did not
+and outlier GPS fixes following Bjørneraas et al. (2010). We did not
 collar all female caribou in the herd; however, we assumed that our
 sample of collared animals was random.
 
@@ -159,8 +159,7 @@ closed habitat. Foraging habitat consisted of lichen habitat, open
 habitat consisted of wetland, rocky barrens, and anthropogenic habitat
 types, while closed habitat consisted of coniferous forest, conifer
 scrub, broadleaf forest, and mixed-wood forest habitat types. Water
-habitat was excluded from all subsequent
-analyses.
+habitat was excluded from all subsequent analyses.
 
 ### Caribou multilayer social networks
 
@@ -248,7 +247,7 @@ correlation of each season’s asnipe SRI matrix
 Finally, some weighted variables:
 
   - eigenvector centrality, summed across layers as described in
-    Boccaletti, Stefano, et al. “The structure and dynamics of
+    Boccaletti, Stefano, et al. “The structure and dynamics of
     multilayer networks.” Physics Reports 544.1 (2014): 1-122.
 
 ### Varying scale in multilayer networks
@@ -309,8 +308,7 @@ above) and re-assigned groups at incremental distance between 5-500m.
 For example, at the finest social scale, only individuals within 5m of
 one another were considered in the same group, whereas at the coarset
 social scale, only individuals within 500m of one another were
-considered in the same
-group.
+considered in the same group.
 
 ## Scale in multilayer networks in practice: case study results and discussion
 
@@ -322,7 +320,22 @@ Results and interpretation of social scale - blah blah blah
 
 ## Perspectives to advance multilayer networks
 
-### Landscape ecology
+### Habitat selection and space use
+
+Mayor et al. 2009 paper
+
+MRSF Laforge paper
+
+van Beest et al. 2014 scale paper
+
+1st/2nd/3rd order selection blah blah
+
+Paper: Habitat–performance relationships: finding the right metric at a
+given spatial scale Jean-Michel Gaillard1,\*, Mark Hebblewhite2, Anne
+Loison3, Mark Fuller4, Roger Powell5, Mathieu Basille1,6 and Bram Van
+Moorter1
+
+Multi-scale habitat selection modeling: a review and outlook
 
 ### Individual fitness and phenotypes
 
@@ -504,7 +517,7 @@ formation of the social environment (He et al. 2019).
 
 something something blah blah.
 
-Silk et al. (2018) presented some key multilayer questions in animal
+Silk et al. (2018) presented some key multilayer questions in animal
 behaviour research. While these questions represent an importanting
 starting point for multilayer networks, we present an additional set of
 questions relevant to the promise and problem of scale in mutlilayer
