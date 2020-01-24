@@ -187,7 +187,7 @@ rule has previously been applied to caribou at a distance of 50m
 (Peignier et al. 2019; Lesmerises et al. 2018). In all networks, nodes
 represented individuals, intralayer edges represented associations
 between individuals in a given habitat type, and interlayer edges
-represented **XXXX \[ALEC??\]**.
+represented connections between the same individuals across contexts.
 
 We weighted edges of social networks by the strength of association
 between caribou using the simple ratio index (SRI, Cairns and Schwager
