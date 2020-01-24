@@ -133,6 +133,8 @@ van Beest et al. 2014 scale paper
 
 Paper: Habitat–performance relationships: finding the right metric at a given spatial scale Jean-Michel Gaillard1,*, Mark Hebblewhite2, Anne Loison3, Mark Fuller4, Roger Powell5, Mathieu Basille1,6 and Bram Van Moorter1
 
+Multi-scale habitat selection modeling: a review and outlook
+
 ### Individual fitness and phenotypes
 
 Social network positions are frequently used to represent the social environment that an individual experiences or their social phenotype. Social phenotypes are increasingly linked to important fitness for individuals of various species, including primates (e.g. Brent, Ruiz-Lambides, & Platt, 2017; Thompson, 2019), dolphins (e.g. Stanton & Mann, 2012; Stanton, Gibson, & Mann, 2011), and birds (e.g. McDonald, 2007; Royle, Pike, Heeb, Richner, & Kolliker, 2012). The effect of scale on the relationship between an individual’s social network position and fitness may depend on the hypotheses being tested and logistical constraints. Two scales that are important for understanding fitness consequences in the context of social network positions are temporal and social scales (Almeling, Hammerschmidt, Sennhenn-Reulen, Freund, & Fischer, 2016; Berger, Lemaître, Allainé, Gaillard, & Cohas, 2015; Brent et al., 2017).
