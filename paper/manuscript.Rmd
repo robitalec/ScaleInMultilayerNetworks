@@ -91,7 +91,7 @@ Varying length of time window (used to define seasons). Starting with a window o
 
 
 1. time window position
-Varying position of time window (used to define seasons). Fixed length at 75. Window positions starting at 1, to + 75. So 1-75 is first iteration for winter and 75-150 is second iteration for "winter". Same for summer, starting at 215. Network layers for each season are constructed. 
+Varying position of time window (used to define seasons). Fixed length at 48 Window positions starting at 1, to + 48 So 1-48 is first iteration for winter and 48-96 is second iteration for "winter". Same for summer, starting at 215. Network layers for each season are constructed. 
 
 **Observational scale** (temorary header): Studies of social network analysis vary in the number and frequency of observations as well as the data collection technique used to generate networks (Davis et al. 2018; Webber and Vander Wal 2019). 
 
