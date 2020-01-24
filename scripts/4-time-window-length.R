@@ -46,6 +46,8 @@ group_times(
 )
 
 ### Generate networks for each n observations ----
+var <- 'winlength'
+
 # TODO: rm [1:2]
 # TODO: there shouldnt be 22 vs 17... 
 graphLs <- lapply(winlengths[1:2], function(len) {
@@ -80,17 +82,25 @@ graphLs <- lapply(winlengths[1:2], function(len) {
   
   # Calculate correlation of season layers
   set(eig, j = 'layercorr', value = layer_correlation(gLs))
-
+  eig[, c(var, splitBy) := tstrsplit(layer, '-', type.convert = TRUE)]
+  setnames(eig, 'ind', idcol)
   
+  # Calculate neighbors
+  layer_neighbors(sub, idcol, splitBy = col)
+
+  # and tidy output, prep for merge
+  outcols <- c('neigh', 'splitNeigh', idcol, col)
+  out <- unique(sub[, .SD, .SDcols = outcols])
+  setnames(out, col, splitBy)
+  
+  # Merge eigcent+correlations with neighbors
+  out[eig, on = c(idcol, splitBy)]
 })
 
 
 ### Multilayer network metrics ----
 # TODO: run neigh in lapply, combine with corr with eigen
 # TODO: 
-
-
-var <- 'winlength'
 
 corrs <- data.table(
   winlength = winlengths,
