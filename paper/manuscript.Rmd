@@ -41,7 +41,7 @@ Landscape classification data were provided by the Newfoundland and Labrador Wil
 
 We generated seasonal multilayer social networks consisting of habitat-specific monolayers. Each layer was the social association network generated in one of three habitat types (lichen, open, and closed). For habitat-specific networks, all GPS relocations were assigned to the corresponding habitat type and proximity-based social network layers were generated using the R package spatsoc (Robitaille et al. 2019) in *R version* (R Core Team 2020).
 
-Within each habitat-specific monolayer network, we assumed individuals were associating if simultaneous GPS fixes (i.e., recorded within 5 minutes of each other) were within a given distance of one another. Typically for ungulates and other gregarious mammals, the ‘chain rule’ is applied for group assignment. For GPS data, the chain rule is applied if discrete spatiotemporal GPS fixes buffered by a given distance formed a contiguous buffer for two or more individuals, even if some individuals within the buffer were not within the given distance of one another (Robitaille et al. 2019). Group assignment based on the chain rule has previously been applied to caribou at a distance of 50m (Peignier et al. 2019; Lesmerises et al. 2018). To assess the role of social scale in multilayer networks, we varied the threshold distance for group assignment between 5-500m (see *Social scale* section below). In all networks, nodes represented individuals, intralayer edges represented associations between individuals in a given habitat type, and interlayer edges represented **XXXX [ALEC??]**.
+Within each habitat-specific monolayer network, we assumed individuals were associating if simultaneous GPS fixes (i.e., recorded within 5 minutes of each other) were within a given distance of one another. Typically for ungulates and other gregarious mammals, the ‘chain rule’ is applied for group assignment. For GPS data, the chain rule is applied if discrete spatiotemporal GPS fixes buffered by a given distance formed a contiguous buffer for two or more individuals, even if some individuals within the buffer were not within the given distance of one another (Robitaille et al. 2019). Group assignment based on the chain rule has previously been applied to caribou at a distance of 50m (Peignier et al. 2019; Lesmerises et al. 2018). In all networks, nodes represented individuals, intralayer edges represented associations between individuals in a given habitat type, and interlayer edges represented **XXXX [ALEC??]**.
 
 We weighted edges of social networks by the strength of association between caribou using the simple ratio index (SRI, Cairns and Schwager 1987):
 
@@ -79,7 +79,7 @@ Finally, some weighted variables:
 * eigenvector centrality, summed across layers as described in Boccaletti, Stefano, et al. "The structure and dynamics of multilayer networks." Physics Reports 544.1 (2014): 1-122.
 
 
-### Scale in multilayer networks
+### Varying scale in multilayer networks
 
 #### Temporal scale
 
