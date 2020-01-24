@@ -30,17 +30,22 @@ group_times(
 ### Generate networks for each n observations ----
 maxn <- 750 #sub[, uniqueN(timegroup)]
 nstep <- 25
+
 # Randomly select n max observations
 randobs <- DT[, sample(unique(timegroup), size = maxn), season]
 
+var <- 'nobs'
+
 nets <- lapply(seq(10, maxn, by = nstep), function(n) {
+  col <- splitBy
+  
   # Select first n random timegroups, 
   #  adding new observations to the tail with each iteration
-  nsub <- DT[timegroup %in% randobs[, .SD[1:n], season]$V1]
+  sub <- DT[timegroup %in% randobs[, .SD[1:n], season]$V1]
 
   # Spatial grouping with spatsoc
   group_pts(
-    nsub,
+    sub,
     threshold = spatthresh,
     id = idcol,
     coords = projCols,
@@ -48,63 +53,41 @@ nets <- lapply(seq(10, maxn, by = nstep), function(n) {
     splitBy = splitBy
   )
   
-  # TODO: if dont find a weighted, then this is not needed and you can pull neigh out on a by.
-  
-  # usplit <- unique(na.omit(DT, cols = splitBy)[[splitBy]])
+  usplit <- unique(na.omit(sub, cols = col)[[col]])
   
   # GBI for each season
-  # gbiLs <- lapply(usplit, function(u) {
-  #   gbi <- get_gbi(
-  #     DT = nsub[get(splitBy) == u],
-  #     group = 'group',
-  #     id = idcol
-  #   )
-  # })
-
+  gbiLs <- list_gbi(sub, idcol, usplit, col)
+  
   # Generate networks for each season
-  # netLs <- lapply(
-  #   gbiLs,
-  #   get_network,
-  #   data_format = 'GBI',
-  #   association_index = 'SRI'
-  # )
+  netLs <- list_nets(gbiLs)
   
-  # gLs <- lapply(
-  #   netLs,
-  #   graph.adjacency,
-  #   mode = 'undirected',
-  #   diag = FALSE,
-  #   weighted = TRUE
-  # )
+  # Generate graphs for each season
+  gLs <- list_graphs(netLs)
+  names(gLs) <- paste0(n, '-', usplit)
   
-  neigh(nsub, idcol, splitBy)
+  # Calculate eigenvector centrality for each season
+  eig <- layer_eigen(gLs)
   
-  out <- unique(nsub[, .SD, 
-                   .SDcols = c('neighborhood', 'splitNeighborhood', idcol, splitBy)])
-  set(out, j = 'nobs', value = n)
+  # Calculate correlation of season layers
+  set(eig, j = 'layercorr', value = layer_correlation(gLs))
+  eig[, c(var, splitBy) := tstrsplit(layer, '-', type.convert = TRUE)]
+  setnames(eig, 'ind', idcol)
   
+  # Calculate neighbors
+  layer_neighbors(sub, idcol, splitBy = col)
+  
+  # and tidy output, prep for merge
+  outcols <- c('neigh', 'splitNeigh', idcol, col)
+  out <- unique(sub[, .SD, .SDcols = outcols])
+  setnames(out, col, splitBy)
+  
+  # Merge eigcent+correlations with neighbors
+  out[eig, on = c(idcol, splitBy)]
 })
+
 # TODO: check "found duplicate id in a timegroup and/or splitBy - does your group_times threshold match the fix rate?"
 out <- rbindlist(nets)
 
-### Multilayer network metrics ----
-var <- 'nobs'
-
-# Redundancy
-redundancy(out)
-stopifnot(out[!between(connredund, 0, 1), .N] == 0)
-
-# Multidegree
-multidegree(out, 'splitNeighborhood', idcol, 'nobs')
-
-# Degree deviation
-degdeviation(out, 'splitNeighborhood', idcol, 'nobs')
-
-# Relevance
-relevance(out, idcol, splitBy = c('nobs', splitBy))
-stopifnot(out[!between(relev, 0, 1), .N] == 0)
-
-# TODO: network correlation
 
 ### Output ----
 saveRDS(out, 'data/derived-data/5-number-of-observations.Rds')
