@@ -271,6 +271,17 @@ length.
     iteration for “winter”. Same for summer, starting at 215. Network
     layers for each season are constructed.
 
+**Observational scale** (temorary header): Studies of social network
+analysis vary in the number and frequency of observations as well as the
+data collection technique used to generate networks (Davis et al. 2018;
+Webber and Vander Wal 2019).
+
+Randomly select max number of observations - timegroups - (right now
+750). For each iteration, include n observations for each season for all
+individuals. Subsequent iterations include nstep more (right now 25),
+along with previously included to remove stochasticity. Parallels with
+observation data.
+
 #### Spatial scale
 
 To assess the influence of spatial scale on multilayer networks, we
@@ -298,20 +309,8 @@ above) and re-assigned groups at incremental distance between 5-500m.
 For example, at the finest social scale, only individuals within 5m of
 one another were considered in the same group, whereas at the coarset
 social scale, only individuals within 500m of one another were
-considered in the same group.
-
-#### Observational scale
-
-Studies of social network analysis vary in the number and frequency of
-observations as well as the data collection technique used to generate
-networks (Davis et al. 2018; Webber and Vander Wal 2019).
-
-Randomly select max number of observations - timegroups - (right now
-750). For each iteration, include n observations for each season for all
-individuals. Subsequent iterations include nstep more (right now 25),
-along with previously included to remove stochasticity. Parallels with
-observation
-data.
+considered in the same
+group.
 
 ## Scale in multilayer networks in practice: case study results and discussion
 
