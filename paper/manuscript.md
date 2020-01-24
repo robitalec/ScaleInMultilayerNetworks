@@ -260,16 +260,16 @@ time-window approach to define seasons.
 
 1.  time window length
 
-Varying length of time window (used to define seasons). From 75 to 150
-right now. Fixed start julian day for winter is day 1 and for summer is
-215. Network layers for winter and summer are calculated for each window
-length.
+Varying length of time window (used to define seasons). Starting with a
+window of day 1-40 and using a moving window to go to day 1-100. Fixed
+start julian day for winter is day 1 and for summer is 215. Network
+layers for winter and summer are calculated for each window length.
 
 1.  time window position Varying position of time window (used to define
-    seasons). Fixed length at 75. Window positions starting at 1, to +
-    75. So 1-75 is first iteration for winter and 75-150 is second
-    iteration for “winter”. Same for summer, starting at 215. Network
-    layers for each season are constructed.
+    seasons). Fixed length at 48 Window positions starting at 1, to + 48
+    So 1-48 is first iteration for winter and 48-96 is second iteration
+    for “winter”. Same for summer, starting at 215. Network layers for
+    each season are constructed.
 
 **Observational scale** (temorary header): Studies of social network
 analysis vary in the number and frequency of observations as well as the
@@ -471,13 +471,12 @@ network representing the continuous and simultaneous movement
 trajectories of animals. Another potential application would be to
 generate social networks during times when animals are engaged in
 different behaviours, including traveling, interacting, or foraging
-**\[JWT: these are not mutually exclusive behaviors, which may not
-matter here\]** (e.g. Muller et al. 2018; Finn et al. 2019) and
-construct a multilayer network based on behaviour-specific monolayer
-networks (e.g. Smith-Aguilar et al. 2019). Importantly, the key to
-incorporating movement in multilayer networks across scales is the
-technological advancements available to overcome previous limitations
-(see Hughey et al. 2018).
+(e.g. Muller et al. 2018; Finn et al. 2019) and construct a multilayer
+network based on behaviour-specific monolayer networks
+(e.g. Smith-Aguilar et al. 2019). Importantly, the key to incorporating
+movement in multilayer networks across scales is the technological
+advancements available to overcome previous limitations (see Hughey et
+al. 2018).
 
 Given the existing framework for constructing multilayer networks from
 behavioural layers (e.g. Smith-Aguilar et al. 2019), movement layers
@@ -493,12 +492,12 @@ example, social processes may be an emergent property of the landscape
 because animals aggregate at resources, such as waterholes
 (Chamaillé-Jammes et al. 2008). Movement to, from, or within habitat
 patches can also contribute to the formation of the social environment
-**\[JWT: how? I think it would help to clarify the example\]**(Spiegel
-et al. 2016). Incorporating movement ecology within a multilayer network
-framework is a logical next step for a burgeoning field. In particular,
-when association networks are habitat-specific, we suggest the
-integration of movement and space use in multilayer networks provides
-novel insights into the effects of habitat configuration on the
+(Spiegel et al. 2016). For example, XXX **\[JWT: how? I think it would
+help to clarify the example\]**. Incorporating movement ecology within a
+multilayer network framework is a logical next step for a burgeoning
+field. In particular, when association networks are habitat-specific, we
+suggest the integration of movement and space use in multilayer networks
+provides novel insights into the effects of habitat configuration on the
 formation of the social environment (He et al. 2019).
 
 ## Conclusions
