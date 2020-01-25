@@ -48,6 +48,7 @@ group_times(
 ### Generate networks for each n observations ----
 var <- 'winpos'
 
+# TODO: switch to season*lc
 
 nets <- lapply(winpositions, function(pos) {
   col <- paste0('season', pos)
