@@ -36,6 +36,8 @@ open <- c(1, 6, 7, 9)
 forest <- c(2, 3, 4, 5)
 lichen <- 8
 
+mlc <- mask(lc, water)
+
 rcl <- matrix(c(
   open,
   forest,
