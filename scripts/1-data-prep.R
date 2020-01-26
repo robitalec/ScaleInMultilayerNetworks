@@ -49,11 +49,11 @@ rcl <- matrix(c(
 ncol = 2)
 rclnms <- list(open = 1, forest = 2, lichen = 3)
 
-reclass2 <- reclassify(lc, rcl, include.lowest = TRUE)
+reclass <- reclassify(mlc, rcl, include.lowest = TRUE)
 
 
 ### Landcover sample ----
-DT[, 'lc302' := extract(reclass2, matrix(c(EASTING, NORTHING), ncol = 2))]
+DT[, 'lc30' := extract(reclass, matrix(c(EASTING, NORTHING), ncol = 2))]
 
 ### Sub data ----
 ## 2017 summer and 2018 winter
