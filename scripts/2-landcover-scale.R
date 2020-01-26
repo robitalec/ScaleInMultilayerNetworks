@@ -46,6 +46,10 @@ group_times(
 ### Generate networks for each landcover resolution ----
 var <- 'lcres'
 
+# Also include original raster
+lsres <- c(30, lsres)
+lslc <- c(lc, lslc)
+
 nets <- lapply(lsres, function(res) {
   col <- paste0('lc', res)
   
