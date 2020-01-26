@@ -21,7 +21,8 @@ tempthresh <- '5 minutes'
 
 ## Window lengths and positions
 winlength <- 48
-winlengths <- seq(40, 100, 5)
+maxwinlength <- 100
+winlengths <- seq(40, maxwinlength, 5)
 
 winpositions <- seq(1, 48, by = 1)
 
