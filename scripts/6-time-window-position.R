@@ -27,8 +27,8 @@ DT[, season := NULL]
 l <- lapply(winpositions, function(pos) {
   col <- paste0('season', pos)
   
-  DT[between(JDate, 1 + pos, 1 + pos + winlength), (col) := 'winter']
-  DT[between(JDate, 215 + pos, 215 + pos + winlength), (col) := 'summer']
+  DT[between(JDate, winterlow + pos, winterlow + pos + winlength), (col) := 'winter']
+  DT[between(JDate, summerlow + pos, summerlow + pos + winlength), (col) := 'summer']
   
   # Fake output
   pos

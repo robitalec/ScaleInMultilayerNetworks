@@ -57,11 +57,49 @@ DT[, 'lc30' := extract(reclass, matrix(c(EASTING, NORTHING), ncol = 2))]
 
 ### Sub data ----
 ## 2017 summer and 2018 winter
-sub <- DT[Year >= 2017 & JDate > summerlow | Year == 2018 & JDate < winterlow + 100]
+sub <- DT[Year >= 2017 & JDate > summerlow | 
+            Year == 2018 & JDate < winterlow + maxwinlength]
 
-# Sub only individuals with data in both seasons
-dropids <- c("FO2017011", "FO2016015", "FO2016009", "FO2018002",
-             "FO2016006", "FO2016008", "FO2016003", "FO2016011")
+
+## Which individuals have data in both seasons?
+# Window length
+l <- lapply(winlengths, function(l) {
+  col <- paste0('season', l)
+  
+  sub[between(JDate, winterlow, winterlow + l), (col) := 'winter']
+  sub[between(JDate, summerlow, summerlow + l), (col) := 'summer']
+  
+  # Fake output
+  l
+})
+
+winlendrop <- lapply(paste0('season', winlengths), function(col) {
+  sub[, sum(!is.na(get(col))), c(idcol, col)][!is.na(get(col)), .N, idcol][N < 2, get(idcol)]
+})
+
+sub[, (grep('season[1-9]', colnames(sub), value = TRUE)) := NULL]
+
+# Window position
+l <- lapply(winpositions, function(pos) {
+  col <- paste0('season', pos)
+  
+  sub[between(JDate, winterlow + pos, winterlow + pos + winlength), (col) := 'winter']
+  sub[between(JDate, summerlow + pos, summerlow + pos + winlength), (col) := 'summer']
+  
+  # Fake output
+  pos
+})
+
+winposdrop <- lapply(paste0('season', winpositions), function(col) {
+  sub[, sum(!is.na(get(col))), c(idcol, col)][!is.na(get(col)), .N, idcol][N < 2, get(idcol)]
+})
+
+sub[, (grep('season[1-9]', colnames(sub), value = TRUE)) := NULL]
+
+
+# Combine lists
+dropids <- unique(c(unlist(winlendrop), unlist(winposdrop)))
+
 sub <- sub[!get(idcol) %in% dropids]
 subseasons <- sub[!is.na(season)]
 
