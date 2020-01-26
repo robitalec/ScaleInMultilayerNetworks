@@ -34,8 +34,6 @@ DT[, (paste0('lc', lsres)) :=
       lapply(lslc, function(lc) extract(lc, matrix(c(EASTING, NORTHING), ncol = 2)))]
 
 ### Temporal grouping with spatsoc ----
-tempthresh <- '5 minutes'
-
 group_times(
   DT,
   datetime =  c(datecol, timecol),
