@@ -22,3 +22,6 @@ splitBy <- 'season'
 ## spatsoc
 spatthresh <- 50
 tempthresh <- '5 minutes'
+
+## Window positions
+winlength <- 48
