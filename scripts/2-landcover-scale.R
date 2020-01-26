@@ -20,10 +20,8 @@ DT <- readRDS('data/derived-data/sub-seasons-fogo-caribou.Rds')
 
 lc <- raster('data/derived-data/1-reclass-lc.Rds')
 
-water <- readOGR('data/Landcover/FogoPoly.shp')
 
-
-### Reclassify raster ----
+### Modal window ----
 lsres <- c(100, 250)#, 500, 1000)
 lslc <- lapply(lsres, function(res) {
   winmove(lc, type = 'circle', win_fun = modal)
@@ -47,6 +45,7 @@ var <- 'lcres'
 # Also include original raster
 lsres <- c(30, lsres)
 lslc <- c(lc, lslc)
+
 
 nets <- lapply(lsres, function(res) {
   col <- paste0('lc', res)
