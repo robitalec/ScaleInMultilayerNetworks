@@ -24,8 +24,6 @@ alloc.col(DT)
 # Remove season column from 1-prep
 DT[, season := NULL]
 
-winpositions <- seq(1, 48, by = 1)
-  
 l <- lapply(winpositions, function(pos) {
   col <- paste0('season', pos)
   

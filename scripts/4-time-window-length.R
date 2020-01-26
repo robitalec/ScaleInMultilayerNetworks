@@ -24,8 +24,6 @@ alloc.col(DT)
 # Remove season column from 1-data-prep.R
 DT[, season := NULL]
 
-winlengths <- seq(40, 100, 5)
-  
 l <- lapply(winlengths, function(l) {
   col <- paste0('season', l)
   
