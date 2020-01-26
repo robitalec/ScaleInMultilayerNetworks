@@ -2,22 +2,28 @@
 # Alec Robitaille
 
 ### Packages ----
-pkgs <- c('data.table', 'rgdal')
+pkgs <- c('data.table', 'rgdal', 'raster')
 p <- lapply(pkgs, library, character.only = TRUE)
 
 # TODO: timezones
 # TODO: which individuals are dropped
 
+### Variables ----
+source('scripts/0-variables.R')
+
+
 ### Data ----
 DT <- fread('data/raw-data/FogoCaribou.csv')
 
-source('scripts/0-variables.R')
+lc <- raster('data/raw-data/Landcover/FogoSDSS_RS.tif')
+
+water <- readOGR('data/raw-data/FogoPoly/FogoPoly.shp')
 
 
 ### Date and time columns ----
 DT[, c(datecol, timecol) := .(as.IDate(get(datecol)), as.ITime(get(timecol)))]
 
-## Seasons
+# Seasons
 DT[between(JDate, winterlow, winterhigh), season := 'winter']
 DT[between(JDate, summerlow, summerhigh), season := 'summer']
 
