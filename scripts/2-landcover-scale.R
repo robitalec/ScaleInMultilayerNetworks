@@ -18,41 +18,15 @@ source('scripts/0-variables.R')
 ### Data ----
 DT <- readRDS('data/derived-data/sub-seasons-fogo-caribou.Rds')
 
-lc <- raster('data/Landcover/FogoSDSS_RS.tif')
+lc <- raster('data/derived-data/1-reclass-lc.Rds')
 
 water <- readOGR('data/Landcover/FogoPoly.shp')
 
 
 ### Reclassify raster ----
-# TODO: move this to prep
-# TODO: include landcover raw resolution in prepared data
-mlc <- mask(lc, water)
-
-open <- c(1, 6, 7, 9)
-forest <- c(2, 3, 4, 5)
-lichen <- 8
-
-rcl <- matrix(c(
-	open,
-	forest,
-	lichen,
-	rep(1, length(open)),
-	rep(2, length(forest)),
-	rep(3, length(lichen))
-),
-ncol = 2)
-rclnms <- list(open = 1, forest = 2, lichen = 3)
-
-reclass <- reclassify(mlc, rcl)
-
-lsres <- c(0, 100, 250)#, 500, 1000)
+lsres <- c(100, 250)#, 500, 1000)
 lslc <- lapply(lsres, function(res) {
-  if (res == 0) {
-    reclass
-  } else {
-    winmove(reclass, res, type = 'circle', win_fun = modal)  
-  }
-  
+  winmove(lc, type = 'circle', win_fun = modal)
 })
 
 ### Sample landcover ----

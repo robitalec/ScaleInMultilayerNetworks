@@ -25,9 +25,31 @@ DT[between(JDate, summerlow, summerhigh), season := 'summer']
 ### Project relocations ----
 DT[, (projCols) := as.data.table(project(cbind(get(xcol), get(ycol)), utm21N))]
 
+### Landcover prep ----
+open <- c(1, 6, 7, 9)
+forest <- c(2, 3, 4, 5)
+lichen <- 8
+
+rcl <- matrix(c(
+  open,
+  forest,
+  lichen,
+  rep(1, length(open)),
+  rep(2, length(forest)),
+  rep(3, length(lichen))
+),
+ncol = 2)
+rclnms <- list(open = 1, forest = 2, lichen = 3)
+
+reclass <- reclassify(mlc, rcl)
+
+
+### Landcover sample ----
+DT[, 'lc30' := extract(reclass, matrix(c(EASTING, NORTHING), ncol = 2))]
+
 ### Sub data ----
 ## 2017 summer and 2018 winter
-sub <- DT[Year >= 2017 & JDate > summerlow | Year == 2018]
+sub <- DT[Year >= 2017 & JDate > summerlow | Year == 2018 & JDate < winterlow + 100]
 
 # Sub only individuals with data in both seasons
 dropids <- c("FO2017011", "FO2016015", "FO2016009", "FO2018002",
