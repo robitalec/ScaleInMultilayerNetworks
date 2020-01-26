@@ -58,5 +58,7 @@ sub <- sub[!get(idcol) %in% dropids]
 subseasons <- sub[!is.na(season)]
 
 ### Output ----
-saveRDS(sub, 'data/derived-data/sub-fogo-caribou.Rds')
-saveRDS(subseasons, 'data/derived-data/sub-seasons-fogo-caribou.Rds')
+saveRDS(sub, 'data/derived-data/1-sub-fogo-caribou.Rds')
+saveRDS(subseasons, 'data/derived-data/1-sub-seasons-fogo-caribou.Rds')
+
+saveRDS(reclass, 'data/derived-data/1-reclass-lc.Rds')
