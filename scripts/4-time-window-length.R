@@ -58,13 +58,14 @@ nets <- lapply(winlengths, function(len) {
     id = idcol,
     coords = projCols,
     timegroup = 'timegroup',
-    splitBy = col
+    splitBy = c(col, lccol)
   )
+  
   
   usplit <- unique(na.omit(sub, cols = col)[[col]])
 
   # GBI for each season
-  gbiLs <- list_gbi(sub, idcol, usplit, col)
+  gbiLs <- list_gbi(sub, idcol, c(col, lccol))
 
   # Generate networks for each season
   netLs <- list_nets(gbiLs)
