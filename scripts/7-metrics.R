@@ -33,6 +33,9 @@ DT <- readRDS(path)
 alloc.col(DT)
 
 ### Multilayer network metrics ----
+property_matrix(DT[winlength==40], idcol, 'layer', 'splitNeigh')
+
+
 # Redundancy
 # TODO: can two layers have the same connective redundancy if they both have the same degree?
 connective_redudancy(DT)
