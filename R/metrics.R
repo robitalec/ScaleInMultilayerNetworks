@@ -200,6 +200,21 @@ layer_correlation <- function(gLs, attr = 'weight') {
 
 
 
+#' Property Matrix
+#' 
+#' @param DT 
+#' @param id 
+#' @param layer 
+#' @param metric 
+#'
+#' @return
+#' @references Bródka P, Chmiel A,Magnani M, Ragozini G. 2018 Quantifying layer
+#' similarity in multiplex networks: a systematic study. R.Soc.opensci. 5:171747.
+#' http://dx.doi.org/10.1098/rsos.171747
+#' 
+#' @export
+#'
+#' @examples
 property_matrix <- function(DT, id, layer, metric) {
   dcast(DT, reformulate(id, response = layer), value.var = metric)
 }
