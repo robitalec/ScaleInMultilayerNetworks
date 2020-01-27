@@ -59,7 +59,7 @@ g3 <- g + geom_line(aes(y = neigh))
 
 ## Plots that separate seasons
 g <- g +
-  facet_wrap(~season) +
+  facet_grid(~season + lc30) +
   guides(color = FALSE)
 
 # Number of observations vs split neighborhood (by layer) 
