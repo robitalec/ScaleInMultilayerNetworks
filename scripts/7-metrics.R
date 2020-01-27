@@ -3,8 +3,7 @@
 
 
 ### Packages ----
-pkgs <- c('data.table',
-          'ScaleInMultilayerNetworks')
+pkgs <- c('data.table', 'ScaleInMultilayerNetworks')
 p <- lapply(pkgs, library, character.only = TRUE)
 
 
@@ -14,23 +13,22 @@ source('scripts/0-variables.R')
 
 ### Data ----
 var <- 'winlength'
+lccol <- 'lc30'
+splitBy <- c(var, lccol)
 
 if (var == 'lcres') {
   path <- 'data/derived-data/2-landcover-scale.Rds'
-  DT <- readRDS(path)
 } else if (var == 'spatialthreshold') {
   path <- 'data/derived-data/3-spatial-threshold.Rds'
-  DT <- readRDS(path)
 } else if (var == 'winlength') {
   path <- 'data/derived-data/4-time-window-length.Rds'
-  DT <- readRDS(path)
 } else if (var == 'nobs') {
   path <- 'data/derived-data/5-number-of-observations.Rds'
-  DT <- readRDS(path)
 } else if (var == 'winpos') {
   path <- 'data/derived-data/6-time-window-position.Rds'
-  DT <- readRDS(path)
 }
+DT <- readRDS(path)
+
 
 alloc.col(DT)
 
