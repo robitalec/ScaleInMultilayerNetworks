@@ -160,7 +160,7 @@ layer_relevance <- function(DT, id, splitBy) {
 
 
 
-#' Calculate eigenvector centrality for each graph in a list
+#' Calculate graph strength for each graph in a list
 #'
 #' @param graphLs 
 #'
@@ -168,7 +168,7 @@ layer_relevance <- function(DT, id, splitBy) {
 #' @export
 #'
 #' @examples
-layer_eigen <- function(graphLs) {
+layer_strength <- function(graphLs) {
   data.table::setnames(data.table::rbindlist(
     lapply(
       lapply(graphLs, function(g) {
