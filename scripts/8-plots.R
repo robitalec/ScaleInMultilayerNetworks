@@ -15,6 +15,8 @@ source('scripts/0-variables.R')
 
 ### Data ----
 var <- 'winlength'
+lccol <- 'lc30'
+splitBy <- c(lccol, 'season')
 
 if (var == 'lcres') {
   DT <- readRDS('data/derived-data/2-landcover-scale.Rds')
@@ -32,34 +34,36 @@ alloc.col(DT)
 
 
 ### Plots ----
-# TODO: think about cutting these off where they settle and including extended versions in supplemental
-
 # ggplot(DT) +
 # geom_line(aes(get(var), netcor))
 
 # To average columns...
-# metriccols <- c('multideg', 'degdev', 'splitNeighborhood', 'relev')
-# DT[, (metriccols) := lapply(.SD, mean), .SDcols = metriccols, by = get(var)]
+metriccols <- c('multideg', 'degdev', 'neigh', 'relev')
+DT[, (metriccols) := lapply(.SD, mean), .SDcols = metriccols, 
+   by = c(var)]
+
+metriccols <- c('splitNeigh')
+DT[, (metriccols) := lapply(.SD, mean), .SDcols = metriccols, 
+   by = c(var, splitBy)]
 
 ## Plots that combine seasons
-g <- ggplot(DT, aes(x = get(var),
-                     color = get(idcol),
-                     group = get(idcol))) + 
+DT[, grp := do.call(paste, c(.SD, sep = '-')), .SDcols = splitBy]
+g <- ggplot(DT, aes(x = get(var), color = factor(lc30), group = grp)) + 
   guides(color = FALSE) + 
   labs(x = var)
 
-# Number of observations vs multidegree
-g1 <- g + geom_line(aes(y = multideg))
+# Number of observations vs layersd
+g1 <- g + geom_line(aes(y = layersd))
 
 # Number of observations vs degree deviation
 g2 <- g + geom_line(aes(y = degdev))
 
 # Number of observations vs neighborhood (combined layers)
-g3 <- g + geom_line(aes(y = neigh))
+g3 <- g + geom_line(aes(y = splitNeigh))
 
 ## Plots that separate seasons
 g <- g +
-  facet_grid(~season + lc30) +
+  # facet_grid(~season + lc30) +
   guides(color = FALSE)
 
 # Number of observations vs split neighborhood (by layer) 
@@ -73,8 +77,9 @@ g6 <- g + geom_line(aes(y = eigcent))
 
 
 g1 / 
-  g2 / 
-  # g3 / 
+  g2 /
+  g3 /
   g4 / 
-  # g5 /
+  g5 /
   g6
+
