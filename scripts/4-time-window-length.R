@@ -45,9 +45,7 @@ group_times(
 ### Generate networks for each n observations ----
 var <- 'winlength'
 
-# TODO: rm [1:2]
-# TODO: there shouldnt be 22 vs 17... 
-nets <- lapply(winlengths[1:200], function(len) {
+nets <- lapply(winlengths, function(len) {
   col <- paste0('season', len)
   
   sub <- DT[!is.na(get(col))]
