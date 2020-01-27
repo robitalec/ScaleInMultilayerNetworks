@@ -48,8 +48,9 @@ lccol <- 'lc30'
 
 nets <- lapply(winlengths, function(len) {
   col <- paste0('season', len)
+  splitBy <- c(col, lccol)
   
-  sub <- DT[!is.na(get(col)) & !is.na(get(lccol))]
+  sub <- na.omit(DT, cols = splitBy)
   
   # Spatial grouping with spatsoc
   group_pts(
