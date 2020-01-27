@@ -33,7 +33,7 @@ DT <- readRDS(path)
 alloc.col(DT)
 
 ### Multilayer network metrics ----
-property_matrix(DT[winlength==40], idcol, 'layer', 'splitNeigh')
+DT[, property_matrix(.SD, idcol, 'layer', 'splitNeigh'), winlength]
 
 
 # Redundancy
