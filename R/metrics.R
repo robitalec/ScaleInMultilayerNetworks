@@ -197,3 +197,11 @@ layer_correlation <- function(gLs, attr = 'weight') {
     gLs[[2]], attr = attr, sparse = FALSE
   )))
 }
+
+
+
+property_matrix <- function(DT, id, layer, metric) {
+  dcast(DT, reformulate(id, response = layer), value.var = metric)
+}
+
+
