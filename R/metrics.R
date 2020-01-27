@@ -216,7 +216,7 @@ layer_correlation <- function(gLs, attr = 'weight') {
 #'
 #' @examples
 property_matrix <- function(DT, id, layer, metric) {
-  dcast(DT, reformulate(id, response = layer), value.var = metric)
+  data.table::dcast(DT, reformulate(id, response = layer), value.var = metric)
 }
 
 
