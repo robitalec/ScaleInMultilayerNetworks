@@ -4,8 +4,7 @@
 
 ### Packages ----
 pkgs <- c('data.table',
-          'ggplot2',
-          'patchwork')
+          'ScaleInMultilayerNetworks')
 p <- lapply(pkgs, library, character.only = TRUE)
 
 
