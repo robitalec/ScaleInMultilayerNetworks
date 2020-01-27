@@ -12,10 +12,12 @@
 #' @export
 #'
 #' @examples
-list_gbi <- function(DT, id, splitList, splitBy, group = 'group') {
-  lapply(splitList, function(s) {
+list_gbi <- function(DT, id, splitBy, group = 'group') {
+  splits <- unique(DT[, .SD, .SDcols = splitBy])
+  
+  lapply(seq(nrow(splits)), function(s) {
     gbi <- spatsoc::get_gbi(
-      DT = DT[get(splitBy) == s],
+      DT = DT[splits[s], on = splitBy],
       group = group,
       id = id
     )
