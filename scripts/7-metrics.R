@@ -49,6 +49,7 @@ multi_degree(DT, 'splitNeigh', idcol, splitBy)
 deviation_degree(DT, 'splitNeigh', idcol, splitBy)
 
 # Relevance
+# TODO: check range 
 layer_relevance(DT, idcol, splitBy = splitBy)
 stopifnot(DT[!between(relev, 0, 1), .N] == 0)
 
