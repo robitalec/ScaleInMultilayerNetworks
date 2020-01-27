@@ -63,36 +63,35 @@ nets <- lapply(winlengths, function(len) {
   )
   
   
-  usplit <- unique(na.omit(sub, cols = col)[[col]])
-
   # GBI for each season
-  gbiLs <- list_gbi(sub, idcol, c(col, lccol))
+  gbiLs <- list_gbi(sub, idcol, splitBy)
 
   # Generate networks for each season
   netLs <- list_nets(gbiLs)
   
   # Generate graphs for each season
   gLs <- list_graphs(netLs)
-  names(gLs) <- paste0(len, '-', usplit)
+  names(gLs) <- names(gbiLs)
   
   # Calculate eigenvector centrality for each season
   eig <- layer_eigen(gLs)
-  
-  # Calculate correlation of season layers
-  set(eig, j = 'layercorr', value = layer_correlation(gLs))
-  eig[, c(var, splitBy) := tstrsplit(layer, '-', type.convert = TRUE)]
+  eig[, (splitBy) := tstrsplit(layer, '-', type.convert = TRUE)]
   setnames(eig, 'ind', idcol)
   
+  # Calculate correlation of season layers
+  # set(eig, j = 'layercorr', value = layer_correlation(gLs))
+
+  
   # Calculate neighbors
-  layer_neighbors(sub, idcol, splitBy = col)
+  layer_neighbors(sub, idcol, splitBy = splitBy)
 
   # and tidy output, prep for merge
-  outcols <- c('neigh', 'splitNeigh', idcol, col)
+  outcols <- c('neigh', 'splitNeigh', idcol, splitBy)
   out <- unique(sub[, .SD, .SDcols = outcols])
-  setnames(out, col, splitBy)
   
   # Merge eigcent+correlations with neighbors
   out[eig, on = c(idcol, splitBy)]
+  setnames(out, col, gsub('[0-9]', '', col))
 })
 
 out <- rbindlist(nets)
