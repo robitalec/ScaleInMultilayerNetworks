@@ -4,16 +4,16 @@
 \alias{layer_relevance}
 \title{Relevance}
 \usage{
-layer_relevance(DT, id, var, splitBy)
+layer_relevance(DT, id, splitBy)
 }
 \arguments{
 \item{DT}{}
 
 \item{id}{}
 
-\item{var}{}
-
 \item{splitBy}{}
+
+\item{var}{}
 }
 \description{
 Proportion of neighbours present on each layer.
