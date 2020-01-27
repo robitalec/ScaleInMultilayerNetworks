@@ -44,11 +44,12 @@ group_times(
 
 ### Generate networks for each n observations ----
 var <- 'winlength'
+lccol <- 'lc30'
 
 nets <- lapply(winlengths, function(len) {
   col <- paste0('season', len)
   
-  sub <- DT[!is.na(get(col))]
+  sub <- DT[!is.na(get(col)) & !is.na(get(lccol))]
   
   # Spatial grouping with spatsoc
   group_pts(
