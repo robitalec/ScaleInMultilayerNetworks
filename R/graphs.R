@@ -15,13 +15,16 @@
 list_gbi <- function(DT, id, splitBy, group = 'group') {
   splits <- unique(DT[, .SD, .SDcols = splitBy])
   
-  lapply(seq(nrow(splits)), function(s) {
+  ls <- lapply(seq(nrow(splits)), function(s) {
     gbi <- spatsoc::get_gbi(
       DT = DT[splits[s], on = splitBy],
       group = group,
       id = id
     )
   })
+  
+  names(ls) <- splits[, do.call(paste, c(.SD, sep = '-'))]
+  ls
 }
 
 
