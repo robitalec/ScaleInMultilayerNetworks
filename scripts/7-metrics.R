@@ -58,11 +58,11 @@ saveRDS(DT, path)
 
 
 ## ARCHIVE
-dcast(ml, ANIMAL_ID ~ get(var), value.var = 'cent')
+# dcast(ml, ANIMAL_ID ~ get(var), value.var = 'cent')
 
 # Network correlations
-netcors <- data.table(
-  cornet = vapply(seq_along(netLs)[-length(netLs)], function(i) {
-    cor(c(netLs[[i]]), c(netLs[[i + 1]]))
-  }, FUN.VALUE = 42.0),
-  spatscale = unique(ml$spatscale)[-length(netLs)])
+# netcors <- data.table(
+#   cornet = vapply(seq_along(netLs)[-length(netLs)], function(i) {
+#     cor(c(netLs[[i]]), c(netLs[[i + 1]]))
+#   }, FUN.VALUE = 42.0),
+#   spatscale = unique(ml$spatscale)[-length(netLs)])
