@@ -33,8 +33,9 @@ DT <- readRDS(path)
 alloc.col(DT)
 
 ### Multilayer network metrics ----
-DT[, property_matrix(.SD, idcol, 'layer', 'splitNeigh'), winlength]
-
+matrices <- DT[, property_matrix(.SD, idcol, 'layer', 'splitNeigh'), var]
+layersim <- matrices[, .(layersd = sd(unlist(.SD))), winlength, .SDcols = patterns('FO')]
+DT[layersim, layersd := layersd, on = var]
 
 # Redundancy
 # TODO: can two layers have the same connective redundancy if they both have the same degree?
