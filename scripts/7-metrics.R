@@ -38,13 +38,14 @@ connective_redudancy(DT)
 stopifnot(DT[!between(connredund, 0, 1), .N] == 0)
 
 # Multidegree
-multi_degree(DT, 'splitNeigh', idcol, var)
+multi_degree(DT, 'splitNeigh', idcol, splitBy)
 
 # Degree deviation
-deviation_degree(DT, 'splitNeigh', idcol, var)
+deviation_degree(DT, 'splitNeigh', idcol, splitBy)
 
 # Relevance
-layer_relevance(DT, idcol, var, splitBy = splitBy)
+# TODO: check var or splitBy here
+layer_relevance(DT, idcol, splitBy = splitBy)
 stopifnot(DT[!between(relev, 0, 1), .N] == 0)
 
 
