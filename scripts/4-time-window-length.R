@@ -92,6 +92,9 @@ nets <- lapply(winlengths, function(len) {
   # Merge eigcent+correlations with neighbors
   out[eig, on = c(idcol, splitBy)]
   setnames(out, col, gsub('[0-9]', '', col))
+  
+  # Preserve window length
+  set(out, j = var, value = len)
 })
 
 out <- rbindlist(nets)
