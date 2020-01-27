@@ -27,8 +27,8 @@ DT[, season := NULL]
 l <- lapply(winlengths, function(l) {
   col <- paste0('season', l)
   
-  DT[between(JDate, 1, 1 + l), (col) := 'winter']
-  DT[between(JDate, 215, 215 + l), (col) := 'summer']
+  DT[between(JDate, winterlow, winterlow + l), (col) := 'winter']
+  DT[between(JDate, summerlow, summerlow + l), (col) := 'summer']
   
   # Fake output
   l
