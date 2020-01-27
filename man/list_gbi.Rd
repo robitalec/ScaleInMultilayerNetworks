@@ -4,18 +4,18 @@
 \alias{list_gbi}
 \title{GBI}
 \usage{
-list_gbi(DT, id, splitList, splitBy, group = "group")
+list_gbi(DT, id, splitBy, group = "group")
 }
 \arguments{
 \item{DT}{}
 
 \item{id}{}
 
-\item{splitList}{}
-
 \item{splitBy}{}
 
 \item{group}{}
+
+\item{splitList}{}
 }
 \description{
 GBI
