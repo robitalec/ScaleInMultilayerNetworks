@@ -169,11 +169,12 @@ layer_relevance <- function(DT, id, var, splitBy) {
 #'
 #' @examples
 layer_eigen <- function(graphLs) {
-  data.table::rbindlist(
+  data.table::setnames(data.table::rbindlist(
     lapply(
       lapply(graphLs, function(g) {
         igraph::eigen_centrality(g)$vector}), stack),
-    idcol = 'layer')[, ind := as.character(ind)]
+    idcol = 'layer')[, ind := as.character(ind)],
+    'values', 'eigcent')
 }
 
 
