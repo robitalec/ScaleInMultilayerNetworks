@@ -42,7 +42,7 @@ alloc.col(DT)
 # DT[, (metriccols) := lapply(.SD, mean), .SDcols = metriccols, by = get(var)]
 
 ## Plots that combine seasons
-g <- ggplot(out, aes(x = get(var),
+g <- ggplot(DT, aes(x = get(var),
                      color = get(idcol),
                      group = get(idcol))) + 
   guides(color = FALSE) + 
@@ -55,7 +55,7 @@ g1 <- g + geom_line(aes(y = multideg))
 g2 <- g + geom_line(aes(y = degdev))
 
 # Number of observations vs neighborhood (combined layers)
-g3 <- g + geom_line(aes(y = neighborhood))
+g3 <- g + geom_line(aes(y = neigh))
 
 ## Plots that separate seasons
 g <- g +
@@ -63,7 +63,7 @@ g <- g +
   guides(color = FALSE)
 
 # Number of observations vs split neighborhood (by layer) 
-g4 <- g + geom_line(aes(y = splitNeighborhood))
+g4 <- g + geom_line(aes(y = splitNeigh))
 
 # Number of observations vs layer relevance
 g5 <- g + geom_line(aes(y = relev))
