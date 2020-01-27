@@ -17,7 +17,7 @@ source('scripts/0-variables.R')
 
 
 ### Data ----
-DT <- readRDS('data/derived-data/sub-fogo-caribou.Rds')
+DT <- readRDS('data/derived-data/1-sub-fogo-caribou.Rds')
 alloc.col(DT)
 
 ### Variable time window length ----
@@ -91,9 +91,6 @@ nets <- lapply(winlengths, function(len) {
   # Merge eigcent+correlations with neighbors
   out[eig, on = c(idcol, splitBy)]
 })
-
-
-# TODO: fix new data 'found duplicate id in a timegroup and/or splitBy - does your group_times threshold match the fix rate?'
 
 out <- rbindlist(nets)
 
