@@ -175,13 +175,13 @@ Given the existing framework for constructing multilayer networks from behaviour
 
 something something blah blah.
 
-Silk et al. (2018) presented some key multilayer questions in animal behaviour research. While these questions represent an importanting starting point for multilayer networks, we present an additional set of questions relevant to the promise and problem of scale in mutlilayer networks:
+Silk et al. (2018) presented some key multilayer questions in animal behaviour research. While these questions represent an important starting point for multilayer networks, we present an additional set of questions relevant to the promise and problem of scale in mutlilayer networks:
 
   1) How do social phenotypes across scales differently influence fitness? Are some temporal or social scales better predictors for different fitness metrics?
 
   2) Why do individuals associate more strongly with certain conspecifics in some habitats? What, if any, is the role of movement in the context of habitat networks? 
   
-  3) 
+  3) How, and why, does the spatial scale of perception influence, e.g. auditory, visual, or chemotaxis, influence the  social environment across scales? What is the role of memory, and by extension social and spatial cognition, as animals navigate their environment and make decisions about where to move next?
 
 
 

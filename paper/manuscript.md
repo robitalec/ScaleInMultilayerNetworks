@@ -545,7 +545,8 @@ networks:
 ## Acknowledgements
 
 We thank all members of the Wildlife Evolutionary Ecology Lab, including
-XXXXX **check WG reviewers** for their comments on previous versions of
-this manuscript as well as D. Schneider for inspiration and helpful
-discussions about scale. Funding for this study was provided by a Vanier
-Canada Graduate Scholarship to QMRW and a NSERC Discovery Grant to EVW.
+K. Kingdon, S. Boyle, C. Prokopenko, I. Richmond, and L. Newediuk for
+their comments on previous versions of this manuscript as well as D.
+Schneider for inspiration and helpful discussions about scale. Funding
+for this study was provided by a Vanier Canada Graduate Scholarship to
+QMRW and a NSERC Discovery Grant to EVW.
