@@ -57,60 +57,34 @@ g1 <- g + geom_line(aes(y = layersd), color = 'black')
 g2 <- g + geom_line(aes(y = mnmultideg))
 g3 <- g + geom_line(aes(y = mndegdev))
 g4 <- g + geom_line(aes(y = mnneigh))
+g5 <- g + geom_line(aes(y = mnconnredund))
 
 
-
+# Plot within
 g <- ggplot(DT, aes(x = get(var), color = layer, group = layer)) +
   guides(color = FALSE) +
   labs(x = var)
 
-# Number of observations vs split neighborhood (by layer) 
-g5 <- g + geom_line(aes(y = mnsplitNeigh))
-
-# Number of observations vs layer relevance
-g6 <- g + geom_line(aes(y = mnrelev))
-
-# Number of observations vs graph strength
-g7 <- g + geom_line(aes(y = mngraphstrength))
+g6 <- g + geom_line(aes(y = mnsplitNeigh))
+g7 <- g + geom_line(aes(y = mnrelev))
+g8 <- g + geom_line(aes(y = mngraphstrength))
 
 
+# Patchwork
+1, 2, 5, 7, 8, 
 
-
-## Plots that combine layers
-# g <- ggplot(DT, aes(x = get(var),
-#                     color = get(idcol), 
-#                     group = get(idcol))) +
-#   guides(color = FALSE) +
-#   labs(x = var)
-
-
-# Number of observations vs degree deviation
-g2 <- g + geom_line(aes(y = degdev))
-
-# Number of observations vs multidegree
-g3 <- g + geom_line(aes(y = multideg))
-
-## Plots that separate seasons
-g <- g +
-  facet_grid(~season + lc30) +
-  guides(color = FALSE)
-
-# Number of observations vs split neighborhood (by layer) 
-g4 <- g + geom_line(aes(y = splitNeigh))
-
-# Number of observations vs layer relevance
-g5 <- g + geom_line(aes(y = relev))
-
-# Number of observations vs graph strength
-g6 <- g + geom_line(aes(y = graphstrength))
-
+(g1 + g2 + g5) / (g7 + g8)
 
 g1 / 
-  g2 /
+  g2
   g3 /
-  g4 / 
+  g4 / # neigh
   g5 /
-  g6
+  g6 /
+  g7 /
+  g8
 
 
 ## Supplemental figures
+(g1 + g2  + g3 + g4 + g5) / (g6 + g7 + g8)
+  
