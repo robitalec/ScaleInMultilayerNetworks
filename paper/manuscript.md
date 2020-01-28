@@ -12,28 +12,32 @@ Program, Memorial University of Newfoundland
 Scale remains a seminal concept in ecology. Spatial scale, for instance,
 has become a central consideration in the way we understand landscape
 ecology and animal space use. Meanwhile, social processes can also scale
-from fine-scale interactions to co-occurrence and overlapping home
+from fine-scale interactions to co-occurrence to overlapping home
 ranges. Multilayer networks promise the integration of monolayer animal
-social networks with the complexity and importance of animal movement
-and space use in heterogeneous landscapes. Despite the complex interplay
+social networks with the complexity and importance of animal space use
+and movement in heterogeneous landscapes. Despite the complex interplay
 between social networks and how animals use space, there remains an
 important biological and methodological gap in our understanding of an
-animal’s perception of spatial scale, e.g., grain and extent, can affect
-multilayer network dynamics. Here, we discuss the role of scale in the
-context of multilayer networks and provide a case study of caribou
-(*Rangifer tarandus*) to illustrate the role of social, spatial,
-temporal scale on multilayer processes. We also present perspectives on
-future development and application of scale in multilayer networks with
-respect to habitat selection and space use, individual fitness and
-phenotypes, and movement ecology and collective movement.Effective
-integration of social and spatial processes, including biologically
-meaningful scales, within the context of animal social networks is an
-emerging area of research; our contribution will uniquely incorporate
-perspectives on how the social environment and spatial processes are
-linked across scales in a multilayer framework. Based on social network
-and behavioural ecology theory as well as our case study, we demonstrate
-potential for interconnectedness among individual animals, their social
-environment, and the landscapes they occupy.
+animal’s perception of scale, e.g., grain and extent. But scale can
+affect multilayer network dynamics and how we build and interpret them.
+Here, we discuss the role of scale in the context of multilayer networks
+and provide a case study of caribou (*Rangifer tarandus*) to illustrate
+the role of temporal, spatial, and social scale **\[JWT: I made this
+follow the order Alec has below, but should the order maybe be spatial,
+temproal, social, since spatial is the most novel? Maybe that’s not a
+good flow of the story though?\]** on multilayer processes. We also
+present perspectives on future development and application of scale in
+multilayer networks with respect to habitat selection and space use,
+individual fitness and phenotypes, and movement ecology and collective
+movement.Effective integration of social and spatial processes,
+including biologically meaningful scales, within the context of animal
+social networks is an emerging area of research; our contribution
+uniquely incorporates perspectives on how the social environment and
+spatial processes are linked across scales in a multilayer framework.
+Based on social network and behavioural ecology theory as well as our
+case study, we demonstrate potential for interconnectedness among
+individual animals, their social environment, and the landscapes they
+occupy.
 
 ## Introduction
 
@@ -151,7 +155,7 @@ system (GPS) collars (Lotek Wireless Inc., Newmarket, ON, Canada,
 GPS4400M collars, 1,250 g) as described by Schaefer and Mahoney (2013).
 Collars were programmed to collect location fixes every 2 hours. Prior
 to analyses, we subset GPS fixes into a discrete removed all erroneous
-and outlier GPS fixes following Bjørneraas et al. (2010). We did not
+and outlier GPS fixes following Bjørneraas et al. (2010). We did not
 collar all female caribou in the herd; however, we assumed that our
 sample of collared animals was random.
 
@@ -165,8 +169,7 @@ closed habitat. Foraging habitat consisted of lichen habitat, open
 habitat consisted of wetland, rocky barrens, and anthropogenic habitat
 types, while closed habitat consisted of coniferous forest, conifer
 scrub, broadleaf forest, and mixed-wood forest habitat types. Water
-habitat was excluded from all subsequent
-analyses.
+habitat was excluded from all subsequent analyses.
 
 ### Caribou multilayer social networks
 
@@ -240,7 +243,7 @@ multidimensional…”
 Finally, some weighted variables:
 
   - eigenvector centrality, summed across layers as described in
-    Boccaletti, Stefano, et al. “The structure and dynamics of
+    Boccaletti, Stefano, et al. “The structure and dynamics of
     multilayer networks.” Physics Reports 544.1 (2014): 1-122.
 
 ##### Redundancy/relevance
@@ -317,8 +320,7 @@ above) and re-assigned groups at incremental distance between 5-500m.
 For example, at the finest social scale, only individuals within 5m of
 one another were considered in the same group, whereas at the coarset
 social scale, only individuals within 500m of one another were
-considered in the same
-group.
+considered in the same group.
 
 ## Scale in multilayer networks in practice: case study results and discussion
 
@@ -527,7 +529,7 @@ formation of the social environment (He et al. 2019).
 
 something something blah blah.
 
-Silk et al. (2018) presented some key multilayer questions in animal
+Silk et al. (2018) presented some key multilayer questions in animal
 behaviour research. While these questions represent an important
 starting point for multilayer networks, we present an additional set of
 questions relevant to the promise and problem of scale in mutlilayer
