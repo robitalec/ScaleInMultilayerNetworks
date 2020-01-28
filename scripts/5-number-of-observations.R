@@ -28,7 +28,7 @@ group_times(
 )
 
 ### Generate networks for each n observations ----
-maxn <- 750 #sub[, uniqueN(timegroup)]
+maxn <- 500 #DT[, uniqueN(timegroup)]
 nstep <- 25
 
 # Randomly select n max observations
