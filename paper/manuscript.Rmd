@@ -131,7 +131,7 @@ We altered social scale based on visual (short distance) and auditory (long dist
 * Neighbors: number of unique individuals adjacent to each actor. Considered in a single layer, this is equal to the degree. 
 * Neighborhood: number of unique individuals across all layers. High neighborhood = a high number of unique individuals connected to an actor. 
 * Relevance: layer centric metric, corresponding to the number of neighbors on a layer divided by the total neighborhood for each actor. High relevance means that the layer is highly relevant to the individuals connections. A low relevance means this layer does not contribute many neighbors to an individuals overall neighborhood. 
-* Connective redundancy: the total multilayer neighborhood divided by the multidegree. High connective redundancy indicates a multilayer network that has many repeated edges across layers between an actor and its neighbours. Low connective redundancy is 
+* Connective redundancy: the total multilayer neighborhood divided by the multidegree. High connective redundancy indicates a multilayer network that has many repeated edges across layers between an actor and its neighbours. Low connective redundancy indicates that each layer is important for preserving all social ties. 
 
 
 ###
