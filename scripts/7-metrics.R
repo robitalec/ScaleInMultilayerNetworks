@@ -37,7 +37,6 @@ layersim <- matrices[, .(layersd = sd(unlist(.SD))), winlength, .SDcols = patter
 DT[layersim, layersd := layersd, on = var]
 
 # Redundancy
-# TODO: can two layers have the same connective redundancy if they both have the same degree?
 connective_redudancy(DT)
 stopifnot(DT[!between(connredund, 0, 1), .N] == 0)
 
