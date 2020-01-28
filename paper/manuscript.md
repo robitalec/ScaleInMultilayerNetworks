@@ -11,30 +11,29 @@ Program, Memorial University of Newfoundland
 
 Scale remains a seminal concept in ecology. Spatial scale, for instance,
 has become a central consideration in the way we understand landscape
-ecology and animal space use. Multilayer networks promise the
-integration of monolayer animal social networks with the complexity and
-importance of animal movement and space use in heterogeneous landscapes.
-Despite the complex interplay between social networks and how animals
-use space, there remains an important biological and methodological gap
-in our understanding of an animal’s perception of spatial scale, e.g.,
-grain and extent, can affect multilayer network dynamics. Here, we test
-how multilayer network metrics (e.g., versatility, multi-degree,
-similarity) are sensitive to variation in an animal’s perception of
-scale. We will simulate animal movement data coupled with emergent
-social networks on increasingly heterogenous landscapes across spatial
-scales. Furthermore, we review specific examples of spatially explicit
-data types to include in multilayer networks and explore the relevant
-nuances of these data. *Our simulations will highlight the need to
-carefully select scales for measuring spatial processes and
-appropriately weight layers and edges representing different types of
-data.* Effective integration of spatial processes, including
-biologically meaningful scales, within the context of animal social
-networks is an emerging area of research; our contribution will uniquely
-incorporate landscape ecology theory as a way to link different scales
-of social and spatial processes in a multilayer network. Based on social
-network and landscape ecology theory as well as our simulations we
-demonstrate potential for interconnectedness among individual animals
-and the landscapes they occupy.
+ecology and animal space use. Meanwhile, social processes can also scale
+from fine-scale interactions to co-occurrence and overlapping home
+ranges. Multilayer networks promise the integration of monolayer animal
+social networks with the complexity and importance of animal movement
+and space use in heterogeneous landscapes. Despite the complex interplay
+between social networks and how animals use space, there remains an
+important biological and methodological gap in our understanding of an
+animal’s perception of spatial scale, e.g., grain and extent, can affect
+multilayer network dynamics. Here, we discuss the role of scale in the
+context of multilayer networks and provide a case study of caribou
+(*Rangifer tarandus*) to illustrate the role of social, spatial,
+temporal scale on multilayer processes. We also present perspectives on
+future development and application of scale in multilayer networks with
+respect to habitat selection and space use, individual fitness and
+phenotypes, and movement ecology and collective movement.Effective
+integration of social and spatial processes, including biologically
+meaningful scales, within the context of animal social networks is an
+emerging area of research; our contribution will uniquely incorporate
+perspectives on how the social environment and spatial processes are
+linked across scales in a multilayer framework. Based on social network
+and behavioural ecology theory as well as our case study, we demonstrate
+potential for interconnectedness among individual animals, their social
+environment, and the landscapes they occupy.
 
 ## Introduction
 
@@ -93,23 +92,28 @@ provides a unique opportunity to develop novel understanding of
 variation in the temporal or spatial scales associated with social
 systems.
 
-Here, we discuss and integrate variation in temporal and spatial scales
-within a multilayer network framework. We borrow from behavioural,
-landscape, and spatial ecology to build a conceptual and analytical
-framework for scale-dependent multilayer networks and we apply this
-framework to a fission-fusion social system case study of caribou
-(*Rangifer tarandus*) in Newfoundland, Canada (Peignier et al. 2019). We
-use this case study to address two principal questions associated with
-scale-dependent multilayer networks. First, to what degree does the
-spatial scale of landscapes, temporal windows of analysis, and social
-scale of relationships, influence our ability to interpret complex
-social systems? Second, can variation in spatial, temporal, and social
-scale improve predictions associated with seasonal differences in
-resource availability and social association? We conclude with
-perspectives for further development and application of scale in
-multilayer networks with respect to landscape ecology (Schneider 2009),
-individual fitness and phenotypes (Webber & Vander Wal 2018), and
-movement ecology and collective movement (Jolles et al. 2019).
+Here, we discuss and integrate variation in social, spatial, and
+temporal scales within a multilayer network framework (Figure 1). We
+borrow from behavioural, landscape, and spatial ecology to build a
+conceptual and analytical framework for scale-dependent multilayer
+networks and we apply this framework to a fission-fusion social system
+case study of caribou (*Rangifer tarandus*) in Newfoundland, Canada
+(Peignier et al. 2019). We use this case study to address two principal
+questions associated with scale-dependent multilayer networks. First, to
+what degree does the spatial scale of landscapes, temporal windows of
+analysis, and social scale of relationships, influence our ability to
+interpret complex social systems? Second, can variation in social,
+spatial, and temporal scale improve predictions associated with seasonal
+differences in resource availability and social association? We conclude
+with perspectives for future development and application of scale in
+multilayer networks with respect to habitat selection and space use (Van
+Moorter et al. 2016), individual fitness and phenotypes (Webber & Vander
+Wal 2018), and movement ecology and collective movement (Jolles et
+al. 2019).
+
+![**Figure 1**](../graphics/figure1.png) **Figure 1**: Space-time
+diagram displaying variation the spatial and temporal extent required
+for different social processes across a range of taxa. 
 
 ## Scale in multilayer networks: a case study
 
@@ -145,7 +149,7 @@ system (GPS) collars (Lotek Wireless Inc., Newmarket, ON, Canada,
 GPS4400M collars, 1,250 g) as described by Schaefer and Mahoney (2013).
 Collars were programmed to collect location fixes every 2 hours. Prior
 to analyses, we subset GPS fixes into a discrete removed all erroneous
-and outlier GPS fixes following Bjørneraas et al. (2010). We did not
+and outlier GPS fixes following Bjørneraas et al. (2010). We did not
 collar all female caribou in the herd; however, we assumed that our
 sample of collared animals was random.
 
@@ -159,7 +163,8 @@ closed habitat. Foraging habitat consisted of lichen habitat, open
 habitat consisted of wetland, rocky barrens, and anthropogenic habitat
 types, while closed habitat consisted of coniferous forest, conifer
 scrub, broadleaf forest, and mixed-wood forest habitat types. Water
-habitat was excluded from all subsequent analyses.
+habitat was excluded from all subsequent
+analyses.
 
 ### Caribou multilayer social networks
 
@@ -247,7 +252,7 @@ correlation of each season’s asnipe SRI matrix
 Finally, some weighted variables:
 
   - eigenvector centrality, summed across layers as described in
-    Boccaletti, Stefano, et al. “The structure and dynamics of
+    Boccaletti, Stefano, et al. “The structure and dynamics of
     multilayer networks.” Physics Reports 544.1 (2014): 1-122.
 
 ### Varying scale in multilayer networks
@@ -308,7 +313,8 @@ above) and re-assigned groups at incremental distance between 5-500m.
 For example, at the finest social scale, only individuals within 5m of
 one another were considered in the same group, whereas at the coarset
 social scale, only individuals within 500m of one another were
-considered in the same group.
+considered in the same
+group.
 
 ## Scale in multilayer networks in practice: case study results and discussion
 
@@ -517,7 +523,7 @@ formation of the social environment (He et al. 2019).
 
 something something blah blah.
 
-Silk et al. (2018) presented some key multilayer questions in animal
+Silk et al. (2018) presented some key multilayer questions in animal
 behaviour research. While these questions represent an importanting
 starting point for multilayer networks, we present an additional set of
 questions relevant to the promise and problem of scale in mutlilayer
@@ -531,4 +537,8 @@ networks:
     in some habitats? What, if any, is the role of movement in the
     context of habitat networks?
 
-3)
+3)  
+## Acknowledgements
+
+  - DCS
+  - check WG
