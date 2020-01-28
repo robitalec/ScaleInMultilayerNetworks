@@ -111,9 +111,11 @@ Moorter et al. 2016), individual fitness and phenotypes (Webber & Vander
 Wal 2018), and movement ecology and collective movement (Jolles et
 al. 2019).
 
-![**Figure 1**](../graphics/figure1.png) **Figure 1**: Space-time
-diagram displaying variation the spatial and temporal extent required
-for different social processes across a range of taxa. 
+![**Figure 1**](../graphics/figure1.png)
+
+**Figure 1**: Space-time diagram displaying variation the spatial and
+temporal extent required for different social processes across a range
+of taxa. 
 
 ## Scale in multilayer networks: a case study
 
@@ -209,19 +211,18 @@ than the given distance (Farine & Whitehead 2015). Social groups were
 designated if two or more individuals occurred within a given distance
 of one another at any given time point.
 
-For each multilayer network, we calculated XXX metrics.These included
-four neighborhood-based metrics: degree centrality, multidegree, degree
-deviation, and neighbours as well as two multilayer \[need better term
-here?\] metrics: connective redundancy and relevance (see Glossary for
-definitions). GOING TO NEED MORE HERE (SEE SMITH-AGUILAR ET AL 2019
-PAPER FOR REFERENCE ON EXPLAINING THESE).
+#### Network metrics
 
-We generated all networks Right now, we calculate mostly
-degree/neighborhood based metrics.
+For each multilayer network, we calculated four metrics.These included:
+multidegree, graph strength, redundancy/relevance, and layer similarity.
+GOING TO NEED MORE HERE (SEE SMITH-AGUILAR ET AL 2019 PAPER FOR
+REFERENCE ON EXPLAINING THESE).
 
-Reference for extending degree centrality to multilayer, neighbors,
+ALR: Reference for extending degree centrality to multilayer, neighbors,
 connective redundancy and relevance: Berlingerio 2011 “Foundations of
 multidimensional…”
+
+##### Multidegree
 
   - Degree centrality
 
@@ -230,12 +231,19 @@ multidimensional…”
   - Degree deviation: standard deviation of degree across layers
 
   - Neighbors/neighborhood (number of unique actors directly connected
-    to each focal)
+    to each focal) Neighbors = degree within a network layer But across
+    a multilayer network with multiple layers, some neighbors are
+    repeated.
 
-Neighbors = degree within a network layer But across a multilayer
-network with multiple layers, some neighbors are repeated.
+##### Graph strength
 
-So the difference between neighbors and degree is the basis for
+Finally, some weighted variables:
+
+  - eigenvector centrality, summed across layers as described in
+    Boccaletti, Stefano, et al. “The structure and dynamics of
+    multilayer networks.” Physics Reports 544.1 (2014): 1-122.
+
+##### Redundancy/relevance
 
   - Connective redundancy: 1 - (neighborhood / degree) When connective
     redundancy is 0, all edges on all layers are necessary to preserve
@@ -246,14 +254,10 @@ So the difference between neighbors and degree is the basis for
     focus. Comparing across, it tells you which layers are most
     important for each individual.
 
+##### Layer similarity
+
 Then there will be some layer similarity. Right now it’s just a
 correlation of each season’s asnipe SRI matrix
-
-Finally, some weighted variables:
-
-  - eigenvector centrality, summed across layers as described in
-    Boccaletti, Stefano, et al. “The structure and dynamics of
-    multilayer networks.” Physics Reports 544.1 (2014): 1-122.
 
 ### Varying scale in multilayer networks
 
