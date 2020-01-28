@@ -91,7 +91,7 @@ nets <- lapply(winpositions, function(pos) {
   # Preserve window length
   set(out, j = var, value = pos)
 })
-
+# TODO: not always a consistent n individuals because some IDs NA in an LC
 out <- rbindlist(nets)
 
 ### Output ----
