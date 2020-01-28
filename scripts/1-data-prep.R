@@ -6,7 +6,6 @@ pkgs <- c('data.table', 'rgdal', 'raster')
 p <- lapply(pkgs, library, character.only = TRUE)
 
 # TODO: timezones
-# TODO: which individuals are dropped
 
 ### Variables ----
 source('scripts/0-variables.R')
