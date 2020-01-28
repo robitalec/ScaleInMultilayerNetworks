@@ -151,10 +151,10 @@ deviation_degree <- function(DT, degree, id, splitBy = NULL) {
 #'
 #' @examples
 layer_relevance <- function(DT, id, splitBy) {
-  # TODO: check for splitNeigh variable and multidegree
+  # TODO: check for splitNeigh variable and neigh
   # TODO: check overwrite
   
-  DT[, relev := splitNeigh / multideg, 
+  DT[, relev := splitNeigh / neigh, 
      by = c(id, splitBy)][]
 }
 
