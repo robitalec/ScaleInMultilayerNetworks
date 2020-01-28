@@ -58,7 +58,7 @@ nets <- lapply(winlengths, function(len) {
     id = idcol,
     coords = projCols,
     timegroup = 'timegroup',
-    splitBy = c(col, lccol)
+    splitBy = splitBy
   )
   
   
