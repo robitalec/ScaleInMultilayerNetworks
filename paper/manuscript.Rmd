@@ -26,6 +26,7 @@ Here, we discuss and integrate variation in social, spatial, and temporal scales
 \captionsetup[figure]{labelformat=empty}
 
 ![**Figure 1**](../graphics/figure1.png) 
+
 **Figure 1**: Space-time diagram displaying variation the spatial and temporal extent required for different social processes across a range of taxa.
 \clearpage
 
