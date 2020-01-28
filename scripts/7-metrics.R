@@ -12,7 +12,7 @@ source('scripts/0-variables.R')
 
 
 ### Data ----
-var <- 'winlength'
+var <- 'spatialthreshold'
 splitBy <- c(splitBy, var)
 
 if (var == 'lcres') {
@@ -33,26 +33,31 @@ alloc.col(DT)
 
 ### Multilayer network metrics ----
 matrices <- DT[, property_matrix(.SD, idcol, 'layer', 'splitNeigh'), var]
-matrices[winlength==40, cor(t(as.matrix(.SD))), .SDcols = patterns('FO')]
+# matrices[winlength==40, cor(t(as.matrix(.SD))), .SDcols = patterns('FO')]
+# 
+# library(animation)
+# saveGIF({
+#   par(xpd=NA,oma=c(0,0,2,0))
+#   matrices[, corrplot(cor(t(as.matrix(.SD)), use = 'complete.obs'), 
+#                       title = .BY[[1]]), 
+#            .SDcols = patterns('FO'), by = winlength ]
+# }, interval = 0.3)
 
-library(animation)
-saveGIF({
-  par(xpd=NA,oma=c(0,0,2,0))
-  matrices[, corrplot(cor(t(as.matrix(.SD)), use = 'complete.obs'), 
-                      title = .BY[[1]]), 
-           .SDcols = patterns('FO'), by = winlength ]
-}, interval = 0.3)
+
+layersim <- matrices[, .(layersd = sd(unlist(.SD))), var, .SDcols = patterns('FO')]
+DT[layersim, layersd := layersd, on = var]
+
+# layersim <- matrices[, .(layercor = sd(unlist(.SD))/mean(unlist(.SD))), var, .SDcols = patterns('FO')]
+# DT[layersim, layercor := layercor, on = var]
 
 
-layersim <- matrices[, .(layercor = sd(unlist(.SD))/mean(unlist(.SD))), winlength, .SDcols = patterns('FO')]
-DT[layersim, layercor := layercor, on = var]
+# Multidegree
+multi_degree(DT, 'splitNeigh', idcol, splitBy = var)
 
 # Redundancy
 connective_redudancy(DT)
 stopifnot(DT[!between(connredund, 0, 1), .N] == 0)
 
-# Multidegree
-multi_degree(DT, 'splitNeigh', idcol, splitBy = var)
 
 # Degree deviation
 deviation_degree(DT, 'splitNeigh', idcol, splitBy = var)
