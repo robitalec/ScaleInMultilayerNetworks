@@ -14,6 +14,6 @@ When connective redundancy is 0, all edges on all layers
 are necessary to preserve the social ties
 }
 \details{
-DT must be result of `neigh()` function, having columns "splitNeigh" 
-and "neigh"
+DT must be result of `layer_neighbors()` and `multidegree` function, having columns "neigh" 
+and "multideg"
 }
