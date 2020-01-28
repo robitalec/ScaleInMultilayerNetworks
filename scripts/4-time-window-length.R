@@ -73,13 +73,9 @@ nets <- lapply(winlengths, function(len) {
   names(gLs) <- names(gbiLs)
   
   # Calculate eigenvector centrality for each season
-  eig <- layer_eigen(gLs)
-  eig[, (splitBy) := tstrsplit(layer, '-', type.convert = TRUE)]
-  setnames(eig, 'ind', idcol)
-  
-  # Calculate correlation of season layers
-  # set(eig, j = 'layercorr', value = layer_correlation(gLs))
-
+  stren <- layer_strength(gLs)
+  stren[, (splitBy) := tstrsplit(layer, '-', type.convert = TRUE)]
+  setnames(stren, 'ind', idcol)
   
   # Calculate neighbors
   layer_neighbors(sub, idcol, splitBy = splitBy)
