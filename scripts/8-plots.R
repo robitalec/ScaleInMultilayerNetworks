@@ -82,12 +82,6 @@ g7 <- g + geom_line(aes(y = mngraphstrength))
 #   guides(color = FALSE) +
 #   labs(x = var)
 
-# DT[, grp := do.call(paste, c(.SD, sep = '-')), .SDcols = splitBy]
-# g <- ggplot(DT, aes(x = get(var), color = factor(lc30), group = grp)) + 
-#   guides(color = FALSE) + 
-#   labs(x = var)
-
-
 
 # Number of observations vs degree deviation
 g2 <- g + geom_line(aes(y = degdev))
