@@ -15,8 +15,6 @@ source('scripts/0-variables.R')
 
 ### Data ----
 var <- 'winlength'
-lccol <- 'lc30'
-splitBy <- c(lccol, 'season')
 
 if (var == 'lcres') {
   DT <- readRDS('data/derived-data/2-landcover-scale.Rds')
