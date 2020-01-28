@@ -42,10 +42,10 @@ connective_redudancy(DT)
 stopifnot(DT[!between(connredund, 0, 1), .N] == 0)
 
 # Multidegree
-multi_degree(DT, 'splitNeigh', idcol, splitBy)
+multi_degree(DT, 'splitNeigh', idcol, splitBy = var)
 
 # Degree deviation
-deviation_degree(DT, 'splitNeigh', idcol, splitBy)
+deviation_degree(DT, 'splitNeigh', idcol, splitBy = var)
 
 # Relevance
 # TODO: check range 
