@@ -8,7 +8,8 @@ pkgs <- c('data.table',
 					'asnipe',
 					'raster',
 					'igraph',
-					'grainchanger')
+					'grainchanger',
+					'ScaleInMultilayerNetworks')
 p <- lapply(pkgs, library, character.only = TRUE)
 
 
