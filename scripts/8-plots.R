@@ -38,16 +38,17 @@ alloc.col(DT)
 
 # Full multilayer - layersd (no need to avg)
 
-# Across layers - degree deviation, neigh, multideg
-metriccols <- c('neigh', 'multideg', 'degdev')
+# Across layers - degree deviation, neigh, multideg, connredund
+metriccols <- c('neigh', 'multideg', 'degdev', 'connredund')
 DT[, paste0('mn', metriccols) := lapply(.SD, mean, na.rm = TRUE), 
    .SDcols = metriccols, by = var]
 
 # Within layers - splitNeigh, relev, connredund, graphstrength
-metriccols <- c('splitNeigh', 'relev', 'connredund', 'graphstrength')
+metriccols <- c('splitNeigh', 'relev', 'graphstrength')
 DT[, paste0('mn', metriccols) := lapply(.SD, mean, na.rm = TRUE), 
    .SDcols = metriccols, by = c(var, splitBy)]
 
+# Plot full, across
 g <- ggplot(DT[, .SD[1], by = var], aes(x = get(var))) +
   guides(color = FALSE) +
   labs(x = var)
