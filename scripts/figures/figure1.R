@@ -1,38 +1,46 @@
 
+library(data.table)
 library(ggplot2)
 library(ggforce)
 library(gridExtra)
+library(remotes)
+library(scales)
 
-install.packages("remotes")
 remotes::install_github("sckott/rphylopic")
-
 library(rphylopic)
 
 ## select phylopic  
 hyeana <- rphylopic::image_data('f1b665ae-8fe9-42e4-b03a-4e9ae8213244', 512)[[1]]
 bird <- rphylopic::image_data('dfdfb59e-8126-44e1-a7a9-1bf698113e1c', 512)[[1]]
 
-df_hyaena <- data.frame(x = c(4.25, 1, 0.5, 2.5, 7), y = c(10, 2.5, 50, 1, 500), 
-                 family = c("Association", "Aggression", "Vocal", "Scent",
-                            "Range overlap"))
+#df_hyaena <- data.frame(x = c(4.25, 1, 0.5, 2.5, 7), y = c(10, 2.5, 50, 1, 500), 
+ #                family = c("Association", "Aggression", "Vocal", "Scent",
+  #                          "Range overlap"))
 
-df_bird <- data.frame(x = c(3, 3, 1, 0.5, 8), y = c(4, 20, 1, 50, 125), 
-                        family = c("Co-occurrence", "Flocking" ,"Aggression", "Vocal", 
-                                   "Range overlap"))
+#df_bird <- data.frame(x = c(3, 3, 1, 0.5, 8), y = c(4, 20, 1, 50, 125), 
+#                        family = c("Co-occurrence", "Flocking" ,"Aggression", "Vocal", 
+#                                   "Range overlap"))
 
-png("graphics/figure1.png", width = 6000, height = 3000, units = "px", res = 500)
-aa <- ggplot() +
-  geom_ellipse(aes(x0 = 4.25, y0 = 10, a = 4, b = 1.5, angle = 0.5), 
-               alpha = 0.75, fill = "#d73027") + ## assoc
-  geom_ellipse(aes(x0 = 1, y0 = 2.5, a = 1.5, b = 1.5, angle = 0), 
+df <- fread("data/raw-data/figure1.csv")
+
+#png("graphics/figure1.png", width = 6000, height = 3000, units = "px", res = 500)
+ggplot() +
+  geom_ellipse(data = df[species == "hyeana" & behaviour == "association"], 
+               aes(x0 = x, y0 = y, a = 4, b = 1.5, angle = 0.5), 
+               alpha = 0.75, fill = "#d73027") +  ## assoc
+  geom_ellipse(data = df[species == "hyeana" & behaviour == "interaction"],
+               aes(x0 = x, y0 = y, a = 1.5, b = 1.5, angle = 0), 
                alpha = 0.75, fill = "#fee090") + ## inter
-  geom_ellipse(aes(x0 = 0.5, y0 = 50, a = 0.75, b = 4, angle = 0), 
+  geom_ellipse(data = df[species == "hyeana" & behaviour == "vocal"],
+               aes(x0 = x, y0 = y, a = 0.75, b = 4, angle = 0), 
                alpha = 0.75, fill = "#fc8d59") + ## vocal
-  geom_ellipse(aes(x0 = 2.5, y0 = 1, a = 3, b = 0.5, angle = 0), 
+  geom_ellipse(data = df[species == "hyeana" & behaviour == "scent"],
+               aes(x0 = x, y0 = y, a = 3, b = 0.5, angle = 0), 
                alpha = 0.75, fill = "#4575b4") + ## scent
-  geom_ellipse(aes(x0 = 9, y0 = 500, a = 5, b = 2, angle = 0.75), 
+  geom_ellipse(data = df[species == "hyeana" & behaviour == "hro"],
+               aes(x0 = x, y0 = y, a = 5, b = 2, angle = 0.75), 
                alpha = 0.75, fill = "#5ab4ac") + ## HRO
-  geom_text(data = df_hyaena, aes(x, y, label = family)) +
+  geom_text(data = df[species == "hyena"], aes(x, y, label = behaviour)) +
   add_phylopic(hyeana, 1, y = 12, x = 1, ysize = 2) +
   ylab("Spatial scale") +
   xlab("") +
