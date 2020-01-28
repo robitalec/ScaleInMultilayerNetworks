@@ -32,29 +32,57 @@ alloc.col(DT)
 
 
 ### Plots ----
+## Manuscript figures
+
+# To average columns...
+
+# Across layers - degree deviation, neigh, multideg, layersd
+metriccols <- c('neigh', 'multideg', 'layersd')
+DT[, paste0('mn', metriccols) := lapply(.SD, mean), 
+   .SDcols = metriccols, by = var]
+
+# Within layers - splitNeigh, relev, connredund, graphstrength
+metriccols <- c('splitNeigh', 'relev', 'connredund', 'graphstrength')
+DT[, paste0('mn', metriccols) := lapply(.SD, mean), 
+   .SDcols = metriccols, by = c(var, splitBy)]
+
+
+
+
+
 # ggplot(DT) +
 # geom_line(aes(get(var), netcor))
 
-# To average columns...
-# metriccols <- c('multideg', 'degdev', 'neigh', 'relev')
-# DT[, (metriccols) := lapply(.SD, mean), .SDcols = metriccols, 
-#    by = c(var)]
+
 
 # metriccols <- c('splitNeigh')
 # DT[, (metriccols) := lapply(.SD, mean), .SDcols = metriccols, 
 #    by = c(var, splitBy)]
 
-## Plots that combine seasons
-g <- ggplot(DT, aes(x = get(var), color = get(idcol), group = get(idcol))) +
+## Plots with single value per var
+g <- ggplot(DT[, .SD[1], by = var], aes(x = get(var),
+                    color = get(idcol), 
+                    group = get(idcol))) +
   guides(color = FALSE) +
   labs(x = var)
+
+# Number of observations vs layersd
+g1 <- g + geom_line(aes(y = layersd), color = 'black')
+
+
+## Plots that combine layers
+# g <- ggplot(DT, aes(x = get(var),
+#                     color = get(idcol), 
+#                     group = get(idcol))) +
+#   guides(color = FALSE) +
+#   labs(x = var)
+
 # DT[, grp := do.call(paste, c(.SD, sep = '-')), .SDcols = splitBy]
 # g <- ggplot(DT, aes(x = get(var), color = factor(lc30), group = grp)) + 
 #   guides(color = FALSE) + 
 #   labs(x = var)
 
-# Number of observations vs layersd
-g1 <- g + geom_line(aes(y = layersd))
+
 
 # Number of observations vs degree deviation
 g2 <- g + geom_line(aes(y = degdev))
