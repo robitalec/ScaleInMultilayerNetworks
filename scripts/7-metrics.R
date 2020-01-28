@@ -37,14 +37,15 @@ matrices[winlength==40, cor(t(as.matrix(.SD))), .SDcols = patterns('FO')]
 
 library(animation)
 saveGIF({
+  par(xpd=NA,oma=c(0,0,2,0))
   matrices[, corrplot(cor(t(as.matrix(.SD)), use = 'complete.obs'), 
-                      title = .BY[[1]], tl.offset = 0, interval = 0.3), 
+                      title = .BY[[1]]), 
            .SDcols = patterns('FO'), by = winlength ]
-})
+}, interval = 0.3)
 
 
-layersim <- matrices[, .(layersd = cor(unlist(.SD))), winlength, .SDcols = patterns('FO')]
-DT[layersim, layersd := layersd, on = var]
+layersim <- matrices[, .(layercor = sd(unlist(.SD))/mean(unlist(.SD))), winlength, .SDcols = patterns('FO')]
+DT[layersim, layercor := layercor, on = var]
 
 # Redundancy
 connective_redudancy(DT)
