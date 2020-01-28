@@ -71,18 +71,7 @@ g8 <- g + geom_line(aes(y = mngraphstrength))
 
 
 # Patchwork
-1, 2, 5, 7, 8, 
-
-(g1 + g2 + g5) / (g7 + g8)
-
-g1 / 
-  g2
-  g3 /
-  g4 / # neigh
-  g5 /
-  g6 /
-  g7 /
-  g8
+(g1 + g5) / (g7 + g8)
 
 
 ## Supplemental figures
