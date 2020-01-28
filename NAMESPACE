@@ -2,7 +2,6 @@
 
 export(connective_redudancy)
 export(deviation_degree)
-export(layer_correlation)
 export(layer_neighbors)
 export(layer_relevance)
 export(layer_strength)

@@ -2,7 +2,7 @@
 % Please edit documentation in R/metrics.R
 \name{property_matrix}
 \alias{property_matrix}
-\title{Property Matrix}
+\title{Layer correlation}
 \usage{
 property_matrix(DT, id, layer, metric)
 }
@@ -14,9 +14,17 @@ property_matrix(DT, id, layer, metric)
 \item{layer}{}
 
 \item{metric}{}
+
+\item{gLs}{Expects a list of two weighted graphs}
+
+\item{attr}{Graph attribute to use, default assuming the weight is stored.}
 }
 \description{
+Layer correlation
+}
+\examples{
 Property Matrix
+
 }
 \references{
 Bródka P, Chmiel A,Magnani M, Ragozini G. 2018 Quantifying layer
