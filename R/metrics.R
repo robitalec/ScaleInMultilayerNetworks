@@ -172,7 +172,7 @@ layer_strength <- function(graphLs) {
   data.table::setnames(data.table::rbindlist(
       lapply(graphLs, function(g) stack(igraph::strength(g))),
     idcol = 'layer')[, ind := as.character(ind)],
-    'values', 'eigcent')
+    'values', 'graphstrength')
 }
 
 
