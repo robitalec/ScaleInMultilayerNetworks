@@ -100,8 +100,8 @@ g4 <- g + geom_line(aes(y = splitNeigh))
 # Number of observations vs layer relevance
 g5 <- g + geom_line(aes(y = relev))
 
-# Number of observations vs eigenvector centrality
-g6 <- g + geom_line(aes(y = eigcent))
+# Number of observations vs graph strength
+g6 <- g + geom_line(aes(y = graphstrength))
 
 
 g1 / 
