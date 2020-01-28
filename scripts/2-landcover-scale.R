@@ -16,9 +16,10 @@ p <- lapply(pkgs, library, character.only = TRUE)
 source('scripts/0-variables.R')
 
 ### Data ----
-DT <- readRDS('data/derived-data/sub-seasons-fogo-caribou.Rds')
+DT <- readRDS('data/derived-data/1-sub-seasons-fogo-caribou.Rds')
+alloc.col(DT)
 
-lc <- raster('data/derived-data/1-reclass-lc.Rds')
+lc <- readRDS('data/derived-data/1-reclass-lc.Rds')
 
 
 ### Modal window ----
