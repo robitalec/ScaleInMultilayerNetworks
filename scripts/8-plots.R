@@ -53,11 +53,11 @@ g <- ggplot(DT[, .SD[1], by = var], aes(x = get(var))) +
   guides(color = FALSE) +
   labs(x = var)
 
-g1 <- g + geom_line(aes(y = layersd), color = 'black')
-g2 <- g + geom_line(aes(y = mnmultideg))
-g3 <- g + geom_line(aes(y = mndegdev))
-g4 <- g + geom_line(aes(y = mnneigh))
-g5 <- g + geom_line(aes(y = mnconnredund))
+g1 <- g + geom_line(aes(y = layersd), color = 'black') + ylab('Layer Similarity')
+g2 <- g + geom_line(aes(y = mnmultideg)) + ylab('Multidegree')
+g3 <- g + geom_line(aes(y = mndegdev)) + ylab('Degree Deviation')
+g4 <- g + geom_line(aes(y = mnneigh)) + ylab('Neighborhood')
+g5 <- g + geom_line(aes(y = mnconnredund)) + ylab('Connective Redundancy')
 
 
 # Plot within
@@ -65,9 +65,9 @@ g <- ggplot(DT, aes(x = get(var), color = layer, group = layer)) +
   guides(color = FALSE) +
   labs(x = var)
 
-g6 <- g + geom_line(aes(y = mnsplitNeigh))
-g7 <- g + geom_line(aes(y = mnrelev))
-g8 <- g + geom_line(aes(y = mngraphstrength))
+g6 <- g + geom_line(aes(y = mnsplitNeigh)) + ylab('Degree')
+g7 <- g + geom_line(aes(y = mnrelev)) + ylab('Relevance')
+g8 <- g + geom_line(aes(y = mngraphstrength)) + ylab('Graph Strength')
 
 
 # Patchwork
