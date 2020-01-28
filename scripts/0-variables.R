@@ -12,8 +12,9 @@ datecol <- 'idate'
 timecol <- 'itime'
 
 
-
-splitBy <- 'season'
+# split by
+lccol <- 'lc30'
+splitBy <- c(lccol, 'season')
 
 ## spatsoc
 spatthresh <- 50

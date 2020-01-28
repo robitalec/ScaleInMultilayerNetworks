@@ -13,8 +13,7 @@ source('scripts/0-variables.R')
 
 ### Data ----
 var <- 'winlength'
-lccol <- 'lc30'
-splitBy <- c(var, lccol)
+splitBy <- c(splitBy, var)
 
 if (var == 'lcres') {
   path <- 'data/derived-data/2-landcover-scale.Rds'
