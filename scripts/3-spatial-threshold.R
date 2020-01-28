@@ -16,7 +16,7 @@ source('scripts/0-variables.R')
 
 
 ### Data ----
-DT <- readRDS('data/derived-data/1-sub-seasons-caribou.Rds')
+DT <- readRDS('data/derived-data/1-sub-seasons-fogo-caribou.Rds')
 alloc.col(DT)
 
 ### Temporal grouping with spatsoc ----
