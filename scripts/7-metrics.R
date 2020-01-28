@@ -33,7 +33,17 @@ alloc.col(DT)
 
 ### Multilayer network metrics ----
 matrices <- DT[, property_matrix(.SD, idcol, 'layer', 'splitNeigh'), var]
-layersim <- matrices[, .(layersd = sd(unlist(.SD))), winlength, .SDcols = patterns('FO')]
+matrices[winlength==40, cor(t(as.matrix(.SD))), .SDcols = patterns('FO')]
+
+library(animation)
+saveGIF({
+  matrices[, corrplot(cor(t(as.matrix(.SD)), use = 'complete.obs'), 
+                      title = .BY[[1]], tl.offset = 0, interval = 0.3), 
+           .SDcols = patterns('FO'), by = winlength ]
+})
+
+
+layersim <- matrices[, .(layersd = cor(unlist(.SD))), winlength, .SDcols = patterns('FO')]
 DT[layersim, layersd := layersd, on = var]
 
 # Redundancy
