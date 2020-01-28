@@ -45,7 +45,7 @@ group_times(
 ### Generate networks for each n observations ----
 var <- 'winlength'
 
-nets <- lapply(winlengths, function(len) {
+nets <- lapply(winlengths[1:2], function(len) {
   col <- paste0('season', len)
   splitBy <- c(col, lccol)
   
@@ -85,7 +85,7 @@ nets <- lapply(winlengths, function(len) {
   out <- unique(sub[, .SD, .SDcols = outcols])
   
   # Merge eigcent+correlations with neighbors
-  out <- out[eig, on = c(idcol, splitBy)]
+  out <- out[stren, on = c(idcol, splitBy)]
   setnames(out, col, gsub('[0-9]', '', col))
   
   # Preserve window length
