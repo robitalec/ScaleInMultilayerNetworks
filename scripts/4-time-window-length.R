@@ -45,7 +45,7 @@ group_times(
 ### Generate networks for each n observations ----
 var <- 'winlength'
 
-nets <- lapply(winlengths[1:2], function(len) {
+nets <- lapply(winlengths, function(len) {
   col <- paste0('season', len)
   splitBy <- c(col, lccol)
   
