@@ -36,38 +36,43 @@ alloc.col(DT)
 
 # To average columns...
 
-# Across layers - degree deviation, neigh, multideg, layersd
-metriccols <- c('neigh', 'multideg', 'layersd')
-DT[, paste0('mn', metriccols) := lapply(.SD, mean), 
+# Full multilayer - layersd (no need to avg)
+
+# Across layers - degree deviation, neigh, multideg
+metriccols <- c('neigh', 'multideg', 'degdev')
+DT[, paste0('mn', metriccols) := lapply(.SD, mean, na.rm = TRUE), 
    .SDcols = metriccols, by = var]
 
 # Within layers - splitNeigh, relev, connredund, graphstrength
 metriccols <- c('splitNeigh', 'relev', 'connredund', 'graphstrength')
-DT[, paste0('mn', metriccols) := lapply(.SD, mean), 
+DT[, paste0('mn', metriccols) := lapply(.SD, mean, na.rm = TRUE), 
    .SDcols = metriccols, by = c(var, splitBy)]
 
-
-
-
-
-# ggplot(DT) +
-# geom_line(aes(get(var), netcor))
-
-
-
-# metriccols <- c('splitNeigh')
-# DT[, (metriccols) := lapply(.SD, mean), .SDcols = metriccols, 
-#    by = c(var, splitBy)]
-
-## Plots with single value per var
-g <- ggplot(DT[, .SD[1], by = var], aes(x = get(var),
-                    color = get(idcol), 
-                    group = get(idcol))) +
+g <- ggplot(DT[, .SD[1], by = var], aes(x = get(var))) +
   guides(color = FALSE) +
   labs(x = var)
 
-# Number of observations vs layersd
 g1 <- g + geom_line(aes(y = layersd), color = 'black')
+g2 <- g + geom_line(aes(y = mnmultideg))
+g3 <- g + geom_line(aes(y = mndegdev))
+g4 <- g + geom_line(aes(y = mnneigh))
+
+
+
+g <- ggplot(DT, aes(x = get(var), color = layer, group = layer)) +
+  guides(color = FALSE) +
+  labs(x = var)
+
+# Number of observations vs split neighborhood (by layer) 
+g5 <- g + geom_line(aes(y = mnsplitNeigh))
+
+# Number of observations vs layer relevance
+g6 <- g + geom_line(aes(y = mnrelev))
+
+# Number of observations vs graph strength
+g7 <- g + geom_line(aes(y = mngraphstrength))
+
+
 
 
 ## Plots that combine layers
