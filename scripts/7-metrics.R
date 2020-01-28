@@ -12,7 +12,7 @@ source('scripts/0-variables.R')
 
 
 ### Data ----
-var <- 'nobs'
+var <- 'winpos'
 splitBy <- c(splitBy, var)
 
 if (var == 'lcres') {
