@@ -36,19 +36,22 @@ alloc.col(DT)
 # geom_line(aes(get(var), netcor))
 
 # To average columns...
-metriccols <- c('multideg', 'degdev', 'neigh', 'relev')
-DT[, (metriccols) := lapply(.SD, mean), .SDcols = metriccols, 
-   by = c(var)]
+# metriccols <- c('multideg', 'degdev', 'neigh', 'relev')
+# DT[, (metriccols) := lapply(.SD, mean), .SDcols = metriccols, 
+#    by = c(var)]
 
-metriccols <- c('splitNeigh')
-DT[, (metriccols) := lapply(.SD, mean), .SDcols = metriccols, 
-   by = c(var, splitBy)]
+# metriccols <- c('splitNeigh')
+# DT[, (metriccols) := lapply(.SD, mean), .SDcols = metriccols, 
+#    by = c(var, splitBy)]
 
 ## Plots that combine seasons
-DT[, grp := do.call(paste, c(.SD, sep = '-')), .SDcols = splitBy]
-g <- ggplot(DT, aes(x = get(var), color = factor(lc30), group = grp)) + 
-  guides(color = FALSE) + 
+g <- ggplot(DT, aes(x = get(var), color = get(idcol), group = get(idcol))) +
+  guides(color = FALSE) +
   labs(x = var)
+# DT[, grp := do.call(paste, c(.SD, sep = '-')), .SDcols = splitBy]
+# g <- ggplot(DT, aes(x = get(var), color = factor(lc30), group = grp)) + 
+#   guides(color = FALSE) + 
+#   labs(x = var)
 
 # Number of observations vs layersd
 g1 <- g + geom_line(aes(y = layersd))
@@ -56,12 +59,12 @@ g1 <- g + geom_line(aes(y = layersd))
 # Number of observations vs degree deviation
 g2 <- g + geom_line(aes(y = degdev))
 
-# Number of observations vs neighborhood (combined layers)
-g3 <- g + geom_line(aes(y = splitNeigh))
+# Number of observations vs multidegree
+g3 <- g + geom_line(aes(y = multideg))
 
 ## Plots that separate seasons
 g <- g +
-  # facet_grid(~season + lc30) +
+  facet_grid(~season + lc30) +
   guides(color = FALSE)
 
 # Number of observations vs split neighborhood (by layer) 
