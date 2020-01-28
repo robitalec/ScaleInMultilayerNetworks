@@ -38,7 +38,7 @@ ggplot() +
                aes(x0 = x, y0 = y, a = 3, b = 0.5, angle = 0), 
                alpha = 0.75, fill = "#4575b4") + ## scent
   geom_ellipse(data = df[species == "hyeana" & behaviour == "hro"],
-               aes(x0 = x, y0 = y, a = 5, b = 2, angle = 0.75), 
+               aes(x0 = x, y0 = y, a = 2, b = 5, angle = 0.1), 
                alpha = 0.75, fill = "#5ab4ac") + ## HRO
   geom_text(data = df[species == "hyena"], aes(x, y, label = behaviour)) +
   add_phylopic(hyeana, 1, y = 12, x = 1, ysize = 2) +
@@ -47,7 +47,7 @@ ggplot() +
   scale_x_continuous(limit = c(-1, 14), breaks=c(0, 2.5, 5, 7.5, 10, 12.5), 
                      labels= c("1 Second", "1 Minute",
                              "1 Hour", "1 Day", "1 Month", "1 Year")) +
-  scale_y_continuous(limits = c(0.5, 10000), trans = log2_trans(),
+  scale_y_continuous(limits = c(0.5, 50000), trans = log2_trans(),
                      breaks = trans_breaks("log10", function(x) 10^x),
                      labels = trans_format("log10", math_format(10^.x))) +
   coord_fixed() +

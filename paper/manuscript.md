@@ -528,7 +528,7 @@ formation of the social environment (He et al. 2019).
 something something blah blah.
 
 Silk et al. (2018) presented some key multilayer questions in animal
-behaviour research. While these questions represent an importanting
+behaviour research. While these questions represent an important
 starting point for multilayer networks, we present an additional set of
 questions relevant to the promise and problem of scale in mutlilayer
 networks:
@@ -541,7 +541,12 @@ networks:
     in some habitats? What, if any, is the role of movement in the
     context of habitat networks?
 
-3)  
+3)  How, and why, does the spatial scale of perception influence,
+    e.g. auditory, visual, or chemotaxis, influence the social
+    environment across scales? What is the role of memory, and by
+    extension social and spatial cognition, as animals navigate their
+    environment and make decisions about where to move next?
+
 ## Acknowledgements
 
 We thank all members of the Wildlife Evolutionary Ecology Lab, including
