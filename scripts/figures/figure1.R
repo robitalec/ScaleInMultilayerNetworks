@@ -42,19 +42,19 @@ ysize = 5 # silhouette size
 png("graphics/figure1.png", width = 6000, height = 6000, units = "px", res = 500)
 aa <- ggplot() +
   geom_ellipse(data = df[species == "hyeana" & behaviour == "Association"], 
-               aes(x0 = x, y0 = y, a = 8, b = 3, angle = 1), 
+               aes(x0 = x, y0 = y, a = 7, b = 3.25, angle = 1.2), 
                alpha = 0.75, fill = assoc) +  
   geom_ellipse(data = df[species == "hyeana" & behaviour == "Interaction"],
-               aes(x0 = x, y0 = y, a = 1.5, b = 1.5, angle = 0), 
+               aes(x0 = x, y0 = y, a = 1.25, b = 3.25, angle = 0), 
                alpha = 0.75, fill = inter) +
   geom_ellipse(data = df[species == "hyeana" & behaviour == "Vocal"],
-               aes(x0 = x, y0 = y, a = 0.75, b = 12, angle = 0), 
+               aes(x0 = x, y0 = y, a = 0.75, b = 13, angle = 0), 
                alpha = 0.75, fill = voc) + 
   geom_ellipse(data = df[species == "hyeana" & behaviour == "Scent"],
-               aes(x0 = x, y0 = y, a = 3, b = 0.6, angle = 0), 
+               aes(x0 = x, y0 = y, a = 3, b = 1, angle = 0), 
                alpha = 0.75, fill = scent ) + 
   geom_ellipse(data = df[species == "hyeana" & behaviour == "Home range overlap"],
-               aes(x0 = x, y0 = y, a = 2.5, b = 6, angle = 0), 
+               aes(x0 = x, y0 = y, a = 2.5, b = 16, angle = 0), 
                alpha = 0.75, fill = hro) + 
   geom_text(data = df[species == "hyeana"], aes(x, y, label = behaviour)) +
   add_phylopic(hyeana, 1, y = 30, x = 1, ysize = ysize) +
@@ -71,16 +71,16 @@ aa <- ggplot() +
 
 bb <- ggplot() +
   geom_ellipse(data = df[species == "bird" & behaviour == "Association"], 
-               aes(x0 = x, y0 = y, a = 4, b = 1.5, angle = 0.5), 
+               aes(x0 = x, y0 = y, a = 4, b = 3.25, angle = 0.5), 
                alpha = 0.75, fill = assoc) +  
   geom_ellipse(data = df[species == "bird" & behaviour == "Interaction"],
-               aes(x0 = x, y0 = y, a = 1.5, b = 1.5, angle = 0), 
+               aes(x0 = x, y0 = y, a = 1.25, b = 3.25, angle = 0), 
                alpha = 0.75, fill = inter) + 
   geom_ellipse(data = df[species == "bird" & behaviour == "Vocal"],
-               aes(x0 = x, y0 = y, a = 0.75, b = 4, angle = 0), 
+               aes(x0 = x, y0 = y, a = 0.75, b = 7, angle = 0), 
                alpha = 0.75, fill = voc) + 
   geom_ellipse(data = df[species == "bird" & behaviour == "Home range overlap"],
-               aes(x0 = x, y0 = y, a = 2.5, b = 5, angle = 0.1), 
+               aes(x0 = x, y0 = y, a = 3, b = 7, angle = 0), 
                alpha = 0.75, fill = hro) + 
   geom_text(data = df[species == "bird"], aes(x, y, label = behaviour)) +
   add_phylopic(bird, 1, y = 30, x = 1, ysize = ysize) +
@@ -97,16 +97,16 @@ bb <- ggplot() +
 
 cc <- ggplot() +
   geom_ellipse(data = df[species == "lizard" & behaviour == "Association"], 
-               aes(x0 = x, y0 = y, a = 4, b = 1.5, angle = 0.5), 
+               aes(x0 = x, y0 = y, a = 4, b = 3.25, angle = 0.5), 
                alpha = 0.75, fill = assoc) +  
   geom_ellipse(data = df[species == "lizard" & behaviour == "Interaction"],
-               aes(x0 = x, y0 = y, a = 1.5, b = 1.5, angle = 0), 
+               aes(x0 = x, y0 = y, a = 1.5, b = 3.25, angle = 0), 
                alpha = 0.75, fill = inter) + 
   geom_ellipse(data = df[species == "lizard" & behaviour == "Scent"],
                aes(x0 = x, y0 = y, a = 4.5, b = 0.75, angle = 0), 
                alpha = 0.75, fill = scent) + 
   geom_ellipse(data = df[species == "lizard" & behaviour == "Home range overlap"],
-               aes(x0 = x, y0 = y, a = 2.8, b = 5, angle = 0.1), 
+               aes(x0 = x, y0 = y, a = 2.5, b = 11.5, angle = 0), 
                alpha = 0.75, fill = hro) + 
   geom_text(data = df[species == "lizard"], aes(x, y, label = behaviour)) +
   add_phylopic(lizard, 1, y = 30, x = 1, ysize = 4) +
