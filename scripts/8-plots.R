@@ -50,7 +50,7 @@ DT[, paste0('mn', metriccols) := lapply(.SD, mean, na.rm = TRUE),
 
 ## Theme
 p <- theme(legend.position = 'none',
-           axis.text.x = element_text(size = 14, color = "black", angle = 45, vjust = 0.65),
+           axis.text.x = element_text(size = 14, color = "black", vjust = 0.65),
            axis.text.y = element_text(size = 14, color = "black"),
            axis.title = element_text(size = 18),
            panel.grid.minor = element_blank(),
