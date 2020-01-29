@@ -48,6 +48,10 @@ metriccols <- c('splitNeigh', 'relev', 'graphstrength')
 DT[, paste0('mn', metriccols) := lapply(.SD, mean, na.rm = TRUE), 
    .SDcols = metriccols, by = c(var, splitBy)]
 
+# Layer similarity
+melt(DT[, .SD, .SDcols = c('layer', layercols, var)], id.vars = c('layer', var))
+
+
 # Plot full, across
 g <- ggplot(DT[, .SD[1], by = var], aes(x = get(var))) +
   guides(color = FALSE) +
