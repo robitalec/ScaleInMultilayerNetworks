@@ -80,7 +80,8 @@ g1 <- base1 + geom_line(aes(y = layervar)) + ylab('Layer Variation')
 base2 <- ggplot(DT[, .SD[1], by = var], 
             aes(x = get(var)), color = 'black') +
   guides(color = FALSE) +
-  labs(x = var)
+  labs(x = var) +
+  p
 
 g2 <- base2 + geom_line(aes(y = mnmultideg)) + ylab('Multidegree')
 g3 <- base2 + geom_line(aes(y = mndegdev)) + ylab('Degree Deviation')
@@ -91,7 +92,11 @@ g5 <- base2 + geom_line(aes(y = mnconnredund)) + ylab('Connective Redundancy')
 # Plot within
 base3 <- ggplot(DT, aes(x = get(var), color = layer, group = layer)) +
   guides(color = FALSE) +
-  labs(x = var)
+  labs(x = var) + 
+  p + 
+  scale_color_manual(values = cols$color)
+
+  
 
 g6 <- base3 + geom_line(aes(y = mnsplitNeigh)) + ylab('Degree')
 g7 <- base3 + geom_line(aes(y = mnrelev)) + ylab('Relevance')
