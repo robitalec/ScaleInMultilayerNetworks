@@ -48,11 +48,31 @@ metriccols <- c('splitNeigh', 'relev', 'graphstrength')
 DT[, paste0('mn', metriccols) := lapply(.SD, mean, na.rm = TRUE), 
    .SDcols = metriccols, by = c(var, splitBy)]
 
+## Theme
+p <- theme(legend.position = 'none',
+           axis.text.x = element_text(size = 14, color = "black", angle = 45, vjust = 0.65),
+           axis.text.y = element_text(size = 14, color = "black"),
+           axis.title = element_text(size = 18),
+           panel.grid.minor = element_blank(),
+           panel.background = element_blank(),
+           panel.border = element_rect(
+             colour = "black",
+             fill = NA,
+             size = 1))
+
+## Colors
+# 1 = open, 2 = forest, 3 = lichen
+cols <- DT[, .(layer = sort(unique(layer)))][, 
+  .(layer, color = c('#8c510a','#d8b365','#c4b99c',
+                     '#01665e','#5ab4ac', '#9fbbb7'))]
+
 # Plot seasons
 base1 <- ggplot(DT[, .SD, by = var], 
             aes(x = get(var), color = season)) +
   guides(color = FALSE) +
-  labs(x = var)
+  labs(x = var) + 
+  p + 
+  scale_color_manual(values = c(cols$color[1], cols$color[4]))
 
 g1 <- base1 + geom_line(aes(y = layervar)) + ylab('Layer Variation')
 
