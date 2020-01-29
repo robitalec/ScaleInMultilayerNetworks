@@ -32,24 +32,8 @@ alloc.col(DT)
 
 ### Multilayer network metrics ----
 matrices <- DT[, property_matrix(.SD, idcol, 'layer', 'splitNeigh'), var]
-corrs <- matrices[, {
-  droplay <- .SD[, .SD, .SDcols = patterns('FO')]
-  corr <- cor(t(as.matrix(droplay)))
-  dimnames(corr) <- list(.SD[[1]], .SD[[1]])
-  corr[diag(corr)] <- NA
-  data.table(corr, keep.rownames = 'layer')
-  }, .SDcols = c('layer', grep('FO', colnames(matrices), 'FO', value = TRUE)),
-  by = var]
-
-layercols <- grep('summer|winter', colnames(corrs), value = TRUE)
-DT[corrs, (layercols) := do.call(get, list(layercols)), on = c('layer', var)]
-
-# layersim <- matrices[, .(layersd = sd(unlist(.SD))), var, .SDcols = patterns('FO')]
-# DT[layersim, layersd := layersd, on = var]
-
-# layersim <- matrices[, .(layercor = sd(unlist(.SD))/mean(unlist(.SD))), var, .SDcols = patterns('FO')]
-# DT[layersim, layercor := layercor, on = var]
-
+layersim <- matrices[, .(layervar = var(unlist(.SD)), na.rm = TRUE), var, .SDcols = patterns('FO')]
+DT[layersim, layervar := layervar, on = var]
 
 # Multidegree
 multi_degree(DT, 'splitNeigh', idcol, splitBy = var)
