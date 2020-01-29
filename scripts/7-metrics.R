@@ -31,9 +31,11 @@ alloc.col(DT)
 
 
 ### Multilayer network metrics ----
+varby <- c(var, 'season')
 matrices <- DT[, property_matrix(.SD, idcol, 'layer', 'splitNeigh'), var]
-layersim <- matrices[, .(layervar = var(unlist(.SD)), na.rm = TRUE), var, .SDcols = patterns('FO')]
-DT[layersim, layervar := layervar, on = var]
+layersim <- matrices[, .(layervar = var(unlist(.SD), na.rm = TRUE)), 
+                         by = varby, .SDcols = patterns('FO')]
+DT[layersim, layervar := layervar, on = varby]
 
 # Multidegree
 multi_degree(DT, 'splitNeigh', idcol, splitBy = var)
