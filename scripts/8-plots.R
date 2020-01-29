@@ -48,26 +48,34 @@ metriccols <- c('splitNeigh', 'relev', 'graphstrength')
 DT[, paste0('mn', metriccols) := lapply(.SD, mean, na.rm = TRUE), 
    .SDcols = metriccols, by = c(var, splitBy)]
 
-# Plot full, across
-g <- ggplot(DT[, .SD[1], by = var], aes(x = get(var))) +
+# Plot seasons
+base1 <- ggplot(DT[, .SD, by = var], 
+            aes(x = get(var), color = season)) +
   guides(color = FALSE) +
   labs(x = var)
 
-g1 <- g + geom_line(aes(y = layervar), color = 'black') + ylab('Layer Similarity')
-g2 <- g + geom_line(aes(y = mnmultideg)) + ylab('Multidegree')
-g3 <- g + geom_line(aes(y = mndegdev)) + ylab('Degree Deviation')
-g4 <- g + geom_line(aes(y = mnneigh)) + ylab('Neighborhood')
-g5 <- g + geom_line(aes(y = mnconnredund)) + ylab('Connective Redundancy')
+g1 <- base1 + geom_line(aes(y = layervar)) + ylab('Layer Variation')
+
+# Plot full, across
+base2 <- ggplot(DT[, .SD[1], by = var], 
+            aes(x = get(var)), color = 'black') +
+  guides(color = FALSE) +
+  labs(x = var)
+
+g2 <- base2 + geom_line(aes(y = mnmultideg)) + ylab('Multidegree')
+g3 <- base2 + geom_line(aes(y = mndegdev)) + ylab('Degree Deviation')
+g4 <- base2 + geom_line(aes(y = mnneigh)) + ylab('Neighborhood')
+g5 <- base2 + geom_line(aes(y = mnconnredund)) + ylab('Connective Redundancy')
 
 
 # Plot within
-g <- ggplot(DT, aes(x = get(var), color = layer, group = layer)) +
+base3 <- ggplot(DT, aes(x = get(var), color = layer, group = layer)) +
   guides(color = FALSE) +
   labs(x = var)
 
-g6 <- g + geom_line(aes(y = mnsplitNeigh)) + ylab('Degree')
-g7 <- g + geom_line(aes(y = mnrelev)) + ylab('Relevance')
-g8 <- g + geom_line(aes(y = mngraphstrength)) + ylab('Graph Strength')
+g6 <- base3 + geom_line(aes(y = mnsplitNeigh)) + ylab('Degree')
+g7 <- base3 + geom_line(aes(y = mnrelev)) + ylab('Relevance')
+g8 <- base3 + geom_line(aes(y = mngraphstrength)) + ylab('Graph Strength')
 
 
 # Patchwork
