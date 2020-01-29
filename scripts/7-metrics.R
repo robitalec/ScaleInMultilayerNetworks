@@ -54,8 +54,8 @@ layer_relevance(DT, idcol, splitBy = splitBy)
 stopifnot(DT[!between(relev, 0, 1), .N] == 0)
 
 
-### Output (overwrite)
-saveRDS(DT, path)
+### Output 
+saveRDS(DT, gsub('.Rds', '-metrics.Rds', path))
 
 
 

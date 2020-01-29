@@ -17,15 +17,15 @@ source('scripts/0-variables.R')
 var <- 'winpos'
 
 if (var == 'lcres') {
-  DT <- readRDS('data/derived-data/2-landcover-scale.Rds')
+  DT <- readRDS('data/derived-data/2-landcover-scale-metrics.Rds')
 } else if (var == 'spatialthreshold') {
-  DT <- readRDS('data/derived-data/3-spatial-threshold.Rds')
+  DT <- readRDS('data/derived-data/3-spatial-threshold-metrics.Rds')
 } else if (var == 'winlength') {
-  DT <- readRDS('data/derived-data/4-time-window-length.Rds')
+  DT <- readRDS('data/derived-data/4-time-window-length-metrics.Rds')
 } else if (var == 'nobs') {
-  DT <- readRDS('data/derived-data/5-number-of-observations.Rds')
+  DT <- readRDS('data/derived-data/5-number-of-observations-metrics.Rds')
 } else if (var == 'winpos') {
-  DT <- readRDS('data/derived-data/6-time-window-position.Rds')
+  DT <- readRDS('data/derived-data/6-time-window-position-metrics.Rds')
 }
 
 alloc.col(DT)
