@@ -104,7 +104,10 @@ g8 <- base3 + geom_line(aes(y = mngraphstrength)) + ylab('Graph Strength')
 
 
 # Patchwork
-(g1 + g5) / (g7 + g8)
+(fig2 <- (g1 + g5) / (g7 + g8) )
+
+
+ggsave('graphics/figure2.png', width = 10, height = 7)
 
 
 ## Supplemental figures
