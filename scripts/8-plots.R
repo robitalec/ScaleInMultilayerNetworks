@@ -48,17 +48,12 @@ metriccols <- c('splitNeigh', 'relev', 'graphstrength')
 DT[, paste0('mn', metriccols) := lapply(.SD, mean, na.rm = TRUE), 
    .SDcols = metriccols, by = c(var, splitBy)]
 
-# Layer similarity
-m <- melt(DT[, .SD, .SDcols = c('layer', layercols, var)], id.vars = c('layer', var))
-m <- unique(na.omit(m))[, inter := paste(layer, variable)]
-ggplot(na.omit(m))+geom_line(aes(get(var), value, color = inter)) + labs(x=var, y = 'layer similarity') #+ guides(color=FALSE)
-
 # Plot full, across
 g <- ggplot(DT[, .SD[1], by = var], aes(x = get(var))) +
   guides(color = FALSE) +
   labs(x = var)
 
-g1 <- g + geom_line(aes(y = layersd), color = 'black') + ylab('Layer Similarity')
+g1 <- g + geom_line(aes(y = layervar), color = 'black') + ylab('Layer Similarity')
 g2 <- g + geom_line(aes(y = mnmultideg)) + ylab('Multidegree')
 g3 <- g + geom_line(aes(y = mndegdev)) + ylab('Degree Deviation')
 g4 <- g + geom_line(aes(y = mnneigh)) + ylab('Neighborhood')
