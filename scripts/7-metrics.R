@@ -33,7 +33,7 @@ alloc.col(DT)
 ### Multilayer network metrics ----
 varby <- c(var, 'season')
 matrices <- DT[, property_matrix(.SD, idcol, 'layer', 'splitNeigh'), var]
-matrices[, c('season', lccol) := tstrsplit(layer, '-', type.convert = TRUE)]
+matrices[, c(lccol, 'season') := tstrsplit(layer, '-', type.convert = TRUE)]
 
 layer_similarity(matrices, 'FO', c(lccol, var))
 
