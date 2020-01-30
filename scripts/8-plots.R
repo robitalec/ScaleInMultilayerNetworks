@@ -82,7 +82,7 @@ base1 <- ggplot(unique(DT[, .SD, .SDcols = c(var, 'lcname', 'layersim')]),
   p# +
   # scale_color_grey()
 
-g1 <- base1 + geom_line(aes(y = (layersim))) + ylab('Layer Variation')
+g1 <- base1 + geom_line(aes(y = (layersim))) + ylab('Layer Similarity')
 
 # Plot full, across
 base2 <- ggplot(DT[, .SD[1], by = var], 
