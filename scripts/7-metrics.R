@@ -35,15 +35,9 @@ varby <- c(var, 'season')
 matrices <- DT[, property_matrix(.SD, idcol, 'layer', 'splitNeigh'), var]
 matrices[, c('season', lccol) := tstrsplit(layer, '-', type.convert = TRUE)]
 
+layer_similarity(matrices, 'FO', c(lccol, var))
 
-
-matrices[,  := ]
-matrices[, {print(t(.SD[1]));print(.SD[2]);print(cor(t(.SD[1]), t(.SD[2]), use='complete.obs'))}, .SDcols = patterns('FO'), varby]
-
-
-layersim <- matrices[, .(layervar = var(unlist(.SD), na.rm = TRUE)), 
-                         by = varby, .SDcols = patterns('FO')]
-DT[layersim, layervar := layervar, on = varby]
+DT[matrices, layersim := layersim, on = c(varby, lccol)]
 
 # Multidegree
 multi_degree(DT, 'splitNeigh', idcol, splitBy = var)
