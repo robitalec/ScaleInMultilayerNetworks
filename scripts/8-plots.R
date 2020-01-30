@@ -63,18 +63,21 @@ p <- theme(legend.position = 'none',
 ## Colors
 # 1 = open, 2 = forest, 3 = lichen
 cols <- DT[, .(layer = sort(unique(layer)))][, 
-  .(layer, color = c('#8c510a','#d8b365','#c4b99c',
-                     '#01665e','#5ab4ac', '#9fbbb7'))]
+  .(layer, hex = c('#8c510a','#d8b365','#c4b99c',
+                   '#01665e','#5ab4ac', '#9fbbb7'))]
 
-# Plot seasons
-base1 <- ggplot(DT[, .SD, by = var], 
-            aes(x = get(var), color = season)) +
+greys <- DT[, .(lc30 = sort(unique(lc30)))][, 
+  .(lc30, hex = c('#919191','#c2c2c2','#dedede'))]
+
+# Plot by landcover
+base1 <- ggplot(unique(DT[, .SD, .SDcols = c(var, lccol, 'layersim')]), 
+            aes(x = get(var), color = factor(get(lccol)))) +
   guides(color = FALSE) +
   labs(x = var) + 
   p + 
-  scale_color_manual(values = c(cols$color[1], cols$color[4]))
+  scale_color_manual(values = greys$hex)
 
-g1 <- base1 + geom_line(aes(y = layervar)) + ylab('Layer Variation')
+g1 <- base1 + geom_line(aes(y = (layersim))) + ylab('Layer Variation')
 
 # Plot full, across
 base2 <- ggplot(DT[, .SD[1], by = var], 
@@ -94,7 +97,7 @@ base3 <- ggplot(DT, aes(x = get(var), color = layer, group = layer)) +
   guides(color = FALSE) +
   labs(x = var) + 
   p + 
-  scale_color_manual(values = cols$color)
+  scale_color_manual(values = cols$hex)
 
   
 
