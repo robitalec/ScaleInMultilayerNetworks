@@ -50,8 +50,10 @@ DT[, paste0('mn', metriccols) := lapply(.SD, mean, na.rm = TRUE),
    .SDcols = metriccols, by = c(var, splitBy)]
 
 ## Theme
-p <- theme(legend.position = c(0.9,0.1),
+p <- theme(#legend.position = c(0.9,0.1),
+           legend.text = element_text(size = 12, color = "black"),
            legend.title = element_blank(),
+           legend.spacing = unit(-0.5, 'cm'),
            legend.background = element_blank(),
            legend.key = element_blank(),
            axis.text.x = element_text(size = 14, color = "black", vjust = 0.65),
@@ -74,11 +76,11 @@ greys <- DT[, .(lc30 = sort(unique(lc30)))][,
 
 # Plot by landcover
 base1 <- ggplot(unique(DT[, .SD, .SDcols = c(var, 'lcname', 'layersim')]), 
-            aes(x = get(var), color = factor(lcname))) +
+            aes(x = get(var), linetype = lcname)) +
   # guides(color = FALSE) +
   labs(x = var) + 
-  p +
-  scale_color_grey()
+  p# +
+  # scale_color_grey()
 
 g1 <- base1 + geom_line(aes(y = (layersim))) + ylab('Layer Variation')
 
@@ -96,25 +98,26 @@ g5 <- base2 + geom_line(aes(y = mnconnredund)) + ylab('Connective Redundancy')
 
 
 # Plot within
-base3 <- ggplot(DT, aes(x = get(var), color = layernm, group = layernm)) +
+base3 <- ggplot(DT, aes(x = get(var), color = season, linetype = lcname)) +
   # guides(color = FALSE) +
   labs(x = var) + 
   p + 
-  theme(legend.position = c(0.9,0.18)) +
-  scale_color_manual(values = cols$hex)
+  scale_color_manual(values = c(cols$hex[1], cols$hex[5]))
 
   
 
 g6 <- base3 + geom_line(aes(y = mnsplitNeigh)) + ylab('Degree')
-g7 <- base3 + geom_line(aes(y = mnrelev)) + ylab('Relevance')
-g8 <- base3 + geom_line(aes(y = mngraphstrength)) + ylab('Graph Strength')
+g7 <- base3 + geom_line(aes(y = mnrelev)) + ylab('Relevance') +
+  theme(legend.position = c(0.9,0.18))
+g8 <- base3 + geom_line(aes(y = mngraphstrength)) + ylab('Graph Strength') +
+  theme(legend.position = 'none')
 
 
 # Patchwork
 (fig2 <- (g1 + g5) / (g7 + g8) )
 
 
-ggsave('graphics/figure2.png', width = 10, height = 7)
+ggsave('graphics/figure2.png', width = 15, height = 9)
 
 
 ## Supplemental figures
