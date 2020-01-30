@@ -81,7 +81,6 @@ nets <- lapply(seq(10, maxn, by = nstep), function(n) {
   set(out, j = var, value = n)
 })
 
-# TODO: check "found duplicate id in a timegroup and/or splitBy - does your group_times threshold match the fix rate?"
 out <- rbindlist(nets)
 
 
