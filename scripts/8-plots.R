@@ -50,7 +50,7 @@ DT[, paste0('mn', metriccols) := lapply(.SD, mean, na.rm = TRUE),
    .SDcols = metriccols, by = c(var, splitBy)]
 
 ## Theme
-p <- theme(#legend.position = c(0.9,0.1),
+p <- theme(legend.position = c(0.9,0.12),
            legend.text = element_text(size = 12, color = "black"),
            legend.title = element_blank(),
            legend.spacing = unit(-0.5, 'cm'),
@@ -99,7 +99,7 @@ g5 <- base2 + geom_line(aes(y = mnconnredund)) + ylab('Connective Redundancy')
 
 # Plot within
 base3 <- ggplot(DT, aes(x = get(var), color = season, linetype = lcname)) +
-  # guides(color = FALSE) +
+  theme(legend.position = 'none') + 
   labs(x = var) + 
   p + 
   scale_color_manual(values = c(cols$hex[1], cols$hex[5]))
@@ -108,16 +108,15 @@ base3 <- ggplot(DT, aes(x = get(var), color = season, linetype = lcname)) +
 
 g6 <- base3 + geom_line(aes(y = mnsplitNeigh)) + ylab('Degree')
 g7 <- base3 + geom_line(aes(y = mnrelev)) + ylab('Relevance') +
-  theme(legend.position = c(0.9,0.18))
-g8 <- base3 + geom_line(aes(y = mngraphstrength)) + ylab('Graph Strength') +
-  theme(legend.position = 'none')
+  theme(legend.position = c(0.9,0.1)) + guides(linetype = FALSE)
+g8 <- base3 + geom_line(aes(y = mngraphstrength)) + ylab('Graph Strength')
 
 
 # Patchwork
 (fig2 <- (g1 + g5) / (g7 + g8) )
 
 
-ggsave('graphics/figure2.png', width = 15, height = 9)
+ggsave(paste0('graphics/figure3-', var, '.png'), width = 15, height = 10)
 
 
 ## Supplemental figures
