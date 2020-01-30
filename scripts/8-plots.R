@@ -50,7 +50,10 @@ DT[, paste0('mn', metriccols) := lapply(.SD, mean, na.rm = TRUE),
    .SDcols = metriccols, by = c(var, splitBy)]
 
 ## Theme
-p <- theme(legend.position = 'none',
+p <- theme(legend.position = c(0.9,0.1),
+           legend.title = element_blank(),
+           legend.background = element_blank(),
+           legend.key = element_blank(),
            axis.text.x = element_text(size = 14, color = "black", vjust = 0.65),
            axis.text.y = element_text(size = 14, color = "black"),
            axis.title = element_text(size = 18),
@@ -62,7 +65,6 @@ p <- theme(legend.position = 'none',
              size = 1))
 
 ## Colors
-# 1 = open, 2 = forest, 3 = lichen
 cols <- DT[, .(layer = sort(unique(layer)))][, 
   .(layer, hex = c('#8c510a','#d8b365','#c4b99c',
                    '#01665e','#5ab4ac', '#9fbbb7'))]
@@ -71,12 +73,12 @@ greys <- DT[, .(lc30 = sort(unique(lc30)))][,
   .(lc30, hex = c('#6b6b6b', '#c2c2c2', '#919191'))]
 
 # Plot by landcover
-base1 <- ggplot(unique(DT[, .SD, .SDcols = c(var, lccol, 'layersim')]), 
-            aes(x = get(var), color = factor(get(lccol)))) +
-  guides(color = FALSE) +
+base1 <- ggplot(unique(DT[, .SD, .SDcols = c(var, 'lcname', 'layersim')]), 
+            aes(x = get(var), color = factor(lcname))) +
+  # guides(color = FALSE) +
   labs(x = var) + 
-  p + 
-  scale_color_manual(values = greys$hex)
+  p +
+  scale_color_grey()
 
 g1 <- base1 + geom_line(aes(y = (layersim))) + ylab('Layer Variation')
 
@@ -94,10 +96,11 @@ g5 <- base2 + geom_line(aes(y = mnconnredund)) + ylab('Connective Redundancy')
 
 
 # Plot within
-base3 <- ggplot(DT, aes(x = get(var), color = layer, group = layer)) +
-  guides(color = FALSE) +
+base3 <- ggplot(DT, aes(x = get(var), color = layernm, group = layernm)) +
+  # guides(color = FALSE) +
   labs(x = var) + 
   p + 
+  theme(legend.position = c(0.9,0.18)) +
   scale_color_manual(values = cols$hex)
 
   
