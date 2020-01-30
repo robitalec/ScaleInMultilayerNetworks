@@ -12,7 +12,7 @@ source('scripts/0-variables.R')
 
 
 ### Data ----
-var <- 'spatialthreshold'
+var <- 'winlength'
 splitBy <- c(splitBy, var)
 
 if (var == 'lcres') {
@@ -57,7 +57,6 @@ stopifnot(DT[!between(relev, 0, 1), .N] == 0)
 
 ### Output 
 saveRDS(DT, gsub('.Rds', '-metrics.Rds', path))
-
 
 
 
