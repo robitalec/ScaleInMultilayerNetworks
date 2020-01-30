@@ -34,6 +34,9 @@ alloc.col(DT)
 varby <- c(var, 'season')
 matrices <- DT[, property_matrix(.SD, idcol, 'layer', 'splitNeigh'), var]
 matrices[, season := tstrsplit(layer, '-', keep = 1)]
+matrices[, {print(t(.SD[1]));print(.SD[2]);print(cor(t(.SD[1]), t(.SD[2]), use='complete.obs'))}, .SDcols = patterns('FO'), varby]
+
+
 layersim <- matrices[, .(layervar = var(unlist(.SD), na.rm = TRUE)), 
                          by = varby, .SDcols = patterns('FO')]
 DT[layersim, layervar := layervar, on = varby]
