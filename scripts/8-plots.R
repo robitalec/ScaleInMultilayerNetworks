@@ -67,7 +67,7 @@ cols <- DT[, .(layer = sort(unique(layer)))][,
                    '#01665e','#5ab4ac', '#9fbbb7'))]
 
 greys <- DT[, .(lc30 = sort(unique(lc30)))][, 
-  .(lc30, hex = c('#919191','#c2c2c2','#dedede'))]
+  .(lc30, hex = c('#6b6b6b', '#c2c2c2', '#919191'))]
 
 # Plot by landcover
 base1 <- ggplot(unique(DT[, .SD, .SDcols = c(var, lccol, 'layersim')]), 
