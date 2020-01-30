@@ -51,7 +51,6 @@ stopifnot(DT[!between(connredund, 0, 1), .N] == 0)
 deviation_degree(DT, 'splitNeigh', idcol, splitBy = var)
 
 # Relevance
-# TODO: check range 
 layer_relevance(DT, idcol, splitBy = splitBy)
 stopifnot(DT[!between(relev, 0, 1), .N] == 0)
 
