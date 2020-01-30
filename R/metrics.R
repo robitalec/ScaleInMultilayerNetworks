@@ -177,7 +177,7 @@ layer_strength <- function(graphLs) {
 
 
 
-#' Layer correlation
+#' Layer similarity
 #' @param gLs Expects a list of two weighted graphs 
 #' @param attr Graph attribute to use, default assuming the weight is stored. 
 #'
