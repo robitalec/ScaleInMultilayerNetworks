@@ -64,6 +64,17 @@ nets <- lapply(thresholds, function(t) {
   # Calculate neighbors
   layer_neighbors(sub, idcol, splitBy = splitBy)
   
+  # Calculate layer similarity
+  lslandcovers <- sub[, unique(get(lccol))]
+  lapply(lslandcovers, function(lc) {
+    whichg <- grepl(lc, names(gLs))
+    stopifnot(sum(whichg) == 2)
+    
+    layer_similarity(gLs[whichg])
+  })
+  gLs
+  
+  
   # and tidy output, prep for merge
   outcols <- c('neigh', 'splitNeigh', idcol, splitBy)
   out <- unique(sub[, .SD, .SDcols = outcols])
