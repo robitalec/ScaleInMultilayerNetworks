@@ -14,7 +14,7 @@ source('scripts/0-variables.R')
 
 
 ### Data ----
-var <- 'winpos'
+var <- 'spatialthreshold'
 
 if (var == 'lcres') {
   DT <- readRDS('data/derived-data/2-landcover-scale-metrics.Rds')
@@ -74,6 +74,8 @@ p <- theme(legend.position = pos1,
              colour = "black",
              fill = NA,
              size = 1))
+
+
 
 ## Colors
 cols <- DT[, .(layer = sort(unique(layer)))][, 
