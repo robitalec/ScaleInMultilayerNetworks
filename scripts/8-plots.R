@@ -31,13 +31,14 @@ if (var == 'lcres') {
 alloc.col(DT)
 
 
+# Recode landcover
+# 1 = open, 2 = forest, 3 = lichen
+DT[get(lccol) == 1, c('lcname', 'layernm') := .('open', paste0(season, '-open'))]
+DT[get(lccol) == 2, c('lcname', 'layernm') := .('forest', paste0(season, '-forest'))]
+DT[get(lccol) == 3, c('lcname', 'layernm') := .('lichen', paste0(season, '-lichen'))]
+
 ### Plots ----
 ## Manuscript figures
-
-# To average columns...
-
-# Full multilayer - layersd (no need to avg)
-
 # Across layers - degree deviation, neigh, multideg, connredund
 metriccols <- c('neigh', 'multideg', 'degdev', 'connredund')
 DT[, paste0('mn', metriccols) := lapply(.SD, mean, na.rm = TRUE), 
