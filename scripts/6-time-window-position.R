@@ -47,7 +47,7 @@ var <- 'winpos'
 
 nets <- lapply(winpositions, function(pos) {
   col <- paste0('season', pos)
-  splitBy <- c(col, lccol)
+  splitBy <- c(lccol, col)
   
   sub <- na.omit(DT, cols = splitBy)
   

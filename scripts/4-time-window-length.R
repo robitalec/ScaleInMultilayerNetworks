@@ -47,7 +47,7 @@ var <- 'winlength'
 
 nets <- lapply(winlengths, function(len) {
   col <- paste0('season', len)
-  splitBy <- c(col, lccol)
+  splitBy <- c(lccol, col)
   
   sub <- na.omit(DT, cols = splitBy)
   
