@@ -33,7 +33,11 @@ alloc.col(DT)
 ### Multilayer network metrics ----
 varby <- c(var, 'season')
 matrices <- DT[, property_matrix(.SD, idcol, 'layer', 'splitNeigh'), var]
-matrices[, season := tstrsplit(layer, '-', keep = 1)]
+matrices[, c('season', lccol) := tstrsplit(layer, '-', type.convert = TRUE)]
+
+
+
+matrices[,  := ]
 matrices[, {print(t(.SD[1]));print(.SD[2]);print(cor(t(.SD[1]), t(.SD[2]), use='complete.obs'))}, .SDcols = patterns('FO'), varby]
 
 
