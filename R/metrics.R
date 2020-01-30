@@ -185,20 +185,20 @@ layer_strength <- function(graphLs) {
 #' @export
 #'
 #' @examples
-# layer_correlation <- function(DT,gLs, attr = 'weight') {
-#   matrices <- DT[, property_matrix(.SD, idcol, 'layer', 'splitNeigh'), var]
-#   layersim <- matrices[, .(layersd = sd(unlist(.SD))), winlength, .SDcols = patterns('FO')]
-#   DT[layersim, layersd := layersd, on = var]
-#   
-#   if (length(gLs) != 2) {
-#     stop('gLs must be length 2')
-#   }
-#   cor(c(igraph::as_adj(
-#     gLs[[1]], attr = attr, sparse = FALSE
-#   )), c(igraph::as_adj(
-#     gLs[[2]], attr = attr, sparse = FALSE
-#   )))
-# }
+layer_similarity <- function(DT,gLs, attr = 'weight') {
+  matrices <- DT[, property_matrix(.SD, idcol, 'layer', 'splitNeigh'), var]
+  layersim <- matrices[, .(layersd = sd(unlist(.SD))), winlength, .SDcols = patterns('FO')]
+  DT[layersim, layersd := layersd, on = var]
+
+  if (length(gLs) != 2) {
+    stop('gLs must be length 2')
+  }
+  cor(c(igraph::as_adj(
+    gLs[[1]], attr = attr, sparse = FALSE
+  )), c(igraph::as_adj(
+    gLs[[2]], attr = attr, sparse = FALSE
+  )))
+}
 
 
 
