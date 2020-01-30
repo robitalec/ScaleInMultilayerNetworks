@@ -14,7 +14,7 @@ source('scripts/0-variables.R')
 
 
 ### Data ----
-var <- 'winlength'
+var <- 'nobs'
 
 if (var == 'lcres') {
   DT <- readRDS('data/derived-data/2-landcover-scale-metrics.Rds')
@@ -54,12 +54,12 @@ DT[, paste0('mn', metriccols) := lapply(.SD, mean, na.rm = TRUE),
 if (var %in% c('winpos', 'winlength')) {
   pos1 <- c(0.9,0.12)
   pos2 <- c(0.9,0.1)
-} else if (var %in% c('spatialthreshold', 'nobs')) {
+} else if (var %in% c('spatialthreshold')) {
   pos1 <- c(0.9,0.42)
   pos2 <- c(0.9,0.4)
-} else {
-  pos1 <- c(0.9,0.12)
-  pos2 <- c(0.9,0.1)
+} else if (var %in% c('nobs')){
+  pos1 <- c(0.9,0.22)
+  pos2 <- c(0.9,0.2)
 }
 
 p <- theme(legend.position = pos1,
