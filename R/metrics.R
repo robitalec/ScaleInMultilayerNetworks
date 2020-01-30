@@ -178,26 +178,20 @@ layer_strength <- function(graphLs) {
 
 
 #' Layer similarity
-#' @param gLs Expects a list of two weighted graphs 
-#' @param attr Graph attribute to use, default assuming the weight is stored. 
+#'
+#' @param matrices property matrices generated using `property_matrix`
+#' @param splitBy column indicating which groups to compare ensuring each group of rows = 2. 
+#' @param pattern 
 #'
 #' @return
 #' @export
 #'
 #' @examples
-layer_similarity <- function(DT,gLs, attr = 'weight') {
-  matrices <- DT[, property_matrix(.SD, idcol, 'layer', 'splitNeigh'), var]
-  layersim <- matrices[, .(layersd = sd(unlist(.SD))), winlength, .SDcols = patterns('FO')]
-  DT[layersim, layersd := layersd, on = var]
-
-  if (length(gLs) != 2) {
-    stop('gLs must be length 2')
-  }
-  cor(c(igraph::as_adj(
-    gLs[[1]], attr = attr, sparse = FALSE
-  )), c(igraph::as_adj(
-    gLs[[2]], attr = attr, sparse = FALSE
-  )))
+layer_similarity <- function(matrices, pattern, splitBy) {
+  matrices[, layersim := {
+    stopifnot(nrow(.SD) == 2)
+    cors <- cor(t(.SD[1]), t(.SD[2]), use = 'complete.obs')
+  }, by = splitBy, .SDcols = patterns(pattern)]
 }
 
 
