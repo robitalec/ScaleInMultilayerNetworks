@@ -244,7 +244,7 @@ multidimensional..."
 #### Social scale
 
 We altered social scale based on visual (short distance) and auditory (long
-distnace) sensory modalities of caribou (REF?). Specifically, we modified the
+distnace) sensory modalities of caribou <!--(REF?)-->. Specifically, we modified the
 distance threshold required for group assignment (see above) and re-assigned
 groups at incremental distance between 5-500m. For example, at the finest social
 scale, only individuals within 5m of one another were considered in the same
@@ -258,7 +258,7 @@ our landcover classification map at varying scales. Specifically, we selected
 scales relevant to caribou ecology. We re-sampled landcover using the
 `grainchanger` **package** (Graham 2019) at **five** scales: 100m, 250m, 500m,
 1000m, 2500m. Sampling at 100 and 250m represents fine-scale decision making for
-caribou during foraging (REF), while re-sampling at 1000m and 2500m represents
+caribou during foraging <!--(REF)-->, while re-sampling at 1000m and 2500m represents
 the scale at which caribou tend to select and avoid habitat (Bastille-Rousseau
 et al. 2017). Resampling occurred based on a modal moving window method, where
 **XXXXX. [ALEC YOU'RE GOING TO HAVE TO ADD DETAIL HERE]**
@@ -287,14 +287,14 @@ Window positions starting at 1, to + 48 So 1-48 is first iteration for winter
 and 48-96 is second iteration for "winter". Same for summer, starting at 215.
 Network layers for each season are constructed.
 
-**Observational scale** (temorary header): Studies of social network analysis
+**Observational scale** <!--(temorary header)-->: Studies of social network analysis
 vary in the number and frequency of observations as well as the data collection
 technique used to generate networks (Davis et al. 2018; Webber and Vander Wal
 2019).
 
-Randomly select max number of observations - timegroups -  (right now 750). For
+Randomly select max number of observations - timegroups - <!-- (right now 750)-->. For
 each iteration, include n observations for each season for all individuals.
-Subsequent iterations include nstep more (right now 25), along with previously
+Subsequent iterations include nstep more <!--(right now 25)-->, along with previously
 included to remove stochasticity. Parallels with observation data.
 
 
@@ -460,8 +460,8 @@ Watts, 2012), or they can be consistent across time, which can be used to
 reflect social phenotypes (Aplin et al., 2015; Stanley, Mettke-Hofmann, Hager, &
 Shultz, 2018). Seasonal fluctuations have the potential to have disease
 transmission and fitness effects for individuals (Balasubramaniam et al., 2019;
-Chen et al., 2014). **[QW: I'm not sure what this paragraph adds - I think if we
-need to save space we could cut it]**
+Chen et al., 2014). <!-- **[QW: I'm not sure what this paragraph adds - I think if we
+need to save space we could cut it]**-->
 
 
 In long-lived species, social phenotypes can change over their lifetimes in ways
@@ -634,6 +634,8 @@ navigate their environment and make decisions about where to move next?
 
 
 ## Acknowledgements
+
+<!-- add jack -->
 
 We thank all members of the Wildlife Evolutionary Ecology Lab, including K.
 Kingdon, S. Boyle,  C. Prokopenko, I. Richmond, J. Hogg, and L. Newediuk for
