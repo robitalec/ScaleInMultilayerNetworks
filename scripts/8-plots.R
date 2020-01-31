@@ -14,7 +14,7 @@ source('scripts/0-variables.R')
 
 
 ### Data ----
-var <- 'lcres'
+var <- 'nobs'
 
 if (var == 'lcres') {
   DT <- readRDS('data/derived-data/2-landcover-scale-metrics.Rds')[lcres<2000]
@@ -40,7 +40,7 @@ DT[get(lccol) == 3, c('lcname', 'layernm') := .('lichen', paste0(season, '-liche
 
 # Var x lab names
 varnames <- data.table(
-  var = c('lcres', 'spatialthreshold', 'winlength', 'nobs', 'winpos'),
+  vars = c('lcres', 'spatialthreshold', 'winlength', 'nobs', 'winpos'),
   varname = c('Landcover Resolution', 'Social Threshold', 'Time Window Length',
               'Number of Observations', 'Time Window Position')
 )
