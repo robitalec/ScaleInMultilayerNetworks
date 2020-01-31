@@ -74,7 +74,9 @@ m <- merge(
 )
 setnames(m, c(idcol), c('from'))
 
+f <- lapply(gLs, function(g) tryCatch(ggnetwork(g), error = function(g) g))
 
+rbindlist(f[-3])
 # TODO: MISSING INDIVIDUALS
 (gnn <- ggplot(m, aes(
   x = meanX,
