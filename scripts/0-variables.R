@@ -13,7 +13,7 @@ timecol <- 'itime'
 
 
 # split by
-lccol <- 'lc30'
+lccol <- 'lc'
 splitBy <- c(lccol, 'season')
 
 ## spatsoc
