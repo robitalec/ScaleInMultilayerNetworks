@@ -47,10 +47,9 @@ Animals and landscapes are influenced across scales processes as global
 as climate and productivity (Field et al. 2009), and species-specific as
 trophic interactions and resource availability (Legendre 1993; Chave
 2013). The effect of scale in ecology has been explored through species
-distribution modelling (Elith et al. 2009), habitat selection
-(<span class="citeproc-not-found" data-reference-id="Mayor2007">**???**</span>)(Mayor
-et al. 2007), and food webs (Sugihara et al. 1989). Scale can be
-considered throughout ecology, including animal behaviour and the social
+distribution modelling (Elith et al. 2009), habitat selection (Mayor et
+al. 2007), and food webs (Sugihara et al. 1989). Scale can be considered
+throughout ecology, including animal behaviour and the social
 environment that animals experience.
 
 Sociality exists across scales (Whitehead 2008). For example, grooming
@@ -493,15 +492,16 @@ networks (Castles et al., 2014).
 ### Movement ecology and collective movement
 
 Animal movement undoubtedly affects an individual’s social environment
-(Strandburg-Peshkin et al. 2015), and multilayer networks are no
-exception (Mourier et al. 2019). Movement is a dynamic process that is
+(Strandburg-Peshkin et al. 2015). Movement is a dynamic process that is
 related to the resources an individual consumes within their home range
 and their general space use (Van Moorter et al. 2016). Collective
 movement can reduce group-level predation via detection-dilution
 trade-offs and improve information transfer about the quality or
 location of resources to other group members (Jolles et al. 2019).
 Social processes, movement decisions, and space use are therefore
-inextricably linked.
+inextricably linked and multilayer networks represent a potential
+analytical framework for linking these processes (e.g. Mourier et
+al. 2019).
 
 Although multilayer animal social networks are relatively novel (Silk et
 al. 2018), movement behaviour within multilayer networks has already
@@ -510,35 +510,34 @@ vulturinum*), GPS movement data were used to generate *monolayer*
 association networks within a multilayer network (Papageorgiou et
 al. 2019). In addition, *spatial networks* are physical locations
 (nodes) which are connected in a network when individuals move between
-said locations (ties). For example, spatial networks were applied to
+said locations (edges). For example, spatial networks were applied to
 monitor movement of sharks (*Carcharhinus amblyrhynchos* and
-*Carcharhinus melanopterus*) between fixed location autonomous arrays,
-where nodes represent locations within the array, *intralayer edges*
-represent individual movement frequency, and *interlayer edges*
+*Carcharhinus melanopterus*) between fixed location autonomous arrays.
+In this example, nodes represent locations within the array, *intralayer
+edges* represent individual movement frequency, and *interlayer edges*
 represent contact probability among individuals at a given node (Mourier
 et al. 2019). While both studies integrate movement in some capacity,
 neither generate networks based on continuous measures of dyadic or
 collective movement (Long et al. 2014).
 
-Continuous collection of animal relocation data using GPS technology can
-be used to measure how groups of animals make movement decisions in the
-context of their local environment (Strandburg-Peshkin et al. 2015,
-2017) and across scales. A collective movement layer could constitute
-similarity in movement for dyads (Long et al. 2014) or groups (Bode et
-al. 2011). This movement layer could be made at a fine
-(i.e. minute-to-minute: Cleasby et al. 2019) or coarse (global
-migration: Flack et al. 2018) scale. In contrast to spatial networks,
-movement networks could assimilate dyadic movement metrics into a
-network representing the continuous and simultaneous movement
-trajectories of animals. Another potential application would be to
-generate social networks during times when animals are engaged in
-different behaviours, including traveling, interacting, or foraging
-(e.g. Muller et al. 2018; Finn et al. 2019) and construct a multilayer
-network based on behaviour-specific monolayer networks
-(e.g. Smith-Aguilar et al. 2019). Importantly, the key to incorporating
-movement in multilayer networks across scales is the technological
-advancements available to overcome previous limitations (see Hughey et
-al. 2018).
+In contrast to spatial networks, movement networks could assimilate
+dyadic movement metrics into a network representing the continuous and
+simultaneous movement trajectories of animals. Continuous collection of
+animal relocation data using GPS technology can be used to measure how
+groups of animals make collective movement decisions in the context of
+their local environment (Strandburg-Peshkin et al. 2015, 2017) and
+across scales. A collective movement layer could constitute similarity
+in movement for dyads (Long et al. 2014) or groups (Bode et al. 2011).
+This movement layer could be made at a fine (i.e. minute-to-minute:
+Cleasby et al. 2019) or coarse scale (global migration: Flack et
+al. 2018). Another potential application would be to generate social
+networks during times when animals are engaged in different behaviours,
+including traveling, interacting, or foraging (e.g. Muller et al. 2018;
+Finn et al. 2019) and construct a multilayer network based on
+behaviour-specific monolayer networks (e.g. Smith-Aguilar et al. 2019).
+Importantly, the key to incorporating movement in multilayer networks
+across scales is the technological advancements available to overcome
+previous limitations (see Hughey et al. 2018).
 
 Given the existing framework for constructing multilayer networks from
 behavioural layers (e.g. Smith-Aguilar et al. 2019), movement layers
@@ -553,14 +552,18 @@ to explore mechanisms linking the social and spatial environments. For
 example, social processes may be an emergent property of the landscape
 because animals aggregate at resources, such as waterholes
 (Chamaillé-Jammes et al. 2008). Movement to, from, or within habitat
-patches can also contribute to the formation of the social environment
-(Spiegel et al. 2016). For example, XXX **\[JWT: how? I think it would
-help to clarify the example\]**. Incorporating movement ecology within a
-multilayer network framework is a logical next step for a burgeoning
-field. In particular, when association networks are habitat-specific, we
-suggest the integration of movement and space use in multilayer networks
-provides novel insights into the effects of habitat configuration on the
-formation of the social environment (He et al. 2019).
+patches or territories can also contribute to the formation of the
+social environment
+(<span class="citeproc-not-found" data-reference-id="spiegel2016">**???**</span>)
+(Spiegel et al. 2016). For example, in sleepy lizards (*Tiliqua rugosa*)
+males interacted primarily at home range edges, presumably driving
+territorial behaviour (Spiegel et al. 2018). Incorporating movement
+ecology within a multilayer network framework is a logical next step for
+a burgeoning field. In particular, when association networks are
+habitat-specific, we suggest the integration of movement and space use
+in multilayer networks provides novel insights into the effects of
+habitat configuration on the formation of the social environment (He et
+al. 2019).
 
 ## Conclusions
 
@@ -594,3 +597,5 @@ their comments on previous versions of this manuscript as well as D.
 Schneider for inspiration and helpful discussions about scale. Funding
 for this study was provided by a Vanier Canada Graduate Scholarship to
 QMRW and a NSERC Discovery Grant to EVW.
+
+## References
