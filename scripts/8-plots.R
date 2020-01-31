@@ -101,20 +101,13 @@ linesize <- 1.3
 
 # Plot by landcover
 base1 <- ggplot(unique(DT[, .SD, .SDcols = c(var, 'lcname', 'layersim')]), 
-            aes(x = get(var), linetype = lcname)) +
-  # guides(color = FALSE) +
-  labs(x = varnames[var == var, varname]) + 
-  p# +
-  # scale_color_grey()
+            aes(x = get(var), linetype = lcname))
 
 g1 <- base1 + geom_line(aes(y = (layersim)), size = linesize) + ylab('Layer Similarity')
 
 # Plot full, across
 base2 <- ggplot(DT[, .SD[1], by = var], 
-            aes(x = get(var)), color = 'black') +
-  guides(color = FALSE) +
-  labs(x = varnames[var == var, varname]) + 
-  p
+            aes(x = get(var)), color = 'black')
 
 g2 <- base2 + geom_line(aes(y = mnmultideg), size = linesize) + ylab('Multidegree')
 g3 <- base2 + geom_line(aes(y = mndegdev), size = linesize) + ylab('Degree Deviation')
@@ -123,27 +116,27 @@ g5 <- base2 + geom_line(aes(y = mnconnredund), size = linesize) + ylab('Connecti
 
 
 # Plot within
-base3 <- ggplot(DT, aes(x = get(var), color = season, linetype = lcname)) + 
-  labs(x = varnames[var == var, varname]) + 
-  p + 
+base3 <- ggplot(DT, aes(x = get(var), color = season, linetype = lcname)) +
   scale_color_manual(values = c(cols$hex[1], cols$hex[5]))
-
-  
 
 g6 <- base3 + geom_line(aes(y = mnsplitNeigh), size = linesize) + ylab('Degree')
 g7 <- base3 + geom_line(aes(y = mnrelev), size = linesize) + ylab('Relevance') +
   theme(legend.position = pos2) + guides(linetype = FALSE)
 g8 <- base3 + geom_line(aes(y = mngraphstrength), size = linesize) + ylab('Graph Strength') +
-  theme(legend.position = 'none') 
+  guides(color = FALSE, linetype = FALSE)
 
 
 # Patchwork
-(fig2 <- (g1 + g5) / (g7 + g8) )
+(fig2 <- (g1 + g5) / (g7 + g8) +
+    plot_annotation(tag_levels = 'A') & 
+    theme(plot.tag = element_text(size = 12, hjust = 0, vjust = 0)) &
+    labs(x = varnames[vars == var, varname]) &
+    p)
 
 
 ggsave(paste0('graphics/figure3-', var, '.png'), width = 13, height = 10)
 
-
+g6 + g8
 ## Supplemental figures
 (g1 + g2  + g3 + g4 + g5) / (g6 + g7 + g8)
   
