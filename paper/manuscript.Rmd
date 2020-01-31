@@ -159,9 +159,6 @@ knitr::include_graphics('../graphics/figure-lcres.png')
 ```
 
 
-Figure 2: point based spatial grouping with `group_pts`. A) Three relocations for four individuals in three time groups (example data described in Table 1). The relocation in the second timegroup for all individuals is buffered, to depict the distance threshold (in this case 50m) to generate spatial groups. The temporal threshold used is five minutes (see Figure 1 B). B) A distance matrix of relocations for all four individuals at timegroup 2 where highlighted rows are pairwise distances that meet the user defined criteria for spatial grouping, i.e. are less than the spatial threshold. C) The connected components showing the chain rule implementation of point based distance grouping with `group_pts`. The connected components show individuals E, F and G grouped (group 2 coloured blue), despite individual F and G being further apart than the spatial threshold, since they were both within the threshold distance from E. Individual H is assigned a group on their own, since they are not within the spatial threshold of any other individuals (group 9 coloured pink). D) Output spatiotemporal groups from `group_pts` showing individuals ("ID"), timegroups ("timegroup") and spatiotemporal groups ("group"). 
-
-* landcover resolution
 
 
 ###
