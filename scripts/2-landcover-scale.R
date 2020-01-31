@@ -24,10 +24,16 @@ lc <- readRDS('data/derived-data/1-reclass-lc.Rds')
 
 
 ### Modal window ----
-lsres <- c(100, 250)#, 500, 1000)
+lsres <- c(100, 250, 500, 1000, 2000)
 lslc <- lapply(lsres, function(res) {
   winmove(lc, res, type = 'circle', win_fun = modal)
 })
+names(lslc) <- lsres
+lapply(seq_along(lslc), 
+       function(i) saveRDS(lslc[[i]], paste0('data/derived-data/lc', names(lslc)[[i]], '.Rds')))
+lapply(seq_along(lslc), 
+       function(i) writeRaster(lslc[[i]], paste0('data/derived-data/lc', names(lslc)[[i]], '.tif')))
+
 
 ### Sample landcover ----
 DT[, (paste0('lc', lsres)) := 
