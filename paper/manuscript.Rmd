@@ -195,6 +195,8 @@ knitr::include_graphics('../graphics/figure-winlength.png')
 ```
 
 
+
+
 <!-- RO first sentence... -->
 
 (ref:nobs) : varying scale in number of observations. For each iteration, a number of observations (10-485 observations in steps of 25) were selected from the complete dataset to construct multilayer networks with layers defined by each landcover class (open, forest and lichen) across two seasons (winter and summer) and four network metrics calculated. A) Similarity of landcover network layers between seasons (e.g.: open summer compared to open winter) showed a stabilizing layer similarity at 200 observations for forest and 300 observations for lichen and open. B) Mean connective redundancy across individuals increased with increasing number of observations, with a decreasing rate of increase around 100 observations. C) Mean layer relevance across individuals increased for winter layers and slightly increased for summer layers. D) Mean graph strength across individuals varied for winter layers becoming relatively stable at 200 observations and remained sparse throughout for summer layers.
@@ -208,6 +210,17 @@ knitr::include_graphics('../graphics/figure-nobs.png')
 ```
 
 
+(ref:winpos) : varying scale in time window position. For each time windown position (of a sequence from 1 to 48), the time window used to define seasons was shifted and multilayer networks were constructed for each landcover class (open, forest and lichen) across two seasons (winter and summer) and four network metrics calculated. A) Similarity of landcover network layers between seasons (e.g.: open summer compared to open winter) showed increasing similarity consistent across landcover layers with increasing window length. B) Mean connective redundancy across individuals increased between window position 12 through 48 due to increased connectivity in the summer network layers. C) Mean layer relevance decreased for winter layers and increased for summer layers, showing greater connectivity in summer layers at later window positions. D) Mean graph strength across individuals increased in summer network layers at window position 25 and increased between window position 20 and 40 for winter network layers. 
+
+
+* increasing network connectivity in summer when the window position is moved - these seasons are more similar than the original window position
+* same theme shown in the connective redundancy
+* quite variable layer similarity, not sure what to pull out of that one
+* increased graph strength for winter down the middle, with generally increasing summer layers - again where the season is including more shoulder season potentially
+
+```{r, fig.cap='(ref:winpos)'}
+knitr::include_graphics('../graphics/figure-winpos.png')
+```
 
 
 ###
