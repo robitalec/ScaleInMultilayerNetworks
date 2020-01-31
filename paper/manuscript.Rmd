@@ -4,8 +4,9 @@ author: Alec L. Robitaille^1^, Quinn M.R. Webber^2^, Julie W. Turner^1^, Eric Va
 header-includes: ^1^Department of Biology, Memorial University of Newfoundland, Canada; ^2^Cognitive and Behavioural Ecology Interdisciplinary Program, Memorial University of Newfoundland
 
 output: 
-    # bookdown::word_document2
-    github_document
+    bookdown::word_document2:
+      reference_docx: template.docx
+    # github_document
     
 references: ../references/refs.bib
 ---
