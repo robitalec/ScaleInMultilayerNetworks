@@ -71,7 +71,7 @@ nets <- lapply(thresholds, function(t) {
   # Merge eigcent+correlations with neighbors
   out <- out[stren, on = c(idcol, splitBy)]
   
-  # Preserve window length
+  # Preserve spatial threshold
   set(out, j = var, value = t)
 })
 
