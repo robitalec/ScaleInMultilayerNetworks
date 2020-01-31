@@ -4,8 +4,8 @@ author: Alec L. Robitaille^1^, Quinn M.R. Webber^2^, Julie W. Turner^1^, Eric Va
 header-includes: ^1^Department of Biology, Memorial University of Newfoundland, Canada; ^2^Cognitive and Behavioural Ecology Interdisciplinary Program, Memorial University of Newfoundland
 
 output: 
-    bookdown::word_document2
-    # github_document
+    # bookdown::word_document2
+    github_document
     
 references: ../references/refs.bib
 ---
@@ -149,7 +149,6 @@ Randomly select max number of observations - timegroups -  (right now 750). For 
 
 ### Figure captions and brief interpretations
 
-#### Interpretations:
 
 (ref:lcres) : varying scale in landcover resolution. For each landcover resolution (10m, 100m, 250m, 500m and 1000m), ultilayer networks were constructed for each landcover class (open, forest and lichen) across two seasons (winter and summer) and four network metrics calculated. A) Similarity of landcover network layers between seasons (e.g.: open summer compared to open winter) showed different responses to changing landcover scale with an increase in similarity for forest layers at 250m and decrease in similarity for open layers at 250m. Note that lichen layer similarity is not shown because individuals did not interact in lichen habitats greater greater than 10m landcover resolution. B) Mean connective redundancy across individuals showed a decreasing trend with increasing landcover resolution. C) Mean layer relevance and D) mean graph strength across individuals showed sparse connectivity in summer compared to winter networks and a decrease in winter lichen layer relevance at higher landcover resolutions. 
 
@@ -158,6 +157,13 @@ Randomly select max number of observations - timegroups -  (right now 750). For 
 knitr::include_graphics('../graphics/figure-lcres.png')
 ```
 
+
+(ref:socres) : varying scale in social threshold. For each social threshold (5m, 50m, 100m, 150m, 200m, 250m, 300m, 350m, 400m, 450m, 500m), multilayer networks were constructed for each landcover class (open, forest and lichen) across two seasons (winter and summer) and four network metrics calculated. A) Similarity of landcover network layers between seasons (e.g.: open summer compared to open winter) showed different responses to changing landcover scale with an overall increase in similarity for open layers and decrease in similarity for lichen layers. B) Mean connective redundancy across individuals increased rapidly between 5m and 50m reaching a plateau around 0.65 before decrease between 400m and 500m. C) Mean layer relevance was relatively stable across social thresholds for each season and landcover layer. D) Mean graph strength across individuals showed an increase for winter network layers at 50m through 500m while summer network layers remained consistently sparse. 
+
+
+```{r, fig.cap='(ref:socres)'}
+knitr::include_graphics('../graphics/figure-spatialthreshold.png')
+```
 
 
 
