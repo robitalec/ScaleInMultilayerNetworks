@@ -4,11 +4,21 @@ author: Alec L. Robitaille^1^, Quinn M.R. Webber^2^, Julie W. Turner^1^, Eric Va
 header-includes: ^1^Department of Biology, Memorial University of Newfoundland, Canada; ^2^Cognitive and Behavioural Ecology Interdisciplinary Program, Memorial University of Newfoundland
 
 output: 
-    #word_document
-    github_document
+    bookdown::word_document2
+    # github_document
     
 references: ../references/refs.bib
 ---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+    echo = FALSE,
+    # warning = FALSE,
+    # message = FALSE,
+    eval = TRUE
+)
+```
 
 ## Abstract
 Scale remains a seminal concept in ecology. Spatial scale, for instance, has become a central consideration in the way we understand landscape ecology and animal space use. Meanwhile, social processes can also scale from fine-scale interactions to co-occurrence to overlapping home ranges. Multilayer networks promise the integration of monolayer animal social networks with the complexity and importance of animal space use and movement in heterogeneous landscapes. Despite the complex interplay between social networks and how animals use space, there remains an important biological and methodological gap in our understanding of an animal’s perception of scale, e.g., grain and extent. But scale can affect multilayer network dynamics and how we build and interpret them. Here, we discuss the role of scale in the context of multilayer networks and provide a case study of caribou (*Rangifer tarandus*) to illustrate the role of social,spatial, and temporal scale on multilayer processes. We also present perspectives on future development and application of scale in multilayer networks with respect to habitat selection and space use, individual fitness and phenotypes, and movement ecology and collective movement.Effective integration of social and spatial processes, including biologically meaningful scales, within the context of animal social networks is an emerging area of research; our contribution uniquely incorporates perspectives on how the social environment and spatial processes are linked across scales in a multilayer framework. Based on social network and behavioural ecology theory as well as our case study, we demonstrate potential for interconnectedness among individual animals, their social environment, and the landscapes they occupy.
