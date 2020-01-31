@@ -62,10 +62,10 @@ DT[, paste0('mn', metriccols) := lapply(.SD, mean, na.rm = TRUE),
 if (var %in% c('winpos', 'winlength')) {
   pos1 <- c(0.9,0.12)
   pos2 <- c(0.9,0.1)
-} else if (var %in% c('spatialthreshold', 'lcres')) {
+} else if (var %in% c('spatialthreshold')) {
   pos1 <- c(0.9,0.42)
   pos2 <- c(0.9,0.4)
-} else if (var %in% c('nobs')){
+} else if (var %in% c('nobs', 'lcres')){
   pos1 <- c(0.9,0.22)
   pos2 <- c(0.9,0.2)
 }
@@ -96,6 +96,9 @@ cols <- DT[, .(layer = sort(unique(layer)))][,
 greys <- DT[, .(lc = sort(unique(lc)))][, 
   .(lc, hex = c('#6b6b6b', '#c2c2c2', '#919191'))]
 
+# Linesize
+linesize <- 1.3
+
 # Plot by landcover
 base1 <- ggplot(unique(DT[, .SD, .SDcols = c(var, 'lcname', 'layersim')]), 
             aes(x = get(var), linetype = lcname)) +
@@ -104,7 +107,7 @@ base1 <- ggplot(unique(DT[, .SD, .SDcols = c(var, 'lcname', 'layersim')]),
   p# +
   # scale_color_grey()
 
-g1 <- base1 + geom_line(aes(y = (layersim))) + ylab('Layer Similarity')
+g1 <- base1 + geom_line(aes(y = (layersim)), size = linesize) + ylab('Layer Similarity')
 
 # Plot full, across
 base2 <- ggplot(DT[, .SD[1], by = var], 
@@ -113,10 +116,10 @@ base2 <- ggplot(DT[, .SD[1], by = var],
   labs(x = varnames[var == var, varname]) + 
   p
 
-g2 <- base2 + geom_line(aes(y = mnmultideg)) + ylab('Multidegree')
-g3 <- base2 + geom_line(aes(y = mndegdev)) + ylab('Degree Deviation')
-g4 <- base2 + geom_line(aes(y = mnneigh)) + ylab('Neighborhood')
-g5 <- base2 + geom_line(aes(y = mnconnredund)) + ylab('Connective Redundancy')
+g2 <- base2 + geom_line(aes(y = mnmultideg), size = linesize) + ylab('Multidegree')
+g3 <- base2 + geom_line(aes(y = mndegdev), size = linesize) + ylab('Degree Deviation')
+g4 <- base2 + geom_line(aes(y = mnneigh), size = linesize) + ylab('Neighborhood')
+g5 <- base2 + geom_line(aes(y = mnconnredund), size = linesize) + ylab('Connective Redundancy')
 
 
 # Plot within
@@ -127,10 +130,10 @@ base3 <- ggplot(DT, aes(x = get(var), color = season, linetype = lcname)) +
 
   
 
-g6 <- base3 + geom_line(aes(y = mnsplitNeigh)) + ylab('Degree')
-g7 <- base3 + geom_line(aes(y = mnrelev)) + ylab('Relevance') +
+g6 <- base3 + geom_line(aes(y = mnsplitNeigh), size = linesize) + ylab('Degree')
+g7 <- base3 + geom_line(aes(y = mnrelev), size = linesize) + ylab('Relevance') +
   theme(legend.position = pos2) + guides(linetype = FALSE)
-g8 <- base3 + geom_line(aes(y = mngraphstrength)) + ylab('Graph Strength') +
+g8 <- base3 + geom_line(aes(y = mngraphstrength), size = linesize) + ylab('Graph Strength') +
   theme(legend.position = 'none') 
 
 
@@ -138,7 +141,7 @@ g8 <- base3 + geom_line(aes(y = mngraphstrength)) + ylab('Graph Strength') +
 (fig2 <- (g1 + g5) / (g7 + g8) )
 
 
-ggsave(paste0('graphics/figure3-', var, '.png'), width = 15, height = 10)
+ggsave(paste0('graphics/figure3-', var, '.png'), width = 13, height = 10)
 
 
 ## Supplemental figures
