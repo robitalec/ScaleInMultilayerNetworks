@@ -35,12 +35,15 @@ Unlike traditional *monolayer* social networks, multilayer networks explicitly c
 
 Here, we discuss and integrate variation in social, spatial, and temporal scales within a multilayer network framework (Figure 1). We borrow from behavioural, landscape, and spatial ecology to build a conceptual and analytical framework for scale-dependent multilayer networks and we apply this framework to a fission-fusion social system case study of caribou (*Rangifer tarandus*) in Newfoundland, Canada (Peignier et al. 2019). We use this case study to address two principal questions associated with scale-dependent multilayer networks. First, to what degree does the spatial scale of landscapes, temporal windows of analysis, and social scale of relationships, influence our ability to interpret complex social systems? Second, can variation in social, spatial, and temporal scale improve predictions associated with seasonal differences in resource availability and social association? We conclude with perspectives for future development and application of scale in multilayer networks with respect to habitat selection and space use (Van Moorter et al. 2016), individual fitness and phenotypes (Webber & Vander Wal 2018), and movement ecology and collective movement (Jolles et al. 2019).
 
-\captionsetup[figure]{labelformat=empty}
+<!-- \captionsetup[figure]{labelformat=empty} -->
 
-![**Figure 1**](../graphics/figure1.png) 
+(ref:spacetime) Space-time diagram displaying variation the spatial and temporal extent required for different social processes across a range of taxa.
 
-**Figure 1**: Space-time diagram displaying variation the spatial and temporal extent required for different social processes across a range of taxa.
-\clearpage
+```{r spacetime, fig.cap='(ref:spacetime)'}
+knitr::include_graphics('../graphics/figure1.png')
+```
+
+
 
 ## Scale in multilayer networks: a case study
 
