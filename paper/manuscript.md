@@ -47,27 +47,30 @@ Animals and landscapes are influenced across scales processes as global
 as climate and productivity (Field et al. 2009), and species-specific as
 trophic interactions and resource availability (Legendre 1993; Chave
 2013). The effect of scale in ecology has been explored through species
-distribution modelling (Elith et al. 2009), habitat selection (Mayor et
-al. 2007), and food webs (Sugihara et al. 1989). Scale can be considered
-throughout ecology, including animal behaviour and the social
+distribution modelling (Elith et al. 2009), habitat selection
+(<span class="citeproc-not-found" data-reference-id="Mayor2007">**???**</span>)(Mayor
+et al. 2007), and food webs (Sugihara et al. 1989). Scale can be
+considered throughout ecology, including animal behaviour and the social
 environment that animals experience.
 
 Sociality exists across scales (Whitehead 2008). For example, grooming
 and mating relationships require close proximity between conspecifics
 and occur over brief time periods (e.g. Carter et al. 2015), whereas
 social association represents shared space use by members of the same
-social group (Franks et al. 2010). Further, for social interactions or
-associations to occur individuals must share space, and thus have
-overlapping home ranges. In the context of the social environment, home
-range overlap is a relatively coarse scale of sociality across which
-individuals share space over larger spatial and temporal scales
-(e.g. Piza-Roca et al. 2018). Although the social environment clearly
-scales spatially and temporally, it remains unclear whether coarser
-scales of sociality, including social association and home range
-overlap, vary predictably with social interaction (Castles et al. 2014;
-Farine 2015). Here, we define *social scale* as the type of social
-relationship observed that can be explicitly defined and measured in
-social network analyses (see Glossary; Farine et al. 2015).
+social group
+(<span class="citeproc-not-found" data-reference-id="Franks2010">**???**</span>).
+Further, for social interactions or associations to occur individuals
+must share space, and thus have overlapping home ranges. In the context
+of the social environment, home range overlap is a relatively coarse
+scale of sociality across which individuals share space over larger
+spatial and temporal scales (e.g. Piza-Roca et al. 2018). Although the
+social environment clearly scales spatially and temporally, it remains
+unclear whether coarser scales of sociality, including social
+association and home range overlap, vary predictably with social
+interaction (Castles et al. 2014; Farine 2015). Here, we define *social
+scale* as the type of social relationship observed that can be
+explicitly defined and measured in social network analyses (see
+Glossary; Farine et al. 2015).
 
 Animal social network analysis is a well-developed tool used to measure
 the relationships of individuals and organization of social systems
@@ -155,7 +158,7 @@ system (GPS) collars (Lotek Wireless Inc., Newmarket, ON, Canada,
 GPS4400M collars, 1,250 g) as described by Schaefer and Mahoney (2013).
 Collars were programmed to collect location fixes every 2 hours. Prior
 to analyses, we subset GPS fixes into a discrete removed all erroneous
-and outlier GPS fixes following Bjørneraas et al. (2010). We did not
+and outlier GPS fixes following Bjørneraas et al. (2010). We did not
 collar all female caribou in the herd; however, we assumed that our
 sample of collared animals was random.
 
@@ -169,7 +172,8 @@ closed habitat. Foraging habitat consisted of lichen habitat, open
 habitat consisted of wetland, rocky barrens, and anthropogenic habitat
 types, while closed habitat consisted of coniferous forest, conifer
 scrub, broadleaf forest, and mixed-wood forest habitat types. Water
-habitat was excluded from all subsequent analyses.
+habitat was excluded from all subsequent
+analyses.
 
 ### Caribou multilayer social networks
 
@@ -243,7 +247,7 @@ multidimensional…”
 Finally, some weighted variables:
 
   - eigenvector centrality, summed across layers as described in
-    Boccaletti, Stefano, et al. “The structure and dynamics of
+    Boccaletti, Stefano, et al. “The structure and dynamics of
     multilayer networks.” Physics Reports 544.1 (2014): 1-122.
 
 ##### Redundancy/relevance
@@ -320,9 +324,42 @@ above) and re-assigned groups at incremental distance between 5-500m.
 For example, at the finest social scale, only individuals within 5m of
 one another were considered in the same group, whereas at the coarset
 social scale, only individuals within 500m of one another were
-considered in the same group.
+considered in the same
+group.
 
 ## Scale in multilayer networks in practice: case study results and discussion
+
+### Each metric’s interpretation
+
+  - Multidegree: sum of degree across layers. High multidegree =
+    connected to many individuals across layers. Low multidegree = not
+    connected to many individuals across layers.
+  - Degree deviation: deviation of degree across layers. High degree
+    deviation = large difference between degree for an individual across
+    layers. Low degree deviation = individuals are similarly connected
+    across layers.
+  - Graph strength: weighted version of degree. High graph strength =
+    highly connected. Not summed in this case across layers.
+  - Neighbors: number of unique individuals adjacent to each actor.
+    Considered in a single layer, this is equal to the degree.
+  - Neighborhood: number of unique individuals across all layers. High
+    neighborhood = a high number of unique individuals connected to an
+    actor.
+  - Relevance: layer centric metric, corresponding to the number of
+    neighbors on a layer divided by the total neighborhood for each
+    actor. High relevance means that the layer is highly relevant to the
+    individuals connections. A low relevance means this layer does not
+    contribute many neighbors to an individuals overall neighborhood.
+  - Connective redundancy: the total multilayer neighborhood divided by
+    the multidegree. High connective redundancy indicates a multilayer
+    network that has many repeated edges across layers between an actor
+    and its neighbours. Low connective redundancy indicates that each
+    layer is important for preserving all social ties.
+  - Layer similarily/correlation: how similar each layer is (Brodka
+    2018). right now - standard deviation of the vectors.. so decrease
+    deviation = increased similarity
+
+### 
 
 Results and interpretation of temporal scale - balh
 
@@ -455,7 +492,7 @@ networks (Castles et al., 2014).
 
 ### Movement ecology and collective movement
 
-Animal movement undoubtedly affects the social environment
+Animal movement undoubtedly affects an individual’s social environment
 (Strandburg-Peshkin et al. 2015), and multilayer networks are no
 exception (Mourier et al. 2019). Movement is a dynamic process that is
 related to the resources an individual consumes within their home range
@@ -529,7 +566,7 @@ formation of the social environment (He et al. 2019).
 
 something something blah blah.
 
-Silk et al. (2018) presented some key multilayer questions in animal
+Silk et al. (2018) presented some key multilayer questions in animal
 behaviour research. While these questions represent an important
 starting point for multilayer networks, we present an additional set of
 questions relevant to the promise and problem of scale in mutlilayer
