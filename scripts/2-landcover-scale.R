@@ -51,7 +51,7 @@ group_times(
 var <- 'lcres'
 
 # Also include original raster
-lsres <- c(30, lsres)
+lsres <- c(10, lsres)
 lslc <- c(lc, lslc)
 splitBy <- 'season'
 
