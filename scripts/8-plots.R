@@ -17,7 +17,7 @@ source('scripts/0-variables.R')
 var <- 'lcres'
 
 if (var == 'lcres') {
-  DT <- readRDS('data/derived-data/2-landcover-scale-metrics.Rds')
+  DT <- readRDS('data/derived-data/2-landcover-scale-metrics.Rds')[lcres<2000]
 } else if (var == 'spatialthreshold') {
   DT <- readRDS('data/derived-data/3-spatial-threshold-metrics.Rds')
 } else if (var == 'winlength') {
