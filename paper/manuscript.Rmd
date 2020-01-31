@@ -94,6 +94,17 @@ Then there will be some layer similarity. Right now it's just a correlation of e
 
 ### Varying scale in multilayer networks
 
+#### Social scale
+
+We altered social scale based on visual (short distance) and auditory (long distnace) sensory modalities of caribou (REF?). Specifically, we modified the distance threshold required for group assignment (see above) and re-assigned groups at incremental distance between 5-500m. For example, at the finest social scale, only individuals within 5m of one another were considered in the same group, whereas at the coarset social scale, only individuals within 500m of one another were considered in the same group.
+
+#### Spatial scale
+
+To assess the influence of spatial scale on multilayer networks, we re-sampled our landcover classification map at varying scales. Specifically, we selected scales relevant to caribou ecology. We re-sampled landcover using the `grainchanger` **package** (Graham 2019) at **five** scales: 100m, 250m, 500m, 1000m, 2500m. Sampling at 100 and 250m represents fine-scale decision making for caribou during foraging (REF), while re-sampling at 1000m and 2500m represents the scale at which caribou tend to select and avoid habitat (Bastille-Rousseau et al. 2017). Resampling occurred based on a modal moving window method, where **XXXXX. [ALEC YOU'RE GOING TO HAVE TO ADD DETAIL HERE]**
+
+For each landcover (the original resolution and modal resampled resolutions), seasonal network layers are combined in a multilayer network
+<!-- Each modal landcover, and the original are sampled and separate network layers constructed for each. **[QW: NOT SURE WHAT THIS MEANS]** -->
+
 #### Temporal scale
 
 We altered the temporal scale of mutlilayer networks using a moving time-window approach to define seasons. 
@@ -109,19 +120,6 @@ Varying position of time window (used to define seasons). Fixed length at 48 Win
 **Observational scale** (temorary header): Studies of social network analysis vary in the number and frequency of observations as well as the data collection technique used to generate networks (Davis et al. 2018; Webber and Vander Wal 2019). 
 
 Randomly select max number of observations - timegroups -  (right now 750). For each iteration, include n observations for each season for all individuals. Subsequent iterations include nstep more (right now 25), along with previously included to remove stochasticity. Parallels with observation data. 
-
-
-#### Spatial scale
-
-To assess the influence of spatial scale on multilayer networks, we re-sampled our landcover classification map at varying scales. Specifically, we selected scales relevant to caribou ecology. We re-sampled landcover using the `grainchanger` **package** (Graham 2019) at **five** scales: 100m, 250m, 500m, 1000m, 2500m. Sampling at 100 and 250m represents fine-scale decision making for caribou during foraging (REF), while re-sampling at 1000m and 2500m represents the scale at which caribou tend to select and avoid habitat (Bastille-Rousseau et al. 2017). Resampling occurred based on a modal moving window method, where **XXXXX. [ALEC YOU'RE GOING TO HAVE TO ADD DETAIL HERE]**
-
-For each landcover (the original resolution and modal resampled resolutions), seasonal network layers are combined in a multilayer network
-<!-- Each modal landcover, and the original are sampled and separate network layers constructed for each. **[QW: NOT SURE WHAT THIS MEANS]** -->
-
-#### Social scale
-
-We altered social scale based on visual (short distance) and auditory (long distnace) sensory modalities of caribou (REF?). Specifically, we modified the distance threshold required for group assignment (see above) and re-assigned groups at incremental distance between 5-500m. For example, at the finest social scale, only individuals within 5m of one another were considered in the same group, whereas at the coarset social scale, only individuals within 500m of one another were considered in the same group.
-
 
 
 ## Scale in multilayer networks in practice: case study results and discussion
