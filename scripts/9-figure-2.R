@@ -26,7 +26,7 @@ alloc.col(DT)
 
 ### Generate networks ----
 # Drop where season or landcover is NA
-DT <- DT[!is.na(season) & !is.na(get(idcol))]
+DT <- DT[!is.na(season) & !is.na(get(lccol))]
 
 # Temporal grouping with spatsoc
 group_times(
