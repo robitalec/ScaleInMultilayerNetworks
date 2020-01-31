@@ -56,23 +56,26 @@ gLs <- list_graphs(netLs)
 names(gLs) <- names(gbiLs)
 
 # Restructure for plotting
-meanXY <- DT[, .(meanX = mean(get(xcol)), meanY = mean(get(ycol))), by = .(season, idcol)]
+bys <- c('season', lccol)
+
+meanXY <- DT[, .(meanX = mean(get(xcol)), meanY = mean(get(ycol))), by = c(bys, idcol)]
 
 edges <- rbindlist(lapply(gLs, as_data_frame, what = 'edges'), idcol = 'layer')
+edges[, c(lccol, 'season') := tstrsplit(layer, '-', type.convert = TRUE)]
 
-xyEdges <- merge(meanXY, edges, by.x = idcol, by.y = 'from')
+xyEdges <- merge(meanXY, edges, by.x = c(bys, idcol), by.y = c(bys, 'from'))
 
 m <- merge(
   xyEdges,
-  unique(xyEdges[, .SD, .SDcols = c(idcol, 'meanX', 'meanY')]),
-  by.x = 'to',
-  by.y = idcol,
+  unique(xyEdges[, .SD, .SDcols = c(idcol, bys, 'meanX', 'meanY')]),
+  by.x = c(bys, 'to'),
+  by.y = c(bys, idcol),
   suffixes = c('', 'end')
 )
 setnames(m, c(idcol), c('from'))
 
-m[, c(lccol, 'season') := tstrsplit(layer, '-', type.convert = TRUE)]
 
+# TODO: MISSING INDIVIDUALS
 (gnn <- ggplot(m, aes(
   x = meanX,
   y = meanY,
@@ -80,7 +83,7 @@ m[, c(lccol, 'season') := tstrsplit(layer, '-', type.convert = TRUE)]
   yend = meanYend
 )) +
   geom_edges(size = 1, alpha = 0.6) +
-  geom_nodes(aes(color = from), size = 7) +
+  geom_nodes(aes(color = from), size = 7, data =) +
   # geom_nodetext(aes(label = from)) +
   # scale_color_manual(breaks = DT$ID, values = pal) +
   facet_wrap(~season + lc30, dir = 'h') + 
