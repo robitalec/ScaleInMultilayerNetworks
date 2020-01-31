@@ -37,6 +37,14 @@ DT[get(lccol) == 1, c('lcname', 'layernm') := .('open', paste0(season, '-open'))
 DT[get(lccol) == 2, c('lcname', 'layernm') := .('forest', paste0(season, '-forest'))]
 DT[get(lccol) == 3, c('lcname', 'layernm') := .('lichen', paste0(season, '-lichen'))]
 
+
+# Var x lab names
+varnames <- data.table(
+  var = c('lcres', 'spatialthreshold', 'winlength', 'nobs', 'winpos'),
+  varname = c('Landcover Resolution', 'Social Threshold', 'Time Window Length',
+              'Number of Observations', 'Time Window Position')
+)
+
 ### Plots ----
 ## Manuscript figures
 # Across layers - degree deviation, neigh, multideg, connredund
@@ -92,7 +100,7 @@ greys <- DT[, .(lc = sort(unique(lc)))][,
 base1 <- ggplot(unique(DT[, .SD, .SDcols = c(var, 'lcname', 'layersim')]), 
             aes(x = get(var), linetype = lcname)) +
   # guides(color = FALSE) +
-  labs(x = var) + 
+  labs(x = varnames[var == var, varname]) + 
   p# +
   # scale_color_grey()
 
@@ -102,7 +110,7 @@ g1 <- base1 + geom_line(aes(y = (layersim))) + ylab('Layer Similarity')
 base2 <- ggplot(DT[, .SD[1], by = var], 
             aes(x = get(var)), color = 'black') +
   guides(color = FALSE) +
-  labs(x = var) +
+  labs(x = varnames[var == var, varname]) + 
   p
 
 g2 <- base2 + geom_line(aes(y = mnmultideg)) + ylab('Multidegree')
@@ -113,7 +121,7 @@ g5 <- base2 + geom_line(aes(y = mnconnredund)) + ylab('Connective Redundancy')
 
 # Plot within
 base3 <- ggplot(DT, aes(x = get(var), color = season, linetype = lcname)) + 
-  labs(x = var) + 
+  labs(x = varnames[var == var, varname]) + 
   p + 
   scale_color_manual(values = c(cols$hex[1], cols$hex[5]))
 
