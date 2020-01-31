@@ -214,45 +214,30 @@ distance of one another at any given time point.
 #### Network metrics
 
 For each multilayer network, we calculated four metrics.These included:
-multidegree, graph strength, redundancy/relevance, and  layer similarity.  GOING
+multidegree, graph strength, redundancy/relevance, and  layer similarity. 
+
+<!-- GOING
 TO NEED MORE HERE (SEE SMITH-AGUILAR ET AL 2019 PAPER FOR REFERENCE ON
 EXPLAINING THESE).
+-->
 
+<!-- 
 ALR: Reference for extending degree centrality to multilayer, neighbors,
 connective redundancy and relevance: Berlingerio 2011 "Foundations of
 multidimensional..."
+-->
 
-
-##### Multidegree
-
+* Multidegree
 * Degree centrality
 * Multidegree
 * Degree deviation: standard deviation of degree across layers
-
-* Neighbors/neighborhood (number of unique actors directly connected to each focal)
-
-Neighbors = degree within a network layer
-But across a multilayer network with multiple layers, some neighbors are repeated. 
-
-
-##### Graph strength
-
-Finally, some weighted variables:
-
-* eigenvector centrality, summed across layers as described in Boccaletti,
-Stefano, et al. "The structure and dynamics of multilayer networks." Physics
-Reports 544.1 (2014): 1-122.
-
-
-##### Redundancy/relevance
-
+* Neighbors/neighborhood (number of unique actors directly connected to each focal): Neighbors = degree within a network layer. But across a multilayer network with multiple layers, some neighbors are repeated. 
+* Graph strength
 * Connective redundancy: 1 - (neighborhood / degree) When connective redundancy is 0, all edges on all layers are necessary to preserve the social ties
-
 * Relevance: neighborhood of specific layer  / neighbourhood of full ml net. This is the proportion of neighbors present on the layer of focus. Comparing across, it tells you which layers are most important for each individual. 
+* layer similarity
 
-##### Layer similarity
 
-Then there will be some layer similarity. Right now it's just a correlation of each season's asnipe SRI matrix
 
 ### Varying scale in multilayer networks
 
