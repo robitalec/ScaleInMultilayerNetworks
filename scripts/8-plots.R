@@ -134,9 +134,9 @@ g8 <- base3 + geom_line(aes(y = mngraphstrength), size = linesize) + ylab('Graph
     p)
 
 
-ggsave(paste0('graphics/figure3-', var, '.png'), width = 13, height = 10)
+ggsave(paste0('graphics/figure-', var, '.png'), width = 13, height = 10)
 
-g6 + g8
+
 ## Supplemental figures
-(g1 + g2  + g3 + g4 + g5) / (g6 + g7 + g8)
+# (g1 + g2  + g3 + g4 + g5) / (g6 + g7 + g8)
   
