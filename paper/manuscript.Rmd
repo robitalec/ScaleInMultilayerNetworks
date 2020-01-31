@@ -172,6 +172,27 @@ knitr::include_graphics('../graphics/figure-spatialthreshold.png')
 ```
 
 
+* increasing layer relevance as more individuals are connected with increasing buffer size
+* decrease in connective redundancy due an increase in summer forest degree at the last (500m) social threshold
+* increasing graph strength consistent with increasing strength in winter
+
+
+
+
+
+(ref:winlen) : varying scale in time window length. For each time windown length (of a sequence from 40 to 100 by 5), multilayer networks were constructed for each landcover class (open, forest and lichen) across two seasons (winter and summer) and four network metrics calculated. A) Similarity of landcover network layers between seasons (e.g.: open summer compared to open winter) showed increasing similarity consistent across landcover layers with increasing window length. B) Mean connective redundancy across individuals increased rapidly between 5m and 50m reaching a plateau around 0.65 before decrease between 400m and 500m. C) Mean layer relevance was relatively stable across social thresholds for each season and landcover layer. D) Mean graph strength across individuals showed an increase for winter network layers at 50m through 500m while summer network layers remained consistently sparse. 
+
+
+* increasing window length = increasingly similar
+*
+
+
+
+```{r, fig.cap='(ref:winlen)'}
+knitr::include_graphics('../graphics/figure-winlength.png')
+```
+
+
 
 ###
 Results and interpretation of temporal scale - balh 
