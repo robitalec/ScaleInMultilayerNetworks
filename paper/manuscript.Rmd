@@ -183,8 +183,10 @@ knitr::include_graphics('../graphics/figure-spatialthreshold.png')
 (ref:winlen) : varying scale in time window length. For each time windown length (of a sequence from 40 to 100 by 5), multilayer networks were constructed for each landcover class (open, forest and lichen) across two seasons (winter and summer) and four network metrics calculated. A) Similarity of landcover network layers between seasons (e.g.: open summer compared to open winter) showed increasing similarity consistent across landcover layers with increasing window length. B) Mean connective redundancy across individuals increased rapidly between 5m and 50m reaching a plateau around 0.65 before decrease between 400m and 500m. C) Mean layer relevance was relatively stable across social thresholds for each season and landcover layer. D) Mean graph strength across individuals showed an increase for winter network layers at 50m through 500m while summer network layers remained consistently sparse. 
 
 
-* increasing window length = increasingly similar
-*
+* increasing window length = increasingly similar layers and increasingly redundant edges. more individuals have the opportunity to interact
+* increasing window length also leads to increasing similarity between seasons because seasons are less well defined/include more shoulder seasons
+* decreasing graph strength at the upper end of window length in winter showing again inclusion of more shoulder season
+* layers are more similarly relevant at high window length
 
 
 
