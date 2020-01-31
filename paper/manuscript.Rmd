@@ -203,10 +203,10 @@ caribou using the simple ratio index (SRI, Cairns and Schwager 1987):
 $$ SRI = \frac{x}{x + y_{AB} + y_{A} + y_{B}} $$
 
 where x is the number of fixes where individuals A and B were within a given
-distance of each other, y<sub>A</sub> is the number of fixes from individual A
-when individual B did not have a simultaneous fix, y<sub>B</sub> is the number
+distance of each other, $y_{A}$ is the number of fixes from individual A
+when individual B did not have a simultaneous fix, $y_{B}$ is the number
 of fixes from individual B when individual A did not have a simultaneous fix,
-and y<sub>AB</sub> is the number of simultaneous fixes from individuals A and B
+and $y_{AB}$ is the number of simultaneous fixes from individuals A and B
 that were separated by more than the given distance (Farine & Whitehead 2015).
 Social groups were designated if two or more individuals occurred within a given
 distance of one another at any given time point.
