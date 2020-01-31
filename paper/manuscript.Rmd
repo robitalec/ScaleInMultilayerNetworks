@@ -35,11 +35,10 @@ Unlike traditional *monolayer* social networks, multilayer networks explicitly c
 
 Here, we discuss and integrate variation in social, spatial, and temporal scales within a multilayer network framework (Figure 1). We borrow from behavioural, landscape, and spatial ecology to build a conceptual and analytical framework for scale-dependent multilayer networks and we apply this framework to a fission-fusion social system case study of caribou (*Rangifer tarandus*) in Newfoundland, Canada (Peignier et al. 2019). We use this case study to address two principal questions associated with scale-dependent multilayer networks. First, to what degree does the spatial scale of landscapes, temporal windows of analysis, and social scale of relationships, influence our ability to interpret complex social systems? Second, can variation in social, spatial, and temporal scale improve predictions associated with seasonal differences in resource availability and social association? We conclude with perspectives for future development and application of scale in multilayer networks with respect to habitat selection and space use (Van Moorter et al. 2016), individual fitness and phenotypes (Webber & Vander Wal 2018), and movement ecology and collective movement (Jolles et al. 2019).
 
-<!-- \captionsetup[figure]{labelformat=empty} -->
 
 (ref:spacetime) Space-time diagram displaying variation the spatial and temporal extent required for different social processes across a range of taxa.
 
-```{r spacetime, fig.cap='(ref:spacetime)'}
+```{r, fig.cap='(ref:spacetime)'}
 knitr::include_graphics('../graphics/figure1.png')
 ```
 
@@ -148,10 +147,24 @@ Randomly select max number of observations - timegroups -  (right now 750). For 
 * Layer similarily: how similar each layer is (Brodka 2018). Pearson's correlation coefficient of degree vectors for each layer, comparing each landcover across seasons. 
 
 
+### Figure captions and brief interpretations
+
+#### Interpretations:
+
+(ref:lcres) : varying scale in landcover resolution. For each landcover resolution (10m, 100m, 250m, 500m and 1000m), ultilayer networks were constructed for each landcover class (open, forest and lichen) across two seasons (winter and summer) and four network metrics calculated. A) Similarity of landcover network layers between seasons (e.g.: open summer compared to open winter) showed different responses to changing landcover scale with an increase in similarity for forest layers at 250m and decrease in similarity for open layers at 250m. Note that lichen layer similarity is not shown because individuals did not interact in lichen habitats greater greater than 10m landcover resolution. B) Mean connective redundancy across individuals showed a decreasing trend with increasing landcover resolution. C) Mean layer relevance and D) mean graph strength across individuals showed sparse connectivity in summer compared to winter networks and a decrease in winter lichen layer relevance at higher landcover resolutions. 
+
+
+```{r, fig.cap='(ref:lcres)'}
+knitr::include_graphics('../graphics/figure-lcres.png')
+```
+
+
+Figure 2: point based spatial grouping with `group_pts`. A) Three relocations for four individuals in three time groups (example data described in Table 1). The relocation in the second timegroup for all individuals is buffered, to depict the distance threshold (in this case 50m) to generate spatial groups. The temporal threshold used is five minutes (see Figure 1 B). B) A distance matrix of relocations for all four individuals at timegroup 2 where highlighted rows are pairwise distances that meet the user defined criteria for spatial grouping, i.e. are less than the spatial threshold. C) The connected components showing the chain rule implementation of point based distance grouping with `group_pts`. The connected components show individuals E, F and G grouped (group 2 coloured blue), despite individual F and G being further apart than the spatial threshold, since they were both within the threshold distance from E. Individual H is assigned a group on their own, since they are not within the spatial threshold of any other individuals (group 9 coloured pink). D) Output spatiotemporal groups from `group_pts` showing individuals ("ID"), timegroups ("timegroup") and spatiotemporal groups ("group"). 
+
+* landcover resolution
+
+
 ###
-
-
-
 Results and interpretation of temporal scale - balh 
 
 Results and interpretation of spatial scale - blah blah
