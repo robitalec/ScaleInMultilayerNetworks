@@ -46,17 +46,17 @@ nets <- lapply(thresholds, function(t) {
     splitBy = splitBy
   )
   
-  # GBI for each season
+  # GBI 
   gbiLs <- list_gbi(sub, idcol, splitBy)
   
-  # Generate networks for each season
+  # Generate networks 
   netLs <- list_nets(gbiLs)
   
-  # Generate graphs for each season
+  # Generate graphs 
   gLs <- list_graphs(netLs)
   names(gLs) <- names(gbiLs)
   
-  # Calculate eigenvector centrality for each season
+  # Calculate eigenvector centrality 
   stren <- layer_strength(gLs)
   stren[, (splitBy) := tstrsplit(layer, '-', type.convert = TRUE)]
   setnames(stren, 'ind', idcol)
