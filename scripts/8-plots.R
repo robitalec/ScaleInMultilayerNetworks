@@ -129,7 +129,7 @@ g8 <- base3 + geom_line(aes(y = mngraphstrength), size = linesize) + ylab('Graph
 # Patchwork
 (fig2 <- (g1 + g5) / (g7 + g8) +
     plot_annotation(tag_levels = 'A') & 
-    theme(plot.tag = element_text(size = 12, hjust = 0, vjust = 0)) &
+    theme(plot.tag = element_text(size = 14, hjust = 0, vjust = 0)) &
     labs(x = varnames[vars == var, varname]) &
     p)
 
