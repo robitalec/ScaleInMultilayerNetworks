@@ -166,9 +166,9 @@ that our sample of collared animals was random.
 Landscape classification data were provided by the Newfoundland and Labrador
 Wildlife Division. Available landcover classification included nine habitat
 types at 30 x 30m resolution. We distilled the landcover types into three broad
-categories: foraging habitat, open habitat, and closed habitat. Foraging habitat
+categories: foraging habitat, open habitat, and forest habitat. Foraging habitat
 consisted of lichen habitat, open habitat consisted of wetland, rocky barrens,
-and anthropogenic habitat types, while closed habitat consisted of coniferous
+and anthropogenic habitat types, while forest habitat consisted of coniferous
 forest, conifer scrub, broadleaf forest, and mixed-wood forest habitat types.
 Water habitat was excluded from all subsequent analyses.
 
@@ -178,7 +178,7 @@ Water habitat was excluded from all subsequent analyses.
 
 We generated seasonal multilayer social networks consisting of habitat-specific
 monolayers. Each layer was the social association network generated in one of
-three habitat types (lichen, open, and closed). For habitat-specific networks,
+three habitat types (lichen, open, and forest). For habitat-specific networks,
 all GPS relocations were assigned to the corresponding habitat type and
 proximity-based social network layers were generated using the R package spatsoc
 (Robitaille et al. 2019) in *R version* (R Core Team 2020).
