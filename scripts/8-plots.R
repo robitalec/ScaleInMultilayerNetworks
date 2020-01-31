@@ -14,7 +14,7 @@ source('scripts/0-variables.R')
 
 
 ### Data ----
-var <- 'nobs'
+var <- 'lcres'
 
 if (var == 'lcres') {
   DT <- readRDS('data/derived-data/2-landcover-scale-metrics.Rds')[lcres<2000]
@@ -120,7 +120,7 @@ base3 <- ggplot(DT, aes(x = get(var), color = season, linetype = lcname)) +
   scale_color_manual(values = c(cols$hex[1], cols$hex[5]))
 
 g6 <- base3 + geom_line(aes(y = mnsplitNeigh), size = linesize) + ylab('Degree')
-g7 <- base3 + geom_line(aes(y = mnrelev), size = linesize) + ylab('Relevance') +
+g7 <- base3 + geom_line(aes(y = mnrelev), size = linesize) + ylab('Layer Relevance') +
   theme(legend.position = pos2) + guides(linetype = FALSE)
 g8 <- base3 + geom_line(aes(y = mngraphstrength), size = linesize) + ylab('Graph Strength') +
   guides(color = FALSE, linetype = FALSE)
