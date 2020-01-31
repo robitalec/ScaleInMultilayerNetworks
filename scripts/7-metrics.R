@@ -12,7 +12,7 @@ source('scripts/0-variables.R')
 
 
 ### Data ----
-var <- 'nobs'
+var <- 'lcres'
 splitBy <- c(splitBy, var)
 
 if (var == 'lcres') {
@@ -31,13 +31,12 @@ alloc.col(DT)
 
 
 ### Multilayer network metrics ----
-varby <- c(var, 'season')
 matrices <- DT[, property_matrix(.SD, idcol, 'layer', 'splitNeigh'), var]
-matrices[, c(lccol, 'season') := tstrsplit(layer, '-', type.convert = TRUE)]
+matrices[, c('season', lccol) := tstrsplit(layer, '-', type.convert = TRUE)]
 
 layer_similarity(matrices, 'FO', c(lccol, var))
 
-DT[matrices, layersim := layersim, on = c(varby, lccol)]
+DT[matrices, layersim := layersim, on = c(var, 'season', lccol)]
 
 # Multidegree
 multi_degree(DT, 'splitNeigh', idcol, splitBy = var)
