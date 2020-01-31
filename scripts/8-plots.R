@@ -54,7 +54,7 @@ DT[, paste0('mn', metriccols) := lapply(.SD, mean, na.rm = TRUE),
 if (var %in% c('winpos', 'winlength')) {
   pos1 <- c(0.9,0.12)
   pos2 <- c(0.9,0.1)
-} else if (var %in% c('spatialthreshold')) {
+} else if (var %in% c('spatialthreshold', 'lcres')) {
   pos1 <- c(0.9,0.42)
   pos2 <- c(0.9,0.4)
 } else if (var %in% c('nobs')){
@@ -85,8 +85,8 @@ cols <- DT[, .(layer = sort(unique(layer)))][,
   .(layer, hex = c('#8c510a','#d8b365','#c4b99c',
                    '#01665e','#5ab4ac', '#9fbbb7'))]
 
-greys <- DT[, .(lc30 = sort(unique(lc30)))][, 
-  .(lc30, hex = c('#6b6b6b', '#c2c2c2', '#919191'))]
+greys <- DT[, .(lc = sort(unique(lc)))][, 
+  .(lc, hex = c('#6b6b6b', '#c2c2c2', '#919191'))]
 
 # Plot by landcover
 base1 <- ggplot(unique(DT[, .SD, .SDcols = c(var, 'lcname', 'layersim')]), 
