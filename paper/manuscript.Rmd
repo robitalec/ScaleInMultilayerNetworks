@@ -8,7 +8,7 @@ output:
       reference_docx: template.docx
     # github_document
     
-references: ../references/refs.bib
+references: ../references/knitcite.bib
 ---
 
 
@@ -19,6 +19,9 @@ knitr::opts_chunk$set(
     # message = FALSE,
     eval = TRUE
 )
+
+library(knitcitations)
+options("citation_format" = "pandoc")
 ```
 
 ## Abstract
@@ -49,7 +52,7 @@ animals, their social environment, and the landscapes they occupy.
 
 ## Introduction
 Our inference regarding the ecological processes underlying ecological patterns
-are directly linked to the scale at which they are observed (Levin 1992; Allen
+are directly linked to the scale at which they are observed `r citep("10.2307/1941447")` (Levin 1992; Allen
 et al. 2015). Animals are influenced across scales, through processes such as
 species-specific as trophic interactions and resource availability (Legendre
 1993; Chave 2013) and global climate and productivity (Field et al. 2009).
@@ -645,4 +648,9 @@ provided by a Vanier Canada Graduate Scholarship to QMRW and a NSERC Discovery
 Grant to EVW.
 
 ## References
+
+```{r, message=FALSE}
+write.bibtex(file="../references/knitcite.bib")
+```
+
 
