@@ -24,7 +24,11 @@ source('scripts/0-variables.R')
 DT <- readRDS('data/derived-data/1-sub-seasons-fogo-caribou.Rds')
 alloc.col(DT)
 
-### Temporal grouping with spatsoc ----
+### Generate networks ----
+# Drop where season or landcover is NA
+DT <- DT[!is.na(season) & !is.na(get(idcol))]
+
+# Temporal grouping with spatsoc
 group_times(
   DT,
   datetime =  c(datecol, timecol),
