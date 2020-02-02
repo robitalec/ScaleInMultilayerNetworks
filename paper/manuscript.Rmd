@@ -20,6 +20,8 @@ knitr::opts_chunk$set(
 
 library(knitcitations)
 options("citation_format" = "pandoc")
+
+source('../scripts/0-variables.R')
 ```
 
 ## Abstract
