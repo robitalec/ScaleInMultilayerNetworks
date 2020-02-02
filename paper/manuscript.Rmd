@@ -156,24 +156,25 @@ and winter (1 January – 17 February)* based on caribou socioecology
 [@Peignier_2019].
 
 ### Caribou location data
-We used GPS location data collected from Fogo Island caribou in 2017 and 2018. Adult
-female caribou were immobilized and fitted with global positioning system (GPS)
-collars (Lotek Wireless Inc., Newmarket, ON, Canada, GPS4400M collars, 1,250 g)
-as described by Schaefer and Mahoney (2013). Collars were programmed to collect
-location fixes every 2 hours. Prior to analyses, we subset GPS fixes into a
-discrete removed all erroneous and outlier GPS fixes following Bjørneraas et al.
-(2010). We did not collar all female caribou in the herd; however, we assumed
-that our sample of collared animals was random.
+We used GPS location data collected from Fogo Island caribou in 2017 and 2018.
+Adult female caribou were immobilized and fitted with global positioning system
+(GPS) collars (Lotek Wireless Inc., Newmarket, ON, Canada, GPS4400M collars,
+1,250 g) as described by Schaefer and Mahoney (2013). Collars were programmed to
+collect location fixes every 2 hours. Prior to analyses, we subset GPS fixes
+into a discrete removed all erroneous and outlier GPS fixes following Bjørneraas
+et al. (2010). We did not collar all female caribou in the herd; however, we
+assumed that our sample of collared animals was random.
 
 ### Landscape data and habitat classification
 Landscape classification data were provided by the Newfoundland and Labrador
 Wildlife Division. Available landcover classification included nine habitat
-types at <!-- TODO: double check --> 30m resolution. We reclassified the landcover types into three
-categories: foraging habitat, open habitat, and forest habitat. Foraging habitat
-consisted of lichen habitat, open habitat consisted of wetland, rocky barrens,
-and anthropogenic habitat types, while forest habitat consisted of coniferous
-forest, conifer scrub, broadleaf forest, and mixed-wood forest habitat types.
-Water habitat was excluded from all subsequent analyses. 
+types at <!-- TODO: double check --> 30m resolution. We reclassified the
+landcover types into three categories: foraging habitat, open habitat, and
+forest habitat. Foraging habitat consisted of lichen habitat, open habitat
+consisted of wetland, rocky barrens, and anthropogenic habitat types, while
+forest habitat consisted of coniferous forest, conifer scrub, broadleaf forest,
+and mixed-wood forest habitat types. Water habitat was excluded from all
+subsequent analyses.
 <!-- using the raster package for R? -->
 
 ### Caribou multilayer social networks
