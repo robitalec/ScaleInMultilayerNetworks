@@ -40,10 +40,15 @@ citep('10.2980/16-2-3238')
 # TODO: Bjørneraas et al (2010)
 
 
-
 ### Caribou multilayer social networks
 # kivela 2014
 citep('10.1093/comnet/cnu016')
+
+# robitaille 2019
+citep('10.1111/2041-210X.13215')
+
+# farine whitehead 2015
+citep('10.1111/1365-2656.12418')
 
 ### R, R Packages
 # R
