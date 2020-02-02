@@ -1,6 +1,7 @@
 # Package
 library(knitcitations)
 
+
 # levin, allen
 citep(c('10.2307/1941447', '10.7312/alle06918'))
 
@@ -18,3 +19,5 @@ citep('10.1126/science.2740915')
 # luthe2009
 citep('10.1093/beheco/arp074')
 
+
+write.bibtex(file = "references/knitcite.bib")
