@@ -50,13 +50,17 @@ animals, their social environment, and the landscapes they occupy.
 
 ## Introduction
 Our inference regarding the ecological processes underlying ecological patterns
-are directly linked to the scale at which they are observed [@Levin_1993; @Allen_2015]. Animals are influenced across scales, through processes such as
-species-specific as trophic interactions and resource availability [@Legendre_1993; @Chave2013] and global climate and productivity [@Field_2009].
-Multiscale ecology has been integrated into species distribution modelling [@Elith_2009; @Mayor_2007; @Sugihara_1989], habitat selection, and food webs. Meanwhile, in the context of animal behaviour, certain
-behaviours are scale dependent, for example, acoustic communication in birds
-occurs over variable spatial scales [@Luther_2009]. We posit that animal
-behaviour and, more specifically, the social environment that animals experience
-must also be scale-dependent.
+are directly linked to the scale at which they are observed [@Levin_1993;
+@Allen_2015]. Animals are influenced across scales, through processes such as
+species-specific as trophic interactions and resource availability
+[@Legendre_1993; @Chave2013] and global climate and productivity [@Field_2009].
+Multiscale ecology has been integrated into species distribution modelling
+[@Elith_2009; @Mayor_2007; @Sugihara_1989], habitat selection, and food webs.
+Meanwhile, in the context of animal behaviour, certain behaviours are scale
+dependent, for example, acoustic communication in birds occurs over variable
+spatial scales [@Luther_2009]. We posit that animal behaviour and, more
+specifically, the social environment that animals experience must also be
+scale-dependent.
 
 
 Sociality exists across both temporal and spatial scales (Whitehead 2008). For
@@ -87,19 +91,19 @@ and innovation of traditional social network analysis (Webber & Vander Wal
 systems (Finn et al. 2019). 
 
 
-Unlike traditional monolayer social networks,
-multilayer networks explicitly consider social systems across contexts,
-including scale-dependent contexts (Pilosof et al. 2017). Multilayer networks
-are made up of multiple layers, each representing different classes of
-individuals (e.g. male or female), types of behaviours (e.g. grooming,
-travelling, or foraging), spatial areas (e.g. local or regional), or temporal
-windows (e.g. daily or seasonal) (Kivela et al. 2014; Porter 2018). Multilayer
-networks are relatively novel to studies of animal behaviour (Finn et al. 2019;
-Silk et al. 2018), although they have been used to describe multidimensional
-human social systems, complex transportation networks, and neural networks (Silk
-et al. 2018). The role of scale within multilayer social networks remains
-unexplored but provides a unique opportunity to develop novel understanding of
-variation in the temporal or spatial scales associated with social systems.
+Unlike traditional monolayer social networks, multilayer networks explicitly
+consider social systems across contexts, including scale-dependent contexts
+(Pilosof et al. 2017). Multilayer networks are made up of multiple layers, each
+representing different classes of individuals (e.g. male or female), types of
+behaviours (e.g. grooming, travelling, or foraging), spatial areas (e.g. local
+or regional), or temporal windows (e.g. daily or seasonal) (Kivela et al. 2014;
+Porter 2018). Multilayer networks are relatively novel to studies of animal
+behaviour (Finn et al. 2019; Silk et al. 2018), although they have been used to
+describe multidimensional human social systems, complex transportation networks,
+and neural networks (Silk et al. 2018). The role of scale within multilayer
+social networks remains unexplored but provides a unique opportunity to develop
+novel understanding of variation in the temporal or spatial scales associated
+with social systems.
 
 
 Our study is motivated by behavioural, landscape, and spatial ecology to build a
@@ -130,11 +134,10 @@ knitr::include_graphics('../graphics/figure1.png')
 
 ### Caribou socioecology
 Here, we use caribou as a case study to develop scale-dependent multilayer
-networks based on temporal (seasonal), spatial (habitat type), and social
-(visual and auditory perception). Caribou are gregarious ungulates with
-fission-fusion dynamics (Lesmerises et al. 2018) that display temporal (Peignier
-et al. 2019) and spatial (Webber et al. unpublished data) variation in social
-networks. In winter, caribou dig holes in the snow, termed craters to access
+networks based on social (visual and auditory perception), spatial (habitat
+type), and temporal (seasonal). Caribou are gregarious ungulates with
+fission-fusion dynamics (Lesmerises et al. 2018) that display temporal [@Peignier_2019] and spatial (Webber et al. unpublished data) variation in social
+networks. In winter, caribou dig holes in the snow, termed craters, to access
 forage (Bergerud 1974). As a result, caribou tend to occupy and re-use craters
 once they are established and there is considerably less access to forage than
 when the landscape is snow-free. Importantly, craters exist on the landscape at
