@@ -50,15 +50,13 @@ animals, their social environment, and the landscapes they occupy.
 
 ## Introduction
 Our inference regarding the ecological processes underlying ecological patterns
-are directly linked to the scale at which they are observed `r citep("10.2307/1941447")` (Levin 1992; Allen
-et al. 2015). Animals are influenced across scales, through processes such as
-species-specific as trophic interactions and resource availability (Legendre
-1993; Chave 2013) and global climate and productivity (Field et al. 2009).
+are directly linked to the scale at which they are observed `r citep(c('10.2307/1941447', '10.7312/alle06918'))`. Animals are influenced across scales, through processes such as
+species-specific as trophic interactions and resource availability `r citep(c('10.2307/1939924', '10.1111/ele.12048'))` and global climate and productivity `r citep('10.1111/j.1365-2699.2008.01963.x')`.
 Multiscale ecology has been integrated into species distribution modelling
-(Elith et al. 2009), habitat selection (Mayor et al. 2007), and food webs
-(Sugihara et al. 1989). Meanwhile, in the context of animal behaviour, certain
+`r citep('10.1146/annurev.ecolsys.110308.120159')`, habitat selection `r citep('10.1890/06-1672.1')`, and food webs
+`r citep('10.1126/science.2740915')`. Meanwhile, in the context of animal behaviour, certain
 behaviours are scale dependent, for example, acoustic communication in birds
-occurs over variable spatial scales (Luther 2009). We posit that animal
+occurs over variable spatial scales `r citep('10.1093/beheco/arp074')`. We posit that animal
 behaviour and, more specifically, the social environment that animals experience
 must also be scale-dependent.
 
@@ -648,7 +646,7 @@ Grant to EVW.
 ## References
 
 ```{r, message=FALSE}
-write.bibtex(file="../references/knitcite.bib")
+write.bibtex(file = "../references/knitcite.bib")
 ```
 
 
