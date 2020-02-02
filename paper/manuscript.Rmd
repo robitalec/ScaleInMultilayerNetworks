@@ -50,13 +50,11 @@ animals, their social environment, and the landscapes they occupy.
 
 ## Introduction
 Our inference regarding the ecological processes underlying ecological patterns
-are directly linked to the scale at which they are observed `r citep(c('10.2307/1941447', '10.7312/alle06918'))`. Animals are influenced across scales, through processes such as
-species-specific as trophic interactions and resource availability `r citep(c('10.2307/1939924', '10.1111/ele.12048'))` and global climate and productivity `r citep('10.1111/j.1365-2699.2008.01963.x')`.
-Multiscale ecology has been integrated into species distribution modelling
-`r citep('10.1146/annurev.ecolsys.110308.120159')`, habitat selection `r citep('10.1890/06-1672.1')`, and food webs
-`r citep('10.1126/science.2740915')`. Meanwhile, in the context of animal behaviour, certain
+are directly linked to the scale at which they are observed [@Levin_1993; @Allen_2015]. Animals are influenced across scales, through processes such as
+species-specific as trophic interactions and resource availability [@Legendre_1993; @Chave2013] and global climate and productivity [@Field_2009].
+Multiscale ecology has been integrated into species distribution modelling [@Elith_2009; @Mayor_2007; @Sugihara_1989], habitat selection, and food webs. Meanwhile, in the context of animal behaviour, certain
 behaviours are scale dependent, for example, acoustic communication in birds
-occurs over variable spatial scales `r citep('10.1093/beheco/arp074')`. We posit that animal
+occurs over variable spatial scales [@Luther_2009]. We posit that animal
 behaviour and, more specifically, the social environment that animals experience
 must also be scale-dependent.
 
@@ -638,7 +636,7 @@ navigate their environment and make decisions about where to move next?
 
 We thank all members of the Wildlife Evolutionary Ecology Lab, including K.
 Kingdon, S. Boyle,  C. Prokopenko, I. Richmond, J. Hogg, and L. Newediuk for
-their comments on previous versions of this manuscript as well as D. Schneider
+their comments on previous versions of this manuscript as well as D. C. Schneider
 for inspiration and helpful discussions about scale. Funding for this study was
 provided by a Vanier Canada Graduate Scholarship to QMRW and a NSERC Discovery
 Grant to EVW.
