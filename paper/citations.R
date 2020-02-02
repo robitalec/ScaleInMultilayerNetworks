@@ -1,7 +1,9 @@
-# Package
+### Packages ----
 library(knitcitations)
 
 
+### Sections ----
+## Introduction
 # levin, allen
 citep(c('10.2307/1941447', '10.7312/alle06918'))
 
@@ -20,4 +22,14 @@ citep('10.1126/science.2740915')
 citep('10.1093/beheco/arp074')
 
 
+## Case study
+## Caribou socioecology
+# TODO: Lesmerises 2018
+
+# peignier
+citep('10.1002/ece3.5071')
+
+
+
+### Write out bib ----
 write.bibtex(file = "references/knitcite.bib")
