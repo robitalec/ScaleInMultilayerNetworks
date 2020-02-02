@@ -180,13 +180,28 @@ subsequent analyses.
 ### Caribou multilayer social networks
 
 #### Network types and construction (defining layers for the multilayer network)
+<!-- specific kivela name, 6 layer multilayer-->
+
+Following [@Kivela_2014]:
+
+* we generated a six layer multilayer social network consisting of two aspects
+(season and landcover)
+* elementary-layer sets for two seasons (winter and summer) and three landcover
+classes (open, forest and lichen).
+* This multilayer network is not node-aligned as not all individuals exist on
+all layers
+* This layer has both ordinal and categorical coupling
+
+
+Individuals were subset to ensure they had data collected in both seasons
+
 
 We generated seasonal multilayer social networks consisting of habitat-specific
 monolayers. Each layer was the social association network generated in one of
 three habitat types (lichen, open, and forest). For habitat-specific networks,
 all GPS relocations were assigned to the corresponding habitat type and
-proximity-based social network layers were generated using the R package spatsoc
-(Robitaille et al. 2019) in *R version* (R Core Team 2020).
+proximity-based social network layers were generated using the R package `spatsoc`
+[@Robitaille_2019] in `r version$version.string` [@R_Core_Team_2019].
 
 Within each habitat-specific monolayer network, we assumed individuals were
 associating if simultaneous GPS fixes (i.e., recorded within 5 minutes of each
@@ -195,9 +210,9 @@ other gregarious mammals, the ‘chain rule’ is applied for group assignment. 
 GPS data, the chain rule is applied if discrete spatiotemporal GPS fixes
 buffered by a given distance formed a contiguous buffer for two or more
 individuals, even if some individuals within the buffer were not within the
-given distance of one another (Robitaille et al. 2019). Group assignment based
+given distance of one another [@Robitaille_2019]. Group assignment based
 on the chain rule has previously been applied to caribou at a distance of 50m
-(Peignier et al. 2019; Lesmerises et al. 2018). In all networks, nodes
+[@Peignier_2019; @Lesmerises_2018]. In all networks, nodes
 represented individuals, intralayer edges represented associations between
 individuals in a given habitat type, and interlayer edges represented
 connections between the same individuals across contexts.
