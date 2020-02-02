@@ -256,7 +256,7 @@ multidimensional..."
 #### Social scale
 
 We altered social scale based on visual (short distance) and auditory (long
-distnace) sensory modalities of caribou <!--(REF?)-->. Specifically, we modified
+distance) sensory modalities of caribou <!--(REF?)-->. Specifically, we modified
 the spatial distance threshold required for group assignment (see above) and
 re-assigned groups at incremental distance between 5-500m. For example, at the
 finest social scale, only individuals within 5m of one another were considered
@@ -266,15 +266,20 @@ of one another were considered in the same group.
 #### Spatial scale
 
 To assess the influence of spatial scale on multilayer networks, we aggregated
-our landcover classification map at varying scales relevant to caribou ecology. We aggregated the 10m landcover raster using the R package
-`grainchanger` [@Graham_2019] at five scales: 100m, 250m, 500m, and 
-1000m. Aggregation occurred using a modal moving window method using a circular window corresponding to the above scales [@Graham_2019a]. 10m and 100m represents fine-scale decision making for caribou during foraging <!--(REF)-->, while re-sampling at 500m and 1000m represents the scale at which caribou tend to select and avoid habitat (Bastille-Rousseau et al. 2017). 
+our landcover classification map at varying scales relevant to caribou ecology.
+We aggregated the 10m landcover raster using the R package `grainchanger`
+[@Graham_2019] at five scales: 100m, 250m, 500m, and 1000m. Aggregation occurred
+using a modal moving window method using a circular window corresponding to the
+above scales [@Graham_2019a]. 10m and 100m represents fine-scale decision making
+for caribou during foraging <!--(REF)-->, while re-sampling at 500m and 1000m
+represents the scale at which caribou tend to select and avoid habitat
+(Bastille-Rousseau et al. 2017).
 
 
 #### Temporal scale
 
-We altered the temporal scale of mutlilayer networks using a moving time-window
-approach to define seasons.
+We altered the temporal scale of multilayer networks using a moving time-window
+approach to define seasons and 
 
 1. time window length
 
@@ -290,7 +295,7 @@ Window positions starting at 1, to + 48 So 1-48 is first iteration for winter
 and 48-96 is second iteration for "winter". Same for summer, starting at 215.
 Network layers for each season are constructed.
 
-**Observational scale** <!--(temorary header)-->: Studies of social network analysis
+**Observational scale** <!--(temporary header)-->: Studies of social network analysis
 vary in the number and frequency of observations as well as the data collection
 technique used to generate networks (Davis et al. 2018; Webber and Vander Wal
 2019).
@@ -315,25 +320,25 @@ deviation = individuals are similarly connected across layers.
 * Graph strength: weighted version of degree. High graph strength = highly
 connected. Not summed in this case across layers.
 
-* Neighbors: number of unique individuals adjacent to each actor. Considered in
+* Neighbours: number of unique individuals adjacent to each actor. Considered in
 a single layer, this is equal to the degree.
 
-* Neighborhood: number of unique individuals across all layers. High
-neighborhood = a high number of unique individuals connected to an actor. 
+* Neighbourhood: number of unique individuals across all layers. High
+neighbourhood = a high number of unique individuals connected to an actor. 
 
-* Relevance: layer centric metric, corresponding to the number of neighbors on a
-layer divided by the total neighborhood for each actor. High relevance means
+* Relevance: layer centric metric, corresponding to the number of neighbours on a
+layer divided by the total neighbourhood for each actor. High relevance means
 that the layer is highly relevant to the individuals connections. A low
-relevance means this layer does not contribute many neighbors to an individuals
-overall neighborhood.
+relevance means this layer does not contribute many neighbours to an individuals
+overall neighbourhood.
 
-* Connective redundancy: the total multilayer neighborhood divided by the
+* Connective redundancy: the total multilayer neighbourhood divided by the
 multidegree. High connective redundancy indicates a multilayer network that has
 many repeated edges across layers between an actor and its neighbours. Low
 connective redundancy indicates that each layer is important for preserving all
 social ties.
 
-* Layer similarily: how similar each layer is (Brodka 2018). Pearson's
+* Layer similarity: how similar each layer is (Brodka 2018). Pearson's
 correlation coefficient of degree vectors for each layer, comparing each
 landcover across seasons.
 
@@ -342,7 +347,7 @@ landcover across seasons.
 ### Figure captions and brief interpretations
 
 
-(ref:lcres) varying scale in landcover resolution. For each landcover resolution (10m, 100m, 250m, 500m and 1000m), ultilayer networks were constructed for each landcover class (open, forest and lichen) across two seasons (winter and summer) and four network metrics calculated. A) Similarity of landcover network layers between seasons (e.g.: open summer compared to open winter) showed different responses to changing landcover scale with an increase in similarity for forest layers at 250m and decrease in similarity for open layers at 250m. Note that lichen layer similarity is not shown because individuals did not interact in lichen habitats greater greater than 10m landcover resolution. B) Mean connective redundancy across individuals showed a decreasing trend with increasing landcover resolution. C) Mean layer relevance and D) mean graph strength across individuals showed sparse connectivity in summer compared to winter networks and a decrease in winter lichen layer relevance at higher landcover resolutions.
+(ref:lcres) varying scale in landcover resolution. For each landcover resolution (10m, 100m, 250m, 500m and 1000m), multilayer networks were constructed for each landcover class (open, forest and lichen) across two seasons (winter and summer) and four network metrics calculated. A) Similarity of landcover network layers between seasons (e.g.: open summer compared to open winter) showed different responses to changing landcover scale with an increase in similarity for forest layers at 250m and decrease in similarity for open layers at 250m. Note that lichen layer similarity is not shown because individuals did not interact in lichen habitats greater greater than 10m landcover resolution. B) Mean connective redundancy across individuals showed a decreasing trend with increasing landcover resolution. C) Mean layer relevance and D) mean graph strength across individuals showed sparse connectivity in summer compared to winter networks and a decrease in winter lichen layer relevance at higher landcover resolutions.
 
 
 ```{r, fig.cap='(ref:lcres)'}
@@ -372,7 +377,7 @@ knitr::include_graphics('../graphics/figure-spatialthreshold.png')
 
 
 
-(ref:winlen) varying scale in time window length. For each time windown length (of a sequence from 40 to 100 by 5), multilayer networks were constructed for each landcover class (open, forest and lichen) across two seasons (winter and summer) and four network metrics calculated. A) Similarity of landcover network layers between seasons (e.g.: open summer compared to open winter) showed increasing similarity consistent across landcover layers with increasing window length. B) Mean connective redundancy across individuals increased rapidly between 5m and 50m reaching a plateau around 0.65 before decrease between 400m and 500m. C) Mean layer relevance was relatively stable across social thresholds for each season and landcover layer. D) Mean graph strength across individuals showed an increase for winter network layers at 50m through 500m while summer network layers remained consistently sparse.
+(ref:winlen) varying scale in time window length. For each time window length (of a sequence from 40 to 100 by 5), multilayer networks were constructed for each landcover class (open, forest and lichen) across two seasons (winter and summer) and four network metrics calculated. A) Similarity of landcover network layers between seasons (e.g.: open summer compared to open winter) showed increasing similarity consistent across landcover layers with increasing window length. B) Mean connective redundancy across individuals increased rapidly between 5m and 50m reaching a plateau around 0.65 before decrease between 400m and 500m. C) Mean layer relevance was relatively stable across social thresholds for each season and landcover layer. D) Mean graph strength across individuals showed an increase for winter network layers at 50m through 500m while summer network layers remained consistently sparse.
 
 
 * increasing window length = increasingly similar layers and increasingly redundant edges. more individuals have the opportunity to interact
@@ -391,7 +396,7 @@ knitr::include_graphics('../graphics/figure-winlength.png')
 
 <!-- RO first sentence... -->
 
-(ref:nobs) varying scale in number of observations. For each iteration, a number of observations (10-485 observations in steps of 25) were selected from the complete dataset to construct multilayer networks with layers defined by each landcover class (open, forest and lichen) across two seasons (winter and summer) and four network metrics calculated. A) Similarity of landcover network layers between seasons (e.g.: open summer compared to open winter) showed a stabilizing layer similarity at 200 observations for forest and 300 observations for lichen and open. B) Mean connective redundancy across individuals increased with increasing number of observations, with a decreasing rate of increase around 100 observations. C) Mean layer relevance across individuals increased for winter layers and slightly increased for summer layers. D) Mean graph strength across individuals varied for winter layers becoming relatively stable at 200 observations and remained sparse throughout for summer layers.
+(ref:nobs) varying scale in number of observations. For each iteration, a number of observations (10-485 observations in steps of 25) were selected from the complete data set to construct multilayer networks with layers defined by each landcover class (open, forest and lichen) across two seasons (winter and summer) and four network metrics calculated. A) Similarity of landcover network layers between seasons (e.g.: open summer compared to open winter) showed a stabilizing layer similarity at 200 observations for forest and 300 observations for lichen and open. B) Mean connective redundancy across individuals increased with increasing number of observations, with a decreasing rate of increase around 100 observations. C) Mean layer relevance across individuals increased for winter layers and slightly increased for summer layers. D) Mean graph strength across individuals varied for winter layers becoming relatively stable at 200 observations and remained sparse throughout for summer layers.
 
 
 * common, though at different points - more observations until stabilizing
@@ -405,7 +410,7 @@ knitr::include_graphics('../graphics/figure-nobs.png')
 ```
 
 
-(ref:winpos) varying scale in time window position. For each time windown position (of a sequence from 1 to 48), the time window used to define seasons was shifted and multilayer networks were constructed for each landcover class (open, forest and lichen) across two seasons (winter and summer) and four network metrics calculated. A) Similarity of landcover network layers between seasons (e.g.: open summer compared to open winter) showed increasing similarity consistent across landcover layers with increasing window length. B) Mean connective redundancy across individuals increased between window position 12 through 48 due to increased connectivity in the summer network layers. C) Mean layer relevance decreased for winter layers and increased for summer layers, showing greater connectivity in summer layers at later window positions. D) Mean graph strength across individuals increased in summer network layers at window position 25 and increased between window position 20 and 40 for winter network layers.
+(ref:winpos) varying scale in time window position. For each time window position (of a sequence from 1 to 48), the time window used to define seasons was shifted and multilayer networks were constructed for each landcover class (open, forest and lichen) across two seasons (winter and summer) and four network metrics calculated. A) Similarity of landcover network layers between seasons (e.g.: open summer compared to open winter) showed increasing similarity consistent across landcover layers with increasing window length. B) Mean connective redundancy across individuals increased between window position 12 through 48 due to increased connectivity in the summer network layers. C) Mean layer relevance decreased for winter layers and increased for summer layers, showing greater connectivity in summer layers at later window positions. D) Mean graph strength across individuals increased in summer network layers at window position 25 and increased between window position 20 and 40 for winter network layers.
 
 
 * increasing network connectivity in summer when the window position is moved - these seasons are more similar than the original window position
