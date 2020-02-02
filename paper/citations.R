@@ -23,11 +23,22 @@ citep('10.1093/beheco/arp074')
 
 
 ## Case study
-## Caribou socioecology
+### Caribou socioecology
 # TODO: Lesmerises 2018
 
 # peignier
 citep('10.1002/ece3.5071')
+
+# TODO: Bergerud 1974
+
+# mayor 2009
+citep('10.2980/16-2-3238')
+
+### Caribou location 
+# TODO: Schaefer and Mahoney (2013)
+# TODO: Bjørneraas et al (2010)
+
+
 
 
 
