@@ -180,28 +180,25 @@ subsequent analyses.
 ### Caribou multilayer social networks
 
 #### Network types and construction (defining layers for the multilayer network)
-<!-- specific kivela name, 6 layer multilayer-->
 
+
+
+<!-- should use something like "using syntax from Kivela 2014..." or 
 Following [@Kivela_2014]:
-
-* we generated a six layer multilayer social network consisting of two aspects
-(season and landcover)
-* elementary-layer sets for two seasons (winter and summer) and three landcover
-classes (open, forest and lichen).
-* This multilayer network is not node-aligned as not all individuals exist on
-all layers
-* This layer has both ordinal and categorical coupling
-
+other info to maybe include: the multilayer network was not node-aligned since
+not all individuals were on all layers
+the temporal aspect is ordinal coupling and landcover aspect is categorical coupling
 
 Individuals were subset to ensure they had data collected in both seasons
 
+-->
 
-We generated seasonal multilayer social networks consisting of habitat-specific
-monolayers. Each layer was the social association network generated in one of
-three habitat types (lichen, open, and forest). For habitat-specific networks,
-all GPS relocations were assigned to the corresponding habitat type and
-proximity-based social network layers were generated using the R package `spatsoc`
-[@Robitaille_2019] in `r version$version.string` [@R_Core_Team_2019].
+We generated a multilayer social network consisting 16 individual nodes and two
+aspects (season and landcover). Two season elementary-layers (winter and summer)
+and three landcover elementary-layers (open, forest and lichen) combined for a
+total of six layers. Layers were the social association network generated in
+each season and landcover combination. Proximity-based social network layers
+were generated using the R package `spatsoc` [@Robitaille_2019] in `r version$version.string` [@R_Core_Team_2019].
 
 Within each habitat-specific monolayer network, we assumed individuals were
 associating if simultaneous GPS fixes (i.e., recorded within 5 minutes of each
