@@ -168,12 +168,13 @@ that our sample of collared animals was random.
 ### Landscape data and habitat classification
 Landscape classification data were provided by the Newfoundland and Labrador
 Wildlife Division. Available landcover classification included nine habitat
-types at 30 x 30m resolution. We distilled the landcover types into three broad
+types at <!-- TODO: double check --> 30m resolution. We reclassified the landcover types into three
 categories: foraging habitat, open habitat, and forest habitat. Foraging habitat
 consisted of lichen habitat, open habitat consisted of wetland, rocky barrens,
 and anthropogenic habitat types, while forest habitat consisted of coniferous
 forest, conifer scrub, broadleaf forest, and mixed-wood forest habitat types.
-Water habitat was excluded from all subsequent analyses.
+Water habitat was excluded from all subsequent analyses. 
+<!-- using the raster package for R? -->
 
 ### Caribou multilayer social networks
 
