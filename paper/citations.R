@@ -40,9 +40,14 @@ citep('10.2980/16-2-3238')
 
 
 
+### Caribou multilayer social networks
+# kivela 2014
+citep('10.1093/comnet/cnu016')
+
 ### R, R Packages
 # R
 citep(citation())
+
 
 ### Write out bib ----
 write.bibtex(file = "references/knitcite.bib")
