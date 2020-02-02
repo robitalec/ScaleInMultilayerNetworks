@@ -40,15 +40,13 @@ and the landscapes they occupy.
 
 Our inference regarding the ecological processes underlying ecological
 patterns are directly linked to the scale at which they are observed
-(<span class="citeproc-not-found" data-reference-id="Levin_1993">**???**</span>;
-Allen and Hoekstra 2015). Animals are influenced across scales, through
-processes such as species-specific as trophic interactions and resource
-availability (Legendre 1993;
-<span class="citeproc-not-found" data-reference-id="Chave2013">**???**</span>)
-and global climate and productivity (Field et al. 2009). Multiscale
-ecology has been integrated into species distribution modelling (Elith
-and Leathwick 2009; Mayor et al. 2007; Sugihara, Schoenly, and Trombla
-1989), habitat selection, and food webs. Meanwhile, in the context of
+(Levin 1992; Allen and Hoekstra 2015). Animals are influenced across
+scales, through processes such as species-specific as trophic
+interactions and resource availability (Legendre 1993; Chave 2013) and
+global climate and productivity (Field et al. 2009). Multiscale ecology
+has been integrated into species distribution modelling (Elith and
+Leathwick 2009), habitat selection (Mayor et al. 2007), and food webs
+(Sugihara, Schoenly, and Trombla 1989). Meanwhile, in the context of
 animal behaviour, certain behaviours are scale dependent, for example,
 acoustic communication in birds occurs over variable spatial scales
 (Luther 2009). We posit that animal behaviour and, more specifically,
@@ -103,8 +101,8 @@ systems.
 Our study is motivated by behavioural, landscape, and spatial ecology to
 build a conceptual and analytical framework for scale-dependent
 multilayer networks and we apply this framework to a case study of
-caribou (*Rangifer tarandus*) in Newfoundland, Canada (Peignier et
-al. 2019). We use this case study to address two principal questions
+caribou (*Rangifer tarandus*) in Newfoundland, Canada (Peignier et al.
+2019). We use this case study to address two principal questions
 associated with scale-dependent multilayer networks. First, to what
 degree does the social scale of relationships, spatial scale of
 landscapes, and temporal scale of analysis influence our ability to
@@ -113,9 +111,9 @@ spatial, and temporal improve predictions associated with biological
 differences in seasonal resource availability and social association? We
 conclude with perspectives for further development and application of
 scale in multilayer networks with respect to landscape ecology
-(Schneider 2009), individual fitness and phenotypes (Webber & Vander Wal
-2018), and movement ecology and collective movement (Jolles et al.
-2019).
+(Schneider 2009)<!-- TODO-->, individual fitness and phenotypes (Webber
+& Vander Wal 2018), and movement ecology and collective movement (Jolles
+et al. 2019).
 
 (ref:spacetime) Space-time diagram displaying variation the spatial and
 temporal extent required for different social processes across a range
@@ -130,24 +128,24 @@ of taxa.
 Here, we use caribou as a case study to develop scale-dependent
 multilayer networks based on social (visual and auditory perception),
 spatial (habitat type), and temporal (seasonal). Caribou are gregarious
-ungulates with fission-fusion dynamics (Lesmerises et al. 2018) that
-display temporal (Peignier et al. 2019) and spatial (Webber et
-al. unpublished data) variation in social networks. In winter, caribou
-dig holes in the snow, termed craters, to access forage (Bergerud 1974).
-As a result, caribou tend to occupy and re-use craters once they are
-established and there is considerably less access to forage than when
-the landscape is snow-free. Importantly, craters exist on the landscape
-at multiple scales: the crater scale (a single crater), the feeding area
-scale (multiple craters in close proximity), and the winter range scale
-(all craters within an individual’s range) (Mayor et al. 2009). The
-distribution of forage for caribou is therefore seasonally
-heterogeneous, with greater access in snow-free seasons compared to
-winter as well as spatially heterogeneous in winter because the
-distribution of craters on the landscape varies meaning that access to
-vegetation in winter is highly variable for caribou. We therefore
-partitioned data into two discrete seasons: summer (3 August - 20
-September) and winter (1 January – 17 February) based on caribou
-socioecology (Peignier et al. 2019).
+ungulates with fission-fusion dynamics (Lesmerises, Johnson, and
+St-Laurent 2018) that display temporal (Peignier et al. 2019) and
+spatial (Webber et al. unpublished data) variation in social networks.
+In winter, caribou dig holes in the snow, termed craters, to access
+forage (Bergerud 1974)<!-- TODO-->. As a result, caribou tend to occupy
+and re-use craters once they are established and there is considerably
+less access to forage than when the landscape is snow-free. Importantly,
+craters exist on the landscape at multiple scales: the crater scale (a
+single crater), the feeding area scale (multiple craters in close
+proximity), and the winter range scale (all craters within an
+individual’s range) (Mayor et al. 2009). The distribution of forage
+for caribou is therefore seasonally heterogeneous, with greater access
+in snow-free seasons compared to winter as well as spatially
+heterogeneous in winter because the distribution of craters on the
+landscape varies meaning that access to vegetation in winter is highly
+variable for caribou. We therefore partitioned data into two discrete
+seasons: summer (3 August - 20 September) and winter (1 January – 17
+February) based on caribou socioecology (Peignier et al. 2019).
 
 ### Caribou location data
 
@@ -157,9 +155,10 @@ positioning system (GPS) collars (Lotek Wireless Inc., Newmarket, ON,
 Canada, GPS4400M collars, 1,250 g) as described by Schaefer and Mahoney
 (2013). Collars were programmed to collect location fixes every 2 hours.
 Prior to analyses, we subset GPS fixes into a discrete removed all
-erroneous and outlier GPS fixes following Bjørneraas et al. (2010). We
-did not collar all female caribou in the herd; however, we assumed that
-our sample of collared animals was random.
+erroneous and outlier GPS fixes following Bjørneraas et
+al. (2010)<!-- TODO-->. We did not collar all female caribou in the
+herd; however, we assumed that our sample of collared animals was
+random.
 
 ### Landscape data and habitat classification
 
@@ -178,35 +177,44 @@ analyses. <!-- using the raster package for R? -->
 
 #### Network types and construction (defining layers for the multilayer network)
 
-<!-- specific kivela name, 6 layer multilayer-->
+<!-- should use something like "using syntax from Kivela 2014..." or 
+Following [@Kivela_2014]:
+other info to maybe include: the multilayer network was not node-aligned since
+not all individuals were on all layers
+the temporal aspect is ordinal coupling and landcover aspect is categorical coupling
 
-We generated seasonal multilayer social networks consisting of
-habitat-specific monolayers. Each layer was the social association
-network generated in one of three habitat types (lichen, open, and
-forest). For habitat-specific networks, all GPS relocations were
-assigned to the corresponding habitat type and proximity-based social
-network layers were generated using the R package spatsoc (Robitaille et
-al. 2019) in R version 3.6.1 (2019-07-05)
-(<span class="citeproc-not-found" data-reference-id="R_Core_Team_2020">**???**</span>).
+Individuals were subset to ensure they had data collected in both seasons
 
-Within each habitat-specific monolayer network, we assumed individuals
-were associating if simultaneous GPS fixes (i.e., recorded within 5
-minutes of each other) were within a given distance of one another.
-Typically for ungulates and other gregarious mammals, the ‘chain rule’
-is applied for group assignment. For GPS data, the chain rule is applied
-if discrete spatiotemporal GPS fixes buffered by a given distance formed
-a contiguous buffer for two or more individuals, even if some
-individuals within the buffer were not within the given distance of one
-another (Robitaille et al. 2019). Group assignment based on the chain
+-->
+
+We generated a multilayer social network consisting 16 individual nodes
+and two aspects (season and landcover). Two season elementary-layers
+(winter and summer) and three landcover elementary-layers (open, forest
+and lichen) combined for a total of six layers. Layers were the social
+association network generated in each season and landcover combination.
+Proximity-based social network layers were generated using the R package
+`spatsoc` (Robitaille, Webber, and Wal 2019) in R version 3.6.1
+(2019-07-05) (R Core Team 2019).
+
+Within each layer, we assumed individuals were associating if
+simultaneous GPS fixes (i.e., recorded within 5 minutes of each other)
+were within a given distance of one another. Typically for ungulates and
+other gregarious mammals, the ‘chain rule’ is applied for group
+assignment. For GPS data, the chain rule is applied if discrete
+spatiotemporal GPS fixes buffered by a given distance formed a
+contiguous buffer for two or more individuals, even if some individuals
+within the buffer were not within the given distance of one another
+(Robitaille, Webber, and Wal 2019). Group assignment based on the chain
 rule has previously been applied to caribou at a distance of 50m
-(Peignier et al. 2019; Lesmerises et al. 2018). In all networks, nodes
-represented individuals, intralayer edges represented associations
-between individuals in a given habitat type, and interlayer edges
-represented connections between the same individuals across contexts.
+(Peignier et al. 2019; Lesmerises, Johnson, and St-Laurent 2018). In all
+networks, nodes represented individuals, intralayer edges represented
+associations between individuals in a given habitat type and season, and
+interlayer edges represented connections between the same individuals
+across contexts.
 
 We weighted edges of social networks by the strength of association
 between caribou using the simple ratio index (SRI, Cairns and Schwager
-1987):
+1987): <!-- TODO-->
 
 \[ SRI = \frac{x}{x + y_{AB} + y_{A} + y_{B}} \]
 
@@ -216,7 +224,7 @@ individual A when individual B did not have a simultaneous fix,
 \(y_{B}\) is the number of fixes from individual B when individual A did
 not have a simultaneous fix, and \(y_{AB}\) is the number of
 simultaneous fixes from individuals A and B that were separated by more
-than the given distance (Farine & Whitehead 2015). Social groups were
+than the given distance (Farine and Whitehead 2015). Social groups were
 designated if two or more individuals occurred within a given distance
 of one another at any given time point.
 
@@ -738,12 +746,29 @@ Ecology*. Columbia University Press.
 
 </div>
 
+<div id="ref-Chave_2013">
+
+Chave, J’erôme. 2013. “The Problem of Pattern and Scale in Ecology: What
+Have We Learned in 20 Years?” Edited by Jordi Bascompte. *Ecology
+Letters* 16 (January): 4–16. <https://doi.org/10.1111/ele.12048>.
+
+</div>
+
 <div id="ref-Elith_2009">
 
 Elith, Jane, and John R. Leathwick. 2009. “Species Distribution Models:
 Ecological Explanation and Prediction Across Space and Time.” *Annual
 Review of Ecology, Evolution, and Systematics* 40 (1): 677–97.
 <https://doi.org/10.1146/annurev.ecolsys.110308.120159>.
+
+</div>
+
+<div id="ref-Farine_2015">
+
+Farine, Damien R., and Hal Whitehead. 2015. “Constructing, Conducting
+and Interpreting Animal Social Network Analysis.” Edited by Sonia
+Altizer. *Journal of Animal Ecology* 84 (5): 1144–63.
+<https://doi.org/10.1111/1365-2656.12418>.
 
 </div>
 
@@ -761,6 +786,23 @@ Meta-Analysis.” *Journal of Biogeography* 36 (1): 132–47.
 
 Legendre, Pierre. 1993. “Spatial Autocorrelation: Trouble or New
 Paradigm?” *Ecology* 74 (6): 1659–73. <https://doi.org/10.2307/1939924>.
+
+</div>
+
+<div id="ref-Lesmerises_2018">
+
+Lesmerises, Fr’ed’eric, Chris J. Johnson, and Martin-Hugues St-Laurent.
+2018. “Landscape Knowledge Is an Important Driver of the Fission
+Dynamics of an Alpine Ungulate.” *Animal Behaviour* 140 (June): 39–47.
+<https://doi.org/10.1016/j.anbehav.2018.03.014>.
+
+</div>
+
+<div id="ref-Levin_1992">
+
+Levin, Simon A. 1992. “The Problem of Pattern and Scale in Ecology: The
+Robert H. MacArthur Award Lecture.” *Ecology* 73 (6): 1943–67.
+<https://doi.org/10.2307/1941447>.
 
 </div>
 
@@ -796,6 +838,24 @@ Alec L. Robitaille, and Eric Vander Wal. 2019. “Space Use and Social
 Association in a Gregarious Ungulate: Testing the Conspecific Attraction
 and Resource Dispersion Hypotheses.” *Ecology and Evolution* 9 (9):
 5133–45. <https://doi.org/10.1002/ece3.5071>.
+
+</div>
+
+<div id="ref-R_Core_Team_2019">
+
+R Core Team. 2019. *R: A Language and Environment for Statistical
+Computing*. Vienna, Austria: R Foundation for Statistical Computing.
+<https://www.R-project.org/>.
+
+</div>
+
+<div id="ref-Robitaille_2019">
+
+Robitaille, Alec L., Quinn M. R. Webber, and Eric Vander Wal. 2019.
+“Conducting Social Network Analysis with Animal Telemetry Data:
+Applications and Methods Using Spatsoc.” Edited by Nick Golding.
+*Methods in Ecology and Evolution* 10 (8): 1203–11.
+<https://doi.org/10.1111/2041-210x.13215>.
 
 </div>
 

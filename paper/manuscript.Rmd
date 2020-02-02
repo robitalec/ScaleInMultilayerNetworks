@@ -111,7 +111,7 @@ with social systems.
 Our study is motivated by behavioural, landscape, and spatial ecology to build a
 conceptual and analytical framework for scale-dependent multilayer networks and
 we apply this framework to a case study of caribou (*Rangifer tarandus*) in
-Newfoundland, Canada (Peignier et al. 2019). We use this case study to address
+Newfoundland, Canada [@Peignier_2019]. We use this case study to address
 two principal questions associated with scale-dependent multilayer networks.
 First, to what degree does the social scale of relationships, spatial scale of
 landscapes, and temporal scale of analysis influence our ability to interpret
@@ -119,7 +119,7 @@ complex social systems? Second, can variation in social, spatial, and temporal
 improve predictions associated with biological differences in seasonal resource
 availability and social association? We conclude with perspectives for further
 development and application of scale in multilayer networks with respect to
-landscape ecology (Schneider 2009), individual fitness and phenotypes (Webber &
+landscape ecology (Schneider 2009)<!-- TODO-->, individual fitness and phenotypes (Webber &
 Vander Wal 2018), and movement ecology and collective movement (Jolles et al.
 2019).
 
@@ -138,11 +138,10 @@ knitr::include_graphics('../graphics/figure1.png')
 Here, we use caribou as a case study to develop scale-dependent multilayer
 networks based on social (visual and auditory perception), spatial (habitat
 type), and temporal (seasonal). Caribou are gregarious ungulates with
-fission-fusion dynamics (Lesmerises et al. 2018) that display temporal
+fission-fusion dynamics [@Lesmerises_2018] that display temporal
 [@Peignier_2019] and spatial (Webber et al. unpublished data) variation in
 social networks. In winter, caribou dig holes in the snow, termed craters, to
-access forage (Bergerud 1974). As a result, caribou tend to occupy and re-use
-craters once they are established and there is considerably less access to
+access forage (Bergerud 1974)<!-- TODO-->. As a result, caribou tend to occupy and re-use craters once they are established and there is considerably less access to
 forage than when the landscape is snow-free. Importantly, craters exist on the
 landscape at multiple scales: the crater scale (a single crater), the feeding
 area scale (multiple craters in close proximity), and the winter range scale
@@ -162,7 +161,7 @@ Adult female caribou were immobilized and fitted with global positioning system
 1,250 g) as described by Schaefer and Mahoney (2013). Collars were programmed to
 collect location fixes every 2 hours. Prior to analyses, we subset GPS fixes
 into a discrete removed all erroneous and outlier GPS fixes following Bjørneraas
-et al. (2010). We did not collar all female caribou in the herd; however, we
+et al. (2010)<!-- TODO-->. We did not collar all female caribou in the herd; however, we
 assumed that our sample of collared animals was random.
 
 ### Landscape data and habitat classification
@@ -180,9 +179,6 @@ subsequent analyses.
 ### Caribou multilayer social networks
 
 #### Network types and construction (defining layers for the multilayer network)
-
-
-
 <!-- should use something like "using syntax from Kivela 2014..." or 
 Following [@Kivela_2014]:
 other info to maybe include: the multilayer network was not node-aligned since
@@ -190,7 +186,6 @@ not all individuals were on all layers
 the temporal aspect is ordinal coupling and landcover aspect is categorical coupling
 
 Individuals were subset to ensure they had data collected in both seasons
-
 -->
 
 We generated a multilayer social network consisting 16 individual nodes and two
@@ -200,7 +195,7 @@ total of six layers. Layers were the social association network generated in
 each season and landcover combination. Proximity-based social network layers
 were generated using the R package `spatsoc` [@Robitaille_2019] in `r version$version.string` [@R_Core_Team_2019].
 
-Within each habitat-specific monolayer network, we assumed individuals were
+Within each layer, we assumed individuals were
 associating if simultaneous GPS fixes (i.e., recorded within 5 minutes of each
 other) were within a given distance of one another. Typically for ungulates and
 other gregarious mammals, the ‘chain rule’ is applied for group assignment. For
@@ -211,11 +206,11 @@ given distance of one another [@Robitaille_2019]. Group assignment based
 on the chain rule has previously been applied to caribou at a distance of 50m
 [@Peignier_2019; @Lesmerises_2018]. In all networks, nodes
 represented individuals, intralayer edges represented associations between
-individuals in a given habitat type, and interlayer edges represented
+individuals in a given habitat type and season, and interlayer edges represented
 connections between the same individuals across contexts.
 
 We weighted edges of social networks by the strength of association between
-caribou using the simple ratio index (SRI, Cairns and Schwager 1987):
+caribou using the simple ratio index (SRI, Cairns and Schwager 1987): <!-- TODO-->
 
 $$ SRI = \frac{x}{x + y_{AB} + y_{A} + y_{B}} $$
 
@@ -224,7 +219,7 @@ distance of each other, $y_{A}$ is the number of fixes from individual A
 when individual B did not have a simultaneous fix, $y_{B}$ is the number
 of fixes from individual B when individual A did not have a simultaneous fix,
 and $y_{AB}$ is the number of simultaneous fixes from individuals A and B
-that were separated by more than the given distance (Farine & Whitehead 2015).
+that were separated by more than the given distance [@Farine_2015].
 Social groups were designated if two or more individuals occurred within a given
 distance of one another at any given time point.
 
