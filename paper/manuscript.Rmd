@@ -151,8 +151,8 @@ forage for caribou is therefore seasonally heterogeneous, with greater access in
 snow-free seasons compared to winter as well as spatially heterogeneous in
 winter because the distribution of craters on the landscape varies meaning that
 access to vegetation in winter is highly variable for caribou. We therefore
-partitioned data into two discrete seasons:  *summer (3 August - 20 September)
-and winter (1 January – 17 February)* based on caribou socioecology
+partitioned data into two discrete seasons:  summer (3 August - 20 September)
+and winter (1 January – 17 February) based on caribou socioecology
 [@Peignier_2019].
 
 ### Caribou location data
