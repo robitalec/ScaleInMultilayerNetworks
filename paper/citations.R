@@ -24,7 +24,8 @@ citep('10.1093/beheco/arp074')
 
 ## Case study
 ### Caribou socioecology
-# TODO: Lesmerises 2018
+# TODO: Lesmerises 2018 -- check that's right
+citep('10.1016/j.anbehav.2018.03.014')
 
 # peignier
 citep('10.1002/ece3.5071')
