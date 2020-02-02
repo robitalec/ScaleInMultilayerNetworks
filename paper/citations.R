@@ -50,6 +50,12 @@ citep('10.1111/2041-210X.13215')
 # farine whitehead 2015
 citep('10.1111/1365-2656.12418')
 
+
+### Varying scale in multilayer networks
+# grainchanger, Graham 2019
+citep(citation('grainchanger'))
+citep('10.1111/2041-210X.13177')
+
 ### R, R Packages
 # R
 citep(citation())
