@@ -268,7 +268,7 @@ of one another were considered in the same group.
 To assess the influence of spatial scale on multilayer networks, we aggregated
 our landcover classification map at varying scales relevant to caribou ecology. We aggregated the 10m landcover raster using the R package
 `grainchanger` [@Graham_2019] at five scales: 100m, 250m, 500m, and 
-1000m. Aggregation occurred using a modal moving window method using a circular window corresponding to the above scales [@Graham_2019a]. 10m and 100m represents fine-scale decision making for caribou during foraging <!--(REF)-->, while re-sampling at 1000m and 2500m represents the scale at which caribou tend to select and avoid habitat (Bastille-Rousseau et al. 2017). 
+1000m. Aggregation occurred using a modal moving window method using a circular window corresponding to the above scales [@Graham_2019a]. 10m and 100m represents fine-scale decision making for caribou during foraging <!--(REF)-->, while re-sampling at 500m and 1000m represents the scale at which caribou tend to select and avoid habitat (Bastille-Rousseau et al. 2017). 
 
 
 #### Temporal scale
