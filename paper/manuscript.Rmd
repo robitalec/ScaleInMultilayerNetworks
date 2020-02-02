@@ -256,29 +256,20 @@ multidimensional..."
 #### Social scale
 
 We altered social scale based on visual (short distance) and auditory (long
-distnace) sensory modalities of caribou <!--(REF?)-->. Specifically, we modified the
-distance threshold required for group assignment (see above) and re-assigned
-groups at incremental distance between 5-500m. For example, at the finest social
-scale, only individuals within 5m of one another were considered in the same
-group, whereas at the coarset social scale, only individuals within 500m of one
-another were considered in the same group.
+distnace) sensory modalities of caribou <!--(REF?)-->. Specifically, we modified
+the spatial distance threshold required for group assignment (see above) and
+re-assigned groups at incremental distance between 5-500m. For example, at the
+finest social scale, only individuals within 5m of one another were considered
+in the same group, whereas at the coarsest social scale, individuals within 500m
+of one another were considered in the same group.
 
 #### Spatial scale
 
-To assess the influence of spatial scale on multilayer networks, we re-sampled
-our landcover classification map at varying scales. Specifically, we selected
-scales relevant to caribou ecology. We re-sampled landcover using the
-`grainchanger` **package** (Graham 2019) at **five** scales: 100m, 250m, 500m,
-1000m, 2500m. Sampling at 100 and 250m represents fine-scale decision making for
-caribou during foraging <!--(REF)-->, while re-sampling at 1000m and 2500m represents
-the scale at which caribou tend to select and avoid habitat (Bastille-Rousseau
-et al. 2017). Resampling occurred based on a modal moving window method, where
-**XXXXX. [ALEC YOU'RE GOING TO HAVE TO ADD DETAIL HERE]**
+To assess the influence of spatial scale on multilayer networks, we aggregated
+our landcover classification map at varying scales relevant to caribou ecology. We aggregated the 10m landcover raster using the R package
+`grainchanger` [@Graham_2019] at five scales: 100m, 250m, 500m, and 
+1000m. Aggregation occurred using a modal moving window method using a circular window corresponding to the above scales [@Graham_2019a]. 10m and 100m represents fine-scale decision making for caribou during foraging <!--(REF)-->, while re-sampling at 1000m and 2500m represents the scale at which caribou tend to select and avoid habitat (Bastille-Rousseau et al. 2017). 
 
-For each landcover (the original resolution and modal resampled resolutions),
-seasonal network layers are combined in a multilayer network <!-- Each modal
-landcover, and the original are sampled and separate network layers constructed
-for each. **[QW: NOT SURE WHAT THIS MEANS]** -->
 
 #### Temporal scale
 
