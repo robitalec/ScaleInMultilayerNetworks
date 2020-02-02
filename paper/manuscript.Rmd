@@ -156,7 +156,7 @@ and winter (1 January – 17 February)* based on caribou socioecology
 [@Peignier_2019].
 
 ### Caribou location data
-We used GPS location data collected from Fogo Island caribou in 2018. Adult
+We used GPS location data collected from Fogo Island caribou in 2017 and 2018. Adult
 female caribou were immobilized and fitted with global positioning system (GPS)
 collars (Lotek Wireless Inc., Newmarket, ON, Canada, GPS4400M collars, 1,250 g)
 as described by Schaefer and Mahoney (2013). Collars were programmed to collect
