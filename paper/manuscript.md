@@ -162,14 +162,14 @@ random.
 
 ### Landscape data and habitat classification
 
-Landscape classification data were provided by the Newfoundland and
-Labrador Wildlife Division. Available landcover classification included
-nine habitat types at <!-- TODO: double check --> 30m resolution. We
-reclassified the landcover types into three categories: foraging
-habitat, open habitat, and forest habitat. Foraging habitat consisted of
-lichen habitat, open habitat consisted of wetland, rocky barrens, and
-anthropogenic habitat types, while forest habitat consisted of
-coniferous forest, conifer scrub, broadleaf forest, and mixed-wood
+Landcover data were provided by the Newfoundland and Labrador Wildlife
+Division. Available landcover classification included nine habitat types
+at <!-- TODO: double check --> 10m resolution. We reclassified the
+landcover types into three categories: foraging habitat, open habitat,
+and forest habitat. Foraging habitat <!-- or just lichen like figs?-->
+consisted of lichen habitat, open habitat consisted of wetland, rocky
+barrens, and anthropogenic habitat types, while forest habitat consisted
+of coniferous forest, conifer scrub, broadleaf forest, and mixed-wood
 forest habitat types. Water habitat was excluded from all subsequent
 analyses. <!-- using the raster package for R? -->
 
@@ -184,7 +184,6 @@ not all individuals were on all layers
 the temporal aspect is ordinal coupling and landcover aspect is categorical coupling
 
 Individuals were subset to ensure they had data collected in both seasons
-
 -->
 
 We generated a multilayer social network consisting 16 individual nodes
@@ -198,9 +197,9 @@ Proximity-based social network layers were generated using the R package
 
 Within each layer, we assumed individuals were associating if
 simultaneous GPS fixes (i.e., recorded within 5 minutes of each other)
-were within a given distance of one another. Typically for ungulates and
-other gregarious mammals, the ‘chain rule’ is applied for group
-assignment. For GPS data, the chain rule is applied if discrete
+were within a given spatial distance of one another. Typically for
+ungulates and other gregarious mammals, the ‘chain rule’ is applied for
+group assignment. For GPS data, the chain rule is applied if discrete
 spatiotemporal GPS fixes buffered by a given distance formed a
 contiguous buffer for two or more individuals, even if some individuals
 within the buffer were not within the given distance of one another
@@ -268,31 +267,25 @@ multidimensional..."
 
 We altered social scale based on visual (short distance) and auditory
 (long distnace) sensory modalities of caribou <!--(REF?)-->.
-Specifically, we modified the distance threshold required for group
-assignment (see above) and re-assigned groups at incremental distance
-between 5-500m. For example, at the finest social scale, only
+Specifically, we modified the spatial distance threshold required for
+group assignment (see above) and re-assigned groups at incremental
+distance between 5-500m. For example, at the finest social scale, only
 individuals within 5m of one another were considered in the same group,
-whereas at the coarset social scale, only individuals within 500m of one
+whereas at the coarsest social scale, individuals within 500m of one
 another were considered in the same group.
 
 #### Spatial scale
 
 To assess the influence of spatial scale on multilayer networks, we
-re-sampled our landcover classification map at varying scales.
-Specifically, we selected scales relevant to caribou ecology. We
-re-sampled landcover using the `grainchanger` **package** (Graham 2019)
-at **five** scales: 100m, 250m, 500m, 1000m, 2500m. Sampling at 100 and
-250m represents fine-scale decision making for caribou during foraging
-<!--(REF)-->, while re-sampling at 1000m and 2500m represents the scale
-at which caribou tend to select and avoid habitat (Bastille-Rousseau et
-al. 2017). Resampling occurred based on a modal moving window method,
-where **XXXXX. \[ALEC YOU’RE GOING TO HAVE TO ADD DETAIL HERE\]**
-
-For each landcover (the original resolution and modal resampled
-resolutions), seasonal network layers are combined in a multilayer
-network <!-- Each modal
-landcover, and the original are sampled and separate network layers constructed
-for each. **[QW: NOT SURE WHAT THIS MEANS]** -->
+aggregated our landcover classification map at varying scales relevant
+to caribou ecology. We aggregated the 10m landcover raster using the R
+package `grainchanger` (L. Graham 2019) at five scales: 100m, 250m,
+500m, and 1000m. Aggregation occurred using a modal moving window method
+using a circular window corresponding to the above scales (L. J. Graham
+et al. 2019). 10m and 100m represents fine-scale decision making for
+caribou during foraging <!--(REF)-->, while re-sampling at 1000m and
+2500m represents the scale at which caribou tend to select and avoid
+habitat (Bastille-Rousseau et al. 2017).
 
 #### Temporal scale
 
@@ -779,6 +772,22 @@ J. Alexandre F. Diniz-Filho, Jean-François Gu’egan, Dawn M. Kaufman, et
 al. 2009. “Spatial Species-Richness Gradients Across Scales: A
 Meta-Analysis.” *Journal of Biogeography* 36 (1): 132–47.
 <https://doi.org/10.1111/j.1365-2699.2008.01963.x>.
+
+</div>
+
+<div id="ref-Graham_2019">
+
+Graham, Laura. 2019. *Grainchanger: Moving-Window and Direct Data
+Aggregation*. <https://github.com/ropensci/grainchanger>.
+
+</div>
+
+<div id="ref-Graham_2019a">
+
+Graham, Laura J., Rebecca Spake, Simon Gillings, Kevin Watts, and Felix
+Eigenbrod. 2019. “Incorporating Fine-Scale Environmental Heterogeneity
+into Broad-Extent Models.” Edited by Nick Isaac. *Methods in Ecology and
+Evolution* 10 (6): 767–78. <https://doi.org/10.1111/2041-210x.13177>.
 
 </div>
 
