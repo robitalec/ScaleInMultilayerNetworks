@@ -52,12 +52,12 @@ animals, their social environment, and the landscapes they occupy.
 
 ## Introduction
 Our inference regarding the ecological processes underlying ecological patterns
-are directly linked to the scale at which they are observed [@Levin_1993;
+are directly linked to the scale at which they are observed [@Levin_1992;
 @Allen_2015]. Animals are influenced across scales, through processes such as
 species-specific as trophic interactions and resource availability
-[@Legendre_1993; @Chave2013] and global climate and productivity [@Field_2009].
+[@Legendre_1993; @Chave_2013] and global climate and productivity [@Field_2009].
 Multiscale ecology has been integrated into species distribution modelling
-[@Elith_2009; @Mayor_2007; @Sugihara_1989], habitat selection, and food webs.
+[@Elith_2009], habitat selection [@Mayor_2007], and food webs [@Sugihara_1989].
 Meanwhile, in the context of animal behaviour, certain behaviours are scale
 dependent, for example, acoustic communication in birds occurs over variable
 spatial scales [@Luther_2009]. We posit that animal behaviour and, more
