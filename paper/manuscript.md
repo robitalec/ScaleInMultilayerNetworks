@@ -113,7 +113,7 @@ conclude with perspectives for further development and application of
 scale in multilayer networks with respect to landscape ecology
 (Schneider 2009)<!-- TODO-->, individual fitness and phenotypes (Webber
 & Vander Wal 2018), and movement ecology and collective movement (Jolles
-et al. 2019).
+et al. 2019).
 
 (ref:spacetime) Space-time diagram displaying variation the spatial and
 temporal extent required for different social processes across a range
@@ -164,12 +164,13 @@ random.
 
 Landcover data were provided by the Newfoundland and Labrador Wildlife
 Division. Available landcover classification included nine habitat types
-at <!-- TODO: double check --> 10m resolution. We reclassified the
-landcover types into three categories: foraging habitat, open habitat,
-and forest habitat. Foraging habitat <!-- or just lichen like figs?-->
-consisted of lichen habitat, open habitat consisted of wetland, rocky
-barrens, and anthropogenic habitat types, while forest habitat consisted
-of coniferous forest, conifer scrub, broadleaf forest, and mixed-wood
+at <!-- TODO:
+double check --> 10m resolution. We reclassified the landcover types
+into three categories: foraging habitat, open habitat, and forest
+habitat. Foraging habitat <!-- or just lichen like figs?--> consisted of
+lichen habitat, open habitat consisted of wetland, rocky barrens, and
+anthropogenic habitat types, while forest habitat consisted of
+coniferous forest, conifer scrub, broadleaf forest, and mixed-wood
 forest habitat types. Water habitat was excluded from all subsequent
 analyses. <!-- using the raster package for R? -->
 
@@ -266,7 +267,7 @@ multidimensional..."
 #### Social scale
 
 We altered social scale based on visual (short distance) and auditory
-(long distnace) sensory modalities of caribou <!--(REF?)-->.
+(long distance) sensory modalities of caribou <!--(REF?)-->.
 Specifically, we modified the spatial distance threshold required for
 group assignment (see above) and re-assigned groups at incremental
 distance between 5-500m. For example, at the finest social scale, only
@@ -283,14 +284,14 @@ package `grainchanger` (L. Graham 2019) at five scales: 100m, 250m,
 500m, and 1000m. Aggregation occurred using a modal moving window method
 using a circular window corresponding to the above scales (L. J. Graham
 et al. 2019). 10m and 100m represents fine-scale decision making for
-caribou during foraging <!--(REF)-->, while re-sampling at 1000m and
-2500m represents the scale at which caribou tend to select and avoid
+caribou during foraging <!--(REF)-->, while re-sampling at 500m and
+1000m represents the scale at which caribou tend to select and avoid
 habitat (Bastille-Rousseau et al. 2017).
 
 #### Temporal scale
 
-We altered the temporal scale of mutlilayer networks using a moving
-time-window approach to define seasons.
+We altered the temporal scale of multilayer networks using a moving
+time-window approach to define seasons and
 
 1.  time window length
 
@@ -305,7 +306,7 @@ layers for winter and summer are calculated for each window length.
     for “winter”. Same for summer, starting at 215. Network layers for
     each season are constructed.
 
-**Observational scale** <!--(temorary header)-->: Studies of social
+**Observational scale** <!--(temporary header)-->: Studies of social
 network analysis vary in the number and frequency of observations as
 well as the data collection technique used to generate networks (Davis
 et al. 2018; Webber and Vander Wal 2019).
@@ -332,33 +333,33 @@ stochasticity. Parallels with observation data.
   - Graph strength: weighted version of degree. High graph strength =
     highly connected. Not summed in this case across layers.
 
-  - Neighbors: number of unique individuals adjacent to each actor.
+  - Neighbours: number of unique individuals adjacent to each actor.
     Considered in a single layer, this is equal to the degree.
 
-  - Neighborhood: number of unique individuals across all layers. High
-    neighborhood = a high number of unique individuals connected to an
+  - Neighbourhood: number of unique individuals across all layers. High
+    neighbourhood = a high number of unique individuals connected to an
     actor.
 
   - Relevance: layer centric metric, corresponding to the number of
-    neighbors on a layer divided by the total neighborhood for each
+    neighbours on a layer divided by the total neighbourhood for each
     actor. High relevance means that the layer is highly relevant to the
     individuals connections. A low relevance means this layer does not
-    contribute many neighbors to an individuals overall neighborhood.
+    contribute many neighbours to an individuals overall neighbourhood.
 
-  - Connective redundancy: the total multilayer neighborhood divided by
+  - Connective redundancy: the total multilayer neighbourhood divided by
     the multidegree. High connective redundancy indicates a multilayer
     network that has many repeated edges across layers between an actor
     and its neighbours. Low connective redundancy indicates that each
     layer is important for preserving all social ties.
 
-  - Layer similarily: how similar each layer is (Brodka 2018). Pearson’s
+  - Layer similarity: how similar each layer is (Brodka 2018). Pearson’s
     correlation coefficient of degree vectors for each layer, comparing
     each landcover across seasons.
 
 ### Figure captions and brief interpretations
 
 (ref:lcres) varying scale in landcover resolution. For each landcover
-resolution (10m, 100m, 250m, 500m and 1000m), ultilayer networks were
+resolution (10m, 100m, 250m, 500m and 1000m), multilayer networks were
 constructed for each landcover class (open, forest and lichen) across
 two seasons (winter and summer) and four network metrics calculated. A)
 Similarity of landcover network layers between seasons (e.g.: open
@@ -409,7 +410,7 @@ remained consistently sparse.
   - increasing graph strength consistent with increasing strength in
     winter
 
-(ref:winlen) varying scale in time window length. For each time windown
+(ref:winlen) varying scale in time window length. For each time window
 length (of a sequence from 40 to 100 by 5), multilayer networks were
 constructed for each landcover class (open, forest and lichen) across
 two seasons (winter and summer) and four network metrics calculated. A)
@@ -439,19 +440,19 @@ through 500m while summer network layers remained consistently sparse.
 
 (ref:nobs) varying scale in number of observations. For each iteration,
 a number of observations (10-485 observations in steps of 25) were
-selected from the complete dataset to construct multilayer networks with
-layers defined by each landcover class (open, forest and lichen) across
-two seasons (winter and summer) and four network metrics calculated. A)
-Similarity of landcover network layers between seasons (e.g.: open
-summer compared to open winter) showed a stabilizing layer similarity at
-200 observations for forest and 300 observations for lichen and open. B)
-Mean connective redundancy across individuals increased with increasing
-number of observations, with a decreasing rate of increase around 100
-observations. C) Mean layer relevance across individuals increased for
-winter layers and slightly increased for summer layers. D) Mean graph
-strength across individuals varied for winter layers becoming relatively
-stable at 200 observations and remained sparse throughout for summer
-layers.
+selected from the complete data set to construct multilayer networks
+with layers defined by each landcover class (open, forest and lichen)
+across two seasons (winter and summer) and four network metrics
+calculated. A) Similarity of landcover network layers between seasons
+(e.g.: open summer compared to open winter) showed a stabilizing layer
+similarity at 200 observations for forest and 300 observations for
+lichen and open. B) Mean connective redundancy across individuals
+increased with increasing number of observations, with a decreasing rate
+of increase around 100 observations. C) Mean layer relevance across
+individuals increased for winter layers and slightly increased for
+summer layers. D) Mean graph strength across individuals varied for
+winter layers becoming relatively stable at 200 observations and
+remained sparse throughout for summer layers.
 
   - common, though at different points - more observations until
     stabilizing
@@ -463,16 +464,16 @@ layers.
 
 ![(ref:nobs)](../graphics/figure-nobs.png)
 
-(ref:winpos) varying scale in time window position. For each time
-windown position (of a sequence from 1 to 48), the time window used to
-define seasons was shifted and multilayer networks were constructed for
-each landcover class (open, forest and lichen) across two seasons
-(winter and summer) and four network metrics calculated. A) Similarity
-of landcover network layers between seasons (e.g.: open summer compared
-to open winter) showed increasing similarity consistent across landcover
-layers with increasing window length. B) Mean connective redundancy
-across individuals increased between window position 12 through 48 due
-to increased connectivity in the summer network layers. C) Mean layer
+(ref:winpos) varying scale in time window position. For each time window
+position (of a sequence from 1 to 48), the time window used to define
+seasons was shifted and multilayer networks were constructed for each
+landcover class (open, forest and lichen) across two seasons (winter and
+summer) and four network metrics calculated. A) Similarity of landcover
+network layers between seasons (e.g.: open summer compared to open
+winter) showed increasing similarity consistent across landcover layers
+with increasing window length. B) Mean connective redundancy across
+individuals increased between window position 12 through 48 due to
+increased connectivity in the summer network layers. C) Mean layer
 relevance decreased for winter layers and increased for summer layers,
 showing greater connectivity in summer layers at later window positions.
 D) Mean graph strength across individuals increased in summer network
