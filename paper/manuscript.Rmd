@@ -195,19 +195,19 @@ total of six layers. Layers were the social association network generated in
 each season and landcover combination. Proximity-based social network layers
 were generated using the R package `spatsoc` [@Robitaille_2019] in `r version$version.string` [@R_Core_Team_2019].
 
-Within each layer, we assumed individuals were
-associating if simultaneous GPS fixes (i.e., recorded within 5 minutes of each
-other) were within a given distance of one another. Typically for ungulates and
-other gregarious mammals, the ‘chain rule’ is applied for group assignment. For
-GPS data, the chain rule is applied if discrete spatiotemporal GPS fixes
-buffered by a given distance formed a contiguous buffer for two or more
-individuals, even if some individuals within the buffer were not within the
-given distance of one another [@Robitaille_2019]. Group assignment based
-on the chain rule has previously been applied to caribou at a distance of 50m
-[@Peignier_2019; @Lesmerises_2018]. In all networks, nodes
-represented individuals, intralayer edges represented associations between
-individuals in a given habitat type and season, and interlayer edges represented
-connections between the same individuals across contexts.
+Within each layer, we assumed individuals were associating if simultaneous GPS
+fixes (i.e., recorded within 5 minutes of each other) were within a given
+spatial distance of one another. Typically for ungulates and other gregarious
+mammals, the ‘chain rule’ is applied for group assignment. For GPS data, the
+chain rule is applied if discrete spatiotemporal GPS fixes buffered by a given
+distance formed a contiguous buffer for two or more individuals, even if some
+individuals within the buffer were not within the given distance of one another
+[@Robitaille_2019]. Group assignment based on the chain rule has previously been
+applied to caribou at a distance of 50m [@Peignier_2019; @Lesmerises_2018]. In
+all networks, nodes represented individuals, intralayer edges represented
+associations between individuals in a given habitat type and season, and
+interlayer edges represented connections between the same individuals across
+contexts.
 
 We weighted edges of social networks by the strength of association between
 caribou using the simple ratio index (SRI, Cairns and Schwager 1987): <!-- TODO-->
