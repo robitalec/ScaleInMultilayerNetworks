@@ -650,9 +650,3 @@ provided by a Vanier Canada Graduate Scholarship to QMRW and a NSERC Discovery
 Grant to EVW.
 
 ## References
-
-```{r, message=FALSE}
-write.bibtex(file = "../references/knitcite.bib")
-```
-
-
