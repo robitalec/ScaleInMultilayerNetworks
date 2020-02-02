@@ -40,7 +40,9 @@ citep('10.2980/16-2-3238')
 
 
 
-
+### R, R Packages
+# R
+citep(citation())
 
 ### Write out bib ----
 write.bibtex(file = "references/knitcite.bib")
