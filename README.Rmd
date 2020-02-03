@@ -23,6 +23,7 @@ Alec Robitaille, Quinn M.R. Webber, Julie Turner and Eric Vander Wal
 ```{bash}
 grep -rni 'R/' -e 'TODO' || true;
 grep -rni 'scripts/' -e 'TODO' || true;
+grep -rni 'paper/manuscript.Rmd' -e 'TODO' || true;
 ```
 
 
