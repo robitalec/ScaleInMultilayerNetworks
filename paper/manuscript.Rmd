@@ -292,22 +292,25 @@ In general, individuals in multilayer networks became more connected as a functi
 
 
 ## Each metric's interpretation
+**[JWT: Do we need to define degree first since degree is mentioned in so many of our definitions?]**
+* Degree: the number of direct connections an individual has to other individuals in the network. High degree = connected to many indviduals in a single layer. Low degree = not connected to many individuals in a single layer.
+
 * Multidegree: sum of degree across layers. High multidegree = connected to many
 individuals across layers. Low multidegree = not connected to many individuals
 across layers.
 
-* Degree deviation: deviation of degree across layers. High degree deviation =
+* Degree deviation: standard **[??]** deviation of degree across layers. High degree deviation =
 large difference between degree for an individual across layers. Low degree
 deviation = individuals are similarly connected across layers.
 
-* Graph strength: weighted version of degree. High graph strength = highly
-connected. Not summed in this case across layers.
+* Graph strength: the sum of all the edge weights directly connected to an actor, sometimes called weigthed degree. High graph strength = highly social, connected to many individuals and/or having stronger, high-valued connections between individuals. Low graph strength = not very social, connected to few individuals and/or having weak, low-valued connections between individuals. Not summed in this case across layers.
 
 * Neighbours: number of unique individuals adjacent to each actor. Considered in
 a single layer, this is equal to the degree.
 
 * Neighbourhood: number of unique individuals across all layers. High
-neighbourhood = a high number of unique individuals connected to an actor. 
+neighbourhood = a high number of unique individuals connected to an actor. Low
+neighbourhood = a low number of unique individuals connected to an actor. 
 
 * Relevance: layer centric metric, corresponding to the number of neighbours on a
 layer divided by the total neighbourhood for each actor. High relevance means
