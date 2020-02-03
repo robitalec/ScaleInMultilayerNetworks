@@ -196,9 +196,11 @@ Individuals were subset to ensure they had data collected in both seasons
 We generated a multilayer social network consisting 16 individual nodes and two
 aspects (season and landcover). Two season elementary-layers (winter and summer)
 and three landcover elementary-layers (open, forest and lichen) combined for a
-total of six layers. Layers were the social association network generated in
-each season and landcover combination. Proximity-based social network layers
-were generated using the R package `spatsoc` [@Robitaille_2019] in `r version$version.string` [@R_Core_Team_2019].
+total of six layers. Layers were composed of individuals represented as nodes
+and social associations represented as edges, for each season and landcover
+combination. Proximity-based social network layers were generated using the R
+package `spatsoc` [@Robitaille_2019] in `r version$version.string`
+[@R_Core_Team_2019].
 
 Within each layer, we assumed individuals were associating if simultaneous GPS
 fixes (i.e., recorded within 5 minutes of each other) were within a given
