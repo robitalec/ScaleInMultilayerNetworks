@@ -71,7 +71,7 @@ defined and measured (Farine et al. 2015).
 
 Animal social network analysis is a well-developed tool used to measure
 the relationships of individuals and organization of social systems
-(Krause et al. 2009; Wey et al. 2008; Croft et al. 2008). Social network
+(Krause et al. 2009; Wey et al. 2008; Croft et al. 2008). Social network
 analysis provides insight into the structure of social communities and
 social network properties, which can influence population dynamics and
 evolutionary processes (Pinter-Wollman et al. 2014; Kurvers et
@@ -116,7 +116,8 @@ et al. 2019).
 
 (ref:spacetime) Space-time diagram displaying variation the spatial and
 temporal extent required for different social processes across a range
-of taxa.
+of
+taxa.
 
 <img src="../graphics/figure1.png" title="(ref:spacetime)" alt="(ref:spacetime)" width="\linewidth" />
 
@@ -154,10 +155,9 @@ positioning system (GPS) collars (Lotek Wireless Inc., Newmarket, ON,
 Canada, GPS4400M collars, 1,250 g) as described by Schaefer and Mahoney
 (2013). Collars were programmed to collect location fixes every 2 hours.
 Prior to analyses, we subset GPS fixes into a discrete removed all
-erroneous and outlier GPS fixes following Bjørneraas et
-al. (2010)<!-- TODO-->. We did not collar all female caribou in the
-herd; however, we assumed that our sample of collared animals was
-random.
+erroneous and outlier GPS fixes following Bjørneraas et al.
+(2010)<!-- TODO-->. We did not collar all female caribou in the herd;
+however, we assumed that our sample of collared animals was random.
 
 ### Landscape data and habitat classification
 
@@ -171,7 +171,8 @@ lichen habitat, open habitat consisted of wetland, rocky barrens, and
 anthropogenic habitat types, while forest habitat consisted of
 coniferous forest, conifer scrub, broadleaf forest, and mixed-wood
 forest habitat types. Water habitat was excluded from all subsequent
-analyses. <!-- using the raster package for R? -->
+analyses.
+<!-- using the raster package for R? -->
 
 ### Caribou multilayer social networks
 
@@ -357,7 +358,8 @@ during the summer compared to the winter months.
     lichen decreased in connectivity and landcovers became more
     homogeneous (?)
   - decreasing winter lichen relevance because the degree + number of
-    edges decreased
+    edges
+decreased
 
 <img src="../graphics/figure-lcres.png" title="(ref:lcres)" alt="(ref:lcres)" width="\linewidth" />
 
@@ -403,7 +405,7 @@ seasons (e.g.: open summer compared to open winter) showed increasing
 similarity consistent across landcover layers with increasing window
 length. B) Mean connective redundancy across individuals varied
 dramatically depending on the lenght of the time window **\[JWT:
-previously this was describing fig. 3. I don’t know if what I wrote best
+previously this was describing fig. 3. I don’t know if what I wrote best
 encapsulates what connnective redundancy does here. Length of time
 window seems to make connective redundancy highly variable as it
 changes.\]**. C) Mean layer relevance benerally increased during the
@@ -411,8 +413,8 @@ summer months but was relatively stable across time window lengths for
 each landcover layer. D) Mean graph strength across individuals was
 relatively stable over increasing time window lengths, though there was
 more variation in strength between landcover types as window length
-increased. **\[see if you agree with my changes. B-D were based off
-fig. 3 and not relevant to this figure\]**
+increased. **\[see if you agree with my changes. B-D were based off fig.
+3 and not relevant to this figure\]**
 
   - increasing window length = increasingly similar layers and
     increasingly redundant edges. more individuals have the opportunity
@@ -422,7 +424,8 @@ fig. 3 and not relevant to this figure\]**
     seasons
   - decreasing graph strength at the upper end of window length in
     winter showing again inclusion of more shoulder season
-  - layers are more similarly relevant at high window length
+  - layers are more similarly relevant at high window
+length
 
 <img src="../graphics/figure-winlength.png" title="(ref:winlen)" alt="(ref:winlen)" width="\linewidth" />
 
@@ -453,7 +456,8 @@ observations and remained weak throughout for summer layers.
     but appears to be coming..
   - still some variability, especially for graph strength because
     individuals are differently connected but broad strokes - they
-    stabilize with more observations
+    stabilize with more
+observations
 
 <img src="../graphics/figure-nobs.png" title="(ref:nobs)" alt="(ref:nobs)" width="\linewidth" />
 
@@ -483,7 +487,8 @@ increased between window position 20 and 40 for winter network layers.
     one
   - increased graph strength for winter down the middle, with generally
     increasing summer layers - again where the season is including more
-    shoulder season potentially
+    shoulder season
+potentially
 
 <img src="../graphics/figure-winpos.png" title="(ref:winpos)" alt="(ref:winpos)" width="\linewidth" />
 
@@ -614,7 +619,7 @@ linked and multilayer networks represent a potential analytical
 framework for linking these processes (e.g. Mourier et al. 2019).
 
 Although multilayer animal social networks are relatively novel (Silk et
-al. 2018), movement behaviour within multilayer networks has already
+al. 2018), movement behaviour within multilayer networks has already
 been considered in a couple studies. In vulturine gunieafowl (*Acryllium
 vulturinum*), GPS movement data were used to generate *monolayer*
 association networks within a multilayer network (Papageorgiou et
@@ -643,7 +648,7 @@ al. 2011). This movement layer could be made at a fine
 migration: Flack et al. 2018). Another potential application would be to
 generate social networks during times when animals are engaged in
 different behaviours, including traveling, interacting, or foraging
-(e.g. Muller et al. 2018; Finn et al. 2019) and construct a multilayer
+(e.g. Muller et al. 2018; Finn et al. 2019) and construct a multilayer
 network based on behaviour-specific monolayer networks
 (e.g. Smith-Aguilar et al. 2019). Importantly, the key to incorporating
 movement in multilayer networks across scales is the technological
@@ -678,7 +683,7 @@ environment (He et al. 2019).
 
 something something blah blah.
 
-Silk et al. (2018) presented some key multilayer questions in animal
+Silk et al. (2018) presented some key multilayer questions in animal
 behaviour research. While these questions represent an important
 starting point for multilayer networks, we present an additional set of
 questions relevant to the promise and problem of scale in mutlilayer
@@ -743,7 +748,7 @@ Study.” *Royal Society Open Science* 5 (8): 171747.
 
 Chave, J’erôme. 2013. “The Problem of Pattern and Scale in Ecology: What
 Have We Learned in 20 Years?” Edited by Jordi Bascompte. *Ecology
-Letters* 16 (January): 4–16. <https://doi.org/10.1111/ele.12048>.
+Letters* 16 (January). Wiley: 4–16. <https://doi.org/10.1111/ele.12048>.
 
 </div>
 
@@ -751,8 +756,8 @@ Letters* 16 (January): 4–16. <https://doi.org/10.1111/ele.12048>.
 
 Elith, Jane, and John R. Leathwick. 2009. “Species Distribution Models:
 Ecological Explanation and Prediction Across Space and Time.” *Annual
-Review of Ecology, Evolution, and Systematics* 40 (1): 677–97.
-<https://doi.org/10.1146/annurev.ecolsys.110308.120159>.
+Review of Ecology, Evolution, and Systematics* 40 (1). Annual Reviews:
+677–97. <https://doi.org/10.1146/annurev.ecolsys.110308.120159>.
 
 </div>
 
@@ -760,7 +765,7 @@ Review of Ecology, Evolution, and Systematics* 40 (1): 677–97.
 
 Farine, Damien R., and Hal Whitehead. 2015. “Constructing, Conducting
 and Interpreting Animal Social Network Analysis.” Edited by Sonia
-Altizer. *Journal of Animal Ecology* 84 (5): 1144–63.
+Altizer. *Journal of Animal Ecology* 84 (5). Wiley: 1144–63.
 <https://doi.org/10.1111/1365-2656.12418>.
 
 </div>
@@ -770,7 +775,7 @@ Altizer. *Journal of Animal Ecology* 84 (5): 1144–63.
 Field, Richard, Bradford A. Hawkins, Howard V. Cornell, David J. Currie,
 J. Alexandre F. Diniz-Filho, Jean-François Gu’egan, Dawn M. Kaufman, et
 al. 2009. “Spatial Species-Richness Gradients Across Scales: A
-Meta-Analysis.” *Journal of Biogeography* 36 (1): 132–47.
+Meta-Analysis.” *Journal of Biogeography* 36 (1). Wiley: 132–47.
 <https://doi.org/10.1111/j.1365-2699.2008.01963.x>.
 
 </div>
@@ -787,7 +792,8 @@ Aggregation*. <https://github.com/ropensci/grainchanger>.
 Graham, Laura J., Rebecca Spake, Simon Gillings, Kevin Watts, and Felix
 Eigenbrod. 2019. “Incorporating Fine-Scale Environmental Heterogeneity
 into Broad-Extent Models.” Edited by Nick Isaac. *Methods in Ecology and
-Evolution* 10 (6): 767–78. <https://doi.org/10.1111/2041-210x.13177>.
+Evolution* 10 (6). Wiley: 767–78.
+<https://doi.org/10.1111/2041-210x.13177>.
 
 </div>
 
@@ -795,14 +801,16 @@ Evolution* 10 (6): 767–78. <https://doi.org/10.1111/2041-210x.13177>.
 
 Kivela, M., A. Arenas, M. Barthelemy, J. P. Gleeson, Y. Moreno, and M.
 A. Porter. 2014. “Multilayer Networks.” *Journal of Complex Networks* 2
-(3): 203–71. <https://doi.org/10.1093/comnet/cnu016>.
+(3). Oxford University Press (OUP): 203–71.
+<https://doi.org/10.1093/comnet/cnu016>.
 
 </div>
 
 <div id="ref-Legendre_1993">
 
 Legendre, Pierre. 1993. “Spatial Autocorrelation: Trouble or New
-Paradigm?” *Ecology* 74 (6): 1659–73. <https://doi.org/10.2307/1939924>.
+Paradigm?” *Ecology* 74 (6). Wiley: 1659–73.
+<https://doi.org/10.2307/1939924>.
 
 </div>
 
@@ -810,15 +818,15 @@ Paradigm?” *Ecology* 74 (6): 1659–73. <https://doi.org/10.2307/1939924>.
 
 Lesmerises, Fr’ed’eric, Chris J. Johnson, and Martin-Hugues St-Laurent.
 2018. “Landscape Knowledge Is an Important Driver of the Fission
-Dynamics of an Alpine Ungulate.” *Animal Behaviour* 140 (June): 39–47.
-<https://doi.org/10.1016/j.anbehav.2018.03.014>.
+Dynamics of an Alpine Ungulate.” *Animal Behaviour* 140 (June). Elsevier
+BV: 39–47. <https://doi.org/10.1016/j.anbehav.2018.03.014>.
 
 </div>
 
 <div id="ref-Levin_1992">
 
 Levin, Simon A. 1992. “The Problem of Pattern and Scale in Ecology: The
-Robert H. MacArthur Award Lecture.” *Ecology* 73 (6): 1943–67.
+Robert H. MacArthur Award Lecture.” *Ecology* 73 (6). Wiley: 1943–67.
 <https://doi.org/10.2307/1941447>.
 
 </div>
@@ -826,8 +834,9 @@ Robert H. MacArthur Award Lecture.” *Ecology* 73 (6): 1943–67.
 <div id="ref-Luther_2009">
 
 Luther, David. 2009. “The Influence of the Acoustic Community on Songs
-of Birds in a Neotropical Rain Forest.” *Behavioral Ecology* 20 (4):
-864–71. <https://doi.org/10.1093/beheco/arp074>.
+of Birds in a Neotropical Rain Forest.” *Behavioral Ecology* 20 (4).
+Oxford University Press (OUP): 864–71.
+<https://doi.org/10.1093/beheco/arp074>.
 
 </div>
 
@@ -835,7 +844,7 @@ of Birds in a Neotropical Rain Forest.” *Behavioral Ecology* 20 (4):
 
 Mayor, S. J., J. A. Schaefer, D. C. Schneider, and S. P. Mahoney. 2007.
 “SPECTRUM OF SELECTION: NEW APPROACHES TO DETECTING THE
-SCALE-DEPENDENT RESPONSE TO HABITAT.” *Ecology* 88 (7): 1634–40.
+SCALE-DEPENDENT RESPONSE TO HABITAT.” *Ecology* 88 (7). Wiley: 1634–40.
 <https://doi.org/10.1890/06-1672.1>.
 
 </div>
@@ -844,7 +853,7 @@ SCALE-DEPENDENT RESPONSE TO HABITAT.” *Ecology* 88 (7): 1634–40.
 
 Mayor, Stephen J., David C. Schneider, James A. Schaefer, and Shane P.
 Mahoney. 2009. “Habitat Selection at Multiple Scales.” *Écoscience* 16
-(2): 238–47. <https://doi.org/10.2980/16-2-3238>.
+(2). Informa UK Limited: 238–47. <https://doi.org/10.2980/16-2-3238>.
 
 </div>
 
@@ -853,8 +862,8 @@ Mahoney. 2009. “Habitat Selection at Multiple Scales.” *Écoscience* 16
 Peignier, M’elissa, Quinn M. R. Webber, Erin L. Koen, Michel P. Laforge,
 Alec L. Robitaille, and Eric Vander Wal. 2019. “Space Use and Social
 Association in a Gregarious Ungulate: Testing the Conspecific Attraction
-and Resource Dispersion Hypotheses.” *Ecology and Evolution* 9 (9):
-5133–45. <https://doi.org/10.1002/ece3.5071>.
+and Resource Dispersion Hypotheses.” *Ecology and Evolution* 9 (9).
+Wiley: 5133–45. <https://doi.org/10.1002/ece3.5071>.
 
 </div>
 
@@ -871,7 +880,7 @@ Computing*. Vienna, Austria: R Foundation for Statistical Computing.
 Robitaille, Alec L., Quinn M. R. Webber, and Eric Vander Wal. 2019.
 “Conducting Social Network Analysis with Animal Telemetry Data:
 Applications and Methods Using Spatsoc.” Edited by Nick Golding.
-*Methods in Ecology and Evolution* 10 (8): 1203–11.
+*Methods in Ecology and Evolution* 10 (8). Wiley: 1203–11.
 <https://doi.org/10.1111/2041-210x.13215>.
 
 </div>
@@ -879,7 +888,8 @@ Applications and Methods Using Spatsoc.” Edited by Nick Golding.
 <div id="ref-Sugihara_1989">
 
 Sugihara, G, K Schoenly, and A Trombla. 1989. “Scale Invariance in Food
-Web Properties.” *Science* 245 (4913): 48–52.
+Web Properties.” *Science* 245 (4913). American Association for the
+Advancement of Science (AAAS): 48–52.
 <https://doi.org/10.1126/science.2740915>.
 
 </div>
