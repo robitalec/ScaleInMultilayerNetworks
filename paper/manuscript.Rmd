@@ -252,10 +252,10 @@ using the Pearson correlation coefficient [@Br_dka_2018].
 ## Varying scale in multilayer networks
 ### Social scale
 
-We altered social scale based on visual (short distance) and auditory (long
-distance) sensory modalities of caribou <!--(REF?)-->. Specifically, we modified
-the spatial distance threshold required for group assignment (see above) and
-re-assigned groups at incremental distance between 5-500m. For example, at the
+We altered the social scale based on visual (short distance) and auditory (long
+distance) sensory modalities of caribou<!-- TODO: REF?-->. Specifically, we modified
+the spatial distance threshold required for group assignment using `spatsoc` [@Robitaille_2019] (see above) and
+re-assigned groups at incremental distances between 5-500m. For example, at the
 finest social scale, only individuals within 5m of one another were considered
 in the same group, whereas at the coarsest social scale, individuals within 500m
 of one another were considered in the same group.
@@ -263,18 +263,18 @@ of one another were considered in the same group.
 ### Spatial scale
 
 To assess the influence of spatial scale on multilayer networks, we aggregated
-our landcover classification map at varying scales relevant to caribou ecology.
+our landcover raster at varying scales relevant to caribou ecology.
 We aggregated the 10m landcover raster using the R package `grainchanger`
 [@Graham_2019] at five scales: 100m, 250m, 500m, and 1000m. Aggregation occurred
 using a modal moving window method using a circular window corresponding to the
 above scales [@Graham_2019a]. 10m and 100m represents fine-scale decision making
-for caribou during foraging <!--(REF)-->, while re-sampling at 500m and 1000m
+for caribou during foraging <!--TODO: REF-->, while re-sampling at 500m and 1000m
 represents the scale at which caribou tend to select and avoid habitat
 (Bastille-Rousseau et al. 2017).
 
 
 ### Temporal scale
-
+<!--TODO: are we missing some mention of 2017 summer and 2018 winter somewhere?-->
 We altered the temporal scale of multilayer networks by varying the length and
 position of the time window used to define seasons. The length of the time
 window varied from 40-100 days using a fixed start day for winter (1 January)
@@ -291,7 +291,7 @@ the number of observations on resulting multilayer networks. We randomly
 selected 500 timesteps and iteratively included 25 additional observations,
 regenerating the multilayer network and calculating associations of individuals.
 Subsequent iterations included the previous set of observations to mimic
-observational data.
+observational data. <!-- TODO: bah conclude / this sentence falls off a cliff -->
 
 # Scale in multilayer networks in practice: case study results and discussion
 
