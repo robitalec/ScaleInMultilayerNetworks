@@ -402,16 +402,6 @@ knitr::include_graphics('../graphics/figure-winpos.png')
 ```
 
 
-##
-Results and interpretation of temporal scale
-
-Results and interpretation of spatial scale
-
-Results and interpretation of social scale
-
-
-
-
 # Perspectives  to advance multilayer networks 
 ## Habitat selection and space use 
 
