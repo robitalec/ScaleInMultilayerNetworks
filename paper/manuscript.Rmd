@@ -224,8 +224,32 @@ designated if two or more individuals occurred within a given distance of one
 another at any given time point.
 
 #### Network metrics
+We used a series of metrics to characterize the multilayer networks focusing on the relevance of individual layers, 
+similarity of layers and the role of individuals. We calculated multidegree, the sum of degree centrality across layers, and neighbourhood, the sum of unique neighbours to each individual [@Berlingerio_2012; @Kivela_2014]. Comparing the multidegree and number of unique neighbours, we measured the connective redundancy, the proportion of neighbours repeated in multiple layers, and the layer relevance, the proportion of neighbours present compared to the neighbourhood for each individual. To measure the role of individuals, we calculated the graph strength for each individual for each layer specific season and landcover context. 
 
-For each multilayer network, we calculated four metrics. These included:
+
+
+
+e focused on four aspects
+of the network: “interlayer correlation and reducibility”
+(i.e., correlation between layers and similarities regarding
+the information contained in each one; “node versatility”
+(i.e., role of each node in the connectedness and information
+flow of the network); “community structure” (i.e., whether
+there are subsets of nodes more tightly connected among
+each other than with the rest); and “motif analysis” (i.e.,
+non-random patterns of interconnection between triads).
+
+
+Node based
+
+
+Calculated for each layer 
+and for multilayer total
+
+
+
+For each multilayer network, we calculated a series of metrics on individual layers and  four metrics. These included:
 multidegree, graph strength, redundancy/relevance, and  layer similarity. 
 
 <!-- GOING
@@ -249,6 +273,38 @@ multidimensional..."
 * Relevance: neighborhood of specific layer  / neighbourhood of full ml net. This is the proportion of neighbors present on the layer of focus. Comparing across, it tells you which layers are most important for each individual. 
 * layer similarity
 
+* Multidegree: sum of degree across layers. High multidegree = connected to many
+individuals across layers. Low multidegree = not connected to many individuals
+across layers.
+
+* Degree deviation: deviation of degree across layers. High degree deviation =
+large difference between degree for an individual across layers. Low degree
+deviation = individuals are similarly connected across layers.
+
+* Graph strength: weighted version of degree. High graph strength = highly
+connected. Not summed in this case across layers.
+
+* Neighbours: number of unique individuals adjacent to each actor. Considered in
+a single layer, this is equal to the degree.
+
+* Neighbourhood: number of unique individuals across all layers. High
+neighbourhood = a high number of unique individuals connected to an actor. 
+
+* Relevance: layer centric metric, corresponding to the number of neighbours on a
+layer divided by the total neighbourhood for each actor. High relevance means
+that the layer is highly relevant to the individuals connections. A low
+relevance means this layer does not contribute many neighbours to an individuals
+overall neighbourhood.
+
+* Connective redundancy: the total multilayer neighbourhood divided by the
+multidegree. High connective redundancy indicates a multilayer network that has
+many repeated edges across layers between an actor and its neighbours. Low
+connective redundancy indicates that each layer is important for preserving all
+social ties.
+
+* Layer similarity: how similar each layer is (Brodka 2018). Pearson's
+correlation coefficient of degree vectors for each layer, comparing each
+landcover across seasons.
 
 
 ### Varying scale in multilayer networks
