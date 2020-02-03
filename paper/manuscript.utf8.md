@@ -12,17 +12,7 @@ bibliography: ../references/knitcite.bib
 ---
 
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(
-    echo = FALSE,
-    # warning = FALSE,
-    # message = FALSE,
-    eval = TRUE,
-    out.width = '\\linewidth'
-)
 
-source('../scripts/0-variables.R')
-```
 
 # Abstract
 Scale remains a seminal concept in ecology. Spatial scale, for instance, has
@@ -126,9 +116,9 @@ movement (Jolles et al. 2019).
 
 (ref:spacetime) Space-time diagram displaying variation the spatial and temporal extent required for different social processes across a range of taxa.
 
-```{r, fig.cap='(ref:spacetime)'}
-knitr::include_graphics('../graphics/figure1.png')
-```
+\begin{figure}
+\includegraphics[width=\linewidth]{../graphics/figure1} \caption{(ref:spacetime)}(\#fig:unnamed-chunk-1)
+\end{figure}
 
 
 
@@ -194,7 +184,7 @@ aspects (season and landcover). Two season elementary-layers (winter and summer)
 and three landcover elementary-layers (open, forest and lichen) combined for a
 total of six layers. Layers were the social association network generated in
 each season and landcover combination. Proximity-based social network layers
-were generated using the R package `spatsoc` [@Robitaille_2019] in `r version$version.string` [@R_Core_Team_2019].
+were generated using the R package `spatsoc` [@Robitaille_2019] in R version 3.6.1 (2019-07-05) [@R_Core_Team_2019].
 
 Within each layer, we assumed individuals were associating if simultaneous GPS
 fixes (i.e., recorded within 5 minutes of each other) were within a given
@@ -334,9 +324,9 @@ landcover across seasons.
 
 
 
-```{r, fig.cap='(ref:socres)'}
-knitr::include_graphics('../graphics/figure-spatialthreshold.png')
-```
+\begin{figure}
+\includegraphics[width=\linewidth]{../graphics/figure-spatialthreshold} \caption{(ref:socres)}(\#fig:unnamed-chunk-2)
+\end{figure}
 
 
 
@@ -348,9 +338,9 @@ knitr::include_graphics('../graphics/figure-spatialthreshold.png')
 * decreasing winter lichen relevance because the degree + number of edges decreased
 
 
-```{r, fig.cap='(ref:lcres)'}
-knitr::include_graphics('../graphics/figure-lcres.png')
-```
+\begin{figure}
+\includegraphics[width=\linewidth]{../graphics/figure-lcres} \caption{(ref:lcres)}(\#fig:unnamed-chunk-3)
+\end{figure}
 
 
 
@@ -366,9 +356,9 @@ knitr::include_graphics('../graphics/figure-lcres.png')
 
 
 
-```{r, fig.cap='(ref:nobs)'}
-knitr::include_graphics('../graphics/figure-nobs.png')
-```
+\begin{figure}
+\includegraphics[width=\linewidth]{../graphics/figure-nobs} \caption{(ref:nobs)}(\#fig:unnamed-chunk-4)
+\end{figure}
 
 
 
@@ -383,9 +373,9 @@ knitr::include_graphics('../graphics/figure-nobs.png')
 * layers are more similarly relevant at high window length
 
 
-```{r, fig.cap='(ref:winlen)'}
-knitr::include_graphics('../graphics/figure-winlength.png')
-```
+\begin{figure}
+\includegraphics[width=\linewidth]{../graphics/figure-winlength} \caption{(ref:winlen)}(\#fig:unnamed-chunk-5)
+\end{figure}
 
 
 
@@ -399,9 +389,9 @@ knitr::include_graphics('../graphics/figure-winlength.png')
 * quite variable layer similarity, not sure what to pull out of that one
 * increased graph strength for winter down the middle, with generally increasing summer layers - again where the season is including more shoulder season potentially
 
-```{r, fig.cap='(ref:winpos)'}
-knitr::include_graphics('../graphics/figure-winpos.png')
-```
+\begin{figure}
+\includegraphics[width=\linewidth]{../graphics/figure-winpos} \caption{(ref:winpos)}(\#fig:unnamed-chunk-6)
+\end{figure}
 
 
 # Perspectives  to advance multilayer networks 
