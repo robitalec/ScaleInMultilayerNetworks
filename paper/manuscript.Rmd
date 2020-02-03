@@ -345,7 +345,7 @@ and generate multilayer networks.
 Studies of social network analysis vary in the number and frequency of
 observations as well as the data collection technique used to generate networks
 (Davis et al. 2018; Webber and Vander Wal 2019). In addition to altering the
-temporal scale, we investigated the influence of the number of observations on
+temporal scale by adjusting the time window, we investigated the influence of the number of observations on
 resulting multilayer networks. We randomly selected 500 timesteps and
 iteratively included 25 additional observations, regenerating the multilayer
 network and calculating associations of individuals. Subsequent iterations
