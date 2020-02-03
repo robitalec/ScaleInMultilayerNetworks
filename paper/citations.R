@@ -82,6 +82,16 @@ citep('10.1098/rspb.2017.0515')
 #thompson 2019
 citep('10.1163/1568539X-00003552')
 
+#stanton 2011
+citep('10.1016/j.anbehav.2011.05.026')
+# stanton 2012
+citep('10.1371/journal.pone.0047508')
+
+# mcdonald 2007
+citep('10.1073/pnas.0701159104')
+# royle 2012
+citep('10.1098/rspb.2012.1701')
+
 
 ### R, R Packages
 # R
