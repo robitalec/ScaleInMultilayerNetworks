@@ -233,104 +233,17 @@ We used a series of metrics to characterize the multilayer networks
 focusing on the relevance of individual layers, similarity of layers and
 the role of individuals. We calculated multidegree, the sum of degree
 centrality across layers, and neighbourhood, the sum of unique
-neighbours to each individual
-(<span class="citeproc-not-found" data-reference-id="Berlingerio_2012">**???**</span>;
-Kivela et al. 2014). Comparing the multidegree and number of unique
-neighbours, we measured the connective redundancy, the proportion of
-neighbours repeated in multiple layers, and the layer relevance, the
-proportion of neighbours present compared to the neighbourhood for each
-individual. To measure the role of individuals, we calculated the graph
-strength for each individual for each layer specific season and
-landcover context.
-
-e focused on four aspects of the network: “interlayer correlation and
-reducibility” (i.e., correlation between layers and similarities
-regarding the information contained in each one; “node versatility”
-(i.e., role of each node in the connectedness and information flow of
-the network); “community structure” (i.e., whether there are subsets of
-nodes more tightly connected among each other than with the rest); and
-“motif analysis” (i.e., non-random patterns of interconnection between
-triads).
-
-Node based
-
-Calculated for each layer and for multilayer total
-
-For each multilayer network, we calculated a series of metrics on
-individual layers and four metrics. These included: multidegree, graph
-strength, redundancy/relevance, and layer similarity.
-
-<!-- GOING
-TO NEED MORE HERE (SEE SMITH-AGUILAR ET AL 2019 PAPER FOR REFERENCE ON
-EXPLAINING THESE).
--->
-
-<!-- 
-ALR: Reference for extending degree centrality to multilayer, neighbors,
-connective redundancy and relevance: Berlingerio 2011 "Foundations of
-multidimensional..."
--->
-
-  - Multidegree
-
-  - Degree centrality
-
-  - Multidegree
-
-  - Degree deviation: standard deviation of degree across layers
-
-  - Neighbors/neighborhood (number of unique actors directly connected
-    to each focal): Neighbors = degree within a network layer. But
-    across a multilayer network with multiple layers, some neighbors are
-    repeated.
-
-  - Graph strength
-
-  - Connective redundancy: 1 - (neighborhood / degree) When connective
-    redundancy is 0, all edges on all layers are necessary to preserve
-    the social ties
-
-  - Relevance: neighborhood of specific layer / neighbourhood of full ml
-    net. This is the proportion of neighbors present on the layer of
-    focus. Comparing across, it tells you which layers are most
-    important for each individual.
-
-  - layer similarity
-
-  - Multidegree: sum of degree across layers. High multidegree =
-    connected to many individuals across layers. Low multidegree = not
-    connected to many individuals across layers.
-
-  - Degree deviation: deviation of degree across layers. High degree
-    deviation = large difference between degree for an individual across
-    layers. Low degree deviation = individuals are similarly connected
-    across layers.
-
-  - Graph strength: weighted version of degree. High graph strength =
-    highly connected. Not summed in this case across layers.
-
-  - Neighbours: number of unique individuals adjacent to each actor.
-    Considered in a single layer, this is equal to the degree.
-
-  - Neighbourhood: number of unique individuals across all layers. High
-    neighbourhood = a high number of unique individuals connected to an
-    actor.
-
-  - Relevance: layer centric metric, corresponding to the number of
-    neighbours on a layer divided by the total neighbourhood for each
-    actor. High relevance means that the layer is highly relevant to the
-    individuals connections. A low relevance means this layer does not
-    contribute many neighbours to an individuals overall neighbourhood.
-
-  - Connective redundancy: the total multilayer neighbourhood divided by
-    the multidegree. High connective redundancy indicates a multilayer
-    network that has many repeated edges across layers between an actor
-    and its neighbours. Low connective redundancy indicates that each
-    layer is important for preserving all social ties.
-
-  - Layer similarity: how similar each layer is (Brodka 2018). Pearson’s
-    correlation coefficient of degree vectors for each layer, comparing
-    each landcover across seasons.
+neighbours to each individual (Berlingerio et al. 2012; Kivela et al.
+2014). Comparing the multidegree and number of unique neighbours, we
+measured the connective redundancy, the proportion of neighbours
+repeated in multiple layers, and the layer relevance, the proportion of
+neighbours present compared to the neighbourhood for each individual
+(Berlingerio et al. 2012). To measure the role of individuals, we
+calculated the graph strength for each individual for each layer
+specific season and landcover context <!-- citation?-->. Finally, we
+calculated the similarity of layers between seasons, across landcover
+classes (e.g.: winter open compared to summer open) using the Pearson
+correlation coefficient (Br’odka et al. 2018).
 
 ### Varying scale in multilayer networks
 
@@ -372,12 +285,12 @@ networks.
 Studies of social network analysis vary in the number and frequency of
 observations as well as the data collection technique used to generate
 networks (Davis et al. 2018; Webber and Vander Wal 2019). In addition to
-altering the temporal scale, we investigated the influence of the number
-of observations on resulting multilayer networks. We randomly selected
-500 timesteps and iteratively included 25 additional observations,
-regenerating the multilayer network and calculating associations of
-individuals. Subsequent iterations included the previous set of
-observations to mimic observational data.
+altering the temporal scale by adjusting the time window, we
+investigated the influence of the number of observations on resulting
+multilayer networks. We randomly selected 500 timesteps and iteratively
+included 25 additional observations, regenerating the multilayer network
+and calculating associations of individuals. Subsequent iterations
+included the previous set of observations to mimic observational data.
 
 ## Scale in multilayer networks in practice: case study results and discussion
 
@@ -435,9 +348,7 @@ decreasing trend with increasing landcover resolution. C) Mean layer
 relevance showed sparse connectivity in summer compared to winter
 networks and a decrease in winter lichen layer relevance at higher
 landcover resolutions. D) Mean graph strength of individuals was weaker
-during the summer compared to the winter months. **\[JWT: we need the
-orders to be the same in legend/discussion as the figure legends; I’m
-trying to catch it, but it may show up other places\]**
+during the summer compared to the winter months.
 
   - decreasing availability of patchy lichen = no edges in these layers,
     though some small proportion of relocations still exist in those
@@ -807,6 +718,24 @@ Scholarship to QMRW and a NSERC Discovery Grant to EVW.
 Allen, Timothy F. H., and Thomas W. Hoekstra. 2015. *Toward a Unified
 Ecology*. Columbia University Press.
 <https://doi.org/10.7312/alle06918>.
+
+</div>
+
+<div id="ref-Berlingerio_2012">
+
+Berlingerio, Michele, Michele Coscia, Fosca Giannotti, Anna Monreale,
+and Dino Pedreschi. 2012. “Multidimensional Networks: Foundations of
+Structural Analysis.” *World Wide Web* 16 (5-6): 567–93.
+<https://doi.org/10.1007/s11280-012-0190-4>.
+
+</div>
+
+<div id="ref-Br_dka_2018">
+
+Br’odka, Piotr, Anna Chmiel, Matteo Magnani, and Giancarlo Ragozini.
+2018. “Quantifying Layer Similarity in Multiplex Networks: A Systematic
+Study.” *Royal Society Open Science* 5 (8): 171747.
+<https://doi.org/10.1098/rsos.171747>.
 
 </div>
 
