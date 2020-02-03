@@ -145,19 +145,19 @@ type), and temporal (seasonal). Caribou are gregarious ungulates with
 fission-fusion dynamics [@Lesmerises_2018] that display temporal
 [@Peignier_2019] and spatial (Webber et al. unpublished data) variation in
 social networks. In winter, caribou dig holes in the snow, termed craters, to
-access forage (Bergerud 1974)<!-- TODO: get Bergerud ref-->. As a result, caribou tend to occupy
-and re-use craters once they are established and there is considerably less
-access to forage than when the landscape is snow-free. Importantly, craters
-exist on the landscape at multiple scales: the crater scale (a single crater),
-the feeding area scale (multiple craters in close proximity), and the winter
-range scale (all craters within an individual’s range) [@Mayor_2009]. The
-distribution of forage for caribou is therefore seasonally heterogeneous, with
-greater access in snow-free seasons compared to winter as well as spatially
-heterogeneous in winter because the distribution of craters on the landscape
-varies meaning that access to vegetation in winter is highly variable for
-caribou. We therefore partitioned data into two discrete seasons:  summer (3
-August - 20 September) and winter (1 January – 17 February) based on caribou
-socioecology [@Peignier_2019].
+access forage (Bergerud 1974)<!-- TODO: get Bergerud ref-->. As a result,
+caribou tend to occupy and re-use craters once they are established and there is
+considerably less access to forage than when the landscape is snow-free.
+Importantly, craters exist on the landscape at multiple scales: the crater scale
+(a single crater), the feeding area scale (multiple craters in close proximity),
+and the winter range scale (all craters within an individual’s range)
+[@Mayor_2009]. The distribution of forage for caribou is therefore seasonally
+heterogeneous, with greater access in snow-free seasons compared to winter as
+well as spatially heterogeneous in winter because the distribution of craters on
+the landscape varies meaning that access to vegetation in winter is highly
+variable for caribou. We therefore partitioned data into two discrete seasons:
+summer (3 August - 20 September) and winter (1 January – 17 February) based on
+caribou socioecology [@Peignier_2019].
 
 ## Caribou location data
 We used GPS location data collected from Fogo Island caribou in 2017 and 2018.
@@ -166,19 +166,20 @@ Adult female caribou were immobilized and fitted with global positioning system
 1,250 g) as described by Schaefer and Mahoney (2013). Collars were programmed to
 collect location fixes every 2 hours. Prior to analyses, we subset GPS fixes
 into a discrete removed all erroneous and outlier GPS fixes following Bjørneraas
-et al. (2010)<!-- TODO: get Bjorneraas ref-->. We did not collar all female caribou in the herd;
-however, we assumed that our sample of collared animals was random.
+et al. (2010)<!-- TODO: get Bjorneraas ref-->. We did not collar all female
+caribou in the herd; however, we assumed that our sample of collared animals was
+random.
 
 ## Landscape data and habitat classification
 Landcover data were provided by the Newfoundland and Labrador Wildlife Division.
 Available landcover classification included nine habitat types at <!-- TODO:
-double check lc res--> 10m resolution. We reclassified the landcover types into three
-categories: foraging habitat, open habitat, and forest habitat using the R package `raster` [@Hijmans_2019]. Foraging habitat
-<!-- TODO: "foraging" should be "lichen" ?--> consisted of lichen habitat, open habitat
-consisted of wetland, rocky barrens, and anthropogenic habitat types, while
-forest habitat consisted of coniferous forest, conifer scrub, broadleaf forest,
-and mixed-wood forest habitat types. Water habitat was excluded from all
-subsequent analyses. 
+double check lc res--> 10m resolution. We reclassified the landcover types into
+three categories: foraging habitat, open habitat, and forest habitat using the R
+package `raster` [@Hijmans_2019]. Foraging habitat <!-- TODO: "foraging" should
+be "lichen" ?--> consisted of lichen habitat, open habitat consisted of wetland,
+rocky barrens, and anthropogenic habitat types, while forest habitat consisted
+of coniferous forest, conifer scrub, broadleaf forest, and mixed-wood forest
+habitat types. Water habitat was excluded from all subsequent analyses.
 
 
 ## Caribou multilayer social networks
@@ -253,12 +254,13 @@ using the Pearson correlation coefficient [@Br_dka_2018].
 ### Social scale
 
 We altered the social scale based on visual (short distance) and auditory (long
-distance) sensory modalities of caribou<!-- TODO: REF?-->. Specifically, we modified
-the spatial distance threshold required for group assignment using `spatsoc` [@Robitaille_2019] (see above) and
-re-assigned groups at incremental distances between 5-500m. For example, at the
-finest social scale, only individuals within 5m of one another were considered
-in the same group, whereas at the coarsest social scale, individuals within 500m
-of one another were considered in the same group.
+distance) sensory modalities of caribou<!-- TODO: REF?-->. Specifically, we
+modified the spatial distance threshold required for group assignment using
+`spatsoc` [@Robitaille_2019] (see above) and re-assigned groups at incremental
+distances between 5-500m. For example, at the finest social scale, only
+individuals within 5m of one another were considered in the same group, whereas
+at the coarsest social scale, individuals within 500m of one another were
+considered in the same group.
 
 ### Spatial scale
 
@@ -443,7 +445,19 @@ knitr::include_graphics('../graphics/figure-winpos.png')
 
 # Perspectives  to advance multilayer networks 
 
-The integration of behavioural and ecological theory has shown the value of considering the importance of scale to better understand and predict animal social networks, including demography (Shizuka and Johnson 2019), evolutionary and quantitative genetics (Fisher and McAdam 2017), disease ecology (Silk et al. 2017), and animal personality (Sih et al. 2017). While the number of studies integrating social network theory into a broader array of behavioural and ecological sub-disciplines is impressive, only recently has the role of animal space use been been considered in describing the causes and consequences of the social environment in the context of (1) Individual fitness and phenotypes (Webber & Vander Wal 2018), (2) habitat selection and space use (He et al. 2019), and (3) movement ecology and collective movement (Bode et al. 2011). Here, we explore how mutlilayer networks may apply to these emerging fields to contribute to the development of social network theory and application.
+The integration of behavioural and ecological theory has shown the value of
+considering the importance of scale to better understand and predict animal
+social networks, including demography (Shizuka and Johnson 2019), evolutionary
+and quantitative genetics (Fisher and McAdam 2017), disease ecology (Silk et al.
+2017), and animal personality (Sih et al. 2017). While the number of studies
+integrating social network theory into a broader array of behavioural and
+ecological sub-disciplines is impressive, only recently has the role of animal
+space use been been considered in describing the causes and consequences of the
+social environment in the context of (1) Individual fitness and phenotypes
+(Webber & Vander Wal 2018), (2) habitat selection and space use (He et al.
+2019), and (3) movement ecology and collective movement (Bode et al. 2011).
+Here, we explore how mutlilayer networks may apply to these emerging fields to
+contribute to the development of social network theory and application.
 
 
 ## Individual fitness and phenotypes
@@ -647,5 +661,7 @@ Newediuk for their comments on previous versions of this manuscript as well as
 D. C. Schneider for inspiration and helpful discussions about scale. Funding for
 this study was provided by a Vanier Canada Graduate Scholarship to QMRW and a
 NSERC Discovery Grant to EVW.
+
+\newpage
 
 # References
