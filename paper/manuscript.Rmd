@@ -473,7 +473,7 @@ not require proximity such as long-distance vocalization and olfactory signals
 the ability to record social interactions that do not require proximity,
 particularly long-distance communication networks with devices like microphone
 arrays (Snijders & Naguib, 2017). These varying social scales can have different
-fitness repercussions for individuals. Rhesus macaques (Macaca mulatta) had
+fitness repercussions for individuals. Rhesus macaques (*Macaca mulatta*) had
 higher survivorship when they had fewer but stronger, more stable social
 associates and grooming partners rather than simply more associates (Ellis,
 Snyder-Mackler, Ruiz-Lambides, Platt, & Brent, 2019). This finding highlights
