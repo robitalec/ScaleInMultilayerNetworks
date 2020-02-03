@@ -4,7 +4,8 @@ author: Alec L. Robitaille^1^, Quinn M.R. Webber^2^, Julie W. Turner^1^, Eric Va
 date: ^1^Department of Biology, Memorial University of Newfoundland, Canada; ^2^Cognitive and Behavioural Ecology Interdisciplinary Program, Memorial University of Newfoundland
 output:
   github_document
-  # bookdown::pdf_document2
+  bookdown::pdf_document2:
+    number_sections: false
   # bookdown::word_document2:
   #   reference_docx: template.docx
 bibliography: ../references/knitcite.bib
