@@ -6,7 +6,7 @@ Turner<sup>1</sup>, Eric Vander Wal<sup>1,2</sup>
 Canada; <sup>2</sup>Cognitive and Behavioural Ecology Interdisciplinary
 Program, Memorial University of Newfoundland
 
-## Abstract
+# Abstract
 
 Scale remains a seminal concept in ecology. Spatial scale, for instance,
 has become a central consideration in the way we understand landscape
@@ -35,7 +35,7 @@ theory as well as our case study, we demonstrate potential for
 interconnectedness among individual animals, their social environment,
 and the landscapes they occupy.
 
-## Introduction
+# Introduction
 
 Our inference regarding the ecological processes underlying ecological
 patterns are directly linked to the scale at which they are observed
@@ -121,9 +121,9 @@ taxa.
 
 <img src="../graphics/figure1.png" title="(ref:spacetime)" alt="(ref:spacetime)" width="\linewidth" />
 
-## Scale in multilayer networks: a case study
+# Scale in multilayer networks: a case study
 
-### Caribou socioecology
+## Caribou socioecology
 
 Here, we use caribou as a case study to develop scale-dependent
 multilayer networks based on social (visual and auditory perception),
@@ -147,7 +147,7 @@ variable for caribou. We therefore partitioned data into two discrete
 seasons: summer (3 August - 20 September) and winter (1 January – 17
 February) based on caribou socioecology (Peignier et al. 2019).
 
-### Caribou location data
+## Caribou location data
 
 We used GPS location data collected from Fogo Island caribou in 2017 and
 2018. Adult female caribou were immobilized and fitted with global
@@ -159,7 +159,7 @@ erroneous and outlier GPS fixes following Bjørneraas et al.
 (2010)<!-- TODO-->. We did not collar all female caribou in the herd;
 however, we assumed that our sample of collared animals was random.
 
-### Landscape data and habitat classification
+## Landscape data and habitat classification
 
 Landcover data were provided by the Newfoundland and Labrador Wildlife
 Division. Available landcover classification included nine habitat types
@@ -174,9 +174,9 @@ forest habitat types. Water habitat was excluded from all subsequent
 analyses.
 <!-- using the raster package for R? -->
 
-### Caribou multilayer social networks
+## Caribou multilayer social networks
 
-#### Network types and construction (defining layers for the multilayer network)
+### Network types and construction (defining layers for the multilayer network)
 
 <!-- should use something like "using syntax from Kivela 2014..." or 
 Following [@Kivela_2014]:
@@ -228,7 +228,7 @@ than the given distance (Farine and Whitehead 2015). Social groups were
 designated if two or more individuals occurred within a given distance
 of one another at any given time point.
 
-#### Network metrics
+### Network metrics
 
 We used a series of metrics to characterize the multilayer networks
 focusing on the relevance of individual layers, similarity of layers and
@@ -246,9 +246,9 @@ calculated the similarity of layers between seasons, across landcover
 classes (e.g.: winter open compared to summer open) using the Pearson
 correlation coefficient (Br’odka et al. 2018).
 
-### Varying scale in multilayer networks
+## Varying scale in multilayer networks
 
-#### Social scale
+### Social scale
 
 We altered social scale based on visual (short distance) and auditory
 (long distance) sensory modalities of caribou <!--(REF?)-->.
@@ -259,7 +259,7 @@ individuals within 5m of one another were considered in the same group,
 whereas at the coarsest social scale, individuals within 500m of one
 another were considered in the same group.
 
-#### Spatial scale
+### Spatial scale
 
 To assess the influence of spatial scale on multilayer networks, we
 aggregated our landcover classification map at varying scales relevant
@@ -272,7 +272,7 @@ caribou during foraging <!--(REF)-->, while re-sampling at 500m and
 1000m represents the scale at which caribou tend to select and avoid
 habitat (Bastille-Rousseau et al. 2017).
 
-#### Temporal scale
+### Temporal scale
 
 We altered the temporal scale of multilayer networks by varying the
 length and position of the time window used to define seasons. The
@@ -291,11 +291,33 @@ investigated the influence of the number of observations on resulting
 multilayer networks. We randomly selected 500 timesteps and iteratively
 included 25 additional observations, regenerating the multilayer network
 and calculating associations of individuals. Subsequent iterations
-included the previous set of observations to mimic observational data.
+included the previous set of observations to mimic observational
+data.
 
-## Scale in multilayer networks in practice: case study results and discussion
+# Scale in multilayer networks in practice: case study results and discussion
 
-### Each metric’s interpretation
+We observed variation in multilayer network metrics as a function of
+changes in social, spatial, and temporal scale.
+
+In general, individuals in multilayer networks became more connected as
+a function of social scale, however, this relationship varied by habitat
+type and season. As social scale increased, connective redundancy
+increased rapidly when groups were formed based on ~100m threshold,
+followed by a plateau and slight decrease at higher thresholds,
+presumably due to an increase in summer forest degree at ~500m (Figure
+3b). Regardless of social scale, layer relevance did not change for any
+habitat types or seasons, which suggests habitat-by-season layers
+captured most, if not all, of the potential connections and individual
+would have across all networks (Figure 3c). Finally, somewhat
+predictably, graph strength for winter networks increased up to
+~100-200m thresholds, followed by a plateau, while graph strength for
+summer networks did not change as the social threshold increased (Figure
+3d).
+
+  - increasing graph strength consistent with increasing strength in
+    winter
+
+## Each metric’s interpretation
 
   - Multidegree: sum of degree across layers. High multidegree =
     connected to many individuals across layers. Low multidegree = not
@@ -332,36 +354,7 @@ included the previous set of observations to mimic observational data.
     correlation coefficient of degree vectors for each layer, comparing
     each landcover across seasons.
 
-### Figure captions and brief interpretations
-
-(ref:lcres) Varying scale in landcover resolution. For each landcover
-resolution (10m, 100m, 250m, 500m and 1000m), multilayer networks were
-constructed for each landcover class (forest, lichen and open) across
-two seasons (summer and winter), and four network metrics were
-calculated. A) Similarity of landcover network layers between seasons
-(e.g.: open summer compared to open winter) showed different responses
-to changing landcover scale with an increase in similarity for forest
-layers at 250m and decrease in similarity for open layers at 250m. Note
-that lichen layer similarity is not shown because individuals did not
-interact in lichen habitats greater greater than 10m landcover
-resolution. B) Mean connective redundancy across individuals showed a
-decreasing trend with increasing landcover resolution. C) Mean layer
-relevance showed sparse connectivity in summer compared to winter
-networks and a decrease in winter lichen layer relevance at higher
-landcover resolutions. D) Mean graph strength of individuals was weaker
-during the summer compared to the winter months.
-
-  - decreasing availability of patchy lichen = no edges in these layers,
-    though some small proportion of relocations still exist in those
-    layers
-  - decreasing connective redundancy because through resolution because
-    lichen decreased in connectivity and landcovers became more
-    homogeneous (?)
-  - decreasing winter lichen relevance because the degree + number of
-    edges
-decreased
-
-<img src="../graphics/figure-lcres.png" title="(ref:lcres)" alt="(ref:lcres)" width="\linewidth" />
+## Figure captions and brief interpretations
 
 (ref:socres) Varying scale in social threshold. For each social
 threshold (5m, 50m, 100m, 150m, 200m, 250m, 300m, 350m, 400m, 450m,
@@ -385,16 +378,74 @@ connections. **\[JWT: I’m not sure sparse is the best word, they don’t
 have strong connections, which is related to the number of associations,
 but it also has to do with the SRI. I would talk about it more about
 strong/weak connections. Networks can be sparse (few connections), but
-still have high strength if the ties have higher values\]**
-
-  - increasing layer relevance as more individuals are connected with
-    increasing buffer size
-  - decrease in connective redundancy due an increase in summer forest
-    degree at the last (500m) social threshold
-  - increasing graph strength consistent with increasing strength in
-    winter
+still have high strength if the ties have higher
+values\]**
 
 <img src="../graphics/figure-spatialthreshold.png" title="(ref:socres)" alt="(ref:socres)" width="\linewidth" />
+
+(ref:lcres) Variation in multilayer network metrics as a function of
+changes in landcover resolution, a metric which we interpret as spatial
+scale. For each landcover resolution (10m, 100m, 250m, 500m and 1000m),
+multilayer networks were constructed for each landcover class (forest,
+lichen and open) across two seasons (summer and winter), and four
+network metrics were calculated and we examined how network metrics
+changed as a function of changes in spatial scale. A) Similarity of
+landcover network layers between seasons (e.g.: open summer compared to
+open winter) showed different responses to changing landcover scale with
+an increase in similarity for forest layers at 250m and decrease in
+similarity for open layers at 250m. Note that lichen layer similarity is
+not shown because individuals did not interact in lichen habitats
+greater greater than 10m landcover resolution. B) Mean connective
+redundancy across individuals showed a decreasing trend with increasing
+landcover resolution. C) Mean layer relevance showed sparse connectivity
+in summer compared to winter networks and a decrease in winter lichen
+layer relevance at higher landcover resolutions. D) Mean graph strength
+of individuals was weaker during the summer compared to the winter
+months.
+
+  - decreasing availability of patchy lichen = no edges in these layers,
+    though some small proportion of relocations still exist in those
+    layers
+  - decreasing connective redundancy because through resolution because
+    lichen decreased in connectivity and landcovers became more
+    homogeneous (?)
+  - decreasing winter lichen relevance because the degree + number of
+    edges
+decreased
+
+<img src="../graphics/figure-lcres.png" title="(ref:lcres)" alt="(ref:lcres)" width="\linewidth" />
+
+<!-- RO first sentence... -->
+
+(ref:nobs) Varying scale in number of observations. For each iteration,
+a number of observations (10-485 observations in steps of 25) were
+selected from the complete data set to construct multilayer networks
+with layers defined by each landcover class (forest, lichen and open)
+across two seasons (summer and winter) and four network metrics
+calculated. A) Similarity of landcover network layers between seasons
+(e.g.: open summer compared to open winter) showed a stabilizing layer
+similarity at 200 observations for forest and 300 observations for
+lichen and open. *There were observations of individuals in lichen and
+open areas at lower numbers of observations during the winter, so layer
+similarity could not be calculated at these values.* **Brief explanation
+of why two landcover don’t have values at lower nobs??**. B) Mean
+connective redundancy across individuals increased with increasing
+number of observations, which begins to plateau around 100 observations.
+C) Mean layer relevance across individuals increased for winter layers
+and slightly increased for summer layers. D) Mean graph strength across
+individuals varied for winter layers becoming relatively stable at 200
+observations and remained weak throughout for summer layers.
+
+  - common, though at different points - more observations until
+    stabilizing
+  - we dont see the stabilizing/full plateau for connective redundancy
+    but appears to be coming..
+  - still some variability, especially for graph strength because
+    individuals are differently connected but broad strokes - they
+    stabilize with more
+observations
+
+<img src="../graphics/figure-nobs.png" title="(ref:nobs)" alt="(ref:nobs)" width="\linewidth" />
 
 (ref:winlen) Varying scale in time window length. For each time window
 length (40 to 100 days in length increasing by 5 days in sequence),
@@ -429,38 +480,6 @@ length
 
 <img src="../graphics/figure-winlength.png" title="(ref:winlen)" alt="(ref:winlen)" width="\linewidth" />
 
-<!-- RO first sentence... -->
-
-(ref:nobs) Varying scale in number of observations. For each iteration,
-a number of observations (10-485 observations in steps of 25) were
-selected from the complete data set to construct multilayer networks
-with layers defined by each landcover class (forest, lichen and open)
-across two seasons (summer and winter) and four network metrics
-calculated. A) Similarity of landcover network layers between seasons
-(e.g.: open summer compared to open winter) showed a stabilizing layer
-similarity at 200 observations for forest and 300 observations for
-lichen and open. *There were observations of individuals in lichen and
-open areas at lower numbers of observations during the winter, so layer
-similarity could not be calculated at these values.* **Brief explanation
-of why two landcover don’t have values at lower nobs??**. B) Mean
-connective redundancy across individuals increased with increasing
-number of observations, which begins to plateau around 100 observations.
-C) Mean layer relevance across individuals increased for winter layers
-and slightly increased for summer layers. D) Mean graph strength across
-individuals varied for winter layers becoming relatively stable at 200
-observations and remained weak throughout for summer layers.
-
-  - common, though at different points - more observations until
-    stabilizing
-  - we dont see the stabilizing/full plateau for connective redundancy
-    but appears to be coming..
-  - still some variability, especially for graph strength because
-    individuals are differently connected but broad strokes - they
-    stabilize with more
-observations
-
-<img src="../graphics/figure-nobs.png" title="(ref:nobs)" alt="(ref:nobs)" width="\linewidth" />
-
 (ref:winpos) Varying scale in time window position. For each time window
 position (shifting the start date of the time window used to define
 seasons 1 to 48 days from the original), multilayer networks were
@@ -492,17 +511,9 @@ potentially
 
 <img src="../graphics/figure-winpos.png" title="(ref:winpos)" alt="(ref:winpos)" width="\linewidth" />
 
-### 
+# Perspectives to advance multilayer networks
 
-Results and interpretation of temporal scale
-
-Results and interpretation of spatial scale
-
-Results and interpretation of social scale
-
-## Perspectives to advance multilayer networks
-
-### Habitat selection and space use
+## Habitat selection and space use
 
   - Mayor et al. 2009 paper
   - MRSF Laforge paper
@@ -514,7 +525,7 @@ Results and interpretation of social scale
     Bram Van Moorter1
   - Multi-scale habitat selection modeling: a review and outlook
 
-### Individual fitness and phenotypes
+## Individual fitness and phenotypes
 
 Social network positions are frequently used to represent the social
 environment that an individual experiences or their social phenotype.
@@ -605,7 +616,7 @@ the relationship between an individual’s social network position and
 fitness need to be considered based on the hypotheses being tested and
 logistical constraints.
 
-### Movement ecology and collective movement
+## Movement ecology and collective movement
 
 Animal movement undoubtedly affects an individual’s social environment
 (Strandburg-Peshkin et al. 2015). Movement is a dynamic process that is
@@ -679,7 +690,7 @@ movement and space use in multilayer networks provides novel insights
 into the effects of habitat configuration on the formation of the social
 environment (He et al. 2019).
 
-## Conclusions
+# Conclusions
 
 something something blah blah.
 
@@ -703,18 +714,16 @@ networks:
     extension social and spatial cognition, as animals navigate their
     environment and make decisions about where to move next?
 
-## Acknowledgements
-
-<!-- add jack -->
+# Acknowledgements
 
 We thank all members of the Wildlife Evolutionary Ecology Lab, including
-K. Kingdon, S. Boyle, C. Prokopenko, I. Richmond, J. Hogg, and L.
-Newediuk for their comments on previous versions of this manuscript as
-well as D. C. Schneider for inspiration and helpful discussions about
-scale. Funding for this study was provided by a Vanier Canada Graduate
-Scholarship to QMRW and a NSERC Discovery Grant to EVW.
+J. Hendrix, K. Kingdon, S. Boyle, C. Prokopenko, I. Richmond, J. Hogg,
+and L. Newediuk for their comments on previous versions of this
+manuscript as well as D. C. Schneider for inspiration and helpful
+discussions about scale. Funding for this study was provided by a Vanier
+Canada Graduate Scholarship to QMRW and a NSERC Discovery Grant to EVW.
 
-## References
+# References
 
 <div id="refs" class="references">
 
@@ -730,8 +739,8 @@ Ecology*. Columbia University Press.
 
 Berlingerio, Michele, Michele Coscia, Fosca Giannotti, Anna Monreale,
 and Dino Pedreschi. 2012. “Multidimensional Networks: Foundations of
-Structural Analysis.” *World Wide Web* 16 (5-6): 567–93.
-<https://doi.org/10.1007/s11280-012-0190-4>.
+Structural Analysis.” *World Wide Web* 16 (5-6). Springer Science;
+Business Media LLC: 567–93. <https://doi.org/10.1007/s11280-012-0190-4>.
 
 </div>
 
@@ -739,7 +748,7 @@ Structural Analysis.” *World Wide Web* 16 (5-6): 567–93.
 
 Br’odka, Piotr, Anna Chmiel, Matteo Magnani, and Giancarlo Ragozini.
 2018. “Quantifying Layer Similarity in Multiplex Networks: A Systematic
-Study.” *Royal Society Open Science* 5 (8): 171747.
+Study.” *Royal Society Open Science* 5 (8). The Royal Society: 171747.
 <https://doi.org/10.1098/rsos.171747>.
 
 </div>
