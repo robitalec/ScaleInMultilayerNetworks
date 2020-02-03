@@ -60,14 +60,14 @@ DT[, paste0('mn', metriccols) := lapply(.SD, mean, na.rm = TRUE),
 ## Theme
 # Legend position
 if (var %in% c('winpos', 'winlength')) {
-  pos1 <- c(0.9,0.12)
-  pos2 <- c(0.9,0.1)
+  pos1 <- c(0.85,0.12)
+  pos2 <- c(0.85,0.1)
 } else if (var %in% c('spatialthreshold')) {
-  pos1 <- c(0.9,0.42)
-  pos2 <- c(0.9,0.4)
+  pos1 <- c(0.85,0.42)
+  pos2 <- c(0.85,0.4)
 } else if (var %in% c('nobs', 'lcres')){
-  pos1 <- c(0.9,0.22)
-  pos2 <- c(0.9,0.2)
+  pos1 <- c(0.85,0.22)
+  pos2 <- c(0.85,0.2)
 }
 
 p <- theme(legend.position = pos1,
@@ -127,9 +127,10 @@ g8 <- base3 + geom_line(aes(y = mngraphstrength), size = linesize) + ylab('Graph
 
 
 # Patchwork
-(fig2 <- (g1 + g5) / (g7 + g8) +
+(fig <- (g1 + g5) / (g7 + g8) +
     plot_annotation(tag_levels = 'A') & 
-    theme(plot.tag = element_text(size = 14, hjust = 0, vjust = 0)) &
+    theme(plot.tag = element_text(size = 14, hjust = 0, vjust = 0),
+          legend.key.width = unit(1.4,"cm")) &
     labs(x = varnames[vars == var, varname]) &
     p)
 
