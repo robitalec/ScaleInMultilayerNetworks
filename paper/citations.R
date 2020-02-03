@@ -50,6 +50,9 @@ citep('10.1111/2041-210X.13215')
 # farine whitehead 2015
 citep('10.1111/1365-2656.12418')
 
+## metrics
+# berlingerio 2012
+citep('10.1007/s11280-012-0190-4')
 
 ### Varying scale in multilayer networks
 ## social scale
@@ -64,6 +67,7 @@ citep('10.1111/2041-210X.13177')
 # davis 2018
 
 # webber vander 2019
+
 
 
 
