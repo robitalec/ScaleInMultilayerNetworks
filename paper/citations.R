@@ -72,6 +72,15 @@ citep('10.1111/2041-210X.13177')
 # webber vander 2019
 
 
+## perspectives
+
+#landscape
+
+# indiv fitness
+# brent 2017
+citep('10.1098/rspb.2017.0515')
+#thompson 2019
+citep('10.1163/1568539X-00003552')
 
 
 ### R, R Packages
