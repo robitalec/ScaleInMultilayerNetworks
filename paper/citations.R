@@ -54,6 +54,9 @@ citep('10.1111/1365-2656.12418')
 # berlingerio 2012
 citep('10.1007/s11280-012-0190-4')
 
+# brodka
+citep('10.1098/rsos.171747')
+
 ### Varying scale in multilayer networks
 ## social scale
 
