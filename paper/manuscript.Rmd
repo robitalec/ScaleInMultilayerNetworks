@@ -289,10 +289,29 @@ observational data.
 
 We observed variation in multilayer network metrics as a function of changes in social, spatial, and temporal scale. 
 
-In general, individuals in multilayer networks became more connected as a function of social scale, however, this relationship varied by habitat type and season. As social scale increased, connective redundancy increased rapidly when groups were formed based on ~100m threshold, followed by a plateau and slight decrease at higher thresholds, presumably due to an increase in summer forest degree at ~500m (Figure 3b). Regardless of social scale, layer relevance did not change for any habitat types or seasons, which suggests habitat-by-season layers captured most, if not all, of the potential connections and individual would have across all networks (Figure 3c). Finally, somewhat predictably, graph strength for winter networks increased up to ~100-200m thresholds, followed by a plateau, while graph strength for summer networks did not change as the social threshold increased (Figure 3d).  Taken together, these results suggest the optimal social scale at which groups should be assigned is likely somewhere between ~20-100m based on the rate at which network metrics stabilized. For ungulates, groups are often assigned based on 50m threshold (Lingle 2003; Lesmeries et al. 2018; Peignier et al. 2019), suggesting that given similar quantities of data, ~50m is likely an ideal social scale for generating social networks in caribou and similar species.
+In general, individuals in multilayer networks became more connected as a
+function of social scale, however, this relationship varied by habitat type and
+season. As social scale increased, connective redundancy increased rapidly when
+groups were formed based on ~100m threshold, followed by a plateau and slight
+decrease at higher thresholds, presumably due to an increase in summer forest
+degree at ~500m (Figure 3b). Regardless of social scale, layer relevance did not
+change for any habitat types or seasons, which suggests habitat-by-season layers
+captured most, if not all, of the potential connections and individual would
+have across all networks (Figure 3c). Finally, somewhat predictably, graph
+strength for winter networks increased up to ~100-200m thresholds, followed by a
+plateau, while graph strength for summer networks did not change as the social
+threshold increased (Figure 3d).  Taken together, these results suggest the
+optimal social scale at which groups should be assigned is likely somewhere
+between ~20-100m based on the rate at which network metrics stabilized. For
+ungulates, groups are often assigned based on 50m threshold (Lingle 2003;
+Lesmeries et al. 2018; Peignier et al. 2019), suggesting that given similar
+quantities of data, ~50m is likely an ideal social scale for generating social
+networks in caribou and similar species.
 
 
+<!--
 ## Each metric's interpretation
+
 **[JWT: Do we need to define degree first since degree is mentioned in so many of our definitions?]**
 * Degree: the number of direct connections an individual has to other individuals in the network. High degree = connected to many indviduals in a single layer. Low degree = not connected to many individuals in a single layer.
 
@@ -329,10 +348,10 @@ correlation coefficient of degree vectors for each layer, comparing each
 landcover across seasons.
 
 
+-->
 
-## Figure captions and brief interpretations
 
-(ref:socres) Varying scale in social threshold. For each social threshold (5m, 50m, 100m, 150m, 200m, 250m, 300m, 350m, 400m, 450m, 500m), multilayer networks were constructed for each landcover class (forest, lichen and open) across two seasons (summer and winter) and four network metrics calculated. A) Similarity of landcover network layers between seasons (e.g.: open summer compared to open winter) showed different responses to changing landcover scale with an overall increase in similarity for open layers and decrease in similarity for lichen layers.**[JWT: what about forest. This made me realize that the legend isn't wide enougth to really tell the difference between lty, forest and open look the same in the legend]** B) Mean connective redundancy across individuals increased rapidly between 5m and 50m reaching a plateau  of about 0.65 **[JWT: Does this have units??]** at approximately a 50m **??** social threshold before decreasing between 400m and 500m. C) Mean layer relevance was relatively stable across social thresholds for each season and landcover layer. D) Mean graph strength across individuals showed an increase for winter network layers at 50m through 500m while summer network layers had consistently weak connections. **[JWT: I'm not sure sparse is the best word, they don't have strong connections, which is related to the number of associations, but it also has to do with the SRI. I would talk about it more about strong/weak connections. Networks can be sparse (few connections), but still have high strength if the ties have higher values]**
+(ref:socres) Varying scale in social threshold. For each social threshold (5m, 50m, 100m, 150m, 200m, 250m, 300m, 350m, 400m, 450m, 500m), multilayer networks were constructed for each landcover class (forest, lichen and open) across two seasons (summer and winter) and four network metrics calculated. A) Similarity of landcover network layers between seasons (e.g.: open summer compared to open winter) showed different responses to changing landcover scale with an overall increase in similarity for open layers and decrease in similarity for lichen layers.**[JWT: what about forest.]** B) Mean connective redundancy across individuals increased rapidly between 5m and 50m reaching a plateau  of about 0.65 at approximately a 50m **??** social threshold before decreasing between 400m and 500m. C) Mean layer relevance was relatively stable across social thresholds for each season and landcover layer. D) Mean graph strength across individuals showed an increase for winter network layers at 50m through 500m while summer network layers had consistently weak connections. **[JWT: I'm not sure sparse is the best word, they don't have strong connections, which is related to the number of associations, but it also has to do with the SRI. I would talk about it more about strong/weak connections. Networks can be sparse (few connections), but still have high strength if the ties have higher values]**
 
 
 
