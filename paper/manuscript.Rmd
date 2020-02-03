@@ -35,12 +35,12 @@ Despite the complex interplay between social networks and how animals use space,
 there remains an important biological and methodological gap in our
 understanding of an animal’s perception of scale, e.g., grain and extent. But
 scale can affect multilayer network dynamics and how we build and interpret
-them. Here, we discuss the role of scale in the context of multilayer networks
+them. Here we discuss the role of scale in the context of multilayer networks
 and provide a case study of caribou (*Rangifer tarandus*) to illustrate the role
-of social,spatial, and temporal scale on multilayer processes. We also present
+of social, spatial, and temporal scale on multilayer processes. We also present
 perspectives on future development and application of scale in multilayer
 networks with respect to habitat selection and space use, individual fitness and
-phenotypes, and movement ecology and collective movement.Effective integration
+phenotypes, and movement ecology and collective movement. Effective integration
 of social and spatial processes, including biologically meaningful scales,
 within the context of animal social networks is an emerging area of research;
 our contribution uniquely incorporates perspectives on how the social
@@ -119,12 +119,14 @@ complex social systems? Second, can variation in social, spatial, and temporal
 improve predictions associated with biological differences in seasonal resource
 availability and social association? We conclude with perspectives for further
 development and application of scale in multilayer networks with respect to
-habitat selection and space use (REF)<!-- TODO-->, individual fitness and
+habitat selection and space use <!-- TODO: (REF)-->, individual fitness and
 phenotypes (Webber & Vander Wal 2018), and movement ecology and collective
 movement (Jolles et al. 2019).
 
 
 (ref:spacetime) Space-time diagram displaying variation the spatial and temporal extent required for different social processes across a range of taxa.
+
+<!-- TODO: units of spatial scale? --> 
 
 ```{r, fig.cap='(ref:spacetime)'}
 knitr::include_graphics('../graphics/figure1.png')
@@ -141,7 +143,7 @@ type), and temporal (seasonal). Caribou are gregarious ungulates with
 fission-fusion dynamics [@Lesmerises_2018] that display temporal
 [@Peignier_2019] and spatial (Webber et al. unpublished data) variation in
 social networks. In winter, caribou dig holes in the snow, termed craters, to
-access forage (Bergerud 1974)<!-- TODO-->. As a result, caribou tend to occupy
+access forage (Bergerud 1974)<!-- TODO: get Bergerud ref-->. As a result, caribou tend to occupy
 and re-use craters once they are established and there is considerably less
 access to forage than when the landscape is snow-free. Importantly, craters
 exist on the landscape at multiple scales: the crater scale (a single crater),
@@ -162,25 +164,25 @@ Adult female caribou were immobilized and fitted with global positioning system
 1,250 g) as described by Schaefer and Mahoney (2013). Collars were programmed to
 collect location fixes every 2 hours. Prior to analyses, we subset GPS fixes
 into a discrete removed all erroneous and outlier GPS fixes following Bjørneraas
-et al. (2010)<!-- TODO-->. We did not collar all female caribou in the herd;
+et al. (2010)<!-- TODO: get Bjorneraas ref-->. We did not collar all female caribou in the herd;
 however, we assumed that our sample of collared animals was random.
 
 ## Landscape data and habitat classification
 Landcover data were provided by the Newfoundland and Labrador Wildlife Division.
 Available landcover classification included nine habitat types at <!-- TODO:
-double check --> 10m resolution. We reclassified the landcover types into three
+double check lc res--> 10m resolution. We reclassified the landcover types into three
 categories: foraging habitat, open habitat, and forest habitat. Foraging habitat
-<!-- or just lichen like figs?--> consisted of lichen habitat, open habitat
+<!-- TODO: "foraging" should be "lichen" ?--> consisted of lichen habitat, open habitat
 consisted of wetland, rocky barrens, and anthropogenic habitat types, while
 forest habitat consisted of coniferous forest, conifer scrub, broadleaf forest,
 and mixed-wood forest habitat types. Water habitat was excluded from all
 subsequent analyses.
-<!-- using the raster package for R? -->
+<!-- TODO: cite the raster package for R? -->
 
 ## Caribou multilayer social networks
 
 ### Network types and construction (defining layers for the multilayer network)
-<!-- should use something like "using syntax from Kivela 2014..." or 
+<!-- TODO: should use something like "using syntax from Kivela 2014..." or 
 Following [@Kivela_2014]:
 other info to maybe include: the multilayer network was not node-aligned since
 not all individuals were on all layers
@@ -211,7 +213,7 @@ interlayer edges represented connections between the same individuals across
 contexts.
 
 We weighted edges of social networks by the strength of association between
-caribou using the simple ratio index (SRI, Cairns and Schwager 1987): <!-- TODO-->
+caribou using the simple ratio index (SRI, Cairns and Schwager 1987): <!-- TODO: get Cairns ref-->
 
 $$ SRI = \frac{x}{x + y_{AB} + y_{A} + y_{B}} $$
 
