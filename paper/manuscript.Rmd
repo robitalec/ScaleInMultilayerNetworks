@@ -308,7 +308,9 @@ quantities of data, ~50m is likely an ideal social scale for generating social
 networks in caribou and similar species.
 
 
+<!--
 ## Each metric's interpretation
+
 **[JWT: Do we need to define degree first since degree is mentioned in so many of our definitions?]**
 * Degree: the number of direct connections an individual has to other individuals in the network. High degree = connected to many indviduals in a single layer. Low degree = not connected to many individuals in a single layer.
 
@@ -345,6 +347,8 @@ social ties.
 correlation coefficient of degree vectors for each layer, comparing each
 landcover across seasons.
 
+
+-->
 
 
 ## Figure captions and brief interpretations
