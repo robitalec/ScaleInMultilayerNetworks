@@ -277,33 +277,22 @@ represents the scale at which caribou tend to select and avoid habitat
 
 #### Temporal scale
 
-We altered the temporal scale of multilayer networks using a moving time-window
-approach to define seasons and 
+We altered the temporal scale of multilayer networks by varying the length and
+position of the time window used to define seasons. The length of the time
+window varied from 40-100 days using a fixed start day for winter (1 January)
+and summer (3 August). The position of the time window was shifted by 1-48 days,
+using a fixed time window length of 48 days. These new time windows were
+iteratively used to partition data into two discrete seasons (winter, summer)
+and generate multilayer networks.
 
-1. time window length
-
-Varying length of time window (used to define seasons). Starting with a window
-of day 1-40 and using a moving window to go to day 1-100. Fixed start julian day
-for winter is day 1 and for summer is 215. Network layers for winter and summer
-are calculated for each window length.
-
-
-1. time window position
-Varying position of time window (used to define seasons). Fixed length at 48
-Window positions starting at 1, to + 48 So 1-48 is first iteration for winter
-and 48-96 is second iteration for "winter". Same for summer, starting at 215.
-Network layers for each season are constructed.
-
-**Observational scale** <!--(temporary header)-->: Studies of social network analysis
-vary in the number and frequency of observations as well as the data collection
-technique used to generate networks (Davis et al. 2018; Webber and Vander Wal
-2019).
-
-Randomly select max number of observations - timegroups - <!-- (right now 750)-->. For
-each iteration, include n observations for each season for all individuals.
-Subsequent iterations include nstep more <!--(right now 25)-->, along with previously
-included to remove stochasticity. Parallels with observation data.
-
+Studies of social network analysis vary in the number and frequency of
+observations as well as the data collection technique used to generate networks
+(Davis et al. 2018; Webber and Vander Wal 2019). In addition to altering the
+temporal scale, we investigated the influence of the number of observations on
+resulting multilayer networks. We randomly selected 500 timesteps and
+iteratively included 25 additional observations, regenerating the multilayer
+network and calculating associations of individuals. Subsequent iterations
+included the previous set of observations to mimic observational data.
 
 ## Scale in multilayer networks in practice: case study results and discussion
 
