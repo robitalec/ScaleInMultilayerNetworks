@@ -52,9 +52,20 @@ citep('10.1111/1365-2656.12418')
 
 
 ### Varying scale in multilayer networks
+## social scale
+
+## landcover scale
 # grainchanger, Graham 2019
 citep(citation('grainchanger'))
 citep('10.1111/2041-210X.13177')
+
+
+## temporal scale
+# davis 2018
+
+# webber vander 2019
+
+
 
 ### R, R Packages
 # R
