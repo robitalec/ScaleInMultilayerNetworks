@@ -26,12 +26,20 @@ grep -rni 'paper/manuscript.Rmd' -e 'TODO' || true;
 #> scripts/1-data-prep.R:8:# TODO: timezones
 #> scripts/6-time-window-position.R:94:# TODO: not always a consistent n individuals because some IDs NA in an LC
 #> scripts/9-figure-2.R:80:# TODO: MISSING INDIVIDUALS
-#> 122:habitat selection and space use <!-- TODO: (REF)-->, individual fitness and
-#> 129:<!-- TODO: 
-#> 146:access forage (Bergerud 1974)<!-- TODO-->. As a result, caribou tend to occupy
-#> 167:et al. (2010)<!-- TODO-->. We did not collar all female caribou in the herd;
-#> 172:Available landcover classification included nine habitat types at <!-- TODO:
-#> 216:caribou using the simple ratio index (SRI, Cairns and Schwager 1987): <!-- TODO-->
+#> 124:habitat selection and space use <!-- TODO: (REF)-->, individual fitness and
+#> 131:<!-- TODO: units of spatial scale? --> 
+#> 148:access forage (Bergerud 1974)<!-- TODO: get Bergerud ref-->. As a result, caribou tend to occupy
+#> 169:et al. (2010)<!-- TODO: get Bjorneraas ref-->. We did not collar all female caribou in the herd;
+#> 174:Available landcover classification included nine habitat types at <!-- TODO:
+#> 177:<!-- TODO: "foraging" should be "lichen" ?--> consisted of lichen habitat, open habitat
+#> 187:<!-- TODO: should use something like "using syntax from Kivela 2014..." or 
+#> 220:caribou using the simple ratio index (SRI, Cairns and Schwager 1987): <!-- TODO: get Cairns ref-->
+#> 238:each layer-specific season and landcover context <!-- TODO: citation for graph
+#> 256:distance) sensory modalities of caribou<!-- TODO: REF?-->. Specifically, we modified
+#> 271:for caribou during foraging <!--TODO: REF-->, while re-sampling at 500m and 1000m
+#> 277:<!--TODO: are we missing some mention of 2017 summer and 2018 winter somewhere?-->
+#> 294:observational data. <!-- TODO: bah conclude / this sentence falls off a cliff -->
+#> 413:<!-- TODO: RO first sentence... -->
 ```
 
 ## Info
