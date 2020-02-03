@@ -351,8 +351,6 @@ landcover across seasons.
 -->
 
 
-## Figure captions and brief interpretations
-
 (ref:socres) Varying scale in social threshold. For each social threshold (5m, 50m, 100m, 150m, 200m, 250m, 300m, 350m, 400m, 450m, 500m), multilayer networks were constructed for each landcover class (forest, lichen and open) across two seasons (summer and winter) and four network metrics calculated. A) Similarity of landcover network layers between seasons (e.g.: open summer compared to open winter) showed different responses to changing landcover scale with an overall increase in similarity for open layers and decrease in similarity for lichen layers.**[JWT: what about forest.]** B) Mean connective redundancy across individuals increased rapidly between 5m and 50m reaching a plateau  of about 0.65 at approximately a 50m **??** social threshold before decreasing between 400m and 500m. C) Mean layer relevance was relatively stable across social thresholds for each season and landcover layer. D) Mean graph strength across individuals showed an increase for winter network layers at 50m through 500m while summer network layers had consistently weak connections. **[JWT: I'm not sure sparse is the best word, they don't have strong connections, which is related to the number of associations, but it also has to do with the SRI. I would talk about it more about strong/weak connections. Networks can be sparse (few connections), but still have high strength if the ties have higher values]**
 
 
