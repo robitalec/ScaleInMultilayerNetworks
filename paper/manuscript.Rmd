@@ -225,19 +225,20 @@ designated if two or more individuals occurred within a given distance of one
 another at any given time point.
 
 ### Network metrics
-We used a series of metrics to characterize the multilayer networks focusing on
-the relevance of individual layers, similarity of layers and the role of
-individuals. We calculated multidegree, the sum of degree centrality across
-layers, and neighbourhood, the sum of unique neighbours to each individual
-[@Berlingerio_2012; @Kivela_2014]. Comparing the multidegree and number of
+We used a series of metrics to characterize the multilayer networks, focusing on
+the the role of individuals and the similarity and relevance of individual layers. Degree
+centrality, the number of direct connections an individual has to other individuals in the
+network, is the basis of many calculations. We calculated multidegree, the sum of degree
+centrality across layers, and neighbourhood, the sum of unique neighbours to each
+individual[@Berlingerio_2012; @Kivela_2014]. Comparing the multidegree and number of
 unique neighbours, we measured the connective redundancy, the proportion of
 neighbours repeated in multiple layers, and the layer relevance, the proportion
 of neighbours present compared to the neighbourhood for each individual
 [@Berlingerio_2012]. To measure the role of individuals, we calculated the graph
-strength for each individual for each layer specific season and landcover
-context <!-- citation?-->. Finally, we calculated the similarity of layers
-between seasons, across landcover classes (e.g.: winter open compared to summer
-open) using the Pearson correlation coefficient [@Br_dka_2018].
+strength, degree weighted by the values of the tie, for each individual for each 
+layer-specific season and landcover context <!-- citation?-->. Finally, we calculated the 
+similarity of layers between seasons, across landcover classes (e.g.: winter open compared 
+to summer open) using the Pearson correlation coefficient [@Br_dka_2018].
 
 
 ## Varying scale in multilayer networks
@@ -313,8 +314,7 @@ neighbourhood = a high number of unique individuals connected to an actor. Low
 neighbourhood = a low number of unique individuals connected to an actor. 
 
 * Relevance: layer centric metric, corresponding to the number of neighbours on a
-layer divided by the total neighbourhood for each actor. High relevance means
-that the layer is highly relevant to the individuals connections. A low
+layer divided by the total neighbourhood for each actor. High relevance = the layer is highly relevant to the individuals connections. A low
 relevance means this layer does not contribute many neighbours to an individuals
 overall neighbourhood.
 
