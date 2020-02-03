@@ -24,8 +24,7 @@ grep -rni 'scripts/' -e 'TODO' || true;
 #> R/metrics.R:155:  # TODO: check overwrite
 #> scripts/1-data-prep.R:8:# TODO: timezones
 #> scripts/6-time-window-position.R:94:# TODO: not always a consistent n individuals because some IDs NA in an LC
-#> scripts/5-number-of-observations.R:84:# TODO: check "found duplicate id in a timegroup and/or splitBy - does your group_times threshold match the fix rate?"
-#> scripts/7-metrics.R:54:# TODO: check range
+#> scripts/9-figure-2.R:80:# TODO: MISSING INDIVIDUALS
 ```
 
 ## Info
