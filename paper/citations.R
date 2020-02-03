@@ -50,6 +50,9 @@ citep('10.1111/2041-210X.13215')
 # farine whitehead 2015
 citep('10.1111/1365-2656.12418')
 
+# raster package
+citep(citation('raster'))
+
 ## metrics
 # berlingerio 2012
 citep('10.1007/s11280-012-0190-4')
