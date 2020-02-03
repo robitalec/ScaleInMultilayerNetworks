@@ -411,14 +411,6 @@ knitr::include_graphics('../graphics/figure-winpos.png')
 
 The integration of behavioural and ecological theory has shown the value of considering the importance of scale to better understand and predict animal social networks, including demography (Shizuka and Johnson 2019), evolutionary and quantitative genetics (Fisher and McAdam 2017), disease ecology (Silk et al. 2017), and animal personality (Sih et al. 2017). While the number of studies integrating social network theory into a broader array of behavioural and ecological sub-disciplines is impressive, only recently has the role of animal space use been been considered in describing the causes and consequences of the social environment in the context of (1) Individual fitness and phenotypes (Webber & Vander Wal 2018), (2) habitat selection and space use (He et al. 2019), and (3) movement ecology and collective movement (Bode et al. 2011). Here, we explore how mutlilayer networks may apply to these emerging fields to contribute to the development of social network theory and application.
 
-## Habitat selection and space use 
-
-* Mayor et al. 2009 paper 
-* MRSF Laforge paper 
-* van Beest et al. 2014 scale paper 
-* 1st/2nd/3rd order selection
-* Habitat–performance relationships: finding the right metric at a given spatial scale Jean-Michel Gaillard1,*, Mark Hebblewhite2, Anne Loison3, Mark Fuller4, Roger Powell5, Mathieu Basille1,6 and Bram Van Moorter1
-* Multi-scale habitat selection modeling: a review and outlook
 
 ## Individual fitness and phenotypes
 
@@ -581,6 +573,14 @@ social environment (He et al. 2019).
 
 
 
+## Habitat selection and space use 
+
+* Mayor et al. 2009 paper 
+* MRSF Laforge paper 
+* van Beest et al. 2014 scale paper 
+* 1st/2nd/3rd order selection
+* Habitat–performance relationships: finding the right metric at a given spatial scale Jean-Michel Gaillard1,*, Mark Hebblewhite2, Anne Loison3, Mark Fuller4, Roger Powell5, Mathieu Basille1,6 and Bram Van Moorter1
+* Multi-scale habitat selection modeling: a review and outlook
 
 
 # Conclusions
