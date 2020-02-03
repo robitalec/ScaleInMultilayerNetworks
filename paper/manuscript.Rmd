@@ -286,6 +286,13 @@ observational data.
 
 # Scale in multilayer networks in practice: case study results and discussion
 
+We observed variation in multilayer network metrics as a function of changes in social, spatial, and temporal scale. 
+
+In general, individuals in multilayer networks became more connected as a function of social scale, however, this relationship varied by habitat type and season. As social scale increased, connective redundancy increased rapidly when groups were formed based on ~100m threshold, followed by a plateau and slight decrease at higher thresholds, presumably due to an increase in summer forest degree at ~500m (Figure 3b). Regardless of social scale, layer relevance did not change for any habitat types or seasons, which suggests habitat-by-season layers captured most, if not all, of the potential connections and individual would have across all networks (Figure 3c). Finally, somewhat predictably, graph strength for winter networks increased up to ~100-200m thresholds, followed by a plateau, while graph strength for summer networks did not change as the social threshold increased (Figure 3d).
+
+* increasing graph strength consistent with increasing strength in winter
+
+
 ## Each metric's interpretation
 * Multidegree: sum of degree across layers. High multidegree = connected to many
 individuals across layers. Low multidegree = not connected to many individuals
@@ -327,9 +334,6 @@ landcover across seasons.
 (ref:socres) Varying scale in social threshold. For each social threshold (5m, 50m, 100m, 150m, 200m, 250m, 300m, 350m, 400m, 450m, 500m), multilayer networks were constructed for each landcover class (forest, lichen and open) across two seasons (summer and winter) and four network metrics calculated. A) Similarity of landcover network layers between seasons (e.g.: open summer compared to open winter) showed different responses to changing landcover scale with an overall increase in similarity for open layers and decrease in similarity for lichen layers.**[JWT: what about forest. This made me realize that the legend isn't wide enougth to really tell the difference between lty, forest and open look the same in the legend]** B) Mean connective redundancy across individuals increased rapidly between 5m and 50m reaching a plateau  of about 0.65 **[JWT: Does this have units??]** at approximately a 50m **??** social threshold before decreasing between 400m and 500m. C) Mean layer relevance was relatively stable across social thresholds for each season and landcover layer. D) Mean graph strength across individuals showed an increase for winter network layers at 50m through 500m while summer network layers had consistently weak connections. **[JWT: I'm not sure sparse is the best word, they don't have strong connections, which is related to the number of associations, but it also has to do with the SRI. I would talk about it more about strong/weak connections. Networks can be sparse (few connections), but still have high strength if the ties have higher values]**
 
 
-* increasing layer relevance as more individuals are connected with increasing buffer size
-* decrease in connective redundancy due an increase in summer forest degree at the last (500m) social threshold
-* increasing graph strength consistent with increasing strength in winter
 
 
 ```{r, fig.cap='(ref:socres)'}
