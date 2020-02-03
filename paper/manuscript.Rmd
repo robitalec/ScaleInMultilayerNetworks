@@ -3,8 +3,8 @@ title: The problem and promise of scale in multilayer networks
 author: Alec L. Robitaille^1^, Quinn M.R. Webber^2^, Julie W. Turner^1^, Eric Vander Wal^1,2^
 date: ^1^Department of Biology, Memorial University of Newfoundland, Canada; ^2^Cognitive and Behavioural Ecology Interdisciplinary Program, Memorial University of Newfoundland
 output:
-  github_document
-  # bookdown::pdf_document2
+  #github_document
+   bookdown::pdf_document2
   # bookdown::word_document2:
   #   reference_docx: template.docx
 bibliography: ../references/knitcite.bib
@@ -23,7 +23,7 @@ knitr::opts_chunk$set(
 source('../scripts/0-variables.R')
 ```
 
-## Abstract
+# Abstract
 Scale remains a seminal concept in ecology. Spatial scale, for instance, has
 become a central consideration in the way we understand landscape ecology and
 animal space use. Meanwhile, social processes can also scale from fine-scale
@@ -49,7 +49,7 @@ case study, we demonstrate potential for interconnectedness among individual
 animals, their social environment, and the landscapes they occupy.
 
 
-## Introduction
+# Introduction
 Our inference regarding the ecological processes underlying ecological patterns
 are directly linked to the scale at which they are observed [@Levin_1992;
 @Allen_2015]. Animals are influenced across scales, through processes such as
@@ -131,9 +131,9 @@ knitr::include_graphics('../graphics/figure1.png')
 
 
 
-## Scale in multilayer networks: a case study
+# Scale in multilayer networks: a case study
 
-### Caribou socioecology
+## Caribou socioecology
 Here, we use caribou as a case study to develop scale-dependent multilayer
 networks based on social (visual and auditory perception), spatial (habitat
 type), and temporal (seasonal). Caribou are gregarious ungulates with
@@ -154,7 +154,7 @@ caribou. We therefore partitioned data into two discrete seasons:  summer (3
 August - 20 September) and winter (1 January – 17 February) based on caribou
 socioecology [@Peignier_2019].
 
-### Caribou location data
+## Caribou location data
 We used GPS location data collected from Fogo Island caribou in 2017 and 2018.
 Adult female caribou were immobilized and fitted with global positioning system
 (GPS) collars (Lotek Wireless Inc., Newmarket, ON, Canada, GPS4400M collars,
@@ -164,7 +164,7 @@ into a discrete removed all erroneous and outlier GPS fixes following Bjørneraa
 et al. (2010)<!-- TODO-->. We did not collar all female caribou in the herd;
 however, we assumed that our sample of collared animals was random.
 
-### Landscape data and habitat classification
+## Landscape data and habitat classification
 Landcover data were provided by the Newfoundland and Labrador Wildlife Division.
 Available landcover classification included nine habitat types at <!-- TODO:
 double check --> 10m resolution. We reclassified the landcover types into three
@@ -176,9 +176,9 @@ and mixed-wood forest habitat types. Water habitat was excluded from all
 subsequent analyses.
 <!-- using the raster package for R? -->
 
-### Caribou multilayer social networks
+## Caribou multilayer social networks
 
-#### Network types and construction (defining layers for the multilayer network)
+### Network types and construction (defining layers for the multilayer network)
 <!-- should use something like "using syntax from Kivela 2014..." or 
 Following [@Kivela_2014]:
 other info to maybe include: the multilayer network was not node-aligned since
@@ -223,7 +223,7 @@ separated by more than the given distance [@Farine_2015]. Social groups were
 designated if two or more individuals occurred within a given distance of one
 another at any given time point.
 
-#### Network metrics
+### Network metrics
 We used a series of metrics to characterize the multilayer networks focusing on the relevance of individual layers, 
 similarity of layers and the role of individuals. We calculated multidegree, the sum of degree centrality across layers, and neighbourhood, the sum of unique neighbours to each individual [@Berlingerio_2012; @Kivela_2014]. Comparing the multidegree and number of unique neighbours, we measured the connective redundancy, the proportion of neighbours repeated in multiple layers, and the layer relevance, the proportion of neighbours present compared to the neighbourhood for each individual. To measure the role of individuals, we calculated the graph strength for each individual for each layer specific season and landcover context. 
 
@@ -307,9 +307,9 @@ correlation coefficient of degree vectors for each layer, comparing each
 landcover across seasons.
 
 
-### Varying scale in multilayer networks
+## Varying scale in multilayer networks
 
-#### Social scale
+### Social scale
 
 We altered social scale based on visual (short distance) and auditory (long
 distance) sensory modalities of caribou <!--(REF?)-->. Specifically, we modified
@@ -319,7 +319,7 @@ finest social scale, only individuals within 5m of one another were considered
 in the same group, whereas at the coarsest social scale, individuals within 500m
 of one another were considered in the same group.
 
-#### Spatial scale
+### Spatial scale
 
 To assess the influence of spatial scale on multilayer networks, we aggregated
 our landcover classification map at varying scales relevant to caribou ecology.
@@ -332,7 +332,7 @@ represents the scale at which caribou tend to select and avoid habitat
 (Bastille-Rousseau et al. 2017).
 
 
-#### Temporal scale
+### Temporal scale
 
 We altered the temporal scale of multilayer networks by varying the length and
 position of the time window used to define seasons. The length of the time
@@ -351,9 +351,9 @@ iteratively included 25 additional observations, regenerating the multilayer
 network and calculating associations of individuals. Subsequent iterations
 included the previous set of observations to mimic observational data.
 
-## Scale in multilayer networks in practice: case study results and discussion
+# Scale in multilayer networks in practice: case study results and discussion
 
-### Each metric's interpretation
+## Each metric's interpretation
 * Multidegree: sum of degree across layers. High multidegree = connected to many
 individuals across layers. Low multidegree = not connected to many individuals
 across layers.
@@ -389,7 +389,7 @@ landcover across seasons.
 
 
 
-### Figure captions and brief interpretations
+## Figure captions and brief interpretations
 
 
 (ref:lcres) Varying scale in landcover resolution. For each landcover resolution (10m, 100m, 250m, 500m and 1000m), multilayer networks were constructed for each landcover class (forest, lichen and open) across two seasons (summer and winter), and four network metrics were calculated. A) Similarity of landcover network layers between seasons (e.g.: open summer compared to open winter) showed different responses to changing landcover scale with an increase in similarity for forest layers at 250m and decrease in similarity for open layers at 250m. Note that lichen layer similarity is not shown because individuals did not interact in lichen habitats greater greater than 10m landcover resolution. B) Mean connective redundancy across individuals showed a decreasing trend with increasing landcover resolution. C) Mean layer relevance showed sparse connectivity in summer compared to winter networks and a decrease in winter lichen layer relevance at higher landcover resolutions. D) Mean graph strength of individuals was weaker during the summer compared to the winter months.  
@@ -473,7 +473,7 @@ knitr::include_graphics('../graphics/figure-winpos.png')
 ```
 
 
-###
+##
 Results and interpretation of temporal scale
 
 Results and interpretation of spatial scale
@@ -483,8 +483,8 @@ Results and interpretation of social scale
 
 
 
-## Perspectives  to advance multilayer networks 
-### Habitat selection and space use 
+# Perspectives  to advance multilayer networks 
+## Habitat selection and space use 
 
 * Mayor et al. 2009 paper 
 * MRSF Laforge paper 
@@ -493,7 +493,7 @@ Results and interpretation of social scale
 * Habitat–performance relationships: finding the right metric at a given spatial scale Jean-Michel Gaillard1,*, Mark Hebblewhite2, Anne Loison3, Mark Fuller4, Roger Powell5, Mathieu Basille1,6 and Bram Van Moorter1
 * Multi-scale habitat selection modeling: a review and outlook
 
-### Individual fitness and phenotypes
+## Individual fitness and phenotypes
 
 Social network positions are frequently used to represent the social environment
 that an individual experiences or their social phenotype. Social phenotypes are
@@ -582,7 +582,7 @@ and logistical constraints.
 
 
 
-### Movement ecology and collective movement
+## Movement ecology and collective movement
 
 Animal movement undoubtedly affects an individual's social environment
 (Strandburg-Peshkin et al. 2015). Movement is a dynamic process that is related
@@ -656,7 +656,7 @@ social environment (He et al. 2019).
 
 
 
-## Conclusions
+# Conclusions
 
 something something blah blah.
 
@@ -679,7 +679,7 @@ navigate their environment and make decisions about where to move next?
 
 
 
-## Acknowledgements
+# Acknowledgements
 
 <!-- add jack -->
 
@@ -690,4 +690,4 @@ for inspiration and helpful discussions about scale. Funding for this study was
 provided by a Vanier Canada Graduate Scholarship to QMRW and a NSERC Discovery
 Grant to EVW.
 
-## References
+# References
