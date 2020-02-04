@@ -324,6 +324,23 @@ quantities of data, ~50m is likely an ideal social scale for generating social
 networks in caribou and similar species.
 
 
+Larger landcover resolution scale resulted in decreased proportion of rare and
+patchy habitats and low connectivity of individuals in these habitats. In
+winter, layer relevance was stable for open and forest habitats but decreased
+for forage habitats (Figure 3c). Connective redundancy decreased with increasing
+landcover resolution due the decrease in connectivity of individuals in winter
+forage habitats, resulting in a multilayer network where neighbours were less
+frequently repeated in multiple layers (Figure 3b). Layer similarity was
+generally stable for forest and open habitats except for a contrasting increase
+in similarity for forest and decrease in similarity for open habitats at 250m
+landcover resolution (Figure 3a). Layer similarity was not possible to calculate
+between winter and summer forage because, at all landcover resolutions greater
+than 10m there were no individuals connected in the network layers. <!--
+individuals still used forage but in much lower proportion + lowered opportunity
+to associate --> These results indicate the importance of matching landcover
+resolution to scale of selection as well as ensuring the landcover product used
+has a resolution fine enough to detect relevant landscape features and habitats.
+
 <!-- landcover resolution
 * decreasing availability of patchy lichen = no edges in these layers, though some small proportion of relocations still exist in those layers
 * decreasing connective redundancy because through resolution because lichen decreased in connectivity and landcovers became more homogeneous (?)
