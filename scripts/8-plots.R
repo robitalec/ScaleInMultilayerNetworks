@@ -14,7 +14,7 @@ source('scripts/0-variables.R')
 
 
 ### Data ----
-var <- 'nobs'
+var <- 'winpos'
 
 if (var == 'lcres') {
   DT <- readRDS('data/derived-data/2-landcover-scale-metrics.Rds')[lcres<2000]
@@ -132,7 +132,8 @@ g8 <- base3 + geom_line(aes(y = mngraphstrength), size = linesize) + ylab('Graph
     theme(plot.tag = element_text(size = 14, hjust = 0, vjust = 0),
           legend.key.width = unit(1.4,"cm")) &
     labs(x = varnames[vars == var, varname]) &
-    p)
+    p &
+    expand_limits(y = c(-0.075, 1)))
 
 
 ggsave(paste0('graphics/figure-', var, '.png'), width = 13, height = 10)
