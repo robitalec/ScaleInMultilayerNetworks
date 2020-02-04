@@ -707,7 +707,6 @@ networks represent a novel framework for considering the influence of habitat
 selection and space use on sociality across scales.
 
 
-### 2
 <!--
 * multilayer networks are new but folks have looked at habitat selection + sociality
   * Fortin
@@ -731,7 +730,8 @@ home range overlap in areas of moderate seasonality. Despite these, *missing
 multilayer approach*.
 
 
-### 3
+<!--
+
 Scale + habitat selection and space use
 types of scale to consider in these types of ML nets
 
@@ -751,8 +751,12 @@ Johnson 1980 1st order = selection of the physical or geographical range of a sp
 * van Beest et al. 2014 scale paper 
 * Habitat–performance relationships: finding the right metric at a given spatial scale Jean-Michel Gaillard1,*, Mark Hebblewhite2, Anne Loison3, Mark Fuller4, Roger Powell5, Mathieu Basille1,6 and Bram Van Moorter1
 * Multi-scale habitat selection modeling: a review and outlook
+-->
+Scale in habitat selection... Mayor (2019)
 
-### 4
+
+
+<!--
 how to combine moving forward
 multilayer networks across landcover types
 in areas of high selection/low selection or favorable/unfavorable habitat
@@ -763,8 +767,10 @@ in our case study, we looked at increase spatial scales of landcover metrics
 we could define layers of the multilayer network according to home range overlap 
 instead of specific associations
 looking at broader temporal scales and coarser spatial resolutions
-
-
+-->
+How to combine moving forward: habitat selection, space use, multiple scales, multilayer networks
+Sociality across scales eg home range overlap and interactions
+Layers defined by habitat/landcover
 
 
 
