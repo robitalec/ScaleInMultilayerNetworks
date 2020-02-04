@@ -98,6 +98,9 @@ citep('10.1073/pnas.0701159104')
 # royle 2012
 citep('10.1098/rspb.2012.1701')
 
+# almeling 2016
+citep('10.1016/j.cub.2016.04.066')
+
 ## movement
 # Strandburg-Peshkin 2015
 citep('10.1126/science.aaa5099')
