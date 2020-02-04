@@ -14,7 +14,7 @@ source('scripts/0-variables.R')
 
 
 ### Data ----
-var <- 'winlength'
+var <- 'nobs'
 
 if (var == 'lcres') {
   DT <- readRDS('data/derived-data/2-landcover-scale-metrics.Rds')[lcres<2000]
@@ -66,8 +66,8 @@ if (var %in% c('winpos', 'winlength')) {
   pos1 <- c(0.85,0.42)
   pos2 <- c(0.85,0.4)
 } else if (var %in% c('nobs', 'lcres')){
-  pos1 <- c(0.85,0.22)
-  pos2 <- c(0.85,0.2)
+  pos1 <- c(0.85,0.11)
+  pos2 <- c(0.85,0.35)
 }
 
 p <- theme(legend.text = element_text(size = 12, color = "black"),
