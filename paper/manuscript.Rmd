@@ -621,14 +621,62 @@ social environment (He et al. 2019).
 
 
 
-## Habitat selection and space use 
+## Habitat selection and space use
+### 1
+Habitat selection and shared space use *link to social*
+Habitat selection depends on 
+species specific
+individual differences in home range and habitat selection
+percentage of home range overlap links to foraging quality and availability in herbivores
+multilayer networks are "a potential framework" for investigating social dynamics given shared space use and individual habitat selection
+
+
+### 2
+Sociality / multilayer have been used with habitat selection and space use
+... examples
+
+Fortin 2009 showed that "bison selection of habitat and landscape features was mediated
+by social group size, hypothesizing the predation risk avoidance is the strongest driver of habitat selection"
+
+Banks 2007 habitat fragmentation influences + increased mate availability given increased home range overlap when resource availability was higher
+
+mcloughlin2000 variable response bears to habitat quality and space use/home range overlap
+
+### 3
+Scale + habitat selection and space use
+types of scale to consider in these types of ML nets
+
+
+
+McGarigal 2016 organisms select habitat at multiple scales, temporal spatial 
+should investigate scale dependency. linking ecological processes to scale eg foraging or predator-prey dynamics
+
+
+Johnson 1980 1st order = selection of the physical or geographical range of a species
+2nd order = selection of a home range of an individual or social group
+3rd order = selection of various habitat patches within the home range 
+4th order = selection of specific resources within a habitat patch
 
 * Mayor et al. 2009 paper 
 * MRSF Laforge paper 
 * van Beest et al. 2014 scale paper 
-* 1st/2nd/3rd order selection
 * Habitat–performance relationships: finding the right metric at a given spatial scale Jean-Michel Gaillard1,*, Mark Hebblewhite2, Anne Loison3, Mark Fuller4, Roger Powell5, Mathieu Basille1,6 and Bram Van Moorter1
 * Multi-scale habitat selection modeling: a review and outlook
+
+### 4
+how to combine moving forward
+multilayer networks across landcover types
+in areas of high selection/low selection or favorable/unfavorable habitat
+combined with seasonality
+
+in our case study, we looked at increase spatial scales of landcover metrics
+
+we could define layers of the multilayer network according to home range overlap 
+instead of specific associations
+looking at broader temporal scales and coarser spatial resolutions
+
+
+
 
 
 # Conclusions
