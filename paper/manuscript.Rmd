@@ -51,6 +51,8 @@ framework. Based on social network and behavioural ecology theory as well as our
 case study, we demonstrate potential for interconnectedness among individual
 animals, their social environment, and the landscapes they occupy.
 
+## Keywords
+Landscape ecology, Movement ecology, Social network analysis, Space use 
 
 # Introduction
 Our inference regarding the ecological processes underlying ecological patterns
