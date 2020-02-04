@@ -236,6 +236,7 @@ designated if two or more individuals occurred within a given distance of one
 another at any given time point.
 
 ### Network metrics
+<!-- TODO: expand + simplify + examples individual A, B etc -->
 We used a series of metrics to characterize the multilayer networks, focusing on
 the the role of individuals, relevance of individual layers and the similarity
 of different layers. To measure the role of individuals, we calculated the graph
@@ -565,7 +566,7 @@ transfer about the quality or location of resources to other group members
 inextricably linked and multilayer networks represent a potential analytical
 framework for linking these processes (e.g. Mourier et al. 2019).
 
-
+<!-- remove italics from terms? -->
 Although multilayer animal social networks are relatively novel (Silk et al.
 2018), movement behaviour within multilayer networks has already been considered
 in a couple studies. In vulturine gunieafowl (*Acryllium vulturinum*), GPS
