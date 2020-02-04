@@ -301,6 +301,48 @@ Subsequent iterations included the previous set of observations to mimic
 observational data. <!-- TODO: bah conclude / this sentence falls off a cliff -->
 
 # Scale in multilayer networks in practice: case study results and discussion
+<!-- FIGURES ----------------------- -->
+
+(ref:socres) Varying scale in social threshold. For each social threshold (5m, 50m, 100m, 150m, 200m, 250m, 300m, 350m, 400m, 450m, 500m), multilayer networks were constructed for each landcover class (forest, lichen and open) across two seasons (summer and winter) and four network metrics calculated. A) Similarity of landcover network layers between seasons (e.g.: open summer compared to open winter) showed different responses to changing landcover scale with an overall increase in similarity for open layers and decrease in similarity for lichen layers. <!--TODO: what about forest.--> B) Mean connective redundancy across individuals increased rapidly between 5m and 50m reaching a plateau  of about 0.65 at approximately a 50m <!--TODO:**??**--> social threshold before decreasing between 400m and 500m. C) Mean layer relevance was relatively stable across social thresholds for each season and landcover layer. D) Mean graph strength across individuals showed an increase for winter network layers at 50m through 500m while summer network layers had consistently weak connections. 
+
+```{r socres, fig.cap='(ref:socres)'}
+knitr::include_graphics('../graphics/figure-spatialthreshold.png')
+```
+
+
+(ref:lcres) Variation in multilayer network metrics as a function of changes in landcover resolution, a metric which we interpret as spatial scale. For each landcover resolution (10m, 100m, 250m, 500m and 1000m), multilayer networks were constructed for each landcover class (forest, lichen and open) across two seasons (summer and winter), and four network metrics were calculated and we examined how network metrics changed as a function of changes in spatial scale. A) Similarity of landcover network layers between seasons (e.g.: open summer compared to open winter) showed different responses to changing landcover scale with an increase in similarity for forest layers at 250m and decrease in similarity for open layers at 250m. Note that lichen layer similarity is not shown because individuals did not interact in lichen habitats greater greater than 10m landcover resolution. B) Mean connective redundancy across individuals showed a decreasing trend with increasing landcover resolution. C) Mean layer relevance showed sparse connectivity in summer compared to winter networks and a decrease in winter lichen layer relevance at higher landcover resolutions. D) Mean graph strength of individuals was weaker during the summer compared to the winter months.  
+
+```{r lcres, fig.cap='(ref:lcres)'}
+knitr::include_graphics('../graphics/figure-lcres.png')
+```
+
+
+<!-- TODO: RO first sentence... -->
+(ref:nobs) Varying scale in number of observations. For each iteration, a number of observations (10-485 observations in steps of 25) were selected from the complete data set to construct multilayer networks with layers defined by each landcover class (forest, lichen and open) across two seasons (summer and winter) and four network metrics calculated. A) Similarity of landcover network layers between seasons (e.g.: open summer compared to open winter) showed a stabilizing layer similarity at 200 observations for forest and 300 observations for lichen and open. <!--TODO:*There were observations of individuals in lichen and open areas at lower numbers of observations during the winter, so layer similarity could not be calculated at these values.* **Brief explanation of why two landcover don't have values at lower nobs??**.--> B) Mean connective redundancy across individuals increased with increasing number of observations, which begins to plateau around 100 observations. C) Mean layer relevance across individuals increased for winter layers and slightly increased for summer layers. D) Mean graph strength across individuals varied for winter layers becoming relatively stable at 200 observations and remained weak throughout for summer layers.
+
+
+```{r nobs, fig.cap='(ref:nobs)'}
+knitr::include_graphics('../graphics/figure-nobs.png')
+```
+
+
+(ref:winlen) Varying scale in time window length. For each time window length (40 to 100 days in length increasing by 5 days in sequence), multilayer networks were constructed for each landcover class (forest, lichen and open) across two seasons (summer and winter) and four network metrics calculated. A) Similarity of landcover network layers between seasons (e.g.: open summer compared to open winter) showed increasing similarity consistent across landcover layers with increasing window length. B) Mean connective redundancy across individuals varied dramatically depending on the length of the time window <!--TODO:**[JWT: previously this was describing fig. 3. I don't know if what I wrote best encapsulates what connnective redundancy does here. Length of time window seems to make connective redundancy highly variable as it changes.]**.--> C) Mean layer relevance generally increased during the summer months but was relatively stable across time window lengths for each landcover layer. D) Mean graph strength across individuals was relatively stable over increasing time window lengths, though there was more variation in strength between landcover types as window length increased. <!--TODO:**[see if you agree with my changes. B-D were based off fig. 3 and not relevant to this figure]**-->
+
+
+```{r winlen, fig.cap='(ref:winlen)'}
+knitr::include_graphics('../graphics/figure-winlength.png')
+```
+
+
+(ref:winpos) Varying scale in time window position. For each time window position (shifting the start date of the time window used to define seasons 1 to 48 days from the original), multilayer networks were constructed for each landcover class (forest, lichen and ope) across two seasons (summer and winter) and four network metrics calculated. A) Similarity of landcover network layers between seasons (e.g.: open summer compared to open winter) showed fluctuations in layer similarity across landcover types with shifted time windows. <!--TODO:**[JWT: previously describing window length, not position. Check that you're ok with my changes]**--> B) Mean connective redundancy across individuals increased between window position 12 through 48 due to increased connectivity in the summer network layers. C) Mean layer relevance slightly decreased for winter layers and increased for summer layers, showing decreasing connectivity in shifted winter time windows and greater connectivity in summer layers at later window positions. D) Mean graph strength across individuals increased in summer network layers at window position 25 and increased between window position 20 and 40 for winter network layers.
+
+
+```{r winpos, fig.cap='(ref:winpos)'}
+knitr::include_graphics('../graphics/figure-winpos.png')
+```
+
+
+<!-- RESULTS / DISCUSSION --------------------------- -->
 
 We observed variation in multilayer network metrics as a function of changes in social, spatial, and temporal scale. 
 <!-- TODO: make sure we clarify these are means of all individuals? -->
