@@ -14,7 +14,7 @@ source('scripts/0-variables.R')
 
 
 ### Data ----
-var <- 'winpos'
+var <- 'winlength'
 
 if (var == 'lcres') {
   DT <- readRDS('data/derived-data/2-landcover-scale-metrics.Rds')[lcres<2000]
@@ -60,8 +60,8 @@ DT[, paste0('mn', metriccols) := lapply(.SD, mean, na.rm = TRUE),
 ## Theme
 # Legend position
 if (var %in% c('winpos', 'winlength')) {
-  pos1 <- c(0.85,0.12)
-  pos2 <- c(0.85,0.1)
+  pos1 <- c(0.85,0.11)
+  pos2 <- c(0.85,0.075)
 } else if (var %in% c('spatialthreshold')) {
   pos1 <- c(0.85,0.42)
   pos2 <- c(0.85,0.4)
@@ -70,8 +70,7 @@ if (var %in% c('winpos', 'winlength')) {
   pos2 <- c(0.85,0.2)
 }
 
-p <- theme(legend.position = pos1,
-           legend.text = element_text(size = 12, color = "black"),
+p <- theme(legend.text = element_text(size = 12, color = "black"),
            legend.title = element_blank(),
            legend.spacing = unit(-0.5, 'cm'),
            legend.background = element_blank(),
@@ -103,7 +102,9 @@ linesize <- 1.3
 base1 <- ggplot(unique(DT[, .SD, .SDcols = c(var, 'lcname', 'layersim')]), 
             aes(x = get(var), linetype = lcname))
 
-g1 <- base1 + geom_line(aes(y = (layersim)), size = linesize) + ylab('Layer Similarity')
+g1 <- base1 + geom_line(aes(y = (layersim)), size = linesize) + 
+  ylab('Layer Similarity') +
+  theme(legend.position = pos1)
 
 # Plot full, across
 base2 <- ggplot(DT[, .SD[1], by = var], 
@@ -117,13 +118,14 @@ g5 <- base2 + geom_line(aes(y = mnconnredund), size = linesize) + ylab('Connecti
 
 # Plot within
 base3 <- ggplot(DT, aes(x = get(var), color = season, linetype = lcname)) +
-  scale_color_manual(values = c(cols$hex[1], cols$hex[5]))
+  scale_color_manual(values = c(cols$hex[1], cols$hex[5])) 
 
 g6 <- base3 + geom_line(aes(y = mnsplitNeigh), size = linesize) + ylab('Degree')
-g7 <- base3 + geom_line(aes(y = mnrelev), size = linesize) + ylab('Layer Relevance') +
-  theme(legend.position = pos2) + guides(linetype = FALSE)
-g8 <- base3 + geom_line(aes(y = mngraphstrength), size = linesize) + ylab('Graph Strength') +
-  guides(color = FALSE, linetype = FALSE)
+g7 <- base3 + geom_line(aes(y = mnrelev), size = linesize) + 
+  ylab('Layer Relevance') + guides(color = FALSE, linetype = FALSE)
+g8 <- base3 + geom_line(aes(y = mngraphstrength), size = linesize) + 
+  ylab('Graph Strength') + guides(linetype = FALSE) +  
+  theme(legend.position = pos2)
 
 
 # Patchwork

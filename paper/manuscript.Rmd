@@ -399,7 +399,7 @@ dissaggregation according to resource availability and presence of conspecifics.
 <!-- TODO: ?? -->
 <!-- TODO: end with something highlighting this shows it's important to properly define your season -->
 
-Similarly, shifting window position of the summer season resulted in an increase in number of connections between individuals. Layer relevance 
+<!-- Similarly, shifting window position of the summer season resulted in an increase in number of connections between individuals. Layer relevance  -->
 
 <!-- win position
 * increasing network connectivity in summer when the window position is moved - these seasons are more similar than the original window position
@@ -408,7 +408,9 @@ Similarly, shifting window position of the summer season resulted in an increase
 * increased graph strength for winter down the middle, with generally increasing summer layers - again where the season is including more shoulder season potentially
 -->
 
-Shifting window position results showed increasing layer similarity 
+<!-- Shifting window position results showed increasing layer similarity  -->
+
+**Missing: discussion of window position..**
 
 
 <!--
