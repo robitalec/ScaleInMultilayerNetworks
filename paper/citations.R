@@ -50,6 +50,9 @@ citep('10.1111/2041-210X.13215')
 # farine whitehead 2015
 citep('10.1111/1365-2656.12418')
 
+# Cairns and Schwaeger 1987
+citep('10.1016/S0003-3472(87)80018-0')
+
 # raster package
 citep(citation('raster'))
 
@@ -95,6 +98,9 @@ citep('10.1073/pnas.0701159104')
 # royle 2012
 citep('10.1098/rspb.2012.1701')
 
+## movement
+# Strandburg-Peshkin 2015
+citep('10.1126/science.aaa5099 ')
 
 ### R, R Packages
 # R

@@ -222,7 +222,7 @@ interlayer edges represented connections between the same individuals across
 contexts.
 
 We weighted edges of social networks by the strength of association between
-caribou using the simple ratio index (SRI, Cairns and Schwager 1987): <!-- TODO: get Cairns ref-->
+caribou using the simple ratio index (SRI, Cairns and Schwaeger 1987): <!-- TODO: get Cairns ref-->
 
 $$ SRI = \frac{x}{x + y_{AB} + y_{A} + y_{B}} $$
 
@@ -556,7 +556,7 @@ and logistical constraints.
 ## Movement ecology and collective movement
 
 Animal movement undoubtedly affects an individual's social environment
-(Strandburg-Peshkin et al. 2015). Movement is a dynamic process that is related
+[@Strandburg-Peshkin2015]. Movement is a dynamic process that is related
 to the resources an individual consumes within their home range and the space
 that they use (Van Moorter et al. 2016). Collective movement can reduce
 group-level predation via detection-dilution trade-offs and improve information
