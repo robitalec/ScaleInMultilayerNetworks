@@ -708,16 +708,28 @@ selection and space use on sociality across scales.
 
 
 ### 2
+<!--
+* multilayer networks are new but folks have looked at habitat selection + sociality
+  * Fortin
+  * Banks
+  * McLoughlin
+  
+* none use a multilayer framework to explicitly combine
+-->
 
-Sociality / multilayer have been used with habitat selection and space use
-... examples
+Despite not in a multilayer network context, the link between habitat and
+sociality has been previously investigated. Fortin et al. (2009) evaluated
+habitat selection and group formation and division in bison. They observed
+contrasting group sizes in meadows and forests as well as identified predation
+risk avoidance as a main factor in their habitat selection [@Fortin_2009]. A
+review of the influence of habitat fragmentation on sociality noted decreased
+group size in small patches compared to large, continuous landscapes
+[@Banks_2007]. Finally, McLoughlin (2000) showed variable responses in brown
+bears (*Ursus arctos*) to seasonality, a proxy in this case for habitat quality,
+showing high home range overlap in areas of low and high seasonality and low
+home range overlap in areas of moderate seasonality. Despite these, *missing
+multilayer approach*.
 
-Fortin 2009 showed that "bison selection of habitat and landscape features was mediated
-by social group size, hypothesizing the predation risk avoidance is the strongest driver of habitat selection"
-
-Banks 2007 habitat fragmentation influences + increased mate availability given increased home range overlap when resource availability was higher
-
-mcloughlin2000 variable response bears to habitat quality and space use/home range overlap
 
 ### 3
 Scale + habitat selection and space use
