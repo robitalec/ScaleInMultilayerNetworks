@@ -54,6 +54,8 @@ animals, their social environment, and the landscapes they occupy.
 ## Keywords
 Landscape ecology, Movement ecology, Social network analysis, Space use 
 
+\newpage
+
 # Introduction
 Our inference regarding the ecological processes underlying ecological patterns
 are directly linked to the scale at which they are observed [@Levin_1992;
@@ -203,7 +205,7 @@ total of six layers. Layers were composed of individuals represented as nodes
 and social associations represented as edges, for each season and landcover
 combination. Proximity-based social network layers were generated using the R
 package `spatsoc` [@Robitaille_2019] in `r version$version.string`
-[@R_Core_Team_2019].
+[@R_Core_Team_2019]. *FIX VANDER WAL IN SPATSOC REF*
 
 Within each layer, we assumed individuals were associating if simultaneous GPS
 fixes (i.e., recorded within 5 minutes of each other) were within a given
@@ -272,7 +274,7 @@ We aggregated the 10m landcover raster using the R package `grainchanger`
 [@Graham_2019] at five scales: 100m, 250m, 500m, and 1000m. Aggregation occurred
 using a modal moving window method using a circular window corresponding to the
 above scales [@Graham_2019a]. 10m and 100m represents fine-scale decision making
-for caribou during foraging <!--TODO: REF-->, while re-sampling at 500m and 1000m
+for caribou during foraging (Webber et al. unpublished data), while re-sampling at 500m and 1000m
 represents the scale at which caribou tend to select and avoid habitat
 (Bastille-Rousseau et al. 2017).
 
@@ -281,8 +283,8 @@ represents the scale at which caribou tend to select and avoid habitat
 <!--TODO: are we missing some mention of 2017 summer and 2018 winter somewhere?-->
 We altered the temporal scale of multilayer networks by varying the length and
 position of the time window used to define seasons. The length of the time
-window varied from 40-100 days using a fixed start day for winter (1 January)
-and summer (3 August). The position of the time window was shifted by 1-48 days,
+window varied from 40-100 days using a fixed start day for winter (starting at 1 January)
+and summer (starting at 3 August). The position of the time window was shifted by 1-48 days,
 using a fixed time window length of 48 days. These new time windows were
 iteratively used to partition data into two discrete seasons (winter, summer)
 and generate multilayer networks.
@@ -691,11 +693,11 @@ promise and problem of scale in mutlilayer networks:
 1. How do social phenotypes across scales differently influence fitness? Are
 some temporal or social scales better predictors for different fitness metrics?
 
-1. Why do individuals associate more strongly with certain conspecifics in some
+2. Why do individuals associate more strongly with certain conspecifics in some
 habitats? What, if any, is the role of movement in the context of habitat
 networks?
 
-1. How, and why, does the spatial scale of perception influence, e.g. auditory,
+3. How, and why, does the spatial scale of perception influence, e.g. auditory,
 visual, or chemotaxis, influence the  social environment across scales? What is
 the role of memory, and by extension social and spatial cognition, as animals
 navigate their environment and make decisions about where to move next?
