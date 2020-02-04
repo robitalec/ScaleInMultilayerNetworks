@@ -456,8 +456,8 @@ integrating social network theory into a broader array of behavioural and
 ecological sub-disciplines is impressive, only recently has the role of animal
 space use been been considered in describing the causes and consequences of the
 social environment in the context of (1) Individual fitness and phenotypes
-(Webber & Vander Wal 2018), (2) habitat selection and space use (He et al.
-2019), and (3) movement ecology and collective movement (Bode et al. 2011).
+(Webber & Vander Wal 2018), (2)  movement ecology and collective movement (Bode et al. 2011), 
+and (3) habitat selection and space use (He et al. 2019).
 Here, we explore how mutlilayer networks may apply to these emerging fields to
 contribute to the development of social network theory and application.
 
