@@ -303,6 +303,8 @@ observational data. <!-- TODO: bah conclude / this sentence falls off a cliff --
 # Scale in multilayer networks in practice: case study results and discussion
 
 We observed variation in multilayer network metrics as a function of changes in social, spatial, and temporal scale. 
+<!-- TODO: make sure we clarify these are means of all individuals? -->
+
 
 In general, individuals in multilayer networks became more connected as a
 function of social scale, however, this relationship varied by habitat type and
@@ -324,6 +326,13 @@ quantities of data, ~50m is likely an ideal social scale for generating social
 networks in caribou and similar species.
 
 
+
+<!-- landcover resolution
+* decreasing availability of patchy lichen = no edges in these layers, though some small proportion of relocations still exist in those layers
+* decreasing connective redundancy because through resolution because lichen decreased in connectivity and landcovers became more homogeneous (?)
+* decreasing winter lichen relevance because the degree + number of edges decreased
+--> 
+
 Larger landcover resolution scale resulted in decreased proportion of rare and
 patchy habitats and low connectivity of individuals in these habitats. In
 winter, layer relevance was stable for open and forest habitats but decreased
@@ -341,11 +350,7 @@ to associate --> These results indicate the importance of matching landcover
 resolution to scale of selection as well as ensuring the landcover product used
 has a resolution fine enough to detect relevant landscape features and habitats.
 
-<!-- landcover resolution
-* decreasing availability of patchy lichen = no edges in these layers, though some small proportion of relocations still exist in those layers
-* decreasing connective redundancy because through resolution because lichen decreased in connectivity and landcovers became more homogeneous (?)
-* decreasing winter lichen relevance because the degree + number of edges decreased
---> 
+
 
 
 
@@ -371,19 +376,31 @@ could be useful for determining the number of observations necessary for
 sufficiently describing the social dynamics across contexts.
 
 
-
-
-
-
-
-
-
 <!-- win  length
 * increasing window length = increasingly similar layers and increasingly redundant edges. more individuals have the opportunity to interact
 * increasing window length also leads to increasing similarity between seasons because seasons are less well defined/include more shoulder seasons
 * decreasing graph strength at the upper end of window length in winter showing again inclusion of more shoulder season
 * layers are more similarly relevant at high window length
 -->
+
+In general, individuals in multilayer networks became more connected as a
+function of social scale, however, this relationship varied by habitat type and
+season. As social scale increased, connective redundancy increased rapidly when
+groups were formed based on ~100m threshold, followed by a plateau and slight
+decrease at higher thresholds, presumably due to an increase in summer forest
+degree at ~500m (Figure 3b). Regardless of social scale, layer relevance did not
+change for any habitat types or seasons, which suggests habitat-by-season layers
+captured most, if not all, of the potential connections and individual would
+have across all networks (Figure 3c). Finally, somewhat predictably, graph
+strength for winter networks increased up to ~100-200m thresholds, followed by a
+plateau, while graph strength for summer networks did not change as the social
+threshold increased (Figure 3d).  Taken together, these results suggest the
+optimal social scale at which groups should be assigned is likely somewhere
+between ~20-100m based on the rate at which network metrics stabilized. For
+ungulates, groups are often assigned based on 50m threshold (Lingle 2003;
+Lesmeries et al. 2018; Peignier et al. 2019), suggesting that given similar
+quantities of data, ~50m is likely an ideal social scale for generating social
+networks in caribou and similar species.
 
 
 <!-- win position
