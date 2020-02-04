@@ -682,16 +682,33 @@ social environment (He et al. 2019).
 
 
 ## Habitat selection and space use
-### 1
-Habitat selection and shared space use *link to social*
-Habitat selection depends on 
-species specific
-individual differences in home range and habitat selection
-percentage of home range overlap links to foraging quality and availability in herbivores
-multilayer networks are "a potential framework" for investigating social dynamics given shared space use and individual habitat selection
+<!--
+* Social structure is influenced by large scale processes such as resource availability and seasonality [@Peigner_2019], configuration [@He_2019] and fragmentation [@Banks_2007].
+* Habitat selection definition
+* johnson's four scales of selection and Mayor 2009 habitat selection across scales
+* habitat selection influences social structure since resource availability + quality influence home range size and overlap
+* individuals must share space to interact [@Farine_2015]
+* multilayer networks represent a novel framework for considering habitat selection and space use on sociality across scales
+
+individual differences in habitat selection
+-->
+
+Social structure is influenced by large scale processes such as resource
+availability and seasonality [@Peigner_2019], configuration [@He_2019] and
+fragmentation [@Banks_2007]. Habitat selection is the "disproportionate use of
+available" [@Mayor_2009] landscape resources or features by animals. Johnson
+(1980) identified four orders of habitat selection: (1) the geographical range
+of a species, (2) the home range of an individual, (3) the habitat patches
+within the home range and (4) specific resources within a habitat patch.
+Combined, habitat selection and social structure are intimately linked as
+individuals must share space to interact [@Farine_2015] and resource
+availability and quality influence home range size and overlap. Multilayer
+networks represent a novel framework for considering the influence of habitat
+selection and space use on sociality across scales.
 
 
 ### 2
+
 Sociality / multilayer have been used with habitat selection and space use
 ... examples
 
