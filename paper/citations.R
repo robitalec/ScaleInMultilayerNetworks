@@ -101,6 +101,39 @@ citep('10.1098/rspb.2012.1701')
 # almeling 2016
 citep('10.1016/j.cub.2016.04.066')
 
+# berger 2015
+citep('10.1111/j.1365-2656.2007.01351.x')
+
+# holekamp 2012
+citep('10.1111/j.1365-294X.2011.05240.x')
+
+# Carter 2015
+citep('10.1016/j.anbehav.2015.03.020')
+
+# Castles 2014
+citep('10.1016/j.anbehav.2014.07.023')
+
+# farine 2015 proximity as proxy
+citep('10.1016/j.anbehav.2014.11.019')
+
+# Snijders & Naguib, 2017
+citep('10.1016/bs.asb.2017.02.004')
+
+# Ellis 2019
+citep('10.1098/rspb.2019.1991')
+
+# Tarka 2018
+citep('10.1007/s00265-018-2534-2')
+
+# Turner 2018
+citep('10.1007/s00265-017-2426-x')
+
+# Farine, 2017 static vs dynamic
+citep('10.1111/1365-2656.12764')
+
+# Proskurnikov & Tempo, 2017
+citep('10.1016/j.arcontrol.2017.03.002')
+
 ## movement
 # Strandburg-Peshkin 2015
 citep('10.1126/science.aaa5099')
