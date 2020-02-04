@@ -100,7 +100,7 @@ citep('10.1098/rspb.2012.1701')
 
 ## movement
 # Strandburg-Peshkin 2015
-citep('10.1126/science.aaa5099 ')
+citep('10.1126/science.aaa5099')
 
 ### R, R Packages
 # R

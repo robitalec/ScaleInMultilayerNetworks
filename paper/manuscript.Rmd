@@ -556,7 +556,7 @@ and logistical constraints.
 ## Movement ecology and collective movement
 
 Animal movement undoubtedly affects an individual's social environment
-[@Strandburg-Peshkin2015]. Movement is a dynamic process that is related
+[@Strandburg-Peshkin_2015]. Movement is a dynamic process that is related
 to the resources an individual consumes within their home range and the space
 that they use (Van Moorter et al. 2016). Collective movement can reduce
 group-level predation via detection-dilution trade-offs and improve information
