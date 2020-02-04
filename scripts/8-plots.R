@@ -14,7 +14,7 @@ source('scripts/0-variables.R')
 
 
 ### Data ----
-var <- 'winpos'
+var <- 'nobs'
 
 if (var == 'lcres') {
   DT <- readRDS('data/derived-data/2-landcover-scale-metrics.Rds')[lcres<2000]
@@ -32,10 +32,10 @@ alloc.col(DT)
 
 
 # Recode landcover
-# 1 = open, 2 = forest, 3 = lichen
+# 1 = open, 2 = forest, 3 = foraging (lichen)
 DT[get(lccol) == 1, c('lcname', 'layernm') := .('open', paste0(season, '-open'))]
 DT[get(lccol) == 2, c('lcname', 'layernm') := .('forest', paste0(season, '-forest'))]
-DT[get(lccol) == 3, c('lcname', 'layernm') := .('lichen', paste0(season, '-lichen'))]
+DT[get(lccol) == 3, c('lcname', 'layernm') := .('forage', paste0(season, '-forage'))]
 
 
 # Var x lab names
