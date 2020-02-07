@@ -38,18 +38,14 @@ there remains an important biological and methodological gap in our
 understanding of an animal’s perception of scale. But
 scale can affect multilayer network dynamics and how we build and interpret
 them. Here we discuss the role of scale in the context of multilayer networks
-and provide a case study of caribou (*Rangifer tarandus*) to illustrate the role
+and provide a social ungulate case study to illustrate the role
 of social, spatial, and temporal scale on multilayer processes. We also present
 perspectives on future development and application of scale in multilayer
-networks with respect to habitat selection and space use, individual fitness and
-phenotypes, and movement ecology and collective movement. Effective integration
+networks with respect to: habitat selection and space use; phenotypes and individual fitness; and movement ecology and collective movement. Effective integration
 of social and spatial processes, including biologically meaningful scales,
 within the context of animal social networks is an emerging area of research;
-our contribution uniquely incorporates perspectives on how the social
+our contribution incorporates perspectives on how the social
 environment and spatial processes are linked across scales in a multilayer
-framework. Based on social network and behavioural ecology theory as well as our
-case study, we demonstrate potential for interconnectedness among individual
-animals, their social environment, and the landscapes they occupy.
 
 ## Keywords
 Landscape ecology, Movement ecology, Social network analysis, Space use 
