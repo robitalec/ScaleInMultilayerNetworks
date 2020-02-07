@@ -35,7 +35,7 @@ promise the integration of monolayer animal social networks with the complexity
 and importance of animal space use and movement in heterogeneous landscapes.
 Despite the complex interplay between social networks and how animals use space,
 there remains an important biological and methodological gap in our
-understanding of an animal’s perception of scale, e.g., grain and extent. But
+understanding of an animal’s perception of scale. But
 scale can affect multilayer network dynamics and how we build and interpret
 them. Here we discuss the role of scale in the context of multilayer networks
 and provide a case study of caribou (*Rangifer tarandus*) to illustrate the role
