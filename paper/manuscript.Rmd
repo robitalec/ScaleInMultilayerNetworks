@@ -100,9 +100,7 @@ systems (Finn et al. 2019).
 Unlike traditional monolayer social networks, multilayer networks explicitly
 consider social systems across contexts, including scale-dependent contexts
 (Pilosof et al. 2017). Multilayer networks are made up of multiple layers, each
-representing different classes of individuals (e.g. male or female), types of
-behaviours (e.g. grooming, travelling, or foraging), spatial areas (e.g. local
-or regional), or temporal windows (e.g. daily or seasonal) (Kivela et al. 2014;
+representing (i) different classes of individuals, e.g. male or female; (ii) types of behaviours, e.g. grooming, travelling, or foraging; and (iii) spatial areas, e.g. local or regional, or temporal windows, e.g. daily or seasonal  (Kivela et al. 2014;
 Porter 2018). Multilayer networks are relatively novel to studies of animal
 behaviour (Finn et al. 2019; Silk et al. 2018), although they have been used to
 describe multidimensional human social systems, complex transportation networks,
@@ -119,13 +117,11 @@ Newfoundland, Canada [@Peignier_2019]. We use this case study to address two
 principal questions associated with scale-dependent multilayer networks. First,
 to what degree does the social scale of relationships, spatial scale of
 landscapes, and temporal scale of analysis influence our ability to interpret
-complex social systems? Second, can variation in social, spatial, and temporal
+complex social systems? Second, can variation in the social, spatial, and temporal
 improve predictions associated with biological differences in seasonal resource
 availability and social association? We conclude with perspectives for further
-development and application of scale in multilayer networks with respect to
-habitat selection and space use <!-- TODO: (REF)-->, individual fitness and
-phenotypes (Webber & Vander Wal 2018), and movement ecology and collective
-movement (Jolles et al. 2019).
+development and application of scale in multilayer networks with respect to phenotypes and individual fitness (Webber & Vander Wal 2018), movement ecology and collective
+movement (Jolles et al. 2019), and habitat selection and space use <!-- TODO: (REF)-->,  and .
 
 
 (ref:spacetime) Space-time diagram displaying variation the spatial and temporal extent required for different social processes across a range of taxa.
