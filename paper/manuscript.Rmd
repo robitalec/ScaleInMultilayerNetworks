@@ -202,7 +202,7 @@ package `spatsoc` [@Robitaille_2019] in `r version$version.string`
 [@R_Core_Team_2019]. <!-- TODO: FIX VANDER WAL IN SPATSOC REF -->
 
 Within each layer, we assumed individuals were associating if simultaneous GPS
-fixes (i.e., recorded within 5 minutes of each other) were within a given
+fixes, i.e., recorded within 5 minutes of each other, were within a given
 spatial distance of one another. Typically for ungulates and other gregarious
 mammals, the ‘chain rule’ is applied for group assignment. For GPS data, the
 chain rule is applied if discrete spatiotemporal GPS fixes buffered by a given
@@ -256,7 +256,7 @@ We altered the social scale based on visual (short distance) and auditory (long
 distance) sensory modalities of caribou<!-- TODO: REF?-->. Specifically, we
 modified the spatial distance threshold required for group assignment using
 `spatsoc` [@Robitaille_2019] (see above) and re-assigned groups at incremental
-distances between 5-500 m. For example, at the finest social scale, only
+distances between 5 - 500 m. For example, at the finest social scale, only
 individuals within 5 m of one another were considered in the same group, whereas
 at the coarsest social scale, individuals within 500 m of one another were
 considered in the same group.
@@ -268,7 +268,7 @@ our landcover raster at varying scales relevant to caribou ecology.
 We aggregated the 10 m landcover raster using the R package `grainchanger`
 [@Graham_2019] at five scales: 100 m, 250 m, 500 m, and 1000 m. Aggregation occurred
 using a modal moving window method using a circular window corresponding to the
-above scales [@Graham_2019a]. 10 m and 100 m represents fine-scale decision making
+above scales [@Graham_2019a]. We assume 10 m and 100 m represents fine-scale decision making
 for caribou during foraging (Webber et al. unpublished data), while re-sampling at 500 m and 1000 m
 represents the scale at which caribou tend to select and avoid habitat
 (Bastille-Rousseau et al. 2017).
@@ -508,14 +508,14 @@ and quantitative genetics (Fisher and McAdam 2017), disease ecology (Silk et al.
 integrating social network theory into a broader array of behavioural and
 ecological sub-disciplines is impressive, only recently has the role of animal
 space use been considered in describing the causes and consequences of the
-social environment in the context of (1) individual fitness and phenotypes
+social environment in the context of (1) phenotypes and individual fitness
 (Webber & Vander Wal 2018), (2)  movement ecology and collective movement (Bode
 et al. 2011), and (3) habitat selection and space use (He et al. 2019). Here, we
 explore how mutlilayer networks may apply to these emerging fields to contribute
 to the development of social network theory and application.
 
 
-## Individual fitness and phenotypes
+## Phenotypes and Individual fitness
 
 Social network positions are frequently used to represent the social environment
 that an individual experiences or their social phenotype. Social phenotypes are
