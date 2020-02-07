@@ -48,7 +48,8 @@ our contribution incorporates perspectives on how the social
 environment and spatial processes are linked across scales in a multilayer
 
 ## Keywords
-Landscape ecology, Movement ecology, Social network analysis, Space use 
+<!-- TODO: is this the final list ? -->
+Social network analysis, Landscape ecology, Movement ecology, Space use 
 
 \newpage
 
