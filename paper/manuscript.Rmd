@@ -229,8 +229,12 @@ separated by more than the given distance [@Farine_2015]. Social groups were
 designated if two or more individuals occurred within a given distance of one
 another at any given time point.
 
-### Network metrics <!-- TODO: expand + simplify + examples individual A, B etc
---> We used a series of metrics to characterize the multilayer networks,
+### Network metrics 
+
+<!-- TODO: expand + simplify + examples individual A, B etc --> 
+<!-- TODO: EVW "parallelism"? -->
+
+We used a series of metrics to characterize the multilayer networks,
 focusing on the role of individuals, importance of individual layers and the
 similarity of different layers. To measure the role of individuals, we
 calculated degree centrality and graph strength. Degree centrality is the number
@@ -248,7 +252,7 @@ layer compared to the neighbourhood for each individual [@Berlingerio_2012].
 Finally, we calculated the similarity of layers between seasons, across
 landcover classes (e.g.: winter open compared to summer open) using the Pearson
 correlation coefficient [@Br_dka_2018].
-<!-- TODO: EVW "parallelism"? -->
+
 
 
 ## Varying scale in multilayer networks
