@@ -299,13 +299,13 @@ observational data. <!-- TODO: bah conclude / this sentence falls off a cliff --
 <!-- TODO: make sure we clarify these are means of all individuals? -->
 
 <!-- TODO: discuss layer similarity for social threshold -->
-In general, individuals in multilayer networks became more connected as social scale 
-increased; however, this relationship varied by habitat type and
-season. As social scale increased, connective redundancy increased rapidly when
-groups were formed up to approximately 100 m threshold, followed by a plateau and slight
-decrease at higher thresholds, presumably due to an increase in summer forest
-degree at ~500 m (Figure \@ref(fig:socres)d). Regardless of social scale, layer
-relevance did not change for any habitat types or seasons, which suggests
+In general, individuals in multilayer networks became more connected as social
+scale increased; however, this relationship varied by habitat type and season.
+As social scale increased, connective redundancy increased rapidly when groups
+were formed up to approximately 100 m threshold, followed by a plateau and
+slight decrease at higher thresholds, presumably due to an increase in summer
+forest degree at ~500 m (Figure \@ref(fig:socres)d). Regardless of social scale,
+layer relevance did not change for any habitat types or seasons, which suggests
 habitat-by-season layers captured most, if not all, of the potential connections
 an individual would have across all networks (Figure \@ref(fig:socres)b).
 Finally, somewhat predictably, graph strength for winter networks increased up
@@ -315,8 +315,8 @@ networks did not change as the social threshold increased (Figure
 scale at which groups should be assigned is likely somewhere between ~20-100 m
 based on the rate at which network metrics stabilized. For ungulates, groups are
 often assigned based on 50 m threshold (Lingle 2003; Lesmeries et al. 2018;
-Peignier et al. 2019), suggesting that given similar quantities of data, ~50 m is
-likely an ideal social scale for generating social networks in caribou and
+Peignier et al. 2019), suggesting that given similar quantities of data, ~50 m
+is likely an ideal social scale for generating social networks in caribou and
 similar species.
 
 
@@ -327,59 +327,64 @@ similar species.
 * decreasing winter lichen relevance because the degree + number of edges decreased
 --> 
 <!-- TODO: discuss things in a,b,c,d order consistently. They shouldn't be presented out of order -->
-Increasing the scale of landcover resolution resulted in decreased proportion of rare and
-patchy habitats and low connectivity of individuals in these habitats. In
-winter, layer relevance was stable for open and forest habitats but decreased
+Increasing the scale of landcover resolution resulted in decreased proportion of
+rare and patchy habitats and low connectivity of individuals in these habitats.
+In winter, layer relevance was stable for open and forest habitats but decreased
 for forage habitats (Figure \@ref(fig:lcres)b). Connective redundancy decreased
 with increasing landcover resolution due the decrease in connectivity of
 individuals in winter forage habitats, resulting in a multilayer network where
-neighbours were less frequently repeated in multiple layers <!-- TODO: I'm having a hard 
-time understanding this previous sentence --> (Figure\@ref(fig:lcres)d). Layer similarity 
-was generally stable for forest and open
-habitats except for a contrasting increase in similarity for forest and decrease
-in similarity for open habitats at 250 m landcover resolution (Figure
+neighbours were less frequently repeated in multiple layers <!-- TODO: I'm
+having a hard time understanding this previous sentence -->
+(Figure\@ref(fig:lcres)d). Layer similarity was generally stable for forest and
+open habitats except for a contrasting increase in similarity for forest and
+decrease in similarity for open habitats at 250 m landcover resolution (Figure
 \@ref(fig:lcres)c). Layer similarity was not possible to calculate between
 winter and summer forage because, at all landcover resolutions greater than 10 m
 there were no individuals connected in the network layers. <!-- individuals
 still used forage but in much lower proportion + lowered opportunity to
 associate --> These results indicate the importance of matching landcover
 resolution to scale of selection as well as ensuring the landcover product used
-has a resolution fine enough to detect relevant landscape features and habitats. <!-- TODO: how? This isn't clear enough for me to follow yet -->
+has a resolution fine enough to detect relevant landscape features and habitats.
+<!-- TODO: how? This isn't clear enough for me to follow yet -->
 
 
 
 
 
-<!-- nobs 
-* common, though at different points - more observations until stabilizing
-* we dont see the stabilizing/full plateau for connective redundancy but appears to be coming.. 
-* still some variability, especially for graph strength because individuals are differently connected but broad strokes - they stabilize with more observations
--->
-
+<!-- nobs * common, though at different points - more observations until
+stabilizing * we dont see the stabilizing/full plateau for connective redundancy
+but appears to be coming.. * still some variability, especially for graph
+strength because individuals are differently connected but broad strokes - they
+stabilize with more observations -->
 As the number of observations used to generate multilayer networks increased,
 individuals became more connected and metrics generally appeared to stabilize.
 Like coarse landcover resolution (above), low numbers of observations were not
 sufficient for capturing individuals in all contexts and layer similarity could
-not be calculated below approximately 75 observations for forest, approximately 210 
-observations for open and approximately 300 observations for forage (Figure 
-\@ref(fig:nobs)c). Once sufficient observations were obtained, layer similarity stabilized 
-for all three landcover classes at approximately 200 observations for forest and approximately 300 observations for open and forage landcover types. Connective redundancy increased with increasing number of
-observations as individuals became more connected to neighbours in multiple
-layers (Figure \@ref(fig:nobs)d). Given the overall trend of these multilayer
-metrics stabilizing after a certain number of observations are included, the
-results suggest this sensitivity method could be useful for determining the
-number of observations necessary for sufficiently describing the social dynamics
-across contexts. <!-- TODO: I'm not sure this is relevant since this is the main way it is already done, can we make this thought more relevant to picking scales or multilayer networks in general? I think it's important for building robust networks -->
+not be calculated below approximately 75 observations for forest, approximately
+210 observations for open and approximately 300 observations for forage (Figure
+\@ref(fig:nobs)c). Once sufficient observations were obtained, layer similarity
+stabilized for all three landcover classes at approximately 200 observations for
+forest and approximately 300 observations for open and forage landcover types.
+Connective redundancy increased with increasing number of observations as
+individuals became more connected to neighbours in multiple layers (Figure
+\@ref(fig:nobs)d). Given the overall trend of these multilayer metrics
+stabilizing after a certain number of observations are included, the results
+suggest this sensitivity method could be useful for determining the number of
+observations necessary for sufficiently describing the social dynamics across
+contexts. <!-- TODO: I'm not sure this is relevant since this is the main way it
+is already done, can we make this thought more relevant to picking scales or
+multilayer networks in general? I think it's important for building robust
+networks -->
 
 
 
-<!-- win  length
-* increasing window length = increasingly similar layers and increasingly redundant edges. more individuals have the opportunity to interact
-* increasing window length also leads to increasing similarity between seasons because seasons are less well defined/include more shoulder seasons
-* decreasing graph strength at the upper end of window length in winter showing again inclusion of more shoulder season
-* layers are more similarly relevant at high window length
--->
-
+<!-- win  length * increasing window length = increasingly similar layers and
+increasingly redundant edges. more individuals have the opportunity to interact
+* increasing window length also leads to increasing similarity between seasons
+because seasons are less well defined/include more shoulder seasons * decreasing
+graph strength at the upper end of window length in winter showing again
+inclusion of more shoulder season * layers are more similarly relevant at high
+window length -->
 Contrasting winter and summer seasons became more similar with increasing window
 length. Layer similarity between seasons increased consistently across landcover
 class (Figure \@ref(fig:winlen)b). Individual graph strength and layer relevance
@@ -389,20 +394,17 @@ increasing window lengths (Figure \@ref(fig:winlen)a, Figure
 especially for the summer season, may be resulting in less precisely defined
 seasons that are not clearly capturing periods of aggregation and
 dissaggregation according to resource availability and presence of conspecifics.
-<!-- TODO: ?? -->
-<!-- TODO: end with something highlighting this shows it's important to properly define your season -->
-
-<!-- Similarly, shifting window position of the summer season resulted in an increase in number of connections between individuals. Layer relevance  -->
-
-<!-- win position
-* increasing network connectivity in summer when the window position is moved - these seasons are more similar than the original window position
-* same theme shown in the connective redundancy
-* quite variable layer similarity, not sure what to pull out of that one
-* increased graph strength for winter down the middle, with generally increasing summer layers - again where the season is including more shoulder season potentially
--->
-
+<!-- TODO: ?? --> <!-- TODO: end with something highlighting this shows it's
+important to properly define your season -->
+<!-- Similarly, shifting window position of the summer season resulted in an
+increase in number of connections between individuals. Layer relevance  -->
+<!-- win position * increasing network connectivity in summer when the window
+position is moved - these seasons are more similar than the original window
+position * same theme shown in the connective redundancy * quite variable layer
+similarity, not sure what to pull out of that one * increased graph strength for
+winter down the middle, with generally increasing summer layers - again where
+the season is including more shoulder season potentially -->
 <!-- Shifting window position results showed increasing layer similarity  -->
-
 **Missing: discussion of window position..**
 
 
