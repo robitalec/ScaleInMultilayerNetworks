@@ -3,11 +3,11 @@ title: The problem and promise of scale in animal social multilayer networks
 author: Alec L. Robitaille^1^, Quinn M.R. Webber^2^, Julie W. Turner^1^, Eric Vander Wal^1,2^
 date: ^1^Department of Biology, Memorial University of Newfoundland, Canada; ^2^Cognitive and Behavioural Ecology Interdisciplinary Program, Memorial University of Newfoundland
 output:
-  # github_document
+   github_document
   # bookdown::pdf_document2:
   #    number_sections: false
-  bookdown::word_document2:
-    reference_docx: template.docx
+  #bookdown::word_document2:
+   # reference_docx: template.docx
 bibliography: ../references/knitcite.bib
 ---
 
@@ -120,7 +120,7 @@ landscapes, and temporal scale of analysis influence our ability to interpret
 complex social systems? Second, can variation in the social, spatial, and temporal
 improve predictions associated with biological differences in seasonal resource
 availability and social association? We conclude with perspectives for further
-development and application of scale in multilayer networks with respect to phenotypes and individual fitness (Webber & Vander Wal 2018), movement ecology and collective
+development and application of scale in multilayer networks with respect to phenotypes and individual fitness [@Webber_2018], movement ecology and collective
 movement (Jolles et al. 2019), and habitat selection and space use <!-- TODO: (REF)-->,  and .
 
 
@@ -516,7 +516,7 @@ and animal personality (Sih et al. 2017). While the number of studies integratin
 social network theory into a broader array of behavioural and ecological 
 sub-disciplines is impressive, only recently has the role of animal space use been 
 considered in describing the causes and consequences of the social environment in the 
-context of (1) phenotypes and individual fitness (Webber & Vander Wal 2018), (2) 
+context of (1) phenotypes and individual fitness [@Webber_2018], (2) 
 movement ecology and collective movement (Bode et al. 2011), and (3) habitat 
 selection and space use (He et al. 2019). Importantly, much of the work linking 
 space use and the social environment has been theoretical and empirical studies 
@@ -648,9 +648,8 @@ monolayer association networks within a multilayer network (Papageorgiou et al. 
 However, despite potential to generate networks in different spatial or social contexts, 
 layers in the multilayer network represented social associations within and 
 between groups. Continuous collection of animal relocation data using GPS 
-technology can be used to measure how groups of
-animals make collective movement decisions in the context of their local
-environment (Strandburg-Peshkin et al. 2015, 2017) and across scales. A
+technology can be used to measure how groups of animals make collective 
+movement decisions in the context of their local environment (Strandburg-Peshkin et al. 2015, 2017) and across scales. A
 collective movement layer could constitute similarity in movement for dyads
 (Long et al. 2014) or groups (Bode et al. 2011). This movement layer could be
 made at a fine (i.e. minute-to-minute: Cleasby et al. 2019) or coarse scale
@@ -672,8 +671,8 @@ has advanced to the point where relocations can be programmed to occur as
 frequently as each second (Börger 2016), a practice which has been applied 
 to questions of collective movement (e.g Strandburg-Peskin et al. 2015). 
 Meanwhile, remote sensing technology, including unmanned aerial vehicles 
-and satellites, can be used to track the fine-scalemovements of  
-groups over large distances and time scales (Torney et al. 2019). Using 
+and satellites, can be used to track the fine-scale movements of groups 
+over large distances and time scales (Torney et al. 2019). Using 
 technology to infer behaviour has therefore become standard operating procedure
 for many species in many systems. Our ability to collect and process 
 remotely sensed data and infer social processes based on animal movement 
@@ -681,11 +680,13 @@ provides an opportunity to use multilayer social network analysis to answer
 complex questions about animal socioecology.
 
 Given the existing framework for constructing multilayer networks from
-behavioural layers (e.g. Smith-Aguilar et al. 2019), movement layers could be
-integrated with interaction or association layers. Integrating movement layers
+behavioural layers (e.g. Smith-Aguilar et al. 2019), monolayer networks that
+explicity quantify movement paramters could be itnegrated. For example, edges 
+could represent measures of dyadic or collective movement based on dynamic 
+interaction metrics (Long et al. 2014). Integrating movement layers
 with habitat-specific social association layers could further shed light on the
 role of movement as a driver of the social and spatial environments an
-individual experiences (Webber and Vander Wal 2018). In our case study, we
+individual experiences [@Webber_2018]. In our case study, we
 generated multilayer networks based on habitat-specific monolayers. Coordinated
 movement of dyads, or groups, could vary based on habitat, and the approach we
 outline could be used to explore mechanisms linking the social and spatial

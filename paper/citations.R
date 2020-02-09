@@ -138,6 +138,9 @@ citep('10.1016/j.arcontrol.2017.03.002')
 # Strandburg-Peshkin 2015
 citep('10.1126/science.aaa5099')
 
+# Webber & Vander wal 2018
+citep('10.1111/1365-2656.12773')
+
 ### R, R Packages
 # R
 citep(citation())
