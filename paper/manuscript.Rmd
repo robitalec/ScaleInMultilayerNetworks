@@ -655,23 +655,23 @@ technology can be used to measure how groups of animals make collective
 movement decisions in the context of their local environment (Strandburg-Peshkin et al. 2015, 2017) and across scales. A
 collective movement layer could constitute similarity in movement for dyads
 [@Long_2014] or groups  [@Bode_2011]. This movement layer could be
-made at a fine (i.e. minute-to-minute: [@Cleasby_2019] or coarse scale
-(global migration: Flack et al. 2018). Our case study integrates variation 
+made at a fine [i.e. minute-to-minute: @Cleasby_2019] or coarse scale
+[global migration: @Flack_2018]. Our case study integrates variation 
 in temporal and spatial scale to assess the role of scale in predicting 
 multilayer networks. As one might expect, we found increasing spatial 
 scale results in saturation of potential social connections (Figure 3), 
 while increasing temporal scale had little effect on habitat-specific 
 networks (Figure 5). Another potential application would be to
 generate social networks during times when animals are engaged in different
-behaviours, including traveling, interacting, or foraging (e.g. Muller et al.
-2018; Finn et al. 2019) and construct a multilayer network based on
-behaviour-specific monolayer networks (e.g. Smith-Aguilar et al. 2019).
+behaviours, including traveling, interacting, or foraging [@Muller_2018; @Finn_2019] 
+and construct a multilayer network based on behaviour-specific monolayer 
+networks [e.g. @Smith_Aguilar_2019].
 
 Importantly, the key to incorporating movement in multilayer networks across
 scales is the technological advancements available to overcome previous
-limitations (Hughey et al. 2018). Biologging and wildlife tracking technology 
+limitations [@Hughey_2018]. Biologging and wildlife tracking technology 
 has advanced to the point where relocations can be programmed to occur as 
-frequently as each second (Börger 2016), a practice which has been applied 
+frequently as each second [@Börger_2016], a practice which has been applied 
 to questions of collective movement (e.g Strandburg-Peskin et al. 2015). 
 Meanwhile, remote sensing technology, including unmanned aerial vehicles 
 and satellites, can be used to track the fine-scale movements of groups 
@@ -683,7 +683,7 @@ provides an opportunity to use multilayer social network analysis to answer
 complex questions about animal socioecology.
 
 Given the existing framework for constructing multilayer networks from
-behavioural layers (e.g. Smith-Aguilar et al. 2019), monolayer networks that
+behavioural layers [e.g. @Smith_Aguilar_2019], monolayer networks that
 explicity quantify movement paramters could be itnegrated. For example, edges 
 could represent measures of dyadic or collective movement based on dynamic 
 interaction metrics [@Long_2014]. Integrating movement layers

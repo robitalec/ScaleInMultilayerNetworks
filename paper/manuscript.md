@@ -806,8 +806,8 @@ movement decisions in the context of their local environment
 (Strandburg-Peshkin et al. 2015, 2017) and across scales. A collective
 movement layer could constitute similarity in movement for dyads (Long
 et al. 2014) or groups (Bode, Wood, and Franks 2011). This movement
-layer could be made at a fine (i.e. minute-to-minute: (Cleasby et al.
-2019) or coarse scale (global migration: Flack et al. 2018). Our case
+layer could be made at a fine (i.e. minute-to-minute: Cleasby et al.
+2019) or coarse scale (global migration: Flack et al. 2018). Our case
 study integrates variation in temporal and spatial scale to assess the
 role of scale in predicting multilayer networks. As one might expect, we
 found increasing spatial scale results in saturation of potential social
@@ -815,13 +815,13 @@ connections (Figure 3), while increasing temporal scale had little
 effect on habitat-specific networks (Figure 5). Another potential
 application would be to generate social networks during times when
 animals are engaged in different behaviours, including traveling,
-interacting, or foraging (e.g. Muller et al. 2018; Finn et al. 2019) and
+interacting, or foraging (Muller et al. 2018; Finn et al. 2019) and
 construct a multilayer network based on behaviour-specific monolayer
-networks (e.g. Smith-Aguilar et al. 2019).
+networks (e.g. Smith-Aguilar et al. 2019).
 
 Importantly, the key to incorporating movement in multilayer networks
 across scales is the technological advancements available to overcome
-previous limitations (Hughey et al. 2018). Biologging and wildlife
+previous limitations (Hughey et al. 2018). Biologging and wildlife
 tracking technology has advanced to the point where relocations can be
 programmed to occur as frequently as each second (Börger 2016), a
 practice which has been applied to questions of collective movement (e.g
@@ -836,7 +836,7 @@ multilayer social network analysis to answer complex questions about
 animal socioecology.
 
 Given the existing framework for constructing multilayer networks from
-behavioural layers (e.g. Smith-Aguilar et al. 2019), monolayer networks
+behavioural layers (e.g. Smith-Aguilar et al. 2019), monolayer networks
 that explicity quantify movement paramters could be itnegrated. For
 example, edges could represent measures of dyadic or collective movement
 based on dynamic interaction metrics (Long et al. 2014). Integrating
@@ -1022,6 +1022,14 @@ Behaviour* 82 (1). Elsevier BV: 29–38.
 
 </div>
 
+<div id="ref-Börger_2016">
+
+Börger, Luca. 2016. “Stuck in Motion? Reconnecting Questions and Tools
+in Movement Ecology.” *Journal of Animal Ecology* 85 (1). Wiley: 5–10.
+<https://doi.org/10.1111/1365-2656.12464>.
+
+</div>
+
 <div id="ref-Br_dka_2018">
 
 Br’odka, Piotr, Anna Chmiel, Matteo Magnani, and Giancarlo Ragozini.
@@ -1078,6 +1086,25 @@ Meta-Analysis.” *Journal of Biogeography* 36 (1). Wiley: 132–47.
 
 </div>
 
+<div id="ref-Finn_2019">
+
+Finn, Kelly R., Matthew J. Silk, Mason A. Porter, and Noa
+Pinter-Wollman. 2019. “The Use of Multilayer Network Analysis in Animal
+Behaviour.” *Animal Behaviour* 149 (March). Elsevier BV: 7–22.
+<https://doi.org/10.1016/j.anbehav.2018.12.016>.
+
+</div>
+
+<div id="ref-Flack_2018">
+
+Flack, Andrea, M’at’e Nagy, Wolfgang Fiedler, Iain D. Couzin, and Martin
+Wikelski. 2018. “From Local Collective Behavior to Global Migratory
+Patterns in White Storks.” *Science* 360 (6391). American Association
+for the Advancement of Science (AAAS): 911–14.
+<https://doi.org/10.1126/science.aap7781>.
+
+</div>
+
 <div id="ref-Graham_2019">
 
 Graham, Laura J., Rebecca Spake, Simon Gillings, Kevin Watts, and Felix
@@ -1095,6 +1122,16 @@ He, Peng, Adriana A. Maldonado-Chaparro, and Damien R. Farine. 2019.
 in Studies of Animal Social Complexity.” *Behavioral Ecology and
 Sociobiology* 73 (1). Springer Science; Business Media LLC.
 <https://doi.org/10.1007/s00265-018-2602-7>.
+
+</div>
+
+<div id="ref-Hughey_2018">
+
+Hughey, Lacey F., Andrew M. Hein, Ariana Strandburg-Peshkin, and Frants
+H. Jensen. 2018. “Challenges and Solutions for Studying Collective
+Animal Behaviour in the Wild.” *Philosophical Transactions of the Royal
+Society B: Biological Sciences* 373 (1746). The Royal Society: 20170005.
+<https://doi.org/10.1098/rstb.2017.0005>.
 
 </div>
 
@@ -1177,6 +1214,15 @@ Mahoney. 2009. “Habitat Selection at Multiple Scales.” *Écoscience* 16
 
 </div>
 
+<div id="ref-Muller_2018">
+
+Muller, Zoe, Mauricio Cantor, Innes C. Cuthill, and Stephen Harris.
+2018. “Giraffe Social Preferences Are Context Dependent.” *Animal
+Behaviour* 146 (December). Elsevier BV: 37–49.
+<https://doi.org/10.1016/j.anbehav.2018.10.006>.
+
+</div>
+
 <div id="ref-Papageorgiou_2019">
 
 Papageorgiou, Danai, Charlotte Christensen, Gabriella E.C. Gall, James
@@ -1221,6 +1267,16 @@ Silk, Matthew J., Kelly R. Finn, Mason A. Porter, and Noa
 Pinter-Wollman. 2018. “Can Multilayer Networks Advance Animal Behavior
 Research?” *Trends in Ecology & Evolution* 33 (6). Elsevier BV: 376–78.
 <https://doi.org/10.1016/j.tree.2018.03.008>.
+
+</div>
+
+<div id="ref-Smith_Aguilar_2019">
+
+Smith-Aguilar, Sandra E., Filippo Aureli, Laura Busia, Colleen
+Schaffner, and Gabriel Ramos-Fern’andez. 2019. “Using Multiplex Networks
+to Capture the Multidimensional Nature of Social Structure.” *Primates*
+60 (3). Springer Science; Business Media LLC: 277–95.
+<https://doi.org/10.1007/s10329-018-0686-3>.
 
 </div>
 
