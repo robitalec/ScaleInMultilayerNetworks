@@ -94,7 +94,7 @@ e.g. local or regional, or temporal windows, e.g. daily or seasonal
 novel to studies of animal behaviour (Finn et al. 2019; Silk et
 al. 2018), although they have been used to describe multidimensional
 human social systems, complex transportation networks, and neural
-networks (Silk et al. 2018). The role of scale within multilayer social
+networks (Silk et al. 2018). The role of scale within multilayer social
 networks remains unexplored but provides a unique opportunity to develop
 novel understanding of variation in the temporal or spatial scales
 associated with social systems.
@@ -112,9 +112,10 @@ spatial, and temporal improve predictions associated with biological
 differences in seasonal resource availability and social association? We
 conclude with perspectives for further development and application of
 scale in multilayer networks with respect to phenotypes and individual
-fitness (Webber & Vander Wal 2018), movement ecology and collective
-movement (Jolles et al. 2019), and habitat selection and space use
-<!-- TODO: (REF)-->, and .
+fitness
+(<span class="citeproc-not-found" data-reference-id="Webber_2018">**???**</span>),
+movement ecology and collective movement (Jolles, King, and Killen
+2019), and habitat selection and space use <!-- TODO: (REF)-->, and .
 
 (ref:spacetime) Space-time diagram displaying variation the spatial and
 temporal extent required for different social processes across a range
@@ -657,11 +658,13 @@ integrating social network theory into a broader array of behavioural
 and ecological sub-disciplines is impressive, only recently has the role
 of animal space use been considered in describing the causes and
 consequences of the social environment in the context of (1) phenotypes
-and individual fitness (Webber & Vander Wal 2018), (2) movement ecology
-and collective movement (Bode et al. 2011), and (3) habitat selection
-and space use (He et al. 2019). Importantly, much of the work linking
-space use and the social environment has been theoretical and empirical
-studies are lacking (but see Peignier et al. 2019; Pinter-Wollman 2015;
+and individual fitness
+(<span class="citeproc-not-found" data-reference-id="Webber_2018">**???**</span>),
+(2) movement ecology and collective movement (Bode, Wood, and Franks
+2011), and (3) habitat selection and space use (He, Maldonado-Chaparro,
+and Farine 2019). Importantly, much of the work linking space use and
+the social environment has been theoretical and empirical studies are
+lacking (but see Peignier et al. 2019; Pinter-Wollman 2015;
 Strandburg-Peshkin et al. 2015; 2017). Here, we discuss the role
 mutlilayer networks within the emerging integration of social and
 spatial ecology within the behavioural ecology literature.
@@ -761,17 +764,18 @@ logistical constraints.
 
 Social processes, movement decisions, and space use are inextricably
 linked and multilayer networks represent a potential analytical
-framework for linking these processes (e.g. Mourier et al. 2019).
+framework for linking these processes
+(<span class="citeproc-not-found" data-reference-id="Mourier_2019">**???**</span>).
 Movement as a collective group can reduce per capita predation risk via
 detection-dilution trade-offs and improve information transfer about the
-quality or location of resources to other group members (Jolles et
-al. 2019). In our case study, we integrate proximity based social
+quality or location of resources to other group members (Jolles, King,
+and Killen 2019). In our case study, we integrate proximity based social
 networks that inherently rely on animal collective movement and, in
 general, we found that movement is likely an important mechanism driving
 social network connectivity within and between habitat types.
 
 Although multilayer animal social networks are relatively novel (Silk et
-al. 2018), movement behaviour within multilayer networks has been
+al. 2018), movement behaviour within multilayer networks has been
 considered. Spatial networks are physical locations (nodes) which are
 connected in a network when individuals move between said locations
 (edges). For example, spatial networks were applied to monitor movement
@@ -779,10 +783,11 @@ of sharks (*Carcharhinus amblyrhynchos* and *Carcharhinus melanopterus*)
 between fixed location autonomous arrays. In this example, nodes
 represent locations within the array, *intralayer edges* represent
 individual movement frequency, and *interlayer edges* represent contact
-probability among individuals at a given node (Mourier et al. 2019).
+probability among individuals at a given node
+(<span class="citeproc-not-found" data-reference-id="Mourier_2019">**???**</span>).
 Although movement between fixed arrays is inherent, networks are not
 constructed based on continuous measures of dyadic or collective
-movement (Long et al. 2014). Our case study builds on the work of
+movement (Long et al. 2014). Our case study builds on the work of
 Mourier et al. (2019) and explicitly integrates continuous and
 simultaneous measures of animal movement through space and time as
 layers of a multilayer social network.
@@ -792,7 +797,7 @@ that are fixed in space, movement networks can represent continuous and
 simultaneous movement trajectories of multiple animals. In a recent
 study of vulturine gunieafowl (Acryllium vulturinum), GPS movement data
 were used to generate monolayer association networks within a multilayer
-network (Papageorgiou et al. 2019). However, despite potential to
+network (Papageorgiou et al. 2019). However, despite potential to
 generate networks in different spatial or social contexts, layers in the
 multilayer network represented social associations within and between
 groups. Continuous collection of animal relocation data using GPS
@@ -800,19 +805,19 @@ technology can be used to measure how groups of animals make collective
 movement decisions in the context of their local environment
 (Strandburg-Peshkin et al. 2015, 2017) and across scales. A collective
 movement layer could constitute similarity in movement for dyads (Long
-et al. 2014) or groups (Bode et al. 2011). This movement layer could be
-made at a fine (i.e. minute-to-minute: Cleasby et al. 2019) or coarse
-scale (global migration: Flack et al. 2018). Our case study integrates
-variation in temporal and spatial scale to assess the role of scale in
-predicting multilayer networks. As one might expect, we found increasing
-spatial scale results in saturation of potential social connections
-(Figure 3), while increasing temporal scale had little effect on
-habitat-specific networks (Figure 5). Another potential application
-would be to generate social networks during times when animals are
-engaged in different behaviours, including traveling, interacting, or
-foraging (e.g. Muller et al. 2018; Finn et al. 2019) and construct a
-multilayer network based on behaviour-specific monolayer networks
-(e.g. Smith-Aguilar et al. 2019).
+et al. 2014) or groups (Bode, Wood, and Franks 2011). This movement
+layer could be made at a fine (i.e. minute-to-minute: (Cleasby et al.
+2019) or coarse scale (global migration: Flack et al. 2018). Our case
+study integrates variation in temporal and spatial scale to assess the
+role of scale in predicting multilayer networks. As one might expect, we
+found increasing spatial scale results in saturation of potential social
+connections (Figure 3), while increasing temporal scale had little
+effect on habitat-specific networks (Figure 5). Another potential
+application would be to generate social networks during times when
+animals are engaged in different behaviours, including traveling,
+interacting, or foraging (e.g. Muller et al. 2018; Finn et al. 2019) and
+construct a multilayer network based on behaviour-specific monolayer
+networks (e.g. Smith-Aguilar et al. 2019).
 
 Importantly, the key to incorporating movement in multilayer networks
 across scales is the technological advancements available to overcome
@@ -834,27 +839,28 @@ Given the existing framework for constructing multilayer networks from
 behavioural layers (e.g. Smith-Aguilar et al. 2019), monolayer networks
 that explicity quantify movement paramters could be itnegrated. For
 example, edges could represent measures of dyadic or collective movement
-based on dynamic interaction metrics (Long et al. 2014). Integrating
+based on dynamic interaction metrics (Long et al. 2014). Integrating
 movement layers with habitat-specific social association layers could
 further shed light on the role of movement as a driver of the social and
-spatial environments an individual experiences (Webber and Wal 2018)
-(Webber and Vander Wal 2018). In our case study, we generated multilayer
-networks based on habitat-specific monolayers. Coordinated movement of
-dyads, or groups, could vary based on habitat, and the approach we
-outline could be used to explore mechanisms linking the social and
-spatial environments. For example, social processes may be an emergent
-property of the landscape because animals aggregate at resources, such
-as waterholes (Chamaillé-Jammes et al. 2008). Movement to, from, or
-within habitat patches or territories can also contribute to the
-formation of the social environment (Spiegel et al. 2016). For example,
-in sleepy lizards (*Tiliqua rugosa*) males interacted primarily at home
-range edges, presumably driving territorial behaviour (Spiegel et
-al. 2018). Incorporating movement ecology within a multilayer network
-framework is a logical next step for a burgeoning field. In particular,
-when association networks are habitat-specific, we suggest the
-integration of movement and space use in multilayer networks provides
-novel insights into the effects of habitat configuration on the
-formation of the social environment (He et al. 2019).
+spatial environments an individual experiences
+(<span class="citeproc-not-found" data-reference-id="Webber_2018">**???**</span>).
+In our case study, we generated multilayer networks based on
+habitat-specific monolayers. Coordinated movement of dyads, or groups,
+could vary based on habitat, and the approach we outline could be used
+to explore mechanisms linking the social and spatial environments. For
+example, social processes may be an emergent property of the landscape
+because animals aggregate at resources, such as waterholes
+(Chamaillé-Jammes et al. 2008). Movement to, from, or within habitat
+patches or territories can also contribute to the formation of the
+social environment (Spiegel et al. 2016). For example, in sleepy lizards
+(*Tiliqua rugosa*) males interacted primarily at home range edges,
+presumably driving territorial behaviour (Spiegel et al. 2018).
+Incorporating movement ecology within a multilayer network framework is
+a logical next step for a burgeoning field. In particular, when
+association networks are habitat-specific, we suggest the integration of
+movement and space use in multilayer networks provides novel insights
+into the effects of habitat configuration on the formation of the social
+environment (He, Maldonado-Chaparro, and Farine 2019).
 
 ## Habitat selection and space use
 
@@ -872,9 +878,8 @@ individual differences in habitat selection
 Social structure is influenced by large scale processes such as resource
 availability and seasonality
 (<span class="citeproc-not-found" data-reference-id="Peigner_2019">**???**</span>),
-configuration
-(<span class="citeproc-not-found" data-reference-id="He_2019">**???**</span>)
-and fragmentation
+configuration (He, Maldonado-Chaparro, and Farine 2019) and
+fragmentation
 (<span class="citeproc-not-found" data-reference-id="Banks_2007">**???**</span>).
 Habitat selection is the “disproportionate use of available” (Mayor et
 al. 2009) landscape resources or features by animals. Johnson (1980)
@@ -1008,6 +1013,15 @@ Business Media LLC: 567–93. <https://doi.org/10.1007/s11280-012-0190-4>.
 
 </div>
 
+<div id="ref-Bode_2011">
+
+Bode, Nikolai W.F., A. Jamie Wood, and Daniel W. Franks. 2011. “The
+Impact of Social Networks on Animal Collective Motion.” *Animal
+Behaviour* 82 (1). Elsevier BV: 29–38.
+<https://doi.org/10.1016/j.anbehav.2011.04.011>.
+
+</div>
+
 <div id="ref-Br_dka_2018">
 
 Br’odka, Piotr, Anna Chmiel, Matteo Magnani, and Giancarlo Ragozini.
@@ -1022,6 +1036,17 @@ Study.” *Royal Society Open Science* 5 (8). The Royal Society: 171747.
 Chave, J’erôme. 2013. “The Problem of Pattern and Scale in Ecology: What
 Have We Learned in 20 Years?” Edited by Jordi Bascompte. *Ecology
 Letters* 16 (January). Wiley: 4–16. <https://doi.org/10.1111/ele.12048>.
+
+</div>
+
+<div id="ref-Cleasby_2019">
+
+Cleasby, Ian R., Ewan D. Wakefield, Barbara J. Morrissey, Thomas W.
+Bodey, Steven C. Votier, Stuart Bearhop, and Keith C. Hamer. 2019.
+“Using Time-Series Similarity Measures to Compare Animal Movement
+Trajectories in Ecology.” *Behavioral Ecology and Sociobiology* 73 (11).
+Springer Science; Business Media LLC.
+<https://doi.org/10.1007/s00265-019-2761-1>.
 
 </div>
 
@@ -1063,6 +1088,25 @@ Evolution* 10 (6). Wiley: 767–78.
 
 </div>
 
+<div id="ref-He_2019">
+
+He, Peng, Adriana A. Maldonado-Chaparro, and Damien R. Farine. 2019.
+“The Role of Habitat Configuration in Shaping Social Structure: A Gap
+in Studies of Animal Social Complexity.” *Behavioral Ecology and
+Sociobiology* 73 (1). Springer Science; Business Media LLC.
+<https://doi.org/10.1007/s00265-018-2602-7>.
+
+</div>
+
+<div id="ref-Jolles_2019">
+
+Jolles, Jolle W., Andrew J. King, and Shaun S. Killen. 2019. “The Role
+of Individual Heterogeneity in Collective Animal Behaviour.” *Trends in
+Ecology & Evolution*, December. Elsevier BV.
+<https://doi.org/10.1016/j.tree.2019.11.001>.
+
+</div>
+
 <div id="ref-Kivela_2014">
 
 Kivela, M., A. Arenas, M. Barthelemy, J. P. Gleeson, Y. Moreno, and M.
@@ -1097,6 +1141,16 @@ Robert H. MacArthur Award Lecture.” *Ecology* 73 (6). Wiley: 1943–67.
 
 </div>
 
+<div id="ref-Long_2014">
+
+Long, Jed A., Trisalyn A. Nelson, Stephen L. Webb, and Kenneth L. Gee.
+2014. “A Critical Examination of Indices of Dynamic Interaction for
+Wildlife Telemetry Studies.” Edited by Luca Börger. *Journal of Animal
+Ecology* 83 (5). Wiley: 1216–33.
+<https://doi.org/10.1111/1365-2656.12198>.
+
+</div>
+
 <div id="ref-Luther_2009">
 
 Luther, David. 2009. “The Influence of the Acoustic Community on Songs
@@ -1120,6 +1174,16 @@ SCALE-DEPENDENT RESPONSE TO HABITAT.” *Ecology* 88 (7). Wiley: 1634–40.
 Mayor, Stephen J., David C. Schneider, James A. Schaefer, and Shane P.
 Mahoney. 2009. “Habitat Selection at Multiple Scales.” *Écoscience* 16
 (2). Informa UK Limited: 238–47. <https://doi.org/10.2980/16-2-3238>.
+
+</div>
+
+<div id="ref-Papageorgiou_2019">
+
+Papageorgiou, Danai, Charlotte Christensen, Gabriella E.C. Gall, James
+A. Klarevas-Irby, Brendah Nyaguthii, Iain D. Couzin, and Damien R.
+Farine. 2019. “The Multilevel Society of a Small-Brained Bird.” *Current
+Biology* 29 (21). Elsevier BV: R1120–R1121.
+<https://doi.org/10.1016/j.cub.2019.09.072>.
 
 </div>
 
@@ -1151,21 +1215,21 @@ Applications and Methods Using Spatsoc.” Edited by Nick Golding.
 
 </div>
 
+<div id="ref-Silk_2018">
+
+Silk, Matthew J., Kelly R. Finn, Mason A. Porter, and Noa
+Pinter-Wollman. 2018. “Can Multilayer Networks Advance Animal Behavior
+Research?” *Trends in Ecology & Evolution* 33 (6). Elsevier BV: 376–78.
+<https://doi.org/10.1016/j.tree.2018.03.008>.
+
+</div>
+
 <div id="ref-Sugihara_1989">
 
 Sugihara, G, K Schoenly, and A Trombla. 1989. “Scale Invariance in Food
 Web Properties.” *Science* 245 (4913). American Association for the
 Advancement of Science (AAAS): 48–52.
 <https://doi.org/10.1126/science.2740915>.
-
-</div>
-
-<div id="ref-Webber_2018">
-
-Webber, Quinn M. R., and Eric Vander Wal. 2018. “An Evolutionary
-Framework Outlining the Integration of Individual Social and Spatial
-Ecology.” Edited by Elizabeth Derryberry. *Journal of Animal Ecology* 87
-(1). Wiley: 113–27. <https://doi.org/10.1111/1365-2656.12773>.
 
 </div>
 

@@ -135,8 +135,17 @@ citep('10.1111/1365-2656.12764')
 citep('10.1016/j.arcontrol.2017.03.002')
 
 ## movement
+# Bode 2011
+citep('10.1016/j.anbehav.2011.04.011')
+
+# Cleasby 2019
+citep('10.1007/s00265-019-2761-1')
+
 # Strandburg-Peshkin 2015
 citep('10.1126/science.aaa5099')
+
+# He et al. 2019
+citep('10.1007/s00265-018-2602-7')
 
 # Jolles et al 2019
 citep('10.1016/j.tree.2019.11.001')
@@ -146,6 +155,9 @@ citep('10.1111/1365-2656.12198')
 
 # Mourier et al. 2019 (pre-print)
 citep('10.1101/749085')
+
+# Papageorgiou 2019
+citep('10.1016/j.cub.2019.09.072')
 
 # Silk et al. 2018
 citep('10.1016/j.tree.2018.03.008')
