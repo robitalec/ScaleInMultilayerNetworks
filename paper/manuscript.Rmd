@@ -615,15 +615,15 @@ and logistical constraints.
 
 ## Movement ecology and collective movement
 
-Animal movement undoubtedly affects an individual's social environment
-[@Strandburg-Peshkin_2015]. Movement is a dynamic process that is related
-to the resources an individual consumes within their home range and the space
-that they use (Van Moorter et al. 2016). Collective movement can reduce
-group-level predation via detection-dilution trade-offs and improve information
-transfer about the quality or location of resources to other group members
-(Jolles et al. 2019). Social processes, movement decisions, and space use are
-inextricably linked and multilayer networks represent a potential analytical
-framework for linking these processes (e.g. Mourier et al. 2019).
+Social processes, movement decisions, and space use are inextricably linked 
+and multilayer networks represent a potential analytical framework for linking 
+these processes (e.g. Mourier et al. 2019). Movement as a collective group can 
+reduce per capita predation risk via detection-dilution trade-offs and improve 
+information transfer about the quality or location of resources to other group 
+members (Jolles et al. 2019). In our case study, we integrate proximity based 
+social networks that inherently rely on animal collective movement and, in general, 
+we found that movement is likely an important mechanism driving social network 
+connectivity within and between habitat types.
 
 <!-- remove italics from terms? -->
 Although multilayer animal social networks are relatively novel (Silk et al.
