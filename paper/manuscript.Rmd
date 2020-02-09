@@ -667,8 +667,18 @@ behaviour-specific monolayer networks (e.g. Smith-Aguilar et al. 2019).
 
 Importantly, the key to incorporating movement in multilayer networks across
 scales is the technological advancements available to overcome previous
-limitations (Hughey et al. 2018).
-
+limitations (Hughey et al. 2018). Biologging and wildlife tracking technology 
+has advanced to the point where relocations can be programmed to occur as 
+frequently as each second (Börger 2016), a practice which has been applied 
+to questions of collective movement (e.g Strandburg-Peskin et al. 2015). 
+Meanwhile, remote sensing technology, including unmanned aerial vehicles 
+and satellites, can be used to track the fine-scalemovements of  
+groups over large distances and time scales (Torney et al. 2019). Using 
+technology to infer behaviour has therefore become standard operating procedure
+for many species in many systems. Our ability to collect and process 
+remotely sensed data and infer social processes based on animal movement 
+provides an opportunity to use multilayer social network analysis to answer
+complex questions about animal socioecology.
 
 Given the existing framework for constructing multilayer networks from
 behavioural layers (e.g. Smith-Aguilar et al. 2019), movement layers could be
