@@ -765,14 +765,15 @@ logistical constraints.
 Social processes, movement decisions, and space use are inextricably
 linked and multilayer networks represent a potential analytical
 framework for linking these processes
-(<span class="citeproc-not-found" data-reference-id="Mourier_2019">**???**</span>).
-Movement as a collective group can reduce per capita predation risk via
-detection-dilution trade-offs and improve information transfer about the
-quality or location of resources to other group members (Jolles, King,
-and Killen 2019). In our case study, we integrate proximity based social
-networks that inherently rely on animal collective movement and, in
-general, we found that movement is likely an important mechanism driving
-social network connectivity within and between habitat types.
+(<span class="citeproc-not-found" data-reference-id="Mourier_2019">**???**</span>)
+(Mourier et al. 2019). Movement as a collective group can reduce per
+capita predation risk via detection-dilution trade-offs and improve
+information transfer about the quality or location of resources to other
+group members (Jolles, King, and Killen 2019). In our case study, we
+integrate proximity based social networks that inherently rely on animal
+collective movement and, in general, we found that movement is likely an
+important mechanism driving social network connectivity within and
+between habitat types.
 
 Although multilayer animal social networks are relatively novel (Silk et
 al. 2018), movement behaviour within multilayer networks has been
@@ -784,26 +785,26 @@ between fixed location autonomous arrays. In this example, nodes
 represent locations within the array, *intralayer edges* represent
 individual movement frequency, and *interlayer edges* represent contact
 probability among individuals at a given node
-(<span class="citeproc-not-found" data-reference-id="Mourier_2019">**???**</span>).
-Although movement between fixed arrays is inherent, networks are not
-constructed based on continuous measures of dyadic or collective
-movement (Long et al. 2014). Our case study builds on the work of
-Mourier et al. (2019) and explicitly integrates continuous and
-simultaneous measures of animal movement through space and time as
-layers of a multilayer social network.
+(<span class="citeproc-not-found" data-reference-id="Mourier_2019">**???**</span>)
+(Mourier et al. 2019). Although movement between fixed arrays is
+inherent, networks are not constructed based on continuous measures of
+dyadic or collective movement (Long et al. 2014). Our case study builds
+on the work of Mourier et al. (2019) and explicitly integrates
+continuous and simultaneous measures of animal movement through space
+and time as layers of a multilayer social network.
 
 In contrast to spatial networks, where nodes represent spatial locations
 that are fixed in space, movement networks can represent continuous and
 simultaneous movement trajectories of multiple animals. In a recent
-study of vulturine gunieafowl (Acryllium vulturinum), GPS movement data
-were used to generate monolayer association networks within a multilayer
-network (Papageorgiou et al. 2019). However, despite potential to
-generate networks in different spatial or social contexts, layers in the
-multilayer network represented social associations within and between
-groups. Continuous collection of animal relocation data using GPS
-technology can be used to measure how groups of animals make collective
-movement decisions in the context of their local environment
-(Strandburg-Peshkin et al. 2015, 2017) and across scales. A collective
+study of vulturine gunieafowl (*Acryllium vulturinum*), GPS movement
+data were used to generate monolayer association networks within a
+multilayer network (Papageorgiou et al. 2019). However, despite
+potential to generate networks in different spatial or social contexts,
+layers in the multilayer network represented social associations within
+and between groups. Continuous collection of animal relocation data
+using GPS technology can be used to measure how groups of animals make
+collective movement decisions in the context of their local environment
+(Strandburg-Peshkin et al. 2015, 2017) and across scales. A collective
 movement layer could constitute similarity in movement for dyads (Long
 et al. 2014) or groups (Bode, Wood, and Franks 2011). This movement
 layer could be made at a fine (i.e. minute-to-minute: Cleasby et al.
@@ -817,32 +818,35 @@ application would be to generate social networks during times when
 animals are engaged in different behaviours, including traveling,
 interacting, or foraging (Muller et al. 2018; Finn et al. 2019) and
 construct a multilayer network based on behaviour-specific monolayer
-networks (e.g. Smith-Aguilar et al. 2019).
+networks (e.g.
+<span class="citeproc-not-found" data-reference-id="Smith_Aguilar_2019">**???**</span>).
 
 Importantly, the key to incorporating movement in multilayer networks
 across scales is the technological advancements available to overcome
 previous limitations (Hughey et al. 2018). Biologging and wildlife
 tracking technology has advanced to the point where relocations can be
-programmed to occur as frequently as each second (Börger 2016), a
-practice which has been applied to questions of collective movement (e.g
-Strandburg-Peskin et al. 2015). Meanwhile, remote sensing technology,
-including unmanned aerial vehicles and satellites, can be used to track
-the fine-scale movements of groups over large distances and time scales
-(Torney et al. 2019). Using technology to infer behaviour has therefore
-become standard operating procedure for many species in many systems.
-Our ability to collect and process remotely sensed data and infer social
-processes based on animal movement provides an opportunity to use
-multilayer social network analysis to answer complex questions about
-animal socioecology.
+programmed to occur as frequently as each second
+(<span class="citeproc-not-found" data-reference-id="Börger_2016">**???**</span>),
+a practice which has been applied to questions of collective movement
+(e.g Strandburg-Peshkin et al. 2015). Meanwhile, remote sensing
+technology, including unmanned aerial vehicles and satellites, can be
+used to track the fine-scale movements of groups over large distances
+and time scales (Torney et al. 2018). Using technology to infer
+behaviour has therefore become standard operating procedure for many
+species in many systems. Our ability to collect and process remotely
+sensed data and infer social processes based on animal movement provides
+an opportunity to use multilayer social network analysis to answer
+complex questions about animal socioecology.
 
 Given the existing framework for constructing multilayer networks from
-behavioural layers (e.g. Smith-Aguilar et al. 2019), monolayer networks
-that explicity quantify movement paramters could be itnegrated. For
-example, edges could represent measures of dyadic or collective movement
-based on dynamic interaction metrics (Long et al. 2014). Integrating
-movement layers with habitat-specific social association layers could
-further shed light on the role of movement as a driver of the social and
-spatial environments an individual experiences
+behavioural layers (e.g.
+<span class="citeproc-not-found" data-reference-id="Smith_Aguilar_2019">**???**</span>),
+monolayer networks that explicity quantify movement paramters could be
+itnegrated. For example, edges could represent measures of dyadic or
+collective movement based on dynamic interaction metrics (Long et al.
+2014). Integrating movement layers with habitat-specific social
+association layers could further shed light on the role of movement as a
+driver of the social and spatial environments an individual experiences
 (<span class="citeproc-not-found" data-reference-id="Webber_2018">**???**</span>).
 In our case study, we generated multilayer networks based on
 habitat-specific monolayers. Coordinated movement of dyads, or groups,
@@ -850,7 +854,7 @@ could vary based on habitat, and the approach we outline could be used
 to explore mechanisms linking the social and spatial environments. For
 example, social processes may be an emergent property of the landscape
 because animals aggregate at resources, such as waterholes
-(Chamaillé-Jammes et al. 2008). Movement to, from, or within habitat
+(Chamaillé-Jammes et al. 2008). Movement to, from, or within habitat
 patches or territories can also contribute to the formation of the
 social environment (Spiegel et al. 2016). For example, in sleepy lizards
 (*Tiliqua rugosa*) males interacted primarily at home range edges,
@@ -1022,20 +1026,22 @@ Behaviour* 82 (1). Elsevier BV: 29–38.
 
 </div>
 
-<div id="ref-Börger_2016">
-
-Börger, Luca. 2016. “Stuck in Motion? Reconnecting Questions and Tools
-in Movement Ecology.” *Journal of Animal Ecology* 85 (1). Wiley: 5–10.
-<https://doi.org/10.1111/1365-2656.12464>.
-
-</div>
-
 <div id="ref-Br_dka_2018">
 
 Br’odka, Piotr, Anna Chmiel, Matteo Magnani, and Giancarlo Ragozini.
 2018. “Quantifying Layer Similarity in Multiplex Networks: A Systematic
 Study.” *Royal Society Open Science* 5 (8). The Royal Society: 171747.
 <https://doi.org/10.1098/rsos.171747>.
+
+</div>
+
+<div id="ref-Chamaillé_Jammes_2008">
+
+Chamaillé-Jammes, Simon, Herv’e Fritz, Marion Valeix, Felix Murindagomo,
+and Jean. Clobert. 2008. “Resource Variability, Aggregation and Direct
+Density Dependence in an Open Context: The Local Regulation of an
+African Elephant Population.” *Journal of Animal Ecology* 77 (1). Wiley:
+135–44. <https://doi.org/10.1111/j.1365-2656.2007.01307.x>.
 
 </div>
 
@@ -1270,13 +1276,22 @@ Research?” *Trends in Ecology & Evolution* 33 (6). Elsevier BV: 376–78.
 
 </div>
 
-<div id="ref-Smith_Aguilar_2019">
+<div id="ref-Strandburg_Peshkin_2015">
 
-Smith-Aguilar, Sandra E., Filippo Aureli, Laura Busia, Colleen
-Schaffner, and Gabriel Ramos-Fern’andez. 2019. “Using Multiplex Networks
-to Capture the Multidimensional Nature of Social Structure.” *Primates*
-60 (3). Springer Science; Business Media LLC: 277–95.
-<https://doi.org/10.1007/s10329-018-0686-3>.
+Strandburg-Peshkin, A., D. R. Farine, I. D. Couzin, and M. C. Crofoot.
+2015. “Shared Decision-Making Drives Collective Movement in Wild
+Baboons.” *Science* 348 (6241). American Association for the Advancement
+of Science (AAAS): 1358–61. <https://doi.org/10.1126/science.aaa5099>.
+
+</div>
+
+<div id="ref-Strandburg_Peshkin_2017">
+
+Strandburg-Peshkin, Ariana, Damien R Farine, Margaret C Crofoot, and
+Iain D Couzin. 2017. “Habitat and Social Factors Shape Individual
+Decisions and Emergent Group Structure During Baboon Collective
+Movement.” *eLife* 6 (January). eLife Sciences Publications, Ltd.
+<https://doi.org/10.7554/elife.19505>.
 
 </div>
 
@@ -1286,6 +1301,16 @@ Sugihara, G, K Schoenly, and A Trombla. 1989. “Scale Invariance in Food
 Web Properties.” *Science* 245 (4913). American Association for the
 Advancement of Science (AAAS): 48–52.
 <https://doi.org/10.1126/science.2740915>.
+
+</div>
+
+<div id="ref-Torney_2018">
+
+Torney, Colin J., Myles Lamont, Leon Debell, Ryan J. Angohiatok,
+Lisa-Marie Leclerc, and Andrew M. Berdahl. 2018. “Inferring the Rules of
+Social Interaction in Migrating Caribou.” *Philosophical Transactions of
+the Royal Society B: Biological Sciences* 373 (1746). The Royal Society:
+20170385. <https://doi.org/10.1098/rstb.2017.0385>.
 
 </div>
 

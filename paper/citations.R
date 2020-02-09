@@ -144,14 +144,14 @@ citep('10.1111/1365-2656.12464')
 # Cleasby 2019
 citep('10.1007/s00265-019-2761-1')
 
+#Chanaille-Jammes
+citep('10.1111/j.1365-2656.2007.01307.x')
+
 # Finn 2019
 citep('10.1016/j.anbehav.2018.12.016')
 
 # Flack 2018
 citep('10.1126/science.aap7781 ')
-
-# Strandburg-Peshkin 2015
-citep('10.1126/science.aaa5099')
 
 # He et al. 2019
 citep('10.1007/s00265-018-2602-7')
@@ -179,6 +179,15 @@ citep('10.1016/j.tree.2018.03.008')
 
 #Smith-Aguilar et al. 2019
 citep('10.1007/s10329-018-0686-3')
+
+# Strandburg-Peshkin 2015
+citep('10.1126/science.aaa5099')
+
+# Strandburg-Peshkin 2017
+citep('10.7554/eLife.19505')
+
+# Torney et al 2018
+citep('10.1098/rstb.2017.0385')
 
 # Webber & Vander wal 2018
 citep('10.1111/1365-2656.12773')

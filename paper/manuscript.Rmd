@@ -620,7 +620,7 @@ and logistical constraints.
 
 Social processes, movement decisions, and space use are inextricably linked 
 and multilayer networks represent a potential analytical framework for linking 
-these processes [@Mourier_2019]. Movement as a collective group can 
+these processes [@Mourier_2019] (Mourier et al. 2019). Movement as a collective group can 
 reduce per capita predation risk via detection-dilution trade-offs and improve 
 information transfer about the quality or location of resources to other group 
 members [@Jolles_2019]. In our case study, we integrate proximity based 
@@ -636,7 +636,7 @@ to monitor movement of sharks (*Carcharhinus amblyrhynchos* and *Carcharhinus
 melanopterus*) between fixed location autonomous arrays. In this example, nodes
 represent locations within the array, *intralayer edges* represent individual
 movement frequency, and *interlayer edges* represent contact probability among
-individuals at a given node [@Mourier_2019]. Although movement between 
+individuals at a given node [@Mourier_2019] (Mourier et al. 2019). Although movement between 
 fixed arrays is inherent, networks are not constructed based on continuous 
 measures of dyadic or collective movement [@Long_2014]. Our case study 
 builds on the work of Mourier et al. (2019) and explicitly integrates 
@@ -646,13 +646,14 @@ and time as layers of a multilayer social network.
 In contrast to spatial networks, where nodes represent spatial locations that
 are fixed in space, movement networks can represent continuous and simultaneous
 movement trajectories of multiple animals. In a recent study of vulturine 
-gunieafowl (Acryllium vulturinum), GPS movement data were used to generate 
+gunieafowl (*Acryllium vulturinum*), GPS movement data were used to generate 
 monolayer association networks within a multilayer network [@Papageorgiou_2019]. 
 However, despite potential to generate networks in different spatial or social contexts, 
 layers in the multilayer network represented social associations within and 
 between groups. Continuous collection of animal relocation data using GPS 
 technology can be used to measure how groups of animals make collective 
-movement decisions in the context of their local environment (Strandburg-Peshkin et al. 2015, 2017) and across scales. A
+movement decisions in the context of their local environment 
+[@Strandburg_Peshkin_2015; @Strandburg_Peshkin_2017] and across scales. A
 collective movement layer could constitute similarity in movement for dyads
 [@Long_2014] or groups  [@Bode_2011]. This movement layer could be
 made at a fine [i.e. minute-to-minute: @Cleasby_2019] or coarse scale
@@ -672,10 +673,10 @@ scales is the technological advancements available to overcome previous
 limitations [@Hughey_2018]. Biologging and wildlife tracking technology 
 has advanced to the point where relocations can be programmed to occur as 
 frequently as each second [@Börger_2016], a practice which has been applied 
-to questions of collective movement (e.g Strandburg-Peskin et al. 2015). 
+to questions of collective movement [e.g @Strandburg_Peshkin_2015]. 
 Meanwhile, remote sensing technology, including unmanned aerial vehicles 
 and satellites, can be used to track the fine-scale movements of groups 
-over large distances and time scales (Torney et al. 2019). Using 
+over large distances and time scales [@Torney_2018]. Using 
 technology to infer behaviour has therefore become standard operating procedure
 for many species in many systems. Our ability to collect and process 
 remotely sensed data and infer social processes based on animal movement 
@@ -695,7 +696,7 @@ movement of dyads, or groups, could vary based on habitat, and the approach we
 outline could be used to explore mechanisms linking the social and spatial
 environments. For example, social processes may be an emergent property of the
 landscape because animals aggregate at resources, such as waterholes
-(Chamaillé-Jammes et al. 2008). Movement to, from, or within habitat patches  or
+[@Chamaillé_Jammes_2008]. Movement to, from, or within habitat patches  or
 territories can also contribute to the formation of the social environment
 (Spiegel et al. 2016). For example, in sleepy lizards (*Tiliqua rugosa*) males
 interacted primarily at home range edges, presumably driving territorial
