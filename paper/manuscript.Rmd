@@ -642,21 +642,32 @@ and time as layers of a multilayer social network.
 
 In contrast to spatial networks, where nodes represent spatial locations that
 are fixed in space, movement networks can represent continuous and simultaneous
-movement trajectories of multiple animals. Continuous collection of animal
-relocation data using GPS technology can be used to measure how groups of
+movement trajectories of multiple animals. In a recent study of vulturine 
+gunieafowl (Acryllium vulturinum), GPS movement data were used to generate 
+monolayer association networks within a multilayer network (Papageorgiou et al. 2019). 
+However, despite potential to generate networks in different spatial or social contexts, 
+layers in the multilayer network represented social associations within and 
+between groups. Continuous collection of animal relocation data using GPS 
+technology can be used to measure how groups of
 animals make collective movement decisions in the context of their local
 environment (Strandburg-Peshkin et al. 2015, 2017) and across scales. A
 collective movement layer could constitute similarity in movement for dyads
 (Long et al. 2014) or groups (Bode et al. 2011). This movement layer could be
 made at a fine (i.e. minute-to-minute: Cleasby et al. 2019) or coarse scale
-(global migration: Flack et al. 2018). Another potential application would be to
+(global migration: Flack et al. 2018). Our case study integrates variation 
+in temporal and spatial scale to assess the role of scale in predicting 
+multilayer networks. As one might expect, we found increasing spatial 
+scale results in saturation of potential social connections (Figure 3), 
+while increasing temporal scale had little effect on habitat-specific 
+networks (Figure 5). Another potential application would be to
 generate social networks during times when animals are engaged in different
 behaviours, including traveling, interacting, or foraging (e.g. Muller et al.
 2018; Finn et al. 2019) and construct a multilayer network based on
 behaviour-specific monolayer networks (e.g. Smith-Aguilar et al. 2019).
+
 Importantly, the key to incorporating movement in multilayer networks across
 scales is the technological advancements available to overcome previous
-limitations (see Hughey et al. 2018).
+limitations (Hughey et al. 2018).
 
 
 Given the existing framework for constructing multilayer networks from
