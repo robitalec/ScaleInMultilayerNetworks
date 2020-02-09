@@ -80,9 +80,8 @@ share space over coarser spatial and temporal scales (e.g. Piza-Roca et al.
 2018). Although the social environment clearly scales spatially and temporally,
 it remains unclear whether coarser scales of sociality, including social
 association and home range overlap, vary predictably with social interaction
-(Castles et al. 2014; Farine 2015). Thus, we define social scale as the type of
-social relationship observed that can be explicitly defined and measured (Farine
-et al. 2015).
+ [@Castles_2014; @Farine2015a]. Thus, we define social scale as the type of
+social relationship observed that can be explicitly defined and measured [@Farine_2015a].
 
 
 Animal social network analysis is a well-developed tool used to measure the
@@ -94,7 +93,7 @@ which can influence population dynamics and evolutionary processes
 and innovation of traditional social network analysis (Webber & Vander Wal
 2019), it typically considers a single scale of sociality in a given network
 (monolayer), drastically simplifying the potential complexity of animal social
-systems (Finn et al. 2019). 
+systems [@Finn_2019]. 
 
 
 Unlike traditional monolayer social networks, multilayer networks explicitly
@@ -104,7 +103,7 @@ representing (i) different classes of individuals, e.g. male or female; (ii) typ
 of behaviours, e.g. grooming, travelling, or foraging; and (iii) spatial areas,
 e.g. local or regional, or temporal windows, e.g. daily or seasonal 
 (Kivela et al. 2014; Porter 2018). Multilayer networks are relatively novel to studies of animal
-behaviour (Finn et al. 2019; Silk et al. 2018), although they have been used to
+behaviour [Silk_2018; @Finn_2019], although they have been used to
 describe multidimensional human social systems, complex transportation networks,
 and neural networks [@Silk_2018]. The role of scale within multilayer
 social networks remains unexplored but provides a unique opportunity to develop
@@ -166,10 +165,9 @@ Adult female caribou were immobilized and fitted with global positioning system
 (GPS) collars (Lotek Wireless Inc., Newmarket, ON, Canada, GPS4400M collars,
 1,250 g) as described by Schaefer and Mahoney (2013). Collars were programmed to
 collect location fixes every 2 hours. Prior to analyses, we subset GPS fixes
-into a discrete removed all erroneous and outlier GPS fixes following Bjørneraas
-et al. (2010)<!-- TODO: get Bjorneraas ref-->. We did not collar all female
-caribou in the herd; however, we assumed that our sample of collared animals was
-random.
+into a discrete removed all erroneous and outlier GPS fixes following [@Bjørneraas_2010]. 
+We did not collar all female caribou in the herd; however, we assumed that our 
+sample of collared animals was random.
 
 ## Landscape data and habitat classification
 Landcover data were provided by the Newfoundland and Labrador Wildlife Division.
@@ -548,13 +546,13 @@ at each scale separately as has traditionally been done.
 For instance, social scale is major consideration for social network analysis,
 especially in the context of different types of relationships, such as grooming
 and association, that are typically examined separately while answering a single
-question (Carter, Lee, & Marshall, 2015; Castles et al., 2014; Farine, 2015).
+question [@Castles_2014; @Cater_2015; @Farine_2015a].
 Furthermore, it is a common trope that individuals must be associating to
 interact, and many studies therefore assume that proximity is proxy for
 interacting (Farine, 2015). For instance, baboons need to be in proximity in
 order to groom each other. However, animals have certain interactions that do
 not require proximity such as long-distance vocalization and olfactory signals
-(Carter et al., 2015). With the advancement of biologging technology, we have
+[@Carter_2015] With the advancement of biologging technology, we have
 the ability to record social interactions that do not require proximity,
 particularly long-distance communication networks with devices like microphone
 arrays (Snijders & Naguib, 2017). These varying social scales can have different
@@ -593,7 +591,7 @@ metric could be used to assess the relationship between an individual’s social
 phenotype and fitness. It would also be a meaningful simplification of many
 network metrics that could help simplify statistical analyses and deal with the
 frequent correlations between social network metrics in different types of
-networks (Castles et al., 2014). Furthermore, multilayer networks provide a
+networks [@Castles_2014]. Furthermore, multilayer networks provide a
 framework to test hypotheses linking social phenotypes and fitness across
 temporal scales. Because of the non-independent nature of social interactions
 and associations, especially over time, it is hard to test hypotheses about
@@ -698,9 +696,9 @@ environments. For example, social processes may be an emergent property of the
 landscape because animals aggregate at resources, such as waterholes
 [@Chamaillé_Jammes_2008]. Movement to, from, or within habitat patches  or
 territories can also contribute to the formation of the social environment
-(Spiegel et al. 2016). For example, in sleepy lizards (*Tiliqua rugosa*) males
+[@Spiegel_2016]. For example, in sleepy lizards (*Tiliqua rugosa*) males
 interacted primarily at home range edges, presumably driving territorial
-behaviour (Spiegel et al. 2018). Incorporating movement ecology within a
+behaviour [@Spiegel_2018]. Incorporating movement ecology within a
 multilayer network framework is a logical next step for a burgeoning field. In
 particular, when association networks are habitat-specific, we suggest the
 integration of movement and space use in multilayer networks provides novel

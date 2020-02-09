@@ -37,8 +37,9 @@ citep('10.2980/16-2-3238')
 
 ### Caribou location 
 # TODO: Schaefer and Mahoney (2013)
-# TODO: Bjørneraas et al (2010)
 
+## Bjorness 2010
+citep('10.1111/j.1937-2817.2010.tb01258.x')
 
 ### Caribou multilayer social networks
 # kivela 2014
@@ -179,6 +180,12 @@ citep('10.1016/j.tree.2018.03.008')
 
 #Smith-Aguilar et al. 2019
 citep('10.1007/s10329-018-0686-3')
+
+# Spiegel et al 2016
+citep('10.1111/2041-210X.12553')
+
+# Spiegel et al. 2018
+citep('10.1016/j.anbehav.2017.09.008')
 
 # Strandburg-Peshkin 2015
 citep('10.1126/science.aaa5099')
