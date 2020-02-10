@@ -118,9 +118,9 @@ p <- theme(legend.text = element_text(size = 12, color = "black"),
 labels <- data.table(
   x = rep(c(1.5, 4.25), 3),
   y = rep(c(1.25, 3.25, 5.25), each = 2),
-  label = c('1-winter', '1-summer',
-            '2-winter', '2-summer',
-            '3-winter', '3-summer')
+  label = c('summer-3', 'winter-3',
+            'summer-2', 'winter-2',
+            'summer-1', 'winter-1')
 )
 
 (gnn <- ggplot(
