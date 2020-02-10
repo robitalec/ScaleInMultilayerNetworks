@@ -186,7 +186,7 @@ throughout the population.
 ## Landscape data and habitat classification
 Landcover data were provided by the Newfoundland and Labrador Wildlife Division.
 Available landcover classification included nine habitat types at <!-- TODO:
-double check lc res--> 10 m resolution. We reclassified the landcover types into
+double check lc res--> 30 m resolution. We reclassified the landcover types into
 three categories: foraging habitat, open habitat, and forest habitat using the R
 package `raster` [@Hijmans_2019]. Foraging habitat consisted of lichen habitat,
 open habitat consisted of wetland, rocky barrens, and anthropogenic habitat
@@ -287,10 +287,10 @@ considered in the same group.
 
 To assess the influence of spatial scale on multilayer networks, we aggregated
 our landcover raster at varying scales relevant to caribou ecology. We
-aggregated the 10 m landcover raster using the R package `grainchanger`
+aggregated the 30 m landcover raster using the R package `grainchanger`
 [@Graham_2019] at five scales: 100 m, 250 m, 500 m, and 1000 m. Aggregation
 occurred using a modal moving window method using a circular window
-corresponding to the above scales [@Graham_2019a]. We assume 10 m and 100 m
+corresponding to the above scales [@Graham_2019a]. We assume 30 m and 100 m
 represents fine-scale decision making for caribou during foraging, while
 re-sampling at 500 m and 1000 m represents the scale at which caribou tend to
 select and avoid habitat (Bastille-Rousseau et al. 2017).
@@ -361,7 +361,7 @@ having a hard time understanding this previous sentence -->
 open habitats except for a contrasting increase in similarity for forest and
 decrease in similarity for open habitats at 250 m landcover resolution (Figure
 \@ref(fig:lcres)c). Layer similarity was not possible to calculate between
-winter and summer forage because, at all landcover resolutions greater than 10 m
+winter and summer forage because, at all landcover resolutions greater than 30 m
 there were no individuals connected in the network layers. <!-- individuals
 still used forage but in much lower proportion + lowered opportunity to
 associate --> These results indicate the importance of matching landcover
@@ -507,7 +507,7 @@ of landcover network layers between seasons (e.g. open summer compared to open
 winter) showed different responses to changing landcover scale with an increase
 in similarity for forest layers at 250 m and decrease in similarity for open
 layers at 250 m. Note that forage layer similarity is not shown because
-individuals did not interact in forage habitats greater greater than 10 m
+individuals did not interact in forage habitats greater greater than 30 m
 landcover resolution. D) Mean connective redundancy across individuals showed a
 decreasing trend with increasing landcover resolution.
 
