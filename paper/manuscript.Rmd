@@ -3,9 +3,9 @@ title: The problem and promise of scale in animal social multilayer networks
 author: Alec L. Robitaille^1^, Quinn M.R. Webber^2^, Julie W. Turner^1^, Eric Vander Wal^1,2^
 date: ^1^Department of Biology, Memorial University of Newfoundland, Canada; ^2^Cognitive and Behavioural Ecology Interdisciplinary Program, Memorial University of Newfoundland
 output:
-   github_document
-  # bookdown::pdf_document2:
-  #    number_sections: false
+   # github_document
+  bookdown::pdf_document2:
+     number_sections: false
   #bookdown::word_document2:
    # reference_docx: template.docx
 bibliography: ../references/knitcite.bib
@@ -27,25 +27,26 @@ source('../scripts/0-variables.R')
 \newpage
 
 # Abstract
-Scale remains a foundational concept in ecology. Spatial scale, for instance, has
-become a central consideration in the way we understand landscape ecology and
-animal space use. Meanwhile, social processes can also scale from fine-scale
+Scale remains a foundational concept in ecology. Spatial scale, for instance,
+has become a central consideration in the way we understand landscape ecology
+and animal space use. Meanwhile, social processes can also scale from fine-scale
 interactions to co-occurrence to overlapping home ranges. Multilayer networks
 promise the integration of monolayer animal social networks with the complexity
 and importance of animal space use and movement in heterogeneous landscapes.
 Despite the complex interplay between social networks and how animals use space,
 there remains an important biological and methodological gap in our
-understanding of an animal’s perception of scale. But
-scale can affect multilayer network dynamics and how we build and interpret
-them. Here we discuss the role of scale in the context of multilayer networks
-and provide a social ungulate case study to illustrate the role
-of social, spatial, and temporal scale on multilayer processes. We also present
-perspectives on future development and application of scale in multilayer
-networks with respect to: habitat selection and space use; phenotypes and individual fitness; and movement ecology and collective movement. Effective integration
-of social and spatial processes, including biologically meaningful scales,
-within the context of animal social networks is an emerging area of research;
-our contribution incorporates perspectives on how the social
-environment and spatial processes are linked across scales in a multilayer
+understanding of an animal’s perception of scale. But scale can affect
+multilayer network dynamics and how we build and interpret them. Here we discuss
+the role of scale in the context of multilayer networks and provide a social
+ungulate case study to illustrate the role of social, spatial, and temporal
+scale on multilayer processes. We also present perspectives on future
+development and application of scale in multilayer networks with respect to:
+habitat selection and space use; phenotypes and individual fitness; and movement
+ecology and collective movement. Effective integration of social and spatial
+processes, including biologically meaningful scales, within the context of
+animal social networks is an emerging area of research; our contribution
+incorporates perspectives on how the social environment and spatial processes
+are linked across scales in a multilayer
 
 ## Keywords
 <!-- TODO: is this the final list ? -->
@@ -69,42 +70,41 @@ scale-dependent.
 
 Sociality exists across both temporal and spatial scales (Whitehead 2008). For
 example, grooming requires close spatial proximity between conspecifics and
-occurs over brief time periods [e.g. @Carter_2015], whereas social
-association represents shared space use by members of the same social group [Figure 1, @Franks_2009].
-<!--Figure \@ref(fig:spacetime) TODO: something broken here?? --> 
-Further, for social interactions or associations to occur individuals must share space, and thus
-have overlapping home ranges. In the context of the social environment, home
-range overlap is a relatively coarse scale of sociality across which individuals
-share space over coarser spatial and temporal scales [e.g. @Piza_Roca_2018]. 
-Although the social environment clearly scales spatially and temporally,
-it remains unclear whether coarser scales of sociality, including social
-association and home range overlap, vary predictably with social interaction
- [@Castles_2014; @Farine_2015a]. Thus, we define social scale as the type of
-social relationship observed that can be explicitly defined and measured [@Farine_2015a]. 
-<!-- Farine references comes out as D.R. Farine 2015 -->
+occurs over brief time periods [e.g. @Carter_2015], whereas social association
+represents shared space use by members of the same social group [Figure 1,
+@Franks_2009]. <!--Figure \@ref(fig:spacetime) TODO: something broken here?? -->
+Further, for social interactions or associations to occur individuals must share
+space, and thus have overlapping home ranges. In the context of the social
+environment, home range overlap is a relatively coarse scale of sociality across
+which individuals share space over coarser spatial and temporal scales [e.g.
+@Piza_Roca_2018]. Although the social environment clearly scales spatially and
+temporally, it remains unclear whether coarser scales of sociality, including
+social association and home range overlap, vary predictably with social
+interaction [@Castles_2014; @Farine_2015a]. Thus, we define social scale as the
+type of social relationship observed that can be explicitly defined and measured
+[@Farine_2015a]. <!-- Farine references comes out as D.R. Farine 2015 -->
 
 Animal social network analysis is a well-developed tool used to measure the
-relationships of individuals and organization of social systems 
-[@Krause_2009; @Wey_2008; @Croft_2011]. Social network analysis provides
-insight into the structure of social communities and social network properties,
-which can influence population dynamics and evolutionary processes
-[@Pinter_Wollman_2013; @Kurvers_2014]. Despite the widespread use
-and innovation of traditional social network analysis [@Webber_2019], 
-it typically considers a single scale of sociality in a given network
-(monolayer), drastically simplifying the potential complexity of animal social
-systems [@Finn_2019]. 
+relationships of individuals and organization of social systems [@Krause_2009;
+@Wey_2008; @Croft_2011]. Social network analysis provides insight into the
+structure of social communities and social network properties, which can
+influence population dynamics and evolutionary processes [@Pinter_Wollman_2013;
+@Kurvers_2014]. Despite the widespread use and innovation of traditional social
+network analysis [@Webber_2019], it typically considers a single scale of
+sociality in a given network (monolayer), drastically simplifying the potential
+complexity of animal social systems [@Finn_2019].
 
 
 Unlike traditional monolayer social networks, multilayer networks explicitly
 consider social systems across contexts, including scale-dependent contexts
 [@Pilosof_2017]. Multilayer networks are made up of multiple layers, each
-representing (i) different classes of individuals, e.g. male or female; (ii) types 
-of behaviours, e.g. grooming, travelling, or foraging; and (iii) spatial areas,
-e.g. local or regional, or temporal windows, e.g. daily or seasonal 
- [@Kivela_2014; @Porter_2018]. Multilayer networks are relatively novel to studies of animal
-behaviour [@Silk_2018; @Finn_2019], although they have been used to
-describe multidimensional human social systems, complex transportation networks,
-and neural networks [@Silk_2018]. The role of scale within multilayer
+representing (i) different classes of individuals, e.g. male or female; (ii)
+types of behaviours, e.g. grooming, travelling, or foraging; and (iii) spatial
+areas, e.g. local or regional, or temporal windows, e.g. daily or seasonal
+[@Kivela_2014; @Porter_2018]. Multilayer networks are relatively novel to
+studies of animal behaviour [@Silk_2018; @Finn_2019], although they have been
+used to describe multidimensional human social systems, complex transportation
+networks, and neural networks [@Silk_2018]. The role of scale within multilayer
 social networks remains unexplored but provides a unique opportunity to develop
 novel understanding of variation in the temporal or spatial scales associated
 with social systems.
@@ -126,17 +126,20 @@ collective movement [@Jolles_2019], and habitat selection and space use. <!--
 TODO: (REF)--> <!-- TODO: Webber reference should be 2018, but defaulting to
 2017-->
 
-(ref:spacetime) Space-time diagram displaying variation the relative spatial and temporal extent 
-required for different types of social and communication processes for four species, including 
-hyaena, passerine birds, sleepy lizards, and elephants. Spatial and temporal extent for social interactions,
-e.g. mating, grooming, or aggression, are similar for most species because physical contact between 
-two individuals is required for most social interactions. The logical extension is that spatial and temporal extent for
-social interaction is nested within the spatial and temporal extent for social association because individuals must 
-shared space to interact. By contrast, different species have potential for  greater spatial and 
-temporal extents, for example, temporal extent for vocal communication is similar 
-for most species because most vocal calls only persist in the environment for seconds, but spatial 
-extent for vocal communication is highly variable with elephant calls extending the great distance and 
-passerine calls extending the shortest distance.
+(ref:spacetime) Space-time diagram displaying variation the relative spatial and
+temporal extent required for different types of social and communication
+processes for four species, including hyaena, passerine birds, sleepy lizards,
+and elephants. Spatial and temporal extent for social interactions, e.g. mating,
+grooming, or aggression, are similar for most species because physical contact
+between two individuals is required for most social interactions. The logical
+extension is that spatial and temporal extent for social interaction is nested
+within the spatial and temporal extent for social association because
+individuals must shared space to interact. By contrast, different species have
+potential for  greater spatial and temporal extents, for example, temporal
+extent for vocal communication is similar for most species because most vocal
+calls only persist in the environment for seconds, but spatial extent for vocal
+communication is highly variable with elephant calls extending the great
+distance and passerine calls extending the shortest distance.
 
 <!-- TODO: units of spatial scale? --> 
 
@@ -155,29 +158,28 @@ type), and temporal (seasonal). Caribou are gregarious ungulates with
 fission-fusion dynamics [@Lesmerises_2018] that display temporal
 [@Peignier_2019] and spatial (Webber et al. unpublished data) variation in
 social networks. In winter, caribou dig holes in the snow, termed craters, to
-access forage [@Bergerud_1974]. As a result, caribou tend to occupy and re-use 
-craters once they are established and there is
-considerably less access to forage than when the landscape is snow-free.
-Importantly, craters exist on the landscape at multiple scales: the crater scale
-(a single crater), the feeding area scale (multiple craters in close proximity),
-and the winter range scale (all craters within an individual’s range)
-[@Mayor_2009]. The distribution of forage for caribou is therefore seasonally
-heterogeneous, with greater access in snow-free seasons compared to winter as
-well as spatially heterogeneous in winter because the distribution of craters on
-the landscape varies meaning that access to vegetation in winter is highly
-variable for caribou. We therefore partitioned data into two discrete seasons:
-summer (3 August - 20 September) and winter (1 January – 17 February) based on
-caribou socioecology [@Peignier_2019].
+access forage [@Bergerud_1974]. As a result, caribou tend to occupy and re-use
+craters once they are established and there is considerably less access to
+forage than when the landscape is snow-free. Importantly, craters exist on the
+landscape at multiple scales: the crater scale (a single crater), the feeding
+area scale (multiple craters in close proximity), and the winter range scale
+(all craters within an individual’s range) [@Mayor_2009]. The distribution of
+forage for caribou is therefore seasonally heterogeneous, with greater access in
+snow-free seasons compared to winter as well as spatially heterogeneous in
+winter because the distribution of craters on the landscape varies meaning that
+access to vegetation in winter is highly variable for caribou. We therefore
+partitioned data into two discrete seasons: summer (3 August - 20 September) and
+winter (1 January – 17 February) based on caribou socioecology [@Peignier_2019].
 
 ## Caribou location data
 We used GPS location data collected from Fogo Island caribou in 2017 and 2018.
 Adult female caribou were immobilized and fitted with global positioning system
 (GPS) collars (Lotek Wireless Inc., Newmarket, ON, Canada, GPS4400M collars,
-1,250 g) as described by [@Schaefer_2013]. Collars were programmed to
-collect location fixes every 2 hours. Prior to analyses, we subset GPS fixes
-into a discrete removed all erroneous and outlier GPS fixes following [@Bjørneraas_2010]. 
-We did not collar all female caribou in the herd; however, we assumed that our 
-sample of collared animals was random.
+1,250 g) as described by [@Schaefer_2013]. Collars were programmed to collect
+location fixes every 2 hours. Prior to analyses, we subset GPS fixes into a
+discrete removed all erroneous and outlier GPS fixes following
+[@Bjørneraas_2010]. We did not collar all female caribou in the herd; however,
+we assumed that our sample of collared animals was random.
 
 ## Landscape data and habitat classification
 Landcover data were provided by the Newfoundland and Labrador Wildlife Division.
@@ -227,7 +229,8 @@ interlayer edges represented connections between the same individuals across
 contexts.
 
 We weighted edges of social networks by the strength of association between
-caribou using the simple ratio index (SRI, Cairns and Schwaeger 1987): <!-- TODO: get Cairns ref-->
+caribou using the simple ratio index (SRI, Cairns and Schwaeger 1987): 
+<!-- TODO: get Cairns ref-->
 
 $$ SRI = \frac{x}{x + y_{AB} + y_{A} + y_{B}} $$
 
@@ -245,24 +248,24 @@ another at any given time point.
 <!-- TODO: expand + simplify + examples individual A, B etc --> 
 <!-- TODO: EVW "parallelism"? -->
 
-We used a series of metrics to characterize the multilayer networks,
-focusing on the role of individuals, importance of individual layers and the
-similarity of different layers. To measure the role of individuals, we
-calculated degree centrality and graph strength. Degree centrality is the number
-of direct connections an individual has to other individuals in a network layer.
-Graph strength is the degree weighted by the strength of association, in this
-case SRI, in each layer-specific season and landcover context <!-- TODO:
-citation for graph strength?-->. Extending degree centrality, we calculated
-multidegree, the sum of degree centrality across layers, and neighbourhood, the
-sum of unique neighbours to each individual [@Berlingerio_2012; @Kivela_2014].
-We evaluated the relevance and redundancy of layers by combining the multidegree
-and neighbourhood to calculate connective redundancy and layer relevance.
-Connective redundancy is the proportion of neighbours repeated in multiple
-layers, and layer relevance is the proportion of neighbours present in each
-layer compared to the neighbourhood for each individual [@Berlingerio_2012].
-Finally, we calculated the similarity of layers between seasons, across
-landcover classes (e.g.: winter open compared to summer open) using the Pearson
-correlation coefficient [@Br_dka_2018].
+We used a series of metrics to characterize the multilayer networks, focusing on
+the role of individuals, importance of individual layers and the similarity of
+different layers. To measure the role of individuals, we calculated degree
+centrality and graph strength. Degree centrality is the number of direct
+connections an individual has to other individuals in a network layer. Graph
+strength is the degree weighted by the strength of association, in this case
+SRI, in each layer-specific season and landcover context <!-- TODO: citation for
+graph strength?-->. Extending degree centrality, we calculated multidegree, the
+sum of degree centrality across layers, and neighbourhood, the sum of unique
+neighbours to each individual [@Berlingerio_2012; @Kivela_2014]. We evaluated
+the relevance and redundancy of layers by combining the multidegree and
+neighbourhood to calculate connective redundancy and layer relevance. Connective
+redundancy is the proportion of neighbours repeated in multiple layers, and
+layer relevance is the proportion of neighbours present in each layer compared
+to the neighbourhood for each individual [@Berlingerio_2012]. Finally, we
+calculated the similarity of layers between seasons, across landcover classes
+(e.g.: winter open compared to summer open) using the Pearson correlation
+coefficient [@Br_dka_2018].
 
 
 
@@ -281,35 +284,35 @@ considered in the same group.
 ### Spatial scale
 
 To assess the influence of spatial scale on multilayer networks, we aggregated
-our landcover raster at varying scales relevant to caribou ecology.
-We aggregated the 10 m landcover raster using the R package `grainchanger`
-[@Graham_2019] at five scales: 100 m, 250 m, 500 m, and 1000 m. Aggregation occurred
-using a modal moving window method using a circular window corresponding to the
-above scales [@Graham_2019a]. We assume 10 m and 100 m represents fine-scale decision making
-for caribou during foraging (Webber et al. unpublished data), while re-sampling at 500 m and 1000 m
-represents the scale at which caribou tend to select and avoid habitat
-(Bastille-Rousseau et al. 2017).
+our landcover raster at varying scales relevant to caribou ecology. We
+aggregated the 10 m landcover raster using the R package `grainchanger`
+[@Graham_2019] at five scales: 100 m, 250 m, 500 m, and 1000 m. Aggregation
+occurred using a modal moving window method using a circular window
+corresponding to the above scales [@Graham_2019a]. We assume 10 m and 100 m
+represents fine-scale decision making for caribou during foraging (Webber et al.
+unpublished data), while re-sampling at 500 m and 1000 m represents the scale at
+which caribou tend to select and avoid habitat (Bastille-Rousseau et al. 2017).
 
 
 ### Temporal scale
 <!--TODO: are we missing some mention of 2017 summer and 2018 winter somewhere?-->
 We altered the temporal scale of multilayer networks by varying the length and
 position of the time window used to define seasons. The length of the time
-window varied from 40-100 days using a fixed start day for winter (starting at 1 January)
-and summer (starting at 3 August). The position of the time window was shifted by 1-48 days,
-using a fixed time window length of 48 days. These new time windows were
-iteratively used to partition data into two discrete seasons (winter, summer)
-and generate multilayer networks.
+window varied from 40-100 days using a fixed start day for winter (starting at 1
+January) and summer (starting at 3 August). The position of the time window was
+shifted by 1-48 days, using a fixed time window length of 48 days. These new
+time windows were iteratively used to partition data into two discrete seasons
+(winter, summer) and generate multilayer networks.
 
 Studies of social network analysis vary in the number and frequency of
 observations as well as the data collection technique used to generate networks
-[@Davis_2018; @Webber_2019]. In addition to altering the
-temporal scale by adjusting the time window, we investigated the influence of
-the number of observations on resulting multilayer networks. We randomly
-selected 500 timesteps and iteratively included 25 additional observations,
-regenerating the multilayer network and calculating associations of individuals.
-Subsequent iterations included the previous set of observations to mimic
-observational data. <!-- TODO: bah conclude / this sentence falls off a cliff -->
+[@Davis_2018; @Webber_2019]. In addition to altering the temporal scale by
+adjusting the time window, we investigated the influence of the number of
+observations on resulting multilayer networks. We randomly selected 500
+timesteps and iteratively included 25 additional observations, regenerating the
+multilayer network and calculating associations of individuals. Subsequent
+iterations included the previous set of observations to mimic observational
+data. <!-- TODO: bah conclude / this sentence falls off a cliff -->
 
 # Scale in multilayer networks in practice: case study results and discussion
 
@@ -465,7 +468,21 @@ landcover across seasons.
 -->
 
 
-(ref:socres) Varying scale in social threshold. For each social threshold (5 m, 50 m, 100 m, 150 m, 200 m, 250 m, 300 m, 350 m, 400 m, 450 m, 500 m), multilayer networks were constructed for each landcover class (forest, lichen and open) across two seasons (summer and winter) and four network metrics calculated.  A) Mean graph strength across individuals showed an increase for winter network layers at 50 m through 500 m while summer network layers had consistently weak connections. B) Mean layer relevance was relatively stable across social thresholds for each season and landcover layer. C) Similarity of landcover network layers between seasons (e.g.: open summer compared to open winter) showed different responses to changing landcover scale with an overall increase in similarity for open layers and decrease in similarity for lichen layers. <!--TODO: what about forest.--> D) Mean connective redundancy across individuals increased rapidly between 5 m and 50 m reaching a plateau  of about 0.65 at approximately a 50 m <!--TODO:**??**--> social threshold before decreasing between 400 m and 500 m.
+(ref:socres) Varying scale in social threshold. For each social threshold (5 m,
+50 m, 100 m, 150 m, 200 m, 250 m, 300 m, 350 m, 400 m, 450 m, 500 m), multilayer
+networks were constructed for each landcover class (forest, lichen and open)
+across two seasons (summer and winter) and four network metrics calculated.  A)
+Mean graph strength across individuals showed an increase for winter network
+layers at 50 m through 500 m while summer network layers had consistently weak
+connections. B) Mean layer relevance was relatively stable across social
+thresholds for each season and landcover layer. C) Similarity of landcover
+network layers between seasons (e.g.: open summer compared to open winter)
+showed different responses to changing landcover scale with an overall increase
+in similarity for open layers and decrease in similarity for lichen layers.
+<!--TODO: what about forest.--> D) Mean connective redundancy across individuals
+increased rapidly between 5 m and 50 m reaching a plateau  of about 0.65 at
+approximately a 50 m <!--TODO:**??**--> social threshold before decreasing
+between 400 m and 500 m.
 
 
 
@@ -476,7 +493,23 @@ knitr::include_graphics('../graphics/figure-spatialthreshold.png')
 
 
 
-(ref:lcres) Variation in multilayer network metrics as a function of changes in landcover resolution, a metric which we interpret as spatial scale. For each landcover resolution (10 m, 100 m, 250 m, 500 m and 1000 m), multilayer networks were constructed for each landcover class (forest, lichen and open) across two seasons (summer and winter), and four network metrics were calculated and we examined how network metrics changed as a function of changes in spatial scale. A) Mean graph strength of individuals was weaker during the summer compared to the winter months. B) Mean layer relevance showed sparse connectivity in summer compared to winter networks and a decrease in winter lichen layer relevance at higher landcover resolutions. C) Similarity of landcover network layers between seasons (e.g.: open summer compared to open winter) showed different responses to changing landcover scale with an increase in similarity for forest layers at 250 m and decrease in similarity for open layers at 250 m. Note that lichen layer similarity is not shown because individuals did not interact in lichen habitats greater greater than 10 m landcover resolution. D) Mean connective redundancy across individuals showed a decreasing trend with increasing landcover resolution. 
+(ref:lcres) Variation in multilayer network metrics as a function of changes in
+landcover resolution, a metric which we interpret as spatial scale. For each
+landcover resolution (10 m, 100 m, 250 m, 500 m and 1000 m), multilayer networks
+were constructed for each landcover class (forest, lichen and open) across two
+seasons (summer and winter), and four network metrics were calculated and we
+examined how network metrics changed as a function of changes in spatial scale.
+A) Mean graph strength of individuals was weaker during the summer compared to
+the winter months. B) Mean layer relevance showed sparse connectivity in summer
+compared to winter networks and a decrease in winter lichen layer relevance at
+higher landcover resolutions. C) Similarity of landcover network layers between
+seasons (e.g.: open summer compared to open winter) showed different responses
+to changing landcover scale with an increase in similarity for forest layers at
+250 m and decrease in similarity for open layers at 250 m. Note that lichen
+layer similarity is not shown because individuals did not interact in lichen
+habitats greater greater than 10 m landcover resolution. D) Mean connective
+redundancy across individuals showed a decreasing trend with increasing
+landcover resolution.
 
 
 ```{r lcres, fig.cap='(ref:lcres)'}
@@ -487,7 +520,23 @@ knitr::include_graphics('../graphics/figure-lcres.png')
 
 
 <!-- TODO: RO first sentence... -->
-(ref:nobs) Varying scale in number of observations. For each iteration, a number of observations (10-485 observations in steps of 25) were selected from the complete data set to construct multilayer networks with layers defined by each landcover class (forest, lichen and open) across two seasons (summer and winter) and four network metrics calculated. A) Mean graph strength across individuals varied for winter layers becoming relatively stable at 200 observations and remained weak throughout for summer layers. B) Mean layer relevance across individuals increased for winter layers and slightly increased for summer layers. C) Similarity of landcover network layers between seasons (e.g.: open summer compared to open winter) showed a stabilizing layer similarity at 200 observations for forest and 300 observations for lichen and open. <!--TODO:*There were observations of individuals in lichen and open areas at lower numbers of observations during the winter, so layer similarity could not be calculated at these values.* **Brief explanation of why two landcover don't have values at lower nobs??**.--> D) Mean connective redundancy across individuals increased with increasing number of observations, which begins to plateau around 100 observations.
+(ref:nobs) Varying scale in number of observations. For each iteration, a number
+of observations (10-485 observations in steps of 25) were selected from the
+complete data set to construct multilayer networks with layers defined by each
+landcover class (forest, lichen and open) across two seasons (summer and winter)
+and four network metrics calculated. A) Mean graph strength across individuals
+varied for winter layers becoming relatively stable at 200 observations and
+remained weak throughout for summer layers. B) Mean layer relevance across
+individuals increased for winter layers and slightly increased for summer
+layers. C) Similarity of landcover network layers between seasons (e.g.: open
+summer compared to open winter) showed a stabilizing layer similarity at 200
+observations for forest and 300 observations for lichen and open.
+<!--TODO:*There were observations of individuals in lichen and open areas at
+lower numbers of observations during the winter, so layer similarity could not
+be calculated at these values.* **Brief explanation of why two landcover don't
+have values at lower nobs??**.--> D) Mean connective redundancy across
+individuals increased with increasing number of observations, which begins to
+plateau around 100 observations.
 
 
 ```{r nobs, fig.cap='(ref:nobs)'}
@@ -498,7 +547,23 @@ knitr::include_graphics('../graphics/figure-nobs.png')
 
 
 
-(ref:winlen) Varying scale in time window length. For each time window length (40 to 100 days in length increasing by 5 days in sequence), multilayer networks were constructed for each landcover class (forest, lichen and open) across two seasons (summer and winter) and four network metrics calculated. A) Mean graph strength across individuals was relatively stable over increasing time window lengths, though there was more variation in strength between landcover types as window length increased. <!--TODO:**[see if you agree with my changes. B-D were based off fig. 3 and not relevant to this figure]**-->  B) Mean layer relevance generally increased during the summer months but was relatively stable across time window lengths for each landcover layer. C) Similarity of landcover network layers between seasons (e.g.: open summer compared to open winter) showed increasing similarity consistent across landcover layers with increasing window length. D) Mean connective redundancy across individuals varied dramatically depending on the length of the time window <!--TODO:**[JWT: previously this was describing fig. 3. I don't know if what I wrote best encapsulates what connnective redundancy does here. Length of time window seems to make connective redundancy highly variable as it changes.]**.-->
+(ref:winlen) Varying scale in time window length. For each time window length
+(40 to 100 days in length increasing by 5 days in sequence), multilayer networks
+were constructed for each landcover class (forest, lichen and open) across two
+seasons (summer and winter) and four network metrics calculated. A) Mean graph
+strength across individuals was relatively stable over increasing time window
+lengths, though there was more variation in strength between landcover types as
+window length increased. <!--TODO:**[see if you agree with my changes. B-D were
+based off fig. 3 and not relevant to this figure]**-->  B) Mean layer relevance
+generally increased during the summer months but was relatively stable across
+time window lengths for each landcover layer. C) Similarity of landcover network
+layers between seasons (e.g.: open summer compared to open winter) showed
+increasing similarity consistent across landcover layers with increasing window
+length. D) Mean connective redundancy across individuals varied dramatically
+depending on the length of the time window <!--TODO:**[JWT: previously this was
+describing fig. 3. I don't know if what I wrote best encapsulates what
+connnective redundancy does here. Length of time window seems to make connective
+redundancy highly variable as it changes.]**.-->
 
 
 ```{r winlen, fig.cap='(ref:winlen)'}
@@ -509,7 +574,22 @@ knitr::include_graphics('../graphics/figure-winlength.png')
 
 
 
-(ref:winpos) Varying scale in time window position. For each time window position (shifting the start date of the time window used to define seasons 1 to 48 days from the original), multilayer networks were constructed for each landcover class (forest, lichen and ope) across two seasons (summer and winter) and four network metrics calculated. A) Mean graph strength across individuals increased in summer network layers at window position 25 and increased between window position 20 and 40 for winter network layers. B) Mean layer relevance slightly decreased for winter layers and increased for summer layers, showing decreasing connectivity in shifted winter time windows and greater connectivity in summer layers at later window positions. C) Similarity of landcover network layers between seasons (e.g.: open summer compared to open winter) showed fluctuations in layer similarity across landcover types with shifted time windows. <!--TODO:**[JWT: previously describing window length, not position. Check that you're ok with my changes]**--> D) Mean connective redundancy across individuals increased between window position 12 through 48 due to increased connectivity in the summer network layers.
+(ref:winpos) Varying scale in time window position. For each time window
+position (shifting the start date of the time window used to define seasons 1 to
+48 days from the original), multilayer networks were constructed for each
+landcover class (forest, lichen and ope) across two seasons (summer and winter)
+and four network metrics calculated. A) Mean graph strength across individuals
+increased in summer network layers at window position 25 and increased between
+window position 20 and 40 for winter network layers. B) Mean layer relevance
+slightly decreased for winter layers and increased for summer layers, showing
+decreasing connectivity in shifted winter time windows and greater connectivity
+in summer layers at later window positions. C) Similarity of landcover network
+layers between seasons (e.g.: open summer compared to open winter) showed
+fluctuations in layer similarity across landcover types with shifted time
+windows. <!--TODO:**[JWT: previously describing window length, not position.
+Check that you're ok with my changes]**--> D) Mean connective redundancy across
+individuals increased between window position 12 through 48 due to increased
+connectivity in the summer network layers.
 
 
 ```{r winpos, fig.cap='(ref:winpos)'}
@@ -519,68 +599,68 @@ knitr::include_graphics('../graphics/figure-winpos.png')
 
 # Perspectives  to advance multilayer networks 
 
-The integration of behavioural and ecological theory has shown the value of considering 
-the importance of various ecological disciplines to better understand and predict animal 
-social networks, including demography (Shizuka and Johnson 2019), evolutionary and 
-quantitative genetics (Fisher and McAdam 2017), disease ecology (Silk et al. 2017), 
-and animal personality (Sih et al. 2017). While the number of studies integrating 
-social network theory into a broader array of behavioural and ecological 
-sub-disciplines is impressive, only recently has the role of animal space use been 
-considered in describing the causes and consequences of the social environment in the 
-context of (1) phenotypes and individual fitness [@Webber_2018], (2) 
-movement ecology and collective movement [@Bode_2011], and (3) habitat 
-selection and space use [@He_2019]. Importantly, much of the work linking 
-space use and the social environment has been theoretical and empirical studies 
-are lacking (but see Peignier et al. 2019; Pinter-Wollman 2015; Strandburg-Peshkin et al. 2015; 2017). 
-Here, we discuss the role mutlilayer networks within the emerging integration 
-of social and spatial ecology within the behavioural ecology literature.
+The integration of behavioural and ecological theory has shown the value of
+considering the importance of various ecological disciplines to better
+understand and predict animal social networks, including demography (Shizuka and
+Johnson 2019), evolutionary and quantitative genetics (Fisher and McAdam 2017),
+disease ecology (Silk et al. 2017), and animal personality (Sih et al. 2017).
+While the number of studies integrating social network theory into a broader
+array of behavioural and ecological sub-disciplines is impressive, only recently
+has the role of animal space use been considered in describing the causes and
+consequences of the social environment in the context of (1) phenotypes and
+individual fitness [@Webber_2018], (2) movement ecology and collective movement
+[@Bode_2011], and (3) habitat selection and space use [@He_2019]. Importantly,
+much of the work linking space use and the social environment has been
+theoretical and empirical studies are lacking (but see Peignier et al. 2019;
+Pinter-Wollman 2015; Strandburg-Peshkin et al. 2015; 2017). Here, we discuss the
+role mutlilayer networks within the emerging integration of social and spatial
+ecology within the behavioural ecology literature.
 
 ## Phenotypes and Individual fitness
 
 Social network positions are frequently used to represent the social environment
 that an individual experiences or their social phenotype. Social phenotypes are
 increasingly linked to important fitness for individuals of various species,
-including primates [@Brent_2017; @Thompson_2019],
-dolphins [@Stanton_2012; @Stanton_2011], and birds
-[@McDonald_2007; @Royle_2012]. Both
-temporal, seasons and stages of life, and social scales, types of interactions,
-have emerged as important for understanding fitness consequences in the context
-of social network positions [@Almeling_2016, @Berger_2015, @Brent_2017, @Holekamp_2012]. Multilayer networks provide a way to bridge these different scales so
-that we can examine social phenotypes in more holistic ways rather than looking
-at each scale separately as has traditionally been done.
+including primates [@Brent_2017; @Thompson_2019], dolphins [@Stanton_2012;
+@Stanton_2011], and birds [@McDonald_2007; @Royle_2012]. Both temporal, seasons
+and stages of life, and social scales, types of interactions, have emerged as
+important for understanding fitness consequences in the context of social
+network positions [@Almeling_2016, @Berger_2015, @Brent_2017, @Holekamp_2012].
+Multilayer networks provide a way to bridge these different scales so that we
+can examine social phenotypes in more holistic ways rather than looking at each
+scale separately as has traditionally been done.
 
 
 For instance, social scale is major consideration for social network analysis,
 especially in the context of different types of relationships, such as grooming
 and association, that are typically examined separately while answering a single
-question [@Castles_2014; @Cater_2015; @Farine_2015a].
-Furthermore, it is a common trope that individuals must be associating to
-interact, and many studies therefore assume that proximity is proxy for
-interacting [@Farine_2015a]. For instance, baboons need to be in proximity in
-order to groom each other. However, animals have certain interactions that do
-not require proximity such as long-distance vocalization and olfactory signals
-[@Carter_2015] With the advancement of biologging technology, we have
-the ability to record social interactions that do not require proximity,
-particularly long-distance communication networks with devices like microphone
-arrays [Snijders_2017]. These varying social scales can have different
-fitness repercussions for individuals. Rhesus macaques (*Macaca mulatta*) had
-higher survivorship when they had fewer but stronger, more stable social
-associates and grooming partners rather than simply more associates [Ellis_2019]. This finding highlights
-that different qualities of social scales have lasting consequences.
+question [@Castles_2014; @Cater_2015; @Farine_2015a]. Furthermore, it is a
+common trope that individuals must be associating to interact, and many studies
+therefore assume that proximity is proxy for interacting [@Farine_2015a]. For
+instance, baboons need to be in proximity in order to groom each other. However,
+animals have certain interactions that do not require proximity such as
+long-distance vocalization and olfactory signals [@Carter_2015] With the
+advancement of biologging technology, we have the ability to record social
+interactions that do not require proximity, particularly long-distance
+communication networks with devices like microphone arrays [Snijders_2017].
+These varying social scales can have different fitness repercussions for
+individuals. Rhesus macaques (*Macaca mulatta*) had higher survivorship when
+they had fewer but stronger, more stable social associates and grooming partners
+rather than simply more associates [Ellis_2019]. This finding highlights that
+different qualities of social scales have lasting consequences.
 
 
 Temporal scale is also important for understanding the repercussions of social
 phenotypes. For instance, social phenotypes can change over ontogeny in ways
-that can affect fitness [@Berger_2015, @Brent_2017]. Thus, it is
-critical to carefully consider the temporal scale that is meaningful for the
-proposed hypotheses. Further complicating the issue of selecting suitable time
-scales across ontogeny, individuals progress through development at different
-rates [@Tarka_2018]. This variation can
-make defining appropriate temporal scales for testing the fitness implications
-of an individual’s social phenotype over different stages of ontogeny even more
-difficult when they vary by individual. However, considering fine temporal
-scales provide insight across developmental stages that may otherwise be missed
-[@Turner_2018].
+that can affect fitness [@Berger_2015, @Brent_2017]. Thus, it is critical to
+carefully consider the temporal scale that is meaningful for the proposed
+hypotheses. Further complicating the issue of selecting suitable time scales
+across ontogeny, individuals progress through development at different rates
+[@Tarka_2018]. This variation can make defining appropriate temporal scales for
+testing the fitness implications of an individual’s social phenotype over
+different stages of ontogeny even more difficult when they vary by individual.
+However, considering fine temporal scales provide insight across developmental
+stages that may otherwise be missed [@Turner_2018].
 
 
 Multilayer networks provide unique opportunities and challenges, linking these
@@ -597,14 +677,14 @@ metric could be used to assess the relationship between an individual’s social
 phenotype and fitness. It would also be a meaningful simplification of many
 network metrics that could help simplify statistical analyses and deal with the
 frequent correlations between social network metrics in different types of
-networks [@Castles_2014]. Furthermore, multilayer networks provide a
-framework to test hypotheses linking social phenotypes and fitness across
-temporal scales. Because of the non-independent nature of social interactions
-and associations, especially over time, it is hard to test hypotheses about
-social dynamics with a suitable null control [@Farine_2017, @Proskurnikov_2017]. Using the framework of multilayer networks, making layers of
-different temporal periods provides a way to make appropriate null models to
-test questions about the dynamics of an individual’s social network position
-over multiple aggregated time periods.
+networks [@Castles_2014]. Furthermore, multilayer networks provide a framework
+to test hypotheses linking social phenotypes and fitness across temporal scales.
+Because of the non-independent nature of social interactions and associations,
+especially over time, it is hard to test hypotheses about social dynamics with a
+suitable null control [@Farine_2017, @Proskurnikov_2017]. Using the framework of
+multilayer networks, making layers of different temporal periods provides a way
+to make appropriate null models to test questions about the dynamics of an
+individual’s social network position over multiple aggregated time periods.
 
 
 On the other hand, picking the proper temporal scale is important but a
@@ -621,94 +701,91 @@ and logistical constraints.
 
 ## Movement ecology and collective movement
 
-Social processes, movement decisions, and space use are inextricably linked 
-and multilayer networks represent a potential analytical framework for linking 
-these processes [@Mourier_2019] (Mourier et al. 2019). Movement as a collective group can 
-reduce per capita predation risk via detection-dilution trade-offs and improve 
-information transfer about the quality or location of resources to other group 
-members [@Jolles_2019]. In our case study, we integrate proximity based 
-social networks that inherently rely on animal collective movement and, in general, 
-we found that movement is likely an important mechanism driving social network 
-connectivity within and between habitat types.
+Social processes, movement decisions, and space use are inextricably linked and
+multilayer networks represent a potential analytical framework for linking these
+processes [@Mourier_2019] (Mourier et al. 2019). Movement as a collective group
+can reduce per capita predation risk via detection-dilution trade-offs and
+improve information transfer about the quality or location of resources to other
+group members [@Jolles_2019]. In our case study, we integrate proximity based
+social networks that inherently rely on animal collective movement and, in
+general, we found that movement is likely an important mechanism driving social
+network connectivity within and between habitat types.
 
-Although multilayer animal social networks are relatively novel [@Silk_2018], 
+Although multilayer animal social networks are relatively novel [@Silk_2018],
 movement behaviour within multilayer networks has been considered.  Spatial
-networks are physical locations (nodes) which are connected in a network when individuals
-move between said locations (edges). For example, spatial networks were applied
-to monitor movement of sharks (*Carcharhinus amblyrhynchos* and *Carcharhinus
-melanopterus*) between fixed location autonomous arrays. In this example, nodes
-represent locations within the array, *intralayer edges* represent individual
-movement frequency, and *interlayer edges* represent contact probability among
-individuals at a given node [@Mourier_2019] (Mourier et al. 2019). Although movement between 
-fixed arrays is inherent, networks are not constructed based on continuous 
-measures of dyadic or collective movement [@Long_2014]. Our case study 
-builds on the work of Mourier et al. (2019) and explicitly integrates 
-continuous and simultaneous measures of animal movement through space 
-and time as layers of a multilayer social network.
+networks are physical locations (nodes) which are connected in a network when
+individuals move between said locations (edges). For example, spatial networks
+were applied to monitor movement of sharks (*Carcharhinus amblyrhynchos* and
+*Carcharhinus melanopterus*) between fixed location autonomous arrays. In this
+example, nodes represent locations within the array, *intralayer edges*
+represent individual movement frequency, and *interlayer edges* represent
+contact probability among individuals at a given node [@Mourier_2019] (Mourier
+et al. 2019). Although movement between fixed arrays is inherent, networks are
+not constructed based on continuous measures of dyadic or collective movement
+[@Long_2014]. Our case study builds on the work of Mourier et al. (2019) and
+explicitly integrates continuous and simultaneous measures of animal movement
+through space and time as layers of a multilayer social network.
 
 In contrast to spatial networks, where nodes represent spatial locations that
 are fixed in space, movement networks can represent continuous and simultaneous
-movement trajectories of multiple animals. In a recent study of vulturine 
-gunieafowl (*Acryllium vulturinum*), GPS movement data were used to generate 
-monolayer association networks within a multilayer network [@Papageorgiou_2019]. 
-However, despite potential to generate networks in different spatial or social contexts, 
-layers in the multilayer network represented social associations within and 
-between groups. Continuous collection of animal relocation data using GPS 
-technology can be used to measure how groups of animals make collective 
-movement decisions in the context of their local environment 
+movement trajectories of multiple animals. In a recent study of vulturine
+gunieafowl (*Acryllium vulturinum*), GPS movement data were used to generate
+monolayer association networks within a multilayer network [@Papageorgiou_2019].
+However, despite potential to generate networks in different spatial or social
+contexts, layers in the multilayer network represented social associations
+within and between groups. Continuous collection of animal relocation data using
+GPS technology can be used to measure how groups of animals make collective
+movement decisions in the context of their local environment
 [@Strandburg_Peshkin_2015; @Strandburg_Peshkin_2017] and across scales. A
 collective movement layer could constitute similarity in movement for dyads
-[@Long_2014] or groups  [@Bode_2011]. This movement layer could be
-made at a fine [i.e. minute-to-minute: @Cleasby_2019] or coarse scale
-[global migration: @Flack_2018]. Our case study integrates variation 
-in temporal and spatial scale to assess the role of scale in predicting 
-multilayer networks. As one might expect, we found increasing spatial 
-scale results in saturation of potential social connections (Figure 3), 
-while increasing temporal scale had little effect on habitat-specific 
-networks (Figure 5). Another potential application would be to
-generate social networks during times when animals are engaged in different
-behaviours, including traveling, interacting, or foraging [@Muller_2018; @Finn_2019] 
-and construct a multilayer network based on behaviour-specific monolayer 
-networks [e.g. @Smith_Aguilar_2019].
+[@Long_2014] or groups  [@Bode_2011]. This movement layer could be made at a
+fine [i.e. minute-to-minute: @Cleasby_2019] or coarse scale [global migration:
+@Flack_2018]. Our case study integrates variation in temporal and spatial scale
+to assess the role of scale in predicting multilayer networks. As one might
+expect, we found increasing spatial scale results in saturation of potential
+social connections (Figure 3), while increasing temporal scale had little effect
+on habitat-specific networks (Figure 5). Another potential application would be
+to generate social networks during times when animals are engaged in different
+behaviours, including traveling, interacting, or foraging [@Muller_2018;
+@Finn_2019] and construct a multilayer network based on behaviour-specific
+monolayer networks [e.g. @Smith_Aguilar_2019].
 
 Importantly, the key to incorporating movement in multilayer networks across
 scales is the technological advancements available to overcome previous
-limitations [@Hughey_2018]. Biologging and wildlife tracking technology 
-has advanced to the point where relocations can be programmed to occur as 
-frequently as each second [@Börger_2016], a practice which has been applied 
-to questions of collective movement [e.g @Strandburg_Peshkin_2015]. 
-Meanwhile, remote sensing technology, including unmanned aerial vehicles 
-and satellites, can be used to track the fine-scale movements of groups 
-over large distances and time scales [@Torney_2018]. Using 
-technology to infer behaviour has therefore become standard operating procedure
-for many species in many systems. Our ability to collect and process 
-remotely sensed data and infer social processes based on animal movement 
-provides an opportunity to use multilayer social network analysis to answer
-complex questions about animal socioecology.
+limitations [@Hughey_2018]. Biologging and wildlife tracking technology has
+advanced to the point where relocations can be programmed to occur as frequently
+as each second [@Börger_2016], a practice which has been applied to questions of
+collective movement [e.g @Strandburg_Peshkin_2015]. Meanwhile, remote sensing
+technology, including unmanned aerial vehicles and satellites, can be used to
+track the fine-scale movements of groups over large distances and time scales
+[@Torney_2018]. Using technology to infer behaviour has therefore become
+standard operating procedure for many species in many systems. Our ability to
+collect and process remotely sensed data and infer social processes based on
+animal movement provides an opportunity to use multilayer social network
+analysis to answer complex questions about animal socioecology.
 
 Given the existing framework for constructing multilayer networks from
-behavioural layers [e.g. @Smith_Aguilar_2019], monolayer networks that
-explicity quantify movement paramters could be itnegrated. For example, edges 
-could represent measures of dyadic or collective movement based on dynamic 
-interaction metrics [@Long_2014]. Integrating movement layers
-with habitat-specific social association layers could further shed light on the
-role of movement as a driver of the social and spatial environments an
-individual experiences [@Webber_2018]. In our case study, we
-generated multilayer networks based on habitat-specific monolayers. Coordinated
-movement of dyads, or groups, could vary based on habitat, and the approach we
-outline could be used to explore mechanisms linking the social and spatial
-environments. For example, social processes may be an emergent property of the
-landscape because animals aggregate at resources, such as waterholes
-[@Chamaillé_Jammes_2008]. Movement to, from, or within habitat patches  or
-territories can also contribute to the formation of the social environment
-[@Spiegel_2016]. For example, in sleepy lizards (*Tiliqua rugosa*) males
-interacted primarily at home range edges, presumably driving territorial
-behaviour [@Spiegel_2018]. Incorporating movement ecology within a
-multilayer network framework is a logical next step for a burgeoning field. In
-particular, when association networks are habitat-specific, we suggest the
-integration of movement and space use in multilayer networks provides novel
-insights into the effects of habitat configuration on the formation of the
-social environment [@He_2019].
+behavioural layers [e.g. @Smith_Aguilar_2019], monolayer networks that explicity
+quantify movement paramters could be itnegrated. For example, edges could
+represent measures of dyadic or collective movement based on dynamic interaction
+metrics [@Long_2014]. Integrating movement layers with habitat-specific social
+association layers could further shed light on the role of movement as a driver
+of the social and spatial environments an individual experiences [@Webber_2018].
+In our case study, we generated multilayer networks based on habitat-specific
+monolayers. Coordinated movement of dyads, or groups, could vary based on
+habitat, and the approach we outline could be used to explore mechanisms linking
+the social and spatial environments. For example, social processes may be an
+emergent property of the landscape because animals aggregate at resources, such
+as waterholes [@Chamaillé_Jammes_2008]. Movement to, from, or within habitat
+patches  or territories can also contribute to the formation of the social
+environment [@Spiegel_2016]. For example, in sleepy lizards (*Tiliqua rugosa*)
+males interacted primarily at home range edges, presumably driving territorial
+behaviour [@Spiegel_2018]. Incorporating movement ecology within a multilayer
+network framework is a logical next step for a burgeoning field. In particular,
+when association networks are habitat-specific, we suggest the integration of
+movement and space use in multilayer networks provides novel insights into the
+effects of habitat configuration on the formation of the social environment
+[@He_2019].
 
 
 ## Habitat selection and space use

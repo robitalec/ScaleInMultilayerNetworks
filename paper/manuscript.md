@@ -56,7 +56,7 @@ scale-dependent.
 
 Sociality exists across both temporal and spatial scales (Whitehead
 2008). For example, grooming requires close spatial proximity between
-conspecifics and occurs over brief time periods (e.g. Carter, Lee, and
+conspecifics and occurs over brief time periods (e.g. Carter, Lee, and
 Marshall 2015), whereas social association represents shared space use
 by members of the same social group (Figure 1, Franks, Ruxton, and James
 2009). <!--Figure \@ref(fig:spacetime) TODO: something broken here?? -->
@@ -64,7 +64,7 @@ Further, for social interactions or associations to occur individuals
 must share space, and thus have overlapping home ranges. In the context
 of the social environment, home range overlap is a relatively coarse
 scale of sociality across which individuals share space over coarser
-spatial and temporal scales (e.g. Piza-Roca et al. 2018). Although the
+spatial and temporal scales (e.g. Piza-Roca et al. 2018). Although the
 social environment clearly scales spatially and temporally, it remains
 unclear whether coarser scales of sociality, including social
 association and home range overlap, vary predictably with social
@@ -137,22 +137,11 @@ temporal extent for vocal communication is similar for most species
 because most vocal calls only persist in the environment for seconds,
 but spatial extent for vocal communication is highly variable with
 elephant calls extending the great distance and passerine calls
-extending the shortest
-distance.
+extending the shortest distance.
 
 <!-- TODO: units of spatial scale? -->
 
-<div class="figure">
-
-<img src="../graphics/figure1.png" alt="(ref:spacetime)" width="\linewidth" />
-
-<p class="caption">
-
-(ref:spacetime)
-
-</p>
-
-</div>
+<img src="../graphics/figure1.png" title="(ref:spacetime)" alt="(ref:spacetime)" width="\linewidth" />
 
 # Scale in multilayer networks: a case study
 
@@ -207,8 +196,7 @@ be "lichen" ?--> consisted of lichen habitat, open habitat consisted of
 wetland, rocky barrens, and anthropogenic habitat types, while forest
 habitat consisted of coniferous forest, conifer scrub, broadleaf forest,
 and mixed-wood forest habitat types. Water habitat was excluded from all
-subsequent
-analyses.
+subsequent analyses.
 
 ## Caribou multilayer social networks
 
@@ -319,8 +307,7 @@ using a circular window corresponding to the above scales
 We assume 10 m and 100 m represents fine-scale decision making for
 caribou during foraging (Webber et al. unpublished data), while
 re-sampling at 500 m and 1000 m represents the scale at which caribou
-tend to select and avoid habitat (Bastille-Rousseau et
-al. 2017).
+tend to select and avoid habitat (Bastille-Rousseau et al. 2017).
 
 ### Temporal scale
 
@@ -358,21 +345,21 @@ type and season. As social scale increased, connective redundancy
 increased rapidly when groups were formed up to approximately 100 m
 threshold, followed by a plateau and slight decrease at higher
 thresholds, presumably due to an increase in summer forest degree at
-~500 m (Figure @ref(fig:socres)d). Regardless of social scale, layer
+\~500 m (Figure @ref(fig:socres)d). Regardless of social scale, layer
 relevance did not change for any habitat types or seasons, which
 suggests habitat-by-season layers captured most, if not all, of the
 potential connections an individual would have across all networks
 (Figure @ref(fig:socres)b). Finally, somewhat predictably, graph
-strength for winter networks increased up to ~100-200 m thresholds,
+strength for winter networks increased up to \~100-200 m thresholds,
 followed by a plateau, while graph strength for summer networks did not
 change as the social threshold increased (Figure @ref(fig:socres)a).
 Taken together, these results suggest the optimal social scale at which
-groups should be assigned is likely somewhere between ~20-100 m based on
-the rate at which network metrics stabilized. For ungulates, groups are
-often assigned based on 50 m threshold (Lingle 2003; Lesmeries et
+groups should be assigned is likely somewhere between \~20-100 m based
+on the rate at which network metrics stabilized. For ungulates, groups
+are often assigned based on 50 m threshold (Lingle 2003; Lesmeries et
 al. 2018; Peignier et al. 2019), suggesting that given similar
-quantities of data, ~50 m is likely an ideal social scale for generating
-social networks in caribou and similar species.
+quantities of data, \~50 m is likely an ideal social scale for
+generating social networks in caribou and similar species.
 
 <!-- landcover resolution
 * decreasing availability of patchy lichen = no edges in these layers, though some small proportion of relocations still exist in those layers
@@ -522,20 +509,9 @@ lichen layers. <!--TODO: what about forest.--> D) Mean connective
 redundancy across individuals increased rapidly between 5 m and 50 m
 reaching a plateau of about 0.65 at approximately a 50 m
 <!--TODO:**??**--> social threshold before decreasing between 400 m and
-500
-m.
+500 m.
 
-<div class="figure">
-
-<img src="../graphics/figure-spatialthreshold.png" alt="(ref:socres)" width="\linewidth" />
-
-<p class="caption">
-
-(ref:socres)
-
-</p>
-
-</div>
+<img src="../graphics/figure-spatialthreshold.png" title="(ref:socres)" alt="(ref:socres)" width="\linewidth" />
 
 (ref:lcres) Variation in multilayer network metrics as a function of
 changes in landcover resolution, a metric which we interpret as spatial
@@ -555,20 +531,9 @@ similarity for open layers at 250 m. Note that lichen layer similarity
 is not shown because individuals did not interact in lichen habitats
 greater greater than 10 m landcover resolution. D) Mean connective
 redundancy across individuals showed a decreasing trend with increasing
-landcover
-resolution.
+landcover resolution.
 
-<div class="figure">
-
-<img src="../graphics/figure-lcres.png" alt="(ref:lcres)" width="\linewidth" />
-
-<p class="caption">
-
-(ref:lcres)
-
-</p>
-
-</div>
+<img src="../graphics/figure-lcres.png" title="(ref:lcres)" alt="(ref:lcres)" width="\linewidth" />
 
 <!-- TODO: RO first sentence... -->
 
@@ -589,17 +554,7 @@ D) Mean connective redundancy across individuals increased with
 increasing number of observations, which begins to plateau around 100
 observations.
 
-<div class="figure">
-
-<img src="../graphics/figure-nobs.png" alt="(ref:nobs)" width="\linewidth" />
-
-<p class="caption">
-
-(ref:nobs)
-
-</p>
-
-</div>
+<img src="../graphics/figure-nobs.png" title="(ref:nobs)" alt="(ref:nobs)" width="\linewidth" />
 
 (ref:winlen) Varying scale in time window length. For each time window
 length (40 to 100 days in length increasing by 5 days in sequence),
@@ -619,17 +574,7 @@ Mean connective redundancy across individuals varied dramatically
 depending on the length of the time window
 <!--TODO:**[JWT: previously this was describing fig. 3. I don't know if what I wrote best encapsulates what connnective redundancy does here. Length of time window seems to make connective redundancy highly variable as it changes.]**.-->
 
-<div class="figure">
-
-<img src="../graphics/figure-winlength.png" alt="(ref:winlen)" width="\linewidth" />
-
-<p class="caption">
-
-(ref:winlen)
-
-</p>
-
-</div>
+<img src="../graphics/figure-winlength.png" title="(ref:winlen)" alt="(ref:winlen)" width="\linewidth" />
 
 (ref:winpos) Varying scale in time window position. For each time window
 position (shifting the start date of the time window used to define
@@ -648,20 +593,9 @@ with shifted time windows.
 <!--TODO:**[JWT: previously describing window length, not position. Check that you're ok with my changes]**-->
 D) Mean connective redundancy across individuals increased between
 window position 12 through 48 due to increased connectivity in the
-summer network
-layers.
+summer network layers.
 
-<div class="figure">
-
-<img src="../graphics/figure-winpos.png" alt="(ref:winpos)" width="\linewidth" />
-
-<p class="caption">
-
-(ref:winpos)
-
-</p>
-
-</div>
+<img src="../graphics/figure-winpos.png" title="(ref:winpos)" alt="(ref:winpos)" width="\linewidth" />
 
 # Perspectives to advance multilayer networks
 
@@ -691,19 +625,17 @@ spatial ecology within the behavioural ecology literature.
 Social network positions are frequently used to represent the social
 environment that an individual experiences or their social phenotype.
 Social phenotypes are increasingly linked to important fitness for
-individuals of various species, including primates (e.g. Brent,
-Ruiz-Lambides, & Platt, 2017; Thompson, 2019), dolphins (e.g. Stanton &
-Mann, 2012; Stanton, Gibson, & Mann, 2011), and birds (e.g. McDonald,
-2007; Royle, Pike, Heeb, Richner, & Kolliker, 2012). Both temporal,
-seasons and stages of life, and social scales, types of interactions,
-have emerged as important for understanding fitness consequences in the
-context of social network positions (Almeling, Hammerschmidt,
-Sennhenn-Reulen, Freund, & Fischer, 2016; Berger, Lemaître, Allainé,
-Gaillard, & Cohas, 2015; Brent, Ruiz-Lambides, & Platt, 2017; Holekamp,
-Smith, Strelioff, Van Horn, & Watts, 2012). Multilayer networks provide
-a way to bridge these different scales so that we can examine social
-phenotypes in more holistic ways rather than looking at each scale
-separately as has traditionally been done.
+individuals of various species, including primates (Brent,
+Ruiz-Lambides, and Platt 2017; Thompson 2019), dolphins (Stanton and
+Mann 2012; Stanton, Gibson, and Mann 2011), and birds (McDonald 2007;
+Royle et al. 2012). Both temporal, seasons and stages of life, and
+social scales, types of interactions, have emerged as important for
+understanding fitness consequences in the context of social network
+positions (Almeling et al. 2016, @Berger\_2015, @Brent\_2017,
+@Holekamp\_2012). Multilayer networks provide a way to bridge these
+different scales so that we can examine social phenotypes in more
+holistic ways rather than looking at each scale separately as has
+traditionally been done.
 
 For instance, social scale is major consideration for social network
 analysis, especially in the context of different types of relationships,
@@ -712,34 +644,34 @@ while answering a single question (Castles et al. 2014;
 <span class="citeproc-not-found" data-reference-id="Cater_2015">**???**</span>;
 D. R. Farine 2015). Furthermore, it is a common trope that individuals
 must be associating to interact, and many studies therefore assume that
-proximity is proxy for interacting (Farine, 2015). For instance, baboons
-need to be in proximity in order to groom each other. However, animals
-have certain interactions that do not require proximity such as
+proximity is proxy for interacting (D. R. Farine 2015). For instance,
+baboons need to be in proximity in order to groom each other. However,
+animals have certain interactions that do not require proximity such as
 long-distance vocalization and olfactory signals (Carter, Lee, and
 Marshall 2015) With the advancement of biologging technology, we have
 the ability to record social interactions that do not require proximity,
 particularly long-distance communication networks with devices like
-microphone arrays (Snijders & Naguib, 2017). These varying social scales
-can have different fitness repercussions for individuals. Rhesus
-macaques (*Macaca mulatta*) had higher survivorship when they had fewer
-but stronger, more stable social associates and grooming partners rather
-than simply more associates (Ellis, Snyder-Mackler, Ruiz-Lambides,
-Platt, & Brent, 2019). This finding highlights that different qualities
-of social scales have lasting consequences.
+microphone arrays \[Snijders\_2017\]. These varying social scales can
+have different fitness repercussions for individuals. Rhesus macaques
+(*Macaca mulatta*) had higher survivorship when they had fewer but
+stronger, more stable social associates and grooming partners rather
+than simply more associates \[Ellis\_2019\]. This finding highlights
+that different qualities of social scales have lasting consequences.
 
 Temporal scale is also important for understanding the repercussions of
 social phenotypes. For instance, social phenotypes can change over
-ontogeny in ways that can affect fitness (Berger et al., 2015; Brent et
-al., 2017). Thus, it is critical to carefully consider the temporal
-scale that is meaningful for the proposed hypotheses. Further
-complicating the issue of selecting suitable time scales across
-ontogeny, individuals progress through development at different rates
-(Tarka, Guenther, Niemelä, Nakagawa, & Noble, 2018). This variation can
-make defining appropriate temporal scales for testing the fitness
-implications of an individual’s social phenotype over different stages
-of ontogeny even more difficult when they vary by individual. However,
-considering fine temporal scales provide insight across developmental
-stages that may otherwise be missed (Turner, Bills, & Holekamp, 2018).
+ontogeny in ways that can affect fitness
+(<span class="citeproc-not-found" data-reference-id="Berger_2015">**???**</span>).
+Thus, it is critical to carefully consider the temporal scale that is
+meaningful for the proposed hypotheses. Further complicating the issue
+of selecting suitable time scales across ontogeny, individuals progress
+through development at different rates (Tarka et al. 2018). This
+variation can make defining appropriate temporal scales for testing the
+fitness implications of an individual’s social phenotype over different
+stages of ontogeny even more difficult when they vary by individual.
+However, considering fine temporal scales provide insight across
+developmental stages that may otherwise be missed
+(<span class="citeproc-not-found" data-reference-id="Turner_2018">**???**</span>).
 
 Multilayer networks provide unique opportunities and challenges, linking
 these various scales, for understanding the social phenotypes and
@@ -761,8 +693,8 @@ et al. 2014). Furthermore, multilayer networks provide a framework to
 test hypotheses linking social phenotypes and fitness across temporal
 scales. Because of the non-independent nature of social interactions and
 associations, especially over time, it is hard to test hypotheses about
-social dynamics with a suitable null control (Farine, 2017; Proskurnikov
-& Tempo, 2017). Using the framework of multilayer networks, making
+social dynamics with a suitable null control (Farine 2017,
+@Proskurnikov\_2017). Using the framework of multilayer networks, making
 layers of different temporal periods provides a way to make appropriate
 null models to test questions about the dynamics of an individual’s
 social network position over multiple aggregated time periods.
@@ -770,7 +702,7 @@ social network position over multiple aggregated time periods.
 On the other hand, picking the proper temporal scale is important but a
 challenge because all layers in the multilayer network should reflect
 the same time period, and the period should be long enough for each
-layer to have enough data for robust networks (Farine, 2017). These
+layer to have enough data for robust networks (Farine 2017). These
 considerations may be limiting factors when answering questions that
 require timeframes that are relevant to different individuals, for
 instance. In both mono- and multilayer networks, the effect of scale on
@@ -807,7 +739,7 @@ probability among individuals at a given node
 (Mourier et al. 2019). Although movement between fixed arrays is
 inherent, networks are not constructed based on continuous measures of
 dyadic or collective movement (Long et al. 2014). Our case study builds
-on the work of Mourier et al. (2019) and explicitly integrates
+on the work of Mourier et al. (2019) and explicitly integrates
 continuous and simultaneous measures of animal movement through space
 and time as layers of a multilayer social network.
 
@@ -836,8 +768,8 @@ application would be to generate social networks during times when
 animals are engaged in different behaviours, including traveling,
 interacting, or foraging (Muller et al. 2018; Finn et al. 2019) and
 construct a multilayer network based on behaviour-specific monolayer
-networks (e.g.
-<span class="citeproc-not-found" data-reference-id="Smith_Aguilar_2019">**???**</span>).
+networks
+(e.g. <span class="citeproc-not-found" data-reference-id="Smith_Aguilar_2019">**???**</span>).
 
 Importantly, the key to incorporating movement in multilayer networks
 across scales is the technological advancements available to overcome
@@ -857,8 +789,8 @@ an opportunity to use multilayer social network analysis to answer
 complex questions about animal socioecology.
 
 Given the existing framework for constructing multilayer networks from
-behavioural layers (e.g.
-<span class="citeproc-not-found" data-reference-id="Smith_Aguilar_2019">**???**</span>),
+behavioural layers
+(e.g. <span class="citeproc-not-found" data-reference-id="Smith_Aguilar_2019">**???**</span>),
 monolayer networks that explicity quantify movement paramters could be
 itnegrated. For example, edges could represent measures of dyadic or
 collective movement based on dynamic interaction metrics (Long et al.
@@ -934,7 +866,7 @@ sociality across scales.
 -->
 
 Despite not in a multilayer network context, the link between habitat
-and sociality has been previously investigated. Fortin et al. (2009)
+and sociality has been previously investigated. Fortin et al. (2009)
 evaluated habitat selection and group formation and division in bison.
 They observed contrasting group sizes in meadows and forests as well as
 identified predation risk avoidance as a main factor in their habitat
@@ -994,7 +926,7 @@ overlap and interactions Layers defined by habitat/landcover
 
 # Conclusions
 
-Silk et al. (2018) presented some key multilayer questions in animal
+Silk et al. (2018) presented some key multilayer questions in animal
 behaviour research. While these questions represent an important
 starting point for multilayer networks, we present an additional set of
 questions relevant to the promise and problem of scale in mutlilayer
@@ -1035,10 +967,19 @@ Ecology*. Columbia University Press.
 
 </div>
 
+<div id="ref-Almeling_2016">
+
+Almeling, Laura, Kurt Hammerschmidt, Holger Sennhenn-Reulen, Alexandra
+M. Freund, and Julia Fischer. 2016. “Motivational Shifts in Aging
+Monkeys and the Origins of Social Selectivity.” *Current Biology* 26
+(13): 1744–9. <https://doi.org/10.1016/j.cub.2016.04.066>.
+
+</div>
+
 <div id="ref-Bergerud_1974">
 
 Bergerud, A. T. 1974. “Relative Abundance of Food in Winter for
-Newfoundland Caribou.” *Oikos* 25 (3). JSTOR: 379.
+Newfoundland Caribou.” *Oikos* 25 (3): 379.
 <https://doi.org/10.2307/3543960>.
 
 </div>
@@ -1047,17 +988,26 @@ Newfoundland Caribou.” *Oikos* 25 (3). JSTOR: 379.
 
 Berlingerio, Michele, Michele Coscia, Fosca Giannotti, Anna Monreale,
 and Dino Pedreschi. 2012. “Multidimensional Networks: Foundations of
-Structural Analysis.” *World Wide Web* 16 (5-6). Springer Science;
-Business Media LLC: 567–93. <https://doi.org/10.1007/s11280-012-0190-4>.
+Structural Analysis.” *World Wide Web* 16 (5-6): 567–93.
+<https://doi.org/10.1007/s11280-012-0190-4>.
 
 </div>
 
 <div id="ref-Bode_2011">
 
-Bode, Nikolai W.F., A. Jamie Wood, and Daniel W. Franks. 2011. “The
+Bode, Nikolai W. F., A. Jamie Wood, and Daniel W. Franks. 2011. “The
 Impact of Social Networks on Animal Collective Motion.” *Animal
-Behaviour* 82 (1). Elsevier BV: 29–38.
+Behaviour* 82 (1): 29–38.
 <https://doi.org/10.1016/j.anbehav.2011.04.011>.
+
+</div>
+
+<div id="ref-Brent_2017">
+
+Brent, L. J. N., A. Ruiz-Lambides, and M. L. Platt. 2017. “Family
+Network Size and Survival Across the Lifespan of Female Macaques.”
+*Proceedings of the Royal Society B: Biological Sciences* 284 (1854):
+20170515. <https://doi.org/10.1098/rspb.2017.0515>.
 
 </div>
 
@@ -1065,27 +1015,26 @@ Behaviour* 82 (1). Elsevier BV: 29–38.
 
 Br’odka, Piotr, Anna Chmiel, Matteo Magnani, and Giancarlo Ragozini.
 2018. “Quantifying Layer Similarity in Multiplex Networks: A Systematic
-Study.” *Royal Society Open Science* 5 (8). The Royal Society: 171747.
+Study.” *Royal Society Open Science* 5 (8): 171747.
 <https://doi.org/10.1098/rsos.171747>.
 
 </div>
 
 <div id="ref-Carter_2015">
 
-Carter, Alecia J., Alexander E.G. Lee, and Harry H. Marshall. 2015.
+Carter, Alecia J., Alexander E. G. Lee, and Harry H. Marshall. 2015.
 “Research Questions Should Drive Edge Definitions in Social Network
-Studies.” *Animal Behaviour* 104 (June). Elsevier BV: e7–e11.
+Studies.” *Animal Behaviour* 104 (June): e7–e11.
 <https://doi.org/10.1016/j.anbehav.2015.03.020>.
 
 </div>
 
 <div id="ref-Castles_2014">
 
-Castles, Madelaine, Robert Heinsohn, Harry H. Marshall, Alexander E.G.
+Castles, Madelaine, Robert Heinsohn, Harry H. Marshall, Alexander E. G.
 Lee, Guy Cowlishaw, and Alecia J. Carter. 2014. “Social Networks Created
 with Different Techniques Are Not Comparable.” *Animal Behaviour* 96
-(October). Elsevier BV: 59–67.
-<https://doi.org/10.1016/j.anbehav.2014.07.023>.
+(October): 59–67. <https://doi.org/10.1016/j.anbehav.2014.07.023>.
 
 </div>
 
@@ -1093,7 +1042,7 @@ with Different Techniques Are Not Comparable.” *Animal Behaviour* 96
 
 Chave, J’erôme. 2013. “The Problem of Pattern and Scale in Ecology: What
 Have We Learned in 20 Years?” Edited by Jordi Bascompte. *Ecology
-Letters* 16 (January). Wiley: 4–16. <https://doi.org/10.1111/ele.12048>.
+Letters* 16 (January): 4–16. <https://doi.org/10.1111/ele.12048>.
 
 </div>
 
@@ -1103,7 +1052,6 @@ Cleasby, Ian R., Ewan D. Wakefield, Barbara J. Morrissey, Thomas W.
 Bodey, Steven C. Votier, Stuart Bearhop, and Keith C. Hamer. 2019.
 “Using Time-Series Similarity Measures to Compare Animal Movement
 Trajectories in Ecology.” *Behavioral Ecology and Sociobiology* 73 (11).
-Springer Science; Business Media LLC.
 <https://doi.org/10.1007/s00265-019-2761-1>.
 
 </div>
@@ -1112,7 +1060,7 @@ Springer Science; Business Media LLC.
 
 Croft, Darren P., Joah R. Madden, Daniel W. Franks, and Richard James.
 2011. “Hypothesis Testing in Animal Social Networks.” *Trends in Ecology
-& Evolution* 26 (10). Elsevier BV: 502–7.
+& Evolution* 26 (10): 502–7.
 <https://doi.org/10.1016/j.tree.2011.05.012>.
 
 </div>
@@ -1121,8 +1069,8 @@ Croft, Darren P., Joah R. Madden, Daniel W. Franks, and Richard James.
 
 Davis, Grace H., Margaret C. Crofoot, and Damien R. Farine. 2018.
 “Estimating the Robustness and Uncertainty of Animal Social Networks
-Using Different Observational Methods.” *Animal Behaviour* 141 (July).
-Elsevier BV: 29–44. <https://doi.org/10.1016/j.anbehav.2018.04.012>.
+Using Different Observational Methods.” *Animal Behaviour* 141 (July):
+29–44. <https://doi.org/10.1016/j.anbehav.2018.04.012>.
 
 </div>
 
@@ -1130,16 +1078,24 @@ Elsevier BV: 29–44. <https://doi.org/10.1016/j.anbehav.2018.04.012>.
 
 Elith, Jane, and John R. Leathwick. 2009. “Species Distribution Models:
 Ecological Explanation and Prediction Across Space and Time.” *Annual
-Review of Ecology, Evolution, and Systematics* 40 (1). Annual Reviews:
-677–97. <https://doi.org/10.1146/annurev.ecolsys.110308.120159>.
+Review of Ecology, Evolution, and Systematics* 40 (1): 677–97.
+<https://doi.org/10.1146/annurev.ecolsys.110308.120159>.
 
 </div>
 
 <div id="ref-Farine_2015a">
 
 Farine, Damien R. 2015. “Proximity as a Proxy for Interactions: Issues
-of Scale in Social Network Analysis.” *Animal Behaviour* 104 (June).
-Elsevier BV: e1–e5. <https://doi.org/10.1016/j.anbehav.2014.11.019>.
+of Scale in Social Network Analysis.” *Animal Behaviour* 104 (June):
+e1–e5. <https://doi.org/10.1016/j.anbehav.2014.11.019>.
+
+</div>
+
+<div id="ref-Farine_2017">
+
+———. 2017. “When to Choose Dynamic Vs. Static Social Network Analysis.”
+Edited by Andy Fenton. *Journal of Animal Ecology* 87 (1): 128–38.
+<https://doi.org/10.1111/1365-2656.12764>.
 
 </div>
 
@@ -1147,7 +1103,7 @@ Elsevier BV: e1–e5. <https://doi.org/10.1016/j.anbehav.2014.11.019>.
 
 Farine, Damien R., and Hal Whitehead. 2015. “Constructing, Conducting
 and Interpreting Animal Social Network Analysis.” Edited by Sonia
-Altizer. *Journal of Animal Ecology* 84 (5). Wiley: 1144–63.
+Altizer. *Journal of Animal Ecology* 84 (5): 1144–63.
 <https://doi.org/10.1111/1365-2656.12418>.
 
 </div>
@@ -1157,7 +1113,7 @@ Altizer. *Journal of Animal Ecology* 84 (5). Wiley: 1144–63.
 Field, Richard, Bradford A. Hawkins, Howard V. Cornell, David J. Currie,
 J. Alexandre F. Diniz-Filho, Jean-François Gu’egan, Dawn M. Kaufman, et
 al. 2009. “Spatial Species-Richness Gradients Across Scales: A
-Meta-Analysis.” *Journal of Biogeography* 36 (1). Wiley: 132–47.
+Meta-Analysis.” *Journal of Biogeography* 36 (1): 132–47.
 <https://doi.org/10.1111/j.1365-2699.2008.01963.x>.
 
 </div>
@@ -1166,7 +1122,7 @@ Meta-Analysis.” *Journal of Biogeography* 36 (1). Wiley: 132–47.
 
 Finn, Kelly R., Matthew J. Silk, Mason A. Porter, and Noa
 Pinter-Wollman. 2019. “The Use of Multilayer Network Analysis in Animal
-Behaviour.” *Animal Behaviour* 149 (March). Elsevier BV: 7–22.
+Behaviour.” *Animal Behaviour* 149 (March): 7–22.
 <https://doi.org/10.1016/j.anbehav.2018.12.016>.
 
 </div>
@@ -1175,8 +1131,7 @@ Behaviour.” *Animal Behaviour* 149 (March). Elsevier BV: 7–22.
 
 Flack, Andrea, M’at’e Nagy, Wolfgang Fiedler, Iain D. Couzin, and Martin
 Wikelski. 2018. “From Local Collective Behavior to Global Migratory
-Patterns in White Storks.” *Science* 360 (6391). American Association
-for the Advancement of Science (AAAS): 911–14.
+Patterns in White Storks.” *Science* 360 (6391): 911–14.
 <https://doi.org/10.1126/science.aap7781>.
 
 </div>
@@ -1185,8 +1140,8 @@ for the Advancement of Science (AAAS): 911–14.
 
 Franks, Daniel W., Graeme D. Ruxton, and Richard James. 2009. “Sampling
 Animal Association Networks with the Gambit of the Group.” *Behavioral
-Ecology and Sociobiology* 64 (3). Springer Science; Business Media LLC:
-493–503. <https://doi.org/10.1007/s00265-009-0865-8>.
+Ecology and Sociobiology* 64 (3): 493–503.
+<https://doi.org/10.1007/s00265-009-0865-8>.
 
 </div>
 
@@ -1195,8 +1150,7 @@ Ecology and Sociobiology* 64 (3). Springer Science; Business Media LLC:
 Graham, Laura J., Rebecca Spake, Simon Gillings, Kevin Watts, and Felix
 Eigenbrod. 2019. “Incorporating Fine-Scale Environmental Heterogeneity
 into Broad-Extent Models.” Edited by Nick Isaac. *Methods in Ecology and
-Evolution* 10 (6). Wiley: 767–78.
-<https://doi.org/10.1111/2041-210x.13177>.
+Evolution* 10 (6): 767–78. <https://doi.org/10.1111/2041-210x.13177>.
 
 </div>
 
@@ -1205,8 +1159,7 @@ Evolution* 10 (6). Wiley: 767–78.
 He, Peng, Adriana A. Maldonado-Chaparro, and Damien R. Farine. 2019.
 “The Role of Habitat Configuration in Shaping Social Structure: A Gap
 in Studies of Animal Social Complexity.” *Behavioral Ecology and
-Sociobiology* 73 (1). Springer Science; Business Media LLC.
-<https://doi.org/10.1007/s00265-018-2602-7>.
+Sociobiology* 73 (1). <https://doi.org/10.1007/s00265-018-2602-7>.
 
 </div>
 
@@ -1215,7 +1168,7 @@ Sociobiology* 73 (1). Springer Science; Business Media LLC.
 Hughey, Lacey F., Andrew M. Hein, Ariana Strandburg-Peshkin, and Frants
 H. Jensen. 2018. “Challenges and Solutions for Studying Collective
 Animal Behaviour in the Wild.” *Philosophical Transactions of the Royal
-Society B: Biological Sciences* 373 (1746). The Royal Society: 20170005.
+Society B: Biological Sciences* 373 (1746): 20170005.
 <https://doi.org/10.1098/rstb.2017.0005>.
 
 </div>
@@ -1224,7 +1177,7 @@ Society B: Biological Sciences* 373 (1746). The Royal Society: 20170005.
 
 Jolles, Jolle W., Andrew J. King, and Shaun S. Killen. 2019. “The Role
 of Individual Heterogeneity in Collective Animal Behaviour.” *Trends in
-Ecology & Evolution*, December. Elsevier BV.
+Ecology & Evolution*, December.
 <https://doi.org/10.1016/j.tree.2019.11.001>.
 
 </div>
@@ -1233,8 +1186,7 @@ Ecology & Evolution*, December. Elsevier BV.
 
 Kivela, M., A. Arenas, M. Barthelemy, J. P. Gleeson, Y. Moreno, and M.
 A. Porter. 2014. “Multilayer Networks.” *Journal of Complex Networks* 2
-(3). Oxford University Press (OUP): 203–71.
-<https://doi.org/10.1093/comnet/cnu016>.
+(3): 203–71. <https://doi.org/10.1093/comnet/cnu016>.
 
 </div>
 
@@ -1242,17 +1194,16 @@ A. Porter. 2014. “Multilayer Networks.” *Journal of Complex Networks* 2
 
 Krause, Jens, David Lusseau, and Richard James. 2009. “Animal Social
 Networks: An Introduction.” *Behavioral Ecology and Sociobiology* 63
-(7). Springer Science; Business Media LLC: 967–73.
-<https://doi.org/10.1007/s00265-009-0747-0>.
+(7): 967–73. <https://doi.org/10.1007/s00265-009-0747-0>.
 
 </div>
 
 <div id="ref-Kurvers_2014">
 
-Kurvers, Ralf H.J.M., Jens Krause, Darren P. Croft, Alexander D.M.
+Kurvers, Ralf H. J. M., Jens Krause, Darren P. Croft, Alexander D. M.
 Wilson, and Max Wolf. 2014. “The Evolutionary and Ecological
 Consequences of Animal Social Networks: Emerging Issues.” *Trends in
-Ecology & Evolution* 29 (6). Elsevier BV: 326–35.
+Ecology & Evolution* 29 (6): 326–35.
 <https://doi.org/10.1016/j.tree.2014.04.002>.
 
 </div>
@@ -1260,8 +1211,7 @@ Ecology & Evolution* 29 (6). Elsevier BV: 326–35.
 <div id="ref-Legendre_1993">
 
 Legendre, Pierre. 1993. “Spatial Autocorrelation: Trouble or New
-Paradigm?” *Ecology* 74 (6). Wiley: 1659–73.
-<https://doi.org/10.2307/1939924>.
+Paradigm?” *Ecology* 74 (6): 1659–73. <https://doi.org/10.2307/1939924>.
 
 </div>
 
@@ -1269,15 +1219,15 @@ Paradigm?” *Ecology* 74 (6). Wiley: 1659–73.
 
 Lesmerises, Fr’ed’eric, Chris J. Johnson, and Martin-Hugues St-Laurent.
 2018. “Landscape Knowledge Is an Important Driver of the Fission
-Dynamics of an Alpine Ungulate.” *Animal Behaviour* 140 (June). Elsevier
-BV: 39–47. <https://doi.org/10.1016/j.anbehav.2018.03.014>.
+Dynamics of an Alpine Ungulate.” *Animal Behaviour* 140 (June): 39–47.
+<https://doi.org/10.1016/j.anbehav.2018.03.014>.
 
 </div>
 
 <div id="ref-Levin_1992">
 
 Levin, Simon A. 1992. “The Problem of Pattern and Scale in Ecology: The
-Robert H. MacArthur Award Lecture.” *Ecology* 73 (6). Wiley: 1943–67.
+Robert H. MacArthur Award Lecture.” *Ecology* 73 (6): 1943–67.
 <https://doi.org/10.2307/1941447>.
 
 </div>
@@ -1287,17 +1237,15 @@ Robert H. MacArthur Award Lecture.” *Ecology* 73 (6). Wiley: 1943–67.
 Long, Jed A., Trisalyn A. Nelson, Stephen L. Webb, and Kenneth L. Gee.
 2014. “A Critical Examination of Indices of Dynamic Interaction for
 Wildlife Telemetry Studies.” Edited by Luca Börger. *Journal of Animal
-Ecology* 83 (5). Wiley: 1216–33.
-<https://doi.org/10.1111/1365-2656.12198>.
+Ecology* 83 (5): 1216–33. <https://doi.org/10.1111/1365-2656.12198>.
 
 </div>
 
 <div id="ref-Luther_2009">
 
 Luther, David. 2009. “The Influence of the Acoustic Community on Songs
-of Birds in a Neotropical Rain Forest.” *Behavioral Ecology* 20 (4).
-Oxford University Press (OUP): 864–71.
-<https://doi.org/10.1093/beheco/arp074>.
+of Birds in a Neotropical Rain Forest.” *Behavioral Ecology* 20 (4):
+864–71. <https://doi.org/10.1093/beheco/arp074>.
 
 </div>
 
@@ -1305,7 +1253,7 @@ Oxford University Press (OUP): 864–71.
 
 Mayor, S. J., J. A. Schaefer, D. C. Schneider, and S. P. Mahoney. 2007.
 “SPECTRUM OF SELECTION: NEW APPROACHES TO DETECTING THE
-SCALE-DEPENDENT RESPONSE TO HABITAT.” *Ecology* 88 (7). Wiley: 1634–40.
+SCALE-DEPENDENT RESPONSE TO HABITAT.” *Ecology* 88 (7): 1634–40.
 <https://doi.org/10.1890/06-1672.1>.
 
 </div>
@@ -1314,7 +1262,15 @@ SCALE-DEPENDENT RESPONSE TO HABITAT.” *Ecology* 88 (7). Wiley: 1634–40.
 
 Mayor, Stephen J., David C. Schneider, James A. Schaefer, and Shane P.
 Mahoney. 2009. “Habitat Selection at Multiple Scales.” *Écoscience* 16
-(2). Informa UK Limited: 238–47. <https://doi.org/10.2980/16-2-3238>.
+(2): 238–47. <https://doi.org/10.2980/16-2-3238>.
+
+</div>
+
+<div id="ref-McDonald_2007">
+
+McDonald, D. B. 2007. “Predicting Fate from Early Connectivity in a
+Social Network.” *Proceedings of the National Academy of Sciences* 104
+(26): 10910–4. <https://doi.org/10.1073/pnas.0701159104>.
 
 </div>
 
@@ -1322,17 +1278,17 @@ Mahoney. 2009. “Habitat Selection at Multiple Scales.” *Écoscience* 16
 
 Muller, Zoe, Mauricio Cantor, Innes C. Cuthill, and Stephen Harris.
 2018. “Giraffe Social Preferences Are Context Dependent.” *Animal
-Behaviour* 146 (December). Elsevier BV: 37–49.
+Behaviour* 146 (December): 37–49.
 <https://doi.org/10.1016/j.anbehav.2018.10.006>.
 
 </div>
 
 <div id="ref-Papageorgiou_2019">
 
-Papageorgiou, Danai, Charlotte Christensen, Gabriella E.C. Gall, James
+Papageorgiou, Danai, Charlotte Christensen, Gabriella E. C. Gall, James
 A. Klarevas-Irby, Brendah Nyaguthii, Iain D. Couzin, and Damien R.
 Farine. 2019. “The Multilevel Society of a Small-Brained Bird.” *Current
-Biology* 29 (21). Elsevier BV: R1120–R1121.
+Biology* 29 (21): R1120–R1121.
 <https://doi.org/10.1016/j.cub.2019.09.072>.
 
 </div>
@@ -1342,8 +1298,8 @@ Biology* 29 (21). Elsevier BV: R1120–R1121.
 Peignier, M’elissa, Quinn M. R. Webber, Erin L. Koen, Michel P. Laforge,
 Alec L. Robitaille, and Eric Vander Wal. 2019. “Space Use and Social
 Association in a Gregarious Ungulate: Testing the Conspecific Attraction
-and Resource Dispersion Hypotheses.” *Ecology and Evolution* 9 (9).
-Wiley: 5133–45. <https://doi.org/10.1002/ece3.5071>.
+and Resource Dispersion Hypotheses.” *Ecology and Evolution* 9 (9):
+5133–45. <https://doi.org/10.1002/ece3.5071>.
 
 </div>
 
@@ -1351,8 +1307,7 @@ Wiley: 5133–45. <https://doi.org/10.1002/ece3.5071>.
 
 Pilosof, Shai, Mason A. Porter, Mercedes Pascual, and Sonia K’efi. 2017.
 “The Multilayer Nature of Ecological Networks.” *Nature Ecology &
-Evolution* 1 (4). Springer Science; Business Media LLC.
-<https://doi.org/10.1038/s41559-017-0101>.
+Evolution* 1 (4). <https://doi.org/10.1038/s41559-017-0101>.
 
 </div>
 
@@ -1361,7 +1316,7 @@ Evolution* 1 (4). Springer Science; Business Media LLC.
 Pinter-Wollman, N., E. A. Hobson, J. E. Smith, A. J. Edelman, D.
 Shizuka, S. de Silva, J. S. Waters, et al. 2013. “The Dynamics of Animal
 Social Networks: Analytical, Conceptual, and Theoretical Advances.”
-*Behavioral Ecology* 25 (2). Oxford University Press (OUP): 242–55.
+*Behavioral Ecology* 25 (2): 242–55.
 <https://doi.org/10.1093/beheco/art047>.
 
 </div>
@@ -1370,16 +1325,24 @@ Social Networks: Analytical, Conceptual, and Theoretical Advances.”
 
 Piza-Roca, Carme, Kasha Strickland, David Schoeman, and Celine H. Frere.
 2018. “Eastern Water Dragons Modify Their Social Tactics with Respect to
-the Location Within Their Home Range.” *Animal Behaviour* 144 (October).
-Elsevier BV: 27–36. <https://doi.org/10.1016/j.anbehav.2018.08.001>.
+the Location Within Their Home Range.” *Animal Behaviour* 144 (October):
+27–36. <https://doi.org/10.1016/j.anbehav.2018.08.001>.
 
 </div>
 
 <div id="ref-Porter_2018">
 
 Porter, Mason A. 2018. “What Is... A Multilayer Network?” *Notices of
-the American Mathematical Society* 65 (11). American Mathematical
-Society (AMS): 1. <https://doi.org/10.1090/noti1746>.
+the American Mathematical Society* 65 (11): 1.
+<https://doi.org/10.1090/noti1746>.
+
+</div>
+
+<div id="ref-Proskurnikov_2017">
+
+Proskurnikov, Anton V., and Roberto Tempo. 2017. “A Tutorial on Modeling
+and Analysis of Dynamic Social Networks. Part I.” *Annual Reviews in
+Control* 43: 65–79. <https://doi.org/10.1016/j.arcontrol.2017.03.002>.
 
 </div>
 
@@ -1396,16 +1359,25 @@ Computing*. Vienna, Austria: R Foundation for Statistical Computing.
 Robitaille, Alec L., Quinn M. R. Webber, and Eric Vander Wal. 2019.
 “Conducting Social Network Analysis with Animal Telemetry Data:
 Applications and Methods Using Spatsoc.” Edited by Nick Golding.
-*Methods in Ecology and Evolution* 10 (8). Wiley: 1203–11.
+*Methods in Ecology and Evolution* 10 (8): 1203–11.
 <https://doi.org/10.1111/2041-210x.13215>.
+
+</div>
+
+<div id="ref-Royle_2012">
+
+Royle, Nick J., Thomas W. Pike, Philipp Heeb, Heinz Richner, and Mathias
+Kölliker. 2012. “Offspring Social Network Structure Predicts Fitness in
+Families.” *Proceedings of the Royal Society B: Biological Sciences* 279
+(1749): 4914–22. <https://doi.org/10.1098/rspb.2012.1701>.
 
 </div>
 
 <div id="ref-Schaefer_2013">
 
-Schaefer, J.A., and S.P. Mahoney. 2013. “Spatial Dynamics of the Rise
+Schaefer, J. A., and S. P. Mahoney. 2013. “Spatial Dynamics of the Rise
 and Fall of Caribou (Rangifer Tarandus) in Newfoundland.” *Canadian
-Journal of Zoology* 91 (11). Canadian Science Publishing: 767–74.
+Journal of Zoology* 91 (11): 767–74.
 <https://doi.org/10.1139/cjz-2013-0132>.
 
 </div>
@@ -1414,7 +1386,7 @@ Journal of Zoology* 91 (11). Canadian Science Publishing: 767–74.
 
 Silk, Matthew J., Kelly R. Finn, Mason A. Porter, and Noa
 Pinter-Wollman. 2018. “Can Multilayer Networks Advance Animal Behavior
-Research?” *Trends in Ecology & Evolution* 33 (6). Elsevier BV: 376–78.
+Research?” *Trends in Ecology & Evolution* 33 (6): 376–78.
 <https://doi.org/10.1016/j.tree.2018.03.008>.
 
 </div>
@@ -1425,8 +1397,25 @@ Spiegel, Orr, Stephan T. Leu, Andrew Sih, and C. Michael Bull. 2016.
 “Socially Interacting or Indifferent Neighbours? Randomization of
 Movement Paths to Tease Apart Social Preference and Spatial
 Constraints.” Edited by Tamara Münkemüller. *Methods in Ecology and
-Evolution* 7 (8). Wiley: 971–79.
-<https://doi.org/10.1111/2041-210x.12553>.
+Evolution* 7 (8): 971–79. <https://doi.org/10.1111/2041-210x.12553>.
+
+</div>
+
+<div id="ref-Stanton_2011">
+
+Stanton, Margaret A., Quincy A. Gibson, and Janet Mann. 2011. “When
+Mum’s Away: A Study of Mother and Calf Ego Networks During Separations
+in Wild Bottlenose Dolphins (Tursiops Sp.).” *Animal Behaviour* 82 (2):
+405–12. <https://doi.org/10.1016/j.anbehav.2011.05.026>.
+
+</div>
+
+<div id="ref-Stanton_2012">
+
+Stanton, Margaret A., and Janet Mann. 2012. “Early Social Networks
+Predict Survival in Wild Bottlenose Dolphins.” Edited by Gabriele Sorci.
+*PLoS ONE* 7 (10): e47508.
+<https://doi.org/10.1371/journal.pone.0047508>.
 
 </div>
 
@@ -1434,8 +1423,8 @@ Evolution* 7 (8). Wiley: 971–79.
 
 Strandburg-Peshkin, A., D. R. Farine, I. D. Couzin, and M. C. Crofoot.
 2015. “Shared Decision-Making Drives Collective Movement in Wild
-Baboons.” *Science* 348 (6241). American Association for the Advancement
-of Science (AAAS): 1358–61. <https://doi.org/10.1126/science.aaa5099>.
+Baboons.” *Science* 348 (6241): 1358–61.
+<https://doi.org/10.1126/science.aaa5099>.
 
 </div>
 
@@ -1444,17 +1433,33 @@ of Science (AAAS): 1358–61. <https://doi.org/10.1126/science.aaa5099>.
 Strandburg-Peshkin, Ariana, Damien R Farine, Margaret C Crofoot, and
 Iain D Couzin. 2017. “Habitat and Social Factors Shape Individual
 Decisions and Emergent Group Structure During Baboon Collective
-Movement.” *eLife* 6 (January). eLife Sciences Publications, Ltd.
-<https://doi.org/10.7554/elife.19505>.
+Movement.” *eLife* 6 (January). <https://doi.org/10.7554/elife.19505>.
 
 </div>
 
 <div id="ref-Sugihara_1989">
 
 Sugihara, G, K Schoenly, and A Trombla. 1989. “Scale Invariance in Food
-Web Properties.” *Science* 245 (4913). American Association for the
-Advancement of Science (AAAS): 48–52.
+Web Properties.” *Science* 245 (4913): 48–52.
 <https://doi.org/10.1126/science.2740915>.
+
+</div>
+
+<div id="ref-Tarka_2018">
+
+Tarka, Maja, Anja Guenther, Petri T. Niemelä, Shinichi Nakagawa, and
+Daniel W. A. Noble. 2018. “Sex Differences in Life History, Behavior,
+and Physiology Along a Slow-Fast Continuum: A Meta-Analysis.”
+*Behavioral Ecology and Sociobiology* 72 (8).
+<https://doi.org/10.1007/s00265-018-2534-2>.
+
+</div>
+
+<div id="ref-Thompson_2019">
+
+Thompson, Nicole A. 2019. “Understanding the Links Between Social Ties
+and Fitness over the Life Cycle in Primates.” *Behaviour* 156 (9):
+859–908. <https://doi.org/10.1163/1568539x-00003552>.
 
 </div>
 
@@ -1463,17 +1468,17 @@ Advancement of Science (AAAS): 48–52.
 Torney, Colin J., Myles Lamont, Leon Debell, Ryan J. Angohiatok,
 Lisa-Marie Leclerc, and Andrew M. Berdahl. 2018. “Inferring the Rules of
 Social Interaction in Migrating Caribou.” *Philosophical Transactions of
-the Royal Society B: Biological Sciences* 373 (1746). The Royal Society:
-20170385. <https://doi.org/10.1098/rstb.2017.0385>.
+the Royal Society B: Biological Sciences* 373 (1746): 20170385.
+<https://doi.org/10.1098/rstb.2017.0385>.
 
 </div>
 
 <div id="ref-Webber_2019">
 
-Webber, Quinn M.R., and Eric Vander Wal. 2019. “Trends and Perspectives
+Webber, Quinn M. R., and Eric Vander Wal. 2019. “Trends and Perspectives
 on the Use of Animal Social Network Analysis in Behavioural Ecology: A
-Bibliometric Approach.” *Animal Behaviour* 149 (March). Elsevier BV:
-77–87. <https://doi.org/10.1016/j.anbehav.2019.01.010>.
+Bibliometric Approach.” *Animal Behaviour* 149 (March): 77–87.
+<https://doi.org/10.1016/j.anbehav.2019.01.010>.
 
 </div>
 
@@ -1481,7 +1486,7 @@ Bibliometric Approach.” *Animal Behaviour* 149 (March). Elsevier BV:
 
 Wey, Tina, Daniel T. Blumstein, Weiwei Shen, and Ferenc Jord’an. 2008.
 “Social Network Analysis of Animal Behaviour: A Promising Tool for the
-Study of Sociality.” *Animal Behaviour* 75 (2). Elsevier BV: 333–44.
+Study of Sociality.” *Animal Behaviour* 75 (2): 333–44.
 <https://doi.org/10.1016/j.anbehav.2007.06.020>.
 
 </div>
