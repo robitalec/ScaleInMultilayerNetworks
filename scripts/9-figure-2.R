@@ -94,14 +94,15 @@ zzz <-
   )
 
 # Manual positioning left/right and up/down stacks
+slideright <- 4
 zzz[layer %in% c('1-winter', '1-summer'), 
-    c('modx', 'mody') := .(5 * (.GRP - 1), 0), by = layer]
+    c('modx', 'mody') := .(slideright * (.GRP - 1), 0), by = layer]
 
 zzz[layer %in% c('2-winter', '2-summer'), 
-    c('modx', 'mody') := .(5 * (.GRP - 1), 1), by = layer]
+    c('modx', 'mody') := .(slideright * (.GRP - 1), 1), by = layer]
 
 zzz[layer %in% c('3-winter', '3-summer'), 
-    c('modx', 'mody') := .(5 * (.GRP - 1), 2), by = layer]
+    c('modx', 'mody') := .(slideright * (.GRP - 1), 2), by = layer]
 
 
 (gnn <- ggplot(zzz, aes(
