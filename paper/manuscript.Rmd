@@ -718,16 +718,25 @@ social environment [@He_2019].
 individual differences in habitat selection
 -->
 
+Social structure influenced by large scale processes, eg resources
+Animals select for these same processes, habitat selection, as measured by RSF
+All of these processes are influenced by scale: 
+RSFs are are influenced
+Habitat selection johnsons four orders Mayor 2009, scale can be explicitly considered
+sociality across scales of sociality + temporal and spatial as shown above
+ML networks present a framework for this
+
+
 Social structure is influenced by large scale processes such as resource
 availability and seasonality [@Peigner_2019], configuration [@He_2019] and
 fragmentation [@Banks_2007]. Habitat selection is the "disproportionate use of
-available" [@Mayor_2009] landscape resources or features by animals. Johnson
+available" [@Mayor_2009] landscape resources or features by animals. Combined, habitat selection and social structure are intimately linked as
+individuals must share space to interact [@Farine_2015] and resource
+availability and quality influence home range size and overlap. Johnson
 (1980) identified four orders of habitat selection: (1) the geographical range
 of a species, (2) the home range of an individual, (3) the habitat patches
 within the home range and (4) specific resources within a habitat patch.
-Combined, habitat selection and social structure are intimately linked as
-individuals must share space to interact [@Farine_2015] and resource
-availability and quality influence home range size and overlap. Multilayer
+ Multilayer
 networks represent a novel framework for considering the influence of habitat
 selection and space use on sociality across scales.
 
