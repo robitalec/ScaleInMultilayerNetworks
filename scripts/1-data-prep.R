@@ -14,10 +14,7 @@ source('scripts/0-variables.R')
 ### Data ----
 DT <- fread('data/raw-data/FogoCaribou.csv')
 
-lc <- raster('data/raw-data/Landcover/FogoSDSS_RS.tif')
-
-water <- readOGR('data/raw-data/FogoPoly/FogoPoly.shp')
-
+lc <- raster('../nl-landcover/output/fogo_lc.tif')
 
 ### Date and time columns ----
 DT[, c(datecol, timecol) := .(as.IDate(get(datecol)), as.ITime(get(timecol)))]
