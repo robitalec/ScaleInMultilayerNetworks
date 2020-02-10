@@ -95,16 +95,22 @@ zzz <-
 
 # Manual positioning left/right and up/down stacks
 zzz[layer %in% c('1-winter', '1-summer'), 
-    c('shearx', 'sheary') := .(shearx + (shearx * .GRP-1), sheary + sheary * .GRP-1), by = layer]
+    c('modx', 'mody') := .(5 * (.GRP - 1), 0 * .GRP), by = layer]
+
+zzz[layer %in% c('2-winter', '2-summer'), 
+    c('modx', 'mody') := .(5 * (.GRP - 1), 3 * .GRP), by = layer]
+
+zzz[layer %in% c('3-winter', '3-summer'), 
+    c('modx', 'mody') := .(5 * (.GRP - 1), 6 * .GRP), by = layer]
 
 
-(gnn <- ggplot(zzz[layer %in% c('1-winter', '1-summer')], aes(
-  x = shearx,
-  y = sheary,
-  xend = shearxend,
-  yend = shearyend
+(gnn <- ggplot(zzz, aes(
+  x = shearx + modx,
+  y = sheary + mody,
+  xend = shearxend + modx,
+  yend = shearyend + mody
 )) +
-    geom_nodes(aes(color = vertex.names), size = 7) +
+    geom_nodes(aes(color = vertex.names, label = layer), size = 7) +
     geom_edges(aes(group = layer)) + 
     guides(color = FALSE)) 
 
