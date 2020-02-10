@@ -521,23 +521,23 @@ knitr::include_graphics('../graphics/figure-lcres.png')
 (ref:nobs) Varying scale in number of observations. For each iteration, a number
 of observations (10-485 observations in steps of 25) were selected from the
 complete data set to construct multilayer networks with layers defined by each
-landcover class (forest, forage, and open) across two seasons (summer and winter)
-and four network metrics calculated. A) Mean graph strength across individuals
-varied for winter layers becoming relatively stable at 200 observations and
-remained weak throughout for summer layers. B) Mean layer relevance across
-individuals increased for winter layers and slightly increased for summer
-layers. C) Similarity of landcover network layers between seasons (e.g. open
-summer compared to open winter) showed a stabilizing layer similarity at 200
-observations for forest and 300 observations for lichen and open. 
+landcover class (forest, forage, and open) across two seasons (summer and
+winter) and four network metrics calculated. A) Mean graph strength across
+individuals varied for winter layers becoming relatively stable at 200
+observations and remained weak throughout for summer layers. B) Mean layer
+relevance across individuals increased for winter layers and slightly increased
+for summer layers. C) Similarity of landcover network layers between seasons
+(e.g. open summer compared to open winter) showed a stabilizing layer similarity
+at 200 observations for forest and 300 observations for lichen and open.
 <!--TODO:*There were observations of individuals in lichen and open areas at
 lower numbers of observations during the winter, so layer similarity could not
 be calculated at these values.* **Brief explanation of why two landcover don't
 have values at lower nobs??**.--> D) Mean connective redundancy across
 individuals increased with increasing number of observations, which begins to
-plateau around 100 observations. Note, data in panel C are truncated because 
-there were observations of individuals in lichen and open areas at
-lower numbers of observations during the winter, so layer similarity could not
-be calculated at these values.
+plateau around 100 observations. Note, data in panel C are truncated because
+there were few observations of individuals in foraging and open habitats during
+the winter, resulting in inability to calculate layer similarity at lower number
+of observations.
 
 ```{r nobs, fig.cap='(ref:nobs)'}
 knitr::include_graphics('../graphics/figure-nobs.png')
