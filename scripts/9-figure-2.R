@@ -62,28 +62,37 @@ names(gLs) <- names(gbiLs)
 
 ### Setup data for plotting ----
 # Generate a single set of xy (so each layer has consistent individual positions)
-xy <- data.table(ggnetwork(netLs[['1-winter']],
-                           layout = 'kamadakawai'))
+ggnet1 <- data.table(ggnetwork(gLs[['1-winter']], layout = 'kamadakawai'))
+xy <- unique(ggnet1[, .(x, y, vertex.names)])
 
 # Shear the xy
+shear_xy(xy, c('x', 'y'))
 
-(gnn <- ggplot(xy, aes(
-  x = x,
-  y = y,
-  xend = xend,
-  yend = yend
+# Rep the rows for each layer (since each layer is present in each landcover * season)
+repxy <- xy[rep(seq_len(nrow(xy)), times = 6)]
+repxy[, layer := rep(names(gLs), each = uniqueN(vertex.names))]
+
+# Edges by layer
+edges <- rbindlist(lapply(gLs, as_data_frame, what = 'edges'), idcol = 'layer')
+edges[, c(lccol, 'season') := tstrsplit(layer, '-', type.convert = TRUE)]
+
+mxby <- c('vertex.names', 'layer')
+myby <- c('from', 'layer')
+xyedges <- merge(repxy, edges, by.x = mxby, by.y = myby, all = TRUE)
+myby <- c('to', 'layer')
+xyedges2 <- merge(repxy, xyedges, by.x = mxby, by.y = myby, suffixes = c('', 'end'), all = TRUE)
+
+(gnn <- ggplot(xyedges2, aes(
+  x = shearx,
+  y = sheary,
+  xend = shearxend,
+  yend = shearyend
 )) +
-    geom_nodes(aes(color = vertex.names), size = 7))
+    geom_nodes(aes(color = vertex.names), size = 7) +
+    geom_edges() + 
+    guides(color = FALSE))
 
 
-
-
-# Shear/scale matrix [[2,1],[0,1]] obtained by some trial and error:
-sm <- matrix(c(2,1.2,0,1),2,2)
-
-# Get transformed coordinates:
-zzz <- as.matrix(xy[, .(x, y)]) %*% sm
-xy[, c('shearx', 'sheary') := data.table(zzz)]
 
 
 (gnn <- ggplot(xy, aes(
