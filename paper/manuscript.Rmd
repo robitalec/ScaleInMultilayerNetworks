@@ -226,7 +226,7 @@ applied to caribou at a distance of 50 m [@Peignier_2019; @Lesmerises_2018]. In
 all networks, nodes represented individuals, intralayer edges represented
 associations between individuals in a given habitat type and season, and
 interlayer edges represented connections between the same individuals across
-contexts.
+contexts (Figure 2).
 
 We weighted edges of social networks by the strength of association between
 caribou using the simple ratio index (SRI, Cairns and Schwaeger 1987): 
@@ -468,8 +468,7 @@ landcover across seasons.
 -->
 
 
-(ref:socres) Varying scale in social threshold. For each social threshold (5 m,
-50 m, 100 m, 150 m, 200 m, 250 m, 300 m, 350 m, 400 m, 450 m, 500 m), multilayer
+(ref:socres) Varying scale in social threshold. For each social threshold, multilayer
 networks were constructed for each landcover class (forest, lichen and open)
 across two seasons (summer and winter) and four network metrics calculated.  A)
 Mean graph strength across individuals showed an increase for winter network
@@ -495,7 +494,7 @@ knitr::include_graphics('../graphics/figure-spatialthreshold.png')
 
 (ref:lcres) Variation in multilayer network metrics as a function of changes in
 landcover resolution, a metric which we interpret as spatial scale. For each
-landcover resolution (10 m, 100 m, 250 m, 500 m and 1000 m), multilayer networks
+landcover resolution, multilayer networks
 were constructed for each landcover class (forest, lichen and open) across two
 seasons (summer and winter), and four network metrics were calculated and we
 examined how network metrics changed as a function of changes in spatial scale.
