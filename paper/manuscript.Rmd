@@ -123,10 +123,20 @@ improve predictions associated with biological differences in seasonal resource
 availability and social association? We conclude with perspectives for further
 development and application of scale in multilayer networks with respect to 
 phenotypes and individual fitness [@Webber_2018], movement ecology and collective
-movement [@Jolles_2019], and habitat selection and space use <!-- TODO: (REF)-->,  and .
+movement [@Jolles_2019], and habitat selection and space use <!-- TODO: (REF)-->.
 
 
-(ref:spacetime) Space-time diagram displaying variation the spatial and temporal extent required for different social processes across a range of taxa.
+(ref:spacetime) Space-time diagram displaying variation the relative spatial and temporal extent 
+required for different types of social and communication processes for four species, including 
+hyaena, passerine birds, sleepy lizards, and elephants. Spatial and temporal extent for social interactions,
+e.g. mating, grooming, or aggression, are similar for most species because physical contact between 
+two individuals is required for most social interactions. The logical extension is that spatial and temporal extent for
+social interaction is nested within the spatial and temporal extent for social association because individuals must 
+shared space to interact. By contrast, different species have potential for  greater spatial and 
+temporal extents, for example, temporal extent for vocal communication is similar 
+for most species because most vocal calls only persist in the environment for seconds, but spatial 
+extent for vocal communication is highly variable with elephant calls extending the great distance and 
+passerine calls extending the shortest distance.
 
 <!-- TODO: units of spatial scale? --> 
 
