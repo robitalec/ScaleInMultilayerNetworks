@@ -155,21 +155,21 @@ knitr::include_graphics('../graphics/figure1.png')
 Here, we use caribou as a case study to develop scale-dependent multilayer
 networks based on social (visual and auditory perception), spatial (habitat
 type), and temporal (seasonal). Caribou are gregarious ungulates with
-fission-fusion dynamics [@Lesmerises_2018] that display temporal
-[@Peignier_2019] and spatial (Webber et al. unpublished data) variation in
-social networks. In winter, caribou dig holes in the snow, termed craters, to
-access forage [@Bergerud_1974]. As a result, caribou tend to occupy and re-use
-craters once they are established and there is considerably less access to
-forage than when the landscape is snow-free. Importantly, craters exist on the
-landscape at multiple scales: the crater scale (a single crater), the feeding
-area scale (multiple craters in close proximity), and the winter range scale
-(all craters within an individual’s range) [@Mayor_2009]. The distribution of
-forage for caribou is therefore seasonally heterogeneous, with greater access in
-snow-free seasons compared to winter as well as spatially heterogeneous in
-winter because the distribution of craters on the landscape varies meaning that
-access to vegetation in winter is highly variable for caribou. We therefore
-partitioned data into two discrete seasons: summer (3 August - 20 September) and
-winter (1 January – 17 February) based on caribou socioecology [@Peignier_2019].
+fission-fusion dynamics [@Lesmerises_2018] that display temporal and spatial
+variation in social networks [@Peignier_2019]. In winter, caribou dig holes in
+the snow, termed craters, to access forage [@Bergerud_1974]. As a result,
+caribou tend to occupy and re-use craters once they are established and there is
+considerably less access to forage than when the landscape is snow-free.
+Importantly, craters exist on the landscape at multiple scales: the crater scale
+(a single crater), the feeding area scale (multiple craters in close proximity),
+and the winter range scale (all craters within an individual’s range)
+[@Mayor_2009]. The distribution of forage for caribou is therefore seasonally
+heterogeneous, with greater access in snow-free seasons compared to winter as
+well as spatially heterogeneous in winter because the distribution of craters on
+the landscape varies meaning that access to vegetation in winter is highly
+variable for caribou. We therefore partitioned data into two discrete seasons:
+summer (3 August - 20 September) and winter (1 January – 17 February) based on
+caribou socioecology [@Peignier_2019].
 
 ## Caribou location data
 We used GPS location data collected from Fogo Island caribou in 2017 and 2018.
@@ -178,7 +178,7 @@ Adult female caribou were immobilized and fitted with global positioning system
 1,250 g) as described by [@Schaefer_2013]. Collars were programmed to collect
 location fixes every 2 hours. Prior to analyses, we subset GPS fixes into a
 discrete removed all erroneous and outlier GPS fixes following
-[@Bjørneraas_2010]. We did not collar all female caribou in the herd; however,
+[@BJ_RNERAAS_2010]. We did not collar all female caribou in the herd; however,
 we assumed that our sample of collared animals was random.
 
 ## Landscape data and habitat classification
@@ -289,9 +289,9 @@ aggregated the 10 m landcover raster using the R package `grainchanger`
 [@Graham_2019] at five scales: 100 m, 250 m, 500 m, and 1000 m. Aggregation
 occurred using a modal moving window method using a circular window
 corresponding to the above scales [@Graham_2019a]. We assume 10 m and 100 m
-represents fine-scale decision making for caribou during foraging (Webber et al.
-unpublished data), while re-sampling at 500 m and 1000 m represents the scale at
-which caribou tend to select and avoid habitat (Bastille-Rousseau et al. 2017).
+represents fine-scale decision making for caribou during foraging, while
+re-sampling at 500 m and 1000 m represents the scale at which caribou tend to
+select and avoid habitat (Bastille-Rousseau et al. 2017).
 
 
 ### Temporal scale
