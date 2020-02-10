@@ -8,8 +8,6 @@ pkgs <- c('data.table',
           'asnipe',
           'igraph', 
           'ScaleInMultilayerNetworks',
-          # 'patchwork',
-          # 'ggthemes',
           'ggnetwork')
 p <- lapply(pkgs, library, character.only = TRUE)
 
