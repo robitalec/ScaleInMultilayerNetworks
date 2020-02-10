@@ -76,11 +76,29 @@ repxy[, layer := rep(names(gLs), each = uniqueN(vertex.names))]
 edges <- rbindlist(lapply(gLs, as_data_frame, what = 'edges'), idcol = 'layer')
 edges[, c(lccol, 'season') := tstrsplit(layer, '-', type.convert = TRUE)]
 
+# Yuck double merge for from and to coords
 mxby <- c('vertex.names', 'layer')
 myby <- c('from', 'layer')
-xyedges <- merge(repxy, edges, by.x = mxby, by.y = myby, all = TRUE)
+xyedges <- merge(repxy,
+                 edges,
+                 by.x = mxby,
+                 by.y = myby,
+                 all = TRUE)
 myby <- c('to', 'layer')
-xyedges2 <- merge(repxy, xyedges, by.x = mxby, by.y = myby, suffixes = c('', 'end'), all = TRUE)
+zzz <-
+  merge(
+    repxy,
+    xyedges,
+    by.x = mxby,
+    by.y = myby,
+    suffixes = c('', 'end'),
+    all = TRUE
+  )
+
+# Manual positioning left/right and up/down stacks
+zzz[layer %in% c('1-winter', '1-summer'), 
+    c('shearx', 'sheary') := .(shearx + (shearx * .GRP-1), sheary + sheary * .GRP-1), by = layer]
+
 
 (gnn <- ggplot(xyedges2, aes(
   x = shearx,
@@ -90,7 +108,8 @@ xyedges2 <- merge(repxy, xyedges, by.x = mxby, by.y = myby, suffixes = c('', 'en
 )) +
     geom_nodes(aes(color = vertex.names), size = 7) +
     geom_edges() + 
-    guides(color = FALSE))
+    guides(color = FALSE) + 
+    facet_wrap(~layer))
 
 
 
