@@ -1,6 +1,4 @@
 # Figure 2
-
-### Scale in multilayer networks - spatial threshold
 # Alec Robitaille
 
 ### Packages ----
@@ -100,16 +98,15 @@ zzz[layer %in% c('1-winter', '1-summer'),
     c('shearx', 'sheary') := .(shearx + (shearx * .GRP-1), sheary + sheary * .GRP-1), by = layer]
 
 
-(gnn <- ggplot(xyedges2, aes(
+(gnn <- ggplot(zzz[layer %in% c('1-winter', '1-summer')], aes(
   x = shearx,
   y = sheary,
   xend = shearxend,
   yend = shearyend
 )) +
     geom_nodes(aes(color = vertex.names), size = 7) +
-    geom_edges() + 
-    guides(color = FALSE) + 
-    facet_wrap(~layer))
+    geom_edges(aes(group = layer)) + 
+    guides(color = FALSE)) 
 
 
 
