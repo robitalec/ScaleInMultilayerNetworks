@@ -118,7 +118,7 @@ principal questions associated with scale-dependent multilayer networks. First,
 to what degree does the social scale of relationships, spatial scale of
 landscapes, and temporal scale of analysis influence our ability to interpret
 complex social systems? Second, can variation in the social, spatial, and
-temporal improve predictions associated with biological differences in seasonal
+temporal scale improve predictions associated with biological differences in seasonal
 resource availability and social association? We conclude with perspectives for
 further development and application of scale in multilayer networks with respect
 to phenotypes and individual fitness [@Webber_2018], movement ecology and
@@ -890,25 +890,38 @@ Layers defined by habitat/landcover
 
 # Conclusions
 
-With our caribou case stuyd, we show that multilayer social networks are scale dependent 
+With our caribou case stuyd, we show that (1) multilayer social networks can be,
+but are not always, scale dependent and (2) that the use of multilayer networks
+could be useful for identifying habitat or season-specific social processes. Our
+analyses of social, spatial, and temporal scales in multilayer network framework
+highlight potential to identify scales at which variation in properties of
+layers within a multilayer network show the most variability. Our analysis of
+caribou multilayer networks incorporated high resolution GPS telemetry data and
+spatial landcover data, thus allowing us ground our broader discussion of
+multilayer networks in the context of observed animal social networks.
+<!--QW: I am not very happy with this paragraph, but it's a start -->
 
-Silk et al. (2018) summarized some key multilayer questions in animal behaviour
-research. While these questions are important for linking animal behaviour and
-multilayer networks, we present an additional set of questions posed through the
-lense of spatial ecology and relevant to the promise and problem of scale in
-mutlilayer networks:
+Multilayer networks remain a nascent tool in animal behavioural ecology. We
+demonstrate novel analyses that vary social, spatial, and temporal scale within
+a multilayer framework and we discuss the potential integration of individual
+phenotypes and fitness, collective movememtn, and habitat selection for future
+analyses considering spatial ecology  using multilayer networks. Silk et al.
+(2018) summarized some key multilayer questions in animal behaviour research.
+While these questions are important for linking animal behaviour and multilayer
+networks, we summarize our perspectives on the future of multilayer networks
+with an additional set of questions posed through the lense of spatial ecology
+that are relevant to the promise and problem of scale in mutlilayer networks:
 
-1. How do social phenotypes vary across social scales and differentially influence fitness? Are
-some temporal or social scales better predictors for different fitness metrics?
-
+1. How do social phenotypes vary across social scales and differentially
+influence fitness? Are some temporal or social scales better predictors for
+different fitness metrics?
 2. Why do individuals associate more strongly with certain conspecifics in some
 habitats? What, if any, is the role of movement in the context of habitat
 networks?
-
 3. How, and why, does the spatial scale of perception influence, e.g. auditory,
-visual, or chemotaxis, influence the  social environment? What is
-the role of memory, and by extension social and spatial cognition, as animals
-navigate their environment and make decisions about where to move next?
+visual, or chemotaxis, influence the  social environment? What is the role of
+memory, and by extension social and spatial cognition, as animals navigate their
+environment and make decisions about where to move next?
 
 
 
