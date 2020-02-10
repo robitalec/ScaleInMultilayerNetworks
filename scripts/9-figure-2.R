@@ -74,6 +74,25 @@ xy <- data.table(ggnetwork(netLs[['1-winter']],
 )) +
     geom_nodes(aes(color = vertex.names), size = 7))
 
+
+# Shear/scale matrix [[2,1],[0,1]] obtained by some trial and error:
+sm <- matrix(c(2,1.2,0,1),2,2)
+
+# Get transformed coordinates:
+zzz <- as.matrix(xy[, .(x, y)]) %*% sm
+xy[, c('shearx', 'sheary') := data.table(zzz)]
+
+
+(gnn <- ggplot(xy, aes(
+  x = shearx,
+  y = sheary,
+  xend = xend,
+  yend = yend
+)) +
+    geom_nodes(aes(color = vertex.names), size = 7) + 
+    geom_nodes(aes(y = sheary + 2, color = vertex.names), size = 7))
+
+
 xyu <- unique(xy[, .(x, y, from = vertex.names)])
 
 
