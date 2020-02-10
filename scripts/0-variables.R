@@ -14,7 +14,7 @@ timecol <- 'itime'
 
 # split by
 lccol <- 'lc'
-splitBy <- c(lccol, 'season')
+splitBy <- c('season', lccol)
 
 ## spatsoc
 spatthresh <- 50
