@@ -27,7 +27,7 @@ source('../scripts/0-variables.R')
 \newpage
 
 # Abstract
-Scale remains a seminal concept in ecology. Spatial scale, for instance, has
+Scale remains a foundational concept in ecology. Spatial scale, for instance, has
 become a central consideration in the way we understand landscape ecology and
 animal space use. Meanwhile, social processes can also scale from fine-scale
 interactions to co-occurrence to overlapping home ranges. Multilayer networks
