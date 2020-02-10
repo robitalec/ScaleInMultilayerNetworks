@@ -54,7 +54,7 @@ names(gLs) <- names(gbiLs)
 
 ### Setup data for plotting ----
 # Generate a single set of xy (so each layer has consistent individual positions)
-ggnet1 <- data.table(ggnetwork(gLs[['1-winter']], layout = 'kamadakawai'))
+ggnet1 <- data.table(ggnetwork(gLs[['winter-2']], layout = 'kamadakawai'))
 xy <- unique(ggnet1[, .(x, y, vertex.names)])
 
 # Shear the xy
@@ -89,13 +89,13 @@ zzz <-
 
 # Manual positioning left/right and up/down stacks
 slideright <- 2.75
-zzz[layer %in% c('1-winter', '1-summer'), 
+zzz[layer %in% c('winter-3', 'summer-3'), 
     c('modx', 'mody') := .(slideright * (.GRP - 1), 0), by = layer]
 
-zzz[layer %in% c('2-winter', '2-summer'), 
+zzz[layer %in% c('winter-2', 'summer-2'), 
     c('modx', 'mody') := .(slideright * (.GRP - 1), 2), by = layer]
 
-zzz[layer %in% c('3-winter', '3-summer'), 
+zzz[layer %in% c('winter-1', 'summer-1'), 
     c('modx', 'mody') := .(slideright * (.GRP - 1), 4), by = layer]
 
 
