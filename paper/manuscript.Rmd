@@ -70,14 +70,14 @@ scale-dependent.
 
 Sociality exists across both temporal and spatial scales (Whitehead 2008). For
 example, grooming requires close spatial proximity between conspecifics and
-occurs over brief time periods (e.g. Carter et al. 2015), whereas social
+occurs over brief time periods [e.g. @Carter_2015], whereas social
 association represents shared space use by members of the same social group
-(Figure \@ref(fig:spacetime), Franks et al. 2010). Further, for social
+[Figure \@ref(fig:spacetime), @Franks_2010]. Further, for social
 interactions or associations to occur individuals must share space, and thus
 have overlapping home ranges. In the context of the social environment, home
 range overlap is a relatively coarse scale of sociality across which individuals
-share space over coarser spatial and temporal scales (e.g. Piza-Roca et al.
-2018). Although the social environment clearly scales spatially and temporally,
+share space over coarser spatial and temporal scales [e.g. @Piza_Roca_2018]. 
+Although the social environment clearly scales spatially and temporally,
 it remains unclear whether coarser scales of sociality, including social
 association and home range overlap, vary predictably with social interaction
  [@Castles_2014; @Farine2015a]. Thus, we define social scale as the type of
@@ -85,24 +85,24 @@ social relationship observed that can be explicitly defined and measured [@Farin
 
 
 Animal social network analysis is a well-developed tool used to measure the
-relationships of individuals and organization of social systems (Krause et al.
-2009; Wey et al. 2008; Croft et al. 2008). Social network analysis provides
+relationships of individuals and organization of social systems 
+[@Krause_2009; @Wey_2008; @Croft_2011]. Social network analysis provides
 insight into the structure of social communities and social network properties,
 which can influence population dynamics and evolutionary processes
-(Pinter-Wollman et al. 2014; Kurvers et al. 2014). Despite the widespread use
-and innovation of traditional social network analysis (Webber & Vander Wal
-2019), it typically considers a single scale of sociality in a given network
+[@Pinter_Wollman_2013; @Kurvers_2014]. Despite the widespread use
+and innovation of traditional social network analysis [@Webber_2019], 
+it typically considers a single scale of sociality in a given network
 (monolayer), drastically simplifying the potential complexity of animal social
 systems [@Finn_2019]. 
 
 
 Unlike traditional monolayer social networks, multilayer networks explicitly
 consider social systems across contexts, including scale-dependent contexts
-(Pilosof et al. 2017). Multilayer networks are made up of multiple layers, each
+[@Pilosof_2017]. Multilayer networks are made up of multiple layers, each
 representing (i) different classes of individuals, e.g. male or female; (ii) types 
 of behaviours, e.g. grooming, travelling, or foraging; and (iii) spatial areas,
 e.g. local or regional, or temporal windows, e.g. daily or seasonal 
-(Kivela et al. 2014; Porter 2018). Multilayer networks are relatively novel to studies of animal
+ [@Kivela_2014; @Porter_2018]. Multilayer networks are relatively novel to studies of animal
 behaviour [Silk_2018; @Finn_2019], although they have been used to
 describe multidimensional human social systems, complex transportation networks,
 and neural networks [@Silk_2018]. The role of scale within multilayer
@@ -303,7 +303,7 @@ and generate multilayer networks.
 
 Studies of social network analysis vary in the number and frequency of
 observations as well as the data collection technique used to generate networks
-(Davis et al. 2018; Webber and Vander Wal 2019). In addition to altering the
+[@Davis_2018; @Webber_2019]. In addition to altering the
 temporal scale by adjusting the time window, we investigated the influence of
 the number of observations on resulting multilayer networks. We randomly
 selected 500 timesteps and iteratively included 25 additional observations,

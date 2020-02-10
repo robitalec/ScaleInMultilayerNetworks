@@ -4,14 +4,24 @@ library(knitcitations)
 
 ### Sections ----
 ## Introduction
+
+# Croft 2008
+citep('10.1016/j.tree.2011.05.012')
+
 # levin, allen
 citep(c('10.2307/1941447', '10.7312/alle06918'))
 
 # legendre 93, chave 2013
 citep(c('10.2307/1939924', '10.1111/ele.12048')) 
 
+# Davis 2018
+citep('10.1016/j.anbehav.2018.04.012')
+
 # field 2009
 citep('10.1111/j.1365-2699.2008.01963.x')
+
+# Franks 2010
+citep('10.1007/s00265-009-0865-8')
 
 # eli 2009, mayo2007, sugihara 1989
 citep('10.1146/annurev.ecolsys.110308.120159')
@@ -21,6 +31,32 @@ citep('10.1126/science.2740915')
 # luthe2009
 citep('10.1093/beheco/arp074')
 
+# Kivela 2014
+citep('10.1093/comnet/cnu016')
+
+# Krause 2009
+citep('10.1007/s00265-009-0747-0')
+
+# Kurvers et al 2014
+citep('10.1016/j.tree.2014.04.002')
+
+# Pinter-Wollman 2014
+citep('10.1093/beheco/art047')
+
+#Piza-Roca 2018
+citep('10.1016/j.anbehav.2018.08.001')
+
+# Pilosof et al 2017
+citep('s41559-017-0101')
+
+# Porter 2018
+citep('10.1090/noti1746')
+
+# Webber and Vander Wal 2019
+citep('10.1016/j.anbehav.2019.01.010')
+
+# Wey et al 2008
+citep('10.1016/j.anbehav.2007.06.020')
 
 ## Case study
 ### Caribou socioecology
