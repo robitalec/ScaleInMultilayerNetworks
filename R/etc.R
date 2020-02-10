@@ -1,3 +1,21 @@
+#' Shear XY for stacked plotting
+#' Thanks to [@rafapereirabr](https://github.com/rafapereirabr) for this gist (https://gist.github.com/rafapereirabr/97a7c92d40f91cd20a10e8e0165a0aef) and Barry Rowlingson for the original SO answer (http://gis.stackexchange.com/questions/189490/plot-tilted-map-in-r)
+
+#' @param DT 
+#' @param coordcols length 2
+#' @param shearmatrix 
+#'
+#' @return
+#' @export
+#'
+#' @examples
+shear_xy <- function(DT, coordcols, shearmatrix = matrix(c(2,1.2,0,1),2,2)) {
+  # TODO: check that coordcols exist in DT and are length two
+  
+  
+  DT[, c('shearx', 'sheary') := data.table(as.matrix(.SD) %*% shearmatrix), .SDcols = coordcols]
+}
+
 #' Check col
 #' @param DT data.table
 #' @param col column name
