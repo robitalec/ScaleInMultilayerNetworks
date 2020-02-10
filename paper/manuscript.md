@@ -58,8 +58,8 @@ Sociality exists across both temporal and spatial scales (Whitehead
 2008). For example, grooming requires close spatial proximity between
 conspecifics and occurs over brief time periods (e.g. Carter, Lee, and
 Marshall 2015), whereas social association represents shared space use
-by members of the same social group (Figure @ref(fig:spacetime),
-<span class="citeproc-not-found" data-reference-id="Franks_2010">**???**</span>).
+by members of the same social group (Figure 1, Franks, Ruxton, and James
+2009). <!--Figure \@ref(fig:spacetime) TODO: something broken here?? -->
 Further, for social interactions or associations to occur individuals
 must share space, and thus have overlapping home ranges. In the context
 of the social environment, home range overlap is a relatively coarse
@@ -68,38 +68,36 @@ spatial and temporal scales (e.g. Piza-Roca et al. 2018). Although the
 social environment clearly scales spatially and temporally, it remains
 unclear whether coarser scales of sociality, including social
 association and home range overlap, vary predictably with social
-interaction (Castles et al. 2014;
-<span class="citeproc-not-found" data-reference-id="Farine2015a">**???**</span>).
-Thus, we define social scale as the type of social relationship observed
-that can be explicitly defined and measured (D. R. Farine 2015).
+interaction (Castles et al. 2014; D. R. Farine 2015). Thus, we define
+social scale as the type of social relationship observed that can be
+explicitly defined and measured (D. R. Farine 2015).
+<!-- Farine references comes out as D.R. Farine 2015 -->
 
 Animal social network analysis is a well-developed tool used to measure
 the relationships of individuals and organization of social systems
-(<span class="citeproc-not-found" data-reference-id="Krause_2009">**???**</span>;
-<span class="citeproc-not-found" data-reference-id="Croft_2011">**???**</span>;
-Wey et al. 2008). Social network analysis provides insight into the
-structure of social communities and social network properties, which can
-influence population dynamics and evolutionary processes (Pinter-Wollman
-et al. 2013;
-<span class="citeproc-not-found" data-reference-id="Kurvers_2014">**???**</span>).
-Despite the widespread use and innovation of traditional social network
-analysis (Webber and Wal 2019), it typically considers a single scale of
-sociality in a given network (monolayer), drastically simplifying the
-potential complexity of animal social systems (Finn et al. 2019).
+(Krause, Lusseau, and James 2009; Wey et al. 2008; Croft et al. 2011).
+Social network analysis provides insight into the structure of social
+communities and social network properties, which can influence
+population dynamics and evolutionary processes (Pinter-Wollman et al.
+2013; Kurvers et al. 2014). Despite the widespread use and innovation of
+traditional social network analysis (Webber and Wal 2019), it typically
+considers a single scale of sociality in a given network (monolayer),
+drastically simplifying the potential complexity of animal social
+systems (Finn et al. 2019).
 
 Unlike traditional monolayer social networks, multilayer networks
 explicitly consider social systems across contexts, including
-scale-dependent contexts (Pilosof et al. 2017). Multilayer networks are
+scale-dependent contexts (Pilosof et al. 2017). Multilayer networks are
 made up of multiple layers, each representing (i) different classes of
 individuals, e.g. male or female; (ii) types of behaviours,
 e.g. grooming, travelling, or foraging; and (iii) spatial areas,
 e.g. local or regional, or temporal windows, e.g. daily or seasonal
-(Kivela et al. 2014; Porter 2018). Multilayer networks are relatively
-novel to studies of animal behaviour (Silk\_2018; Finn et al. 2019),
-although they have been used to describe multidimensional human social
-systems, complex transportation networks, and neural networks (Silk et
-al. 2018). The role of scale within multilayer social networks remains
-unexplored but provides a unique opportunity to develop novel
+(Kivela et al. 2014; Porter 2018). Multilayer networks are relatively
+novel to studies of animal behaviour (Silk et al. 2018; Finn et al.
+2019), although they have been used to describe multidimensional human
+social systems, complex transportation networks, and neural networks
+(Silk et al. 2018). The role of scale within multilayer social networks
+remains unexplored but provides a unique opportunity to develop novel
 understanding of variation in the temporal or spatial scales associated
 with social systems.
 
@@ -117,9 +115,10 @@ differences in seasonal resource availability and social association? We
 conclude with perspectives for further development and application of
 scale in multilayer networks with respect to phenotypes and individual
 fitness
-(<span class="citeproc-not-found" data-reference-id="Webber_2018">**???**</span>),
-movement ecology and collective movement (Jolles, King, and Killen
-2019), and habitat selection and space use <!-- TODO: (REF)-->.
+(<span class="citeproc-not-found" data-reference-id="Webber_2018">**???**</span>)
+<!-- TODO: ref should be 2018, but defaulting to 2017-->, movement
+ecology and collective movement (Jolles, King, and Killen 2019), and
+habitat selection and space use. <!-- TODO: (REF)-->
 
 (ref:spacetime) Space-time diagram displaying variation the relative
 spatial and temporal extent required for different types of social and
@@ -164,18 +163,17 @@ ungulates with fission-fusion dynamics (Lesmerises, Johnson, and
 St-Laurent 2018) that display temporal (Peignier et al. 2019) and
 spatial (Webber et al. unpublished data) variation in social networks.
 In winter, caribou dig holes in the snow, termed craters, to access
-forage (Bergerud 1974)<!-- TODO: get Bergerud ref-->. As a result,
-caribou tend to occupy and re-use craters once they are established and
-there is considerably less access to forage than when the landscape is
-snow-free. Importantly, craters exist on the landscape at multiple
-scales: the crater scale (a single crater), the feeding area scale
-(multiple craters in close proximity), and the winter range scale (all
-craters within an individual’s range) (Mayor et al. 2009). The
-distribution of forage for caribou is therefore seasonally
-heterogeneous, with greater access in snow-free seasons compared to
-winter as well as spatially heterogeneous in winter because the
-distribution of craters on the landscape varies meaning that access to
-vegetation in winter is highly variable for caribou. We therefore
+forage (Bergerud 1974). As a result, caribou tend to occupy and re-use
+craters once they are established and there is considerably less access
+to forage than when the landscape is snow-free. Importantly, craters
+exist on the landscape at multiple scales: the crater scale (a single
+crater), the feeding area scale (multiple craters in close proximity),
+and the winter range scale (all craters within an individual’s range)
+(Mayor et al. 2009). The distribution of forage for caribou is therefore
+seasonally heterogeneous, with greater access in snow-free seasons
+compared to winter as well as spatially heterogeneous in winter because
+the distribution of craters on the landscape varies meaning that access
+to vegetation in winter is highly variable for caribou. We therefore
 partitioned data into two discrete seasons: summer (3 August - 20
 September) and winter (1 January – 17 February) based on caribou
 socioecology (Peignier et al. 2019).
@@ -185,8 +183,8 @@ socioecology (Peignier et al. 2019).
 We used GPS location data collected from Fogo Island caribou in 2017 and
 2018. Adult female caribou were immobilized and fitted with global
 positioning system (GPS) collars (Lotek Wireless Inc., Newmarket, ON,
-Canada, GPS4400M collars, 1,250 g) as described by Schaefer and Mahoney
-(2013). Collars were programmed to collect location fixes every 2 hours.
+Canada, GPS4400M collars, 1,250 g) as described by (Schaefer and Mahoney
+2013). Collars were programmed to collect location fixes every 2 hours.
 Prior to analyses, we subset GPS fixes into a discrete removed all
 erroneous and outlier GPS fixes following
 (<span class="citeproc-not-found" data-reference-id="Bjørneraas_2010">**???**</span>).
@@ -1035,6 +1033,14 @@ Ecology*. Columbia University Press.
 
 </div>
 
+<div id="ref-Bergerud_1974">
+
+Bergerud, A. T. 1974. “Relative Abundance of Food in Winter for
+Newfoundland Caribou.” *Oikos* 25 (3). JSTOR: 379.
+<https://doi.org/10.2307/3543960>.
+
+</div>
+
 <div id="ref-Berlingerio_2012">
 
 Berlingerio, Michele, Michele Coscia, Fosca Giannotti, Anna Monreale,
@@ -1097,6 +1103,15 @@ Bodey, Steven C. Votier, Stuart Bearhop, and Keith C. Hamer. 2019.
 Trajectories in Ecology.” *Behavioral Ecology and Sociobiology* 73 (11).
 Springer Science; Business Media LLC.
 <https://doi.org/10.1007/s00265-019-2761-1>.
+
+</div>
+
+<div id="ref-Croft_2011">
+
+Croft, Darren P., Joah R. Madden, Daniel W. Franks, and Richard James.
+2011. “Hypothesis Testing in Animal Social Networks.” *Trends in Ecology
+& Evolution* 26 (10). Elsevier BV: 502–7.
+<https://doi.org/10.1016/j.tree.2011.05.012>.
 
 </div>
 
@@ -1164,6 +1179,15 @@ for the Advancement of Science (AAAS): 911–14.
 
 </div>
 
+<div id="ref-Franks_2009">
+
+Franks, Daniel W., Graeme D. Ruxton, and Richard James. 2009. “Sampling
+Animal Association Networks with the Gambit of the Group.” *Behavioral
+Ecology and Sociobiology* 64 (3). Springer Science; Business Media LLC:
+493–503. <https://doi.org/10.1007/s00265-009-0865-8>.
+
+</div>
+
 <div id="ref-Graham_2019">
 
 Graham, Laura J., Rebecca Spake, Simon Gillings, Kevin Watts, and Felix
@@ -1209,6 +1233,25 @@ Kivela, M., A. Arenas, M. Barthelemy, J. P. Gleeson, Y. Moreno, and M.
 A. Porter. 2014. “Multilayer Networks.” *Journal of Complex Networks* 2
 (3). Oxford University Press (OUP): 203–71.
 <https://doi.org/10.1093/comnet/cnu016>.
+
+</div>
+
+<div id="ref-Krause_2009">
+
+Krause, Jens, David Lusseau, and Richard James. 2009. “Animal Social
+Networks: An Introduction.” *Behavioral Ecology and Sociobiology* 63
+(7). Springer Science; Business Media LLC: 967–73.
+<https://doi.org/10.1007/s00265-009-0747-0>.
+
+</div>
+
+<div id="ref-Kurvers_2014">
+
+Kurvers, Ralf H.J.M., Jens Krause, Darren P. Croft, Alexander D.M.
+Wilson, and Max Wolf. 2014. “The Evolutionary and Ecological
+Consequences of Animal Social Networks: Emerging Issues.” *Trends in
+Ecology & Evolution* 29 (6). Elsevier BV: 326–35.
+<https://doi.org/10.1016/j.tree.2014.04.002>.
 
 </div>
 
@@ -1302,6 +1345,15 @@ Wiley: 5133–45. <https://doi.org/10.1002/ece3.5071>.
 
 </div>
 
+<div id="ref-Pilosof_2017">
+
+Pilosof, Shai, Mason A. Porter, Mercedes Pascual, and Sonia K’efi. 2017.
+“The Multilayer Nature of Ecological Networks.” *Nature Ecology &
+Evolution* 1 (4). Springer Science; Business Media LLC.
+<https://doi.org/10.1038/s41559-017-0101>.
+
+</div>
+
 <div id="ref-Pinter_Wollman_2013">
 
 Pinter-Wollman, N., E. A. Hobson, J. E. Smith, A. J. Edelman, D.
@@ -1321,6 +1373,14 @@ Elsevier BV: 27–36. <https://doi.org/10.1016/j.anbehav.2018.08.001>.
 
 </div>
 
+<div id="ref-Porter_2018">
+
+Porter, Mason A. 2018. “What Is... A Multilayer Network?” *Notices of
+the American Mathematical Society* 65 (11). American Mathematical
+Society (AMS): 1. <https://doi.org/10.1090/noti1746>.
+
+</div>
+
 <div id="ref-R_Core_Team_2019">
 
 R Core Team. 2019. *R: A Language and Environment for Statistical
@@ -1336,6 +1396,15 @@ Robitaille, Alec L., Quinn M. R. Webber, and Eric Vander Wal. 2019.
 Applications and Methods Using Spatsoc.” Edited by Nick Golding.
 *Methods in Ecology and Evolution* 10 (8). Wiley: 1203–11.
 <https://doi.org/10.1111/2041-210x.13215>.
+
+</div>
+
+<div id="ref-Schaefer_2013">
+
+Schaefer, J.A., and S.P. Mahoney. 2013. “Spatial Dynamics of the Rise
+and Fall of Caribou (Rangifer Tarandus) in Newfoundland.” *Canadian
+Journal of Zoology* 91 (11). Canadian Science Publishing: 767–74.
+<https://doi.org/10.1139/cjz-2013-0132>.
 
 </div>
 

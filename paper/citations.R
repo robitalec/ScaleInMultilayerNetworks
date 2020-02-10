@@ -47,7 +47,7 @@ citep('10.1093/beheco/art047')
 citep('10.1016/j.anbehav.2018.08.001')
 
 # Pilosof et al 2017
-citep('s41559-017-0101')
+citep('10.1038/s41559-017-0101')
 
 # Porter 2018
 citep('10.1090/noti1746')
@@ -63,16 +63,17 @@ citep('10.1016/j.anbehav.2007.06.020')
 # TODO: Lesmerises 2018 -- check that's right
 citep('10.1016/j.anbehav.2018.03.014')
 
+## Schaefer and Mahoney
+citep('10.1139/cjz-2013-0132')
+
 # peignier
 citep('10.1002/ece3.5071')
 
-# TODO: Bergerud 1974
+# Bergerud 1974
+citep('10.2307/3543960')
 
 # mayor 2009
 citep('10.2980/16-2-3238')
-
-### Caribou location 
-# TODO: Schaefer and Mahoney (2013)
 
 ## Bjorness 2010
 citep('10.1111/j.1937-2817.2010.tb01258.x')
@@ -110,10 +111,6 @@ citep('10.1111/2041-210X.13177')
 
 
 ## temporal scale
-# davis 2018
-
-# webber vander 2019
-
 
 ## perspectives
 

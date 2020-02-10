@@ -67,22 +67,21 @@ spatial scales [@Luther_2009]. We posit that animal behaviour and, more
 specifically, the social environment that animals experience must also be
 scale-dependent.
 
-
 Sociality exists across both temporal and spatial scales (Whitehead 2008). For
 example, grooming requires close spatial proximity between conspecifics and
 occurs over brief time periods [e.g. @Carter_2015], whereas social
-association represents shared space use by members of the same social group
-[Figure \@ref(fig:spacetime), @Franks_2010]. Further, for social
-interactions or associations to occur individuals must share space, and thus
+association represents shared space use by members of the same social group [Figure 1, @Franks_2009].
+<!--Figure \@ref(fig:spacetime) TODO: something broken here?? --> 
+Further, for social interactions or associations to occur individuals must share space, and thus
 have overlapping home ranges. In the context of the social environment, home
 range overlap is a relatively coarse scale of sociality across which individuals
 share space over coarser spatial and temporal scales [e.g. @Piza_Roca_2018]. 
 Although the social environment clearly scales spatially and temporally,
 it remains unclear whether coarser scales of sociality, including social
 association and home range overlap, vary predictably with social interaction
- [@Castles_2014; @Farine2015a]. Thus, we define social scale as the type of
-social relationship observed that can be explicitly defined and measured [@Farine_2015a].
-
+ [@Castles_2014; @Farine_2015a]. Thus, we define social scale as the type of
+social relationship observed that can be explicitly defined and measured [@Farine_2015a]. 
+<!-- Farine references comes out as D.R. Farine 2015 -->
 
 Animal social network analysis is a well-developed tool used to measure the
 relationships of individuals and organization of social systems 
@@ -103,7 +102,7 @@ representing (i) different classes of individuals, e.g. male or female; (ii) typ
 of behaviours, e.g. grooming, travelling, or foraging; and (iii) spatial areas,
 e.g. local or regional, or temporal windows, e.g. daily or seasonal 
  [@Kivela_2014; @Porter_2018]. Multilayer networks are relatively novel to studies of animal
-behaviour [Silk_2018; @Finn_2019], although they have been used to
+behaviour [@Silk_2018; @Finn_2019], although they have been used to
 describe multidimensional human social systems, complex transportation networks,
 and neural networks [@Silk_2018]. The role of scale within multilayer
 social networks remains unexplored but provides a unique opportunity to develop
@@ -122,8 +121,9 @@ complex social systems? Second, can variation in the social, spatial, and tempor
 improve predictions associated with biological differences in seasonal resource
 availability and social association? We conclude with perspectives for further
 development and application of scale in multilayer networks with respect to 
-phenotypes and individual fitness [@Webber_2018], movement ecology and collective
-movement [@Jolles_2019], and habitat selection and space use <!-- TODO: (REF)-->.
+phenotypes and individual fitness [@Webber_2018] <!-- TODO: ref should be 2018, but defaulting to 2017-->, 
+movement ecology and collective
+movement [@Jolles_2019], and habitat selection and space use. <!-- TODO: (REF)-->
 
 
 (ref:spacetime) Space-time diagram displaying variation the relative spatial and temporal extent 
@@ -155,8 +155,8 @@ type), and temporal (seasonal). Caribou are gregarious ungulates with
 fission-fusion dynamics [@Lesmerises_2018] that display temporal
 [@Peignier_2019] and spatial (Webber et al. unpublished data) variation in
 social networks. In winter, caribou dig holes in the snow, termed craters, to
-access forage (Bergerud 1974)<!-- TODO: get Bergerud ref-->. As a result,
-caribou tend to occupy and re-use craters once they are established and there is
+access forage [@Bergerud_1974]. As a result, caribou tend to occupy and re-use 
+craters once they are established and there is
 considerably less access to forage than when the landscape is snow-free.
 Importantly, craters exist on the landscape at multiple scales: the crater scale
 (a single crater), the feeding area scale (multiple craters in close proximity),
@@ -173,7 +173,7 @@ caribou socioecology [@Peignier_2019].
 We used GPS location data collected from Fogo Island caribou in 2017 and 2018.
 Adult female caribou were immobilized and fitted with global positioning system
 (GPS) collars (Lotek Wireless Inc., Newmarket, ON, Canada, GPS4400M collars,
-1,250 g) as described by Schaefer and Mahoney (2013). Collars were programmed to
+1,250 g) as described by [@Schaefer_2013]. Collars were programmed to
 collect location fixes every 2 hours. Prior to analyses, we subset GPS fixes
 into a discrete removed all erroneous and outlier GPS fixes following [@Bjørneraas_2010]. 
 We did not collar all female caribou in the herd; however, we assumed that our 
