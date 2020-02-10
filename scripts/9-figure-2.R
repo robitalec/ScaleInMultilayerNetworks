@@ -121,15 +121,31 @@ p <- theme(legend.text = element_text(size = 12, color = "black"),
              fill = NA,
              size = 1))
 
-(gnn <- ggplot(zzz, aes(
-  x = shearx + modx,
-  y = sheary + mody,
-  xend = shearxend + modx,
-  yend = shearyend + mody
-)) +
-    geom_nodes(aes(color = vertex.names), size = 7) +
-    geom_edges(aes(group = layer)) + 
+labels <- data.table(
+  x = rep(c(1.5, 4.25), 3),
+  y = rep(c(1.25, 3.25, 5.25), each = 2),
+  label = c('1-winter', '1-summer',
+            '2-winter', '2-summer',
+            '3-winter', '3-summer')
+)
+
+(gnn <- ggplot(
+    zzz,
+    aes(
+      x = shearx + modx,
+      y = sheary + mody,
+      xend = shearxend + modx,
+      yend = shearyend + mody
+    )
+  ) +
+    geom_nodes(aes(color = vertex.names), size = 5) +
+    geom_edges(aes(group = layer)) +
     guides(color = FALSE) +
-    p) 
+    geom_text(aes(x, y, xend = NULL, yend = NULL, label = label), data = labels) + 
+  p
+)
+
+# TODO: do we want edge weights by SRI?
+
 
 ggsave('graphics/figure-2.png', width = 10, height = 7)
