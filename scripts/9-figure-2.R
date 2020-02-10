@@ -148,4 +148,5 @@ labels <- data.table(
 # TODO: do we want edge weights by SRI?
 
 
-ggsave('graphics/figure-2.png', width = 10, height = 7)
+ggsave('graphics/figure-2.png', width = 8, height = 6)
+
