@@ -47,7 +47,7 @@ var <- 'winpos'
 
 nets <- lapply(winpositions, function(pos) {
   col <- paste0('season', pos)
-  splitBy <- c(lccol, col)
+  splitBy <- c(col, lccol)
   
   sub <- na.omit(DT, cols = splitBy)
   
@@ -91,7 +91,7 @@ nets <- lapply(winpositions, function(pos) {
   # Preserve window length
   set(out, j = var, value = pos)
 })
-# TODO: not always a consistent n individuals because some IDs NA in an LC
+
 out <- rbindlist(nets)
 
 ### Output ----
