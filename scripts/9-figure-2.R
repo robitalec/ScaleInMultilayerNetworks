@@ -21,10 +21,6 @@ DT <- readRDS('data/derived-data/1-sub-seasons-fogo-caribou.Rds')
 alloc.col(DT)
 
 ### Generate networks ----
-# TODO: fix this
-lccol <- 'lc30'
-splitBy <- c(lccol, 'season')
-
 # Drop where season or landcover is NA
 DT <- DT[!is.na(season) & !is.na(get(lccol))]
 
