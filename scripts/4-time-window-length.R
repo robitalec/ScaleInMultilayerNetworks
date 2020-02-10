@@ -47,7 +47,7 @@ var <- 'winlength'
 
 nets <- lapply(winlengths, function(len) {
   col <- paste0('season', len)
-  splitBy <- c(lccol, col)
+  splitBy <- c(col, lccol)
   
   sub <- na.omit(DT, cols = splitBy)
   
@@ -62,17 +62,17 @@ nets <- lapply(winlengths, function(len) {
   )
   
   
-  # GBI for each season
+  # GBI 
   gbiLs <- list_gbi(sub, idcol, splitBy)
 
-  # Generate networks for each season
+  # Generate networks
   netLs <- list_nets(gbiLs)
   
-  # Generate graphs for each season
+  # Generate graphs
   gLs <- list_graphs(netLs)
   names(gLs) <- names(gbiLs)
   
-  # Calculate eigenvector centrality for each season
+  # Calculate eigenvector centrality
   stren <- layer_strength(gLs)
   stren[, (splitBy) := tstrsplit(layer, '-', type.convert = TRUE)]
   setnames(stren, 'ind', idcol)
