@@ -28,7 +28,7 @@ DT[between(JDate, summerlow, summerhigh), season := 'summer']
 DT[, (projCols) := as.data.table(project(cbind(get(xcol), get(ycol)), utm21N))]
 
 ### Landcover prep ----
-water <- 8
+water <- 7
 open <- c(1, 6, 9)
 forest <- c(2, 3, 4, 5)
 lichen <- 8
