@@ -186,11 +186,11 @@ Landcover data were provided by the Newfoundland and Labrador Wildlife Division.
 Available landcover classification included nine habitat types at <!-- TODO:
 double check lc res--> 10 m resolution. We reclassified the landcover types into
 three categories: foraging habitat, open habitat, and forest habitat using the R
-package `raster` [@Hijmans_2019]. Foraging habitat <!-- TODO: "foraging" should
-be "lichen" ?--> consisted of lichen habitat, open habitat consisted of wetland,
-rocky barrens, and anthropogenic habitat types, while forest habitat consisted
-of coniferous forest, conifer scrub, broadleaf forest, and mixed-wood forest
-habitat types. Water habitat was excluded from all subsequent analyses.
+package `raster` [@Hijmans_2019]. Foraging habitat consisted of lichen habitat,
+open habitat consisted of wetland, rocky barrens, and anthropogenic habitat
+types, while forest habitat consisted of coniferous forest, conifer scrub,
+broadleaf forest, and mixed-wood forest habitat types. Water habitat was
+excluded from all subsequent analyses.
 
 
 ## Caribou multilayer social networks
