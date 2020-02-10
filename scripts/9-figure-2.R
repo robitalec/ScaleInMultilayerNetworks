@@ -108,14 +108,6 @@ xyedges2 <- merge(repxy, xyedges, by.x = mxby, by.y = myby, suffixes = c('', 'en
 xyu <- unique(xy[, .(x, y, from = vertex.names)])
 
 
-
-lapply(gLs, ggnetwork)
-
-meanXY <- DT[, .(meanX = mean(get(xcol)), meanY = mean(get(ycol))), by = c(bys, idcol)]
-
-edges <- rbindlist(lapply(gLs, as_data_frame, what = 'edges'), idcol = 'layer')
-edges[, c(lccol, 'season') := tstrsplit(layer, '-', type.convert = TRUE)]
-
 xyEdges <- merge(meanXY, edges, by.x = c(bys, idcol), by.y = c(bys, 'from'))
 
 m <- merge(
