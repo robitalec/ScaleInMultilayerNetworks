@@ -25,6 +25,10 @@ DT <- readRDS('data/derived-data/1-sub-seasons-fogo-caribou.Rds')
 alloc.col(DT)
 
 ### Generate networks ----
+# TODO: fix this
+lccol <- 'lc30'
+splitBy <- c(lccol, 'season')
+
 # Drop where season or landcover is NA
 DT <- DT[!is.na(season) & !is.na(get(lccol))]
 
@@ -58,6 +62,24 @@ names(gLs) <- names(gbiLs)
 # Restructure for plotting
 bys <- c('season', lccol)
 
+
+xy <- data.table(ggnetwork(netLs[['1-winter']],
+                           layout = 'kamadakawai'))
+
+(gnn <- ggplot(xy, aes(
+  x = x,
+  y = y,
+  xend = xend,
+  yend = yend
+)) +
+    geom_nodes(aes(color = vertex.names), size = 7))
+
+xyu <- unique(xy[, .(x, y, from = vertex.names)])
+
+
+
+lapply(gLs, ggnetwork)
+
 meanXY <- DT[, .(meanX = mean(get(xcol)), meanY = mean(get(ycol))), by = c(bys, idcol)]
 
 edges <- rbindlist(lapply(gLs, as_data_frame, what = 'edges'), idcol = 'layer')
@@ -75,6 +97,8 @@ m <- merge(
 setnames(m, c(idcol), c('from'))
 
 f <- lapply(gLs, function(g) tryCatch(ggnetwork(g), error = function(g) g))
+
+
 
 rbindlist(f[-3])
 # TODO: MISSING INDIVIDUALS
