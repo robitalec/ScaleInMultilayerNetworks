@@ -75,6 +75,12 @@ xy <- data.table(ggnetwork(netLs[['1-winter']],
     geom_nodes(aes(color = vertex.names), size = 7))
 
 
+shear_xy <- function(DT, coordcols, shearmatrix = matrix(c(2,1.2,0,1),2,2)) {
+  # Thanks to for this gist (https://gist.github.com/rafapereirabr/97a7c92d40f91cd20a10e8e0165a0aef) and Barry Rowlingson for the original SO answer (http://gis.stackexchange.com/questions/189490/plot-tilted-map-in-r)
+  
+  DT[, c('shearx', 'sheary') := data.table(as.matrix(.SD) %*% shearmatrix), .SDcols = coordcols]
+}
+
 # Shear/scale matrix [[2,1],[0,1]] obtained by some trial and error:
 sm <- matrix(c(2,1.2,0,1),2,2)
 
