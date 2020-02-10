@@ -47,12 +47,12 @@ group_times(
 var <- 'lcres'
 
 # Also include original raster
-lsres <- c(10, lsres)
+lsres <- c(30, lsres)
 lslc <- c(lc, lslc)
 splitBy <- 'season'
 
 nets <- lapply(lsres, function(res) {
-  col <- ifelse(res == 10, 'lc', paste0('lc', res))
+  col <- ifelse(res == 30, 'lc', paste0('lc', res))
   splitBy <- c(splitBy, col)
   
   sub <- na.omit(DT, cols = splitBy)
