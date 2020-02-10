@@ -94,16 +94,32 @@ zzz <-
   )
 
 # Manual positioning left/right and up/down stacks
-slideright <- 4
+slideright <- 2.75
 zzz[layer %in% c('1-winter', '1-summer'), 
     c('modx', 'mody') := .(slideright * (.GRP - 1), 0), by = layer]
 
 zzz[layer %in% c('2-winter', '2-summer'), 
-    c('modx', 'mody') := .(slideright * (.GRP - 1), 1), by = layer]
-
-zzz[layer %in% c('3-winter', '3-summer'), 
     c('modx', 'mody') := .(slideright * (.GRP - 1), 2), by = layer]
 
+zzz[layer %in% c('3-winter', '3-summer'), 
+    c('modx', 'mody') := .(slideright * (.GRP - 1), 4), by = layer]
+
+
+### Plot ----
+p <- theme(legend.text = element_text(size = 12, color = "black"),
+           legend.title = element_blank(),
+           legend.spacing = unit(-0.5, 'cm'),
+           legend.background = element_blank(),
+           legend.key = element_blank(),
+           axis.text = element_blank(),
+           axis.title = element_blank(),
+           axis.ticks = element_blank(),
+           panel.grid.minor = element_blank(),
+           panel.background = element_blank(),
+           panel.border = element_rect(
+             colour = "black",
+             fill = NA,
+             size = 1))
 
 (gnn <- ggplot(zzz, aes(
   x = shearx + modx,
@@ -112,6 +128,8 @@ zzz[layer %in% c('3-winter', '3-summer'),
   yend = shearyend + mody
 )) +
     geom_nodes(aes(color = vertex.names), size = 7) +
-    # geom_nodetext(aes(label = layer)) + 
     geom_edges(aes(group = layer)) + 
-    guides(color = FALSE)) 
+    guides(color = FALSE) +
+    p) 
+
+ggsave('graphics/figure-2.png', width = 10, height = 7)
