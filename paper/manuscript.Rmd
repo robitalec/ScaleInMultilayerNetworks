@@ -1,5 +1,5 @@
 ---
-title: The problem and promise of scale in animal social multilayer networks
+title: The problem and promise of scale in multilayer animal social networks
 author: Alec L. Robitaille^1^, Quinn M.R. Webber^2^, Julie W. Turner^1^, Eric Vander Wal^1,2^
 date: ^1^Department of Biology, Memorial University of Newfoundland, Canada; ^2^Cognitive and Behavioural Ecology Interdisciplinary Program, Memorial University of Newfoundland
 output:
@@ -889,6 +889,8 @@ Layers defined by habitat/landcover
 
 
 # Conclusions
+
+With our caribou case stuyd, we show that multilayer social networks are scale dependent 
 
 Silk et al. (2018) summarized some key multilayer questions in animal behaviour
 research. While these questions are important for linking animal behaviour and
