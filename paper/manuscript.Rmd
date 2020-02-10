@@ -117,14 +117,14 @@ Newfoundland, Canada [@Peignier_2019]. We use this case study to address two
 principal questions associated with scale-dependent multilayer networks. First,
 to what degree does the social scale of relationships, spatial scale of
 landscapes, and temporal scale of analysis influence our ability to interpret
-complex social systems? Second, can variation in the social, spatial, and temporal
-improve predictions associated with biological differences in seasonal resource
-availability and social association? We conclude with perspectives for further
-development and application of scale in multilayer networks with respect to 
-phenotypes and individual fitness [@Webber_2018] <!-- TODO: ref should be 2018, but defaulting to 2017-->, 
-movement ecology and collective
-movement [@Jolles_2019], and habitat selection and space use. <!-- TODO: (REF)-->
-
+complex social systems? Second, can variation in the social, spatial, and
+temporal improve predictions associated with biological differences in seasonal
+resource availability and social association? We conclude with perspectives for
+further development and application of scale in multilayer networks with respect
+to phenotypes and individual fitness [@Webber_2018], movement ecology and
+collective movement [@Jolles_2019], and habitat selection and space use. <!--
+TODO: (REF)--> <!-- TODO: Webber reference should be 2018, but defaulting to
+2017-->
 
 (ref:spacetime) Space-time diagram displaying variation the relative spatial and temporal extent 
 required for different types of social and communication processes for four species, including 

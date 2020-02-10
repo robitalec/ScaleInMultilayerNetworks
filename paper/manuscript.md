@@ -115,10 +115,12 @@ differences in seasonal resource availability and social association? We
 conclude with perspectives for further development and application of
 scale in multilayer networks with respect to phenotypes and individual
 fitness
-(<span class="citeproc-not-found" data-reference-id="Webber_2018">**???**</span>)
-<!-- TODO: ref should be 2018, but defaulting to 2017-->, movement
-ecology and collective movement (Jolles, King, and Killen 2019), and
-habitat selection and space use. <!-- TODO: (REF)-->
+(<span class="citeproc-not-found" data-reference-id="Webber_2018">**???**</span>),
+movement ecology and collective movement (Jolles, King, and Killen
+2019), and habitat selection and space use. <!--
+TODO: (REF)-->
+<!-- TODO: Webber reference should be 2018, but defaulting to
+2017-->
 
 (ref:spacetime) Space-time diagram displaying variation the relative
 spatial and temporal extent required for different types of social and
