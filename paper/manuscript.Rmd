@@ -153,23 +153,23 @@ knitr::include_graphics('../graphics/figure1.png')
 
 ## Caribou socioecology
 Here, we use caribou as a case study to develop scale-dependent multilayer
-networks based on social (visual and auditory perception), spatial (habitat
-type), and temporal (seasonal). Caribou are gregarious ungulates with
-fission-fusion dynamics [@Lesmerises_2018] that display temporal and spatial
-variation in social networks [@Peignier_2019]. In winter, caribou dig holes in
-the snow, termed craters, to access forage [@Bergerud_1974]. As a result,
-caribou tend to occupy and re-use craters once they are established and there is
-considerably less access to forage than when the landscape is snow-free.
-Importantly, craters exist on the landscape at multiple scales: the crater scale
-(a single crater), the feeding area scale (multiple craters in close proximity),
-and the winter range scale (all craters within an individual’s range)
-[@Mayor_2009]. The distribution of forage for caribou is therefore seasonally
-heterogeneous, with greater access in snow-free seasons compared to winter as
-well as spatially heterogeneous in winter because the distribution of craters on
-the landscape varies meaning that access to vegetation in winter is highly
-variable for caribou. We therefore partitioned data into two discrete seasons:
-summer (3 August - 20 September) and winter (1 January – 17 February) based on
-caribou socioecology [@Peignier_2019].
+networks based on predicted social (visual and auditory perception), spatial
+(habitat type), and temporal (seasonal) scales. Caribou are gregarious ungulates
+with fission-fusion dynamics [@Lesmerises_2018] that display temporal and
+spatial variation in social networks [@Peignier_2019]. In winter, caribou dig
+holes in the snow, termed craters, to access forage [@Bergerud_1974]. Cratering
+is presumed to be a costly behaviour and as a result, caribou tend to occupy and
+re-use craters once they are established and there is considerably less access
+to forage than when the landscape is snow-free. Importantly, craters exist on
+the landscape at multiple scales: the crater scale (a single crater), the
+feeding area scale (multiple craters in close proximity), and the winter range
+scale (all craters within an individual’s range) [@Mayor_2009]. The distribution
+of forage for caribou is therefore seasonally heterogeneous because the
+distribution of craters on the landscape varies meaning that access to
+vegetation in winter is highly variable for caribou. Caribou therefore have
+greater access to forage in snow-free seasons. We  partitioned data into two
+discrete seasons: summer (3 August - 20 September) and winter (1 January – 17
+February) based on caribou socioecology [@Peignier_2019].
 
 ## Caribou location data
 We used GPS location data collected from Fogo Island caribou in 2017 and 2018.
