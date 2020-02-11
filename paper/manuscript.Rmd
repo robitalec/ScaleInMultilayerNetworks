@@ -581,8 +581,8 @@ not require proximity, particularly long-distance communication networks with
 devices like microphone arrays [@Snijders_2017]. Using relocation data, our case
 study results indicate that there are different social patterns in different
 habitat types, likely indicating different types of interactions. When the
-social threshold is greater than approximately 50 m during the summer **check**,
-individuals demonstrate dramatically different graph strength **cite spatial threshold fig**
+social threshold is greater than approximately 50 m during the winter,
+individuals demonstrate dramatically different graph strength (Figure \@ref(fig:socres))
 in different habitat types, having higher graph strength in
 forage and open habitats where they can likely see each other and still interact
 with visual cues than in forest habitats. Varying social scales can have
@@ -597,7 +597,7 @@ layers of interaction integrated in a holistic way.
 
 Temporal scale is also important for understanding the repercussions of social
 phenotypes. Varying the time window length and position for caribou, we found
-there was a lot of variation in the multilayer network metrics **cite winpos and winlen**. 
+there was a lot of variation in the multilayer network metrics (Figure \@ref(fig:winlen), Figure \@ref(fig:winpos)). 
 These changes in the outcome depending on how the time window is
 defined highlight how critical it is to properly define the time window
 appropriately to address the questions and hypotheses of interest. For instance,
