@@ -554,16 +554,17 @@ ecology within the behavioural ecology literature.
 ## Phenotypes and Individual fitness
 
 Social network positions are frequently used to represent the social environment
-that an individual experiences or their social phenotype. Social phenotypes are
-increasingly linked to important fitness for individuals of various species,
-including primates [@Brent_2017; @Thompson_2019], dolphins [@Stanton_2012;
-@Stanton_2011], and birds [@McDonald_2007; @Royle_2012]. Both temporal, seasons
-and stages of life, and social scales, types of interactions, have emerged as
-important for understanding fitness consequences in the context of social
-network positions [@Almeling_2016, @Berger_2015, @Brent_2017, @Holekamp_2012].
-Multilayer networks provide a way to bridge these different scales so that we
-can examine social phenotypes in more holistic ways rather than looking at each
-scale separately as has traditionally been done.
+that an individual experiences or their social phenotype. Multilayer networks
+provide a way to bridge these different scales so that we can examine social
+phenotypes in more holistic ways rather than looking at each scale separately as
+has traditionally been done. From a monolayer network perspective, social
+phenotypes are increasingly linked to important fitness for individuals of
+various species, including primates [@Brent_2017; @Thompson_2019], dolphins
+[@Stanton_2012; @Stanton_2011], and birds [@McDonald_2007; @Royle_2012]. Both
+social scales, types of interactions, and temporal, seasons and stages of life,
+have emerged as important for understanding fitness consequences in the context
+of social network positions [@Almeling_2016, @Berger_2015, @Brent_2017,
+@Holekamp_2012].
 
 
 For instance, social scale is major consideration for social network analysis,
@@ -581,15 +582,17 @@ devices like microphone arrays [@Snijders_2017]. Using relocation data, our case
 study results indicate that there are different social patterns in different
 habitat types, likely indicating different types of interactions. When the
 social threshold is greater than approximately 50 m during the summer **check**,
-individuals demonstrate dramatically different graph strength **cite spatial threshold fig** 
-in different habitat types, having dramatically higher graph
-strength in forage and open habitats than forest where they can likely see each
-other better and still interact with visual cues. Varying social scales can have
-different fitness repercussions for individuals. Rhesus macaques (*Macaca mulatta*) 
-had higher survivorship when they had fewer but stronger, more stable
+individuals demonstrate dramatically different graph strength **cite spatial threshold fig**
+in different habitat types, having higher graph strength in
+forage and open habitats where they can likely see each other and still interact
+with visual cues than in forest habitats. Varying social scales can have
+different fitness repercussions for individuals. Rhesus macaques (*Macaca
+mulatta*) had higher survivorship when they had fewer but stronger, more stable
 social associates and grooming partners rather than simply more associates
 [@Ellis_2019]. This finding highlights that different qualities of social scales
-have lasting consequences.
+have lasting consequences. Multilayer networks provide the opportunity to
+address these types of questions involving social scale with all the individual
+layers of interaction integrated in a holistic way.
 
 
 Temporal scale is also important for understanding the repercussions of social
@@ -607,7 +610,11 @@ variation can make defining appropriate temporal scales for testing the fitness
 implications of an individual’s social phenotype over different stages of
 ontogeny even more difficult when they vary by individual. However, considering
 fine temporal scales provide insight across developmental stages that may
-otherwise be missed [@Turner_2018].
+otherwise be missed [@Turner_2018]. Defining temporal scales is a challenge in
+multilayer networks just as in monolayer networks; however, multilayer networks
+provide metrics that enable researchers to look at similarities and differences
+in separate layers representing different stages of ontogeny, or seasons as in
+our case study, which can be difficult to detect.
 
 
 Multilayer networks provide unique opportunities and challenges, linking these
@@ -643,7 +650,6 @@ individuals, for instance. In both mono- and multilayer networks, the effect of
 scale on the relationship between an individual’s social network position and
 fitness need to be considered based on the hypotheses being tested and
 logistical constraints.
-
 
 
 ## Movement ecology and collective movement
