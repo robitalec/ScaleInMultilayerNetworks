@@ -37,4 +37,43 @@ csl: vancouver.csl
 
 
 
+<!--
+## Each metric's interpretation
+* Degree: the number of direct connections an individual has to other individuals in the network. High degree = connected to many indviduals in a single layer. Low degree = not connected to many individuals in a single layer.
+
+* Multidegree: sum of degree across layers. High multidegree = connected to many
+individuals across layers. Low multidegree = not connected to many individuals
+across layers.
+
+* Degree deviation: standard **[??]** deviation of degree across layers. High degree deviation =
+large difference between degree for an individual across layers. Low degree
+deviation = individuals are similarly connected across layers.
+
+* Graph strength: the sum of all the edge weights directly connected to an actor, sometimes called weigthed degree. High graph strength = highly social, connected to many individuals and/or having stronger, high-valued connections between individuals. Low graph strength = not very social, connected to few individuals and/or having weak, low-valued connections between individuals. Not summed in this case across layers.
+
+* Neighbours: number of unique individuals adjacent to each actor. Considered in
+a single layer, this is equal to the degree.
+
+* Neighbourhood: number of unique individuals across all layers. High
+neighbourhood = a high number of unique individuals connected to an actor. Low
+neighbourhood = a low number of unique individuals connected to an actor. 
+
+* Relevance: layer centric metric, corresponding to the number of neighbours on a
+layer divided by the total neighbourhood for each actor. High relevance = the layer is highly relevant to the individuals connections. A low
+relevance means this layer does not contribute many neighbours to an individuals
+overall neighbourhood.
+
+* Connective redundancy: the total multilayer neighbourhood divided by the
+multidegree. High connective redundancy indicates a multilayer network that has
+many repeated edges across layers between an actor and its neighbours. Low
+connective redundancy indicates that each layer is important for preserving all
+social ties.
+
+* Layer similarity: how similar each layer is (Brodka 2018). Pearson's
+correlation coefficient of degree vectors for each layer, comparing each
+landcover across seasons.
+
+
+-->
+
 # References
