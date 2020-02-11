@@ -742,54 +742,32 @@ effects of habitat configuration on the formation of the social environment
 
 
 ## Habitat selection and space use
-Animals use space for resource, considering conspecifics
-
-social structure is influenced by resources
-
-animals selectively use resources + can be measured by RSFs
-
-
-
-<!-- Social structure influenced by large scale processes, eg resources -->
-<!-- Animals select for these same processes, habitat selection, as measured by RSF -->
-<!-- All of these processes are influenced by scale:  -->
-<!-- RSFs are are influenced -->
-<!-- Habitat selection johnsons four orders Mayor 2009, scale can be explicitly considered -->
-<!-- sociality across scales of sociality + temporal and spatial as shown above -->
-<!-- ML networks present a framework for this -->
-
 <!-- TODO: Gerard ‘openness’ paper -->
 Social structure is influenced by large scale processes such as resource
 availability and seasonality [@Peigner_2019], configuration [@He_2019] and
 fragmentation [@Banks_2007]. Habitat selection is the disproportionate use of
-available resources or landscape features by animals [@Manly_1993; @Boyce_1999]. Combined,
-social structure and habitat selection are intimately linked as individuals must
-share space to interact and the distribution of resources influences home range size
-and group dynamics [@Webber_2018]. 
+available resources or landscape features by animals [@Manly_1993; @Boyce_1999].
+Combined, social structure and habitat selection are intimately linked as
+individuals must share space to interact and the distribution of resources
+influences home range size and group dynamics [@Webber_2018]. Animals select
+habitats are multiple scales ... (Mayor) <!-- Mayor scale --> Multilayer
+networks represent a novel framework for considering the influence of habitat
+selection and space use on sociality across scales.
 
 
-Habitat selection is a scale-sensitive process
-Animals select habitats at multiple scales 
-
-
-<!-- Mayor scale --> Multilayer networks represent a novel framework for considering the influence of habitat selection and space use on sociality across scales.
-
-
-
-Johnson
-(1980) identified four orders of habitat selection: (1) the geographical range
-of a species, (2) the home range of an individual, (3) the habitat patches
-within the home range and (4) specific resources within a habitat patch.
+<!-- Relationship between sociality and habitat -->
+<!-- more from Webber, He, etc -->
+<!-- Merkle’s memory and patches for bison (and leaders) -->
+<!-- Emergent  Properties  of  Conspecific  Attraction  inFragmented  Landscapes-->
+<!-- Conspecific Attraction and Aggregation in Territorial Species-->
+<!-- Energy and the Scaling of Animal Space Use-->
 
 
 
-<!--
-* multilayer networks are new but folks have looked at habitat selection + sociality
-  * Fortin
-  * Banks
-  * McLoughlin
-  
-* none use a multilayer framework to explicitly combine
+<!-- The relationship between sociality has been discussed both theoretically  -->
+<!-- and tested explicitly ... CAH, etc then Fortin, McLouglin-->
+<!-- https://www.pnas.org/content/pnas/105/49/19114.full.pdf
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2600907/pdf/rspb20071688.pdf
 -->
 
 Despite not in a multilayer network context, the link between habitat and
@@ -804,6 +782,15 @@ bears (*Ursus arctos*) to seasonality, a proxy in this case for habitat quality,
 showing high home range overlap in areas of low and high seasonality and low
 home range overlap in areas of moderate seasonality. Despite these, *missing
 multilayer approach*.
+
+
+Habitat selection - can be measured by RSFs and importance of scale: 
+
+*  Johnson (1980) identified four orders of habitat selection: (1) the geographical range of a species, (2) the home range of an individual, (3) the habitat patches within the home range and (4) specific resources within a habitat patch.
+
+
+What new insights will multilayer networks lead to 
+
 
 
 <!--
@@ -828,6 +815,7 @@ Johnson 1980 1st order = selection of the physical or geographical range of a sp
 * Habitat–performance relationships: finding the right metric at a given spatial scale Jean-Michel Gaillard1,*, Mark Hebblewhite2, Anne Loison3, Mark Fuller4, Roger Powell5, Mathieu Basille1,6 and Bram Van Moorter1
 * Multi-scale habitat selection modeling: a review and outlook
 -->
+
 Scale in habitat selection... Mayor (2019)
 
 
