@@ -15,6 +15,7 @@ Alec Robitaille, Quinn M.R. Webber, Julie Turner and Eric Vander Wal
 grep -rni 'R/' -e 'TODO' || true;
 grep -rni 'scripts/' -e 'TODO' || true;
 grep -rni 'paper/manuscript.Rmd' -e 'TODO' || true;
+#> R/etc.R:13:  # TODO: check that coordcols exist in DT and are length two
 #> R/metrics.R:85:  # TODO: Check cols
 #> R/metrics.R:86:  # TODO: warn overwrite 
 #> R/metrics.R:106:  # TODO: check columns
@@ -24,22 +25,33 @@ grep -rni 'paper/manuscript.Rmd' -e 'TODO' || true;
 #> R/metrics.R:154:  # TODO: check for splitNeigh variable and neigh
 #> R/metrics.R:155:  # TODO: check overwrite
 #> scripts/1-data-prep.R:8:# TODO: timezones
-#> scripts/6-time-window-position.R:94:# TODO: not always a consistent n individuals because some IDs NA in an LC
-#> scripts/9-figure-2.R:80:# TODO: MISSING INDIVIDUALS
-#> 124:habitat selection and space use <!-- TODO: (REF)-->, individual fitness and
-#> 131:<!-- TODO: units of spatial scale? --> 
-#> 148:access forage (Bergerud 1974)<!-- TODO: get Bergerud ref-->. As a result, caribou tend to occupy
-#> 169:et al. (2010)<!-- TODO: get Bjorneraas ref-->. We did not collar all female caribou in the herd;
-#> 174:Available landcover classification included nine habitat types at <!-- TODO:
-#> 177:<!-- TODO: "foraging" should be "lichen" ?--> consisted of lichen habitat, open habitat
-#> 187:<!-- TODO: should use something like "using syntax from Kivela 2014..." or 
-#> 220:caribou using the simple ratio index (SRI, Cairns and Schwager 1987): <!-- TODO: get Cairns ref-->
-#> 238:each layer-specific season and landcover context <!-- TODO: citation for graph
-#> 256:distance) sensory modalities of caribou<!-- TODO: REF?-->. Specifically, we modified
-#> 271:for caribou during foraging <!--TODO: REF-->, while re-sampling at 500m and 1000m
-#> 277:<!--TODO: are we missing some mention of 2017 summer and 2018 winter somewhere?-->
-#> 294:observational data. <!-- TODO: bah conclude / this sentence falls off a cliff -->
-#> 413:<!-- TODO: RO first sentence... -->
+#> scripts/9-figure-2.R:143:# TODO: do we want edge weights by SRI?
+#> 52:<!-- TODO: is this the final list ? -->
+#> 75:@Franks_2009]. <!--Figure \@ref(fig:spacetime) TODO: something broken here?? -->
+#> 126:TODO: (REF)--> <!-- TODO: Webber reference should be 2018, but defaulting to
+#> 144:<!-- TODO: units of spatial scale? --> 
+#> 145:<!-- TODO: citations? -->
+#> 182:[@BJ_RNERAAS_2010] <!--TODO: fix this ref-->. We did not collar all female
+#> 189:Available landcover classification included nine habitat types at <!-- TODO:
+#> 202:<!-- TODO: should use something like "using syntax from Kivela 2014..." or 
+#> 218:[@R_Core_Team_2019]. <!-- TODO: FIX VANDER WAL IN SPATSOC REF -->
+#> 236:<!-- TODO: get Cairns ref-->
+#> 251:<!-- TODO: expand + simplify + examples individual A, B etc --> 
+#> 252:<!-- TODO: EVW "parallelism"? -->
+#> 260:SRI, in each layer-specific season and landcover context <!-- TODO: citation for
+#> 279:distance) sensory modalities of caribou<!-- TODO: REF?-->. Specifically, we
+#> 319:data. <!-- TODO: bah conclude / this sentence falls off a cliff -->
+#> 322:<!-- TODO: Add intro/general to results? with mention figures are means of inds-->
+#> 323:<!-- TODO: make sure we clarify these are means of all individuals? -->
+#> 324:<!-- TODO: discuss layer similarity for social threshold -->
+#> 361:were less frequently repeated in multiple layers <!-- TODO: I'm having a hard
+#> 365:enough to detect relevant landscape features and habitats. <!-- TODO: how? This
+#> 387:<!-- TODO: I'm not sure this is relevant since this is the main way it
+#> 405:<!-- TODO: end with something highlighting this shows it's
+#> 424:<!--TODO: what about forest.--> D) Mean connective redundancy across individuals
+#> 426:approximately a 50 m <!--TODO:**??**--> social threshold before decreasing
+#> 463:<!-- TODO: RO first sentence... -->
+#> 745:<!-- TODO: Gerard ‘openness’ paper -->
 ```
 
 ## Info
