@@ -28,7 +28,7 @@ DT <- DT[!is.na(season) & !is.na(get(lccol))]
 group_times(
   DT,
   datetime =  c(datecol, timecol),
-  threshold = '10 minutes'
+  threshold = tempthresh
 )
 
 # Spatial grouping with spatsoc
