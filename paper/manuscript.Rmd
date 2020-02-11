@@ -742,38 +742,38 @@ effects of habitat configuration on the formation of the social environment
 
 
 ## Habitat selection and space use
-<!--
-* Social structure is influenced by large scale processes such as resource availability and seasonality [@Peigner_2019], configuration [@He_2019] and fragmentation [@Banks_2007].
-* Habitat selection definition
-* johnson's four scales of selection and Mayor 2009 habitat selection across scales
-* habitat selection influences social structure since resource availability + quality influence home range size and overlap
-* individuals must share space to interact [@Farine_2015]
-* multilayer networks represent a novel framework for considering habitat selection and space use on sociality across scales
+Animals use space for resource, considering conspecifics
 
-individual differences in habitat selection
--->
+social structure is influenced by resources
 
-Social structure influenced by large scale processes, eg resources
-Animals select for these same processes, habitat selection, as measured by RSF
-All of these processes are influenced by scale: 
-RSFs are are influenced
-Habitat selection johnsons four orders Mayor 2009, scale can be explicitly considered
-sociality across scales of sociality + temporal and spatial as shown above
-ML networks present a framework for this
+animals selectively use resources + can be measured by RSFs
 
 
+
+<!-- Social structure influenced by large scale processes, eg resources -->
+<!-- Animals select for these same processes, habitat selection, as measured by RSF -->
+<!-- All of these processes are influenced by scale:  -->
+<!-- RSFs are are influenced -->
+<!-- Habitat selection johnsons four orders Mayor 2009, scale can be explicitly considered -->
+<!-- sociality across scales of sociality + temporal and spatial as shown above -->
+<!-- ML networks present a framework for this -->
+
+<!-- TODO: Gerard ‘openness’ paper -->
 Social structure is influenced by large scale processes such as resource
 availability and seasonality [@Peigner_2019], configuration [@He_2019] and
-fragmentation [@Banks_2007]. Habitat selection is the "disproportionate use of
-available" [@Mayor_2009] landscape resources or features by animals. Combined, habitat selection and social structure are intimately linked as
-individuals must share space to interact [@Farine_2015] and resource
-availability and quality influence home range size and overlap. Johnson
+fragmentation [@Banks_2007]. Habitat selection is the disproportionate use of
+available resources or features by animals [@Manly_1993; @Boyce_1999]. Combined,
+social structure and habitat selection are intimately linked as individuals must
+share space to interact and distribution of resources influence home range size
+and group dynamics [@Webber_2018]. <!-- Mayor scale --> Multilayer networks represent a novel framework for considering the influence of habitat selection and space use on sociality across scales.
+
+
+
+Johnson
 (1980) identified four orders of habitat selection: (1) the geographical range
 of a species, (2) the home range of an individual, (3) the habitat patches
 within the home range and (4) specific resources within a habitat patch.
- Multilayer
-networks represent a novel framework for considering the influence of habitat
-selection and space use on sociality across scales.
+
 
 
 <!--
