@@ -132,8 +132,8 @@ labels <- data.table(
       yend = shearyend + mody
     )
   ) +
-    geom_nodes(aes(color = vertex.names), size = 5) +
     geom_edges(aes(group = layer)) +
+    geom_nodes(aes(color = vertex.names), size = 5) +
     guides(color = FALSE) +
     geom_text(aes(x, y, xend = NULL, yend = NULL, label = label), data = labels) + 
   p
