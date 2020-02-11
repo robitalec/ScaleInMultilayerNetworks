@@ -856,10 +856,9 @@ layers within a multilayer network show the most variability. Furthermore, we di
 analyses considering spatial ecology  using multilayer networks.
 
 <!--QW: I am not very happy with this paragraph, but it's a start -->
-
+Multilayer networks are complicated in that they can incorporate data as varied as social interactions, landscape features, and seasons, all of which exist at different scales and units of measurement. 
 Our analysis of caribou multilayer networks incorporated high resolution GPS telemetry data and
-spatial landcover data, thus allowing us to ground our broader discussion of
-multilayer networks in the context of observed animal social networks.
+spatial landcover data is grounded in the context of observed animal social networks, as the scales we chose to explore are ones that can be observed as has traditionally been done.
 
 
 Silk et al. (2018) summarized some key multilayer questions in animal behaviour research.
