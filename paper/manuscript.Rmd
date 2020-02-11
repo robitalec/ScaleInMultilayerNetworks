@@ -3,11 +3,11 @@ title: The problem and promise of scale in multilayer animal social networks
 author: Alec L. Robitaille^1^, Quinn M.R. Webber^2^, Julie W. Turner^1^, Eric Vander Wal^1,2^
 date: ^1^Department of Biology, Memorial University of Newfoundland, Canada; ^2^Cognitive and Behavioural Ecology Interdisciplinary Program, Memorial University of Newfoundland
 output:
-   # github_document
+  # github_document
   bookdown::pdf_document2:
-     number_sections: false
-  #bookdown::word_document2:
-   # reference_docx: template.docx
+     number_sections: true
+  # bookdown::word_document2:
+  #   reference_docx: template.docx
 bibliography: ../references/knitcite.bib
 ---
 
@@ -317,6 +317,8 @@ iterations included the previous set of observations to mimic observational
 data. <!-- TODO: bah conclude / this sentence falls off a cliff -->
 
 # Scale in multilayer networks in practice: case study results and discussion
+<!-- TODO: Add intro/general to results? with mention figures are means of inds-->
+
 
 <!-- TODO: make sure we clarify these are means of all individuals? -->
 
