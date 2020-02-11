@@ -762,10 +762,17 @@ animals selectively use resources + can be measured by RSFs
 Social structure is influenced by large scale processes such as resource
 availability and seasonality [@Peigner_2019], configuration [@He_2019] and
 fragmentation [@Banks_2007]. Habitat selection is the disproportionate use of
-available resources or features by animals [@Manly_1993; @Boyce_1999]. Combined,
+available resources or landscape features by animals [@Manly_1993; @Boyce_1999]. Combined,
 social structure and habitat selection are intimately linked as individuals must
-share space to interact and distribution of resources influence home range size
-and group dynamics [@Webber_2018]. <!-- Mayor scale --> Multilayer networks represent a novel framework for considering the influence of habitat selection and space use on sociality across scales.
+share space to interact and the distribution of resources influences home range size
+and group dynamics [@Webber_2018]. 
+
+
+Habitat selection is a scale-sensitive process
+Animals select habitats at multiple scales 
+
+
+<!-- Mayor scale --> Multilayer networks represent a novel framework for considering the influence of habitat selection and space use on sociality across scales.
 
 
 
