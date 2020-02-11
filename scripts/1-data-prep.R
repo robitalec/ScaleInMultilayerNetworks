@@ -23,6 +23,10 @@ DT[, c(datecol, timecol) := .(as.IDate(get(datecol)), as.ITime(get(timecol)))]
 DT[between(JDate, winterlow, winterhigh), season := 'winter']
 DT[between(JDate, summerlow, summerhigh), season := 'summer']
 
+# Drop individuals on Indian Island
+DT <- DT[ANIMAL_ID != "FO2016011" & 
+         ANIMAL_ID != "FO2017001" & 
+         ANIMAL_ID != "FO2017013"] 
 
 ### Project relocations ----
 DT[, (projCols) := as.data.table(project(cbind(get(xcol), get(ycol)), utm21N))]
