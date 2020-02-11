@@ -142,6 +142,7 @@ communication is highly variable with elephant calls extending the great
 distance and passerine calls extending the shortest distance.
 
 <!-- TODO: units of spatial scale? --> 
+<!-- TODO: citations? -->
 
 ```{r spacetime, fig.cap='(ref:spacetime)'}
 knitr::include_graphics('../graphics/figure1.png')
