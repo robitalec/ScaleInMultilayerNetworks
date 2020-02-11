@@ -319,11 +319,9 @@ data. <!-- TODO: bah conclude / this sentence falls off a cliff -->
 
 # Scale in multilayer networks in practice: case study results and discussion
 <!-- TODO: Add intro/general to results? with mention figures are means of inds-->
-
-
 <!-- TODO: make sure we clarify these are means of all individuals? -->
-
 <!-- TODO: discuss layer similarity for social threshold -->
+
 In general, individuals in multilayer networks became more connected as social
 scale increased; however, this relationship varied by habitat type and season.
 As social scale increased, graph strength for winter networks increased to
@@ -346,12 +344,6 @@ social scale for generating social networks in caribou and similar species.
 
 
 
-<!-- landcover resolution
-* decreasing availability of patchy lichen = no edges in these layers, though some small proportion of relocations still exist in those layers
-* decreasing connective redundancy because through resolution because lichen decreased in connectivity and landcovers became more homogeneous (?)
-* decreasing winter lichen relevance because the degree + number of edges decreased
---> 
-<!-- TODO: discuss things in a,b,c,d order consistently. They shouldn't be presented out of order -->
 Increasing the scale of landcover resolution resulted in decreased proportion of
 rare and patchy habitats, and low connectivity of individuals in these habitats.
 In winter, layer relevance was stable for open and forest habitats but decreased
@@ -373,14 +365,6 @@ enough to detect relevant landscape features and habitats. <!-- TODO: how? This
 isn't clear enough for me to follow yet -->
 
 
-
-
-
-<!-- nobs * common, though at different points - more observations until
-stabilizing * we dont see the stabilizing/full plateau for connective redundancy
-but appears to be coming.. * still some variability, especially for graph
-strength because individuals are differently connected but broad strokes - they
-stabilize with more observations -->
 
 As the number of observations used to generate multilayer networks increased,
 individuals became more connected and metrics generally appeared to stabilize.
@@ -406,14 +390,6 @@ networks -->
 
 
 
-<!-- win  length * increasing window length = increasingly similar layers and
-increasingly redundant edges. more individuals have the opportunity to interact
-* increasing window length also leads to increasing similarity between seasons
-because seasons are less well defined/include more shoulder seasons * decreasing
-graph strength at the upper end of window length in winter showing again
-inclusion of more shoulder season * layers are more similarly relevant at high
-window length -->
-
 Contrasting winter and summer seasons became more similar with increasing window
 length. Individual graph strength and layer relevance increased for all summer
 layers as individuals became more connected with increasing window lengths
@@ -428,15 +404,7 @@ dissaggregation according to resource availability and presence of conspecifics.
 <!-- TODO: end with something highlighting this shows it's
 important to properly define your season -->
 
-<!-- Similarly, shifting window position of the summer season resulted in an
-increase in number of connections between individuals. Layer relevance  -->
-<!-- win position * increasing network connectivity in summer when the window
-position is moved - these seasons are more similar than the original window
-position * same theme shown in the connective redundancy * quite variable layer
-similarity, not sure what to pull out of that one * increased graph strength for
-winter down the middle, with generally increasing summer layers - again where
-the season is including more shoulder season potentially -->
-<!-- Shifting window position results showed increasing layer similarity  -->
+
 **Missing: discussion of window position..**
 
 
