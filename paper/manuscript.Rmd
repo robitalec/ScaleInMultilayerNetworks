@@ -169,8 +169,8 @@ of forage for caribou is therefore seasonally heterogeneous because the
 distribution of craters on the landscape varies meaning that access to
 vegetation in winter is highly variable for caribou. Caribou therefore have
 greater access to forage in snow-free seasons. We  partitioned data into two
-discrete seasons: summer (3 August - 20 September) and winter (1 January – 17
-February) based on caribou socioecology [@Peignier_2019].
+discrete seasons: summer (3 August - 20 September 2017) and winter (1 January – 17
+February 2018) based on caribou socioecology [@Peignier_2019].
 
 ## Caribou location data
 We used GPS location data collected from Fogo Island caribou in 2017 and 2018.
@@ -298,7 +298,7 @@ select and avoid habitat (Bastille-Rousseau et al. 2017).
 
 
 ### Temporal scale
-<!--TODO: are we missing some mention of 2017 summer and 2018 winter somewhere?-->
+#### Time window length and position
 We altered the temporal scale of multilayer networks by varying the length and
 position of the time window used to define seasons. The length of the time
 window varied from 40-100 days using a fixed start day for winter (starting at 1
@@ -307,6 +307,7 @@ shifted by 1-48 days, using a fixed time window length of 48 days. These new
 time windows were iteratively used to partition data into two discrete seasons
 (winter, summer) and generate multilayer networks.
 
+#### Number of observations
 Studies of social network analysis vary in the number and frequency of
 observations as well as the data collection technique used to generate networks
 [@Davis_2018; @Webber_2019]. In addition to altering the temporal scale by
