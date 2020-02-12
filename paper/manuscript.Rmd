@@ -410,7 +410,7 @@ seasons increased consistently across landcover class (Figure
 \@ref(fig:winlen)b).  These results suggest that an increasing window length,
 especially for the summer season, may be resulting in less precisely defined
 seasons that are not clearly capturing periods of aggregation and
-dissaggregation according to resource availability and presence of conspecifics.
+dissaggregation related to resource availability.
 
 
 <!-- TODO: end with something highlighting this shows it's
