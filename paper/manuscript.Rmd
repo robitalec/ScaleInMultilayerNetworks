@@ -74,15 +74,16 @@ occurs over brief time periods [e.g. @Carter_2015], whereas social association
 represents shared space use by members of the same social group [Figure 1,
 @Franks_2009]. <!--Figure \@ref(fig:spacetime) TODO: something broken here?? -->
 Further, for social interactions or associations to occur individuals must share
-space, and thus have overlapping home ranges [@VanderWal_2014]. In the context of the social
-environment, home range overlap is a relatively coarse scale of sociality across
-which individuals share space over larger spatial and temporal scales [e.g.
-@Piza_Roca_2018]. <!-- double coarse -->Although the social environment clearly scales spatially and
-temporally, it remains unclear whether coarser scales of sociality, including
-social association and home range overlap, vary predictably with social
-interaction [@Castles_2014; @Farine_2015a]. Thus, we define social scale as the
-type of social relationship observed that can be explicitly defined and measured
-[@Farine_2015a]. <!-- Farine references comes out as D.R. Farine 2015 -->
+space, and thus have overlapping home ranges [@VanderWal_2014]. In the context
+of the social environment, home range overlap is a relatively coarse scale of
+sociality across which individuals share space over larger spatial and temporal
+scales [e.g. @Piza_Roca_2018]. <!-- double coarse -->Although the social
+environment clearly scales spatially and temporally, it remains unclear whether
+coarser scales of sociality, including social association and home range
+overlap, vary predictably with social interaction [@Castles_2014;
+@Farine_2015a]. Thus, we define social scale as the type of social relationship
+observed that can be explicitly defined and measured [@Farine_2015a]. <!--
+Farine references comes out as D.R. Farine 2015 -->
 
 Animal social network analysis is a well-developed tool used to measure the
 relationships of individuals and organization of social systems [@Krause_2009;
@@ -118,13 +119,13 @@ principal questions associated with scale-dependent multilayer networks. First,
 to what degree does the social scale of relationships, spatial scale of
 landscapes, and temporal scale of analysis influence our ability to interpret
 complex social systems? Second, can variation in the social, spatial, and
-temporal scale improve predictions associated with biological differences in seasonal
-resource availability and social association? We conclude with perspectives for
-further development and application of scale in multilayer networks with respect
-to phenotypes and individual fitness [@Webber_2018], movement ecology and
-collective movement [@Jolles_2019], and habitat selection and space use. <!--
-TODO: (REF)--> <!-- TODO: Webber reference should be 2018, but defaulting to
-2017-->
+temporal scale improve predictions associated with biological differences in
+seasonal resource availability and social association? We conclude with
+perspectives for further development and application of scale in multilayer
+networks with respect to phenotypes and individual fitness [@Webber_2018],
+movement ecology and collective movement [@Jolles_2019], and habitat selection
+and space use. <!-- TODO: (REF)--> <!-- TODO: Webber reference should be 2018,
+but defaulting to 2017-->
 
 (ref:spacetime) Space-time diagram displaying variation the relative spatial and
 temporal extent required for different types of social and communication
