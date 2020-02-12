@@ -364,7 +364,7 @@ stable for forest and open habitats except for a contrasting increase in
 similarity for forest and decrease in similarity for open habitats 250 m
 landcover resolution (Figure \@ref(fig:lcres)c). Layer similarity was not
 possible to calculate between winter and summer forage because, at all landcover
-resolutions greater than 30 m there were no individuals connected in the network
+resolutions greater than 30 m, there were no individuals connected in the network
 layers. <!-- individuals still used forage but in much lower proportion +
 lowered opportunity to associate --> Connective redundancy decreased with
 increasing landcover resolution due the decrease in connectivity of individuals
@@ -377,7 +377,7 @@ enough to detect relevant landscape features and habitats. <!-- TODO: how? This
 isn't clear enough for me to follow yet -->
 
 
-
+<!-- TODO: update this..... -->
 As the number of observations used to generate multilayer networks increased,
 individuals became more connected and metrics generally appeared to stabilize.
 Like coarse landcover resolution (above), low numbers of observations were not
@@ -402,6 +402,7 @@ networks -->
 
 
 
+<!-- TODO: update.....-->
 Contrasting winter and summer seasons became more similar with increasing window
 length. Individual graph strength and layer relevance increased for all summer
 layers as individuals became more connected with increasing window lengths
