@@ -754,6 +754,27 @@ resources influences group dynamics and home range size [@Webber_2018].
 Multilayer networks represent a novel framework for considering the influence of
 habitat selection and space use on sociality across scales.
 
+<!-- McGarigal 2016 organisms select habitat at multiple scales, temporal spatial
+should investigate scale dependency. linking ecological processes to scale eg foraging or predator-prey dynamics
+
+Mayor 2007 - scale paper
+MRSF Laforge paper 
+van Beest et al. 2014 scale paper 
+Habitat–performance relationships: finding the right metric at a given spatial scale
+Multi-scale habitat selection modeling: a review and outlook
+-->
+
+<!-- TODO: point to figure 1 -->
+Habitat selection depends on the scale at which it is measured and a singular
+scale is insufficient for generalizing across scales [@Mayor_2009]. Habitat
+selection is measured using resource selection functions (RSFs), based on the
+proportion of used and available resources for an animal [@Manly_1993;
+@Boyce_1999]. Johnson (1980) identified four orders of habitat selection: (1)
+the geographical range of a species, (2) the home range of an individual, (3)
+the habitat patches within the home range and (4) specific resources within a
+habitat patch. Moving past this hierarchical perspective, Mayor (2009)
+reviewed types of scale relevant in measurement of habitat selection and recommend using a continuum of scales for identifying characteristic scales of selection. For example, @Mayor_2007 showed caribou selection for shallow snow across all sales and used to a continuum of scales to avoid bias from narrowing the measurements to scales assumed to be associated with certain behaviours. 
+
 
 <!-- Relationship between sociality and habitat -->
 <!-- more from Webber, He, etc -->
@@ -776,33 +797,11 @@ in sociality, where social associations were high in winter and contrastingly
 low in summer when resource availability is homogenous [@Peigner_2019]. Bison
 (*Bison bison*) showed stronger habitat selection when group size was larger and
 avoidance of predation risk was a main factor contributing to their habitat
-selection [@Fortin_2009]. <!--Despite these, *missing multilayer approach*.-->
-
-
-
-<!-- McGarigal 2016 organisms select habitat at multiple scales, temporal spatial
-should investigate scale dependency. linking ecological processes to scale eg foraging or predator-prey dynamics
-
-Mayor 2007 - scale paper
-MRSF Laforge paper 
-van Beest et al. 2014 scale paper 
-Habitat–performance relationships: finding the right metric at a given spatial scale
-Multi-scale habitat selection modeling: a review and outlook
--->
-Habitat selection depends on the scale at which it is measured and a singular
-scale is insufficient for generalizing across scales [@Mayor_2009]. Habitat
-selection is measured using resource selection functions (RSFs), based on the
-proportion of used and available resources for an animal [@Manly_1993;
-@Boyce_1999]. Johnson (1980) identified four orders of habitat selection: (1)
-the geographical range of a species, (2) the home range of an individual, (3)
-the habitat patches within the home range and (4) specific resources within a
-habitat patch. Moving past this hierarchical perspective, Mayor (2009)
-reviewed types of scale relevant in measurement of habitat selection and recommend using a continuum of scales for identifying characteristic scales of selection. For example, @Mayor_2007 showed caribou selection for shallow snow across all sales and used to a continuum of scales to avoid bias from narrowing the measurements to scales assumed to be associated with certain behaviours. 
+selection [@Fortin_2009]. These examples are implicitly multilayered, comparing sociality across contexts of seasonality or spatial context. <!--Despite these, *missing multilayer approach*.-->
 
 
 <!--
 how to combine moving forward
-multilayer networks across landcover types
 in areas of high selection/low selection or favorable/unfavorable habitat
 combined with seasonality
 
@@ -813,29 +812,7 @@ instead of specific associations
 looking at broader temporal scales and coarser spatial resolutions
 -->
 
-
-
-conversely, one might envision generating a multilayer network where
-nodes are individual patches
-selection,
-similarity, 
-connectivity
-
-
-
-
-
-How to combine moving forward: habitat selection, space use, multiple scales, multilayer networks
-Sociality across scales eg home range overlap and interactions
-Layers defined by habitat/landcover
-
-
-Multilayer networks can be combined to consider habitat selection, across scales
-
-Animal social systems can be parsed by spatial contexts, defined by habitat types or connectivity, each represented in a layer within a multilayer framework
-Seasonality of resources can be directly measured by investigating differences in habitat selection and sociality between seasonal layers  
-
-Taken together, these novel and explicit integrations of habitat selection and space use in multilayer netwokr
+Multilayer networks can be used to explicitly consider habitat selection and sociality across scales. Animal social systems can be parsed by spatial contexts, defined, for example, by habitat types as in Figure \@ref(fig:lcres). The influence of resource phenology can be directly measured by differences in habitat selection and sociality across temporal layers. Habitat selection can be explicitly integrated using network layers defined by similarity of selection coefficients between individuals. These explicit integrations of habitat selection and sociality across social, spatial and temporal scales highlight the potential for novel insights from multilayer networks. 
 
 
 # Conclusions
