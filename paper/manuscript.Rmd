@@ -150,7 +150,6 @@ knitr::include_graphics('../graphics/figure1.png')
 ```
 
 
-
 # Scale in multilayer networks: a case study
 
 ## Caribou socioecology
@@ -287,7 +286,7 @@ coefficient [@Br_dka_2018].
 ### Social scale
 
 We altered the social scale based on visual (short distance) and auditory (long
-distance) sensory modalities of caribou<!-- TODO: REF?-->. Specifically, we
+distance) sensory modalities of caribou<!-- TODO: REF? / see EVW comment-->. Specifically, we
 modified the spatial distance threshold required for group assignment using
 `spatsoc` [@Robitaille_2019] (see above) and re-assigned groups at incremental
 distances between 5 - 500 m. For example, at the finest social scale, only
