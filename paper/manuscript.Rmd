@@ -784,9 +784,22 @@ home range overlap in areas of moderate seasonality. Despite these, *missing
 multilayer approach*.
 
 
-Habitat selection - can be measured by RSFs and importance of scale: 
+Habitat selection depends on the scale at which it is measured and a singular
+scale is insufficient for generalizing across scales. Habitat selection is often
+measured using resource selection functions (RSFs) and species distribution
+models (SDMs). Both of these methods are based on the proportion of used
+resources and available resources for an animal. Johnson (1980) identified four
+orders of habitat selection: (1) the geographical range of a species, (2) the
+home range of an individual, (3) the habitat patches within the home range and
+(4) specific resources within a habitat patch. Extending beyond this
+hierarchical perspective, Mayor (2009) reviewed scale in habitat selection and
 
-*  Johnson (1980) identified four orders of habitat selection: (1) the geographical range of a species, (2) the home range of an individual, (3) the habitat patches within the home range and (4) specific resources within a habitat patch.
+
+Habitat selection - can be measured by RSFs and importance of scale: 
+Scale in habitat selection... Mayor (2019)
+
+Habitat selection is scale dependent and 
+*  Johnson (1980) 
 
 
 What new insights will multilayer networks lead to 
