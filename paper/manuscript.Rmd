@@ -76,8 +76,8 @@ represents shared space use by members of the same social group [Figure 1,
 Further, for social interactions or associations to occur individuals must share
 space, and thus have overlapping home ranges. In the context of the social
 environment, home range overlap is a relatively coarse scale of sociality across
-which individuals share space over coarser spatial and temporal scales [e.g.
-@Piza_Roca_2018]. Although the social environment clearly scales spatially and
+which individuals share space over larger spatial and temporal scales [e.g.
+@Piza_Roca_2018]. <!-- what is going on here -->Although the social environment clearly scales spatially and
 temporally, it remains unclear whether coarser scales of sociality, including
 social association and home range overlap, vary predictably with social
 interaction [@Castles_2014; @Farine_2015a]. Thus, we define social scale as the
