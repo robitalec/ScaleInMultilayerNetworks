@@ -762,13 +762,13 @@ selection and space use on sociality across scales.
 <!-- Conspecific Attraction and Aggregation in Territorial Species-->
 <!-- Energy and the Scaling of Animal Space Use-->
 
-
-
 <!-- The relationship between sociality has been discussed both theoretically  -->
 <!-- and tested explicitly ... CAH, etc then Fortin, McLouglin-->
 <!-- https://www.pnas.org/content/pnas/105/49/19114.full.pdf
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2600907/pdf/rspb20071688.pdf
 -->
+
+The link between habitat and sociality has been 
 
 Despite not in a multilayer network context, the link between habitat and
 sociality has been previously investigated. Fortin et al. (2009) evaluated
@@ -785,23 +785,24 @@ multilayer approach*.
 
 
 
-<!-- McGarigal 2016 organisms select habitat at multiple scales, temporal spatial 
+<!-- McGarigal 2016 organisms select habitat at multiple scales, temporal spatial
 should investigate scale dependency. linking ecological processes to scale eg foraging or predator-prey dynamics
+
+Mayor 2007 - scale paper
 MRSF Laforge paper 
 van Beest et al. 2014 scale paper 
 Habitat–performance relationships: finding the right metric at a given spatial scale
 Multi-scale habitat selection modeling: a review and outlook
 -->
 Habitat selection depends on the scale at which it is measured and a singular
-scale is insufficient for generalizing across scales. Habitat selection is often
-measured using resource selection functions (RSFs) and species distribution
-models (SDMs). Both of these methods are based on the proportion of used
-resources and available resources for an animal. Johnson (1980) identified four
-orders of habitat selection: (1) the geographical range of a species, (2) the
-home range of an individual, (3) the habitat patches within the home range and
-(4) specific resources within a habitat patch. Extending beyond this
-hierarchical perspective, Mayor (2009) reviewed scale in habitat selection and
-
+scale is insufficient for generalizing across scales [@Mayor_2009]. Habitat
+selection is measured using resource selection functions (RSFs), based on the
+proportion of used and available resources for an animal [@Manly_1993;
+@Boyce_1999]. Johnson (1980) identified four orders of habitat selection: (1)
+the geographical range of a species, (2) the home range of an individual, (3)
+the habitat patches within the home range and (4) specific resources within a
+habitat patch. Moving past this hierarchical perspective, Mayor (2009)
+reviewed types of scale relevant in measurement of habitat selection and recommend using a continuum of scales for identifying characteristic scales of selection. For example, @Mayor_2007 showed caribou selection for shallow snow across all sales and used to a continuum of scales to avoid bias from narrowing the measurements to scales assumed to be associated with certain behaviours. 
 
 
 <!--
@@ -816,6 +817,19 @@ we could define layers of the multilayer network according to home range overlap
 instead of specific associations
 looking at broader temporal scales and coarser spatial resolutions
 -->
+
+
+
+conversely, one might envision generating a multilayer network where
+nodes are individual patches
+selection,
+similarity, 
+connectivity
+
+
+
+
+
 How to combine moving forward: habitat selection, space use, multiple scales, multilayer networks
 Sociality across scales eg home range overlap and interactions
 Layers defined by habitat/landcover
