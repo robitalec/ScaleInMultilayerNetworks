@@ -837,6 +837,13 @@ Sociality across scales eg home range overlap and interactions
 Layers defined by habitat/landcover
 
 
+Multilayer networks can be combined to consider habitat selection, across scales
+
+Animal social systems can be parsed by spatial contexts, defined by habitat types or connectivity, each represented in a layer within a multilayer framework
+Seasonality of resources can be directly measured by investigating differences in habitat selection and sociality between seasonal layers  
+
+Taken together, these novel and explicit integrations of habitat selection and space use in multilayer netwokr
+
 
 # Conclusions
 
