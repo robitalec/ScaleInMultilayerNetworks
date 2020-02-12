@@ -60,6 +60,11 @@ xy <- unique(ggnet1[, .(x, y, vertex.names)])
 # Shear the xy
 shear_xy(xy, c('x', 'y'))
 
+box <- xy[, CJ(c(max(x), min(x)), c(max(y), min(y)))]#[rep(1:.N, times = 6)]
+setnames(box, c('x', 'y'))
+box[, c('x', 'y') := .(x + 0.5, y + 0.5)]
+shear_xy(box, c('x', 'y'))
+
 # Rep the rows for each layer (since each layer is present in each landcover * season)
 repxy <- xy[rep(seq_len(nrow(xy)), times = 6)]
 repxy[, layer := rep(names(gLs), each = uniqueN(vertex.names))]
@@ -127,12 +132,13 @@ labels <- data.table(
     zzz,
     aes(
       x = shearx + modx,
-      y = sheary + mody,
-      xend = shearxend + modx,
-      yend = shearyend + mody
-    )
+      y = sheary + mody)
   ) +
-    geom_edges(aes(group = layer)) +
+    geom_polygon(aes(shearx, sheary), data = box) + 
+    geom_edges(aes(group = layer,
+                   xend = shearxend + modx,
+                   yend = shearyend + mody
+    )) +
     geom_nodes(aes(color = vertex.names), size = 5) +
     guides(color = FALSE) +
     geom_text(aes(x, y, xend = NULL, yend = NULL, label = label), data = labels) + 
