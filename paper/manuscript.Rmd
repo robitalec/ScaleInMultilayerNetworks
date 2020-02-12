@@ -74,7 +74,7 @@ occurs over brief time periods [e.g. @Carter_2015], whereas social association
 represents shared space use by members of the same social group [Figure 1,
 @Franks_2009]. <!--Figure \@ref(fig:spacetime) TODO: something broken here?? -->
 Further, for social interactions or associations to occur individuals must share
-space, and thus have overlapping home ranges [@Laforge_2014]. In the context of the social
+space, and thus have overlapping home ranges [@VanderWal_2014]. In the context of the social
 environment, home range overlap is a relatively coarse scale of sociality across
 which individuals share space over larger spatial and temporal scales [e.g.
 @Piza_Roca_2018]. <!-- double coarse -->Although the social environment clearly scales spatially and
