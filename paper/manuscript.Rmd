@@ -91,7 +91,7 @@ structure of social communities and social network properties, which can
 influence population dynamics and evolutionary processes [@Pinter_Wollman_2013;
 @Kurvers_2014]. Despite the widespread use and innovation of traditional social
 network analysis [@Webber_2019], it typically considers a single scale of
-sociality in a given network (monolayer), drastically simplifying the potential
+sociality in a given network (monolayer), drastically simplifying the
 complexity of animal social systems [@Finn_2019].
 
 
