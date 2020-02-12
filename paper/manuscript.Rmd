@@ -784,6 +784,14 @@ home range overlap in areas of moderate seasonality. Despite these, *missing
 multilayer approach*.
 
 
+
+<!-- McGarigal 2016 organisms select habitat at multiple scales, temporal spatial 
+should investigate scale dependency. linking ecological processes to scale eg foraging or predator-prey dynamics
+MRSF Laforge paper 
+van Beest et al. 2014 scale paper 
+Habitat–performance relationships: finding the right metric at a given spatial scale
+Multi-scale habitat selection modeling: a review and outlook
+-->
 Habitat selection depends on the scale at which it is measured and a singular
 scale is insufficient for generalizing across scales. Habitat selection is often
 measured using resource selection functions (RSFs) and species distribution
@@ -793,43 +801,6 @@ orders of habitat selection: (1) the geographical range of a species, (2) the
 home range of an individual, (3) the habitat patches within the home range and
 (4) specific resources within a habitat patch. Extending beyond this
 hierarchical perspective, Mayor (2009) reviewed scale in habitat selection and
-
-
-Habitat selection - can be measured by RSFs and importance of scale: 
-Scale in habitat selection... Mayor (2019)
-
-Habitat selection is scale dependent and 
-*  Johnson (1980) 
-
-
-What new insights will multilayer networks lead to 
-
-
-
-<!--
-
-Scale + habitat selection and space use
-types of scale to consider in these types of ML nets
-
-
-
-McGarigal 2016 organisms select habitat at multiple scales, temporal spatial 
-should investigate scale dependency. linking ecological processes to scale eg foraging or predator-prey dynamics
-
-
-Johnson 1980 1st order = selection of the physical or geographical range of a species
-2nd order = selection of a home range of an individual or social group
-3rd order = selection of various habitat patches within the home range 
-4th order = selection of specific resources within a habitat patch
-
-* Mayor et al. 2009 paper 
-* MRSF Laforge paper 
-* van Beest et al. 2014 scale paper 
-* Habitat–performance relationships: finding the right metric at a given spatial scale Jean-Michel Gaillard1,*, Mark Hebblewhite2, Anne Loison3, Mark Fuller4, Roger Powell5, Mathieu Basille1,6 and Bram Van Moorter1
-* Multi-scale habitat selection modeling: a review and outlook
--->
-
-Scale in habitat selection... Mayor (2019)
 
 
 
