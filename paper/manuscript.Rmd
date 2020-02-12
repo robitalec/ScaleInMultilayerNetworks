@@ -743,14 +743,14 @@ effects of habitat configuration on the formation of the social environment
 
 ## Habitat selection and space use
 <!-- TODO: Gerard ‘openness’ paper -->
-Social structure is influenced by large scale processes such as resource
-availability and seasonality [@Peigner_2019], configuration [@He_2019] and
-fragmentation [@Banks_2007]. Habitat selection is the disproportionate use of
-available resources resources or features by animals [@Manly_1993; @Boyce_1999].
+Social structure is influenced by resource
+availability and seasonality [@Peignier_2019], configuration [@He_2019] and
+fragmentation [@Banks_2007]. Habitat selection, the disproportionate use of
+available resources or landscape features by animals [@Manly_1993; @Boyce_1999], is a scale dependent process [@Mayor_2009].
 Combined, social structure and habitat selection are intimately linked as
 individuals must share space to interact and the distribution of resources
-influences group dynamics and home range size [@Webber_2018]. Animals select
-habitats at multiple scales ... (Mayor) <!-- Mayor scale --> Multilayer
+influences group dynamics and home range size [@Webber_2018]. <!--Animals select
+habitats at multiple scales ... (Mayor)  Mayor scale --> Multilayer
 networks represent a novel framework for considering the influence of habitat
 selection and space use on sociality across scales.
 
