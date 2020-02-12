@@ -320,13 +320,14 @@ time windows were iteratively used to partition data into two discrete seasons
 #### Number of observations
 Studies of social network analysis vary in the number and frequency of
 observations as well as the data collection technique used to generate networks
-[@Davis_2018; @Webber_2019]. In addition to altering the temporal scale by
-adjusting the time window, we investigated the influence of the number of
-observations on resulting multilayer networks. We randomly selected 500
-timesteps and iteratively included 25 additional observations, regenerating the
-multilayer network and calculating associations of individuals. Subsequent
-iterations included the previous set of observations to mimic observational
-data. <!-- TODO: bah conclude / this sentence falls off a cliff -->
+[@Davis_2018; @Webber_2019]. For example, GPS data is commonly collected at a
+fixed rate (eg every $x$ minutes or hours) continuously throughout the study
+period. We investigated the influence of the number of observations on resulting
+multilayer networks. We randomly selected 500 timesteps and iteratively included
+25 additional observations, regenerating the multilayer network and calculating
+associations of individuals. Subsequent iterations included the previous set of
+observations to mimic collection of observational data. <!-- TODO: bah conclude
+/ this sentence falls off a cliff -->
 
 # Scale in multilayer networks in practice: case study results and discussion
 <!-- TODO: Add intro/general to results? with mention figures are means of inds-->
