@@ -8,7 +8,7 @@ output:
      number_sections: true
   # bookdown::word_document2:
   #   reference_docx: template.docx
-bibliography: ../references/knitcite.bib
+# bibliography: ../references/knitcite.bib
 ---
 
 
