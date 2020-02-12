@@ -343,17 +343,17 @@ networks did not change as the social threshold increased (Figure
 50 m social thresholds, then did not change for any habitat types which suggests
 the winter habitat layers captured most, if not all, of the potential
 connections an individual would have across these networks (Figure
-\@ref(fig:socres)b). <!-- missing summer--> Connective redundancy increased
-rapidly when groups were formed up to ~100 m threshold, followed by
-a plateau and slight decrease at higher thresholds, presumably due to an
-increase in summer forest degree at ~500 m (Figure \@ref(fig:socres)d). Taken
-together, these results suggest the optimal social scale at which groups should
-be assigned is likely somewhere between ~20-100 m based on the rate at which
-network metrics stabilized. For ungulates, groups are often assigned based on 50
-m threshold (Lingle 2003; Lesmeries et al. 2018; Peignier et al. 2019),
-suggesting that given similar quantities of data, ~50 m is likely an ideal
-social scale for generating social networks in caribou and similar species.
-
+\@ref(fig:socres)b). Connective redundancy increased rapidly when groups were
+formed up to ~100 m threshold, followed by a plateau and slight decrease at
+higher thresholds, presumably due to an increase in summer forest degree at ~500
+m (Figure \@ref(fig:socres)d). Taken together, these results suggest the optimal
+social scale at which groups should be assigned is likely somewhere between
+~20-100 m based on the rate at which network metrics stabilized. For ungulates,
+groups are often assigned based on 50 m threshold (Lingle 2003; Lesmeries et al.
+2018; Peignier et al. 2019), suggesting that given similar quantities of data,
+~50 m is likely an ideal social scale for generating social networks in caribou
+and similar species.
+<!-- TODO: missing summer relevance and all layer similarily--> 
 
 
 Increasing the scale of landcover resolution resulted in decreased proportion of
