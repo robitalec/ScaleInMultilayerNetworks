@@ -248,6 +248,15 @@ separated by more than the given distance [@Farine_2015]. Social groups were
 designated if two or more individuals occurred within a given distance of one
 another at any given time point.
 
+
+<!-- TODO: work this cap -->
+(ref:ml) Visualization of multilayer network for social ungulate case study. Six layers are presented with individuals shown as nodes, fixed in space across layers. Layer represent combinations of two seasons (winter and summer) and three landcover class (open, forest and forage). Edges connect individuals that associated according to spatial and temporal thresholds described above. 
+
+```{r ml, fig.cap='(ref:ml)'}
+knitr::include_graphics('../graphics/figure-2.png')
+```
+
+
 ### Network metrics 
 
 <!-- TODO: expand + simplify + examples individual A, B etc --> 
