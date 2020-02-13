@@ -24,7 +24,7 @@ lc <- readRDS('data/derived-data/1-reclass-lc.Rds')
 
 
 ### Modal window ----
-lsres <- c(60, 90, 100, 250, 500, 750, 1000)
+lsres <- c(100, 250, 500, 750, 1000)
 lslc <- lapply(lsres, function(res) {
   winmove(lc, res, type = 'circle', win_fun = modal)
 })
