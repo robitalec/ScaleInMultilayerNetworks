@@ -139,8 +139,8 @@ p <- theme(legend.text = element_text(size = 12, color = "black"),
              size = 1))
 
 labels <- data.table(
-  x = c(1.5, 4.25, rep(0, 3)),
-  y = c(rep(5.25, 2), 0.75, 2.75, 4.75),
+  x = c(1.75, 4.5, rep(0, 3)),
+  y = c(rep(4.25, 2), .5, 2, 3.5),
   label = c('summer', 'winter',
             'forage', 'forest', 'open')
 )
