@@ -125,11 +125,10 @@ p <- theme(legend.text = element_text(size = 12, color = "black"),
              size = 1))
 
 labels <- data.table(
-  x = rep(c(1.5, 4.25), 3),
-  y = rep(c(1.25, 3.25, 5.25), each = 2),
-  label = c('summer-3', 'winter-3',
-            'summer-2', 'winter-2',
-            'summer-1', 'winter-1')
+  x = c(1.5, 4.25, rep(0, 3)),
+  y = c(rep(5.25, 2), 0.75, 2.75, 4.75),
+  label = c('summer', 'winter',
+            'forage', 'forest', 'open')
 )
 
 (gnn <- ggplot(
