@@ -62,8 +62,8 @@ aa <- ggplot() +
   ylab("Relative spatial scale") +
   xlab("") +
   scale_x_continuous(limit = c(-1, 14), breaks=c(0, 2.5, 5, 7.5, 10, 12.5), 
-                     labels= c("1 Second", "1 Minute",
-                             "1 Hour", "1 Day", "1 Month", "1 Year")) +
+                     labels= c("Seconds", "Minutes",
+                             "Hours", "Days", "Months", "Years")) +
   scale_y_continuous(limits = c(0.5, 10000000000), trans = log2_trans(),
                      breaks = trans_breaks("log10", function(x) 10^x),
                      labels = trans_format("log10", math_format(10^.x))) +
@@ -89,8 +89,8 @@ bb <- ggplot() +
   ylab("") +
   xlab("") +
   scale_x_continuous(limit = c(-1, 14), breaks=c(0, 2.5, 5, 7.5, 10, 12.5), 
-                     labels= c("1 Second", "1 Minute",
-                               "1 Hour", "1 Day", "1 Month", "1 Year")) +
+                     labels= c("Seconds", "Minutes",
+                               "Hours", "Days", "Months", "Years")) +
   scale_y_continuous(limits = c(0.25, 10000000000), 
                      trans = log2_trans(),
                      breaks = trans_breaks("log10", function(x) 10^x),
@@ -116,8 +116,8 @@ cc <- ggplot() +
   ylab("Relative spatial scale") +
   xlab("Relative time scale") +
   scale_x_continuous(limit = c(-1, 14), breaks=c(0, 2.5, 5, 7.5, 10, 12.5), 
-                     labels= c("1 Second", "1 Minute",
-                               "1 Hour", "1 Day", "1 Month", "1 Year")) +
+                     labels= c("Seconds", "Minutes",
+                               "Hours", "Days", "Months", "Years")) +
   scale_y_continuous(limits = c(0.25, 10000000000), 
                      trans = log2_trans(),
                      breaks = trans_breaks("log10", function(x) 10^x),
@@ -146,8 +146,8 @@ dd <- ggplot() +
   ylab("") +
   xlab("Relative time scale") +
   scale_x_continuous(limit = c(-1, 14), breaks=c(0, 2.5, 5, 7.5, 10, 12.5), 
-                     labels= c("1 Second", "1 Minute",
-                               "1 Hour", "1 Day", "1 Month", "1 Year")) +
+                     labels= c("Seconds", "Minutes",
+                               "Hours", "Days", "Months", "Years")) +
   scale_y_continuous(limits = c(0.25, 10000000000), 
                      trans = log2_trans(),
                      breaks = trans_breaks("log10", function(x) 10^x),
