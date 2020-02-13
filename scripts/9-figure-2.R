@@ -151,12 +151,16 @@ labels <- data.table(
       x = shearx + modx,
       y = sheary + mody)
   ) +
-    geom_polygon(aes(shearx, sheary), data = box[order(ord)],
+    geom_polygon(aes(group = layer), data = zzbox[order(ord)],
                  alpha = 0.25) + 
     geom_edges(aes(group = layer,
                    xend = shearxend + modx,
                    yend = shearyend + mody
     )) +
+    geom_edges(aes(group = layer,
+                   xend = shearxend + modx,
+                   yend = shearyend + mody
+    ), data = zzz[, .SD[order(vertex.names, modx, mody)]]) +
     geom_nodes(aes(color = vertex.names), size = 5) +
     guides(color = FALSE) +
     geom_text(aes(x, y, xend = NULL, yend = NULL, label = label), data = labels) + 
