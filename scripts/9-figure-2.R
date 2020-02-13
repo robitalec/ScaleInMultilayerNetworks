@@ -61,7 +61,7 @@ xy <- unique(ggnet1[, .(x, y, vertex.names)])
 shear_xy(xy, c('x', 'y'))
 
 # Make the plane
-box <- xy[, CJ(c(max(x), min(x)), c(max(y), min(y)))]#[rep(1:.N, times = 6)]
+box <- xy[, CJ(c(max(x), min(x)), c(max(y), min(y)))]
 setnames(box, c('x', 'y'))
 push <- 0.1
 box[, c('x', 'y') := .(x + c(-push, -push, push, push), 
@@ -107,6 +107,20 @@ zzz[layer %in% c('winter-2', 'summer-2'),
 zzz[layer %in% c('winter-1', 'summer-1'), 
     c('modx', 'mody') := .(slideright * (.GRP - 1), 4), by = layer]
 
+zzbox <- box[rep(1:.N, 6)][, layer := rep(unique(zzz$layer), each = 4)]
+zzbox[layer %in% c('winter-3', 'summer-3'),
+      c('modx', 'mody') := .(slideright * (.GRP - 1), 0), by = layer]
+
+zzbox[layer %in% c('winter-2', 'summer-2'),
+      c('modx', 'mody') := .(slideright * (.GRP - 1), 2), by = layer]
+
+zzbox[layer %in% c('winter-1', 'summer-1'),
+      c('modx', 'mody') := .(slideright * (.GRP - 1), 4), by = layer]
+
+
+# Edges between same individuals
+a <- zzz[!is.na(xend) & !is.na(yend)][vertex.names == 'FO2016004', .SD]
+merge(a, a[, .(V1e = V1, V2e = V2, vertex.names)], allow.cartesian = TRUE)
 
 ### Plot ----
 p <- theme(legend.text = element_text(size = 12, color = "black"),
