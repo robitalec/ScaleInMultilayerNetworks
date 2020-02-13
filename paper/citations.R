@@ -112,7 +112,19 @@ citep('10.1111/2041-210X.13177')
 
 ## temporal scale
 
-## perspectives
+## perspectives intro
+
+# Shizuka and Johnson 2020
+citep('10.1093/beheco/arz083')
+
+# Fisher and McAdam
+citep('10.1111/jeb.13195')
+
+# Sih et al 2018
+citep('10.1016/j.anbehav.2017.09.008')
+
+# Silk 2017
+citep('10.1111/2041-210X.12770')
 
 #landscape
 

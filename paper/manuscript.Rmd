@@ -466,19 +466,19 @@ knitr::include_graphics('../graphics/figure-winpos.png')
 
 The integration of behavioural and ecological theory has shown the value of
 considering the importance of various ecological disciplines to better
-understand and predict animal social networks, including demography (Shizuka and
-Johnson 2019), evolutionary and quantitative genetics (Fisher and McAdam 2017),
-disease ecology (Silk et al. 2017), and animal personality (Sih et al. 2017).
-While the number of studies integrating social network theory into a broader
-array of behavioural and ecological sub-disciplines is impressive, only recently
-has the role of animal space use been considered in describing the causes and
-consequences of the social environment in the context of (1) phenotypes and
-individual fitness [@Webber_2018], (2) movement ecology and collective movement
-[@Bode_2011], and (3) habitat selection and space use [@He_2019]. Importantly,
-much of the work linking space use and the social environment has been
-theoretical and empirical studies are lacking (but see Peignier et al. 2019;
-Pinter-Wollman 2015; Strandburg-Peshkin et al. 2015; 2017). Here, we discuss the
-role mutlilayer networks within the emerging integration of social and spatial
+understand and predict animal social networks, including demography
+[@Shizuka_2019], evolutionary and quantitative genetics [@Fisher_2017], disease
+ecology [@Silk_2017], and animal personality [@Sih_2018]. While the number of
+studies integrating social network theory into a broader array of behavioural
+and ecological sub-disciplines is impressive, only recently has the role of
+animal space use been considered in describing the causes and consequences of
+the social environment in the context of (1) phenotypes and individual fitness
+[@Webber_2018], (2) movement ecology and collective movement [@Bode_2011], and
+(3) habitat selection and space use [@He_2019]. Importantly, much of the work
+linking space use and the social environment has been theoretical and empirical
+studies are lacking [but see @Peignier_2019;
+@Strandburg_Peshkin_2015; @Strandburg_Peshkin_2017]. Here, we discuss the role
+mutlilayer networks within the emerging integration of social and spatial
 ecology within the behavioural ecology literature.
 
 ## Phenotypes and Individual fitness
