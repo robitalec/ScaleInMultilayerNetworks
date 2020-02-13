@@ -101,7 +101,8 @@ base1 <- ggplot(unique(DT[, .SD, .SDcols = c(var, 'lcname', 'layersim')]),
 
 g1 <- base1 + geom_line(aes(y = (layersim)), size = linesize) + 
   ylab('Layer Similarity') +
-  theme(legend.position = pos1)
+  theme(legend.position = pos1) +
+  expand_limits(y = c(-1, 1))
 
 # Plot full, across
 base2 <- ggplot(DT[, .SD[1], by = var], 
@@ -110,7 +111,9 @@ base2 <- ggplot(DT[, .SD[1], by = var],
 g2 <- base2 + geom_line(aes(y = mnmultideg), size = linesize) + ylab('Multidegree')
 g3 <- base2 + geom_line(aes(y = mndegdev), size = linesize) + ylab('Degree Deviation')
 g4 <- base2 + geom_line(aes(y = mnneigh), size = linesize) + ylab('Neighborhood')
-g5 <- base2 + geom_line(aes(y = mnconnredund), size = linesize) + ylab('Connective Redundancy')
+g5 <- base2 + geom_line(aes(y = mnconnredund), size = linesize) + 
+  ylab('Connective Redundancy') +
+  expand_limits(y = c(-0.075, 1))
 
 
 # Plot within
@@ -119,10 +122,12 @@ base3 <- ggplot(DT, aes(x = get(var), color = season, linetype = lcname)) +
 
 g6 <- base3 + geom_line(aes(y = mnsplitNeigh), size = linesize) + ylab('Degree')
 g7 <- base3 + geom_line(aes(y = mnrelev), size = linesize) + 
-  ylab('Layer Relevance') + guides(color = FALSE, linetype = FALSE)
+  ylab('Layer Relevance') + guides(color = FALSE, linetype = FALSE) +
+  expand_limits(y = c(-0.075, 1))
 g8 <- base3 + geom_line(aes(y = mngraphstrength), size = linesize) + 
   ylab('Graph Strength') + guides(linetype = FALSE) +  
-  theme(legend.position = pos2)
+  theme(legend.position = pos2) +
+  expand_limits(y = c(-0.075, 1))
 
 
 # Patchwork
@@ -131,8 +136,7 @@ g8 <- base3 + geom_line(aes(y = mngraphstrength), size = linesize) +
     theme(plot.tag = element_text(size = 14, hjust = 0, vjust = 0),
           legend.key.width = unit(1.4,"cm")) &
     labs(x = varnames[vars == var, varname]) &
-    p &
-    expand_limits(y = c(-0.075, 1)))
+    p)
 
 
 ggsave(paste0('graphics/figure-', var, '.png'), width = 13, height = 10)
