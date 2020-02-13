@@ -102,25 +102,25 @@ zzz[layer %in% c('winter-3', 'summer-3'),
     c('modx', 'mody') := .(slideright * (.GRP - 1), 0), by = layer]
 
 zzz[layer %in% c('winter-2', 'summer-2'), 
-    c('modx', 'mody') := .(slideright * (.GRP - 1), 2), by = layer]
+    c('modx', 'mody') := .(slideright * (.GRP - 1), 1.5), by = layer]
 
 zzz[layer %in% c('winter-1', 'summer-1'), 
-    c('modx', 'mody') := .(slideright * (.GRP - 1), 4), by = layer]
+    c('modx', 'mody') := .(slideright * (.GRP - 1), 3), by = layer]
 
 zzbox <- box[rep(1:.N, 6)][, layer := rep(unique(zzz$layer), each = 4)]
 zzbox[layer %in% c('winter-3', 'summer-3'),
       c('modx', 'mody') := .(slideright * (.GRP - 1), 0), by = layer]
 
 zzbox[layer %in% c('winter-2', 'summer-2'),
-      c('modx', 'mody') := .(slideright * (.GRP - 1), 2), by = layer]
+      c('modx', 'mody') := .(slideright * (.GRP - 1), 1.5), by = layer]
 
 zzbox[layer %in% c('winter-1', 'summer-1'),
-      c('modx', 'mody') := .(slideright * (.GRP - 1), 4), by = layer]
+      c('modx', 'mody') := .(slideright * (.GRP - 1), 3), by = layer]
 
 
 # Edges between same individuals
-a <- zzz[!is.na(xend) & !is.na(yend)][vertex.names == 'FO2016004', .SD]
-merge(a, a[, .(V1e = V1, V2e = V2, vertex.names)], allow.cartesian = TRUE)
+# a <- zzz[!is.na(xend) & !is.na(yend)][vertex.names == 'FO2016004', .SD]
+# merge(a, a[, .(V1e = V1, V2e = V2, vertex.names)], allow.cartesian = TRUE)
 
 ### Plot ----
 p <- theme(legend.text = element_text(size = 12, color = "black"),
