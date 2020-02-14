@@ -60,8 +60,11 @@ are directly linked to the scale at which they are observed [@Levin_1992;
 species-specific as trophic interactions and resource availability
 [@Legendre_1993; @Chave_2013] and global climate and productivity [@Field_2009].
 Multiscale ecology has been integrated into species distribution modelling
-[@Elith_2009], habitat selection [@Mayor_2007], and food webs [@Sugihara_1989], among others.
-Meanwhile, in the context of animal behaviour, certain behaviours are scale-dependent; for example, acoustic communication in birds varies with spatial scales [@Luther_2009]. We posit that it is important to consider that animal behavior within the social environment will be scale-dependent.
+[@Elith_2009], habitat selection [@Mayor_2007], and food webs [@Sugihara_1989],
+among others. Meanwhile, in the context of animal behaviour, certain behaviours
+are scale-dependent; for example, acoustic communication in birds varies with
+spatial scales [@Luther_2009]. We posit that it is important to consider that
+animal behavior within the social environment will be scale-dependent.
 
 Sociality exists across both temporal and spatial scales (Whitehead 2008). For
 example, grooming requires close spatial proximity between conspecifics and
@@ -106,20 +109,20 @@ novel understanding of variation in the temporal or spatial scales associated
 with social systems.
 
 
-Our examinations is motivated by behavioural, landscape, and spatial ecology to build a
-conceptual and analytical framework for scale-dependent multilayer networks and
-we apply this framework to a case study of caribou (*Rangifer tarandus*) in
-Newfoundland, Canada [@Peignier_2019]. We use this case study to address two
-principal questions associated with scale-dependent multilayer networks. First,
-to what degree does the social scale of relationships, spatial scale of
-landscapes, and temporal scale of analysis influence our ability to interpret
-complex social systems? Second, can variation in the social, spatial, and
-temporal scale improve predictions associated with biological differences in
+Our examinations is motivated by behavioural, landscape, and spatial ecology to
+build a conceptual and analytical framework for scale-dependent multilayer
+networks and we apply this framework to a case study of caribou (*Rangifer
+tarandus*) in Newfoundland, Canada [@Peignier_2019]. We use this case study to
+address two principal questions associated with scale-dependent multilayer
+networks. First, to what degree does the social scale of relationships, spatial
+scale of landscapes, and temporal scale of analysis influence our ability to
+interpret complex social systems? Second, can variation in the social, spatial,
+and temporal scale improve predictions associated with biological differences in
 seasonal resource availability and social association? We conclude with
 perspectives for further development and application of scale in multilayer
 networks with respect to phenotypes and individual fitness [@Webber_2018],
 movement ecology and collective movement [@Jolles_2019], and habitat selection
-and space use<!-- TODO: (REF)--> . 
+and space use<!-- TODO: (REF)--> .
 <!-- TODO: we answer the first question in the discussion, but not the second-->
 <!-- TODO: Webber reference should be 2018, but defaulting to 2017-->
 
