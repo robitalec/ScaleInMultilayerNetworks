@@ -30,22 +30,22 @@ source('../scripts/0-variables.R')
 Scale remains a foundational concept in ecology. Spatial scale, for instance,
 has become a central consideration in the way we understand landscape ecology
 and animal space use. Meanwhile, social processes can also scale from fine-scale
-interactions to co-occurrence to overlapping home ranges. <!-- TODO: add temporal scale --> Multilayer networks
-promise the integration of monolayer animal social networks with the complexity
-and importance of animal space use and movement in heterogeneous landscapes.
-Despite the complex interplay between social networks and how animals use space,
-there remains an important biological and methodological gap in our
-understanding of an animal’s perception of scale. Here we discuss
-the role of scale in the context of multilayer networks and provide a social
-ungulate case study to illustrate the role of social, spatial, and temporal
-scale on multilayer processes. We also present perspectives on future
-development and application of scale in multilayer networks with respect to:
-habitat selection and space use; phenotypes and individual fitness; and movement
-ecology and collective movement. Effective integration of social and spatial
-processes, including biologically meaningful scales, within the context of
-animal social networks is an emerging area of research, as such our contribution
-incorporates perspectives on how the social environment and spatial processes
-are linked across scales in a multilayer context. 
+interactions to co-occurrence to overlapping home ranges. <!-- TODO: add
+temporal scale --> Multilayer networks promise the integration of monolayer
+animal social networks with the complexity and importance of animal space use
+and movement in heterogeneous landscapes. Despite the complex interplay between
+social networks and how animals use space, there remains an important biological
+and methodological gap in our understanding of an animal’s perception of scale.
+Here we discuss the role of scale in the context of multilayer networks and
+provide a social ungulate case study to illustrate the role of social, spatial,
+and temporal scale on multilayer processes. We also present perspectives on
+future development and application of scale in multilayer networks with respect
+to: habitat selection and space use; phenotypes and individual fitness; and
+movement ecology and collective movement. Effective integration of social and
+spatial processes, including biologically meaningful scales, within the context
+of animal social networks is an emerging area of research, as such our
+contribution incorporates perspectives on how the social environment and spatial
+processes are linked across scales in a multilayer context.
 
 ## Keywords
 <!-- TODO: is this the final list ? -->
@@ -60,12 +60,8 @@ are directly linked to the scale at which they are observed [@Levin_1992;
 species-specific as trophic interactions and resource availability
 [@Legendre_1993; @Chave_2013] and global climate and productivity [@Field_2009].
 Multiscale ecology has been integrated into species distribution modelling
-[@Elith_2009], habitat selection [@Mayor_2007], and food webs [@Sugihara_1989].
-Meanwhile, in the context of animal behaviour, certain behaviours are scale
-dependent, for example, acoustic communication in birds occurs over variable
-spatial scales [@Luther_2009]. We posit that animal behaviour and, more
-specifically, the social environment that animals experience must also be
-scale-dependent.
+[@Elith_2009], habitat selection [@Mayor_2007], and food webs [@Sugihara_1989], among others.
+Meanwhile, in the context of animal behaviour, certain behaviours are scale-dependent; for example, acoustic communication in birds varies with spatial scales [@Luther_2009]. We posit that it is important to consider that animal behavior within the social environment will be scale-dependent.
 
 Sociality exists across both temporal and spatial scales (Whitehead 2008). For
 example, grooming requires close spatial proximity between conspecifics and
@@ -110,7 +106,7 @@ novel understanding of variation in the temporal or spatial scales associated
 with social systems.
 
 
-Our study is motivated by behavioural, landscape, and spatial ecology to build a
+Our examinations is motivated by behavioural, landscape, and spatial ecology to build a
 conceptual and analytical framework for scale-dependent multilayer networks and
 we apply this framework to a case study of caribou (*Rangifer tarandus*) in
 Newfoundland, Canada [@Peignier_2019]. We use this case study to address two
@@ -123,8 +119,9 @@ seasonal resource availability and social association? We conclude with
 perspectives for further development and application of scale in multilayer
 networks with respect to phenotypes and individual fitness [@Webber_2018],
 movement ecology and collective movement [@Jolles_2019], and habitat selection
-and space use. <!-- TODO: (REF)--> <!-- TODO: Webber reference should be 2018,
-but defaulting to 2017-->
+and space use<!-- TODO: (REF)--> . 
+<!-- TODO: we answer the first question in the discussion, but not the second-->
+<!-- TODO: Webber reference should be 2018, but defaulting to 2017-->
 
 (ref:spacetime) Space-time diagram displaying variation the relative spatial and temporal extent required for different types of social and communication processes for four species, including hyaena, passerine birds, sleepy lizards, and elephants. Spatial and temporal extent for social interactions, e.g. mating, grooming, or aggression, are similar for most species because physical contact between two individuals is required for most social interactions. The logical extension is that spatial and temporal extent for social interaction is nested within the spatial and temporal extent for social association because individuals must shared space to interact. By contrast, different species have potential for  greater spatial and temporal extents, for example, temporal extent for vocal communication is similar for most species because most vocal calls only persist in the environment for seconds, but spatial extent for vocal communication is highly variable with elephant calls extending the great distance and passerine calls extending the shortest distance.
 
