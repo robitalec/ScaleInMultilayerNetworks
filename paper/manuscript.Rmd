@@ -387,22 +387,6 @@ multilayer networks in general? I think it's important for building robust
 networks -->
 
 
-<!-- TODO: this first sentence is not about layer similarity - so hopefully it isn't
-guiding the reader the wrong way -->
-Contrasting seasons of sociality become more similarly connected with window
-length. Mean graph strength and layer relevance increased for summer layers as
-individuals became more connected with increasing window lengths (Figure
-\@ref(fig:winlen)a, Figure \@ref(fig:winlen)b). In contrast, mean graph strength
-and layer relevance was relatively stable for winter layers. Similarity of
-layers across habitat classes and between seasons (e.g. open summer compared to
-open winter) was variable across window lengths (Figure \@ref(fig:winlen)c).
-Connective redundancy increased marginally with increasing window length. These
-results suggest that an increasing window length, especially for the summer
-season, may be resulting in less precisely defined seasons that are not clearly
-capturing periods of aggregation and dissaggregation related to resource
-availability.
-
-
 Moving window positions defining seasons showed an increase in connectivity of
 individuals in summer layers. Graph strength increased at time window position
 ~20 for summer and winter layers  and, while summer layers continued to
