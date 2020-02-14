@@ -159,12 +159,13 @@ labels <- data.table(
                    size = weight),
                alpha = 1
     ) +
-    scale_size(range=c(0.1, 2)) + 
+    scale_size(range = c(0.1, 2)) + 
     # geom_edges(aes(group = layer,
     #                xend = shearxend + modx,
     #                yend = shearyend + mody
     # ), data = zzz[, .SD[order(vertex.names, modx, mody)]]) +
     geom_nodes(aes(color = vertex.names), size = 5) +
+    scale_color_viridis_d() + 
     guides(color = FALSE) +
     geom_text(aes(x, y, xend = NULL, yend = NULL, label = label), data = labels) + 
   p
