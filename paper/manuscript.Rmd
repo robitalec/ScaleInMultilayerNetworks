@@ -363,7 +363,7 @@ As the number of observations used to generate multilayer networks increased,
 individuals became more connected and metrics appeared to stabilize. Mean graph
 strength varied in winter layers becoming stable at ~200 m and remained
 consistently weak in summer layers (Figure \@ref(fig:nobs)a). Layer relevance in
-winter layers increased between ~10 - ~50 observations, remaining stable with
+winter layers increased between ~10 m and ~50 m observations, remaining stable with
 additional observations (Figure \@ref(fig:nobs)b). <!-- TODO: update with fix
 for open/rerun --> Like coarse landcover resolution (above), low numbers of
 observations were not sufficient for capturing individuals in all contexts and
@@ -373,7 +373,7 @@ open and approximately 300 observations for forage (Figure \@ref(fig:nobs)c).
 Once sufficient observations were obtained, layer similarity stabilized for all
 three landcover classes at approximately 200 observations for forest and
 approximately 300 observations for open and forage landcover types. Connective
-redundancy increased dramatically between ~10 - ~50 observations before
+redundancy increased dramatically between ~10 m and ~50 m observations before
 stabilizing with all new observations included (Figure \@ref(fig:nobs)d). Given
 the observed trend of these multilayer metrics stabilizing after a certain
 number of observations are included, the results suggest this sensitivity method
@@ -384,7 +384,6 @@ sufficiently describing social dynamics across contexts.
 is already done, can we make this thought more relevant to picking scales or
 multilayer networks in general? I think it's important for building robust
 networks -->
-
 
 
 <!-- TODO: update.....-->
@@ -429,7 +428,7 @@ knitr::include_graphics('../graphics/figure-lcres.png')
 
 
 <!-- Figure: metrics by number of observations -->
-(ref:nobs) Varying scale in number of observations. For each iteration, a number of observations (10-485 observations in steps of 25) were selected from the complete data set to construct multilayer networks of caribou social associations (*Rangifer tarandus*, n = `r DT[, uniqueN(get(idcol))]`) on Fogo Island, Newfoundland in summer 2017 and winter 2018 across three habitat classes (forest, forage, and open). A) Mean graph strength across individuals varied for winter layers becoming relatively stable at 100 observations and remained weak throughout for summer layers. B) Mean layer relevance across individuals increased sharply for winter layers between ~10 - ~50 observations before stabilizing. Summer layers had consistent low layer relevance. C) Similarity of network layers across habitat classes and between seasons (e.g. open summer compared to open winter) was relatively consistent across number of observations for forest habitats. <!-- TODO: fix for open -->Note, open and forage habitats are not shown given no individuals interacted in the summer open and forage layers. D) Mean connective redundancy across individuals increased rapidly between ~10 - ~50 observations and then remained constant.  
+(ref:nobs) Varying scale in number of observations. For each iteration, a number of observations (10-485 observations in steps of 25) were selected from the complete data set to construct multilayer networks of caribou social associations (*Rangifer tarandus*, n = `r DT[, uniqueN(get(idcol))]`) on Fogo Island, Newfoundland in summer 2017 and winter 2018 across three habitat classes (forest, forage, and open). A) Mean graph strength across individuals varied for winter layers becoming relatively stable at 100 observations and remained weak throughout for summer layers. B) Mean layer relevance across individuals increased sharply for winter layers between ~10 m and ~50 m observations before stabilizing. Summer layers had consistent low layer relevance. C) Similarity of network layers across habitat classes and between seasons (e.g. open summer compared to open winter) was relatively consistent across number of observations for forest habitats. <!-- TODO: fix for open -->Note, open and forage habitats are not shown given no individuals interacted in the summer open and forage layers. D) Mean connective redundancy across individuals increased rapidly between ~10 m and ~50 m observations and then remained constant.  
 
 ```{r nobs, fig.cap='(ref:nobs)'}
 knitr::include_graphics('../graphics/figure-nobs.png')
