@@ -403,6 +403,7 @@ capturing periods of aggregation and dissaggregation related to resource
 availability.
 
 
+, showing decreasing connectivity in shifted winter time windows and  greater connectivity in summer layers at later window positions.
 Moving winter and summer seasons showed increasing connectivity of individuals. Graph strength and layer relevance increased at time window position ~20 for summer layers (Figure \@ref(fig:winpos)a, Figure \@ref(fig:winpos)b). Layer similarity... <!-- TODO: between
 seasons increased consistently across landcover class (Figure
 \@ref(fig:winlen)b).--> Connective redundancy was stable throughout the shifting window positions (Figure \@ref(fig:winpos)). Similar to window length, increasing window position results in a mismatch between expected periods of resource seasonality and corresponding sociality. 
@@ -451,7 +452,7 @@ knitr::include_graphics('../graphics/figure-winlength.png')
 
 
 <!-- Figure: Window position -->
-(ref:winpos) Varying scale in time window position. For each time window position (shifting the start date of the time window used to define seasons 1 to 48 days from the original), multilayer networks were constructed of caribou social associations (*Rangifer tarandus*, n = `r DT[, uniqueN(get(idcol))]`) on Fogo Island, Newfoundland in summer 2017 and winter 2018 across three habitat classes (forest, forage, and open). A) Mean graph strength across individuals increased in summer network layers at window position 25 and increased between window position 20 and 40 for winter network layers. B) Mean layer relevance slightly decreased for winter layers and increased for summer layers, showing decreasing connectivity in shifted winter time windows and  greater connectivity in summer layers at later window positions. C) Similarity of landcover network layers between seasons (e.g. open summer compared to open winter) showed fluctuations in layer similarity across landcover types with shifted time windows. D) Mean connective redundancy across individuals increased between window position 12 through 48 due to increased connectivity in the summer network layers.
+(ref:winpos) Varying temporal scale in time window position. For each time window position (shifting the start date of the time window used to define seasons 1 to 48 days from the original), multilayer networks were constructed of caribou social associations (*Rangifer tarandus*, n = `r DT[, uniqueN(get(idcol))]`) on Fogo Island, Newfoundland in summer 2017 and winter 2018 across three habitat classes (forest, forage, and open). A) Mean graph strength across individuals increased in summer network layers at window position 25 and increased between window position 20 and 40 for winter network layers. B) Mean layer relevance slightly decreased for winter layers and increased for summer layers. C) Similarity of layers across habitat classes and between seasons (e.g. open summer compared to open winter) was relatively stable until window position ~28 where forage and open layer similarity decreased. D) Mean connective redundancy across individuals increased marginally with advancing time window position.
 
 
 ```{r winpos, fig.cap='(ref:winpos)'}
