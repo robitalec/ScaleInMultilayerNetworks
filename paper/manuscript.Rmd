@@ -665,24 +665,23 @@ effects of habitat configuration on the formation of the social environment
 
 
 ## Habitat selection and space use
-<!-- TODO: Gerard ‘openness’ paper -->
-Social structure and habitat selection are intimately
-linked: individuals must share space to interact and the distribution of
-resources influences group dynamics and home range size [@Webber_2018].
-Social structure is influenced by resource availability and seasonality
-[@Peignier_2019], configuration [@He_2019] and fragmentation [@Banks_2007].
-Habitat selection, the disproportionate use of available resources or landscape
-features by animals [@Manly_1993; @Boyce_1999], is a scale-dependent process
-[@Mayor_2009]. Multilayer networks represent a novel framework for considering the influence of habitat selection and space use on sociality across scales.
+Social structure and habitat selection are intimately linked: individuals must
+share space to interact and the distribution of resources influences group
+dynamics and home range size [@Webber_2018]. Social structure is influenced by
+resource availability and seasonality [@Peignier_2019], configuration [@He_2019]
+and fragmentation [@Banks_2007]. Habitat selection, the disproportionate use of
+available resources or landscape features by animals [@Manly_1993; @Boyce_1999],
+is a scale-dependent process [@Mayor_2009]. Multilayer networks represent a
+novel framework for considering the influence of habitat selection and space use
+on sociality across scales.
 
 
+<!-- 
+TODO: Gerard ‘openness’ paper 
 
-<!--Animals select habitats at multiple scales ... (Mayor)  Mayor scale -->
-
-<!-- McGarigal 2016 organisms select habitat at multiple scales, temporal spatial
+McGarigal 2016 organisms select habitat at multiple scales, temporal spatial
 should investigate scale dependency. linking ecological processes to scale eg foraging or predator-prey dynamics
 
-Mayor 2007 - scale paper
 MRSF Laforge paper 
 van Beest et al. 2014 scale paper 
 Habitat–performance relationships: finding the right metric at a given spatial scale
