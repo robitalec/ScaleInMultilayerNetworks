@@ -48,7 +48,7 @@ varnames <- data.table(
 ### Plots ----
 ## Manuscript figures
 # Legend position
-pos1 <- c(0.85, 0.3)
+pos1 <- c(0.85, 0.35)
 pos2 <- c(0.85, 0.3)
 
 # Theme
