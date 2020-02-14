@@ -313,9 +313,6 @@ observations to mimic collection of observational data. <!-- TODO: bah conclude
 <!-- TODO: Add intro/general to results? with mention figures are means of inds-->
 
 
-<!-- TODO: make sure we clarify these are means of all individuals? -->
-<!-- TODO: discuss layer similarity for social threshold -->
-
 In general, individuals in multilayer networks became more connected as social
 scale increased; however, this relationship varied by habitat type and season.
 As social scale increased, graph strength for winter networks increased rapidly
@@ -341,13 +338,13 @@ social networks in caribou and similar species.
 Increasing landcover resolution resulted in a decreased proportion of forage, a
 rare and patchy habitat, and corresponding low connectivity of individuals in
 these habitats. Mean graph strength increased consistently in winter forest and
-open habitats. Mean graph strength in winter forage <!-- TODO: check this fig
-A/C similar lines--> Individuals in summer layers had consistent weak
-connections. Layer relevance was stable in winter for open and forest habitats
-but decreased for forage habitats (Figure \@ref(fig:lcres)b). Layer relevance
-was stable for all habitat classes in summer layers. Layer similarity was stable
-for forest and open, except for a sharp decrease in layer similarity in open at
-100 m and 250 m<!-- TODO: check this fig A/C similar lines--> (Figure
+open habitats. Mean graph strength in winter forage varied across landcover
+resolutions with an increase at 250 m and decrease at 500 m. Individuals in
+summer layers had consistent weak connections. Layer relevance was stable in
+winter for open and forest habitats but decreased for forage habitats (Figure
+\@ref(fig:lcres)b). Layer relevance was stable for all habitat classes in summer
+layers. Layer similarity was stable for forest and open, except for a sharp
+decrease in layer similarity in open at 100 m and 250 m (Figure
 \@ref(fig:lcres)c). Layer similarity was not possible to calculate between
 winter and summer forage because, at all landcover resolutions greater than 30
 m, there were no individuals connected in the network layers. Individuals still
@@ -356,30 +353,29 @@ resolution, at a much lower rate. Connective redundancy slightly decreased as
 landcover resolution increased (Figure \@ref(fig:lcres)d). These results
 indicate the importance of matching landcover resolution to scale of selection
 as well as ensuring the landcover product used has a resolution fine enough to
-detect landscape features and habitats relevant to study species. 
+detect landscape features and habitats relevant to study species.
 
 
 As the number of observations used to generate multilayer networks increased,
 individuals became more connected and metrics appeared to stabilize. Mean graph
-strength varied in winter layers becoming stable at ~200 m and remained
-consistently weak in summer layers (Figure \@ref(fig:nobs)a). Layer relevance in
-winter layers increased between ~10 m and ~50 m observations, remaining stable
-with additional observations (Figure \@ref(fig:nobs)b). <!-- TODO: update with
-fix for open/rerun --> Like coarse landcover resolution (Figure
-\@ref(fig:lcres)), low numbers of observations were not sufficient for capturing
-individuals in all contexts and therefore layer similarity could not be
-calculated below approximately <!--TODO: update these -->75 observations for
-forest, approximately 210 observations for open and approximately 300
-observations for forage (Figure \@ref(fig:nobs)c). Once sufficient observations
-were obtained, layer similarity stabilized for all three landcover classes at
-approximately 200 observations for forest and approximately 300 observations for
-open and forage landcover types. Connective redundancy increased dramatically
-between ~10 m and ~50 m observations before stabilizing with all new
-observations included (Figure \@ref(fig:nobs)d). Given the observed trend of
-these multilayer metrics stabilizing after a certain number of observations are
-included, the results suggest this sensitivity method could be useful for
-determining the number of observations necessary for sufficiently describing
-social dynamics across contexts.
+strength varied in winter layers at low number of observations, becoming stable
+at ~75 observations and was consistently weak in summer layers (Figure
+\@ref(fig:nobs)a). Layer relevance in winter layers increased between ~10 m and
+~100 m observations, remaining stable with additional observations (Figure
+\@ref(fig:nobs)b). Like coarse landcover resolution (Figure \@ref(fig:lcres)),
+low numbers of observations were not sufficient for capturing individuals in all
+contexts and therefore layer similarity could not be calculated below ~30
+observations for forest, approximately ~80 observations for open (Figure
+\@ref(fig:nobs)c). Layer similarity was not possible to calculate for forage
+layers because there were no connected individuals in summer forage. Once
+sufficient observations were obtained, layer similarity was relatively stable
+for forest and open layers. Connective redundancy increased dramatically between
+~10 m and ~50 m observations before stabilizing with all new observations
+included (Figure \@ref(fig:nobs)d). Given the observed trend of these multilayer
+metrics stabilizing after a certain number of observations are included, the
+results suggest this sensitivity method could be useful for determining the
+number of observations necessary for sufficiently describing social dynamics
+across contexts.
 
 <!-- TODO: I'm not sure this is relevant since this is the main way it
 is already done, can we make this thought more relevant to picking scales or
