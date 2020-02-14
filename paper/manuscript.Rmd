@@ -300,7 +300,7 @@ time windows were iteratively used to partition data into two discrete seasons
 Studies of social network analysis vary in the number and frequency of
 observations as well as the data collection technique used to generate networks
 [@Davis_2018; @Webber_2019]. For example, GPS data is commonly collected at a
-fixed rate (eg every $x$ minutes or hours) continuously throughout the study
+fixed rate, eg. every $x$ minutes or hours, continuously throughout the study
 period. We investigated the influence of the number of observations on resulting
 multilayer networks. We randomly selected 500 timesteps and iteratively included
 25 additional observations, regenerating the multilayer network and calculating
