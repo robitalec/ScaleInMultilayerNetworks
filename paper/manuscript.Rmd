@@ -332,28 +332,21 @@ groups are often assigned based on 50 m threshold (Lingle 2003; Lesmeries et al.
 2018; Peignier et al. 2019), suggesting that given similar quantities of data,
 ~50 m is likely an appropriate social scale for generating social networks in
 caribou and similar species.
-<!-- TODO: missing summer relevance --> 
+<!-- TODO: missing summer relevance .. the actual value of layer sim?--> 
 
 
-Increasing the scale of landcover resolution resulted in decreased proportion of
-rare and patchy habitats, and low connectivity of individuals in these habitats.
-In winter, layer relevance was stable for open and forest habitats but decreased
-for forage habitats (Figure \@ref(fig:lcres)b). Layer similarity was generally
-stable for forest and open habitats except for a contrasting increase in
-similarity for forest and decrease in similarity for open habitats 250 m
-landcover resolution (Figure \@ref(fig:lcres)c). Layer similarity was not
+(ref:lcres) Varying spatial scale in landcover resolution. For each landcover resolution, multilayer networks were constructed of caribou social associations (*Rangifer tarandus*, n = `r DT[, uniqueN(get(idcol))]`) on Fogo Island, Newfoundland in summer 2017 and winter 2018 across three habitat classes (forest, forage, and open). A) Mean graph strength of individuals in winter forest and open habitats increased consistently while winter forage varied with a peak at 250 m and valley at 500 m. Individuals in summer layers had consistent weak connections. B) Mean layer relevance showed sparse connectivity in summer compared to winter networks and a decrease in winter forage layer relevance at higher landcover resolutions. C) Similarity of landcover network layers between seasons (e.g. open summer compared to open winter) was relatively stable for forest and open, except for a sharp decrease in open at 100 m and 250 m. Note that layer similarity in summer forage is not shown because individuals did not interact at landcover resolutions greater than 30 m and therefore layer similarity could not be calculated. D) Mean connective redundancy across individuals showed a slight decreasing trend with increasing landcover resolution.
+
+
+Increasing landcover resolution resulted in a decreased proportion of forage, a
+rare and patchy habitat, and corresponding low connectivity of individuals in these habitats. Mean graph strength increased consistently in winter forest and open habitats. Mean graph strength in winter forage <!-- TODO: check this fig A/C similar lines--> Individuals in summer layers had consistent weak connections. Layer relevance was stable in winter for open and forest habitats but decreased for forage habitats (Figure \@ref(fig:lcres)b). Layer relevance was stable for all habitat classes in summer layers. Layer similarity was stable for forest and open, except for a sharp decrease in layer similarity in open at 100 m and 250 m<!-- TODO: check this fig A/C similar lines--> (Figure \@ref(fig:lcres)c). Layer similarity was not
 possible to calculate between winter and summer forage because, at all landcover
 resolutions greater than 30 m, there were no individuals connected in the network
-layers. <!-- individuals still used forage but in much lower proportion +
-lowered opportunity to associate --> Connective redundancy decreased with
-increasing landcover resolution due the decrease in connectivity of individuals
-in winter forage habitats, resulting in a multilayer network where neighbours
-were less frequently repeated in multiple layers <!-- TODO: I'm having a hard
-time understanding this previous sentence --> (Figure \@ref(fig:lcres)d).  These
+layers. Individuals still used forage habitats but given a lower availability due to increasing landcover resolution, at a much lower rate. Connective redundancy slightly decreased as landcover resolution increased (Figure \@ref(fig:lcres)d). These
 results indicate the importance of matching landcover resolution to scale of
 selection as well as ensuring the landcover product used has a resolution fine
-enough to detect relevant landscape features and habitats. <!-- TODO: how? This
-isn't clear enough for me to follow yet -->
+enough to detect landscape features and habitats relevant to study species. 
+<!-- TODO: how? This isn't clear enough for me to follow yet -->
 
 
 <!-- TODO: update this..... -->
