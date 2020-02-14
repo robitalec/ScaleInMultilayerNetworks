@@ -695,20 +695,21 @@ selection is measured using resource selection functions (RSFs), based on the
 proportion of used and available resources for an animal [@Manly_1993;
 @Boyce_1999]. Johnson (1980) identified four orders of habitat selection:
 the geographical range of a species, the home range of an individual, the habitat patches within the home range and specific resources within a
-habitat patch. 
-Moving past this hierarchical perspective, Mayor (2009) reviewed
-types of scale relevant in measurement of habitat selection and recommend using
-a continuum of scales for identifying characteristic scales of selection. 
-<!-- highlight this -->A continuum of scales allows xyz advantage
+habitat patch. <!-- examples of hierarchical hab sel Kie 2002-->
+Moving past this hierarchical perspective, Mayor (2007) emphasized the importance of considering a broad continuum of scales to reveal scale-dependent selection and avoid the bias of predefined scales assumed to be associated with certain behaviors.
 
+Then to Mayor 2009
+
+<!-- And more recent? -->
+
+Despite this, still not widely adopted McGarigal 2016
 
 For
-example, @Mayor_2007 showed caribou select for shallow snow at all scales and <!--what else higlight-->
-and by using a continuum of scales, avoided the bias of predefined scales assumed to be associated with certain behaviors.
+example, @Mayor_2007 showed caribou select for shallow snow at all scales 
+and by using a continuum of scales, .
 
 
 <!-- Relationship between sociality and habitat -->
-<!-- more from Webber, He, etc -->
 <!-- Merkle’s memory and patches for bison (and leaders) -->
 <!-- Emergent  Properties  of  Conspecific  Attraction  inFragmented  Landscapes-->
 <!-- Conspecific Attraction and Aggregation in Territorial Species-->
@@ -722,12 +723,15 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2600907/pdf/rspb20071688.pdf
 
 The emergent relationship between habitat and sociality has been explored by the
 distribution and phenology of resources and use of social information. Cougar
-home ranges overlapped more in regions with high hunting opportunity, a
-proxy for resource richness [@Elbroch_2016]. Caribou sociality differed between seasons, where social associations were stronger in winter and contrastingly
-low in summer when resource availability are more homogenous [@Peigner_2019]. Bison
-(*Bison bison*) showed stronger habitat selection in larger groups and
-avoidance of predation risk was a main factor contributing to their habitat
-selection [@Fortin_2009]. These examples, comparing sociality and habitat selection across temporal or spatial contexts, are implicitly multilayer analyses. <!--Despite these, *missing multilayer approach*.-->
+(*Puma concolor*) home ranges overlapped more in regions with high hunting
+opportunity, a proxy for resource richness [@Elbroch_2016]. Caribou (*Rangifer
+tarandus*) sociality differed between seasons, where social associations were
+stronger in winter and contrastingly low in summer when resource availability
+are more homogenous [@Peigner_2019]. Bison (*Bison bison*) showed stronger
+habitat selection in larger groups and avoidance of predation risk was a main
+factor contributing to their habitat selection [@Fortin_2009]. These examples,
+comparing sociality and habitat selection across temporal or spatial contexts,
+are implicitly multilayer analyses.
 
 
 <!--
