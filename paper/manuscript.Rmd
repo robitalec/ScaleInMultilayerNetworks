@@ -185,16 +185,7 @@ subsequent analyses.
 
 ## Caribou multilayer social networks
 
-### Network types and construction (defining layers for the multilayer network)
-<!-- TODO: should use something like "using syntax from Kivela 2014..." or 
-Following [@Kivela_2014]:
-other info to maybe include: the multilayer network was not node-aligned since
-not all individuals were on all layers
-the temporal aspect is ordinal coupling and landcover aspect is categorical coupling
-
-Individuals were subset to ensure they had data collected in both seasons
--->
-
+### Network types and construction
 We generated a multilayer social network consisting 16 individual nodes and two
 aspects (season and landcover). Two season elementary-layers (winter and summer)
 and three landcover elementary-layers (forest, forage, and open) combined for a
@@ -202,7 +193,8 @@ total of six layers. Layers were composed of individuals represented as nodes
 and social associations represented as edges, for each season and landcover
 combination. Proximity-based social network layers were generated using the R
 package `spatsoc` [@Robitaille_2019] in `r version$version.string`
-[@R_Core_Team_2019]. <!-- TODO: FIX VANDER WAL IN SPATSOC REF -->
+[@R_Core_Team_2019]. 
+<!-- TODO: FIX VANDER WAL IN SPATSOC REF -->
 
 Within each layer, we assumed individuals were associating if simultaneous GPS
 fixes, i.e., recorded within 5 minutes of each other, were within a given
