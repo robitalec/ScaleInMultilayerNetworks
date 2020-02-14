@@ -382,6 +382,17 @@ is already done, can we make this thought more relevant to picking scales or
 multilayer networks in general? I think it's important for building robust
 networks -->
 
+Mean graph strength and layer relevance increased for all summer layers as
+individuals became more connected with increasing window lengths (Figure
+\@ref(fig:winlen)a, Figure \@ref(fig:winlen)b). Winter layers showed relatively
+stable mean graph strength and layer relevance. Layer similarity between seasons
+and across habitat layers increased consistently  (Figure \@ref(fig:winlen)c).
+Connective redundancy increased marginally with increasing window length (Figure
+\@ref(fig:winlen)d). These results suggest that an increasing window length,
+especially for the summer season, may be resulting in less precisely defined
+seasons that are not clearly capturing periods of aggregation and
+dissaggregation related to resource availability.
+
 
 Moving window positions defining seasons showed an increase in connectivity of
 individuals in summer layers. Graph strength increased at time window position
