@@ -12,7 +12,7 @@ source('scripts/0-variables.R')
 
 
 ### Data ----
-var <- 'nobs'
+var <- 'winpos'
 splitBy <- c(splitBy, var)
 
 if (var == 'lcres') {
@@ -67,5 +67,5 @@ metriccols <- c('splitNeigh', 'relev', 'graphstrength')
 DT[, paste0('mn', metriccols) := lapply(.SD, mean, na.rm = TRUE), 
    .SDcols = metriccols, by = c(var, splitBy)]
 
-### Output 
+### Output ----
 saveRDS(DT, gsub('.Rds', '-metrics.Rds', path))
