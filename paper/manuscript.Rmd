@@ -403,10 +403,22 @@ capturing periods of aggregation and dissaggregation related to resource
 availability.
 
 
-, showing decreasing connectivity in shifted winter time windows and  greater connectivity in summer layers at later window positions.
-Moving winter and summer seasons showed increasing connectivity of individuals. Graph strength and layer relevance increased at time window position ~20 for summer layers (Figure \@ref(fig:winpos)a, Figure \@ref(fig:winpos)b). Layer similarity... <!-- TODO: between
-seasons increased consistently across landcover class (Figure
-\@ref(fig:winlen)b).--> Connective redundancy was stable throughout the shifting window positions (Figure \@ref(fig:winpos)). Similar to window length, increasing window position results in a mismatch between expected periods of resource seasonality and corresponding sociality. 
+Moving window positions defining seasons showed an increase in connectivity of
+individuals in summer layers. Graph strength increased at time window position
+~20 for summer and winter layers  and, while summer layers continued to
+increase, winter layers showed a decrease in graph strength at time window
+position ~35 (Figure \@ref(fig:winpos)a). Layer relevance increased across
+moving window positions for summer layers and was relatively stable for winter
+layers (Figure \@ref(fig:winpos)b). These results indicate slight decreasing
+connectivity and increased connectivity in summer layers at shifted winter time
+windows. Layer similarity was relatively stable across moving window positions
+except for a sharp decline at window position ~28 in forage and open layers
+(Figure \@ref(fig:winpos) c). Connective redundancy showed a marginal increase
+with increasing window position (Figure \@ref(fig:winpos) d). Similar to window
+length, changing the position of the time window in this case results in a
+mismatch between expected periods of resource seasonality and corresponding
+sociality, highlighting the importance of carefully selecting temporal scale of
+analysis.
 
 
 <!-- Figure: metrics by social scale -->
