@@ -266,14 +266,12 @@ coefficient [@Br_dka_2018]. Network metrics were calculated using the R packages
 ## Varying scale in multilayer networks
 ### Social scale
 
-We altered the social scale based on visual (short distance) and auditory (long
-distance) sensory modalities of caribou<!-- TODO: REF? / see EVW comment-->. Specifically, we
-modified the spatial distance threshold required for group assignment using
+We modified the spatial distance threshold required for group assignment using
 `spatsoc` [@Robitaille_2019] (see above) and re-assigned groups at incremental
 distances between 5 - 500 m. For example, at the finest social scale, only
 individuals within 5 m of one another were considered in the same group, whereas
 at the coarsest social scale, individuals within 500 m of one another were
-considered in the same group.
+considered in the same group. We assumed these scales represented visual (short distance) to auditory (long distance) sensory modalities of caribou. 
 
 ### Spatial scale
 
