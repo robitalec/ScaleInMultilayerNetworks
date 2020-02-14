@@ -352,7 +352,7 @@ lowered opportunity to associate --> Connective redundancy decreased with
 increasing landcover resolution due the decrease in connectivity of individuals
 in winter forage habitats, resulting in a multilayer network where neighbours
 were less frequently repeated in multiple layers <!-- TODO: I'm having a hard
-time understanding this previous sentence --> (Figure\@ref(fig:lcres)d).  These
+time understanding this previous sentence --> (Figure \@ref(fig:lcres)d).  These
 results indicate the importance of matching landcover resolution to scale of
 selection as well as ensuring the landcover product used has a resolution fine
 enough to detect relevant landscape features and habitats. <!-- TODO: how? This
