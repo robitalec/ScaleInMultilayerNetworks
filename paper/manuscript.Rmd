@@ -695,8 +695,12 @@ proportion of used and available resources for an animal [@Manly_1993;
 @Boyce_1999]. Johnson (1980) identified four orders of habitat selection: (1)
 the geographical range of a species, (2) the home range of an individual, (3)
 the habitat patches within the home range and (4) specific resources within a
-habitat patch. Moving past this hierarchical perspective, Mayor (2009)
-reviewed types of scale relevant in measurement of habitat selection and recommend using a continuum of scales for identifying characteristic scales of selection. For example, @Mayor_2007 showed caribou selection for shallow snow across all sales and used to a continuum of scales to avoid bias from narrowing the measurements to scales assumed to be associated with certain behaviors. 
+habitat patch. Moving past this hierarchical perspective, Mayor (2009) reviewed
+types of scale relevant in measurement of habitat selection and recommend using
+a continuum of scales for identifying characteristic scales of selection. For
+example, @Mayor_2007 showed caribou selection for shallow snow across all sales
+and used to a continuum of scales to avoid bias from narrowing the measurements
+to scales assumed to be associated with certain behaviors.
 
 
 <!-- Relationship between sociality and habitat -->
@@ -735,22 +739,31 @@ instead of specific associations
 looking at broader temporal scales and coarser spatial resolutions
 -->
 
-Multilayer networks can be used to explicitly consider habitat selection and sociality across scales. Animal social systems can be parsed by spatial contexts, defined, for example, by habitat types as in Figure \@ref(fig:lcres). The influence of resource phenology can be directly measured by differences in habitat selection and sociality across temporal layers. Habitat selection can be explicitly integrated using network layers defined by similarity of selection coefficients between individuals. These explicit integrations of habitat selection and sociality across social, spatial and temporal scales highlight the potential for novel insights from multilayer networks. 
+Multilayer networks can be used to explicitly consider habitat selection and
+sociality across scales. Animal social systems can be parsed by spatial
+contexts, defined, for example, by habitat types as in Figure \@ref(fig:lcres).
+The influence of resource phenology can be directly measured by differences in
+habitat selection and sociality across temporal layers. Habitat selection can be
+explicitly integrated using network layers defined by similarity of selection
+coefficients between individuals. These explicit integrations of habitat
+selection and sociality across social, spatial and temporal scales highlight the
+potential for novel insights from multilayer networks.
 
 
 # Conclusions
 
 Multilayer networks remain a nascent but powerful tool in animal behavioural
-ecology. We demonstrate the potential novel analyses that vary social, spatial, and temporal
-scale within a multilayer framework. In our caribou case study, we show that (1)
-multilayer social networks can be, but are not always, scale-dependent, and (2)
-the use of multilayer networks could be useful for identifying habitat or
-season-specific social processes. Our analyses of social, spatial, and temporal
-scales in multilayer network framework highlight potential to identify scales at
-which different properties of layers within a multilayer network show the most
-variability. Furthermore, we discuss the potential integration of individual
-phenotypes and fitness, collective movement, and habitat selection for future
-analyses considering spatial ecology using multilayer networks.
+ecology. We demonstrate the potential novel analyses that vary social, spatial,
+and temporal scale within a multilayer framework. In our caribou case study, we
+show that (1) multilayer social networks can be, but are not always,
+scale-dependent, and (2) the use of multilayer networks could be useful for
+identifying habitat or season-specific social processes. Our analyses of social,
+spatial, and temporal scales in multilayer network framework highlight potential
+to identify scales at which different properties of layers within a multilayer
+network show the most variability. Furthermore, we discuss the potential
+integration of individual phenotypes and fitness, collective movement, and
+habitat selection for future analyses considering spatial ecology using
+multilayer networks.
 
 <!-- Alec, I think you need to include a paragraph reflecting on the importance of scale and ~3 critical things we should take away from this (maybe especially in light of including spatial data?) -->
 
@@ -760,33 +773,38 @@ different scales and units of measurement. Our analysis of caribou multilayer
 networks incorporated high resolution GPS telemetry data and spatial landcover
 data is grounded in the context of observed animal social networks, as the
 scales we chose to explore, e.g., number of observations, sociality across space
-and time, are ones that can be observed as has traditionally been done in ethology. Thus, we
-highlight ways in which scale ought to be considered for both observed and
-remotely-sensed data when building social networks. Furthermore, GPS telemetry
-data provides a link between large scale landscape properties and fine scale
-social interactions as animal movement occurs across the landscape, and when
-taken into account with multiple individuals can indicate association patterns.
-Thus, a layer incorporating relocation data could be a great boon linking
-spatial and social layer in multilayer networks.
+and time, are ones that can be observed as has traditionally been done in
+ethology. Thus, we highlight ways in which scale ought to be considered for both
+observed and remotely-sensed data when building social networks. Furthermore,
+GPS telemetry data provides a link between large scale landscape properties and
+fine scale social interactions as animal movement occurs across the landscape,
+and when taken into account with multiple individuals can indicate association
+patterns. Thus, a layer incorporating relocation data could be a great boon
+linking spatial and social layer in multilayer networks.
+
 <!-- JWT: I'm having a hard time getting to where I want to go, but basically I want to highlight that using GPS relocation data is reflective of more traditional observed networks like they wanted when they accepted our abstract, and this provides opportunities for social networks, particularly multilayer networks. It may be easier to scale relocation data and other landscape variables and can link to smaller scale observed interactions, providing a bridge between different types of data. -->
 
 
-Silk et al. (2018) summarized some key multilayer questions in animal behaviour research.
-While these questions are important for linking animal behaviour and multilayer
-networks, we summarize our perspectives on the future of multilayer networks
-with an additional set of questions posed through the lens of spatial ecology
-that are relevant to the promise and problem of scale in mutlilayer networks:
+Silk et al. (2018) summarized some key multilayer questions in animal behaviour
+research. While these questions are important for linking animal behaviour and
+multilayer networks, we summarize our perspectives on the future of multilayer
+networks with an additional set of questions posed through the lens of spatial
+ecology that are relevant to the promise and problem of scale in mutlilayer
+networks:
 
 1. How do social phenotypes vary across social, temporal, and spatial scales and
-at which scale might these influence fitness? Are some scales better predictors for
-different fitness metrics?
-2. Why do individuals associate more strongly with certain conspecifics in some
-habitats? What, if any, is the role of movement in the context of habitat
-networks?
-3. How, and why, does the spatial scale of perception influence, e.g. auditory,
-visual, or chemotaxis, influence the  social environment? What is the role of
-memory, and by extension social and spatial cognition, as animals navigate their
-environment and make decisions about where to move next?
+at which scale might these influence fitness? Are some scales better predictors
+for different fitness metrics? 
+
+2. Why do individuals associate more strongly
+with certain conspecifics in some habitats? What, if any, is the role of
+movement in the context of habitat networks? 
+
+3. How, and why, does the spatial
+scale of perception influence, e.g. auditory, visual, or chemotaxis, influence
+the  social environment? What is the role of memory, and by extension social and
+spatial cognition, as animals navigate their environment and make decisions
+about where to move next?
 
 <!-- In summary, blah blah  -->
 
