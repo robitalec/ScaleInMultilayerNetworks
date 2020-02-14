@@ -59,9 +59,10 @@ DT[, paste0('mn', metriccols) := lapply(.SD, mean, na.rm = TRUE),
 
 ## Theme
 # Legend position
+# TODO: simplify this if they are all consistent?
 if (var %in% c('winpos', 'winlength')) {
   pos1 <- c(0.85,0.11)
-  pos2 <- c(0.85,0.075)
+  pos2 <- c(0.85,0.35)
 } else if (var %in% c('nobs', 'lcres', 'spatialthreshold')){
   pos1 <- c(0.85,0.11)
   pos2 <- c(0.85,0.35)
@@ -101,7 +102,6 @@ base1 <- ggplot(unique(DT[, .SD, .SDcols = c(var, 'lcname', 'layersim')]),
 
 g1 <- base1 + geom_line(aes(y = (layersim)), size = linesize) + 
   ylab('Layer Similarity') +
-  theme(legend.position = pos1) +
   expand_limits(y = c(-1, 1)) +
   geom_vline(xintercept = 0)
 
@@ -112,9 +112,11 @@ base2 <- ggplot(DT[, .SD[1], by = var],
 g2 <- base2 + geom_line(aes(y = mnmultideg), size = linesize) + ylab('Multidegree')
 g3 <- base2 + geom_line(aes(y = mndegdev), size = linesize) + ylab('Degree Deviation')
 g4 <- base2 + geom_line(aes(y = mnneigh), size = linesize) + ylab('Neighborhood')
+
 g5 <- base2 + geom_line(aes(y = mnconnredund), size = linesize) + 
   ylab('Connective Redundancy') +
-  expand_limits(y = c(-0.075, 1))
+  expand_limits(y = c(-0.075, 1)) +  
+  theme(legend.position = pos2)
 
 
 # Plot within
@@ -122,12 +124,14 @@ base3 <- ggplot(DT, aes(x = get(var), color = season, linetype = lcname)) +
   scale_color_manual(values = c(cols$hex[1], cols$hex[5])) 
 
 g6 <- base3 + geom_line(aes(y = mnsplitNeigh), size = linesize) + ylab('Degree')
+
 g7 <- base3 + geom_line(aes(y = mnrelev), size = linesize) + 
   ylab('Layer Relevance') + guides(color = FALSE, linetype = FALSE) +
-  expand_limits(y = c(-0.075, 1))
+  expand_limits(y = c(-0.075, 1)) + 
+  theme(legend.position = pos1)
+
 g8 <- base3 + geom_line(aes(y = mngraphstrength), size = linesize) + 
-  ylab('Graph Strength') + guides(linetype = FALSE) +  
-  theme(legend.position = pos2) +
+  ylab('Graph Strength') + guides(linetype = FALSE) + 
   expand_limits(y = c(-0.075, 1))
 
 
