@@ -102,7 +102,8 @@ base1 <- ggplot(unique(DT[, .SD, .SDcols = c(var, 'lcname', 'layersim')]),
 g1 <- base1 + geom_line(aes(y = (layersim)), size = linesize) + 
   ylab('Layer Similarity') +
   theme(legend.position = pos1) +
-  expand_limits(y = c(-1, 1))
+  expand_limits(y = c(-1, 1)) +
+  geom_vline(xintercept = 0)
 
 # Plot full, across
 base2 <- ggplot(DT[, .SD[1], by = var], 
