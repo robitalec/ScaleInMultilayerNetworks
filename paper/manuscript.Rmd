@@ -694,13 +694,17 @@ Habitat selection depends on the scale at which it is measured and a singular
 scale is insufficient for generalizing across scales [@Mayor_2009]. Habitat
 selection is measured using resource selection functions (RSFs), based on the
 proportion of used and available resources for an animal [@Manly_1993;
-@Boyce_1999]. Johnson (1980) identified four orders of habitat selection: (1)
-the geographical range of a species, (2) the home range of an individual, (3)
-the habitat patches within the home range and (4) specific resources within a
-habitat patch. Moving past this hierarchical perspective, Mayor (2009) reviewed
+@Boyce_1999]. Johnson (1980) identified four orders of habitat selection:
+the geographical range of a species, the home range of an individual, the habitat patches within the home range and specific resources within a
+habitat patch. 
+Moving past this hierarchical perspective, Mayor (2009) reviewed
 types of scale relevant in measurement of habitat selection and recommend using
-a continuum of scales for identifying characteristic scales of selection. For
-example, @Mayor_2007 showed caribou select for shallow snow at all scales
+a continuum of scales for identifying characteristic scales of selection. 
+<!-- highlight this -->A continuum of scales allows xyz advantage
+
+
+For
+example, @Mayor_2007 showed caribou select for shallow snow at all scales and <!--what else higlight-->
 and by using a continuum of scales, avoided the bias of predefined scales assumed to be associated with certain behaviors.
 
 
