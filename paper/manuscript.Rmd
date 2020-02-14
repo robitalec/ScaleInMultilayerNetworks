@@ -761,14 +761,19 @@ and temporal scale within a multilayer framework. In our caribou case study, we
 show that (1) multilayer social networks can be, but are not always,
 scale-dependent, and (2) the use of multilayer networks could be useful for
 identifying habitat or season-specific social processes. Our analyses of social,
-spatial, and temporal scales in multilayer network framework highlight potential
+spatial, and temporal scales in a multilayer network framework highlight the potential
 to identify scales at which different properties of layers within a multilayer
 network show the most variability. Furthermore, we discuss the potential
 integration of individual phenotypes and fitness, collective movement, and
 habitat selection for future analyses considering spatial ecology using
 multilayer networks.
 
-<!-- Alec, I think you need to include a paragraph reflecting on the importance of scale and ~3 critical things we should take away from this (maybe especially in light of including spatial data?) -->
+<!-- 
+TODO: Schneider 2001, Levin og, 
+
+
+
+Alec, I think you need to include a paragraph reflecting on the importance of scale and ~3 critical things we should take away from this (maybe especially in light of including spatial data?) -->
 
 Multilayer networks are complicated in that they can incorporate data as varied
 as social interactions, landscape features, and seasons, all of which exist at
