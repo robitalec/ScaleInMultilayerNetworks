@@ -249,6 +249,15 @@ citep('10.1111/1365-2656.12773')
 # R
 citep(citation())
 
+# data.table
+citep(citation('data.table'))
+
+# igraph
+citep(citation('igraph'))
+
+# asnipe
+citep(citation('asnipe'))
+
 
 ### Write out bib ----
 write.bibtex(file = "references/knitcite.bib")

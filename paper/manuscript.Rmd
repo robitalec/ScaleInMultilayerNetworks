@@ -264,7 +264,8 @@ layer relevance is the proportion of neighbours present in each layer compared
 to the neighbourhood for each individual [@Berlingerio_2012]. Finally, we
 calculated the similarity of layers between seasons, across landcover classes
 (e.g. winter open compared to summer open) using the Pearson correlation
-coefficient [@Br_dka_2018].
+coefficient [@Br_dka_2018]. Network metrics were calculated using the R packages 
+`igraph` [@Csardi_2006], `asnipe` [@Farine_2019] and `data.table` [@Dowle_2019]. 
 
 
 
