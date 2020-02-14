@@ -326,12 +326,12 @@ connections an individual would have across these networks (Figure
 formed up to ~100 m threshold, followed by a plateau and slight decrease at
 higher thresholds, presumably due to an increase in summer forest degree at ~500
 m (Figure \@ref(fig:socres)d). Taken together, these results suggest the optimal
-social scale at which groups should be assigned is likely somewhere between
-~20 - 100 m based on the rate at which network metrics stabilized. For ungulates,
+social scale at which groups should be assigned is likely somewhere between ~20
+- 100 m based on the rate at which network metrics stabilized. For ungulates,
 groups are often assigned based on 50 m threshold (Lingle 2003; Lesmeries et al.
 2018; Peignier et al. 2019), suggesting that given similar quantities of data,
-~50 m is likely an appropriate social scale for generating social networks in caribou
-and similar species.
+~50 m is likely an appropriate social scale for generating social networks in
+caribou and similar species.
 <!-- TODO: missing summer relevance and all layer similarily--> 
 
 
