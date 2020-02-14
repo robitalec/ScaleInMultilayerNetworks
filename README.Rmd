@@ -13,8 +13,6 @@ knitr::opts_chunk$set(
 )
 ```
 
-<!-- badges: start -->
-<!-- badges: end -->
 
 # The problem and promise of scale in multilayer networks
 Alec Robitaille, Quinn M.R. Webber, Julie Turner and Eric Vander Wal
