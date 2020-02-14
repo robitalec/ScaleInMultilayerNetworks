@@ -356,26 +356,25 @@ resolution, at a much lower rate. Connective redundancy slightly decreased as
 landcover resolution increased (Figure \@ref(fig:lcres)d). These results
 indicate the importance of matching landcover resolution to scale of selection
 as well as ensuring the landcover product used has a resolution fine enough to
-detect landscape features and habitats relevant to study species. <!-- TODO:
-how? This isn't clear enough for me to follow yet -->
+detect landscape features and habitats relevant to study species. 
 
 
-<!-- TODO: update this..... -->
 As the number of observations used to generate multilayer networks increased,
-individuals became more connected and metrics generally appeared to stabilize.
+individuals became more connected and metrics appeared to stabilize.
+Mean graph strength varied in winter layers becoming stable at ~200 m and remained consistently weak in summer layers (Figure \@ref(fig:nobs)a). Layer relevance in winter layers increased between ~10 - ~50 observations, remaining stable with additional observations (Figure \@ref(fig:nobs)b). 
+<!-- TODO: update with fix for open/rerun -->
 Like coarse landcover resolution (above), low numbers of observations were not
-sufficient for capturing individuals in all contexts and layer similarity could
-not be calculated below approximately 75 observations for forest, approximately
+sufficient for capturing individuals in all contexts and therefore layer similarity could
+not be calculated below approximately <!--TODO: update these -->75 observations for forest, approximately 
 210 observations for open and approximately 300 observations for forage (Figure
 \@ref(fig:nobs)c). Once sufficient observations were obtained, layer similarity
 stabilized for all three landcover classes at approximately 200 observations for
 forest and approximately 300 observations for open and forage landcover types.
-Connective redundancy increased with increasing number of observations as
-individuals became more connected to neighbours in multiple layers (Figure
-\@ref(fig:nobs)d). Given the overall trend of these multilayer metrics
+Connective redundancy increased dramatically between ~10 - ~50 observations before stabilizing with all new observations included (Figure \@ref(fig:nobs)d). 
+Given the observed trend of these multilayer metrics
 stabilizing after a certain number of observations are included, the results
 suggest this sensitivity method could be useful for determining the number of
-observations necessary for sufficiently describing the social dynamics across
+observations necessary for sufficiently describing social dynamics across
 contexts. 
 
 <!-- TODO: I'm not sure this is relevant since this is the main way it
