@@ -318,17 +318,13 @@ observations to mimic collection of observational data. <!-- TODO: bah conclude
 
 In general, individuals in multilayer networks became more connected as social
 scale increased; however, this relationship varied by habitat type and season.
-As social scale increased, graph strength for winter networks increased to
-~100-200 m thresholds, followed by a plateau, while graph strength for summer
+As social scale increased, graph strength for winter networks increased rapidly between 5 m and 50 m thresholds, followed by a plateau, while graph strength for summer
 networks did not change as the social threshold increased (Figure
 \@ref(fig:socres)a). Layer relevance increased for winter networks between 5 and
 50 m social thresholds, then did not change for any habitat types which suggests
 the winter habitat layers captured most, if not all, of the potential
 connections an individual would have across these networks (Figure
-\@ref(fig:socres)b). Connective redundancy increased rapidly when groups were
-formed up to ~100 m threshold, followed by a plateau and slight decrease at
-higher thresholds, presumably due to an increase in summer forest degree at ~500
-m (Figure \@ref(fig:socres)d). Taken together, these results suggest the optimal
+\@ref(fig:socres)b). Layer similarity (Figure \@ref(fig:socres)c) and connective redundancy (Figure \@ref(fig:socres)d) were relatively stable across social thresholds. Taken together, these results suggest the optimal
 <!-- TODO: why optimal -->
 social scale at which groups should be assigned is likely somewhere between ~20
 - 100 m based on the rate at which network metrics stabilized. For ungulates,
@@ -336,7 +332,7 @@ groups are often assigned based on 50 m threshold (Lingle 2003; Lesmeries et al.
 2018; Peignier et al. 2019), suggesting that given similar quantities of data,
 ~50 m is likely an appropriate social scale for generating social networks in
 caribou and similar species.
-<!-- TODO: missing summer relevance and all layer similarily--> 
+<!-- TODO: missing summer relevance --> 
 
 
 Increasing the scale of landcover resolution resulted in decreased proportion of
