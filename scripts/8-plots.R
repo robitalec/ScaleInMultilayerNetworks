@@ -47,24 +47,14 @@ varnames <- data.table(
 
 ### Plots ----
 ## Manuscript figures
-# Across layers - degree deviation, neigh, multideg, connredund
-metriccols <- c('neigh', 'multideg', 'degdev', 'connredund')
-DT[, paste0('mn', metriccols) := lapply(.SD, mean, na.rm = TRUE), 
-   .SDcols = metriccols, by = var]
-
-# Within layers - splitNeigh, relev, connredund, graphstrength
-metriccols <- c('splitNeigh', 'relev', 'graphstrength')
-DT[, paste0('mn', metriccols) := lapply(.SD, mean, na.rm = TRUE), 
-   .SDcols = metriccols, by = c(var, splitBy)]
-
-## Theme
 # Legend position
 pos1 <- c(0.85, 0.3)
 pos2 <- c(0.85, 0.3)
 
+# Theme
 p <- theme(legend.text = element_text(size = 12, color = "black"),
            legend.title = element_blank(),
-           legend.spacing = unit(-4.5, 'cm'),
+           legend.spacing = unit(-0.5, 'cm'),
            legend.background = element_blank(),
            legend.key = element_blank(),
            axis.text.x = element_text(size = 14, color = "black", vjust = 0.65),
@@ -94,11 +84,12 @@ linesize <- 1.3
 base1 <- ggplot(unique(DT[, .SD, .SDcols = c(var, 'lcname', 'layersim')]), 
             aes(x = get(var), linetype = lcname))
 
-g1 <- base1 + geom_line(aes(y = (layersim)), size = linesize) + 
+g1 <-
+  base1 + geom_line(aes(y = layersim), size = linesize) + 
   ylab('Layer Similarity') +
   expand_limits(y = c(-1, 1)) +
   geom_hline(yintercept = 0) +  
-  theme(legend.position = pos2)
+  theme(legend.position = pos2) 
 
 # Plot full, across
 base2 <- ggplot(DT[, .SD[1], by = var], 
@@ -135,6 +126,8 @@ g8 <- base3 + geom_line(aes(y = mngraphstrength), size = linesize) +
     theme(plot.tag = element_text(size = 14, hjust = 0, vjust = 0),
           legend.key.width = unit(1.4,"cm")) &
     labs(x = varnames[vars == var, varname]) &
+    scale_linetype_manual(
+      values = c("forest" = "dashed", "open" = "dotted", "forage" = "solid")) &
     p)
 
 
