@@ -580,7 +580,7 @@ logistical constraints.
 
 Social processes, movement decisions, and space use are inextricably linked and
 multilayer networks represent a potential analytical framework for linking these
-processes [@Mourier_2019] (Mourier et al. 2019). Movement as a collective group
+processes [@Mourier_2019]. Movement as a collective group
 can reduce per capita predation risk via detection-dilution trade-offs and
 improve information transfer about the quality or location of resources to other
 group members [@Jolles_2019]. In our case study, we integrate proximity based
@@ -596,8 +596,7 @@ were applied to monitor movement of sharks (*Carcharhinus amblyrhynchos* and
 *Carcharhinus melanopterus*) between fixed location autonomous arrays. In this
 example, nodes represent locations within the array, *intralayer edges*
 represent individual movement frequency, and *interlayer edges* represent
-contact probability among individuals at a given node [@Mourier_2019] (Mourier
-et al. 2019). Although movement between fixed arrays is inherent, networks are
+contact probability among individuals at a given node [@Mourier_2019]. Although movement between fixed arrays is inherent, networks are
 not constructed based on continuous measures of dyadic or collective movement
 [@Long_2014]. Our case study builds on the work of Mourier et al. (2019) and
 explicitly integrates continuous and simultaneous measures of animal movement
@@ -646,7 +645,7 @@ behavioural layers [e.g. @Smith_Aguilar_2019], monolayer networks that explicity
 quantify movement paramters could be itnegrated. For example, edges could
 represent measures of dyadic or collective movement based on dynamic interaction
 metrics [@Long_2014]. Integrating movement layers with habitat-specific social
-association layers could further shed light on the role of movement as a driver
+association layers could further illuminate the role of movement as a driver
 of the social and spatial environments an individual experiences [@Webber_2018].
 In our case study, we generated multilayer networks based on habitat-specific
 monolayers. Coordinated movement of dyads, or groups, could vary based on
@@ -662,7 +661,7 @@ network framework is a logical next step for a burgeoning field. In particular,
 when association networks are habitat-specific, we suggest the integration of
 movement and space use in multilayer networks provides novel insights into the
 effects of habitat configuration on the formation of the social environment
-[@He_2019].
+[@He_2019; @Webber_2018].
 
 
 ## Habitat selection and space use
