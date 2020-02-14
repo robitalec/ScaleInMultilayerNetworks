@@ -118,7 +118,11 @@ zzbox[layer %in% c('winter-1', 'summer-1'),
       c('modx', 'mody') := .(slideright * (.GRP - 1), 3), by = layer]
 
 
-# Edges between same individuals
+#Edges between same individuals
+zzz[layer == 'summer-3', c('xendsame', 'yendsame') := .(shearx + slideright, sheary)]
+zzz[layer == 'summer-2', c('xendsame', 'yendsame') := .(shearx + slideright, sheary + mody)]
+zzz[layer == 'summer-1', c('xendsame', 'yendsame') := .(shearx + slideright, sheary + mody)]
+
 # a <- zzz[!is.na(xend) & !is.na(yend)][vertex.names == 'FO2016004', .SD]
 # merge(a, a[, .(V1e = V1, V2e = V2, vertex.names)], allow.cartesian = TRUE)
 
@@ -153,20 +157,19 @@ labels <- data.table(
   ) +
     geom_polygon(aes(group = layer), data = zzbox[order(ord)],
                  alpha = 0.25) + 
-    geom_edges(aes(group = layer,
-                   xend = shearxend + modx,
+    geom_edges(aes(xend = shearxend + modx,
                    yend = shearyend + mody,
-                   size = weight),
-               alpha = 1
+                   size = weight)
     ) +
     scale_size(range = c(0.1, 2)) + 
-    # geom_edges(aes(group = layer,
-    #                xend = shearxend + modx,
-    #                yend = shearyend + mody
-    # ), data = zzz[, .SD[order(vertex.names, modx, mody)]]) +
+    geom_edges(aes(xend = xendsame,
+                   yend = yendsame),
+               size = 0.1,
+               alpha = 0.5
+    ) +
     geom_nodes(aes(color = vertex.names), size = 5) +
     scale_color_viridis_d() + 
-    guides(color = FALSE) +
+    guides(color = FALSE, size = FALSE) +
     geom_text(aes(x, y, xend = NULL, yend = NULL, label = label), data = labels) + 
   p
 )
