@@ -54,17 +54,18 @@ layer_relevance(DT, idcol, splitBy = splitBy)
 stopifnot(DT[!between(relev, 0, 1), .N] == 0)
 
 
+### Mean across individuals(for plots) ----
+splitBy <- c('season', lccol)
+
+# Across layers - degree deviation, neigh, multideg, connredund
+metriccols <- c('neigh', 'multideg', 'degdev', 'connredund')
+DT[, paste0('mn', metriccols) := lapply(.SD, mean, na.rm = TRUE), 
+   .SDcols = metriccols, by = var]
+
+# Within layers - splitNeigh, relev, connredund, graphstrength
+metriccols <- c('splitNeigh', 'relev', 'graphstrength')
+DT[, paste0('mn', metriccols) := lapply(.SD, mean, na.rm = TRUE), 
+   .SDcols = metriccols, by = c(var, splitBy)]
+
 ### Output 
 saveRDS(DT, gsub('.Rds', '-metrics.Rds', path))
-
-
-
-## ARCHIVE
-# dcast(ml, ANIMAL_ID ~ get(var), value.var = 'cent')
-
-# Network correlations
-# netcors <- data.table(
-#   cornet = vapply(seq_along(netLs)[-length(netLs)], function(i) {
-#     cor(c(netLs[[i]]), c(netLs[[i + 1]]))
-#   }, FUN.VALUE = 42.0),
-#   spatscale = unique(ml$spatscale)[-length(netLs)])
