@@ -363,22 +363,23 @@ As the number of observations used to generate multilayer networks increased,
 individuals became more connected and metrics appeared to stabilize. Mean graph
 strength varied in winter layers becoming stable at ~200 m and remained
 consistently weak in summer layers (Figure \@ref(fig:nobs)a). Layer relevance in
-winter layers increased between ~10 m and ~50 m observations, remaining stable with
-additional observations (Figure \@ref(fig:nobs)b). <!-- TODO: update with fix
-for open/rerun --> Like coarse landcover resolution (above), low numbers of
-observations were not sufficient for capturing individuals in all contexts and
-therefore layer similarity could not be calculated below approximately <!--TODO:
-update these -->75 observations for forest, approximately 210 observations for
-open and approximately 300 observations for forage (Figure \@ref(fig:nobs)c).
-Once sufficient observations were obtained, layer similarity stabilized for all
-three landcover classes at approximately 200 observations for forest and
-approximately 300 observations for open and forage landcover types. Connective
-redundancy increased dramatically between ~10 m and ~50 m observations before
-stabilizing with all new observations included (Figure \@ref(fig:nobs)d). Given
-the observed trend of these multilayer metrics stabilizing after a certain
-number of observations are included, the results suggest this sensitivity method
-could be useful for determining the number of observations necessary for
-sufficiently describing social dynamics across contexts.
+winter layers increased between ~10 m and ~50 m observations, remaining stable
+with additional observations (Figure \@ref(fig:nobs)b). <!-- TODO: update with
+fix for open/rerun --> Like coarse landcover resolution (Figure
+\@ref(fig:lcres)), low numbers of observations were not sufficient for capturing
+individuals in all contexts and therefore layer similarity could not be
+calculated below approximately <!--TODO: update these -->75 observations for
+forest, approximately 210 observations for open and approximately 300
+observations for forage (Figure \@ref(fig:nobs)c). Once sufficient observations
+were obtained, layer similarity stabilized for all three landcover classes at
+approximately 200 observations for forest and approximately 300 observations for
+open and forage landcover types. Connective redundancy increased dramatically
+between ~10 m and ~50 m observations before stabilizing with all new
+observations included (Figure \@ref(fig:nobs)d). Given the observed trend of
+these multilayer metrics stabilizing after a certain number of observations are
+included, the results suggest this sensitivity method could be useful for
+determining the number of observations necessary for sufficiently describing
+social dynamics across contexts.
 
 <!-- TODO: I'm not sure this is relevant since this is the main way it
 is already done, can we make this thought more relevant to picking scales or
@@ -386,20 +387,21 @@ multilayer networks in general? I think it's important for building robust
 networks -->
 
 
-<!-- TODO: update.....-->
-Contrasting winter and summer seasons became more similar with increasing window
-length. Individual graph strength and layer relevance increased for all summer
-layers as individuals became more connected with increasing window lengths
-(Figure \@ref(fig:winlen)a, Figure \@ref(fig:winlen)b). Layer similarity between
-seasons increased consistently across landcover class (Figure
-\@ref(fig:winlen)b).  These results suggest that an increasing window length,
-especially for the summer season, may be resulting in less precisely defined
-seasons that are not clearly capturing periods of aggregation and
-dissaggregation related to resource availability.
+<!-- TODO: this first sentence is not about layer similarity - so hopefully it isn't
+guiding the reader the wrong way -->
+Contrasting seasons of sociality become more similarly connected with window
+length. Mean graph strength and layer relevance increased for summer layers as
+individuals became more connected with increasing window lengths (Figure
+\@ref(fig:winlen)a, Figure \@ref(fig:winlen)b). In contrast, mean graph strength
+and layer relevance was relatively stable for winter layers. Similarity of
+layers across habitat classes and between seasons (e.g. open summer compared to
+open winter) was variable across window lengths (Figure \@ref(fig:winlen)c).
+Connective redundancy increased marginally with increasing window length. These
+results suggest that an increasing window length, especially for the summer
+season, may be resulting in less precisely defined seasons that are not clearly
+capturing periods of aggregation and dissaggregation related to resource
+availability.
 
-
-<!-- TODO: end with something highlighting this shows it's
-important to properly define your season -->
 
 Moving winter and summer seasons showed increasing connectivity of individuals. Graph strength and layer relevance increased at time window position ~20 for summer layers (Figure \@ref(fig:winpos)a, Figure \@ref(fig:winpos)b). Layer similarity... <!-- TODO: between
 seasons increased consistently across landcover class (Figure
