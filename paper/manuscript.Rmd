@@ -310,6 +310,8 @@ observations to mimic collection of observational data. <!-- TODO: bah conclude
 
 # Scale in multilayer networks in practice: case study results and discussion
 <!-- TODO: Add intro/general to results? with mention figures are means of inds-->
+
+
 <!-- TODO: make sure we clarify these are means of all individuals? -->
 <!-- TODO: discuss layer similarity for social threshold -->
 
@@ -326,6 +328,7 @@ connections an individual would have across these networks (Figure
 formed up to ~100 m threshold, followed by a plateau and slight decrease at
 higher thresholds, presumably due to an increase in summer forest degree at ~500
 m (Figure \@ref(fig:socres)d). Taken together, these results suggest the optimal
+<!-- TODO: why optimal -->
 social scale at which groups should be assigned is likely somewhere between ~20
 - 100 m based on the rate at which network metrics stabilized. For ungulates,
 groups are often assigned based on 50 m threshold (Lingle 2003; Lesmeries et al.
