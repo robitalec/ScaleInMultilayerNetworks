@@ -701,16 +701,17 @@ comparing sociality and habitat selection across temporal or spatial contexts,
 are implicitly multilayer analyses.
 
 
-<!-- TODO: weak -->
-Multilayer networks can be used to explicitly consider habitat selection and
-sociality across scales. Animal social systems can be parsed by spatial
-contexts, defined, for example, by habitat types as in Figure \@ref(fig:lcres).
-The effect of seasonality of resources can can be directly measured by differences in
-habitat selection and sociality across temporal layers. Habitat selection can be
-explicitly integrated using network layers defined by similarity of selection
-coefficients between individuals. These explicit integration of habitat
-selection and sociality across social, spatial and temporal scales highlight the
-potential for novel insights from multilayer networks.
+<!-- TODO: weak --> 
+Multilayer networks can be used to explicitly consider
+habitat selection and sociality across scales. Animal social systems can be
+parsed by spatial contexts, defined, for example, by habitat types as in Figure
+\@ref(fig:lcres). The effect of seasonality of resources can can be directly
+measured by differences in habitat selection and sociality across temporal
+layers as in Figure \@ref(fig:winpos) and Figure \@ref(fig:winlen). Habitat
+selection can be explicitly integrated using network layers defined by selection
+coefficients for individuals. These examples of explicit integrations of habitat selection
+and sociality across social, spatial and temporal scales highlight the potential
+for novel insights from multilayer networks.
 
 
 # Conclusions
