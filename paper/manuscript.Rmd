@@ -190,10 +190,9 @@ subsequent analyses.
 ### Network types and construction
 We generated a multilayer social network consisting `r DT[, uniqueN(get(idcol))]`
 individual nodes and two aspects (season and landcover). Two season
-elementary-layers (winter and summer) and three landcover elementary-layers
-(forest, forage, and open) combined for a total of six layers. Layers were
-composed of individuals represented as nodes and social associations represented
-as edges, for each season and landcover combination. Proximity-based social
+elementary-layers (summer and winter) and three landcover elementary-layers
+(forest, forage, and open) combined for a total of six layers. Single layers were
+composed of individuals lnked by social associations, for each season and landcover combination. Proximity-based social
 network layers were generated using the R package `spatsoc` [@Robitaille_2019]
 in `r version$version.string` [@R_Core_Team_2019].
 <!-- TODO: FIX VANDER WAL IN SPATSOC REF -->
@@ -229,7 +228,7 @@ designated if two or more individuals occurred within a given distance of one
 another at any given time point.
 
 
-(ref:ml) Visualization of multilayer network for social ungulate case study representing social association of caribou (*Rangifer tarandus*) on Fogo Island, Newfoundland in summer 2017 and winter 2018.  Individual caribou (n = `r DT[, uniqueN(get(idcol))]`) are show as nodes and each indiviual is represented by a unique color. Six layers represent combinations of two seasons (winter and summer) and three habitat classes (open, forest and forage). Intralayer edges connect pairs of individuals that associated according to spatial and temporal thresholds described above, and are scaled in line thickness according to strength of association (SRI). Interlayer edges connect individuals to themselves across seasons and within habitat classes (e.g. individual "A" in summer, forest and individual "A" in winter, forest).
+(ref:ml) Visualization of multilayer network for social ungulate case study representing social association of caribou (*Rangifer tarandus*) on Fogo Island, Newfoundland in summer 2017 and winter 2018.  Individual caribou (n = `r DT[, uniqueN(get(idcol))]`) are show as nodes and each indiviual is represented by a unique color. Six layers represent combinations of two seasons (summer and winter) and three habitat classes (open, forest and forage). Intralayer edges connect pairs of individuals that associated according to spatial and temporal thresholds described above, and are scaled in line thickness according to strength of association (SRI). Interlayer edges connect individuals to themselves across seasons and within habitat classes (e.g. individual "A" in summer, forest and individual "A" in winter, forest).
 
 ```{r ml, fig.cap='(ref:ml)'}
 knitr::include_graphics('../graphics/figure-2.png')
@@ -345,7 +344,7 @@ winter for open and forest habitats but decreased for forage habitats (Figure
 layers. Layer similarity was stable for forest and open, except for a sharp
 decrease in layer similarity in open at 100 m and 250 m (Figure
 \@ref(fig:lcres)c). Layer similarity was not possible to calculate between
-winter and summer forage because, at all landcover resolutions greater than 30
+summer and winter forage because, at all landcover resolutions greater than 30
 m, there were no individuals connected in the network layers. Individuals still
 used forage habitats but given a lower availability due to increasing landcover
 resolution, at a much lower rate. Connective redundancy slightly decreased as
