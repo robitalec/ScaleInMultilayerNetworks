@@ -365,24 +365,25 @@ detect landscape features and habitats relevant to study species, such as import
 
 As the number of observations used to generate multilayer networks increased,
 individuals became more connected and metrics appeared to stabilize. Mean graph
-strength varied in winter layers at low number of observations, becoming stable
-at ~75 observations and was consistently weak in summer layers (Figure
-\@ref(fig:nobs)a). Layer relevance in winter layers increased between ~10 m and
-~100 m observations, remaining stable with additional observations (Figure
-\@ref(fig:nobs)b). Like coarse landcover resolution (Figure \@ref(fig:lcres)),
-low numbers of observations were not sufficient for capturing individuals in all
-contexts and therefore layer similarity could not be calculated below ~30
-observations for forest, approximately ~80 observations for open (Figure
-\@ref(fig:nobs)c). Layer similarity was not possible to calculate for forage
-layers because there were no connected individuals in summer forage. Once
-sufficient observations were obtained, layer similarity was relatively stable
-for forest and open layers. Connective redundancy increased dramatically between
-~10 m and ~50 m observations before stabilizing with all new observations
-included (Figure \@ref(fig:nobs)d). Given the observed trend of these multilayer
-metrics stabilizing after a certain number of observations are included, the
-results suggest this sensitivity method could be useful for determining the
-number of observations necessary for sufficiently describing social dynamics
-across contexts.
+strength was consistently weak in summer layers but varied in winter layers at
+low number of observations, becoming stable at ~75 observations (Figure
+\@ref(fig:nobs)a). Layer relevance in the summer was consistently low, but
+winter layers increased between approximately 10  and 100  observations,
+remaining stable with additional observations (Figure \@ref(fig:nobs)b). Like
+coarse landcover resolution (Figure 4), low numbers of observations were not
+sufficient for capturing individuals in all contexts and therefore layer
+similarity could not be calculated below ~30 observations for forest,
+approximately ~80 observations for open (Figure \@ref(fig:nobs)c). Layer
+similarity was not possible to calculate for forage layers because there were no
+connected individuals in summer forage. Once sufficient observations were
+obtained, layer similarity showed some variability with increasing numbers of
+observations for forest and was relatively stable in open layers. Connective
+redundancy increased dramatically between ~10 and ~50 observations before
+stabilizing with additional observations included (Figure \@ref(fig:nobs)d).
+Given the observed trend of these multilayer metrics stabilizing after a certain
+number of observations are included, the results suggest this sensitivity method
+could be useful for determining the number of observations necessary for
+sufficiently describing social dynamics across contexts.
 
 <!-- TODO: I'm not sure this is relevant since this is the main way it
 is already done, can we make this thought more relevant to picking scales or
