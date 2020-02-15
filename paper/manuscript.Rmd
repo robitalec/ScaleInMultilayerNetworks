@@ -623,7 +623,7 @@ Importantly, the key to incorporating movement in multilayer networks across
 scales is the technological advancements available to overcome previous
 limitations [@Hughey_2018]. Biologging and wildlife tracking technology has
 advanced to the point where relocations can be programmed to occur as frequently
-as each second [@Börger_2016], a practice which has been applied to questions of
+as each second [@B_rger_2016], a practice which has been applied to questions of
 collective movement [e.g @Strandburg_Peshkin_2015]. Meanwhile, remote sensing
 technology, including unmanned aerial vehicles and satellites, can be used to
 track the fine-scale movements of groups over large distances and time scales
@@ -737,7 +737,7 @@ imagery collected by modern satellites provide, for example, 10 m spatial
 resolution optical imagery at a temporal revisit period of five days at the
 equator [@Drusch_2012]. Similarly, animal tracking devices have become smaller
 allowing their deployement on a wider variety of organisms [@Wikelski_2007] and
-at a higher temporal resolution [@Börger_2016]. Given this increased
+at a higher temporal resolution [@B_rger_2016]. Given this increased
 availability of complex data, it is important to consider using a broad
 continuum of scales to fully capture ecological processes, carefully select and
 combine sources of data with different temporal and spatial scales, and
