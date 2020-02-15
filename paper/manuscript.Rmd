@@ -13,6 +13,7 @@ output:
   # bookdown::word_document2:
   #   reference_docx: template.docx
 bibliography: ../references/knitcite.bib
+csl: csl.csl
 ---
 
 \newpage
@@ -85,8 +86,7 @@ scales spatially and temporally, it remains unclear whether coarser scales of
 sociality, including social association and home range overlap, vary predictably
 with social interaction [@Castles_2014;
 @Farine_2015a]. Thus, we define social scale as the type of social relationship
-observed that can be explicitly defined and measured [@Farine_2015a]. <!--
-Farine references comes out as D.R. Farine 2015 -->
+observed that can be explicitly defined and measured [@Farine_2015a].
 
 Animal social network analysis is a well-developed tool used to measure the
 relationships of individuals and organization of social systems [@Krause_2009;
