@@ -103,7 +103,7 @@ representing (i) different classes of individuals, e.g. male or female; (ii)
 types of behaviours, e.g. grooming, travelling, or foraging; and (iii) spatial
 areas, e.g. local or regional, or temporal windows, e.g. daily or seasonal
 [@Kivela_2014; @Porter_2018]. Multilayer networks are relatively novel to
-studies of animal behaviour [@Silk_2018; @Finn_2019], although they have been
+studies of animal behavior [@Silk_2018; @Finn_2019], although they have been
 used to describe multidimensional human social systems, complex transportation
 networks, and neural networks [@Silk_2018]. The role of scale within multilayer
 social networks remains unexplored but provides a unique opportunity to develop
@@ -229,7 +229,7 @@ designated if two or more individuals occurred within a given distance of one
 another at any given time point.
 
 
-(ref:ml) Visualization of multilayer network for social ungulate case study representing social association of caribou (*Rangifer tarandus*) on Fogo Island, Newfoundland in summer 2017 and winter 2018.  Individual caribou (n = `r DT[, uniqueN(get(idcol))]`) are show as nodes and each indiviual is represented by a unique color. Six layers represent combinations of two seasons (winter and summer) and three habitat classes (open, forest and forage). Intralayer edges connect pairs of individuals that associated according to spatial and temporal thresholds described above, and are scaled in line thickness according to strength of association (SRI). Interlayer edges connect individuals to themselves across seasons and within habitat classes (eg. individual "A" in summer, forest and individual "A" in winter, forest).
+(ref:ml) Visualization of multilayer network for social ungulate case study representing social association of caribou (*Rangifer tarandus*) on Fogo Island, Newfoundland in summer 2017 and winter 2018.  Individual caribou (n = `r DT[, uniqueN(get(idcol))]`) are show as nodes and each indiviual is represented by a unique color. Six layers represent combinations of two seasons (winter and summer) and three habitat classes (open, forest and forage). Intralayer edges connect pairs of individuals that associated according to spatial and temporal thresholds described above, and are scaled in line thickness according to strength of association (SRI). Interlayer edges connect individuals to themselves across seasons and within habitat classes (e.g. individual "A" in summer, forest and individual "A" in winter, forest).
 
 ```{r ml, fig.cap='(ref:ml)'}
 knitr::include_graphics('../graphics/figure-2.png')
@@ -300,7 +300,7 @@ time windows were iteratively used to partition data into two discrete seasons
 Studies of social network analysis vary in the number and frequency of
 observations as well as the data collection technique used to generate networks
 [@Davis_2018; @Webber_2019]. For example, GPS data is commonly collected at a
-fixed rate, eg. every $x$ minutes or hours, continuously throughout the study
+fixed rate, e.g. every $x$ minutes or hours, continuously throughout the study
 period. We investigated the influence of the number of observations on resulting
 multilayer networks. We randomly selected 500 timesteps and iteratively included
 25 additional observations, regenerating the multilayer network and calculating
