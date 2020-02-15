@@ -71,16 +71,16 @@ animal behavior within the social environment will be scale-dependent.
 Sociality exists across both temporal and spatial scales (Whitehead 2008). For
 example, grooming requires close spatial proximity between conspecifics and
 occurs over brief time periods [e.g. @Carter_2015], whereas social association
-represents shared space use by members of the same social group [Figure 1,
-@Franks_2009]. <!--Figure \@ref(fig:spacetime) TODO: something broken here?? -->
-Further, for social interactions or associations to occur individuals must share
-space, and thus have overlapping home ranges [@VanderWal_2014]. In the context
-of the social environment, home range overlap is an example of how animals share
-space over coarser spatial and temporal scales (e.g. Piza-Roca et al. 2018).
-Although the social environment clearly scales spatially and temporally, it
-remains unclear whether coarser scales of sociality, including social
-association and home range overlap, vary predictably with social interaction
-[@Castles_2014;
+represents shared space use by members of the same social group [Figure
+\@ref(fig:spacetime), @Franks_2009]. <!--Figure \@ref(fig:spacetime) TODO:
+something broken here?? --> Further, for social interactions or associations to
+occur individuals must share space, and thus have overlapping home ranges
+[@VanderWal_2014]. In the context of the social environment, home range overlap
+is an example of how animals share space over coarser spatial and temporal
+scales (e.g. Piza-Roca et al. 2018). Although the social environment clearly
+scales spatially and temporally, it remains unclear whether coarser scales of
+sociality, including social association and home range overlap, vary predictably
+with social interaction [@Castles_2014;
 @Farine_2015a]. Thus, we define social scale as the type of social relationship
 observed that can be explicitly defined and measured [@Farine_2015a]. <!--
 Farine references comes out as D.R. Farine 2015 -->
@@ -246,18 +246,19 @@ different layers. To measure the role of individuals, we calculated degree
 centrality and graph strength. Degree centrality is the number of direct
 connections an individual has to other individuals in a network layer. Graph
 strength is the degree weighted by the strength of association, in this case
-SRI, in each layer-specific season and landcover context. Extending degree centrality, we calculated multidegree, the
-sum of degree centrality of individuals across layers, and neighbourhood, the sum of unique
-neighbours to each individual across layers [@Berlingerio_2012; @Kivela_2014]. We evaluated
+SRI, in each layer-specific season and landcover context. Extending degree
+centrality, we calculated multidegree, the sum of degree centrality of
+individuals across layers, and neighbourhood, the sum of unique neighbours to
+each individual across layers [@Berlingerio_2012; @Kivela_2014]. We evaluated
 the relevance and redundancy of layers by combining the multidegree and
-neighbourhood to calculate layer relevance and connective redundancy. Layer relevance is the proportion of neighbours present in each layer compared
-to the neighbourhood for each individual and connective
-redundancy is the proportion of neighbours repeated in multiple layers, and
- [@Berlingerio_2012]. Finally, we
+neighbourhood to calculate layer relevance and connective redundancy. Layer
+relevance is the proportion of neighbours present in each layer compared to the
+neighbourhood for each individual and connective redundancy is the proportion of
+neighbours repeated in multiple layers, and [@Berlingerio_2012]. Finally, we
 calculated the similarity of layers between seasons, across landcover classes
 (e.g. summer open compared to winter open) using the Pearson correlation
-coefficient [@Br_dka_2018]. Network metrics were calculated using the R packages 
-`igraph` [@Csardi_2006], `asnipe` [@Farine_2019] and `data.table` [@Dowle_2019]. 
+coefficient [@Br_dka_2018]. Network metrics were calculated using the R packages
+`igraph` [@Csardi_2006], `asnipe` [@Farine_2019] and `data.table` [@Dowle_2019].
 
 
 
@@ -298,9 +299,8 @@ investigated the influence of the number of observations on resulting multilayer
 networks. We randomly selected a maximum 485 timesteps for each season to
 represent all possible observations. We regenerated multilayer networks and
 calculated associations of individuals with 25 additional observations at each
-iteration (10 - 485 observations). Subsequent iterations included the previous set of observations to
-mimic collection of observational data. <!-- TODO: bah conclude / this sentence
-falls off a cliff -->
+iteration (10 - 485 observations). Subsequent iterations included the previous
+set of observations to mimic collection of observational data. 
 
 
 #### Time window length and position
@@ -314,7 +314,7 @@ seasons (summer and winter) and generate multilayer networks.
 
 
 # Scale in multilayer networks in practice: case study results and discussion
-<!-- TODO: Add intro/general to results? with mention figures are means of inds-->
+<!-- TODO: Add intro/general to results?-->
 
 
 In general, individuals in multilayer networks became more connected as social
@@ -532,7 +532,7 @@ common trope that individuals must be associating to interact, and many studies
 therefore assume that proximity is proxy for interacting [@Farine_2015a]. For
 instance, baboons need to be in proximity to groom each other. However, animals
 have certain interactions that do not require proximity such as long-distance
-vocalization and olfactory signals [@Carter_2015] With the advancement of
+vocalization and olfactory signals [@Carter_2015]. With the advancement of
 biologging technology, we have the ability to record social interactions that do
 not require proximity, particularly long-distance communication networks with
 devices like microphone arrays [@Snijders_2017]. Using relocation data, our case
@@ -542,7 +542,7 @@ social threshold is greater than approximately 50 m during the winter,
 individuals demonstrate dramatically different graph strength (Figure 
 \@ref(fig:socres)) in different habitat types, having higher graph strength in
 forage and open habitats where they can likely see each other and still interact
-with visual cues than in forest habitats. Varying social scales can have
+with visual cues unlike in forest habitats. Varying social scales can have
 different fitness repercussions for individuals. Rhesus macaques (*Macaca
 mulatta*) had higher survivorship when they had fewer but stronger, more stable
 social associates and grooming partners rather than simply more associates
@@ -617,7 +617,7 @@ processes [@Mourier_2019]. Movement as a collective group
 can reduce per capita predation risk via detection-dilution trade-offs and
 improve information transfer about the quality or location of resources to other
 group members [@Jolles_2019]. In our case study, we integrate proximity based
-social networks that inherently rely on animal collective movement and, in
+social networks that inherently rely on animal collective movement, and, in
 general, we found that movement is likely an important mechanism driving social
 network connectivity within and between habitat types.
 
