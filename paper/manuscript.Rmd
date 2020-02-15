@@ -55,7 +55,6 @@ contribution incorporates perspectives on how the social environment and spatial
 processes are linked across scales in a multilayer context.
 
 ## Keywords
-<!-- TODO: is this the final list ? -->
 Social network analysis, Landscape ecology, Movement ecology, Space use 
 
 \newpage
@@ -77,8 +76,7 @@ Sociality exists across both temporal and spatial scales (Whitehead 2008). For
 example, grooming requires close spatial proximity between conspecifics and
 occurs over brief time periods [e.g. @Carter_2015], whereas social association
 represents shared space use by members of the same social group [Figure
-\@ref(fig:spacetime), @Franks_2009]. <!--Figure \@ref(fig:spacetime) TODO:
-something broken here?? --> Further, for social interactions or associations to
+\@ref(fig:spacetime), @Franks_2009]. Further, for social interactions or associations to
 occur individuals must share space, and thus have overlapping home ranges
 [@Vander_Wal_2013]. In the context of the social environment, home range overlap
 is an example of how animals share space over coarser spatial and temporal
