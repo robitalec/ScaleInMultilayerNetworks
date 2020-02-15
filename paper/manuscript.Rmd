@@ -341,25 +341,26 @@ is likely an appropriate social scale for generating social networks in caribou
 and similar species.
 
 
-Increasing landcover resolution resulted in a decreased proportion of forage, a
+Increasing landcover resolution resulted in a decreased availability of forage, a
 rare and patchy habitat, and corresponding low connectivity of individuals in
-these habitats. Mean graph strength increased consistently in winter forest and
-open habitats. Mean graph strength in winter forage varied across landcover
-resolutions with an increase at 250 m and decrease at 500 m. Individuals in
-summer layers had consistent weak connections. Layer relevance was stable in
-winter for open and forest habitats but decreased for forage habitats (Figure
-\@ref(fig:lcres)b). Layer relevance was stable for all habitat classes in summer
-layers. Layer similarity was stable for forest and open, except for a sharp
+these habitats. Individuals in
+summer layers had consistent weak connections (Figure
+\@ref(fig:lcres)a). Mean graph strength increased consistently in winter forest and
+open habitats but varied in winter forage varied across landcover
+resolutions with an increase at 250 m and decrease at 500 m (Figure
+\@ref(fig:lcres)a).  Layer relevance was stable for all habitat classes in summer
+layers; layer relevance was significantly higher in winter and stable in open and forest habitats but decreased for forage habitats (Figure
+\@ref(fig:lcres)b). <!--This pattern during the winter indicates that individuals had fewer neighbours in forage habitat habitats compared to their overall neighbourhood across habitats, likely due to the patchy nature of forage-->Layer similarity was low but stable for forest and open, except for a sharp
 decrease in layer similarity in open at 100 m and 250 m (Figure
 \@ref(fig:lcres)c). Layer similarity was not possible to calculate between
 summer and winter forage because, at all landcover resolutions greater than 30
 m, there were no individuals connected in the network layers. Individuals still
-used forage habitats but given a lower availability due to increasing landcover
-resolution, at a much lower rate. Connective redundancy slightly decreased as
-landcover resolution increased (Figure \@ref(fig:lcres)d). These results
+used forage habitats, but given the lower availability due to increasing landcover
+resolution, at a much lower rate. Connective redundancy was moderately high but decreased slightly as
+landcover resolution increased, indicating that many neighbours were the same between layers, but the proportion of neighbours in each layer slightly decreased at increasing landcover resolutions (Figure \@ref(fig:lcres)d). Overall, these results
 indicate the importance of matching landcover resolution to scale of selection
 as well as ensuring the landcover product used has a resolution fine enough to
-detect landscape features and habitats relevant to study species.
+detect landscape features and habitats relevant to study species, such as important patchy and rare habitats.
 
 
 As the number of observations used to generate multilayer networks increased,
