@@ -319,24 +319,26 @@ seasons (summer and winter) and generate multilayer networks.
 
 In general, individuals in multilayer networks became more connected as social
 scale increased; however, this relationship varied by habitat type and season.
-As social scale increased, graph strength for winter networks increased rapidly
-between 5 m and 50 m thresholds, followed by a plateau, while graph strength for
-summer networks did not change as the social threshold increased (Figure
-\@ref(fig:socres)a). Layer relevance increased for winter networks between 5 and
-50 m social thresholds, then did not change for any habitat types which suggests
+As social scale increased, mean graph strength for summer networks did not
+change as the social threshold increased, but graph strength in winter networks
+increased rapidly between 5 m and 50 m thresholds, followed by a plateau (Figure
+\@ref(fig:socres)a). Layer relevance was stable around 0 during the summer but
+increased for winter networks between 5 and 50 m social thresholds, then did not
+change for any habitat types (Figure \@ref(fig:socres)b). This pattern suggests
 the winter habitat layers captured most, if not all, of the potential
-connections an individual would have across these networks (Figure
-\@ref(fig:socres)b). Layer similarity (Figure \@ref(fig:socres)c) and connective
-redundancy (Figure \@ref(fig:socres)d) were relatively stable across social
-thresholds. Taken together, these results suggest the optimal 
-<!-- TODO: why optimal --> 
-social scale at which groups should be assigned is likely somewhere
-between ~20 - 100 m based on the rate at which network metrics stabilized. For
-ungulates, groups are often assigned based on 50 m threshold (Lingle 2003;
-Lesmeries et al. 2018; Peignier et al. 2019), suggesting that given similar
-quantities of data, ~50 m is likely an appropriate social scale for generating
-social networks in caribou and similar species.
-<!-- TODO: missing summer relevance .. the actual value of layer sim?--> 
+connections an individual would have across these networks. Layer similarity was
+not very strong for any habitat type, indicating that summer and winter networks
+are only weakly correlated. Furthermore, layer similarity in open habitats
+showed more variation as social threshold increased compared to forage and
+forest habitats (Figure \@ref(fig:socres)c). Connective redundancy was
+relatively stable across social thresholds, especially after 50 m (Figure
+\@ref(fig:socres)d). Taken together, these results suggest the optimal social
+scale at which groups should be assigned is likely somewhere between ~20 - 100 m
+based on the rate at which network metrics stabilized. For ungulates, groups are
+often assigned based on 50 m threshold (Lingle 2003; Lesmeries et al. 2018;
+Peignier et al. 2019), suggesting that given similar quantities of data, ~50 m
+is likely an appropriate social scale for generating social networks in caribou
+and similar species.
 
 
 Increasing landcover resolution resulted in a decreased proportion of forage, a
