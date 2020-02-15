@@ -42,9 +42,8 @@ and methodological gap in our understanding of an animal’s perception of scale
 Here we discuss the role of scale in the context of multilayer networks and
 provide a social ungulate case study to illustrate the role of social, spatial,
 and temporal scale on multilayer processes. We also present perspectives on
-future development and application of scale in multilayer networks with respect
-to: habitat selection and space use; phenotypes and individual fitness; and
-movement ecology and collective movement. Effective integration of social and
+future development and applications of scale in multilayer networks with respect
+to: phenotypes and individual fitness, movement ecology and collective movement, and habitat selection and space use. Effective integration of social and
 spatial processes, including biologically meaningful scales, within the context
 of animal social networks is an emerging area of research, as such our
 contribution incorporates perspectives on how the social environment and spatial
@@ -477,10 +476,9 @@ the social environment in the context of (1) phenotypes and individual fitness
 [@Webber_2018], (2) movement ecology and collective movement [@Bode_2011], and
 (3) habitat selection and space use [@He_2019]. Importantly, much of the work
 linking space use and the social environment has been theoretical and empirical
-studies are lacking [but see @Peignier_2019;
-@Strandburg_Peshkin_2015; @Strandburg_Peshkin_2017]. Here, we discuss the role
-mutlilayer networks within the emerging integration of social and spatial
-ecology within the behavioural ecology literature.
+studies are lacking [but see @Peignier_2019; @Strandburg_Peshkin_2015; @Strandburg_Peshkin_2017]. Here, we discuss the role
+mutlilayer networks<!-- TODO: withinwithin--> in the emerging integration of
+social and spatial ecology within the behavioural ecology literature.
 
 ## Phenotypes and Individual fitness
 
@@ -513,8 +511,8 @@ devices like microphone arrays [@Snijders_2017]. Using relocation data, our case
 study results indicate that there are different social patterns in different
 habitat types, likely indicating different types of interactions. When the
 social threshold is greater than approximately 50 m during the winter,
-individuals demonstrate dramatically different graph strength (Figure \@ref(fig:socres))
-in different habitat types, having higher graph strength in
+individuals demonstrate dramatically different graph strength (Figure 
+\@ref(fig:socres)) in different habitat types, having higher graph strength in
 forage and open habitats where they can likely see each other and still interact
 with visual cues than in forest habitats. Varying social scales can have
 different fitness repercussions for individuals. Rhesus macaques (*Macaca
@@ -815,15 +813,14 @@ networks:
 at which scale might these influence fitness? Are some scales better predictors
 for different fitness metrics? 
 
-2. Why do individuals associate more strongly
-with certain conspecifics in some habitats? What, if any, is the role of
-movement in the context of habitat networks? 
+2. Why do individuals associate more strongly with certain conspecifics in some
+habitats? What, if any, is the role of movement in the context of habitat
+networks?
 
-3. How, and why, does the spatial
-scale of perception influence, e.g. auditory, visual, or chemotaxis, influence
-the  social environment? What is the role of memory, and by extension social and
-spatial cognition, as animals navigate their environment and make decisions
-about where to move next?
+3. How, and why, does the spatial scale of perception influence, e.g. auditory,
+visual, or chemotaxis, influence the  social environment? What is the role of
+memory, and by extension social and spatial cognition, as animals navigate their
+environment and make decisions about where to move next?
 
 <!-- In summary, blah blah  -->
 
