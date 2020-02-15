@@ -209,7 +209,7 @@ applied to caribou at a distance of 50 m [@Peignier_2019; @Lesmerises_2018]. In
 all networks, individual caribou were represented as nodes, associations between
 individuals in a given habitat type and season were represented as intralayer
 edges, and connections between the same individuals across seasons and within
-habitat classes were represented as interlayer edges (Figure 2) .
+habitat classes were represented as interlayer edges (Figure \@ref(fig:ml)) .
 <!-- eg this is connecting contexts used to calculate layer similarity -->
 
 We weighted edges of social networks by the strength of association between
@@ -376,10 +376,10 @@ low number of observations, becoming stable at ~75 observations (Figure
 \@ref(fig:nobs)a). Layer relevance in the summer was consistently low, but
 winter layers increased between approximately 10  and 100  observations,
 remaining stable with additional observations (Figure \@ref(fig:nobs)b). Like
-coarse landcover resolution (Figure 4), low numbers of observations were not
-sufficient for capturing individuals in all contexts and therefore layer
-similarity could not be calculated below ~30 observations for forest,
-approximately ~80 observations for open (Figure \@ref(fig:nobs)c). Layer
+coarse landcover resolution (Figure \@ref(fig:lcres)), low numbers of
+observations were not sufficient for capturing individuals in all contexts and
+therefore layer similarity could not be calculated below ~30 observations for
+forest, approximately ~80 observations for open (Figure \@ref(fig:nobs)c). Layer
 similarity was not possible to calculate for forage layers because there were no
 connected individuals in summer forage. Once sufficient observations were
 obtained, layer similarity showed some variability with increasing numbers of
