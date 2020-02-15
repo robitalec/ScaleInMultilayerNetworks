@@ -80,7 +80,7 @@ represents shared space use by members of the same social group [Figure
 \@ref(fig:spacetime), @Franks_2009]. <!--Figure \@ref(fig:spacetime) TODO:
 something broken here?? --> Further, for social interactions or associations to
 occur individuals must share space, and thus have overlapping home ranges
-[@VanderWal_2014]. In the context of the social environment, home range overlap
+[@Vander_Wal_2013]. In the context of the social environment, home range overlap
 is an example of how animals share space over coarser spatial and temporal
 scales (e.g. Piza-Roca et al. 2018). Although the social environment clearly
 scales spatially and temporally, it remains unclear whether coarser scales of
@@ -658,7 +658,7 @@ monolayers. Coordinated movement of dyads, or groups, could vary based on
 habitat, and the approach we outline could be used to explore mechanisms linking
 the social and spatial environments. For example, social processes may be an
 emergent property of the landscape because animals aggregate at resources, such
-as waterholes [@Chamaillé_Jammes_2008]. Movement to, from, or within habitat
+as waterholes [@Chamaill_Jammes_2008]. Movement to, from, or within habitat
 patches or territories can also contribute to the formation of the social
 environment [@Spiegel_2016]. For example, in sleepy lizards (*Tiliqua rugosa*)
 males interacted primarily at home range edges, presumably driving territorial
@@ -728,10 +728,10 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2600907/pdf/rspb20071688.pdf
 The emergent relationship between habitat and sociality has been explored by the
 distribution and phenology of resources and use of social information. Cougar
 (*Puma concolor*) home ranges overlapped more in regions with high hunting
-opportunity, a proxy for resource richness [@Elbroch_2016]. Caribou (*Rangifer
+opportunity, a proxy for resource richness [@Elbroch_2015]. Caribou (*Rangifer
 tarandus*) sociality differed between seasons, where social associations were
 stronger in winter and contrastingly low in summer when resource availability
-are more homogenous [@Peigner_2019]. Bison (*Bison bison*) showed stronger
+are more homogenous [@Peignier_2019]. Bison (*Bison bison*) showed stronger
 habitat selection in larger groups and avoidance of predation risk was a main
 factor contributing to their habitat selection [@Fortin_2009]. These examples,
 comparing sociality and habitat selection across temporal or spatial contexts,

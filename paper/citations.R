@@ -4,6 +4,8 @@ library(knitcitations)
 
 ### Sections ----
 ## Introduction
+# Vander Wal 2014
+citep('10.1007/s00265-013-1652-0')
 
 # Croft 2008
 citep('10.1016/j.tree.2011.05.012')
@@ -126,8 +128,6 @@ citep('10.1016/j.anbehav.2017.09.008')
 # Silk 2017
 citep('10.1111/2041-210X.12770')
 
-#landscape
-
 # indiv fitness
 # brent 2017
 citep('10.1098/rspb.2017.0515')
@@ -212,7 +212,8 @@ citep('10.1016/j.tree.2019.11.001')
 citep('10.1111/1365-2656.12198')
 
 # Mourier et al. 2019 (pre-print)
-citep('10.1101/749085')
+#TODO: broken
+# citep('10.1101/749085')
 
 # Muller 2018
 citep('10.1016/j.anbehav.2018.10.006')
@@ -258,6 +259,18 @@ citep(citation('igraph'))
 # asnipe
 citep(citation('asnipe'))
 
+## habitat selection
+citep('10.1139/z07-094')
+citep('10.2307/2680033')
+citep('10.1007/s10980-016-0374-x')
+citep('10.1111/1365-2656.12447')
+citep('10.1016/s0169-5347(99)01593-1')
+citep('10.1007/978-94-011-1558-2')
+citep('10.1890/06-1672.1')
+citep('10.2980/16-2-3238')
+citep('10.1890/08-0345.1')
+
 
 ### Write out bib ----
 write.bibtex(file = "references/knitcite.bib")
+
