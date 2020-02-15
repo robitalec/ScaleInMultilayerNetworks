@@ -128,7 +128,7 @@ and space use.
 <!-- TODO: we answer the first question in the discussion, but not the second-->
 <!-- TODO: Webber reference should be 2018, but defaulting to 2017-->
 
-(ref:spacetime) Space-time diagram representing variation the relative spatial and temporal extent required for different types of social and communication processes for four species, including spotted hyaena, passerine birds, sleepy lizards, and elephants. Spatial and temporal extent for social interactions, e.g. mating, grooming, or aggression, are similar for most species because physical contact between two individuals is required for many social interactions. The logical extension is that spatial and temporal extent for social interaction is hierarchically nested within the spatial and temporal extent for social association because individuals must share space to interact. By contrast, different species have potential for  greater spatial and temporal extents, for example, temporal extent for vocal communication is similar for most species because most vocal calls only persist in the environment for seconds, but spatial extent for vocal communication is highly variable with elephant calls extending the great distance and passerine calls extending the shortest distance.
+(ref:spacetime) Space-time diagram representing variation the relative spatial and temporal extent required for different types of social and communication processes for four species, including spotted hyaena, passerine birds, sleepy lizards, and elephants. Spatial and temporal extent for social interactions, e.g. mating, grooming, or aggression, are similar for most species because physical contact between two individuals is required for many social interactions. The logical extension is that spatial and temporal extent for social interaction is hierarchically nested within the spatial and temporal extent for social association because individuals must share space to interact. By contrast, different species have potential for greater spatial and temporal extents, for example, temporal extent for vocal communication is similar for most species because most vocal calls only persist in the environment for seconds, but spatial extent for vocal communication is highly variable with elephant calls extending the great distance and passerine calls extending the shortest distance.
 
 <!-- TODO: units of spatial scale? --> 
 <!-- TODO: citations? -->
@@ -156,7 +156,7 @@ scale (all craters within an individual’s range) [@Mayor_2009]. The distributi
 of forage for caribou is therefore seasonally heterogeneous because the
 distribution of craters on the landscape varies meaning that access to
 vegetation in winter is highly variable for caribou in winter compared to summer. Caribou therefore have
-greater access to forage in snow-free seasons. We  partitioned data into two
+greater access to forage in snow-free seasons. We partitioned data into two
 discrete seasons: summer (3 August - 20 September 2017) and winter (1 January – 17
 February 2018) based on caribou socioecology [@Peignier_2019].
 
@@ -228,7 +228,7 @@ designated if two or more individuals occurred within a given distance of one
 another at any given time point.
 
 
-(ref:ml) Visualization of multilayer network for social ungulate case study representing social association of caribou (*Rangifer tarandus*) on Fogo Island, Newfoundland in summer 2017 and winter 2018.  Individual caribou (n = `r DT[, uniqueN(get(idcol))]` females) are show as nodes and each indiviual is represented by a unique color. Six layers represent combinations of two seasons (summer and winter) and three habitat classes (open, forest and forage). Intralayer edges connect pairs of individuals that associated according to spatial and temporal thresholds described above, and are scaled in line thickness according to strength of association (SRI). Interlayer edges connect individuals to themselves across seasons and within habitat classes (e.g. individual "A" in summer, forest and individual "A" in winter, forest).
+(ref:ml) Visualization of multilayer network for social ungulate case study representing social association of caribou (*Rangifer tarandus*) on Fogo Island, Newfoundland in summer 2017 and winter 2018. Individual caribou (n = `r DT[, uniqueN(get(idcol))]` females) are show as nodes and each indiviual is represented by a unique color. Six layers represent combinations of two seasons (summer and winter) and three habitat classes (open, forest and forage). Intralayer edges connect pairs of individuals that associated according to spatial and temporal thresholds described above, and are scaled in line thickness according to strength of association (SRI). Interlayer edges connect individuals to themselves across seasons and within habitat classes (e.g. individual "A" in summer, forest and individual "A" in winter, forest).
 
 ```{r ml, fig.cap='(ref:ml)'}
 knitr::include_graphics('../graphics/figure-2.png')
@@ -348,7 +348,7 @@ summer layers had consistent weak connections (Figure
 \@ref(fig:lcres)a). Mean graph strength increased consistently in winter forest and
 open habitats but varied in winter forage varied across landcover
 resolutions with an increase at 250 m and decrease at 500 m (Figure
-\@ref(fig:lcres)a).  Layer relevance was stable for all habitat classes in summer
+\@ref(fig:lcres)a). Layer relevance was stable for all habitat classes in summer
 layers; layer relevance was significantly higher in winter and stable in open and forest habitats but decreased for forage habitats (Figure
 \@ref(fig:lcres)b). <!--This pattern during the winter indicates that individuals had fewer neighbours in forage habitat habitats compared to their overall neighbourhood across habitats, likely due to the patchy nature of forage-->Layer similarity was low but stable for forest and open, except for a sharp
 decrease in layer similarity in open at 100 m and 250 m (Figure
@@ -389,11 +389,11 @@ is already done, can we make this thought more relevant to picking scales or
 multilayer networks in general? I think it's important for building robust
 networks -->
 
-Some multilayer network metrics were strongly influenced by the length of the time window. Mean graph strength was weak but became slightly stronger with increasing time window length during the summer, but the higher mean graph strength during the winter showed a slight increase then decrease with increasing winter length (Figure \@ref(fig:winlen)a).  Layer relevance increased for all summer layers as individuals became more connected with increasing window lengths, but winter layers showed relatively stable but high layer relevance (Figure \@ref(fig:winlen)b). This pattern indicates that the proportion of neighbours that were the same across layers increased with a longer time frame during the summer, butthere were a high proportion of neighbors that remained the same across layers during the winter, regardless of time length. Furthermore, though the layers were generally not very similar between the summer and winter, the length of the time window created slight variability in this metric, particularly for forage and open habitat types (Figure \@ref(fig:winlen)c). Connective redundancy increased marginally with increasing window length, indicating that the proportions of neighbours that were the same across layers, though relatively high in general, slightly increased when time length was greater (Figure \@ref(fig:winlen)d). These results suggest that an increasing window length, especially for the summer season, may be resulting in less precisely defined seasons that are not clearly capturing periods of aggregation and dissaggregation related to resource availability.
+Some multilayer network metrics were strongly influenced by the length of the time window. Mean graph strength was weak but became slightly stronger with increasing time window length during the summer, but the higher mean graph strength during the winter showed a slight increase then decrease with increasing winter length (Figure \@ref(fig:winlen)a). Layer relevance increased for all summer layers as individuals became more connected with increasing window lengths, but winter layers showed relatively stable but high layer relevance (Figure \@ref(fig:winlen)b). This pattern indicates that the proportion of neighbours that were the same across layers increased with a longer time frame during the summer, butthere were a high proportion of neighbors that remained the same across layers during the winter, regardless of time length. Furthermore, though the layers were generally not very similar between the summer and winter, the length of the time window created slight variability in this metric, particularly for forage and open habitat types (Figure \@ref(fig:winlen)c). Connective redundancy increased marginally with increasing window length, indicating that the proportions of neighbours that were the same across layers, though relatively high in general, slightly increased when time length was greater (Figure \@ref(fig:winlen)d). These results suggest that an increasing window length, especially for the summer season, may be resulting in less precisely defined seasons that are not clearly capturing periods of aggregation and dissaggregation related to resource availability.
 
 
 Moving window positions defining seasons showed some dramatic changes in the multilayer network metrics as the seasons were redefined. Graph strength increased at time window position
-~20 for summer and winter layers  and, while summer layers continued to
+~20 for summer and winter layers and, while summer layers continued to
 increase, winter layers showed a decrease in graph strength at time window
 position ~35 (Figure \@ref(fig:winpos)a). Layer relevance increased across
 moving window positions for summer layers and slightly decreased for winter
@@ -459,7 +459,7 @@ knitr::include_graphics('../graphics/figure-winpos.png')
 ```
 
 
-# Perspectives  to advance multilayer networks 
+# Perspectives to advance multilayer networks 
 
 The integration of behavioural and ecological theory has shown the value of
 considering the importance of various ecological disciplines to better
@@ -591,7 +591,7 @@ general, we found that movement is likely an important mechanism driving social
 network connectivity within and between habitat types.
 
 Although multilayer animal social networks are relatively novel [@Silk_2018],
-movement behaviour within multilayer networks has been considered.  Spatial
+movement behaviour within multilayer networks has been considered. Spatial
 networks are physical locations (nodes) which are connected in a network when
 individuals move between said locations (edges). For example, spatial networks
 were applied to monitor movement of sharks (*Carcharhinus amblyrhynchos* and
@@ -616,7 +616,7 @@ GPS technology can be used to measure how groups of animals make collective
 movement decisions in the context of their local environment
 [@Strandburg_Peshkin_2015; @Strandburg_Peshkin_2017] and across scales. A
 collective movement layer could constitute similarity in movement for dyads
-[@Long_2014] or groups  [@Bode_2011]. This movement layer could be made at a
+[@Long_2014] or groups [@Bode_2011]. This movement layer could be made at a
 fine [i.e. minute-to-minute: @Cleasby_2019] or coarse scale [global migration:
 @Flack_2018]. Our case study integrates variation in temporal and spatial scale
 to assess the role of scale in predicting multilayer networks. As one might
@@ -655,7 +655,7 @@ habitat, and the approach we outline could be used to explore mechanisms linking
 the social and spatial environments. For example, social processes may be an
 emergent property of the landscape because animals aggregate at resources, such
 as waterholes [@Chamaillé_Jammes_2008]. Movement to, from, or within habitat
-patches  or territories can also contribute to the formation of the social
+patches or territories can also contribute to the formation of the social
 environment [@Spiegel_2016]. For example, in sleepy lizards (*Tiliqua rugosa*)
 males interacted primarily at home range edges, presumably driving territorial
 behaviour [@Spiegel_2018]. Incorporating movement ecology within a multilayer
@@ -713,11 +713,11 @@ and by using a continuum of scales, .
 
 <!-- Relationship between sociality and habitat -->
 <!-- Merkle’s memory and patches for bison (and leaders) -->
-<!-- Emergent  Properties  of  Conspecific  Attraction  inFragmented  Landscapes-->
+<!-- Emergent Properties of Conspecific Attraction inFragmented Landscapes-->
 <!-- Conspecific Attraction and Aggregation in Territorial Species-->
 <!-- Energy and the Scaling of Animal Space Use-->
 
-<!-- The relationship between sociality has been discussed both theoretically  -->
+<!-- The relationship between sociality has been discussed both theoretically -->
 <!-- and tested explicitly ... CAH, etc then Fortin, McLouglin-->
 <!-- https://www.pnas.org/content/pnas/105/49/19114.full.pdf
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2600907/pdf/rspb20071688.pdf
@@ -815,17 +815,17 @@ habitats? What, if any, is the role of movement in the context of habitat
 networks?
 
 3. How, and why, does the spatial scale of perception influence, e.g. auditory,
-visual, or chemotaxis, influence the  social environment? What is the role of
+visual, or chemotaxis, influence the social environment? What is the role of
 memory, and by extension social and spatial cognition, as animals navigate their
 environment and make decisions about where to move next?
 
-<!-- In summary, blah blah  -->
+<!-- In summary, blah blah -->
 
 
 # Acknowledgements
 
 We thank all members of the Wildlife Evolutionary Ecology Lab, including J.
-Hendrix, K. Kingdon, S. Boyle,  C. Prokopenko, I. Richmond, J. Hogg, and L.
+Hendrix, K. Kingdon, S. Boyle, C. Prokopenko, I. Richmond, J. Hogg, and L.
 Newediuk for their comments on previous versions of this manuscript as well as
 D. C. Schneider for inspiration and helpful discussions about scale. Funding for
 this study was provided by a Vanier Canada Graduate Scholarship to QMRW and a
