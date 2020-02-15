@@ -727,19 +727,18 @@ Habitat selection depends on the scale at which it is measured and a singular
 scale is insufficient for generalizing across scales [@Mayor_2009]. Habitat
 selection is measured using resource selection functions (RSFs), based on the
 proportion of used and available resources for an animal [@Manly_1993;
-@Boyce_1999]. Johnson (1980) identified four orders of habitat selection:
-(1) the geographical range of a species, (2) the home range of an individual, the (3) habitat patches within the home range and (4) specific resources within a
-habitat patch. Kie et al. [-@Kie_2002] found that, independently, third order of selection was insufficient for capturing landscape attributes selected for by mule deer (*Odocoileus hemionus*), at a scale larger than their home range size. Moving past this hierarchical perspective, Mayor (2007) emphasized the importance of considering a broad continuum of scales to reveal scale-dependent selection and avoid the bias of predefined scales assumed to be associated with certain behaviors.
-
-Then to Mayor 2009
-
-<!-- And more recent? -->
-
-Despite this, still not widely adopted McGarigal 2016
-
-For
-example, @Mayor_2007 showed caribou select for shallow snow at all scales 
-and by using a continuum of scales, .
+@Boyce_1999]. Johnson (1980) identified four orders of habitat selection: (1)
+the geographical range of a species, (2) the home range of an individual, the
+(3) habitat patches within the home range and (4) specific resources within a
+habitat patch. Kie et al. [-@Kie_2002] found that, independently, third order of
+selection was insufficient for capturing landscape attributes selected for by
+mule deer (*Odocoileus hemionus*), at a scale larger than their home range size.
+Moving past this hierarchical perspective, Mayor (2007) emphasized the
+importance of considering a broad continuum of scales to reveal scale-dependent
+selection and avoid the bias of predefined scales assumed to be associated with
+certain behaviors. Despite animals selecting for different landscape attributes
+at different scales [@Mayor_2009], the use of multiscale analyses for habitat
+selection is still critically lacking [@McGarigal_2016].
 
 
 <!-- Relationship between sociality and habitat -->
@@ -779,7 +778,7 @@ instead of specific associations
 looking at broader temporal scales and coarser spatial resolutions
 -->
 
-Multilayer networks explicitly consider habitat selection and
+Multilayer networks can be used to explicitly consider habitat selection and
 sociality across scales. Animal social systems can be parsed by spatial
 contexts, defined, for example, by habitat types as in Figure \@ref(fig:lcres).
 The effect of resource phenology can be directly measured by differences in
