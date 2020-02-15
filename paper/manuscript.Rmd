@@ -729,21 +729,29 @@ integration of individual phenotypes and fitness, collective movement, and
 habitat selection for future analyses considering spatial ecology using
 multilayer networks.
 
-<!-- 
-TODO: Schneider 2001, Levin og, 
+Recognition of scale as a fundamental concept in ecology [@Levin_1992] has lead
+to an increased attention to the scale at which ecological processes are
+observed [@Schneider_2001; @Chave_2013]. In addition, recent technological
+advances have lead to increased data complexity and resolution. Remotely sensed
+imagery collected by modern satellites provide, for example, 10 m spatial
+resolution optical imagery at a temporal revisit period of five days at the
+equator [@Drusch_2012]. Similarly, animal tracking devices have become smaller
+allowing their deployement on a wider variety of organisms [@Wikelski_2007] and
+at a higher temporal resolution [@Börger_2016]. Given this increased
+availability of complex data, it is important to consider using a broad
+continuum of scales to fully capture ecological processes, carefully select and
+combine sources of data with different temporal and spatial scales, and
+establish a clear link between scales of observation and meaningful biology.
 
-
-
-Alec, I think you need to include a paragraph reflecting on the importance of scale and ~3 critical things we should take away from this (maybe especially in light of including spatial data?) -->
 
 Multilayer networks are complicated in that they can incorporate data as varied
 as social interactions, landscape features, and seasons, all of which exist at
 different scales and units of measurement. Our analysis of caribou multilayer
-networks incorporated high resolution GPS telemetry data and spatial landcover
+networks which incorporated high resolution GPS telemetry data and spatial landcover
 data is grounded in the context of observed animal social networks, as the
 scales we chose to explore, e.g., number of observations, sociality across space
 and time, are ones that can be observed as has traditionally been done in
-ethology. Thus, we highlight ways in which scale ought to be considered for both
+ethology. We highlight ways in which scale ought to be considered for both
 observed and remotely-sensed data when building social networks. Furthermore,
 GPS telemetry data provides a link between large scale landscape properties and
 fine scale social interactions as animal movement occurs across the landscape,
@@ -793,7 +801,7 @@ knitr::include_graphics('../graphics/figure1.png')
 ```
 
 \newpage
-
+ 
 ```{r ml, fig.cap='(ref:ml)'}
 knitr::include_graphics('../graphics/figure-2.png')
 ```
