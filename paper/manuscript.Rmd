@@ -165,7 +165,7 @@ Adult female caribou were immobilized and fitted with global positioning system
 1,250 g) as described by [@Schaefer_2013]. Collars were programmed to collect
 location fixes every 2 hours. Prior to analyses, we subset GPS fixes into a
 discrete removed all erroneous and outlier GPS fixes following
-[@BJ_RNERAAS_2010] <!--TODO: fix this ref-->. We did not collar all caribou in
+[@Bjorneraas_2010]. We did not collar all caribou in
 the herd; however, the proportion of marked adult females was ~10% of all adult
 females and ~5% of all individuals in the herd. We assumed these individuals
 were randomly distributed throughout the population.
