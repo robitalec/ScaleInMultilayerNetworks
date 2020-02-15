@@ -272,5 +272,5 @@ citep('10.1890/08-0345.1')
 
 
 ### Write out bib ----
-write.bibtex(file = "references/knitcite.bib")
+write.bibtex(file = "references/knitcite-zzz.bib")
 
