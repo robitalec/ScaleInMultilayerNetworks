@@ -766,22 +766,11 @@ comparing sociality and habitat selection across temporal or spatial contexts,
 are implicitly multilayer analyses.
 
 
-<!--
-how to combine moving forward
-in areas of high selection/low selection or favorable/unfavorable habitat
-combined with seasonality
-
-in our case study, we looked at increase spatial scales of landcover metrics
-
-we could define layers of the multilayer network according to home range overlap 
-instead of specific associations
-looking at broader temporal scales and coarser spatial resolutions
--->
-
+<!-- TODO: weak -->
 Multilayer networks can be used to explicitly consider habitat selection and
 sociality across scales. Animal social systems can be parsed by spatial
 contexts, defined, for example, by habitat types as in Figure \@ref(fig:lcres).
-The effect of resource phenology can be directly measured by differences in
+The effect of seasonality of resources can can be directly measured by differences in
 habitat selection and sociality across temporal layers. Habitat selection can be
 explicitly integrated using network layers defined by similarity of selection
 coefficients between individuals. These explicit integrations of habitat
