@@ -306,11 +306,11 @@ falls off a cliff -->
 #### Time window length and position
 We altered the temporal scale of multilayer networks by varying the length and
 position of the time window used to define seasons. The length of the time
-window varied from 40-100 days using a fixed start day for summer (starting at 3 August 2017) and winter (starting at 1
-January 2018). The position of the time window was
-shifted by 1-48 days, using a fixed time window length of 48 days. These new
-time windows were iteratively used to partition data into two discrete seasons
-(summer and winter) and generate multilayer networks.
+window varied from 40-100 days using a fixed start day for summer (starting at 3
+August 2017) and winter (starting at 1 January 2018). The position of the time
+window was shifted by 1-48 days, using a fixed time window length of 48 days.
+These new time windows were iteratively used to partition data into two discrete
+seasons (summer and winter) and generate multilayer networks.
 
 
 # Scale in multilayer networks in practice: case study results and discussion
