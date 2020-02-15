@@ -99,15 +99,15 @@ complexity of animal social systems [@Finn_2019].
 Unlike traditional monolayer social networks, multilayer networks explicitly
 consider social systems across contexts, including scale-dependent contexts
 [@Pilosof_2017]. Multilayer networks are made up of multiple layers, each
-representing (i) different classes of individuals, e.g. male or female; (ii)
-types of behaviours, e.g. grooming, travelling, or foraging; and (iii) spatial
-areas, e.g. local or regional, or temporal windows, e.g. daily or seasonal
+representing (i) different classes of individuals, e.g. male or female, (ii)
+types of behaviours, e.g. grooming, travelling, or foraging, (iii) spatial
+areas, e.g. local or regional, (iv) or temporal windows, e.g. daily or seasonal
 [@Kivela_2014; @Porter_2018]. Multilayer networks are relatively novel to
 studies of animal behavior [@Silk_2018; @Finn_2019], although they have been
 used to describe multidimensional human social systems, complex transportation
 networks, and neural networks [@Silk_2018]. The role of scale within multilayer
 social networks remains unexplored but provides a unique opportunity to develop
-novel understanding of variation in the temporal or spatial scales associated
+novel understanding of variation in the social, spatial or temporal scales associated
 with social systems.
 
 
@@ -809,7 +809,7 @@ networks with an additional set of questions posed through the lens of spatial
 ecology that are relevant to the promise and problem of scale in mutlilayer
 networks:
 
-1. How do social phenotypes vary across social, temporal, and spatial scales and
+1. How do social phenotypes vary across social, spatial, and temporal scales and
 at which scale might these influence fitness? Are some scales better predictors
 for different fitness metrics? 
 
