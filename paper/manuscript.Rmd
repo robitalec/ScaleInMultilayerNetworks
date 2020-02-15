@@ -71,7 +71,7 @@ Multiscale ecology has been integrated into species distribution modelling
 among others. Meanwhile, in the context of animal behaviour, certain behaviours
 are scale-dependent; for example, acoustic communication in birds varies with
 spatial scales [@Luther_2009]. We posit that it is important to consider that
-animal behavior within the social environment will be scale-dependent.
+animal behaviour within the social environment will be scale-dependent.
 
 Sociality exists across both temporal and spatial scales (Whitehead 2008). For
 example, grooming requires close spatial proximity between conspecifics and
@@ -106,7 +106,7 @@ representing (i) different classes of individuals, e.g. male or female, (ii)
 types of behaviours, e.g. grooming, travelling, or foraging, (iii) spatial
 areas, e.g. local or regional, (iv) or temporal windows, e.g. daily or seasonal
 [@Kivela_2014; @Porter_2018]. Multilayer networks are relatively novel to
-studies of animal behavior [@Silk_2018; @Finn_2019], although they have been
+studies of animal behaviour [@Silk_2018; @Finn_2019], although they have been
 used to describe multidimensional human social systems, complex transportation
 networks, and neural networks [@Silk_2018]. The role of scale within multilayer
 social networks remains unexplored but provides a unique opportunity to develop
@@ -245,7 +245,7 @@ neighbourhood for each individual and connective redundancy is the proportion of
 neighbours repeated in multiple layers, and [@Berlingerio_2012]. Finally, we
 calculated the similarity of layers between seasons, across landcover classes
 (e.g. summer open compared to winter open) using the Pearson correlation
-coefficient [@Br_dka_2018]. Network metrics were calculated using the R packages
+coefficient [@Brodka_2018]. Network metrics were calculated using the R packages
 `igraph` [@Csardi_2006], `asnipe` [@Farine_2019] and `data.table` [@Dowle_2019].
 
 
@@ -683,7 +683,7 @@ mule deer (*Odocoileus hemionus*), at a scale larger than their home range size.
 Moving past this hierarchical perspective, Mayor (2007) emphasized the
 importance of considering a broad continuum of scales to reveal scale-dependent
 selection and avoid the bias of predefined scales assumed to be associated with
-certain behaviors. Despite animals selecting for different landscape attributes
+certain behaviours. Despite animals selecting for different landscape attributes
 at different scales [@Mayor_2009], the use of multiscale analyses for habitat
 selection is still critically lacking [@McGarigal_2016].
 
