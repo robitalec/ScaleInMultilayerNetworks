@@ -389,33 +389,22 @@ is already done, can we make this thought more relevant to picking scales or
 multilayer networks in general? I think it's important for building robust
 networks -->
 
-Mean graph strength and layer relevance increased for all summer layers as
-individuals became more connected with increasing window lengths (Figure
-\@ref(fig:winlen)a, Figure \@ref(fig:winlen)b). Winter layers showed relatively
-stable mean graph strength and layer relevance. Layer similarity between seasons
-and across habitat layers increased consistently  (Figure \@ref(fig:winlen)c).
-Connective redundancy increased marginally with increasing window length (Figure
-\@ref(fig:winlen)d). These results suggest that an increasing window length,
-especially for the summer season, may be resulting in less precisely defined
-seasons that are not clearly capturing periods of aggregation and
-dissaggregation related to resource availability.
+Some multilayer network metrics were strongly influenced by the length of the time window. Mean graph strength was weak but became slightly stronger with increasing time window length during the summer, but the higher mean graph strength during the winter showed a slight increase then decrease with increasing winter length (Figure \@ref(fig:winlen)a).  Layer relevance increased for all summer layers as individuals became more connected with increasing window lengths, but winter layers showed relatively stable but high layer relevance (Figure \@ref(fig:winlen)b). This pattern indicates that the proportion of neighbours that were the same across layers increased with a longer time frame during the summer, butthere were a high proportion of neighbors that remained the same across layers during the winter, regardless of time length. Furthermore, though the layers were generally not very similar between the summer and winter, the length of the time window created slight variability in this metric, particularly for forage and open habitat types (Figure \@ref(fig:winlen)c). Connective redundancy increased marginally with increasing window length, indicating that the proportions of neighbours that were the same across layers, though relatively high in general, slightly increased when time length was greater (Figure \@ref(fig:winlen)d). These results suggest that an increasing window length, especially for the summer season, may be resulting in less precisely defined seasons that are not clearly capturing periods of aggregation and dissaggregation related to resource availability.
 
 
-Moving window positions defining seasons showed an increase in connectivity of
-individuals in summer layers. Graph strength increased at time window position
+Moving window positions defining seasons showed some dramatic changes in the multilayer network metrics as the seasons were redefined. Graph strength increased at time window position
 ~20 for summer and winter layers  and, while summer layers continued to
 increase, winter layers showed a decrease in graph strength at time window
 position ~35 (Figure \@ref(fig:winpos)a). Layer relevance increased across
-moving window positions for summer layers and was relatively stable for winter
-layers (Figure \@ref(fig:winpos)b). These results indicate slight decreasing
-connectivity and increased connectivity in summer layers at shifted winter time
+moving window positions for summer layers and slightly decreased for winter
+layers (Figure \@ref(fig:winpos)b). These results indicate increased connectivity in summer layers and slightly decreasing connectivity at shifted winter time
 windows. Layer similarity was relatively stable across moving window positions
 except for a sharp decline at window position ~28 in forage and open layers
 (Figure \@ref(fig:winpos) c). Connective redundancy showed a marginal increase
-with increasing window position (Figure \@ref(fig:winpos) d). Similar to window
+with increasing window position indicating individuals had more of the same neighbours in each habitat network (Figure \@ref(fig:winpos) d). Similar to window
 length, changing the position of the time window in this case results in a
 mismatch between expected periods of resource seasonality and corresponding
-sociality, highlighting the importance of carefully selecting temporal scale of
+sociality, particularly for the summer, highlighting the importance of carefully selecting temporal scale of
 analysis.
 
 
