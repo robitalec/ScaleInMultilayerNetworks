@@ -866,5 +866,7 @@ knitr::include_graphics('../graphics/figure-winpos.png')
 ```
 
 \newpage
+\clearpage
+
 
 # References
