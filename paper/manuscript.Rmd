@@ -228,7 +228,7 @@ designated if two or more individuals occurred within a given distance of one
 another at any given time point.
 
 
-(ref:ml) Visualization of multilayer network for social ungulate case study representing social association of caribou (*Rangifer tarandus*) on Fogo Island, Newfoundland in summer 2017 and winter 2018.  Individual caribou (n = `r DT[, uniqueN(get(idcol))]`) are show as nodes and each indiviual is represented by a unique color. Six layers represent combinations of two seasons (summer and winter) and three habitat classes (open, forest and forage). Intralayer edges connect pairs of individuals that associated according to spatial and temporal thresholds described above, and are scaled in line thickness according to strength of association (SRI). Interlayer edges connect individuals to themselves across seasons and within habitat classes (e.g. individual "A" in summer, forest and individual "A" in winter, forest).
+(ref:ml) Visualization of multilayer network for social ungulate case study representing social association of caribou (*Rangifer tarandus*) on Fogo Island, Newfoundland in summer 2017 and winter 2018.  Individual caribou (n = `r DT[, uniqueN(get(idcol))]` females) are show as nodes and each indiviual is represented by a unique color. Six layers represent combinations of two seasons (summer and winter) and three habitat classes (open, forest and forage). Intralayer edges connect pairs of individuals that associated according to spatial and temporal thresholds described above, and are scaled in line thickness according to strength of association (SRI). Interlayer edges connect individuals to themselves across seasons and within habitat classes (e.g. individual "A" in summer, forest and individual "A" in winter, forest).
 
 ```{r ml, fig.cap='(ref:ml)'}
 knitr::include_graphics('../graphics/figure-2.png')
@@ -264,8 +264,8 @@ coefficient [@Br_dka_2018]. Network metrics were calculated using the R packages
 ## Varying scale in multilayer networks
 ### Social scale
 
-We modified the spatial distance threshold required for group assignment using
-`spatsoc` [@Robitaille_2019] (see above) and re-assigned groups at incremental
+We modified the distance threshold, hereafter the social threshold, required for group assignment using
+`spatsoc` [@Robitaille_2019] and re-assigned groups at incremental
 distances between 5 - 500 m. For example, at the finest social scale, only
 individuals within 5 m of one another were considered in the same group, whereas
 at the coarsest social scale, individuals within 500 m of one another were
