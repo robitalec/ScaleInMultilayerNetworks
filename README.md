@@ -21,25 +21,19 @@ grep -rni 'paper/manuscript.Rmd' -e 'TODO' || true;
 #> R/metrics.R:154:  # TODO: check for splitNeigh variable and neigh
 #> R/metrics.R:155:  # TODO: check overwrite
 #> scripts/1-data-prep.R:8:# TODO: timezones
-#> 36:interactions to co-occurrence to overlapping home ranges. <!-- TODO: add
-#> 53:<!-- TODO: is this the final list ? -->
-#> 75:\@ref(fig:spacetime), @Franks_2009]. <!--Figure \@ref(fig:spacetime) TODO:
-#> 128:<!-- TODO: we answer the first question in the discussion, but not the second-->
-#> 129:<!-- TODO: Webber reference should be 2018, but defaulting to 2017-->
-#> 133:<!-- TODO: units of spatial scale? --> 
-#> 134:<!-- TODO: citations? -->
-#> 170:[@BJ_RNERAAS_2010] <!--TODO: fix this ref-->. We did not collar all caribou in
-#> 176:<!-- TODO: update citation for lc product from Hance --> 
-#> 198:<!-- TODO: FIX VANDER WAL IN SPATSOC REF -->
-#> 217:<!-- TODO: get Cairns ref-->
-#> 240:<!-- TODO: expand + simplify + examples individual A, B etc --> 
-#> 241:<!-- TODO: EVW "parallelism"? -->
-#> 317:<!-- TODO: Add intro/general to results?-->
-#> 394:<!-- TODO: I'm not sure this is relevant since this is the main way it
-#> 656:<!-- TODO:.........-->
-#> 714:TODO: Gerard ‘openness’ paper 
-#> 725:<!-- TODO: point to figure 1 -->
-#> 810:TODO: Schneider 2001, Levin og,
+#> 42:interactions to co-occurrence to overlapping home ranges. <!-- TODO: add
+#> 131:<!-- TODO: we answer the first question in the discussion, but not the second-->
+#> 132:<!-- TODO: Webber reference should be 2018, but defaulting to 2017-->
+#> 136:<!-- TODO: units of spatial scale? --> 
+#> 137:<!-- TODO: citations? -->
+#> 229:<!-- TODO: expand + simplify + examples individual A, B etc --> 
+#> 305:<!-- TODO: Add intro/general to results?-->
+#> 380:<!-- TODO: I'm not sure this is relevant since this is the main way it
+#> 615:social connections (Figure \@ref(fig:socres)).<!--TODO: what??, while increasing temporal scale had little effect
+#> 672:<!-- TODO: point to figure 1 -->
+#> 704:<!-- TODO: weak -->
+#> 732:TODO: Schneider 2001, Levin og, 
+#> 776:<!-- TODO: In summary, -->
 ```
 
 ## Info
