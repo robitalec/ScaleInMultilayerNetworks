@@ -15,3 +15,6 @@ $(FIGS): scripts/8-plots.R $(METS)
 
 $(METS): scripts/7-metrics.R
 	$(foreach var, $(VARS), Rscript scripts/7-metrics.R $(var);)
+	
+	
+# TODO: Add for each var
