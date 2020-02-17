@@ -4,3 +4,4 @@
 ^data$
 ^scripts$
 ^figures$
+^Makefile$
