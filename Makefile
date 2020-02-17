@@ -10,7 +10,8 @@ FIGS = graphics/figure-winlength.png graphics/figure-nobs.png graphics/figure-wi
 all: $(FIGS)
 
 $(FIGS): scripts/8-plots.R $(METS)
-	$(foreach var, $(VARS), Rscript scripts/8-plots.R $(var);)
+	$(foreach var, $(VARS), Rscript scripts/8-plots.R $(var););
+	rm Rplots.pdf
 
 $(METS): scripts/7-metrics.R
 	$(foreach var, $(VARS), Rscript scripts/7-metrics.R $(var);)
