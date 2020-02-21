@@ -165,7 +165,8 @@ g1 <-
   theme(legend.position = pos2) 
 
 # Plot full, across
-base2 <- ggplot(DT, aes(x = factor(get(var)), color = get(idcol), group = get(idcol)))
+base2 <- ggplot(DT, aes(x = factor(get(var)), color = get(idcol), group = get(idcol))) +
+  guides(color = FALSE)
 
 g2 <- base2 + geom_line(aes(y = multideg)) + ylab('Multidegree')
 g3 <- base2 + geom_line(aes(y = degdev)) + ylab('Degree Deviation')
@@ -195,7 +196,15 @@ g8 <- base3 + geom_line(aes(y = graphstrength)) +
 
 
 # Patchwork
-(fig <- (g8 + g6) / (g1 + g3) +
+library(patchwork)
+# Var x lab names
+varnames <- data.table(
+  vars = c('lcres', 'spatialthreshold', 'winlength', 'nobs', 'winpos', 'state'),
+  varname = c('Landcover Resolution', 'Social Threshold', 'Time Window Length',
+              'Number of Observations', 'Time Window Position', 'Behavioural State')
+)
+
+(fig <- (g8 + g7) / (g1 + g2) +
     plot_annotation(tag_levels = 'A') & 
     theme(plot.tag = element_text(size = 14, hjust = 0, vjust = 0),
           legend.key.width = unit(1.4,"cm")) &
@@ -204,5 +213,5 @@ g8 <- base3 + geom_line(aes(y = graphstrength)) +
       values = c("forest" = "dashed", "open" = "dotted", "forage" = "solid")) &
     p)
 
-### Output ----
-saveRDS(out, 'data/derived-data/5-number-of-observations.Rds')
+ggsave(paste0('graphics/figure-', var, '.png'), width = 13, height = 10)
+
