@@ -52,3 +52,46 @@ group_times(
 )
 
 
+var <- 'state'
+splitBy <- c('season', var)
+sub <- na.omit(DT, cols = splitBy)
+
+# Spatial grouping with spatsoc
+group_pts(
+  sub,
+  threshold = spatthresh,
+  id = idcol,
+  coords = projCols,
+  timegroup = 'timegroup',
+  splitBy = splitBy
+)
+  
+# GBI for each season * state
+gbiLs <- list_gbi(sub, idcol, splitBy)
+  
+# Generate networks for each season * state
+netLs <- list_nets(gbiLs)
+  
+# Generate graphs for each season * state
+gLs <- list_graphs(netLs)
+names(gLs) <- names(gbiLs)
+  
+# Calculate eigenvector centrality for each season * state
+stren <- layer_strength(gLs)
+stren[, (splitBy) := tstrsplit(layer, '-', type.convert = TRUE)]
+setnames(stren, 'ind', idcol)
+  
+# Calculate neighbors
+layer_neighbors(sub, idcol, splitBy = splitBy)
+
+# and tidy output, prep for merge
+outcols <- c('neigh', 'splitNeigh', idcol, splitBy)
+out <- unique(sub[, .SD, .SDcols = outcols])
+  
+# Merge eigcent+correlations with neighbors
+out <- out[stren, on = c(idcol, splitBy)]
+
+
+
+### Output ----
+saveRDS(out, 'data/derived-data/5-number-of-observations.Rds')
