@@ -91,6 +91,32 @@ out <- unique(sub[, .SD, .SDcols = outcols])
 # Merge eigcent+correlations with neighbors
 out <- out[stren, on = c(idcol, splitBy)]
 
+### Metrics ----
+DT <- out
+
+### Multilayer network metrics ----
+matrices <- DT[, property_matrix(.SD, idcol, 'layer', 'splitNeigh'), var]
+matrices[, (splitBy) := tstrsplit(layer, '-', type.convert = TRUE)]
+
+layer_similarity(matrices, 'FO', var)
+
+DT[matrices, layersim := layersim, on = splitBy]
+
+# Multidegree
+multi_degree(DT, 'splitNeigh', idcol, splitBy = var)
+
+# Redundancy
+# TODO: hmm
+# connective_redudancy(DT)
+# stopifnot(DT[!between(connredund, 0, 1), .N] == 0)
+
+
+# Degree deviation
+deviation_degree(DT, 'splitNeigh', idcol, splitBy = var)
+
+# Relevance
+layer_relevance(DT, idcol, splitBy = splitBy)
+stopifnot(DT[!between(relev, 0, 1), .N] == 0)
 
 
 ### Output ----
