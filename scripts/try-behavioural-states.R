@@ -118,6 +118,91 @@ deviation_degree(DT, 'splitNeigh', idcol, splitBy = var)
 layer_relevance(DT, idcol, splitBy = splitBy)
 stopifnot(DT[!between(relev, 0, 1), .N] == 0)
 
+### Plots ----
+## Manuscript figures
+# Legend position
+pos1 <- c(0.85, 0.35)
+pos2 <- c(0.85, 0.3)
+
+# Theme
+p <- theme(legend.text = element_text(size = 12, color = "black"),
+           legend.title = element_blank(),
+           legend.spacing = unit(-0.5, 'cm'),
+           legend.background = element_blank(),
+           legend.key = element_blank(),
+           axis.text.x = element_text(size = 14, color = "black", vjust = 0.65),
+           axis.text.y = element_text(size = 14, color = "black"),
+           axis.title = element_text(size = 18),
+           panel.grid.minor = element_blank(),
+           panel.background = element_blank(),
+           panel.border = element_rect(
+             colour = "black",
+             fill = NA,
+             size = 1))
+
+
+
+## Colors
+cols <- DT[, .(layer = sort(unique(layer)))][, 
+                                             .(layer, hex = c('#8c510a','#d8b365',
+                                                              '#01665e','#5ab4ac'))]
+
+greys <- DT[, .(state = sort(unique(state)))][, 
+                                        .(state, hex = c('#6b6b6b', '#c2c2c2'))]
+
+# Linesize
+linesize <- 1.3
+
+# Plot by landcover
+base1 <- ggplot(unique(DT[, .SD, .SDcols = c(var, 'layersim')]), 
+                aes(x = factor(get(var))))
+
+g1 <-
+  base1 + geom_point(aes(y = layersim)) + 
+  ylab('Layer Similarity') +
+  expand_limits(y = c(-1, 1)) +
+  geom_hline(yintercept = 0) +  
+  theme(legend.position = pos2) 
+
+# Plot full, across
+base2 <- ggplot(DT, aes(x = factor(get(var)), color = get(idcol), group = get(idcol)))
+
+g2 <- base2 + geom_line(aes(y = multideg)) + ylab('Multidegree')
+g3 <- base2 + geom_line(aes(y = degdev)) + ylab('Degree Deviation')
+# g4 <- base2 + geom_line(aes(y = neigh)) + ylab('Neighborhood')
+
+# g5 <- base2 + geom_line(aes(y = connredund)) + 
+#   ylab('Connective Redundancy') +
+#   expand_limits(y = c(-0.075, 1))
+
+
+# Plot within
+base3 <- ggplot(DT, aes(x = factor(get(var)), color = get(idcol), group = get(idcol))) +
+  facet_wrap(~season)
+  # scale_color_manual(values = c(cols$hex[1], cols$hex[5])) 
+
+g6 <- base3 + geom_line(aes(y = splitNeigh)) + ylab('Degree')
+
+g7 <- base3 + geom_line(aes(y = relev)) + 
+  ylab('Layer Relevance') + guides(color = FALSE, linetype = FALSE) +
+  expand_limits(y = c(-0.075, 1))
+
+g8 <- base3 + geom_line(aes(y = graphstrength)) + 
+  ylab('Graph Strength') + guides(linetype = FALSE) + 
+  expand_limits(y = c(-0.075, 1)) + 
+  theme(legend.position = pos1) +
+  guides(color = FALSE)
+
+
+# Patchwork
+(fig <- (g8 + g6) / (g1 + g3) +
+    plot_annotation(tag_levels = 'A') & 
+    theme(plot.tag = element_text(size = 14, hjust = 0, vjust = 0),
+          legend.key.width = unit(1.4,"cm")) &
+    labs(x = varnames[vars == var, varname]) &
+    scale_linetype_manual(
+      values = c("forest" = "dashed", "open" = "dotted", "forage" = "solid")) &
+    p)
 
 ### Output ----
 saveRDS(out, 'data/derived-data/5-number-of-observations.Rds')
