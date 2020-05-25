@@ -2,7 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
-paper/.~lock.table1.csv#
 data/
-paper/.~lock.manuscript.docx#
 .DS_Store
+.~lock*
