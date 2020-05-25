@@ -6,7 +6,7 @@ date: |
   | ^2^Cognitive and Behavioural Ecology Interdisciplinary Program, Memorial University of Newfoundland 
   | \*Corresponding author: Alec L. Robitaille (robit.alec@gmail.com)
 output:
-   github_document: default
+   bookdown::github_document2: default
    bookdown::word_document2:
      reference_docx: template.docx
 knit: (function(inputFile, encoding) {
