@@ -494,7 +494,7 @@ networks in the emerging integration of social and spatial ecology within the
 behavioural ecology literature.
 
 
-
+<!-- fitness -->
 Social network positions are frequently used to represent the social environment
 that an individual experiences or their social phenotype. Multilayer networks
 provide a way to bridge these different scales to examine social
@@ -515,8 +515,6 @@ scale on the relationship between an individual’s social network position and
 fitness need to be considered based on the hypotheses being tested and
 logistical constraints.
 
-
-## Movement ecology and collective movement
 
 Social processes, movement decisions, and space use are inextricably linked and
 multilayer networks represent a potential analytical framework for linking these
@@ -605,7 +603,7 @@ effects of habitat configuration on the formation of the social environment
 [@He_2019; @Webber_2018].
 
 
-## Habitat selection and space use
+<!-- ## Habitat selection and space use -->
 Social structure and habitat selection are intimately linked: individuals must
 share space to interact and the distribution of resources influences group
 dynamics and home range size [@Webber_2018]. Social structure is influenced by
