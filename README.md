@@ -21,6 +21,9 @@ grep -rni 'paper/manuscript.Rmd' -e 'TODO' || true;
 #> R/metrics.R:154:  # TODO: check for splitNeigh variable and neigh
 #> R/metrics.R:155:  # TODO: check overwrite
 #> scripts/1-data-prep.R:8:# TODO: timezones
+#> scripts/try-behavioural-states.R:30:# TODO: randomize + compare m
+#> scripts/try-behavioural-states.R:41:# TODO: Some of the parameter estimates seem to lie close to the boundaries of their parameter space.
+#> scripts/try-behavioural-states.R:109:# TODO: hmm
 #> 42:interactions to co-occurrence to overlapping home ranges. <!-- TODO: add
 #> 131:<!-- TODO: we answer the first question in the discussion, but not the second-->
 #> 132:<!-- TODO: Webber reference should be 2018, but defaulting to 2017-->
@@ -31,23 +34,6 @@ grep -rni 'paper/manuscript.Rmd' -e 'TODO' || true;
 #> 380:<!-- TODO: I'm not sure this is relevant since this is the main way it
 #> 615:social connections (Figure \@ref(fig:socres)).<!--TODO: what??, while increasing temporal scale had little effect
 #> 672:<!-- TODO: point to figure 1 -->
-#> 704:<!-- TODO: weak -->
-#> 732:TODO: Schneider 2001, Levin og, 
-#> 776:<!-- TODO: In summary, -->
+#> 704:<!-- TODO: weak --> 
+#> 785:<!-- TODO: In summary, -->
 ```
-
-## Info
-
-[Special Column
-info](https://academic.oup.com/CZ/pages/animal_social_system)
-
-### Deadlines
-
-  - ~~Abstract submission: 30 August 2019~~
-  - Manuscript submission: 31 January 2020
-  - Printing: June 2020
-
-### Guidelines
-
-[General Instructions
-page](https://academic.oup.com/cz/pages/General_Instructions)
