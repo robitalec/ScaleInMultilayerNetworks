@@ -24,28 +24,12 @@ alloc.col(DT)
 # Remove season column from 1-data-prep.R
 DT[, season := NULL]
 
+
 nchunk <- 8
-DT[, c('cutJDate', 'cutGroup') := .(cut(JDate, nchunk, include.lowest = TRUE),
-                                    .GRP), by = Year]
 
-
-DT[, .N, .(cutJDate, Year)]
-# TODO: inconsistent N by cut * year
-
-doycuts <- levels(cut(seq(1, 365), 10))
-
-lapply(doy)
-
-
-l <- lapply(winlengths, function(l) {
-  col <- paste0('season', l)
-  
-  DT[between(JDate, winterlow, winterlow + l), (col) := 'winter']
-  DT[between(JDate, summerlow, summerlow + l), (col) := 'summer']
-  
-  # Fake output
-  l
-})
+# TODO: check consistent N by cut * year
+DT[, cutJDate := cut(JDate, nchunk, include.lowest = TRUE), by = Year]
+DT[, timecut := .GRP, .(cutJDate, Year)]
 
 
 ### Temporal grouping ----
