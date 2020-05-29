@@ -1,4 +1,4 @@
-### Scale in multilayer networks - time window length
+### Scale in multilayer networks - time
 # Alec Robitaille
 
 ### Packages ----
@@ -24,16 +24,13 @@ alloc.col(DT)
 # Remove season column from 1-data-prep.R
 DT[, season := NULL]
 
-DT[, range(JDate), Year]
+nchunk <- 8
+DT[, c('cutJDate', 'cutGroup') := .(.BY[[1]], .GRP), 
+   by = cut(JDate, nchunk, include.lowest = TRUE)]
 
-chunk <- 73
-minseq <- seq(1, 365, by = chunk)
-lapply(seq_along(minseq), function(i) {
-  if (i == length(minseq)) {
-    DT[between(JDate, )]  
-  }
-  
-})
+
+
+# 
 
 doycuts <- levels(cut(seq(1, 365), 10))
 
