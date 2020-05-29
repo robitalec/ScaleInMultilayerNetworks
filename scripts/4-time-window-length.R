@@ -25,12 +25,12 @@ alloc.col(DT)
 DT[, season := NULL]
 
 nchunk <- 8
-DT[, c('cutJDate', 'cutGroup') := .(.BY[[1]], .GRP), 
-   by = cut(JDate, nchunk, include.lowest = TRUE)]
+DT[, c('cutJDate', 'cutGroup') := .(cut(JDate, nchunk, include.lowest = TRUE),
+                                    .GRP), by = Year]
 
 
-
-# 
+DT[, .N, .(cutJDate, Year)]
+# TODO: inconsistent N by cut * year
 
 doycuts <- levels(cut(seq(1, 365), 10))
 
