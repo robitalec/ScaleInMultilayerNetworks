@@ -64,6 +64,7 @@ sub <- DT[Year >= 2017 & JDate > summerlow |
 
 
 ## Which individuals have data in both seasons?
+# TODO: drop if drop time sensitivity
 # Window length
 l <- lapply(winlengths, function(l) {
   col <- paste0('season', l)
