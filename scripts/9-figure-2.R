@@ -1,7 +1,8 @@
-# Figure 2
+# === Figure 2 ------------------------------------------------------------
 # Alec Robitaille
 
-### Packages ----
+
+# Packages ----------------------------------------------------------------
 pkgs <- c('data.table',
           'spatsoc',
           'rgdal',
@@ -12,15 +13,16 @@ pkgs <- c('data.table',
 p <- lapply(pkgs, library, character.only = TRUE)
 
 
-### Variables ----
+# Variables ---------------------------------------------------------------
 source('scripts/0-variables.R')
 
 
-### Data ----
+# Input -------------------------------------------------------------------
 DT <- readRDS('data/derived-data/1-sub-seasons-fogo-caribou.Rds')
 alloc.col(DT)
 
-### Generate networks ----
+
+# Generate networks -------------------------------------------------------
 # Drop where season or landcover is NA
 DT <- DT[!is.na(season) & !is.na(get(lccol))]
 
@@ -52,7 +54,8 @@ gLs <- list_graphs(netLs)
 names(gLs) <- names(gbiLs)
 
 
-### Setup data for plotting ----
+
+# Setup data for plotting -------------------------------------------------
 # Generate a single set of xy (so each layer has consistent individual positions)
 ggnet1 <- data.table(ggnetwork(gLs[['winter-2']], layout = 'kamadakawai'))
 xy <- unique(ggnet1[, .(x, y, vertex.names)])
@@ -126,7 +129,8 @@ zzz[layer == 'summer-1', c('xendsame', 'yendsame') := .(shearx + slideright, she
 # a <- zzz[!is.na(xend) & !is.na(yend)][vertex.names == 'FO2016004', .SD]
 # merge(a, a[, .(V1e = V1, V2e = V2, vertex.names)], allow.cartesian = TRUE)
 
-### Plot ----
+
+# Plot --------------------------------------------------------------------
 p <- theme(legend.text = element_text(size = 12, color = "black"),
            legend.title = element_blank(),
            legend.spacing = unit(-0.5, 'cm'),
@@ -175,5 +179,5 @@ labels <- data.table(
 )
 
 
+# Output ------------------------------------------------------------------
 ggsave('graphics/figure-2.png', width = 8, height = 6)
-

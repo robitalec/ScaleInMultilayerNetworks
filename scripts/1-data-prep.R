@@ -1,21 +1,24 @@
-### Scale in multilayer networks - data prep
+# === Data Prep -----------------------------------------------------------
 # Alec Robitaille
 
-### Packages ----
+
+# Packages ----------------------------------------------------------------
 pkgs <- c('data.table', 'rgdal', 'raster')
 p <- lapply(pkgs, library, character.only = TRUE)
 
 
-### Variables ----
+# Variables ---------------------------------------------------------------
 source('scripts/0-variables.R')
 
 
-### Data ----
+
+# Input -------------------------------------------------------------------
 DT <- fread('data/raw-data/FogoCaribou.csv')
 
 lc <- raster('../nl-landcover/output/fogo_lc.tif')
 
-### Date and time columns ----
+
+# Date time ---------------------------------------------------------------
 DT[, c(datecol, timecol) := .(as.IDate(get(datecol), tz = tz), as.ITime(get(timecol)))]
 DT[, 'datetime' := as.POSIXct(paste(get(datecol), get(timecol)), tz)]
 
@@ -29,10 +32,13 @@ diffixrate <- 'FO2016014'
 
 DT <- DT[!ANIMAL_ID %in% c(indianisland, diffixrate)] 
 
-### Project relocations ----
+
+# Project relocations -----------------------------------------------------
 DT[, (projCols) := as.data.table(project(cbind(get(xcol), get(ycol)), utm21N))]
 
-### Landcover prep ----
+
+
+# Land cover prep ---------------------------------------------------------
 water <- 7
 open <- c(1, 6, 9)
 forest <- c(2, 3, 4, 5)
@@ -54,10 +60,14 @@ rclnms <- list(open = 1, forest = 2, lichen = 3)
 reclass <- reclassify(mlc, rcl, include.lowest = TRUE)
 
 
+
+# Sample land cover -------------------------------------------------------
 ### Landcover sample ----
 DT[, (lccol) := extract(reclass, matrix(c(EASTING, NORTHING), ncol = 2))]
 
-### Sub data ----
+
+
+# Sub data ----------------------------------------------------------------
 ## 2017 summer and 2018 winter
 sub <- DT[Year >= 2017 & JDate > summerlow | 
             Year == 2018 & JDate < winterlow + maxwinlength]
@@ -106,7 +116,8 @@ dropids <- unique(c(unlist(winlendrop), unlist(winposdrop)))
 sub <- sub[!get(idcol) %in% dropids]
 subseasons <- sub[!is.na(season)]
 
-### Output ----
+
+# Output ------------------------------------------------------------------
 saveRDS(sub, 'data/derived-data/1-sub-fogo-caribou.Rds')
 saveRDS(subseasons, 'data/derived-data/1-sub-seasons-fogo-caribou.Rds')
 

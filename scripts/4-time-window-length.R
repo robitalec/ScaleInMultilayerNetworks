@@ -1,7 +1,8 @@
-### Scale in multilayer networks - time
+# === Time ----------------------------------------------------------------
 # Alec Robitaille
 
-### Packages ----
+
+# Packages ----------------------------------------------------------------
 pkgs <- c('data.table',
 					'ggplot2',
 					'spatsoc',
@@ -12,15 +13,17 @@ pkgs <- c('data.table',
 p <- lapply(pkgs, library, character.only = TRUE)
 
 
-### Variables ----
+# Variables ---------------------------------------------------------------
 source('scripts/0-variables.R')
 
 
-### Data ----
+# Input -------------------------------------------------------------------
 DT <- readRDS('data/derived-data/1-sub-fogo-caribou.Rds')
 alloc.col(DT)
 
-### Variable time window length ----
+
+
+# Chunk time --------------------------------------------------------------
 # Remove season column from 1-data-prep.R
 DT[, season := NULL]
 
@@ -32,14 +35,15 @@ DT[, cutJDate := cut(JDate, nchunk, include.lowest = TRUE), by = Year]
 DT[, timecut := .GRP, .(cutJDate, Year)]
 
 
-### Temporal grouping ----
+# Temporal grouping with spatsoc ------------------------------------------
 group_times(
   DT,
   datetime =  c(datecol, timecol),
   threshold = tempthresh
 )
 
-### Generate networks for each n observations ----
+
+# Generate network for each time chunk ------------------------------------
 var <- 'winlength'
 
 nets <- lapply(winlengths, function(len) {
@@ -92,5 +96,6 @@ nets <- lapply(winlengths, function(len) {
 out <- rbindlist(nets)
 
 
-### Output ----
+
+# Output ------------------------------------------------------------------
 saveRDS(out, 'data/derived-data/4-time-window-length.Rds')

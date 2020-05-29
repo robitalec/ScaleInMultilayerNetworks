@@ -1,7 +1,8 @@
-### Scale in multilayer networks - number of observations
+# === Number of observations ----------------------------------------------
 # Alec Robitaille
 
-### Packages ----
+
+# Packages ----------------------------------------------------------------
 pkgs <- c('data.table',
           'ggplot2',
           'spatsoc',
@@ -11,23 +12,24 @@ pkgs <- c('data.table',
 p <- lapply(pkgs, library, character.only = TRUE)
 
 
-### Variables ----
+# Variables ---------------------------------------------------------------
 source('scripts/0-variables.R')
 
 
-### Data ----
+# Input -------------------------------------------------------------------
 DT <- readRDS('data/derived-data/1-sub-seasons-fogo-caribou.Rds')
 alloc.col(DT)
 
 
-### Temporal grouping with spatsoc ----
+# Input -------------------------------------------------------------------
 group_times(
   DT,
   datetime =  c(datecol, timecol),
   threshold = tempthresh
 )
 
-### Generate networks for each n observations ----
+
+# Generate networks for each n observations -------------------------------
 maxn <- 500 #DT[, uniqueN(timegroup)]
 nstep <- 25
 
@@ -84,5 +86,5 @@ nets <- lapply(seq(10, maxn, by = nstep), function(n) {
 out <- rbindlist(nets)
 
 
-### Output ----
+# Output ------------------------------------------------------------------
 saveRDS(out, 'data/derived-data/5-number-of-observations.Rds')

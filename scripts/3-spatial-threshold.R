@@ -1,7 +1,7 @@
-### Scale in multilayer networks - spatial threshold
+# === Spatial Threshold ---------------------------------------------------
 # Alec Robitaille
 
-### Packages ----
+# Input -------------------------------------------------------------------
 pkgs <- c('data.table',
 					'spatsoc',
 					'rgdal',
@@ -11,22 +11,24 @@ pkgs <- c('data.table',
 p <- lapply(pkgs, library, character.only = TRUE)
 
 
-### Variables ----
+# Variables ---------------------------------------------------------------
 source('scripts/0-variables.R')
 
 
-### Data ----
+# Input -------------------------------------------------------------------
 DT <- readRDS('data/derived-data/1-sub-seasons-fogo-caribou.Rds')
 alloc.col(DT)
 
-### Temporal grouping with spatsoc ----
+# Temporal grouping with spatsoc ------------------------------------------
 group_times(
   DT,
   datetime =  c(datecol, timecol),
   threshold = '10 minutes'
 )
 
-### Generate networks for each spatial threshold ----
+
+
+# Generate networks for each spatial threshold ----------------------------
 # list spatial thresholds
 thresholds <- c(5, seq(50, 500, by = 50))
 
@@ -78,5 +80,6 @@ nets <- lapply(thresholds, function(t) {
 out <- rbindlist(nets)
 
 
-### Output ----
+
+# Output ------------------------------------------------------------------
 saveRDS(out, 'data/derived-data/3-spatial-threshold.Rds')

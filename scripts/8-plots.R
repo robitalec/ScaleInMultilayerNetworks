@@ -1,19 +1,19 @@
-### Plots ====
+# === Plots ---------------------------------------------------------------
 # Alec Robitaille
 
 
-### Packages ----
+# Packages ----------------------------------------------------------------
 pkgs <- c('data.table',
           'ggplot2',
           'patchwork')
 p <- lapply(pkgs, library, character.only = TRUE)
 
 
-### Variables ----
+# Variables ---------------------------------------------------------------
 source('scripts/0-variables.R')
 
 
-### Data ----
+# Input -------------------------------------------------------------------
 var <- commandArgs(TRUE)[[1]]
 
 if (var == 'lcres') {
@@ -45,7 +45,8 @@ varnames <- data.table(
               'Number of Observations', 'Time Window Position')
 )
 
-### Plots ----
+
+# Plots -------------------------------------------------------------------
 ## Manuscript figures
 # Legend position
 pos1 <- c(0.85, 0.35)

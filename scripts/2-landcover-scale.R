@@ -1,7 +1,7 @@
-### Scale in multilayer networks - landcover scale
+# === Land Cover Scale ----------------------------------------------------
 # Alec Robitaille
 
-### Packages ----
+# Packages ----------------------------------------------------------------
 pkgs <- c('data.table',
 					'spatsoc',
 					'rgdal',
@@ -13,17 +13,18 @@ pkgs <- c('data.table',
 p <- lapply(pkgs, library, character.only = TRUE)
 
 
-### Variables ----
+# Variables ---------------------------------------------------------------
 source('scripts/0-variables.R')
 
-### Data ----
+# Input -------------------------------------------------------------------
 DT <- readRDS('data/derived-data/1-sub-seasons-fogo-caribou.Rds')
 alloc.col(DT)
 
 lc <- readRDS('data/derived-data/1-reclass-lc.Rds')
 
 
-### Modal window ----
+
+# Modal window ------------------------------------------------------------
 lsres <- c(100, 250, 500, 750, 1000)
 lslc <- lapply(lsres, function(res) {
   winmove(lc, res, type = 'circle', win_fun = modal)
@@ -31,11 +32,13 @@ lslc <- lapply(lsres, function(res) {
 names(lslc) <- lsres
 
 
-### Sample landcover ----
+
+# Sample land cover -------------------------------------------------------
 DT[, (paste0('lc', lsres)) := 
       lapply(lslc, function(lc) extract(lc, matrix(c(EASTING, NORTHING), ncol = 2)))]
 
-### Temporal grouping with spatsoc ----
+
+# Temporal grouping with spatsoc ------------------------------------------
 group_times(
   DT,
   datetime =  c(datecol, timecol),
@@ -43,7 +46,8 @@ group_times(
 )
 
 
-### Generate networks for each landcover resolution ----
+
+# Generate networks for each land cover resolution ------------------------
 var <- 'lcres'
 
 # Also include original raster
@@ -100,5 +104,6 @@ nets <- lapply(lsres, function(res) {
 out <- rbindlist(nets)
 
 
-### Output ----
+
+# Output ------------------------------------------------------------------
 saveRDS(out, 'data/derived-data/2-landcover-scale.Rds')

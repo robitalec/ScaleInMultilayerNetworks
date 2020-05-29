@@ -1,17 +1,17 @@
-### Metrics ====
+# === Metrics -------------------------------------------------------------
 # Alec Robitaille
 
 
-### Packages ----
+# Packages ----------------------------------------------------------------
 pkgs <- c('data.table', 'ScaleInMultilayerNetworks')
 p <- lapply(pkgs, library, character.only = TRUE)
 
 
-### Variables ----
+# Variables ---------------------------------------------------------------
 source('scripts/0-variables.R')
 
 
-### Data ----
+# Input -------------------------------------------------------------------
 var <- commandArgs(TRUE)[[1]]
 splitBy <- c(splitBy, var)
 
@@ -30,7 +30,8 @@ DT <- readRDS(path)
 alloc.col(DT)
 
 
-### Multilayer network metrics ----
+
+# Multilayer network metrics ----------------------------------------------
 matrices <- DT[, property_matrix(.SD, idcol, 'layer', 'splitNeigh'), var]
 matrices[, c('season', lccol) := tstrsplit(layer, '-', type.convert = TRUE)]
 
@@ -69,5 +70,6 @@ metriccols <- c('splitNeigh', 'relev', 'graphstrength')
 DT[, paste0('mn', metriccols) := lapply(.SD, mean, na.rm = TRUE), 
    .SDcols = metriccols, by = c(var, splitBy)]
 
-### Output ----
+
+# Output ------------------------------------------------------------------
 saveRDS(DT, gsub('.Rds', '-metrics.Rds', path))
