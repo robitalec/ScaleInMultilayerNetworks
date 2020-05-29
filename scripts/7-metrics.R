@@ -54,7 +54,9 @@ layer_relevance(DT, idcol, splitBy = splitBy)
 stopifnot(DT[!between(relev, 0, 1), .N] == 0)
 
 
-### Mean across individuals(for plots) ----
+
+# Mean across individuals (for plots) -------------------------------------
+# TODO: check light grey, with mean on top
 splitBy <- c('season', lccol)
 
 # Across layers - degree deviation, neigh, multideg, connredund
