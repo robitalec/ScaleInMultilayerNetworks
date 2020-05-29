@@ -24,6 +24,22 @@ alloc.col(DT)
 # Remove season column from 1-data-prep.R
 DT[, season := NULL]
 
+DT[, range(JDate), Year]
+
+chunk <- 73
+minseq <- seq(1, 365, by = chunk)
+lapply(seq_along(minseq), function(i) {
+  if (i == length(minseq)) {
+    DT[between(JDate, )]  
+  }
+  
+})
+
+doycuts <- levels(cut(seq(1, 365), 10))
+
+lapply(doy)
+
+
 l <- lapply(winlengths, function(l) {
   col <- paste0('season', l)
   
