@@ -27,7 +27,7 @@ knitr::opts_chunk$set(
     out.width = '\\linewidth'
 )
 
-source('../scripts/0-variables.R')
+source('../scripts/00-variables.R')
 
 library(data.table)
 DT <- readRDS('../data/derived-data/1-sub-seasons-fogo-caribou.Rds')

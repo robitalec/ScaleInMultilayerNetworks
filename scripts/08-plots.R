@@ -10,7 +10,7 @@ p <- lapply(pkgs, library, character.only = TRUE)
 
 
 # Variables ---------------------------------------------------------------
-source('scripts/0-variables.R')
+source('scripts/00-variables.R')
 
 
 # Input -------------------------------------------------------------------
