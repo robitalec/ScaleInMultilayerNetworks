@@ -5,7 +5,6 @@
 pkgs <- c('data.table', 'rgdal', 'raster')
 p <- lapply(pkgs, library, character.only = TRUE)
 
-# TODO: timezones
 
 ### Variables ----
 source('scripts/0-variables.R')
@@ -17,7 +16,8 @@ DT <- fread('data/raw-data/FogoCaribou.csv')
 lc <- raster('../nl-landcover/output/fogo_lc.tif')
 
 ### Date and time columns ----
-DT[, c(datecol, timecol) := .(as.IDate(get(datecol)), as.ITime(get(timecol)))]
+DT[, c(datecol, timecol) := .(as.IDate(get(datecol), tz = tz), as.ITime(get(timecol)))]
+DT[, 'datetime' := as.POSIXct(paste(get(datecol), get(timecol)), tz)]
 
 # Seasons
 DT[between(JDate, winterlow, winterhigh), season := 'winter']
