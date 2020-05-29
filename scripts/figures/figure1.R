@@ -1,4 +1,7 @@
+# === Figure 1 ------------------------------------------------------------
+# Quinn MR Webber, Julie Turner
 
+# Packages ----------------------------------------------------------------
 library(data.table)
 library(ggplot2)
 library(ggforce)
@@ -9,7 +12,9 @@ library(scales)
 remotes::install_github("sckott/rphylopic")
 library(rphylopic)
 
-## select phylopic  
+
+
+# Select phylopic ---------------------------------------------------------
 hyeana <- rphylopic::image_data('f1b665ae-8fe9-42e4-b03a-4e9ae8213244', 512)[[1]]
 bird <- rphylopic::image_data('dfdfb59e-8126-44e1-a7a9-1bf698113e1c', 512)[[1]]
 lizard <- rphylopic::image_data('83ba27dd-ad53-45e4-acf4-d75bf74105a6', 512)[[1]]
@@ -17,14 +22,16 @@ elephant <- rphylopic::image_data('fb84ef24-5eb8-4fb7-bf36-d20ebbfdd125', 512)[[
 ## load coordinate data for ellipses
 df <- fread("data/raw-data/figure1.csv")
 
-## assign colors
+
+# Colors ------------------------------------------------------------------
 assoc <- "#d73027"
 inter <- "#fee090"
 voc <- "#fc8d59"
 scent <- "#4575b4"
 hro <- "#5ab4ac"
 
-## assign theme
+
+# Theme -------------------------------------------------------------------
 p <- theme(legend.position = 'none',
             axis.text.x = element_text(size = 14, color = "black", angle = 45, vjust = 0.65),
             axis.text.y = element_text(size = 14, color = "black"),
@@ -35,10 +42,15 @@ p <- theme(legend.position = 'none',
                                         colour = "black",
                                         fill = NA,
                                         size = 1))
-## assign variables
+
+
+# Variables ---------------------------------------------------------------
 ysize = 5 # silhouette size
 
 
+
+
+# Figure ------------------------------------------------------------------
 png("graphics/figure1.png", width = 6000, height = 6000, units = "px", res = 500)
 aa <- ggplot() +
   geom_ellipse(data = df[species == "hyeana" & behaviour == "Association"], 
