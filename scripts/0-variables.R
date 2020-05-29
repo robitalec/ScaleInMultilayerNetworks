@@ -11,6 +11,9 @@ ycol <- 'Y_COORD'
 datecol <- 'idate'
 timecol <- 'itime'
 
+# Time zone 
+tz <- 'America/St_Johns'
+
 
 # split by
 lccol <- 'lc'
