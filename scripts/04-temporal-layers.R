@@ -1,4 +1,4 @@
-# === Time ----------------------------------------------------------------
+# === Temporal Layers -----------------------------------------------------
 # Alec Robitaille
 
 
@@ -83,4 +83,4 @@ out <- out[stren, on = c(idcol, splitBy)]
 
 
 # Output ------------------------------------------------------------------
-saveRDS(out, 'data/derived-data/4-time.Rds')
+saveRDS(out, 'data/derived-data/4-temporal-layers.Rds')

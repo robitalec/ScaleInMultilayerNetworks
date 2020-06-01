@@ -19,8 +19,8 @@ if (var == 'lcres') {
   path <- 'data/derived-data/2-landcover-scale.Rds'
 } else if (var == 'spatialthreshold') {
   path <- 'data/derived-data/3-spatial-threshold.Rds'
-} else if (var == 'winlength') {
-  path <- 'data/derived-data/4-time-window-length.Rds'
+} else if (var == 'time') {
+  path <- 'data/derived-data/4-temporal-layers.Rds'
 } else if (var == 'nobs') {
   path <- 'data/derived-data/5-number-of-observations.Rds'
 } else if (var == 'winpos') {
