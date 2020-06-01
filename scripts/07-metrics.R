@@ -23,9 +23,7 @@ if (var == 'lcres') {
   path <- 'data/derived-data/4-temporal-layers.Rds'
 } else if (var == 'nobs') {
   path <- 'data/derived-data/5-number-of-observations.Rds'
-} else if (var == 'winpos') {
-  path <- 'data/derived-data/6-time-window-position.Rds'
-}
+} 
 DT <- readRDS(path)
 alloc.col(DT)
 
