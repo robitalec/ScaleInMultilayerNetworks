@@ -2,7 +2,7 @@
 # Alec Robitaille
 
 
-VARS = lcres spatialthreshold time nobs
+VARS = lcres spatialthreshold timecut nobs
 METS = data/derived-data/5-number-of-observations-metrics.Rds data/derived-data/4-temporal-layers-metrics.Rds data/derived-data/3-spatial-threshold-metrics.Rds data/derived-data/2-landcover-scale-metrics.Rds
 FIGS = graphics/figure-winlength.png graphics/figure-nobs.png graphics/figure-winpos.png graphics/figure-spatialthreshold.png graphics/figure-lcres.png
 OUTPUTS = data/derived-data/5-number-of-observations.Rds data/derived-data/4-temporal-layers.Rds data/derived-data/3-spatial-threshold.Rds data/derived-data/2-landcover-scale.Rds data/derived-data/1-sub-fogo-caribou.Rds data/derived-data/1-sub-seasons-fogo-caribou.Rds

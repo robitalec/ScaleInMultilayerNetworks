@@ -12,15 +12,17 @@ source('scripts/00-variables.R')
 
 
 # Input -------------------------------------------------------------------
-var <- commandArgs(TRUE)[[1]]
-splitBy <- c(splitBy, var)
+# var <- commandArgs(TRUE)[[1]]
+var <- 'timecut'
 
 if (var == 'lcres') {
   path <- 'data/derived-data/2-landcover-scale.Rds'
+  splitBy <- c(splitBy, var)
 } else if (var == 'spatialthreshold') {
   path <- 'data/derived-data/3-spatial-threshold.Rds'
-} else if (var == 'time') {
+} else if (var == 'timecut') {
   path <- 'data/derived-data/4-temporal-layers.Rds'
+  splitBy <- var
 } else if (var == 'nobs') {
   path <- 'data/derived-data/5-number-of-observations.Rds'
 } 
