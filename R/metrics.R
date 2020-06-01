@@ -196,6 +196,22 @@ layer_similarity <- function(matrices, pattern, splitBy) {
 
 
 
+layer_similarity_ordinal <- function(matrices, pattern, splitBy) {
+  ords <- sort(unique(matrices[[splitBy]]))
+  
+  lapply(ords, function(low) {
+    high <- low + 1
+    matrices[data.table::between(get(splitBy), low, high), 
+             layersim := {
+               fifelse(nrow(.SD) == 2,
+                       cor(t(.SD[1]), t(.SD[2]), use = 'na.or.complete'),
+                       NA_real_)
+             },
+             .SDcols = patterns(pattern)]
+  })
+}
+
+
 #' Property Matrix
 #' 
 #' @param DT 
