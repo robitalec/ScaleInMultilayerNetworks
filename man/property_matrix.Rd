@@ -4,7 +4,7 @@
 \alias{property_matrix}
 \title{Property Matrix}
 \usage{
-property_matrix(DT, id, layer, metric)
+property_matrix(DT, id, layer, metric, by)
 }
 \arguments{
 \item{DT}{}
@@ -14,6 +14,11 @@ property_matrix(DT, id, layer, metric)
 \item{layer}{}
 
 \item{metric}{}
+
+\item{by}{}
+}
+\value{
+
 }
 \description{
 Property Matrix

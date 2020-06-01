@@ -13,6 +13,9 @@ layer_similarity(matrices, pattern, splitBy)
 
 \item{splitBy}{column indicating which groups to compare ensuring each group of rows = 2.}
 }
+\value{
+
+}
 \description{
 Layer similarity
 }

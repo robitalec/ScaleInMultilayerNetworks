@@ -9,6 +9,9 @@ layer_strength(graphLs)
 \arguments{
 \item{graphLs}{}
 }
+\value{
+
+}
 \description{
 Calculate graph strength for each graph in a list
 }

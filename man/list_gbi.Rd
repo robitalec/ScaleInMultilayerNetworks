@@ -17,6 +17,9 @@ list_gbi(DT, id, splitBy, group = "group")
 
 \item{splitList}{}
 }
+\value{
+
+}
 \description{
 GBI
 }

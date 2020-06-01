@@ -4,8 +4,7 @@
 \alias{list_graphs}
 \title{Graphs}
 \usage{
-list_graphs(netLs, mode = "undirected", diag = FALSE,
-  weighted = TRUE)
+list_graphs(netLs, mode = "undirected", diag = FALSE, weighted = TRUE)
 }
 \arguments{
 \item{netLs}{}
@@ -15,6 +14,9 @@ list_graphs(netLs, mode = "undirected", diag = FALSE,
 \item{diag}{}
 
 \item{weighted}{}
+}
+\value{
+
 }
 \description{
 Graphs
