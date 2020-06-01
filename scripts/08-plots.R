@@ -17,17 +17,15 @@ source('scripts/00-variables.R')
 var <- commandArgs(TRUE)[[1]]
 
 if (var == 'lcres') {
-  DT <- readRDS('data/derived-data/2-landcover-scale-metrics.Rds')
+  path <- 'data/derived-data/2-landcover-scale.Rds'
 } else if (var == 'spatialthreshold') {
-  DT <- readRDS('data/derived-data/3-spatial-threshold-metrics.Rds')
-} else if (var == 'winlength') {
-  DT <- readRDS('data/derived-data/4-time-window-length-metrics.Rds')
+  path <- 'data/derived-data/3-spatial-threshold.Rds'
+} else if (var == 'time') {
+  path <- 'data/derived-data/4-temporal-layers.Rds'
 } else if (var == 'nobs') {
-  DT <- readRDS('data/derived-data/5-number-of-observations-metrics.Rds')
-} else if (var == 'winpos') {
-  DT <- readRDS('data/derived-data/6-time-window-position-metrics.Rds')
-}
-
+  path <- 'data/derived-data/5-number-of-observations.Rds'
+} 
+DT <- readRDS(path)
 alloc.col(DT)
 
 
