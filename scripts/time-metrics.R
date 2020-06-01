@@ -12,20 +12,10 @@ source('scripts/00-variables.R')
 
 
 # Input -------------------------------------------------------------------
-# var <- commandArgs(TRUE)[[1]]
 var <- 'timecut'
+path <- 'data/derived-data/4-temporal-layers.Rds'
+splitBy <- var
 
-if (var == 'lcres') {
-  path <- 'data/derived-data/2-landcover-scale.Rds'
-  splitBy <- c(splitBy, var)
-} else if (var == 'spatialthreshold') {
-  path <- 'data/derived-data/3-spatial-threshold.Rds'
-} else if (var == 'timecut') {
-  path <- 'data/derived-data/4-temporal-layers.Rds'
-  splitBy <- var
-} else if (var == 'nobs') {
-  path <- 'data/derived-data/5-number-of-observations.Rds'
-} 
 DT <- readRDS(path)
 alloc.col(DT)
 
@@ -33,11 +23,23 @@ alloc.col(DT)
 
 # Multilayer network metrics ----------------------------------------------
 matrices <- property_matrix(DT, idcol, 'layer', 'splitNeigh', var)
-# matrices[, c('season', lccol) := tstrsplit(layer, '-', type.convert = TRUE)]
+setnames(matrices, 'layer', var)
 
-layer_similarity(matrices, 'FO', c(lccol, var))
+matrices[, (var) := as.integer(get(var))]
 
-DT[matrices, layersim := layersim, on = c(var, 'season', lccol)]
+layer_similarity_ordinal(matrices, 'FO', var)
+
+library(ggplot2)
+
+
+melt(matrices, id.vars = grep('FO', colnames(matrices)),
+     measure.vars = c('layersim',))
+
+ggplot(matrices) + 
+  geom_line(aes(timecut, layersim))
+
+
+DT[matrices, layersim := layersim, on = var]
 
 # Multidegree
 multi_degree(DT, 'splitNeigh', idcol, splitBy = var)
