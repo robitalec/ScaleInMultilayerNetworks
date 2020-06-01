@@ -202,6 +202,7 @@ layer_similarity <- function(matrices, pattern, splitBy) {
 #' @param id 
 #' @param layer 
 #' @param metric 
+#' @param by
 #'
 #' @return
 #' @references Bródka P, Chmiel A,Magnani M, Ragozini G. 2018 Quantifying layer
@@ -211,8 +212,12 @@ layer_similarity <- function(matrices, pattern, splitBy) {
 #' @export
 #'
 #' @examples
-property_matrix <- function(DT, id, layer, metric) {
-  data.table::dcast(DT, reformulate(id, response = layer), value.var = metric)
+property_matrix <- function(DT, id, layer, metric, by) {
+  DT[, list(list(data.table::dcast(
+    .SD, reformulate(..id, response = ..layer),
+    value.var = ..metric
+  ))),
+  by = by][, data.table::rbindlist(V1, fill = TRUE)]
 }
 
 
