@@ -71,22 +71,16 @@ stren[, (splitBy) := tstrsplit(layer, '-', type.convert = TRUE)]
 setnames(stren, 'ind', idcol)
 
 # Calculate neighbors
-layer_neighbors(sub, idcol, splitBy = splitBy)
+layer_neighbors(DT, idcol, splitBy = splitBy)
 
 # and tidy output, prep for merge
-outcols <- c('neigh', 'splitNeigh', idcol, splitBy)
-out <- unique(sub[, .SD, .SDcols = outcols])
+outcols <- c('neigh', 'splitNeigh', idcol, 'cutJDate', splitBy)
+out <- unique(DT[, .SD, .SDcols = outcols])
 
 # Merge eigcent+correlations with neighbors
 out <- out[stren, on = c(idcol, splitBy)]
-setnames(out, col, gsub('[0-9]', '', col))
-
-# Preserve window length
-set(out, j = var, value = len)
-
-out <- rbindlist(nets)
 
 
 
 # Output ------------------------------------------------------------------
-saveRDS(out, 'data/derived-data/4-time-window-length.Rds')
+saveRDS(out, 'data/derived-data/4-time.Rds')
