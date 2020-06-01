@@ -196,6 +196,18 @@ layer_similarity <- function(matrices, pattern, splitBy) {
 
 
 
+#' Layer similarity - ordinal
+#'
+#' @inheritParams layer_similarity
+#' 
+#' Note: splitBy provided to layer_similariy_ordinal must be provided
+#' such that sort(unique()) returns the correct, ordinal levels
+#' (eg. as an integer)
+#'
+#' @return
+#' @export
+#'
+#' @examples
 layer_similarity_ordinal <- function(matrices, pattern, splitBy) {
   ords <- sort(unique(matrices[[splitBy]]))
   
