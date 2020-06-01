@@ -2,10 +2,10 @@
 # Alec Robitaille
 
 
-VARS = lcres spatialthreshold winpos nobs winlength
-METS = data/derived-data/6-time-window-position-metrics.Rds data/derived-data/5-number-of-observations-metrics.Rds data/derived-data/4-time-window-length-metrics.Rds data/derived-data/3-spatial-threshold-metrics.Rds data/derived-data/2-landcover-scale-metrics.Rds
+VARS = lcres spatialthreshold time nobs
+METS = data/derived-data/5-number-of-observations-metrics.Rds data/derived-data/4-temporal-layers-metrics.Rds data/derived-data/3-spatial-threshold-metrics.Rds data/derived-data/2-landcover-scale-metrics.Rds
 FIGS = graphics/figure-winlength.png graphics/figure-nobs.png graphics/figure-winpos.png graphics/figure-spatialthreshold.png graphics/figure-lcres.png
-OUTPUTS = data/derived-data/6-time-window-position.Rds data/derived-data/5-number-of-observations.Rds data/derived-data/4-time-window-length.Rds data/derived-data/3-spatial-threshold.Rds data/derived-data/2-landcover-scale.Rds data/derived-data/1-sub-fogo-caribou.Rds data/derived-data/1-sub-seasons-fogo-caribou.Rds
+OUTPUTS = data/derived-data/5-number-of-observations.Rds data/derived-data/4-temporal-layers.Rds data/derived-data/3-spatial-threshold.Rds data/derived-data/2-landcover-scale.Rds data/derived-data/1-sub-fogo-caribou.Rds data/derived-data/1-sub-seasons-fogo-caribou.Rds
 
 all: $(FIGS)
 
