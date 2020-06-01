@@ -20,10 +20,13 @@ grep -rni 'paper/manuscript.Rmd' -e 'TODO' || true;
 #> R/metrics.R:129:  # TODO: warn overwrite
 #> R/metrics.R:154:  # TODO: check for splitNeigh variable and neigh
 #> R/metrics.R:155:  # TODO: check overwrite
-#> scripts/1-data-prep.R:8:# TODO: timezones
+#> scripts/04-time-window-length.R:29:# TODO: check consistent N by cut * year
+#> scripts/04-time-window-length.R:47:# TODO: double fixes
+#> scripts/07-metrics.R:60:# TODO: check light grey, with mean on top
 #> scripts/try-behavioural-states.R:30:# TODO: randomize + compare m
 #> scripts/try-behavioural-states.R:41:# TODO: Some of the parameter estimates seem to lie close to the boundaries of their parameter space.
 #> scripts/try-behavioural-states.R:109:# TODO: hmm
+#> scripts/01-data-prep.R:77:# TODO: drop if drop time sensitivity
 #> 42:interactions to co-occurrence to overlapping home ranges. <!-- TODO: add
 #> 131:<!-- TODO: we answer the first question in the discussion, but not the second-->
 #> 132:<!-- TODO: Webber reference should be 2018, but defaulting to 2017-->
