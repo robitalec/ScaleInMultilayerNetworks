@@ -221,6 +221,8 @@ layer_similarity_ordinal <- function(matrices, pattern, splitBy) {
              },
              .SDcols = patterns(pattern)]
   })
+  
+  matrices
 }
 
 
