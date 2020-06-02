@@ -4,14 +4,12 @@
 \alias{property_matrix}
 \title{Property Matrix}
 \usage{
-property_matrix(DT, id, layer, metric, by)
+property_matrix(DT, id, metric, by, layer = "layer")
 }
 \arguments{
 \item{DT}{}
 
 \item{id}{}
-
-\item{layer}{}
 
 \item{metric}{}
 

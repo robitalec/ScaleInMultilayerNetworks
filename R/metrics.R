@@ -242,12 +242,14 @@ layer_similarity_ordinal <- function(matrices, pattern, splitBy) {
 #' @export
 #'
 #' @examples
-property_matrix <- function(DT, id, layer, metric, by) {
-  DT[, list(list(data.table::dcast(
-    .SD, reformulate(..id, response = ..layer),
+property_matrix <- function(DT, id, metric, by, layer = 'layer') {
+  zzz <- DT[, list(list(data.table::dcast(
+    .SD,
+    reformulate(..id, response = ..layer),
     value.var = ..metric
   ))),
-  by = by][, data.table::rbindlist(V1, fill = TRUE)]
+  by = by][, data.table::rbindlist(V1, idcol = 'i', fill = TRUE)]
+  data.table::setnames(zzz, 'i', by)
+  zzz
 }
-
 
