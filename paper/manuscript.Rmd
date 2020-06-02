@@ -1,5 +1,5 @@
 ---
-title: The problem and promise of scale in multilayer animal social networks
+title: Considering scale in multilayer animal social networks
 author: Alec L. Robitaille^1\*^, Quinn M.R. Webber^2^, Julie W. Turner^1^, Eric Vander Wal^1,2^
 date: |
   | ^1^Department of Biology, Memorial University of Newfoundland, Canada
