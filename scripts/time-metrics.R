@@ -32,11 +32,16 @@ library(ggplot2)
 melt(matrices, id.vars = grep('FO', colnames(matrices)),
      measure.vars = c('layersim',))
 
+matrices[DT, c('cutJDate', 'Year') := .(cutJDate, Year), on = 'timecut']
 ggplot(matrices) + 
   geom_line(aes(timecut, layersim))
+ggplot(matrices) + 
+  geom_line(aes(cutJDate, layersim, group  =1))
+ggplot(matrices) + 
+  geom_line(aes(layer, layersim))
 
 
-DT[matrices, layersim := layersim, on = var]
+DT[matrices, layersim := layersim, on = 'layer']
 
 # Multidegree
 multi_degree(DT, 'splitNeigh', idcol, splitBy = var)
@@ -53,7 +58,7 @@ deviation_degree(DT, 'splitNeigh', idcol, splitBy = var)
 layer_relevance(DT, idcol, splitBy = splitBy)
 stopifnot(DT[!between(relev, 0, 1), .N] == 0)
 
-
+ggplot(DT) + geom_line(aes(cutJDate, relev, group = ANIMAL_ID))
 
 # Mean across individuals (for plots) -------------------------------------
 # TODO: check light grey, with mean on top
