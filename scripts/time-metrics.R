@@ -22,10 +22,7 @@ alloc.col(DT)
 
 
 # Multilayer network metrics ----------------------------------------------
-matrices <- property_matrix(DT, idcol, 'layer', 'splitNeigh', var)
-setnames(matrices, 'layer', var)
-
-matrices[, (var) := as.integer(get(var))]
+matrices <- property_matrix(DT, idcol, 'splitNeigh', var)
 
 layer_similarity_ordinal(matrices, 'FO', var)
 
