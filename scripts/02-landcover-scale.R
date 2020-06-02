@@ -17,7 +17,8 @@ p <- lapply(pkgs, library, character.only = TRUE)
 source('scripts/00-variables.R')
 
 # Input -------------------------------------------------------------------
-DT <- readRDS('data/derived-data/1-sub-seasons-fogo-caribou.Rds')
+# TODO: switch back to sub seasons?
+DT <- readRDS('data/derived-data/1-sub-fogo-caribou.Rds')
 alloc.col(DT)
 
 lc <- readRDS('data/derived-data/1-reclass-lc.Rds')
@@ -53,7 +54,8 @@ var <- 'lcres'
 # Also include original raster
 lsres <- c(30, lsres)
 lslc <- c(lc, lslc)
-splitBy <- 'season'
+# TODO: switch back to seasons?
+splitBy <- c()
 
 nets <- lapply(lsres, function(res) {
   col <- ifelse(res == 30, 'lc', paste0('lc', res))
