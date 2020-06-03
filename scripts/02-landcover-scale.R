@@ -116,5 +116,16 @@ out <- rbindlist(nets)
 
 
 
+# Count locs in lc --------------------------------------------------------
+count <- rbindlist(lapply(grep('lc', colnames(DT), value = TRUE), function(col) {
+  DT[, .N, col][, 
+    c('lc', 'res') := .(get(col), gsub('lc', '', col))][, 
+      .(lc, res, N)]
+}))
+
+
+
+
 # Output ------------------------------------------------------------------
 saveRDS(out, 'data/derived-data/2-landcover-scale.Rds')
+saveRDS(count, 'data/derived-data/2-landcover-scale-count.Rds')
