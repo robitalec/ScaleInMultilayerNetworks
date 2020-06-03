@@ -256,7 +256,15 @@ property_matrix <- function(DT, id, metric, by, layer = 'layer') {
 
 
 
-edge_overlap <- function(graphLs, weighted = TRUE) {
+#' Edge overlap
+#'
+#' @param graphLs 
+#'
+#' @return
+#' @export
+#'
+#' @examples
+edge_overlap <- function(graphLs) {
   # count number of unique edges
   # for each unique edge, count number of layers it exists on / total
   # average all overlap 
@@ -275,18 +283,5 @@ edge_overlap <- function(graphLs, weighted = TRUE) {
   edgeoverlapml <- unique(edges[, .(layer, dyadID, edgeoverlap)])[, mean(edgeoverlap)]
   propedges <- edges[, uniqueN(dyadID) / uniqueEdges, by = layer]
   
-  if (weighted) {
-    
-    
-    
-    
-    
-    
-  } else {
-    edges[, edgeoverlap := .N / uniqueLayers, by = dyadID]
-    edgeoverlapml <- unique(edges[, .(layer, dyadID, edgeoverlap)])[, mean(edgeoverlap)]
-    propedges <- edges[, uniqueN(dyadID) / uniqueEdges, by = layer]
-    propedges[, .(layer, propedges = V1, edgeoverlap = edgeoverlapml)]
-  }
-  
+  propedges[, .(layer, propedges = V1, edgeoverlap = edgeoverlapml)]
 }

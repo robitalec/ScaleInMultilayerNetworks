@@ -14,6 +14,8 @@ property_matrix(DT, id, metric, by, layer = "layer")
 \item{metric}{}
 
 \item{by}{}
+
+\item{layer}{}
 }
 \value{
 
