@@ -4,7 +4,7 @@
 \alias{edge_overlap}
 \title{Edge overlap}
 \usage{
-edge_overlap(graphLs)
+edge_overlap(edges)
 }
 \arguments{
 \item{graphLs}{}
