@@ -256,7 +256,9 @@ property_matrix <- function(DT, id, metric, by, layer = 'layer') {
 
 
 
-edge_overlap <- function(edgelist, by) {
+lapply(gLs, igraph::as_data_frame)
+
+edge_overlap <- function(graphLs) {
   # count number of unique edges
   # for each unique edge, count number of layers it exists on / total
   # average all overlap 
