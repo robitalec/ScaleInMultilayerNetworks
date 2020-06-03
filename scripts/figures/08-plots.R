@@ -50,23 +50,6 @@ varnames <- data.table(
 pos1 <- c(0.85, 0.35)
 pos2 <- c(0.85, 0.3)
 
-# Theme
-p <- theme(legend.text = element_text(size = 12, color = "black"),
-           legend.title = element_blank(),
-           legend.spacing = unit(-0.5, 'cm'),
-           legend.background = element_blank(),
-           legend.key = element_blank(),
-           axis.text.x = element_text(size = 14, color = "black", vjust = 0.65),
-           axis.text.y = element_text(size = 14, color = "black"),
-           axis.title = element_text(size = 18),
-           panel.grid.minor = element_blank(),
-           panel.background = element_blank(),
-           panel.border = element_rect(
-             colour = "black",
-             fill = NA,
-             size = 1))
-
-
 
 ## Colors
 cols <- DT[, .(layer = sort(unique(layer)))][, 
@@ -76,8 +59,7 @@ cols <- DT[, .(layer = sort(unique(layer)))][,
 greys <- DT[, .(lc = sort(unique(lc)))][, 
   .(lc, hex = c('#6b6b6b', '#c2c2c2', '#919191'))]
 
-# Linesize
-linesize <- 1.3
+
 
 # Plot by landcover
 base1 <- ggplot(unique(DT[, .SD, .SDcols = c(var, 'lcname', 'layersim')]), 
@@ -126,7 +108,7 @@ g8 <- base3 + geom_line(aes(y = mngraphstrength), size = linesize) +
           legend.key.width = unit(1.4,"cm")) &
     labs(x = varnames[vars == var, varname]) &
     scale_linetype_manual(
-      values = c("forest" = "dashed", "open" = "dotted", "forage" = "solid")) &
+      values = linevalues) &
     p)
 
 
