@@ -256,6 +256,8 @@ property_matrix <- function(DT, id, metric, by, layer = 'layer') {
 
 
 
+
+
 #' Edge overlap
 #'
 #' @param graphLs 

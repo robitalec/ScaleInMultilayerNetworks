@@ -68,3 +68,21 @@ list_graphs <- function(netLs, mode = 'undirected', diag = FALSE, weighted = TRU
     weighted = weighted
   )
 }
+
+
+#' Edge lists
+#'
+#' @param edgeLs 
+#'
+#' @return
+#' @export
+#'
+#' @examples
+list_edges <- function(graphLs) {
+    edges <- data.table::rbindlist(lapply(graphLs, function(g) {
+      igraph::as_data_frame(g)
+    }), idcol = 'layer')
+    spatsoc::dyad_id(edges, 'from', 'to')
+    
+    edges
+}
