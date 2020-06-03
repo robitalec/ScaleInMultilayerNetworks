@@ -253,3 +253,11 @@ property_matrix <- function(DT, id, metric, by, layer = 'layer') {
   zzz
 }
 
+
+
+
+edge_overlap <- function(edgelist, by) {
+  # count number of unique edges
+  # for each unique edge, count number of layers it exists on / total
+  # average all overlap 
+}
