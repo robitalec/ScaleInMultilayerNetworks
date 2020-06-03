@@ -99,13 +99,16 @@ nets <- lapply(lsres, function(res) {
   
   # and tidy output, prep for merge
   outcols <- c('neigh', 'splitNeigh', idcol, splitBy)
-  out <- unique(sub[, .SD, .SDcols = outcols])
+  usub <- unique(sub[, .SD, .SDcols = outcols])
   
   # Merge eigcent+correlations with neighbors
-  out <- out[stren, on = c(idcol, splitBy)]
-  setnames(out, col, gsub('[0-9]', '', col))
+  wstren <- usub[stren, on = c(idcol, splitBy)]
+  setnames(wstren, col, gsub('[0-9]', '', col))
   
-  # Preserve window length
+  # Merge edge overlap
+  out <- wstren[eovr, on = 'layer']
+  
+  # Preserve land cover resolution
   set(out, j = var, value = res)
 })
 
