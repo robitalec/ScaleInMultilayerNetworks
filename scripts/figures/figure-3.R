@@ -1,4 +1,5 @@
 # === Figure 3 ------------------------------------------------------------
+# Land Cover Resolution
 # Alec Robitaille
 
 
@@ -28,7 +29,8 @@ source('scripts/figures/theme.R')
 count[lc %in% c(1, 2, 3), percent := N / sum(N), by = res]
 
 ggplot(count[lc %in% c(1, 2, 3)]) + 
-  geom_line(aes(res, percent, color = factor(lcname), group = lcname))
+  geom_line(aes(res, percent, linetype = factor(lcname), group = lcname)) +
+  scale_linetype_manual(values = linetypes)
 
 
 ggplot(DT) + 

@@ -35,7 +35,7 @@ linesize <- 1.3
 
 
 # Linetype ----------------------------------------------------------------
-linevalues <- c("forest" = "dashed", "open" = "dotted", "forage" = "solid")
+linetypes <- c("forest" = "dashed", "open" = "dotted", "forage" = "solid")
 
 
 
