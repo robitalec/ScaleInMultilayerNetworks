@@ -256,10 +256,22 @@ property_matrix <- function(DT, id, metric, by, layer = 'layer') {
 
 
 
-lapply(gLs, igraph::as_data_frame)
-
 edge_overlap <- function(graphLs) {
   # count number of unique edges
   # for each unique edge, count number of layers it exists on / total
   # average all overlap 
+  
+  edges <- rbindlist(lapply(graphLs, function(g) {
+    as_data_frame(g)
+  }), idcol = 'layer')
+  
+  spatsoc::dyad_id(edges, 'from', 'to')
+  
+  uniqueEdges <- edges[, uniqueN(dyadID)]
+  uniqueLayers <- edges[, uniqueN(layer)]
+  
+  edges[, edgeoverlap := .N / uniqueLayers, by = dyadID]
+  edges[, edgeoverlapml := mean(edgeNLayer)]
+  
+  
 }
