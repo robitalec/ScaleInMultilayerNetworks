@@ -35,8 +35,8 @@ names(lslc) <- lsres
 
 
 # Sample land cover -------------------------------------------------------
-DT[, (paste0('lc', lsres)) := 
-      lapply(lslc, function(lc) extract(lc, matrix(c(EASTING, NORTHING), ncol = 2)))]
+DT[, (paste0('lc', lsres)) :=
+      lapply(lslc, function(l) extract(l, matrix(c(EASTING, NORTHING), ncol = 2)))]
 
 
 # Temporal grouping with spatsoc ------------------------------------------
