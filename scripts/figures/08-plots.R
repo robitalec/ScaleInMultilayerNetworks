@@ -47,18 +47,9 @@ varnames <- data.table(
 # Plots -------------------------------------------------------------------
 ## Manuscript figures
 # Legend position
+# TODO: fix
 pos1 <- c(0.85, 0.35)
 pos2 <- c(0.85, 0.3)
-
-
-## Colors
-cols <- DT[, .(layer = sort(unique(layer)))][, 
-  .(layer, hex = c('#8c510a','#d8b365','#c4b99c',
-                   '#01665e','#5ab4ac', '#9fbbb7'))]
-
-greys <- DT[, .(lc = sort(unique(lc)))][, 
-  .(lc, hex = c('#6b6b6b', '#c2c2c2', '#919191'))]
-
 
 
 # Plot by landcover
