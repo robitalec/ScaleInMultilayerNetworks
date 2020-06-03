@@ -83,6 +83,12 @@ nets <- lapply(lsres, function(res) {
   gLs <- list_graphs(netLs)
   names(gLs) <- names(gbiLs)
   
+  # Generate edge lists
+  eLs <- list_edges(gLs)
+  
+  # Calculate edge overlap
+  eovr <- edge_overlap(eLs)
+  
   # Calculate eigenvector centrality for each season
   stren <- layer_strength(gLs)
   stren[, (splitBy) := tstrsplit(layer, '-', type.convert = TRUE)]
