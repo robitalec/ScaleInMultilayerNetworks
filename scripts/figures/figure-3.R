@@ -25,8 +25,9 @@ count[legend, lcname := lcname, on = 'lc']
 source('scripts/figures/theme.R')
 
 # Plot --------------------------------------------------------------------
-
-count[lc %in% c(1, 2, 3), percent := N / sum(N), by = res]
+# TODO: fix in 02- 
+count[res == "", res := 30]
+count[lc %in% c(1, 2, 3), percent := N / sum(N) * 100, by = res]
 
 ggplot(count[lc %in% c(1, 2, 3)]) + 
   geom_line(aes(res, percent, linetype = factor(lcname), group = lcname)) +
