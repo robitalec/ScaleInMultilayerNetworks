@@ -17,7 +17,6 @@ p <- lapply(pkgs, library, character.only = TRUE)
 source('scripts/00-variables.R')
 
 # Input -------------------------------------------------------------------
-# TODO: switch back to sub seasons?
 DT <- readRDS('data/derived-data/1-sub-fogo-caribou.Rds')
 alloc.col(DT)
 
@@ -27,11 +26,11 @@ lc <- readRDS('data/derived-data/1-reclass-lc.Rds')
 # If already run
 # lslc <- lapply(dir('data/derived-data', '2-landcover-res-*', full.names = TRUE),
 #                raster)
-# lsres <- seq(100, 1000, by = 100)
+# lsres <- c(100, 300, 500, 700, 1000)
 # names(lslc) <- lsres
 
 # Modal window ------------------------------------------------------------
-lsres <- seq(100, 1000, by = 100)#c(100, 250, 500, 750, 1000)
+lsres <- c(100, 300, 500, 700, 1000)
 lslc <- lapply(lsres, function(res) {
   winmove(lc, res, type = 'circle', win_fun = modal)
 })
@@ -59,7 +58,6 @@ var <- 'lcres'
 DT[, lc30 := lc]
 lsres <- c(30, lsres)
 
-# TODO: switch back to seasons?
 splitBy <- c()
 
 nets <- lapply(lsres, function(res) {
