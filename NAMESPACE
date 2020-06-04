@@ -3,6 +3,7 @@
 export(connective_redudancy)
 export(deviation_degree)
 export(edge_overlap)
+export(edge_overlap_mat)
 export(layer_neighbors)
 export(layer_relevance)
 export(layer_similarity)

@@ -283,6 +283,16 @@ edge_overlap <- function(edges) {
 }
 
 
+#' Edge overlap matrix
+#' 
+#' Layer A vs Layer B, count overlap
+#'
+#' @param edges 
+#'
+#' @return
+#' @export
+#'
+#' @examples
 edge_overlap_mat <- function(edges) {
   crossprod(table(edges[, .(dyadID = unique(dyadID)), layer][, .(dyadID, layer)]))
 }
