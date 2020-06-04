@@ -122,8 +122,7 @@ out <- rbindlist(nets)
 
 
 # Count locs in lc --------------------------------------------------------
-# TODO: fix missing 30 
-count <- rbindlist(lapply(grep('lc', colnames(DT), value = TRUE), function(col) {
+count <- rbindlist(lapply(grep('lc[0-9]', colnames(DT), value = TRUE), function(col) {
   DT[, .N, col][, 
     c('lc', 'res') := .(get(col), as.integer(gsub('lc', '', col)))][, 
       .(lc, res, N)]
