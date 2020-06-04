@@ -129,3 +129,5 @@ count <- rbindlist(lapply(grep('lc', colnames(DT), value = TRUE), function(col) 
 # Output ------------------------------------------------------------------
 saveRDS(out, 'data/derived-data/2-landcover-scale.Rds')
 saveRDS(count, 'data/derived-data/2-landcover-scale-count.Rds')
+
+lapply(seq_along(lslc), function(r) writeRaster(lslc[[r]], paste0('data/derived-data/2-landcover-res-', names(lslc)[[r]], '.tif')))
