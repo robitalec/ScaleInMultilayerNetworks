@@ -26,11 +26,11 @@ spatthresh <- 50
 tempthresh <- '5 minutes'
 
 ## Window lengths and positions
-winlength <- 48
-maxwinlength <- 100
-winlengths <- seq(40, maxwinlength, 5)
-
-winpositions <- seq(1, 48, by = 1)
+# winlength <- 48
+# maxwinlength <- 100
+# winlengths <- seq(40, maxwinlength, 5)
+# 
+# winpositions <- seq(1, 48, by = 1)
 
 # Seasons
 winterlow <- 1
