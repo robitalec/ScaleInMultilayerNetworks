@@ -81,7 +81,7 @@ list_graphs <- function(netLs, mode = 'undirected', diag = FALSE, weighted = TRU
 list_edges <- function(graphLs) {
     edges <- data.table::rbindlist(lapply(graphLs, function(g) {
       igraph::as_data_frame(g)
-    }), idcol = 'layer')
+    }), idcol = 'layer', fill = TRUE)
     spatsoc::dyad_id(edges, 'from', 'to')
     
     edges
