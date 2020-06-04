@@ -25,28 +25,37 @@ count[legend, lcname := lcname, on = 'lc']
 source('scripts/figures/theme.R')
 
 # Plot --------------------------------------------------------------------
-# TODO: fix in 02- 
-count[res == "", res := 30]
-count[lc %in% c(1, 2, 3), percent := N / sum(N) * 100, by = res]
+count[lc %in% c(1, 2, 3), 
+      percent := N / sum(N) * 100, by = res]
+
+xlab <- 'Land Cover Resolution'
 
 ggplot(count[lc %in% c(1, 2, 3)]) + 
-  geom_line(aes(res, percent, linetype = factor(lcname), group = lcname)) +
+  geom_line(aes(res, percent, 
+                linetype = lcname)) +
   scale_linetype_manual(values = linetypes)
 
 
 ggplot(DT) + 
-  geom_line(aes(lcres, propedges, color = lcname))
+  geom_line(aes(lcres, propedges, 
+                linetype = lcname)) +
+  scale_linetype_manual(values = linetypes)
+  
 
 
 DT[, meangraphstrength := mean(graphstrength, na.rm = TRUE),
-   .(lcname, lcres)]
+   by = .(lcname, lcres)]
 
-ggplot(DT) + 
-  geom_line(aes(lcres, graphstrength, group = ANIMAL_ID), 
-            alpha = 0.7, color = 'grey') +
+gstr <- ggplot(DT) +
+  geom_line(aes(lcres, graphstrength, group = ANIMAL_ID),
+            alpha = 0.7,
+            color = 'grey') +
   geom_line(aes(lcres, meangraphstrength)) +
-  facet_wrap(~ lcname) + 
+  facet_grid( ~ lcname) +
   guides(color = FALSE)
+
+
+
 
 
 # Output ------------------------------------------------------------------
