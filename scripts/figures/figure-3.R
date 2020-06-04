@@ -37,8 +37,14 @@ ggplot(DT) +
   geom_line(aes(lcres, propedges, color = lcname))
 
 
-ggplot(DT) + geom_line(aes(lcres, graphstrength, color = ANIMAL_ID)) + 
-  facet_wrap(~ layer) + 
+DT[, meangraphstrength := mean(graphstrength, na.rm = TRUE),
+   .(lcname, lcres)]
+
+ggplot(DT) + 
+  geom_line(aes(lcres, graphstrength, group = ANIMAL_ID), 
+            alpha = 0.7, color = 'grey') +
+  geom_line(aes(lcres, meangraphstrength)) +
+  facet_wrap(~ lcname) + 
   guides(color = FALSE)
 
 
