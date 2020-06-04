@@ -18,7 +18,7 @@ source('scripts/00-variables.R')
 
 # Input -------------------------------------------------------------------
 # TODO: switch back to sub seasons?
-DT <- readRDS('data/derived-data/1-sub-fogo-caribou.Rds')
+DT <- readRDS('data/derived-data/1-all-fogo-caribou.Rds')
 alloc.col(DT)
 
 lc <- readRDS('data/derived-data/1-reclass-lc.Rds')
