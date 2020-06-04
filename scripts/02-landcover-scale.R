@@ -24,6 +24,10 @@ alloc.col(DT)
 lc <- readRDS('data/derived-data/1-reclass-lc.Rds')
 
 
+# If already run
+# lslc <- lapply(dir('data/derived-data', '2-landcover-res-*', full.names = TRUE),
+#                raster)
+# names(lslc) <- c(30, lsres)
 
 # Modal window ------------------------------------------------------------
 lsres <- c(100, 250, 500, 750, 1000)
@@ -31,7 +35,6 @@ lslc <- lapply(lsres, function(res) {
   winmove(lc, res, type = 'circle', win_fun = modal)
 })
 names(lslc) <- lsres
-
 
 
 # Sample land cover -------------------------------------------------------
