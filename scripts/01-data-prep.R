@@ -113,6 +113,7 @@ sub[, (grep('season[1-9]', colnames(sub), value = TRUE)) := NULL]
 # Combine lists
 dropids <- unique(c(unlist(winlendrop), unlist(winposdrop)))
 
+all <- copy(sub)
 sub <- sub[!get(idcol) %in% dropids]
 subseasons <- sub[!is.na(season)]
 
@@ -120,5 +121,5 @@ subseasons <- sub[!is.na(season)]
 # Output ------------------------------------------------------------------
 saveRDS(sub, 'data/derived-data/1-sub-fogo-caribou.Rds')
 saveRDS(subseasons, 'data/derived-data/1-sub-seasons-fogo-caribou.Rds')
-
+saveRDS(all, 'data/derived-data/1-all-fogo-caribou.Rds')
 saveRDS(reclass, 'data/derived-data/1-reclass-lc.Rds')
