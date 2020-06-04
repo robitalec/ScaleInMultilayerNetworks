@@ -27,7 +27,8 @@ lc <- readRDS('data/derived-data/1-reclass-lc.Rds')
 # If already run
 # lslc <- lapply(dir('data/derived-data', '2-landcover-res-*', full.names = TRUE),
 #                raster)
-# names(lslc) <- c(30, lsres)
+# lsres <- c(30, 100, 250, 500, 750, 1000)
+# names(lslc) <- lsres
 
 # Modal window ------------------------------------------------------------
 lsres <- c(100, 250, 500, 750, 1000)
@@ -91,6 +92,7 @@ nets <- lapply(lsres, function(res) {
   
   # Calculate edge overlap
   eovr <- edge_overlap(eLs)
+  eovr[, edgeoverlapmat := list(edge_overlap_mat(eLs))]
   
   # Calculate eigenvector centrality for each season
   stren <- layer_strength(gLs)
