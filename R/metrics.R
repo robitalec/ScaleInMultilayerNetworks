@@ -281,3 +281,8 @@ edge_overlap <- function(edges) {
   
   propedges[, .(layer, propedges = V1, edgeoverlap = edgeoverlapml)]
 }
+
+
+edge_overlap_mat <- function(edges) {
+  crossprod(table(edges[, .(dyadID = unique(dyadID)), layer][, .(dyadID, layer)]))
+}
