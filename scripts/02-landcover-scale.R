@@ -18,7 +18,7 @@ source('scripts/00-variables.R')
 
 # Input -------------------------------------------------------------------
 # TODO: switch back to sub seasons?
-DT <- readRDS('data/derived-data/1-all-fogo-caribou.Rds')
+DT <- readRDS('data/derived-data/1-sub-fogo-caribou.Rds')
 alloc.col(DT)
 
 lc <- readRDS('data/derived-data/1-reclass-lc.Rds')
@@ -27,7 +27,7 @@ lc <- readRDS('data/derived-data/1-reclass-lc.Rds')
 # If already run
 # lslc <- lapply(dir('data/derived-data', '2-landcover-res-*', full.names = TRUE),
 #                raster)
-# lsres <- c(30, seq(100, 1000, by = 100))
+# lsres <- seq(100, 1000, by = 100)
 # names(lslc) <- lsres
 
 # Modal window ------------------------------------------------------------
@@ -56,8 +56,9 @@ group_times(
 var <- 'lcres'
 
 # Also include original raster
+DT[, lc30 := lc]
 lsres <- c(30, lsres)
-lslc <- c(lc, lslc)
+
 # TODO: switch back to seasons?
 splitBy <- c()
 
