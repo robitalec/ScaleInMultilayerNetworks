@@ -51,13 +51,13 @@ xlab <- 'Land Cover Resolution'
 
 gcount <- ggplot(count[lc %in% c(1, 2, 3)]) + 
   geom_line(aes(res, percent, 
-                linetype = lcname))
+                color = lcname))
 
 
 gprop <- ggplot(DT) + 
   geom_line(aes(lcres, propedges, 
-                linetype = lcname)) + 
-  guides(linetype = FALSE)
+                color = lcname)) + 
+  guides(color = FALSE)
   
 
 gstr <- ggplot(DT) +
