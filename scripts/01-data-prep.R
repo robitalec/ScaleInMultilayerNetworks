@@ -29,8 +29,11 @@ DT[between(JDate, summerlow, summerhigh), season := 'summer']
 # Drop individuals 
 indianisland <- c('FO2016011', 'FO2017013', 'FO2017001')
 diffixrate <- 'FO2016014'
+dropind <- diffixrate#c(indianisland, diffixrate)
 
-DT <- DT[!ANIMAL_ID %in% c(indianisland, diffixrate)] 
+# which individual driving 500m
+
+DT <- DT[!ANIMAL_ID %in% dropind] 
 
 
 # Project relocations -----------------------------------------------------
@@ -69,9 +72,15 @@ DT[, (lccol) := extract(reclass, matrix(c(EASTING, NORTHING), ncol = 2))]
 
 # Sub data ----------------------------------------------------------------
 ## 2017 summer and 2018 winter
-sub <- DT[Year >= 2017 & JDate > summerlow | 
-            Year == 2018 & JDate < winterlow]
+sub <- DT[Year >= 2017 & JDate > 11 | 
+            Year == 2019 & JDate < 87]
 
+# ggplot(DT[, uniqueN(ANIMAL_ID), .(d = week(datetime), y = year(datetime))]) + geom_point(aes(d, V1, color = factor(y)))
+# DT[, unique(ANIMAL_ID), .(year(datetime), week(datetime))][, .N, V1]
+# 2017 1 -> 110 =  10
+# 2017 110 -> 2018 265 =  19
+# 2018 265 -> 2019 87 = 15
+# 2019 88 and on = 9
 
 ## Which individuals have data in both seasons?
 # TODO: drop if drop time sensitivity
