@@ -24,15 +24,17 @@ lc <- readRDS('data/derived-data/1-reclass-lc.Rds')
 
 
 # If already run
-lslc <- lapply(dir('data/derived-data', '2-landcover-res-*', full.names = TRUE),
-               raster)
-lsres <- c(100, 300, 500, 700, 900, 1000)
-names(lslc) <- lsres
+# lslc <- lapply(dir('data/derived-data', '2-landcover-res-*', full.names = TRUE),
+#                raster)
+# lsres <- c(100, 300, 500, 700, 900, 1000)
+# names(lslc) <- lsres
 
 # Modal window ------------------------------------------------------------
 lsres <- c(100, 300, 500, 700, 900, 1000)
 lslc <- lapply(lsres, function(res) {
-  winmove(lc, res, type = 'circle', win_fun = modal)
+  w <- winmove(lc, res, type = 'circle', win_fun = modal)
+  w[is.na(lc)] <- NA
+  w
 })
 names(lslc) <- lsres
 
