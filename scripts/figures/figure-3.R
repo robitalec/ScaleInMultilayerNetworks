@@ -4,7 +4,7 @@
 
 
 # Packages ----------------------------------------------------------------
-pkgs <- c('data.table', 'ggplot2', 'patchwork', 'raster')
+pkgs <- c('data.table', 'ggplot2', 'patchwork', 'raster', 'rasterVis')
 p <- lapply(pkgs, library, character.only = TRUE)
 
 
