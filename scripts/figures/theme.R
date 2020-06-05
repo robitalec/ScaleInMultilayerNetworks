@@ -4,7 +4,7 @@
 
 
 # Theme -------------------------------------------------------------------
-theme_set(
+base <- 
   theme(
     legend.text = element_text(size = 12, color = "black"),
     legend.title = element_blank(),
@@ -25,7 +25,7 @@ theme_set(
       fill = NA,
       size = 1
     )
-  )
+  
 )
 
 
@@ -34,11 +34,13 @@ theme_set(
 linesize <- 1.3
 
 
-# Linetype ----------------------------------------------------------------
-linetypes <- c("forest" = "dashed", "open" = "dotted", "forage" = "solid")
-
-
 
 # Colors ------------------------------------------------------------------
+lccolors <- c("open" = "#fdc086",
+              "forest" = "#7fc97f",
+              "forage" = "#beaed4")
+lcvalcolors <- lccolors
+names(lcvalcolors) <-c(1, 2, 3)
+
 cols <- c('winter' = '#8c510a', 'summer' = '#5ab4ac')
 greys <- c(`1` = "#6b6b6b", `2` = "#c2c2c2", `3` = "#919191")

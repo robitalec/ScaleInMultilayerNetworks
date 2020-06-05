@@ -51,13 +51,18 @@ xlab <- 'Land Cover Resolution'
 
 gcount <- ggplot(count[lc %in% c(1, 2, 3)]) + 
   geom_line(aes(res, percent, 
-                color = lcname))
-
+                color = lcname)) + 
+  scale_color_manual(values = lccolors) +
+  base +
+  labs(x = xlab)
 
 gprop <- ggplot(DT) + 
   geom_line(aes(lcres, propedges, 
                 color = lcname)) + 
-  guides(color = FALSE)
+  guides(color = FALSE) +
+  scale_color_manual(values = lccolors) +
+  base +
+  labs(x = xlab)
   
 
 gstr <- ggplot(DT) +
@@ -66,39 +71,55 @@ gstr <- ggplot(DT) +
             color = 'grey') +
   geom_line(aes(lcres, meangraphstrength)) +
   facet_grid( ~ lcname) +
-  guides(color = FALSE)
+  guides(color = FALSE) +
+  scale_color_manual(values = lccolors) +
+  base +
+  labs(x = xlab)
 
 
-layout <- 'AAA#
-           BBBD
-           CCC#'
-
-(gcount / 
-  gstr + guide_area() / 
-  gprop & 
-   scale_linetype_manual(values = linetypes) &
-   labs(x = xlab)) +
-  plot_layout(design = layout,
-              guides = 'collect')
-
-
-lc30 <- readRDS('data/derived-data/1-reclass-lc.Rds')
-lc500 <- raster('data/derived-data/2-landcover-res-500.tif')
-lc1000 <- raster('data/derived-data/2-landcover-res-1000.tif')
-
-rasterVis::gplot(lc30) + 
+g30 <- gplot(lc30) + 
   geom_tile(aes(fill = factor(value))) + 
-  scale_fill_manual(values = greys)
+  scale_fill_manual(values = lcvalcolors) +
+  labs(subtitle = '30 m') +
+  themelc + 
+  guides(fill = FALSE)
 
-rasterVis::gplot(lc500) + 
+g500 <- gplot(lc500) + 
   geom_tile(aes(fill = factor(value))) + 
-  scale_fill_manual(values = greys)
+  scale_fill_manual(values = lcvalcolors) +
+  labs(subtitle = '500 m') +
+  themelc + 
+  guides(fill = FALSE)
 
-rasterVis::gplot(lc1000) + 
+g1000 <- gplot(lc1000) + 
   geom_tile(aes(fill = factor(value))) + 
-  scale_fill_manual(values = greys)
+  scale_fill_manual(values = lcvalcolors) +
+  labs(subtitle = '1000 m') +
+  themelc + 
+  guides(fill = FALSE)
+
 
 # Output ------------------------------------------------------------------
 
+layout <- 'AADD
+           AADD
+           AADD
+           ##EE
+           BBEE
+           ##EE 
+           CCFF
+           CCFF
+           CCFF
+           '
 
+gcount + guide_area() + gprop +
+  g30 + g500 + g1000 + 
+  plot_layout(guides = 'collect',
+              design = layout)
+
+
+
+(gcount / guide_area() / gprop) +
+  (g30 / g500 / g1000) +
+  plot_layout(ncol = 2, nrow = 3)
 
