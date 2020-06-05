@@ -19,10 +19,23 @@ legend <- data.table(lc = c(1, 2, 3),
 DT[legend, lcname := lcname, on = 'lc']
 count[legend, lcname := lcname, on = 'lc']
 
+lc30 <- readRDS('data/derived-data/1-reclass-lc.Rds')
+lc500 <- raster('data/derived-data/2-landcover-res-500.tif')
+lc1000 <- raster('data/derived-data/2-landcover-res-1000.tif')
 
 
 # Theme -------------------------------------------------------------------
 source('scripts/figures/theme.R')
+
+themelc <- theme(
+  panel.border = element_rect(size = 1, fill = NA),
+  panel.background = element_rect(fill = '#c3e2ec'),
+  panel.grid = element_line(color = 'grey', size = 0.2),
+  axis.text = element_blank(),
+  axis.ticks = element_blank(),
+  axis.title = element_blank()
+)
+
 
 # Plot --------------------------------------------------------------------
 count[lc %in% c(1, 2, 3), 
