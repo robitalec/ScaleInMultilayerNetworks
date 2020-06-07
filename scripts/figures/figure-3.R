@@ -54,7 +54,7 @@ gcount <- ggplot(count[lc %in% c(1, 2, 3)]) +
                 color = lcname)) + 
   scale_color_manual(values = lccolors) +
   base +
-  labs(x = xlab, y = 'Proportion of Fixes')
+  labs(x = xlab, y = 'Proportion of Relocations')
 
 gprop <- ggplot(DT) + 
   geom_line(aes(lcres, propedges, 
