@@ -27,8 +27,11 @@ alloc.col(DT)
 nchunk <- 8
 
 # TODO: check consistent N by cut * year
-DT[, cutJDate := cut(JDate, nchunk, include.lowest = TRUE), by = Year]
-DT[, timecut := .GRP, .(cutJDate, Year)]
+setorder(DT, Year, JDate)
+DT[, dayoffull := .GRP, .(JDate, Year)]
+
+DT[, cutJDate := cut(dayoffull, nchunk, include.lowest = TRUE)]
+DT[, timecut := .GRP, cutJDate]
 
 
 # Temporal grouping with spatsoc ------------------------------------------
@@ -80,7 +83,7 @@ setnames(stren, 'ind', idcol)
 layer_neighbors(DT, idcol, splitBy = splitBy)
 
 # and tidy output, prep for merge
-outcols <- c('neigh', 'splitNeigh', idcol, 'cutJDate', splitBy, 'Year')
+outcols <- c('neigh', 'splitNeigh', idcol, 'cutJDate', splitBy, 'Year', 'dayoffull')
 usub <- unique(DT[, .SD, .SDcols = outcols])
 
 # Merge eigcent+correlations with neighbors
