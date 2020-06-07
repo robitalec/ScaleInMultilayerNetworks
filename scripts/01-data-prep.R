@@ -72,8 +72,9 @@ DT[, (lccol) := extract(reclass, matrix(c(EASTING, NORTHING), ncol = 2))]
 
 # Sub data ----------------------------------------------------------------
 ## 2017 summer and 2018 winter
-sub <- DT[Year >= 2017 & JDate > 11 | 
-            Year == 2019 & JDate < 87]
+sub <- DT[(Year == 2017 & JDate > 11) |
+            Year == 2018 |
+            (Year == 2019 & JDate < 87)]
 
 # ggplot(DT[, uniqueN(ANIMAL_ID), .(d = week(datetime), y = year(datetime))]) + geom_point(aes(d, V1, color = factor(y)))
 # DT[, unique(ANIMAL_ID), .(year(datetime), week(datetime))][, .N, V1]
