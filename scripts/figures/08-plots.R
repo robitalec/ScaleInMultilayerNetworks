@@ -14,14 +14,14 @@ source('scripts/00-variables.R')
 
 
 # Input -------------------------------------------------------------------
-var <- commandArgs(TRUE)[[1]]
+var <- 'timecut'#commandArgs(TRUE)[[1]]
 
 if (var == 'lcres') {
   path <- 'data/derived-data/2-landcover-scale.Rds'
 } else if (var == 'spatialthreshold') {
   path <- 'data/derived-data/3-spatial-threshold.Rds'
-} else if (var == 'time') {
-  path <- 'data/derived-data/4-temporal-layers.Rds'
+} else if (var == 'timecut') {
+  path <- 'data/derived-data/03-temporal-layers-metrics.Rds'
 } else if (var == 'nobs') {
   path <- 'data/derived-data/5-number-of-observations.Rds'
 } 
@@ -31,16 +31,15 @@ alloc.col(DT)
 
 # Recode landcover
 # 1 = open, 2 = forest, 3 = foraging (lichen)
-DT[get(lccol) == 1, c('lcname', 'layernm') := .('open', paste0(season, '-open'))]
-DT[get(lccol) == 2, c('lcname', 'layernm') := .('forest', paste0(season, '-forest'))]
-DT[get(lccol) == 3, c('lcname', 'layernm') := .('forage', paste0(season, '-forage'))]
+# DT[get(lccol) == 1, c('lcname', 'layernm') := .('open', paste0(season, '-open'))]
+# DT[get(lccol) == 2, c('lcname', 'layernm') := .('forest', paste0(season, '-forest'))]
+# DT[get(lccol) == 3, c('lcname', 'layernm') := .('forage', paste0(season, '-forage'))]
 
 
 # Var x lab names
 varnames <- data.table(
-  vars = c('lcres', 'spatialthreshold', 'winlength', 'nobs', 'winpos'),
-  varname = c('Landcover Resolution', 'Social Threshold', 'Time Window Length',
-              'Number of Observations', 'Time Window Position')
+  vars = c('lcres', 'spatialthreshold', 'nobs', 'timecut'),
+  varname = c('Land Cover Resolution', 'Social Threshold', 'Number of Observations', 'Time Cut')
 )
 
 
