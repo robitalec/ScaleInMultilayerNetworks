@@ -28,10 +28,12 @@ xlab <- 'temporal cut'
   geom_segment(aes(x = mindate, xend = maxdate, 
                    y = propedges, yend = propedges),
             size = 2) + 
+    # geom_segment(aes(x = mindate, xend = maxdate, 
+    #                  y = layersim, yend = layersim)) + 
   # guides(color = FALSE) +
   scale_color_manual(values = lccolors) +
   base +
-  labs(x = NULL, y = 'Edge Overlap') + 
+  labs(x = xlab, y = 'Edge Overlap') + 
   ylim(0, 1)
 )
 
@@ -48,6 +50,16 @@ DT[, meangraphstrength := mean(graphstrength), by = timecut]
   base +
   labs(x = xlab, y = 'Graph Strength'))
 
+DT[, middate := mean(c(mindate, maxdate)), layer]
+(gsim <- ggplot(DT) +
+    geom_line(aes(x = middate, layersim)) + 
+    geom_segment(aes(x = mindate, xend = maxdate, 
+                     y = layersim, yend = layersim),
+                 size = 0.5, alpha = 0.3) + 
+    guides(color = FALSE) +
+    base +
+    labs(x = xlab, y = 'Layer Similarity'))
+
 
 
 # Patchwork ---------------------------------------------------------------
@@ -55,8 +67,8 @@ layout <- 'AABBCC
            DDDDDE
            FFFFFF'
 
-(g <- gprop + guide_area() + gstr +
-   plot_layout(design = layout,
+(g <- gprop / gstr +
+   plot_layout(#design = layout,
                guides = 'collect')
 )
 
@@ -71,9 +83,10 @@ setorder(zzz, layer)
 
 x <- melt(zzz, id.vars = 'layer', variable.name = 'leftlayer', variable.factor = FALSE)
 x[, leftlayer := as.integer(leftlayer)]
-x[leftlayer > as.integer(layer), value := NA]
+# x[leftlayer > as.integer(layer), value := NA]
 ggplot(x) + 
-  geom_tile(aes(layer, sort(leftlayer), fill = value))
+  geom_tile(aes(layer, sort(leftlayer), fill = value)) +
+  scale_fill_binned()
 
 
 # Output ------------------------------------------------------------------
