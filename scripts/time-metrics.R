@@ -13,7 +13,7 @@ source('scripts/00-variables.R')
 
 # Input -------------------------------------------------------------------
 var <- 'timecut'
-path <- 'data/derived-data/4-temporal-layers.Rds'
+path <- 'data/derived-data/03-temporal-layers.Rds'
 splitBy <- var
 
 DT <- readRDS(path)
