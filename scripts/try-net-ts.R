@@ -9,7 +9,7 @@ library(reshape2)
 
 library(data.table)
 library(spatsoc)
-
+library(asnipe)
 
 # Variables ---------------------------------------------------------------
 source('scripts/00-variables.R')
