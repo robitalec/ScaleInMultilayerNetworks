@@ -44,7 +44,6 @@ var <- 'timecut'
 splitBy <- var
 
 # Spatial grouping with spatsoc
-# TODO: double fixes
 group_pts(
   DT,
   threshold = spatthresh,
