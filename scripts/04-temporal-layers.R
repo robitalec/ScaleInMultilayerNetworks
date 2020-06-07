@@ -81,11 +81,13 @@ layer_neighbors(DT, idcol, splitBy = splitBy)
 
 # and tidy output, prep for merge
 outcols <- c('neigh', 'splitNeigh', idcol, 'cutJDate', splitBy)
-out <- unique(DT[, .SD, .SDcols = outcols])
+usub <- unique(DT[, .SD, .SDcols = outcols])
 
 # Merge eigcent+correlations with neighbors
-out <- out[stren, on = c(idcol, splitBy)]
+wstren <- usub[stren, on = c(idcol, splitBy)]
 
+# Merge edge overlap
+out <- wstren[eovr, on = 'layer']
 
 
 # Output ------------------------------------------------------------------
