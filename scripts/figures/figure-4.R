@@ -49,6 +49,7 @@ DT[, meangraphstrength := mean(graphstrength), by = timecut]
   labs(x = xlab, y = 'Graph Strength'))
 
 
+
 # Patchwork ---------------------------------------------------------------
 layout <- 'AABBCC
            DDDDDE
@@ -59,6 +60,20 @@ layout <- 'AABBCC
                guides = 'collect')
 )
 
+
+# Edge overlap matrix -----------------------------------------------------
+mat <- eovr$edgeoverlapmat[[1]]
+zzz <- data.table(mat, keep.rownames = 'layer')
+zzz[, layer := as.integer(layer)]
+setcolorder(zzz, c('layer', as.character(sort(as.integer(colnames(zzz))))))
+setorder(zzz, layer)
+
+
+x <- melt(zzz, id.vars = 'layer', variable.name = 'leftlayer', variable.factor = FALSE)
+x[, leftlayer := as.integer(leftlayer)]
+x[leftlayer > as.integer(layer), value := NA]
+ggplot(x) + 
+  geom_tile(aes(layer, sort(leftlayer), fill = value))
 
 
 # Output ------------------------------------------------------------------
