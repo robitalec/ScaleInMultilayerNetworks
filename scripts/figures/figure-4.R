@@ -16,50 +16,27 @@ DT <- readRDS('data/derived-data/03-temporal-layers.Rds')
 # Theme -------------------------------------------------------------------
 source('scripts/figures/theme.R')
 
-themelc <- theme(
-  panel.border = element_rect(size = 1, fill = NA),
-  panel.background = element_rect(fill = '#e1f0f5'),
-  panel.grid = element_line(color = 'grey', size = 0.2),
-  axis.text = element_blank(),
-  axis.ticks = element_blank(),
-  axis.title = element_blank()
-)
 
 
 # Plot --------------------------------------------------------------------
-count[lc %in% c(1, 2, 3), 
-      percent := N / sum(N) * 100, by = res]
-
-DT[, meangraphstrength := mean(graphstrength, na.rm = TRUE),
-   by = .(lcname, lcres)]
-
-
-xlab <- 'Land Cover Resolution'
+xlab <- 'temporal cut'
 
 
 
-gcount <- ggplot(count[lc %in% c(1, 2, 3)]) + 
-  geom_line(aes(res, percent, 
-                color = lcname),
-            size = 2) + 
-  scale_color_manual(values = lccolors) +
-  base +
-  labs(x = xlab, y = 'Proportion of Relocations')
-
-gprop <- ggplot(DT) + 
-  geom_line(aes(lcres, propedges, 
-                color = lcname),
+(gprop <- ggplot(DT) + 
+  geom_line(aes(timecut, propedges),
             size = 2) + 
   # guides(color = FALSE) +
   scale_color_manual(values = lccolors) +
   base +
-  labs(x = NULL, y = 'Edge Overlap')
+  labs(x = NULL, y = 'Edge Overlap') + 
+  ylim(0, 1))
   
 
 gstr <- ggplot(DT) +
-  geom_line(aes(lcres, graphstrength, group = ANIMAL_ID, color = lcname),
+  geom_line(aes(timecut, graphstrength, group = ANIMAL_ID, color = lcname),
             alpha = 0.3, size = 1.2) +
-  geom_line(aes(lcres, meangraphstrength, color = lcname),
+  geom_line(aes(timecut, meangraphstrength, color = lcname),
             size = 2) +
   facet_grid( ~ lcname) +
   guides(color = FALSE) +
