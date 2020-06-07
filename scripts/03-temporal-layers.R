@@ -87,7 +87,7 @@ layer_neighbors(DT, idcol, splitBy = splitBy)
 
 # and tidy output, prep for merge
 outcols <- c('neigh', 'splitNeigh', idcol, 'cutJDate', 
-             splitBy, 'Year', 'mindate', 'maxdate')
+             splitBy, 'mindate', 'maxdate')
 usub <- unique(DT[, .SD, .SDcols = outcols])
 
 # Merge eigcent+correlations with neighbors
