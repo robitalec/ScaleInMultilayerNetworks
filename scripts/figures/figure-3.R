@@ -54,7 +54,7 @@ gcount <- ggplot(count[lc %in% c(1, 2, 3)]) +
                 color = lcname)) + 
   scale_color_manual(values = lccolors) +
   base +
-  labs(x = NULL)
+  labs(x = xlab, y = 'Proportion of Fixes')
 
 gprop <- ggplot(DT) + 
   geom_line(aes(lcres, propedges, 
@@ -114,4 +114,6 @@ layout <- 'AABBCC
 )
 
 ggsave('graphics/figure-3.png',
-       width = 10, height = 10)
+       g, width = 10, height = 10)
+ggsave('graphics/supp-count-lc.png',
+       gcount, width = 5, height = 5)
