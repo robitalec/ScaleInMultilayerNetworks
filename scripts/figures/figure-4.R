@@ -49,36 +49,12 @@ DT[, meangraphstrength := mean(graphstrength), by = timecut]
   labs(x = xlab, y = 'Graph Strength'))
 
 
-g30 <- gplot(lc30) + 
-  geom_tile(aes(fill = factor(value))) + 
-  scale_fill_manual(values = lcvalcolors) +
-  labs(subtitle = '30 m') +
-  themelc + 
-  guides(fill = FALSE)
-
-g500 <- gplot(lc500) + 
-  geom_tile(aes(fill = factor(value))) + 
-  scale_fill_manual(values = lcvalcolors) +
-  labs(subtitle = '500 m') +
-  themelc + 
-  guides(fill = FALSE)
-
-g1000 <- gplot(lc1000) + 
-  geom_tile(aes(fill = factor(value))) + 
-  scale_fill_manual(values = lcvalcolors) +
-  labs(subtitle = '1000 m') +
-  themelc + 
-  guides(fill = FALSE)
-
-
-
 # Patchwork ---------------------------------------------------------------
 layout <- 'AABBCC
            DDDDDE
            FFFFFF'
 
-(g <- g30 + g500 + g1000 + 
-   gprop + guide_area() + gstr +
+(g <- gprop + guide_area() + gstr +
    plot_layout(design = layout,
                guides = 'collect')
 )
@@ -86,8 +62,8 @@ layout <- 'AABBCC
 
 
 # Output ------------------------------------------------------------------
-ggsave('graphics/figure-3.png',
-       g, width = 10, height = 10)
+# ggsave('graphics/figure-3.png',
+#        g, width = 10, height = 10)
 
-ggsave('graphics/supp-count-lc.png',
-       gcount, width = 5, height = 5)
+# ggsave('graphics/supp-count-lc.png',
+#        gcount, width = 5, height = 5)
