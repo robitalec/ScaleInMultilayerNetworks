@@ -80,7 +80,7 @@ setnames(stren, 'ind', idcol)
 layer_neighbors(DT, idcol, splitBy = splitBy)
 
 # and tidy output, prep for merge
-outcols <- c('neigh', 'splitNeigh', idcol, 'cutJDate', splitBy)
+outcols <- c('neigh', 'splitNeigh', idcol, 'cutJDate', splitBy, 'Year')
 usub <- unique(DT[, .SD, .SDcols = outcols])
 
 # Merge eigcent+correlations with neighbors
