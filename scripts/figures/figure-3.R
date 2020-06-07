@@ -101,19 +101,23 @@ g1000 <- gplot(lc1000) +
   guides(fill = FALSE)
 
 
-# Output ------------------------------------------------------------------
 
+# Patchwork ---------------------------------------------------------------
 layout <- 'AABBCC
            DDDDDE
            FFFFFF'
 
 (g <- g30 + g500 + g1000 + 
-  gprop + guide_area() + gstr +
-  plot_layout(design = layout,
-              guides = 'collect')
+   gprop + guide_area() + gstr +
+   plot_layout(design = layout,
+               guides = 'collect')
 )
 
+
+
+# Output ------------------------------------------------------------------
 ggsave('graphics/figure-3.png',
        g, width = 10, height = 10)
+
 ggsave('graphics/supp-count-lc.png',
        gcount, width = 5, height = 5)
