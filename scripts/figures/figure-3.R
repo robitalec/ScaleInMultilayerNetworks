@@ -29,7 +29,7 @@ source('scripts/figures/theme.R')
 
 themelc <- theme(
   panel.border = element_rect(size = 1, fill = NA),
-  panel.background = element_rect(fill = '#c3e2ec'),
+  panel.background = element_rect(fill = '#e1f0f5'),
   panel.grid = element_line(color = 'grey', size = 0.2),
   axis.text = element_blank(),
   axis.ticks = element_blank(),
