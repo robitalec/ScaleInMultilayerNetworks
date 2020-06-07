@@ -22,9 +22,11 @@ source('scripts/figures/theme.R')
 xlab <- 'temporal cut'
 
 
+DT[, c('cutmin', 'cutmax') := tstrsplit(gsub("(?![,.])[[:punct:]]", "", cutJDate, perl = TRUE), ',', type.convert = TRUE)]
+DT[, as.IDate(paste(cutmin, Year), format = '%j %Y')]
 
 (gprop <- ggplot(DT) + 
-  geom_line(aes(timecut, propedges),
+  geom_line(aes(cutJDate, propedges, group = timecut),
             size = 2) + 
   # guides(color = FALSE) +
   scale_color_manual(values = lccolors) +
