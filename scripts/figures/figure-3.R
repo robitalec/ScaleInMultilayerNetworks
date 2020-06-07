@@ -103,25 +103,15 @@ g1000 <- gplot(lc1000) +
 
 # Output ------------------------------------------------------------------
 
-layout <- 'AADD
-           AADD
-           AADD
-           ##EE
-           BBEE
-           ##EE 
-           CCFF
-           CCFF
-           CCFF
-           '
+layout <- 'AABBCC
+           DDDDDE
+           FFFFFF'
 
-gcount + guide_area() + gprop +
-  g30 + g500 + g1000 + 
-  plot_layout(guides = 'collect',
-              design = layout)
+(g <- g30 + g500 + g1000 + 
+  gprop + guide_area() + gstr +
+  plot_layout(design = layout,
+              guides = 'collect')
+)
 
-
-
-(gcount / guide_area() / gprop) +
-  (g30 / g500 / g1000) +
-  plot_layout(ncol = 2, nrow = 3)
-
+ggsave('graphics/figure-3.png',
+       width = 10, height = 10)
