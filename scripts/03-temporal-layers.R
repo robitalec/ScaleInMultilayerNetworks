@@ -94,7 +94,12 @@ usub <- unique(DT[, .SD, .SDcols = outcols])
 wstren <- usub[stren, on = c(idcol, splitBy)]
 
 # Merge edge overlap
-out <- wstren[eovr, on = 'layer']
+wedgeovr <- wstren[eovr, on = 'layer']
+
+# Property matrix
+matrices <- property_matrix(wedgeovr, idcol, 'splitNeigh', var)
+layer_similarity_ordinal(matrices, 'FO', var)
+
 
 
 # Output ------------------------------------------------------------------
