@@ -75,7 +75,8 @@ gstr <- ggplot(DT) +
   guides(color = FALSE) +
   scale_color_manual(values = lccolors) +
   base +
-  labs(x = xlab, y = 'Graph Strength')
+  labs(x = xlab, y = 'Graph Strength') + 
+  theme(panel.spacing = unit(1, "lines"))
 
 
 g30 <- gplot(lc30) + 
