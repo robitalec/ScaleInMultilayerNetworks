@@ -29,7 +29,8 @@ group_times(
 )
 
 
-# Generate network --------------------------------------------------------
+
+# Generate edge list ------------------------------------------------------
 # Spatial grouping with spatsoc
 group_pts(
   DT,
@@ -41,33 +42,16 @@ group_pts(
 )
 
 
-# GBI
-gbiLs <- list_gbi(DT, idcol, splitBy)
+# Get edge list
+edgelist <- get_edgelist(DT, 'group', idcol)
 
-# Generate networks
-netLs <- list_nets(gbiLs)
+edgelist[DT[, .SD[1], by = group, .SDcols = 'datetime'], 
+         datetime := datetime, on = 'group']
 
-# Generate graphs
-gLs <- list_graphs(netLs)
-names(gLs) <- names(gbiLs)
 
-# Generate edge lists
-eLs <- list_edges(gLs)
-
-#1. create a small function
-my.function.net <- function(graph){
-  
-  #calculate some measure from the graph
-  my.value <- mean(degree(graph, mode="out"))
-  
-  #return the value 
-  return(my.value)
-  
+mean_degree <- function(graph){
+  mean(igraph::degree(graph))
 }
 
-graphTS(edgels, 
-        )
-
-
-#2. extract values through time
-graph.values <- graphTS(groomEvents, windowsize = days(60), windowshift = days(10), measureFun = my.function.net, directed=TRUE)
+graphTS(edgelist, windowsize = days(60), windowshift = days(10),
+        measureFun = mean_degree, directed = FALSE, SRI = TRUE)
