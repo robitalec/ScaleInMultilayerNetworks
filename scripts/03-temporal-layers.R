@@ -24,7 +24,7 @@ alloc.col(DT)
 
 
 # Chunk time --------------------------------------------------------------
-nchunk <- 20
+nchunk <- 25
 
 # TODO: check consistent N by cut * year
 setorder(DT, Year, JDate)
