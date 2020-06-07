@@ -18,7 +18,7 @@ source('scripts/00-variables.R')
 
 
 # Input -------------------------------------------------------------------
-DT <- readRDS('data/derived-data/1-sub-fogo-caribou.Rds')
+DT <- readRDS('data/derived-data/01-sub-fogo-caribou.Rds')
 alloc.col(DT)
 
 
@@ -91,4 +91,4 @@ out <- wstren[eovr, on = 'layer']
 
 
 # Output ------------------------------------------------------------------
-saveRDS(out, 'data/derived-data/4-temporal-layers.Rds')
+saveRDS(out, 'data/derived-data/03-temporal-layers.Rds')

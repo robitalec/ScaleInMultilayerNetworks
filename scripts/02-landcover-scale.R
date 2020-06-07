@@ -17,10 +17,10 @@ p <- lapply(pkgs, library, character.only = TRUE)
 source('scripts/00-variables.R')
 
 # Input -------------------------------------------------------------------
-DT <- readRDS('data/derived-data/1-sub-fogo-caribou.Rds')
+DT <- readRDS('data/derived-data/01-sub-fogo-caribou.Rds')
 alloc.col(DT)
 
-lc <- readRDS('data/derived-data/1-reclass-lc.Rds')
+lc <- readRDS('data/derived-data/01-reclass-lc.Rds')
 
 
 # If already run
@@ -132,7 +132,7 @@ count <- rbindlist(lapply(grep('lc[0-9]', colnames(DT), value = TRUE), function(
 
 
 # Output ------------------------------------------------------------------
-saveRDS(out, 'data/derived-data/2-landcover-scale.Rds')
-saveRDS(count, 'data/derived-data/2-landcover-scale-count.Rds')
+saveRDS(out, 'data/derived-data/02-landcover-scale.Rds')
+saveRDS(count, 'data/derived-data/02-landcover-scale-count.Rds')
 
-# lapply(seq_along(lslc), function(r) writeRaster(lslc[[r]], paste0('data/derived-data/2-landcover-res-', names(lslc)[[r]], '.tif'), overwrite = TRUE))
+# lapply(seq_along(lslc), function(r) writeRaster(lslc[[r]], paste0('data/derived-data/02-landcover-res-', names(lslc)[[r]], '.tif'), overwrite = TRUE))
