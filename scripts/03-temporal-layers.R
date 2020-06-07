@@ -33,6 +33,8 @@ DT[, dayoffull := .GRP, .(JDate, Year)]
 DT[, cutJDate := cut(dayoffull, nchunk, include.lowest = TRUE)]
 DT[, timecut := .GRP, cutJDate]
 
+DT[, mindate := min(as.IDate(datetime)), by = timecut]
+DT[, maxdate := max(mindate), by = timecut]
 
 # Temporal grouping with spatsoc ------------------------------------------
 group_times(
