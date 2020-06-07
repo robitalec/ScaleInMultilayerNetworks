@@ -12,7 +12,7 @@ base <-
     legend.background = element_blank(),
     legend.key = element_blank(),
     axis.text.x = element_text(
-      size = 14,
+      size = 12,
       color = "black",
       vjust = 0.65
     ),
