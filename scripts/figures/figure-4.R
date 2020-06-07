@@ -22,34 +22,31 @@ source('scripts/figures/theme.R')
 xlab <- 'temporal cut'
 
 
-DT[, c('cutmin', 'cutmax') := tstrsplit(gsub("(?![,.])[[:punct:]]", "", cutJDate, perl = TRUE), ',')]
-DT[, c('cutmin', 'cutmax') := 
-     lapply(.SD, function(col) as.IDate(paste(ceiling(as.numeric(col)), Year), 
-                                        format = '%j %Y')), 
-   .SDcols = c('cutmin', 'cutmax')]
+
 
 (gprop <- ggplot(DT) + 
-  geom_segment(aes(x = cutmin, xend = cutmax, 
+  geom_segment(aes(x = mindate, xend = maxdate, 
                    y = propedges, yend = propedges),
             size = 2) + 
   # guides(color = FALSE) +
   scale_color_manual(values = lccolors) +
   base +
   labs(x = NULL, y = 'Edge Overlap') + 
-  ylim(0, 1))
-  
+  ylim(0, 1)
+)
 
-gstr <- ggplot(DT) +
-  geom_line(aes(timecut, graphstrength, group = ANIMAL_ID, color = lcname),
-            alpha = 0.3, size = 1.2) +
-  geom_line(aes(timecut, meangraphstrength, color = lcname),
-            size = 2) +
-  facet_grid( ~ lcname) +
+DT[, meangraphstrength := mean(graphstrength), by = timecut]
+
+(gstr <- ggplot(DT) +
+  geom_segment(aes(x = mindate, xend = maxdate, 
+                   y = graphstrength, yend = graphstrength),
+               size = 0.5, alpha = 0.3) + 
+  geom_segment(aes(x = mindate, xend = maxdate, 
+                   y = meangraphstrength, yend = meangraphstrength),
+               size = 2) + 
   guides(color = FALSE) +
-  scale_color_manual(values = lccolors) +
   base +
-  labs(x = xlab, y = 'Graph Strength') + 
-  theme(panel.spacing = unit(1, "lines"))
+  labs(x = xlab, y = 'Graph Strength'))
 
 
 g30 <- gplot(lc30) + 
