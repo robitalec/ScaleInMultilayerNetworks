@@ -51,7 +51,8 @@ xlab <- 'Land Cover Resolution'
 
 gcount <- ggplot(count[lc %in% c(1, 2, 3)]) + 
   geom_line(aes(res, percent, 
-                color = lcname)) + 
+                color = lcname),
+            size = 2) + 
   scale_color_manual(values = lccolors) +
   base +
   labs(x = xlab, y = 'Proportion of Relocations')
