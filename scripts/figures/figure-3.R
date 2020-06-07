@@ -63,7 +63,7 @@ gprop <- ggplot(DT) +
   # guides(color = FALSE) +
   scale_color_manual(values = lccolors) +
   base +
-  labs(x = NA, y = 'Proportion of Edges')
+  labs(x = NULL, y = 'Edge Overlap')
   
 
 gstr <- ggplot(DT) +
