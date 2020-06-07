@@ -54,27 +54,28 @@ gcount <- ggplot(count[lc %in% c(1, 2, 3)]) +
                 color = lcname)) + 
   scale_color_manual(values = lccolors) +
   base +
-  labs(x = xlab)
+  labs(x = NULL)
 
 gprop <- ggplot(DT) + 
   geom_line(aes(lcres, propedges, 
-                color = lcname)) + 
-  guides(color = FALSE) +
+                color = lcname),
+            size = 2) + 
+  # guides(color = FALSE) +
   scale_color_manual(values = lccolors) +
   base +
-  labs(x = xlab)
+  labs(x = NA, y = 'Proportion of Edges')
   
 
 gstr <- ggplot(DT) +
-  geom_line(aes(lcres, graphstrength, group = ANIMAL_ID),
-            alpha = 0.7,
-            color = 'grey') +
-  geom_line(aes(lcres, meangraphstrength)) +
+  geom_line(aes(lcres, graphstrength, group = ANIMAL_ID, color = lcname),
+            alpha = 0.3, size = 1.2) +
+  geom_line(aes(lcres, meangraphstrength, color = lcname),
+            size = 2) +
   facet_grid( ~ lcname) +
   guides(color = FALSE) +
   scale_color_manual(values = lccolors) +
   base +
-  labs(x = xlab)
+  labs(x = xlab, y = 'Graph Strength')
 
 
 g30 <- gplot(lc30) + 
