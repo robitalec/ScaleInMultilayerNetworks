@@ -86,3 +86,16 @@ list_edges <- function(graphLs) {
     
     edges
 }
+
+
+
+
+get_edgelist <- function(DT, group = 'group', id, datetime = 'datetime') {
+  all <- DT[, data.table::CJ(left = .SD[[1]], right = .SD[[1]])[left != right], 
+            by = group, .SDcols = id]
+  
+  spatsoc::dyad_id(all, 'left', 'right')
+  all[, nbydyad := seq.int(.N), by = c('group', 'dyadID')]
+  all[nbydyad == 1]
+}
+
