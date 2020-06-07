@@ -50,8 +50,14 @@ edgelist[DT[, .SD[1], by = group, .SDcols = 'datetime'],
 
 
 mean_degree <- function(graph){
-  mean(igraph::degree(graph))
+  (degree(graph))
 }
 
-graphTS(edgelist, windowsize = days(60), windowshift = days(10),
-        measureFun = mean_degree, directed = FALSE, SRI = TRUE)
+check.windowsize(
+  edgelist[, .(left, right, as.character(datetime))],
+  # windowsize = days(60),
+  # windowshift = days(10),
+  measureFun = mean_degree#,
+  # directed = FALSE#,
+  # SRI = TRUE
+)
