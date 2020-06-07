@@ -100,7 +100,7 @@ wedgeovr <- wstren[eovr, on = 'layer']
 matrices <- property_matrix(wedgeovr, idcol, 'splitNeigh', var)
 layer_similarity_ordinal(matrices, 'FO', var)
 
-
+out <- wedgeovr[matrices, on = 'layer']
 
 # Output ------------------------------------------------------------------
 saveRDS(out, 'data/derived-data/03-temporal-layers.Rds')
