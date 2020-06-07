@@ -29,9 +29,7 @@ DT[between(JDate, summerlow, summerhigh), season := 'summer']
 # Drop individuals 
 indianisland <- c('FO2016011', 'FO2017013', 'FO2017001')
 diffixrate <- 'FO2016014'
-dropind <- diffixrate#c(indianisland, diffixrate)
-
-# which individual driving 500m
+dropind <- c(indianisland, diffixrate)
 
 DT <- DT[!ANIMAL_ID %in% dropind] 
 
