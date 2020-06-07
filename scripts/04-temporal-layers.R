@@ -64,6 +64,13 @@ netLs <- list_nets(gbiLs)
 gLs <- list_graphs(netLs)
 names(gLs) <- names(gbiLs)
 
+# Generate edge lists
+eLs <- list_edges(gLs)
+
+# Calculate edge overlap
+eovr <- edge_overlap(eLs)
+eovr[, edgeoverlapmat := list(edge_overlap_mat(eLs))]
+
 # Calculate eigenvector centrality
 stren <- layer_strength(gLs)
 stren[, (splitBy) := tstrsplit(layer, '-', type.convert = TRUE)]
