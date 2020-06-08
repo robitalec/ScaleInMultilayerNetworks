@@ -32,9 +32,6 @@ xlab <- 'temporal cut'
   geom_segment(aes(x = mindate, xend = maxdate, 
                    y = propedges, yend = propedges),
             size = 2) + 
-    # geom_segment(aes(x = mindate, xend = maxdate, 
-    #                  y = layersim, yend = layersim)) + 
-  # guides(color = FALSE) +
   scale_color_manual(values = lccolors) +
   base +
   labs(x = xlab, y = 'Edge Overlap') + 
@@ -65,7 +62,6 @@ DT[, middate := mean(c(mindate, maxdate)), layer]
     base +
     labs(x = xlab, y = 'Layer Similarity'))
 
-# panmarg <- 0.1
 gnn <- ggplot(
   netDT,
   aes(
@@ -74,8 +70,7 @@ gnn <- ggplot(
 ) +
     geom_edges(aes(xend = xend,
                    yend = yend),
-               size = 0.2#,
-               # size = weight)
+               size = 0.2
     ) +
     facet_grid(cols = vars(layerfctr)) + 
     guides(color = FALSE, size = FALSE) +
