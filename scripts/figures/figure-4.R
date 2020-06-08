@@ -81,31 +81,35 @@ gnn <- ggplot(
           strip.background = element_blank(),
           strip.text = element_blank())
 
-gnid <- ggplot(DT) + 
-  geom_point(aes(middate, nid)) +
-  base
+# Number of individuals
+(gnid <- ggplot(unique(DT[, .(middate, mindate, maxdate, nid)])) +
+  geom_line(aes(x = middate, nid), size = 1) + 
+  geom_segment(aes(x = mindate, xend = maxdate, 
+                   y = nid, yend = nid),
+               size = 0.5) + 
+  guides(color = FALSE) +
+  base +
+  labs(x = xlab, y = 'Number of Individuals'))
 
 
 # Patchwork ---------------------------------------------------------------
 layout <- 'A
            A
-           B'
+           B
+           C
+           C'
 
 
-(g <- gprop / gnn + 
-   plot_layout(design = layout,
-               guides = 'collect') #+
-   # plot_annotation(theme = theme(plot.margin = unit(c(0, 100, 0, 100), "pt")))
+(g <- gprop / gnn / gstr + 
+   plot_layout(design = layout) 
 )
 
 
 # gsimm
-# gnid
-
 
 # Output ------------------------------------------------------------------
 ggsave('graphics/figure-4.png',
        g, width = 13, height = 10)
 
-# ggsave('graphics/supp-count-lc.png',
-#        gcount, width = 5, height = 5)
+ggsave('graphics/supp-temp-nid.png',
+       gnid, width = 5, height = 5)
