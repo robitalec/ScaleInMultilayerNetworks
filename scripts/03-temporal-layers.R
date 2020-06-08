@@ -120,13 +120,15 @@ zzz
     y = y)
 ) +
   geom_edges(aes(xend = xend,
-                 yend = yend)#,
+                 yend = yend),
+             size = 0.2#,
                  # size = weight)
   ) +
-  scale_size(range = c(0.1, 2)) + 
     facet_grid(cols = vars(layerfctr)) + 
     guides(color = FALSE, size = FALSE) +
-  geom_nodes(aes(color = name), size = 5))
+  geom_nodes() +
+    geom_nodes(aes(xend, yend))
+)
 
 library(multinet)
 ml <- ml_empty()
