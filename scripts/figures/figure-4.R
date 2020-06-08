@@ -38,7 +38,8 @@ xlab <- 'temporal cut'
   scale_color_manual(values = lccolors) +
   base +
   labs(x = xlab, y = 'Edge Overlap') + 
-  ylim(0, 1)
+  ylim(0, 1) +
+  scale_x_date(expand = c(0, 0))
 )
 
 DT[, meangraphstrength := mean(graphstrength), by = timecut]
@@ -64,8 +65,8 @@ DT[, middate := mean(c(mindate, maxdate)), layer]
     base +
     labs(x = xlab, y = 'Layer Similarity'))
 
-
-(gnn <- ggplot(
+# panmarg <- 0.1
+gnn <- ggplot(
   netDT,
   aes(
     x = x,
@@ -80,28 +81,36 @@ DT[, middate := mean(c(mindate, maxdate)), layer]
     guides(color = FALSE, size = FALSE) +
     geom_nodes() +
     geom_nodes(aes(xend, yend)) +
-    theme_blank()
-)
-
-
-# Patchwork ---------------------------------------------------------------
-layout <- 'AABBCC
-           DDDDDE
-           FFFFFF'
+    theme_blank() + 
+    theme(
+          strip.background = element_blank(),
+          strip.text = element_blank())
 
 gnid <- ggplot(DT) + 
   geom_point(aes(middate, nid)) +
   base
 
-(g <- gprop / gstr / gsim / gnid+ 
-   plot_layout(#design = layout,
-               guides = 'collect')
+
+# Patchwork ---------------------------------------------------------------
+layout <- 'A
+           A
+           B'
+
+
+(g <- gprop / gnn + 
+   plot_layout(design = layout,
+               guides = 'collect') #+
+   # plot_annotation(theme = theme(plot.margin = unit(c(0, 100, 0, 100), "pt")))
 )
+
+
+# gsimm
+# gnid
 
 
 # Output ------------------------------------------------------------------
 ggsave('graphics/figure-4.png',
-       g, width = 10, height = 10)
+       g, width = 13, height = 10)
 
 # ggsave('graphics/supp-count-lc.png',
 #        gcount, width = 5, height = 5)
