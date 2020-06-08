@@ -53,7 +53,8 @@ gstr <- ggplot(DT) +
                size = 2) + 
   guides(color = FALSE) +
   base +
-  labs(x = xlab, y = 'Graph Strength')
+  labs(x = xlab, y = 'Graph Strength') +
+  scale_x_date(expand = c(0, 0))
 
 
 # Layer similarity
@@ -64,7 +65,8 @@ gsim <- ggplot(DT) +
                  size = 0.5, alpha = 0.3) + 
     guides(color = FALSE) +
     base +
-    labs(x = xlab, y = 'Layer Similarity')
+    labs(x = xlab, y = 'Layer Similarity') +
+  scale_x_date(expand = c(0, 0))
 
 # Network
 gnn <- ggplot(
@@ -82,8 +84,7 @@ gnn <- ggplot(
     geom_nodes() +
     geom_nodes(aes(xend, yend)) +
     theme_blank() + 
-    theme(
-          strip.background = element_blank(),
+    theme(strip.background = element_blank(),
           strip.text = element_blank())
 
 # Number of individuals
