@@ -61,6 +61,24 @@ DT[, middate := mean(c(mindate, maxdate)), layer]
     labs(x = xlab, y = 'Layer Similarity'))
 
 
+(gnn <- ggplot(
+  zzz,
+  aes(
+    x = x,
+    y = y)
+) +
+    geom_edges(aes(xend = xend,
+                   yend = yend),
+               size = 0.2#,
+               # size = weight)
+    ) +
+    facet_grid(cols = vars(layerfctr)) + 
+    guides(color = FALSE, size = FALSE) +
+    geom_nodes() +
+    geom_nodes(aes(xend, yend)) +
+    theme_blank()
+)
+
 
 # Patchwork ---------------------------------------------------------------
 layout <- 'AABBCC

@@ -107,30 +107,9 @@ zzz <-
     all = TRUE
   )[!is.na(name) & !is.na(nameend)]
 
-zzz[, xright := x * (.GRP - 1), layer]
 zzz[, layerfctr := factor(layer, sort(unique(as.integer(layer))))]
-zzz
-(gnn <- ggplot(
-  zzz,
-  aes(
-    x = x,
-    y = y)
-) +
-  geom_edges(aes(xend = xend,
-                 yend = yend),
-             size = 0.2#,
-                 # size = weight)
-  ) +
-    facet_grid(cols = vars(layerfctr)) + 
-    guides(color = FALSE, size = FALSE) +
-  geom_nodes() +
-    geom_nodes(aes(xend, yend)) +
-    theme_blank()
-)
 
 
-
-# -------------------------------------------------------------------------
 
 
 # Generate edge lists
