@@ -70,7 +70,7 @@ DT[, (lccol) := extract(reclass, matrix(c(EASTING, NORTHING), ncol = 2))]
 
 # Sub data ----------------------------------------------------------------
 ## 2017 summer and 2018 winter
-sub <- DT[(Year == 2017 & JDate > 11) |
+sub <- DT[(Year == 2017 & JDate > 110) |
             Year == 2018 |
             (Year == 2019 & JDate < 87)]
 

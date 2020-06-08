@@ -23,13 +23,13 @@ alloc.col(DT)
 lc <- readRDS('data/derived-data/01-reclass-lc.Rds')
 
 
+# Modal window ------------------------------------------------------------
 # If already run
 # lslc <- lapply(dir('data/derived-data', '2-landcover-res-*', full.names = TRUE),
 #                raster)
 # lsres <- c(100, 300, 500, 700, 900, 1000)
 # names(lslc) <- lsres
 
-# Modal window ------------------------------------------------------------
 lsres <- c(100, 300, 500, 700, 900, 1000)
 lslc <- lapply(lsres, function(res) {
   w <- winmove(lc, res, type = 'circle', win_fun = modal)
@@ -135,4 +135,4 @@ count <- rbindlist(lapply(grep('lc[0-9]', colnames(DT), value = TRUE), function(
 saveRDS(out, 'data/derived-data/02-landcover-scale.Rds')
 saveRDS(count, 'data/derived-data/02-landcover-scale-count.Rds')
 
-# lapply(seq_along(lslc), function(r) writeRaster(lslc[[r]], paste0('data/derived-data/02-landcover-res-', names(lslc)[[r]], '.tif'), overwrite = TRUE))
+lapply(seq_along(lslc), function(r) writeRaster(lslc[[r]], paste0('data/derived-data/02-landcover-res-', names(lslc)[[r]], '.tif'), overwrite = TRUE))
