@@ -136,7 +136,7 @@ zzz <-
     by.y = myby,
     suffixes = c('', 'end'),
     all = TRUE
-  )[!is.na(name) & !is.na(nameend)]
+  )[!is.na(name)]
 
 zzz[, layerfctr := factor(layer, sort(unique(as.integer(layer))))]
 
