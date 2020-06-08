@@ -24,7 +24,7 @@ alloc.col(DT)
 
 
 # Chunk time --------------------------------------------------------------
-nchunk <- 25
+nchunk <- 20
 
 # TODO: check consistent N by cut * year
 setorder(DT, Year, JDate)
@@ -36,6 +36,8 @@ DT[, timecut := .GRP, cutJDate]
 DT[, date := as.IDate(datetime)]
 DT[, mindate := min(date), by = timecut]
 DT[, maxdate := max(date), by = timecut]
+
+DT[, nid := uniqueN(ANIMAL_ID), timecut]
 
 # Temporal grouping with spatsoc ------------------------------------------
 group_times(
@@ -87,7 +89,7 @@ layer_neighbors(DT, idcol, splitBy = splitBy)
 
 # and tidy output, prep for merge
 outcols <- c('neigh', 'splitNeigh', idcol, 'cutJDate', 
-             splitBy, 'mindate', 'maxdate')
+             splitBy, 'mindate', 'maxdate', 'nid')
 usub <- unique(DT[, .SD, .SDcols = outcols])
 
 # Merge eigcent+correlations with neighbors
