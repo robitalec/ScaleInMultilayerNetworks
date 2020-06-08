@@ -47,7 +47,8 @@ graphs <- lapply(thresholds, function(thresh) {
   )
   
   # Calculate neighbors
-  neighb <- unique(layer_neighbors(sub, idcol, splitBy = splitBy)[, .(ANIMAL_ID, splitNeigh, neigh)])
+  neighb <- unique(layer_neighbors(sub, idcol, splitBy = splitBy)[,
+                   .(ANIMAL_ID, splitNeigh, neigh, layer = thresh)])
   
   # GBI 
   gbi <- get_gbi(sub, id = idcol)
@@ -80,16 +81,15 @@ stren[, layer := as.integer(layer)]
 stren[, (var) := layer]
 setnames(stren, 'ind', idcol)
   
-  # # and tidy output, prep for merge
-  # outcols <- c('neigh', 'splitNeigh', idcol, splitBy)
-  # usub <- unique(DT[, .SD, .SDcols = outcols])
-  # 
-  # # Merge eigcent+correlations with neighbors
-  # wstren <- usub[stren, on = c(idcol, splitBy)]
+# and tidy output, prep for merge
+usub <- neighLs
+
+# Merge eigcent+correlations with neighbors
+wstren <- usub[stren, on = c(idcol, 'layer')]
   
 # Merge edge overlap
-wedgeovr <- stren[eovr, on = 'layer']
-  
+wedgeovr <- wstren[eovr, on = 'layer']
+
 # Property matrix
 # TODO: check that order is right
 matrices <- property_matrix(wedgeovr, idcol, 'splitNeigh', var)
