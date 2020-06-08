@@ -74,6 +74,53 @@ names(gLs) <- names(gbiLs)
 
 
 # multinet ----------------------------------------------------------------
+library(ggnetwork)
+xy <- unique(data.table(ggnetwork(gLs[[1]]))[, .(x, y, name)])
+
+repxy <- xy[rep(seq_len(nrow(xy)), times = nchunk)]
+repxy[, layer := rep(names(gLs), each = uniqueN(name))]
+
+
+# Edges by layer
+edges <- rbindlist(lapply(gLs, as_data_frame, what = 'edges'), idcol = 'layer')
+
+# Yuck double merge for from and to coords
+mxby <- c('name', 'layer')
+myby <- c('from', 'layer')
+xyedges <- merge(repxy,
+                 edges,
+                 by.x = mxby,
+                 by.y = myby,
+                 all = TRUE)
+myby <- c('to', 'layer')
+zzz <-
+  merge(
+    repxy,
+    xyedges,
+    by.x = mxby,
+    by.y = myby,
+    suffixes = c('', 'end'),
+    all = TRUE
+  )[!is.na(name) & !is.na(nameend)]
+
+zzz[, xright := x * (.GRP - 1), layer]
+zzz[, layerfctr := factor(layer, sort(unique(as.integer(layer))))]
+zzz
+(gnn <- ggplot(
+  zzz,
+  aes(
+    x = x,
+    y = y)
+) +
+  geom_edges(aes(xend = xend,
+                 yend = yend)#,
+                 # size = weight)
+  ) +
+  scale_size(range = c(0.1, 2)) + 
+    facet_grid(cols = vars(layerfctr)) + 
+    guides(color = FALSE, size = FALSE) +
+  geom_nodes(aes(color = name), size = 5))
+
 library(multinet)
 ml <- ml_empty()
 
