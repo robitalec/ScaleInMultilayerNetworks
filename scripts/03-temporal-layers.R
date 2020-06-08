@@ -111,8 +111,8 @@ out <- wedgeovr[matrices[, .(layersim, layer)], on = 'layer']
 # XY for each node
 # TODO: check preserve if no connections
 rbindxy <- rbindlist(lapply(gLs, ggnetwork), idcol = 'layer')
-rbindxy[, layer := as.integer(layer)][, dif8 := abs(layer - 8)]
-xy <- rbindxy[order(dif8)][, .SD[1], by = name, .SDcols = c('x', 'y')]
+rbindxy[, layer := as.integer(layer)][, dif := abs(layer - 8)]
+xy <- rbindxy[order(dif)][, .SD[1], by = name, .SDcols = c('x', 'y')]
 
 repxy <- xy[rep(seq_len(nrow(xy)), times = nchunk)]
 repxy[, layer := rep(names(gLs), each = uniqueN(name))]
