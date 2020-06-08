@@ -67,7 +67,11 @@ layout <- 'AABBCC
            DDDDDE
            FFFFFF'
 
-(g <- gprop / gstr / gsim + 
+gnid <- ggplot(DT) + 
+  geom_point(aes(middate, nid)) +
+  base
+
+(g <- gprop / gstr / gsim / gnid+ 
    plot_layout(#design = layout,
                guides = 'collect')
 )
