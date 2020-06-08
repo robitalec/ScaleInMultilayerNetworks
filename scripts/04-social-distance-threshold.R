@@ -27,12 +27,17 @@ group_times(
 )
 
 
+# TODO: need to return splitNeigh for property matrix, but 
+#       splitNeigh without a split, so just rename neigh
+
 
 # Generate networks for each spatial threshold ----------------------------
 # list spatial thresholds
+# TODO: fix rm subset
 thresholds <- c(5, seq(50, 500, by = 50))[1:2]
 
 var <- 'spatialthreshold'
+splitBy <- NULL
 
 graphs <- lapply(thresholds, function(thresh) {
   sub <- copy(DT)[1:1e4]
@@ -47,7 +52,7 @@ graphs <- lapply(thresholds, function(thresh) {
   )
   
   # Calculate neighbors
-  neighb <- unique(layer_neighbors(sub, idcol, splitBy = splitBy)[,
+  neighb <- unique(layer_neighbors(sub, idcol, splitBy = NULL)[,
                    .(ANIMAL_ID, splitNeigh, neigh, layer = thresh)])
   
   # GBI 
