@@ -75,9 +75,16 @@ names(gLs) <- names(gbiLs)
 
 # multinet ----------------------------------------------------------------
 library(ggnetwork)
-xy <- unique(data.table(ggnetwork(gLs[[1]]))[, .(x, y, name)])
 
-repxy <- xy[rep(seq_len(nrow(xy)), times = nchunk)]
+
+xy <- rbindlist(lapply(gLs, ggnetwork), idcol = 'layer')
+xy[, layer := as.integer(layer)][, dif8 := abs(layer - 8)]
+xy8 <- xy[order(dif8)][, .SD[1], by = name, .SDcols = c('x', 'y')]
+
+
+  #unique(data.table(ggnetwork(gLs[[8]]))[, .(x, y, name)])
+
+repxy <- xy8[rep(seq_len(nrow(xy8)), times = nchunk)]
 repxy[, layer := rep(names(gLs), each = uniqueN(name))]
 
 
