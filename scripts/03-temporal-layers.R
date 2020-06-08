@@ -27,7 +27,6 @@ alloc.col(DT)
 # Chunk time --------------------------------------------------------------
 nchunk <- 20
 
-# TODO: check consistent N by cut * year
 setorder(DT, Year, JDate)
 DT[, dayoffull := .GRP, .(JDate, Year)]
 
@@ -39,6 +38,7 @@ DT[, mindate := min(date), by = timecut]
 DT[, maxdate := max(date), by = timecut]
 
 DT[, nid := uniqueN(ANIMAL_ID), timecut]
+
 
 # Temporal grouping with spatsoc ------------------------------------------
 group_times(
@@ -73,45 +73,6 @@ netLs <- list_nets(gbiLs)
 gLs <- list_graphs(netLs)
 names(gLs) <- names(gbiLs)
 
-
-xy <- rbindlist(lapply(gLs, ggnetwork), idcol = 'layer')
-xy[, layer := as.integer(layer)][, dif8 := abs(layer - 8)]
-xy8 <- xy[order(dif8)][, .SD[1], by = name, .SDcols = c('x', 'y')]
-
-
-  #unique(data.table(ggnetwork(gLs[[8]]))[, .(x, y, name)])
-
-repxy <- xy8[rep(seq_len(nrow(xy8)), times = nchunk)]
-repxy[, layer := rep(names(gLs), each = uniqueN(name))]
-
-
-# Edges by layer
-edges <- rbindlist(lapply(gLs, as_data_frame, what = 'edges'), idcol = 'layer')
-
-# Yuck double merge for from and to coords
-mxby <- c('name', 'layer')
-myby <- c('from', 'layer')
-xyedges <- merge(repxy,
-                 edges,
-                 by.x = mxby,
-                 by.y = myby,
-                 all = TRUE)
-myby <- c('to', 'layer')
-zzz <-
-  merge(
-    repxy,
-    xyedges,
-    by.x = mxby,
-    by.y = myby,
-    suffixes = c('', 'end'),
-    all = TRUE
-  )[!is.na(name) & !is.na(nameend)]
-
-zzz[, layerfctr := factor(layer, sort(unique(as.integer(layer))))]
-
-
-
-
 # Generate edge lists
 eLs <- list_edges(gLs)
 
@@ -144,5 +105,42 @@ layer_similarity_ordinal(matrices, 'FO', var)
 
 out <- wedgeovr[matrices, on = 'layer']
 
+
+
+# Generate figure data ----------------------------------------------------
+# XY for each node
+rbindxy <- rbindlist(lapply(gLs, ggnetwork), idcol = 'layer')
+rbindxy[, layer := as.integer(layer)][, dif8 := abs(layer - 8)]
+xy <- rbindxy[order(dif8)][, .SD[1], by = name, .SDcols = c('x', 'y')]
+
+repxy <- xy[rep(seq_len(nrow(xy)), times = nchunk)]
+repxy[, layer := rep(names(gLs), each = uniqueN(name))]
+
+# Edges by layer
+edges <- rbindlist(lapply(gLs, as_data_frame, what = 'edges'), idcol = 'layer')
+
+# Yuck double merge for from and to coords
+mxby <- c('name', 'layer')
+myby <- c('from', 'layer')
+xyedges <- merge(repxy,
+                 edges,
+                 by.x = mxby,
+                 by.y = myby,
+                 all = TRUE)
+myby <- c('to', 'layer')
+zzz <-
+  merge(
+    repxy,
+    xyedges,
+    by.x = mxby,
+    by.y = myby,
+    suffixes = c('', 'end'),
+    all = TRUE
+  )[!is.na(name) & !is.na(nameend)]
+
+zzz[, layerfctr := factor(layer, sort(unique(as.integer(layer))))]
+
+
 # Output ------------------------------------------------------------------
 saveRDS(out, 'data/derived-data/03-temporal-layers.Rds')
+saveRDS(zzz, 'data/derived-data/03-temporal-network-fig-data.Rds')
