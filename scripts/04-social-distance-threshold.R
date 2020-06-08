@@ -34,9 +34,8 @@ thresholds <- c(5, seq(50, 500, by = 50))
 
 var <- 'spatialthreshold'
 
-
-nets <- lapply(thresholds, function(t) {
-  sub <- na.omit(DT, cols = splitBy)
+gLs <- lapply(thresholds, function(t) {
+  sub <- copy(DT)
   
   # Spatial grouping with spatsoc
   group_pts(
