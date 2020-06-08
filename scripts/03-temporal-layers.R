@@ -9,6 +9,7 @@ pkgs <- c('data.table',
 					'rgdal',
 					'asnipe',
 					'igraph',
+					'ggnetwork',
 					'ScaleInMultilayerNetworks')
 p <- lapply(pkgs, library, character.only = TRUE)
 
@@ -71,10 +72,6 @@ netLs <- list_nets(gbiLs)
 # Generate graphs
 gLs <- list_graphs(netLs)
 names(gLs) <- names(gbiLs)
-
-
-# multinet ----------------------------------------------------------------
-library(ggnetwork)
 
 
 xy <- rbindlist(lapply(gLs, ggnetwork), idcol = 'layer')
