@@ -86,8 +86,21 @@ edges[, timecut := as.integer(timecut)]
 
 add_edges_ml(ml, edges[, .(from, timecut, to, timecut, weight)])
 
+glouvain2_ml(ml, 0)
+
+ggplot(data.table(infomap_ml(ml, overlapping = TRUE, directed = FALSE, self.links = FALSE))) + 
+  geom_point(aes(cid, actor))
+
+cols <- data.table(vertices_ml(ml))[, col := grey.colors(1, start = .GRP / DT[, uniqueN(ANIMAL_ID) + 5]), actor]$col
+
 plot(ml, layers = DT[, unique(timecut)],
-     vertex.labels=NA)
+     vertex.labels = NA,
+     vertex.col = cols,
+     grid = c(20, 1),
+     show.layer.names = FALSE
+     )
+
+
 
 
 # -------------------------------------------------------------------------
