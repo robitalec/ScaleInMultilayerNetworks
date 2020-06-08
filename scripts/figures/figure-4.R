@@ -4,13 +4,18 @@
 
 
 # Packages ----------------------------------------------------------------
-pkgs <- c('data.table', 'ggplot2', 'patchwork', 'raster', 'rasterVis')
+pkgs <- c('data.table',
+          'ggplot2',
+          'patchwork',
+          'raster',
+          'rasterVis',
+          'ggnetwork')
 p <- lapply(pkgs, library, character.only = TRUE)
 
 
 # Input -------------------------------------------------------------------
 DT <- readRDS('data/derived-data/03-temporal-layers.Rds')
-
+netDT <- readRDS('data/derived-data/03-temporal-network-fig-data.Rds')
 
 
 # Theme -------------------------------------------------------------------
@@ -20,7 +25,6 @@ source('scripts/figures/theme.R')
 
 # Plot --------------------------------------------------------------------
 xlab <- 'temporal cut'
-
 
 
 
@@ -62,7 +66,7 @@ DT[, middate := mean(c(mindate, maxdate)), layer]
 
 
 (gnn <- ggplot(
-  zzz,
+  netDT,
   aes(
     x = x,
     y = y)
