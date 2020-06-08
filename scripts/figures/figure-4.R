@@ -24,24 +24,27 @@ source('scripts/figures/theme.R')
 
 
 # Plot --------------------------------------------------------------------
-xlab <- 'temporal cut'
+xlab <- 'Date'
 
+DT[, middate := mean(c(mindate, maxdate)), layer]
 
+DT[, meangraphstrength := mean(graphstrength), by = timecut]
 
-(gprop <- ggplot(DT) + 
+# Edge overlap
+gprop <- ggplot(DT) + 
   geom_segment(aes(x = mindate, xend = maxdate, 
                    y = propedges, yend = propedges),
             size = 2) + 
   scale_color_manual(values = lccolors) +
   base +
-  labs(x = xlab, y = 'Edge Overlap') + 
+  labs(x = NULL, y = 'Edge Overlap') + 
   ylim(0, 1) +
   scale_x_date(expand = c(0, 0))
-)
 
-DT[, meangraphstrength := mean(graphstrength), by = timecut]
 
-(gstr <- ggplot(DT) +
+
+# Graph strength
+gstr <- ggplot(DT) +
   geom_segment(aes(x = mindate, xend = maxdate, 
                    y = graphstrength, yend = graphstrength),
                size = 0.5, alpha = 0.3) + 
@@ -50,18 +53,20 @@ DT[, meangraphstrength := mean(graphstrength), by = timecut]
                size = 2) + 
   guides(color = FALSE) +
   base +
-  labs(x = xlab, y = 'Graph Strength'))
+  labs(x = xlab, y = 'Graph Strength')
 
-DT[, middate := mean(c(mindate, maxdate)), layer]
-(gsim <- ggplot(DT) +
+
+# Layer similarity
+gsim <- ggplot(DT) +
     geom_line(aes(x = middate, layersim)) + 
     geom_segment(aes(x = mindate, xend = maxdate, 
                      y = layersim, yend = layersim),
                  size = 0.5, alpha = 0.3) + 
     guides(color = FALSE) +
     base +
-    labs(x = xlab, y = 'Layer Similarity'))
+    labs(x = xlab, y = 'Layer Similarity')
 
+# Network
 gnn <- ggplot(
   netDT,
   aes(
