@@ -21,7 +21,7 @@ if (var == 'lcres') {
 } else if (var == 'spatialthreshold') {
   path <- 'data/derived-data/3-spatial-threshold.Rds'
 } else if (var == 'timecut') {
-  path <- 'data/derived-data/4-temporal-layers.Rds'
+  path <- 'data/derived-data/03-temporal-layers.Rds'
   splitBy <- var
 } else if (var == 'nobs') {
   path <- 'data/derived-data/5-number-of-observations.Rds'
