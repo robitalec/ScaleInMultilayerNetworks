@@ -103,12 +103,13 @@ wedgeovr <- wstren[eovr, on = 'layer']
 matrices <- property_matrix(wedgeovr, idcol, 'splitNeigh', var)
 layer_similarity_ordinal(matrices, 'FO', var)
 
-out <- wedgeovr[matrices, on = 'layer']
+out <- wedgeovr[matrices[, .(layersim, layer)], on = 'layer']
 
 
 
 # Generate figure data ----------------------------------------------------
 # XY for each node
+# TODO: check preserve if no connections
 rbindxy <- rbindlist(lapply(gLs, ggnetwork), idcol = 'layer')
 rbindxy[, layer := as.integer(layer)][, dif8 := abs(layer - 8)]
 xy <- rbindxy[order(dif8)][, .SD[1], by = name, .SDcols = c('x', 'y')]
