@@ -9,8 +9,8 @@ p <- lapply(pkgs, library, character.only = TRUE)
 
 
 # Input -------------------------------------------------------------------
-DT <- readRDS('data/derived-data/2-landcover-scale.Rds')
-count <- readRDS('data/derived-data/2-landcover-scale-count.Rds')
+DT <- readRDS('data/derived-data/02-landcover-scale.Rds')
+count <- readRDS('data/derived-data/02-landcover-scale-count.Rds')
 
 
 legend <- data.table(lc = c(1, 2, 3),
@@ -19,9 +19,9 @@ legend <- data.table(lc = c(1, 2, 3),
 DT[legend, lcname := lcname, on = 'lc']
 count[legend, lcname := lcname, on = 'lc']
 
-lc30 <- readRDS('data/derived-data/1-reclass-lc.Rds')
-lc500 <- raster('data/derived-data/2-landcover-res-500.tif')
-lc1000 <- raster('data/derived-data/2-landcover-res-1000.tif')
+lc30 <- readRDS('data/derived-data/01-reclass-lc.Rds')
+lc500 <- raster('data/derived-data/02-landcover-res-500.tif')
+lc1000 <- raster('data/derived-data/02-landcover-res-1000.tif')
 
 
 # Theme -------------------------------------------------------------------
