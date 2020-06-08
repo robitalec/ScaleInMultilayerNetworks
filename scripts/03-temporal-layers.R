@@ -72,6 +72,27 @@ netLs <- list_nets(gbiLs)
 gLs <- list_graphs(netLs)
 names(gLs) <- names(gbiLs)
 
+
+# multinet ----------------------------------------------------------------
+library(multinet)
+ml <- ml_empty()
+
+add_layers_ml(ml, DT[, unique(timecut)], directed = FALSE)
+
+add_vertices_ml(ml, unique(DT[, .(ANIMAL_ID, timecut)]))
+
+edges <- rbindlist(lapply(gLs, as_data_frame), idcol = 'timecut')
+edges[, timecut := as.integer(timecut)]
+
+add_edges_ml(ml, edges[, .(from, timecut, to, timecut, weight)])
+
+plot(ml, layers = DT[, unique(timecut)],
+     vertex.labels=NA)
+
+
+# -------------------------------------------------------------------------
+
+
 # Generate edge lists
 eLs <- list_edges(gLs)
 
