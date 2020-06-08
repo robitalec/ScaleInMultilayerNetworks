@@ -73,25 +73,9 @@ layout <- 'AABBCC
 )
 
 
-# Edge overlap matrix -----------------------------------------------------
-mat <- eovr$edgeoverlapmat[[1]]
-zzz <- data.table(mat, keep.rownames = 'layer')
-zzz[, layer := as.integer(layer)]
-setcolorder(zzz, c('layer', as.character(sort(as.integer(colnames(zzz))))))
-setorder(zzz, layer)
-
-
-x <- melt(zzz, id.vars = 'layer', variable.name = 'leftlayer', variable.factor = FALSE)
-x[, leftlayer := as.integer(leftlayer)]
-# x[leftlayer > as.integer(layer), value := NA]
-ggplot(x) + 
-  geom_tile(aes(layer, sort(leftlayer), fill = value)) +
-  scale_fill_binned()
-
-
 # Output ------------------------------------------------------------------
-# ggsave('graphics/figure-3.png',
-#        g, width = 10, height = 10)
+ggsave('graphics/figure-4.png',
+       g, width = 10, height = 10)
 
 # ggsave('graphics/supp-count-lc.png',
 #        gcount, width = 5, height = 5)
