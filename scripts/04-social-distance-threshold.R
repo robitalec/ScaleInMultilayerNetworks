@@ -30,47 +30,72 @@ group_times(
 
 # Generate networks for each spatial threshold ----------------------------
 # list spatial thresholds
-thresholds <- c(5, seq(50, 500, by = 50))
+thresholds <- c(5, seq(50, 500, by = 50))[1:2]
 
 var <- 'spatialthreshold'
 
-gLs <- lapply(thresholds, function(t) {
-  sub <- copy(DT)
+graphs <- lapply(thresholds, function(thresh) {
+  sub <- copy(DT)[1:1e4]
   
   # Spatial grouping with spatsoc
   group_pts(
     sub,
-    threshold = t,
+    threshold = thresh,
     id = idcol,
     coords = projCols,
-    timegroup = 'timegroup',
-    splitBy = splitBy
+    timegroup = 'timegroup'
   )
   
+  # Calculate neighbors
+  neighb <- unique(layer_neighbors(sub, idcol, splitBy = splitBy)[, .(ANIMAL_ID, splitNeigh, neigh)])
+  
   # GBI 
-  gbiLs <- list_gbi(sub, idcol, splitBy)
+  gbi <- get_gbi(sub, id = idcol)
   
   # Generate networks 
-  netLs <- list_nets(gbiLs)
+  net <- get_network(gbi, data_format = 'GBI', association_index = 'SRI')
   
   # Generate graphs 
-  gLs <- list_graphs(netLs)
-  names(gLs) <- names(gbiLs)
+  list(graph = graph.adjacency(net, mode = 'undirected', diag = FALSE, weighted = TRUE),
+       neighs = neighb)
+})
+
+gLs <- lapply(graphs, function(x) x[['graph']])
+names(gLs) <- thresholds
+
+neighLs <- rbindlist(lapply(graphs, function(x) x[['neighs']]))
+
+
+# Generate edge lists
+eLs <- list_edges(gLs)
+eLs[, layer := as.integer(layer)]
+
+# Calculate edge overlap
+eovr <- edge_overlap(eLs)
+eovr[, edgeoverlapmat := list(edge_overlap_mat(eLs))]
+
+# Calculate eigenvector centrality 
+stren <- layer_strength(gLs)
+stren[, layer := as.integer(layer)]
+stren[, (var) := layer]
+setnames(stren, 'ind', idcol)
   
-  # Calculate eigenvector centrality 
-  stren <- layer_strength(gLs)
-  stren[, (splitBy) := tstrsplit(layer, '-', type.convert = TRUE)]
-  setnames(stren, 'ind', idcol)
+  # # and tidy output, prep for merge
+  # outcols <- c('neigh', 'splitNeigh', idcol, splitBy)
+  # usub <- unique(DT[, .SD, .SDcols = outcols])
+  # 
+  # # Merge eigcent+correlations with neighbors
+  # wstren <- usub[stren, on = c(idcol, splitBy)]
   
-  # Calculate neighbors
-  layer_neighbors(sub, idcol, splitBy = splitBy)
+# Merge edge overlap
+wedgeovr <- stren[eovr, on = 'layer']
   
-  # and tidy output, prep for merge
-  outcols <- c('neigh', 'splitNeigh', idcol, splitBy)
-  out <- unique(sub[, .SD, .SDcols = outcols])
+# Property matrix
+# TODO: check that order is right
+matrices <- property_matrix(wedgeovr, idcol, 'splitNeigh', var)
+layer_similarity_ordinal(matrices, 'FO', var)
   
-  # Merge eigcent+correlations with neighbors
-  out <- out[stren, on = c(idcol, splitBy)]
+  out <- wedgeovr[matrices[, .(layersim, layer)], on = 'layer']
   
   # Preserve spatial threshold
   set(out, j = var, value = t)
