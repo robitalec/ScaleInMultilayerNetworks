@@ -67,7 +67,7 @@ layout <- 'AABBCC
            DDDDDE
            FFFFFF'
 
-(g <- gprop / gstr +
+(g <- gprop / gstr / gsim + 
    plot_layout(#design = layout,
                guides = 'collect')
 )
