@@ -31,7 +31,7 @@ group_times(
 
 # Generate networks for each n observations -------------------------------
 maxn <- 500
-nstep <- 2#25
+nstep <- 25
 
 # Randomly select n max observations
 randobs <- DT[, sample(unique(timegroup), size = maxn), lc]
@@ -66,15 +66,15 @@ nets <- lapply(seq(10, maxn, by = nstep), function(n) {
   
   # Generate edge lists
   eLs <- list_edges(gLs)
+  eLs[, layer := as.integer(layer)]
   
   # Calculate edge overlap
   eovr <- edge_overlap(eLs)
-  eovr[, edgeoverlapmat := list(edge_overlap_mat(eLs))][, lc := as.integer(layer)]
+  eovr[, edgeoverlapmat := list(edge_overlap_mat(eLs))]
   
   # Calculate eigenvector centrality for each season
   stren <- layer_strength(gLs)
-  stren[, lc := as.integer(layer)]
-  # stren[, (splitBy) := tstrsplit(layer, '-', type.convert = TRUE)]
+  stren[, layer := as.integer(layer)]
   setnames(stren, 'ind', idcol)
   
   # Calculate neighbors
@@ -83,12 +83,13 @@ nets <- lapply(seq(10, maxn, by = nstep), function(n) {
   # and tidy output, prep for merge
   outcols <- c('neigh', 'splitNeigh', idcol, splitBy)
   usub <- unique(sub[, .SD, .SDcols = outcols])
+  usub[, layer := lc]
   
   # Merge eigcent+correlations with neighbors
-  wstren <- usub[stren, on = c(idcol, splitBy)]
+  wstren <- usub[stren, on = c(idcol, 'layer')]
   
   # Merge edge overlap
-  out <- wstren[eovr, on = splitBy]
+  out <- wstren[eovr, on = 'layer']
   
   # Preserve window length
   set(out, j = var, value = n)
@@ -98,4 +99,4 @@ out <- rbindlist(nets)
 
 
 # Output ------------------------------------------------------------------
-saveRDS(out, 'data/derived-data/5-number-of-observations.Rds')
+saveRDS(out, 'data/derived-data/05-number-of-observations.Rds')
