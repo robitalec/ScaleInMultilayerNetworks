@@ -92,19 +92,11 @@ wstren <- usub[stren, on = c(idcol, 'layer')]
 wedgeovr <- wstren[eovr, on = 'layer']
 
 # Property matrix
-# TODO: check that order is right
-matrices <- property_matrix(wedgeovr, idcol, 'splitNeigh', var)
+matrices <- property_matrix(wedgeovr, idcol, 'neigh', var)
 layer_similarity_ordinal(matrices, 'FO', var)
   
-  out <- wedgeovr[matrices[, .(layersim, layer)], on = 'layer']
+out <- wedgeovr[matrices[, .(layersim, layer)], on = 'layer']
   
-  # Preserve spatial threshold
-  set(out, j = var, value = t)
-})
-
-out <- rbindlist(nets)
-
-
 
 # Output ------------------------------------------------------------------
 saveRDS(out, 'data/derived-data/3-spatial-threshold.Rds')
