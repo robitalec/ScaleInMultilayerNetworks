@@ -48,11 +48,13 @@ gprop <- ggplot(DT, aes(color = lcname)) +
 
 
 # Graph strength
-gstr <- ggplot(DT, aes(color = lcname)) +
-  geom_line(aes(x = threshold, y = propedges),
-            size = 0.5, alpha = 0.3) + 
-  geom_line(aes(x = threshold, y = propedges),
+gstr <- ggplot(DT, aes(color = lcname, group = lcname)) +
+  geom_line(aes(x = threshold, y = graphstrength, 
+                group = ANIMAL_ID),
+            alpha = 0.3, size = 1.2) + 
+  geom_line(aes(x = threshold, y = meangraphstrength),
             size = 2) + 
+  facet_wrap(~lcname) +
   guides(color = FALSE) +
   scale_color_manual(values = lccolors) +
   base +
