@@ -6,7 +6,8 @@ pkgs <- c('data.table',
 					'spatsoc',
 					'rgdal',
 					'asnipe',
-					'igraph', 
+					'igraph',
+					'ggnetwork',
 					'ScaleInMultilayerNetworks')
 p <- lapply(pkgs, library, character.only = TRUE)
 
@@ -98,7 +99,40 @@ layer_similarity_ordinal(matrices, 'FO', var)
 out <- wedgeovr[matrices[, .(layersim, layer)], on = 'layer']
   
 
-# TODO: network fig data
+# Generate figure data ----------------------------------------------------
+# XY for each node
+rbindxy <- rbindlist(lapply(gLs, ggnetwork), idcol = 'layer')
+rbindxy[, layer := as.integer(layer)][, dif := abs(layer - median(layer))]
+xy <- rbindxy[order(dif)][, .SD[1], by = name, .SDcols = c('x', 'y')]
+
+repxy <- xy[rep(seq_len(nrow(xy)), times = length(thresholds))]
+repxy[, layer := rep(names(gLs), each = uniqueN(name))]
+
+# Edges by layer
+edges <- rbindlist(lapply(gLs, as_data_frame, what = 'edges'), idcol = 'layer')
+
+# Yuck double merge for from and to coords
+mxby <- c('name', 'layer')
+myby <- c('from', 'layer')
+xyedges <- merge(repxy,
+                 edges,
+                 by.x = mxby,
+                 by.y = myby,
+                 all = TRUE)
+myby <- c('to', 'layer')
+zzz <-
+  merge(
+    repxy,
+    xyedges,
+    by.x = mxby,
+    by.y = myby,
+    suffixes = c('', 'end'),
+    all = TRUE
+  )[!is.na(name)]
+
+zzz[, layerfctr := factor(layer, sort(unique(as.integer(layer))))]
+
 
 # Output ------------------------------------------------------------------
-saveRDS(out, 'data/derived-data/3-spatial-threshold.Rds')
+saveRDS(out, 'data/derived-data/04-spatial-threshold.Rds')
+saveRDS(zzz, 'data/derived-data/04-spatial-threshold-fig-data.Rds')
