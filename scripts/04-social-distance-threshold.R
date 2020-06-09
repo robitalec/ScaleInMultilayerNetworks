@@ -47,8 +47,9 @@ graphs <- lapply(thresholds, function(thresh) {
   )
   
   # Calculate neighbors
-  neighb <- unique(layer_neighbors(sub, idcol, splitBy = NULL)[,
-                   .(ANIMAL_ID, splitNeigh, neigh, layer = thresh)])
+  layer_neighbors(sub, idcol, splitBy = NULL)
+  
+  neighb <- unique(sub[, .(ANIMAL_ID, neigh, layer = thresh)])
   
   # GBI 
   gbi <- get_gbi(sub, id = idcol)
