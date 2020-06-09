@@ -30,19 +30,19 @@ group_times(
 
 
 # Generate networks for each n observations -------------------------------
-maxn <- 500 #DT[, uniqueN(timegroup)]
-nstep <- 25
+maxn <- 500
+nstep <- 2#25
 
 # Randomly select n max observations
-randobs <- DT[, sample(unique(timegroup), size = maxn), season]
+randobs <- DT[, sample(unique(timegroup), size = maxn), lc]
 
 var <- 'nobs'
+splitBy <- 'lc'
 
 nets <- lapply(seq(10, maxn, by = nstep), function(n) {
   # Select first n random timegroups, 
   #  adding new observations to the tail with each iteration
-  sub <- na.omit(DT, cols = splitBy)
-  sub <- sub[timegroup %in% randobs[, .SD[1:n], season]$V1]
+  sub <- na.omit(DT, cols = splitBy)[timegroup %in% randobs[, .SD[1:n]]$V1]
 
   # Spatial grouping with spatsoc
   group_pts(
@@ -64,9 +64,17 @@ nets <- lapply(seq(10, maxn, by = nstep), function(n) {
   gLs <- list_graphs(netLs)
   names(gLs) <- names(gbiLs)
   
+  # Generate edge lists
+  eLs <- list_edges(gLs)
+  
+  # Calculate edge overlap
+  eovr <- edge_overlap(eLs)
+  eovr[, edgeoverlapmat := list(edge_overlap_mat(eLs))][, lc := as.integer(layer)]
+  
   # Calculate eigenvector centrality for each season
   stren <- layer_strength(gLs)
-  stren[, (splitBy) := tstrsplit(layer, '-', type.convert = TRUE)]
+  stren[, lc := as.integer(layer)]
+  # stren[, (splitBy) := tstrsplit(layer, '-', type.convert = TRUE)]
   setnames(stren, 'ind', idcol)
   
   # Calculate neighbors
@@ -74,10 +82,13 @@ nets <- lapply(seq(10, maxn, by = nstep), function(n) {
   
   # and tidy output, prep for merge
   outcols <- c('neigh', 'splitNeigh', idcol, splitBy)
-  out <- unique(sub[, .SD, .SDcols = outcols])
+  usub <- unique(sub[, .SD, .SDcols = outcols])
   
   # Merge eigcent+correlations with neighbors
-  out <- out[stren, on = c(idcol, splitBy)]
+  wstren <- usub[stren, on = c(idcol, splitBy)]
+  
+  # Merge edge overlap
+  out <- wstren[eovr, on = splitBy]
   
   # Preserve window length
   set(out, j = var, value = n)
