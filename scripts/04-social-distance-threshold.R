@@ -98,5 +98,7 @@ layer_similarity_ordinal(matrices, 'FO', var)
 out <- wedgeovr[matrices[, .(layersim, layer)], on = 'layer']
   
 
+# TODO: network fig data
+
 # Output ------------------------------------------------------------------
 saveRDS(out, 'data/derived-data/3-spatial-threshold.Rds')
