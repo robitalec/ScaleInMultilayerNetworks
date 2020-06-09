@@ -212,7 +212,7 @@ layer_similarity_ordinal <- function(matrices, pattern, splitBy) {
   ords <- sort(unique(matrices[[splitBy]]))
   
   lapply(ords, function(low) {
-    high <- low + 1
+    high <- if(low == max(ords)) low else ords[[which(ords == low) + 1]]
     matrices[data.table::between(get(splitBy), low, high), 
              layersim := {
                fifelse(nrow(.SD) == 2,
@@ -249,7 +249,7 @@ property_matrix <- function(DT, id, metric, by, layer = 'layer') {
     value.var = ..metric
   ))),
   by = by][, data.table::rbindlist(V1, idcol = 'i', fill = TRUE)]
-  data.table::setnames(zzz, 'i', by)
+  if(!is.null(by)) data.table::setnames(zzz, 'i', by)
   zzz
 }
 
