@@ -30,11 +30,11 @@ group_times(
 
 
 # Generate networks for each n observations -------------------------------
-maxn <- 500
-nstep <- 25
+maxn <- 5000
+nstep <- 50
 
 # Randomly select n max observations
-randobs <- DT[, sample(unique(timegroup), size = maxn), lc]
+randobs <- DT[!is.na(lc), sample(unique(timegroup), size = maxn), lc]
 
 var <- 'nobs'
 splitBy <- 'lc'
