@@ -56,8 +56,7 @@ gstr <- ggplot(DT, aes(color = lcname, group = lcname)) +
   guides(color = FALSE) +
   scale_color_manual(values = lccolors) +
   base +
-  labs(x = xlab, y = 'Graph Strength') +
-  scale_x_continuous(expand = c(0, 0))
+  labs(x = xlab, y = 'Graph Strength')
 
 
 # Layer similarity
