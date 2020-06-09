@@ -79,8 +79,8 @@ gnn <- ggplot(
     y = y)
 ) +
   geom_edges(aes(xend = xend,
-                 yend = yend),
-             size = 0.5
+                 yend = yend,
+                 linesize = weight / 1e9)
   ) +
   facet_grid(lc ~ threshold) + 
   guides(color = FALSE, size = FALSE) +
