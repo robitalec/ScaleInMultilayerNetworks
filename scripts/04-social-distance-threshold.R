@@ -37,7 +37,7 @@ splitBy <- NULL
 
 comb <- CJ(thresh = thresholds, lc = DT[!is.na(lc), unique(lc)])[1:3]
 
-graphs <- lapply(seq_along(comb), function(i) {
+graphs <- lapply(seq.int(nrow(comb)), function(i) {
   sellc <- comb[i, lc]
   selthresh <- comb[i, thresh]
   
