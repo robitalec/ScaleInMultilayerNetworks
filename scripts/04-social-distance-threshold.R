@@ -27,21 +27,26 @@ group_times(
   threshold = '10 minutes'
 )
 
-
 # Generate networks for each spatial threshold ----------------------------
 # list spatial thresholds
-thresholds <- c(5, seq(50, 500, by = 50))
+thresholds <- c(5, 50, seq(100, 500, 100))
+  # c(5, 25, 50, 75, 100, 125, 150, 275, 350, 500)#c(5, seq(50, 500, by = 50))
 
 var <- 'spatialthreshold'
 splitBy <- NULL
 
-graphs <- lapply(thresholds, function(thresh) {
-  sub <- copy(DT)
+comb <- CJ(thresh = thresholds, lc = DT[!is.na(lc), unique(lc)])[1:3]
+
+graphs <- lapply(seq_along(comb), function(i) {
+  sellc <- comb[i, lc]
+  selthresh <- comb[i, thresh]
+  
+  sub <- copy(DT)[lc == sellc]
   
   # Spatial grouping with spatsoc
   group_pts(
     sub,
-    threshold = thresh,
+    threshold = selthresh,
     id = idcol,
     coords = projCols,
     timegroup = 'timegroup'
