@@ -30,7 +30,7 @@ group_times(
 
 
 # Generate networks for each n observations -------------------------------
-maxn <- 5000
+maxn <- 1000
 nstep <- 50
 
 # Randomly select n max observations
