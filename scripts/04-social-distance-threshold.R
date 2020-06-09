@@ -97,26 +97,23 @@ wstren <- usub[stren, on = c(idcol, 'layer')]
 wedgeovr <- wstren[eovr, on = 'layer']
 
 # Property matrix
-# matrices <- property_matrix(wedgeovr, idcol, 'neigh', layer = 'layer')
-# matrices[, c('threshold', 'lc') := tstrsplit(layer, '-', type.convert = TRUE)]
-# setorder(matrices, lc, threshold)
-# lapply(ulc, function(sellc) layer_similarity_ordinal(matrices[lc == sellc], 'FO', 'threshold')$layersim)
-# 
-# layer_similarity_ordinal(matrices, 'FO', var)
-  
-# out <- wedgeovr[matrices[, .(layersim, layer)], on = 'layer']
+matrices <- property_matrix(wedgeovr, idcol, 'neigh', by = NULL, layer = 'layer')
+matrices[, c('threshold', 'lc') := tstrsplit(layer, '-', type.convert = TRUE)]
+setorder(matrices, lc, threshold)
+lsim <- lapply(ulc, function(sellc) layer_similarity_ordinal(matrices[lc == sellc], 'FO', 'threshold')$layersim)
+matrices[, layersim := unlist(lsim)]
 
-out <- wedgeovr
-out[, c('threshold', 'lc') := tstrsplit(layer, '-', type.convert = TRUE)]
+out <- wedgeovr[matrices[, .(layersim, layer, threshold, lc)], on = 'layer']
 
 # Generate figure data ----------------------------------------------------
 # XY for each node
 rbindxy <- rbindlist(lapply(gLs, ggnetwork), idcol = 'layer')
-rbindxy[, layer := as.integer(layer)][, dif := abs(layer - median(layer))]
-xy <- rbindxy[order(dif)][, .SD[1], by = name, .SDcols = c('x', 'y')]
+rbindxy[, c('threshold', 'lc') := tstrsplit(layer, '-', type.convert = TRUE)]
+xy <- rbindxy[order(-threshold)][, .SD[1], by = .(lc, name), .SDcols = c('x', 'y')]
 
 repxy <- xy[rep(seq_len(nrow(xy)), times = length(thresholds))]
-repxy[, layer := rep(names(gLs), each = uniqueN(name))]
+repxy[, threshold := rep(unique(rbindxy$threshold), each = uniqueN(name) * length(ulc))]
+repxy[, layer := paste(threshold, lc, sep = '-')]
 
 # Edges by layer
 edges <- rbindlist(lapply(gLs, as_data_frame, what = 'edges'), idcol = 'layer')
@@ -140,7 +137,6 @@ zzz <-
     all = TRUE
   )[!is.na(name)]
 
-zzz[, layerfctr := factor(layer, sort(unique(as.integer(layer))))]
 
 
 # Output ------------------------------------------------------------------
