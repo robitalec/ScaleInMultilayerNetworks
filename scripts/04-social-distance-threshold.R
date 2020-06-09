@@ -29,7 +29,7 @@ group_times(
 
 # Generate networks for each spatial threshold ----------------------------
 # list spatial thresholds
-thresholds <- c(5, 50, seq(100, 500, 100))
+thresholds <- c(5, 25, 50, 75, 100, 250, 500)
 
 var <- 'spatialthreshold'
 splitBy <- NULL
