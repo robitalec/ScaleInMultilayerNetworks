@@ -35,11 +35,13 @@ thresholds <- c(5, 50, seq(100, 500, 100))
 var <- 'spatialthreshold'
 splitBy <- NULL
 
-comb <- CJ(thresh = thresholds, lc = DT[!is.na(lc), unique(lc)])[1:3]
+ulc <- DT[!is.na(lc), unique(lc)]
+comb <- CJ(thresh = thresholds, lc = ulc)
 
 graphs <- lapply(seq.int(nrow(comb)), function(i) {
   sellc <- comb[i, lc]
   selthresh <- comb[i, thresh]
+  layer <- paste(selthresh, sellc, sep = '-')
   
   sub <- copy(DT)[lc == sellc]
   
@@ -55,7 +57,7 @@ graphs <- lapply(seq.int(nrow(comb)), function(i) {
   # Calculate neighbors
   layer_neighbors(sub, idcol, splitBy = NULL)
   
-  neighb <- unique(sub[, .(ANIMAL_ID, neigh, layer = thresh)])
+  neighb <- unique(sub[, .(ANIMAL_ID, neigh, layer = layer)])
   
   # GBI 
   gbi <- get_gbi(sub, id = idcol)
@@ -64,19 +66,20 @@ graphs <- lapply(seq.int(nrow(comb)), function(i) {
   net <- get_network(gbi, data_format = 'GBI', association_index = 'SRI')
   
   # Generate graphs 
-  list(graph = graph.adjacency(net, mode = 'undirected', diag = FALSE, weighted = TRUE),
+  list(graph = graph.adjacency(net, mode = 'undirected', diag = FALSE, 
+                               weighted = TRUE),
        neighs = neighb)
 })
 
 gLs <- lapply(graphs, function(x) x[['graph']])
-names(gLs) <- thresholds
+names(gLs) <- comb[, paste(thresh, lc, sep = '-')]
 
 neighLs <- rbindlist(lapply(graphs, function(x) x[['neighs']]))
 
 
 # Generate edge lists
 eLs <- list_edges(gLs)
-eLs[, layer := as.integer(layer)]
+# eLs[, layer := as.integer(layer)]
 
 # Calculate edge overlap
 eovr <- edge_overlap(eLs)
@@ -84,8 +87,8 @@ eovr[, edgeoverlapmat := list(edge_overlap_mat(eLs))]
 
 # Calculate eigenvector centrality 
 stren <- layer_strength(gLs)
-stren[, layer := as.integer(layer)]
-stren[, (var) := layer]
+# stren[, layer := as.integer(layer)]
+# stren[, (var) := layer]
 setnames(stren, 'ind', idcol)
   
 # and tidy output, prep for merge
@@ -98,11 +101,17 @@ wstren <- usub[stren, on = c(idcol, 'layer')]
 wedgeovr <- wstren[eovr, on = 'layer']
 
 # Property matrix
-matrices <- property_matrix(wedgeovr, idcol, 'neigh', var)
-layer_similarity_ordinal(matrices, 'FO', var)
+# matrices <- property_matrix(wedgeovr, idcol, 'neigh', layer = 'layer')
+# matrices[, c('threshold', 'lc') := tstrsplit(layer, '-', type.convert = TRUE)]
+# setorder(matrices, lc, threshold)
+# lapply(ulc, function(sellc) layer_similarity_ordinal(matrices[lc == sellc], 'FO', 'threshold')$layersim)
+# 
+# layer_similarity_ordinal(matrices, 'FO', var)
   
-out <- wedgeovr[matrices[, .(layersim, layer)], on = 'layer']
-  
+# out <- wedgeovr[matrices[, .(layersim, layer)], on = 'layer']
+
+out <- wedgeovr
+out[, c('threshold', 'lc') := tstrsplit(layer, '-', type.convert = TRUE)]
 
 # Generate figure data ----------------------------------------------------
 # XY for each node
