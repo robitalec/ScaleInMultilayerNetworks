@@ -18,7 +18,7 @@ source('scripts/00-variables.R')
 
 
 # Input -------------------------------------------------------------------
-DT <- readRDS('data/derived-data/1-sub-seasons-fogo-caribou.Rds')
+DT <- readRDS('data/derived-data/01-sub-seasons-fogo-caribou.Rds')
 alloc.col(DT)
 
 
@@ -57,8 +57,8 @@ names(gLs) <- names(gbiLs)
 
 # Setup data for plotting -------------------------------------------------
 # Generate a single set of xy (so each layer has consistent individual positions)
-ggnet1 <- data.table(ggnetwork(gLs[['winter-2']], layout = 'kamadakawai'))
-xy <- unique(ggnet1[, .(x, y, vertex.names)])
+ggnet1 <- data.table(ggnetwork(gLs[['winter-2']]))
+xy <- unique(ggnet1[, .(x, y, name)])
 
 # Shear the xy
 shear_xy(xy, c('x', 'y'))
@@ -74,14 +74,14 @@ shear_xy(box, c('x', 'y'))
 
 # Rep the rows for each layer (since each layer is present in each landcover * season)
 repxy <- xy[rep(seq_len(nrow(xy)), times = 6)]
-repxy[, layer := rep(names(gLs), each = uniqueN(vertex.names))]
+repxy[, layer := rep(names(gLs), each = uniqueN(name))]
 
 # Edges by layer
 edges <- rbindlist(lapply(gLs, as_data_frame, what = 'edges'), idcol = 'layer')
 edges[, c(lccol, 'season') := tstrsplit(layer, '-', type.convert = TRUE)]
 
 # Yuck double merge for from and to coords
-mxby <- c('vertex.names', 'layer')
+mxby <- c('name', 'layer')
 myby <- c('from', 'layer')
 xyedges <- merge(repxy,
                  edges,
@@ -122,12 +122,12 @@ zzbox[layer %in% c('winter-1', 'summer-1'),
 
 
 #Edges between same individuals
-zzz[layer == 'summer-3', c('xendsame', 'yendsame') := .(shearx + slideright, sheary)]
-zzz[layer == 'summer-2', c('xendsame', 'yendsame') := .(shearx + slideright, sheary + mody)]
-zzz[layer == 'summer-1', c('xendsame', 'yendsame') := .(shearx + slideright, sheary + mody)]
+# zzz[layer == 'summer-3', c('xendsame', 'yendsame') := .(shearx + slideright, sheary)]
+# zzz[layer == 'summer-2', c('xendsame', 'yendsame') := .(shearx + slideright, sheary + mody)]
+# zzz[layer == 'summer-1', c('xendsame', 'yendsame') := .(shearx + slideright, sheary + mody)]
 
-# a <- zzz[!is.na(xend) & !is.na(yend)][vertex.names == 'FO2016004', .SD]
-# merge(a, a[, .(V1e = V1, V2e = V2, vertex.names)], allow.cartesian = TRUE)
+# a <- zzz[!is.na(xend) & !is.na(yend)][name == 'FO2016004', .SD]
+# merge(a, a[, .(V1e = V1, V2e = V2, name)], allow.cartesian = TRUE)
 
 
 # Plot --------------------------------------------------------------------
@@ -166,12 +166,12 @@ labels <- data.table(
                    size = weight)
     ) +
     scale_size(range = c(0.1, 2)) + 
-    geom_edges(aes(xend = xendsame,
-                   yend = yendsame),
-               size = 0.1,
-               alpha = 0.5
-    ) +
-    geom_nodes(aes(color = vertex.names), size = 5) +
+    # geom_edges(aes(xend = xendsame,
+    #                yend = yendsame),
+    #            size = 0.1,
+    #            alpha = 0.5
+    # ) +
+    geom_nodes(aes(color = name), size = 5) +
     scale_color_viridis_d() + 
     guides(color = FALSE, size = FALSE) +
     geom_text(aes(x, y, xend = NULL, yend = NULL, label = label), data = labels) + 
