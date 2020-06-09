@@ -27,20 +27,15 @@ group_times(
 )
 
 
-# TODO: need to return splitNeigh for property matrix, but 
-#       splitNeigh without a split, so just rename neigh
-
-
 # Generate networks for each spatial threshold ----------------------------
 # list spatial thresholds
-# TODO: fix rm subset
-thresholds <- c(5, seq(50, 500, by = 50))[1:2]
+thresholds <- c(5, seq(50, 500, by = 50))
 
 var <- 'spatialthreshold'
 splitBy <- NULL
 
 graphs <- lapply(thresholds, function(thresh) {
-  sub <- copy(DT)[1:1e4]
+  sub <- copy(DT)
   
   # Spatial grouping with spatsoc
   group_pts(
