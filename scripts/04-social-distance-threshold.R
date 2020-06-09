@@ -30,7 +30,6 @@ group_times(
 # Generate networks for each spatial threshold ----------------------------
 # list spatial thresholds
 thresholds <- c(5, 50, seq(100, 500, 100))
-  # c(5, 25, 50, 75, 100, 125, 150, 275, 350, 500)#c(5, seq(50, 500, by = 50))
 
 var <- 'spatialthreshold'
 splitBy <- NULL
@@ -79,7 +78,6 @@ neighLs <- rbindlist(lapply(graphs, function(x) x[['neighs']]))
 
 # Generate edge lists
 eLs <- list_edges(gLs)
-# eLs[, layer := as.integer(layer)]
 
 # Calculate edge overlap
 eovr <- edge_overlap(eLs)
@@ -87,8 +85,6 @@ eovr[, edgeoverlapmat := list(edge_overlap_mat(eLs))]
 
 # Calculate eigenvector centrality 
 stren <- layer_strength(gLs)
-# stren[, layer := as.integer(layer)]
-# stren[, (var) := layer]
 setnames(stren, 'ind', idcol)
   
 # and tidy output, prep for merge
