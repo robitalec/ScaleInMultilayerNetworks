@@ -14,8 +14,8 @@ p <- lapply(pkgs, library, character.only = TRUE)
 
 
 # Input -------------------------------------------------------------------
-DT <- readRDS('data/derived-data/03-temporal-layers.Rds')
-netDT <- readRDS('data/derived-data/03-temporal-network-fig-data.Rds')
+DT <- readRDS('data/derived-data/04-spatial-threshold.Rds')
+netDT <- readRDS('data/derived-data/04-spatial-threshold-fig-data.Rds')
 
 
 # Theme -------------------------------------------------------------------
@@ -24,49 +24,43 @@ source('scripts/figures/theme.R')
 
 
 # Plot --------------------------------------------------------------------
-xlab <- 'Date'
+xlab <- 'Social Distance Threshold'
 
-DT[, middate := mean(c(mindate, maxdate)), layer]
+# DT[, middate := mean(c(mindate, maxdate)), layer]
 
-DT[, meangraphstrength := mean(graphstrength), by = timecut]
+DT[, meangraphstrength := mean(graphstrength), layer]
 
 # Edge overlap
 gprop <- ggplot(DT) + 
-  geom_segment(aes(x = mindate, xend = maxdate, 
-                   y = propedges, yend = propedges),
-               size = 2) + 
+  geom_line(aes(x = spatialthreshold, y = propedges),
+            size = 2) + 
   scale_color_manual(values = lccolors) +
   base +
   labs(x = NULL, y = 'Edge Overlap') + 
   ylim(0, 1) +
-  scale_x_date(expand = c(0, 0))
+  scale_x_continuous(expand = c(0, 0))
 
 
 
 # Graph strength
 gstr <- ggplot(DT) +
-  geom_segment(aes(x = mindate, xend = maxdate, 
-                   y = graphstrength, yend = graphstrength),
-               size = 0.5, alpha = 0.3) + 
-  geom_segment(aes(x = mindate, xend = maxdate, 
-                   y = meangraphstrength, yend = meangraphstrength),
-               size = 2) + 
+  geom_line(aes(x = spatialthreshold, y = propedges),
+            size = 0.5, alpha = 0.3) + 
+  geom_line(aes(x = spatialthreshold, y = propedges),
+            size = 2) + 
   guides(color = FALSE) +
   base +
   labs(x = xlab, y = 'Graph Strength') +
-  scale_x_date(expand = c(0, 0))
+  scale_x_continuous(expand = c(0, 0))
 
 
 # Layer similarity
 gsim <- ggplot(DT) +
-  geom_line(aes(x = middate, layersim)) + 
-  geom_segment(aes(x = mindate, xend = maxdate, 
-                   y = layersim, yend = layersim),
-               size = 0.5, alpha = 0.3) + 
+  geom_line(aes(x = spatialthreshold, y = layersim)) +
   guides(color = FALSE) +
   base +
   labs(x = xlab, y = 'Layer Similarity') +
-  scale_x_date(expand = c(0, 0))
+  scale_x_continuous(expand = c(0, 0))
 
 # Network
 gnn <- ggplot(
