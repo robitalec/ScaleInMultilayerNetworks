@@ -1,15 +1,12 @@
-# === Figure 5 ------------------------------------------------------------
-# Spatial Distance Threshold
+# === Figure 6 ------------------------------------------------------------
+# Number of Observations
 # Alec Robitaille
 
 
 # Packages ----------------------------------------------------------------
 pkgs <- c('data.table',
           'ggplot2',
-          'patchwork',
-          'raster',
-          'rasterVis',
-          'ggnetwork')
+          'patchwork')
 p <- lapply(pkgs, library, character.only = TRUE)
 
 

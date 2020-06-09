@@ -7,8 +7,6 @@
 pkgs <- c('data.table',
           'ggplot2',
           'patchwork',
-          'raster',
-          'rasterVis',
           'ggnetwork')
 p <- lapply(pkgs, library, character.only = TRUE)
 
