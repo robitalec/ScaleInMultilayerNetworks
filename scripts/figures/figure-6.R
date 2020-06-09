@@ -28,7 +28,7 @@ source('scripts/figures/theme.R')
 # Plot --------------------------------------------------------------------
 xlab <- 'Number of Observations'
 
-DT[, meangraphstrength := mean(graphstrength), layer]
+DT[, meangraphstrength := mean(graphstrength), .(lc, nobs)]
 
 # Edge overlap
 gprop <- ggplot(DT, aes(color = lcname)) +
@@ -78,8 +78,7 @@ layout <- 'A
            C
            C'
 (g <- gprop + guide_area() + gstr + 
-   plot_layout(guides = 'collect', design = layout) & 
-   theme(legend.position = "bottom")
+   plot_layout(guides = 'collect', design = layout)
 )
 
 
