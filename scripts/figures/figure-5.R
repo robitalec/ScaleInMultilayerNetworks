@@ -36,14 +36,14 @@ xlab <- 'Social Distance Threshold'
 DT[, meangraphstrength := mean(graphstrength), layer]
 
 # Edge overlap
-gprop <- ggplot(DT, aes(color = lcname)) + 
-  geom_line(aes(x = threshold, y = propedges),
-            size = 2) + 
-  scale_color_manual(values = lccolors) +
-  base +
-  labs(x = NULL, y = 'Edge Overlap') + 
-  ylim(0, 1) +
-  scale_x_continuous(expand = c(0, 0))
+# gprop <- ggplot(DT, aes(color = lcname)) + 
+#   geom_line(aes(x = threshold, y = propedges),
+#             size = 2) + 
+#   scale_color_manual(values = lccolors) +
+#   base +
+#   labs(x = NULL, y = 'Edge Overlap') + 
+#   ylim(0, 1) +
+#   scale_x_continuous(expand = c(0, 0))
 
 
 
@@ -72,34 +72,24 @@ gstr <- ggplot(DT, aes(color = lcname, group = lcname)) +
 #   scale_x_continuous(expand = c(0, 0))
 
 # Network
-gnn <- ggplot(
-  netDT,
-  aes(
-    x = x,
-    y = y)
-) +
-  geom_edges(aes(xend = xend,
-                 yend = yend,
-                 linesize = weight)
-  ) +
-  facet_grid(lc ~ threshold) + 
-  guides(color = FALSE, size = FALSE) +
-  geom_nodes(aes(color = lcname)) +
-  geom_nodes(aes(xend, yend, color = lcname)) +
-  theme_blank() + 
-  scale_color_manual(values = lccolors) +
-  theme(strip.background = element_blank(),
-        strip.text = element_blank())
-
-# Number of individuals
-# (gnid <- ggplot(unique(DT[, .(middate, mindate, maxdate, nid)])) +
-#     geom_line(aes(x = middate, nid), size = 1) + 
-#     geom_segment(aes(x = mindate, xend = maxdate, 
-#                      y = nid, yend = nid),
-#                  size = 0.5) + 
-#     guides(color = FALSE) +
-#     base +
-#     labs(x = xlab, y = 'Number of Individuals'))
+# gnn <- ggplot(
+#   netDT,
+#   aes(
+#     x = x,
+#     y = y)
+# ) +
+#   geom_edges(aes(xend = xend,
+#                  yend = yend,
+#                  linesize = weight)
+#   ) +
+#   facet_grid(lc ~ threshold) + 
+#   guides(color = FALSE, size = FALSE) +
+#   geom_nodes(aes(color = lcname)) +
+#   geom_nodes(aes(xend, yend, color = lcname)) +
+#   theme_blank() + 
+#   scale_color_manual(values = lccolors) +
+#   theme(strip.background = element_blank(),
+#         strip.text = element_blank())
 
 
 # Patchwork ---------------------------------------------------------------
@@ -107,8 +97,6 @@ gnn <- ggplot(
    plot_layout()
 )
 
-
-# gsimm
 
 # Output ------------------------------------------------------------------
 ggsave('graphics/figure-5.png',
