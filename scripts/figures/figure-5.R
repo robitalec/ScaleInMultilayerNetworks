@@ -18,6 +18,12 @@ DT <- readRDS('data/derived-data/04-spatial-threshold.Rds')
 netDT <- readRDS('data/derived-data/04-spatial-threshold-fig-data.Rds')
 
 
+legend <- data.table(lc = c(1, 2, 3),
+                     lcname = c('Open', 'Forest', 'Forage'))
+
+DT[legend, lcname := lcname, on = 'lc']
+
+
 # Theme -------------------------------------------------------------------
 source('scripts/figures/theme.R')
 
