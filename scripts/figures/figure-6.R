@@ -37,8 +37,7 @@ gprop <- ggplot(DT, aes(color = lcname)) +
   scale_color_manual(values = lccolors) +
   base +
   labs(x = NULL, y = 'Edge Overlap') +
-  ylim(0, 1) +
-  scale_x_continuous(expand = c(0, 0))
+  ylim(0, 1)
 
 
 
@@ -53,8 +52,7 @@ gstr <- ggplot(DT, aes(color = lcname, group = lcname)) +
   guides(color = FALSE) +
   scale_color_manual(values = lccolors) +
   base +
-  labs(x = xlab, y = 'Graph Strength') +
-  scale_x_continuous(expand = c(0, 0))
+  labs(x = xlab, y = 'Graph Strength')
 
 
 # Layer similarity
@@ -68,15 +66,8 @@ gstr <- ggplot(DT, aes(color = lcname, group = lcname)) +
 
 
 # Patchwork ---------------------------------------------------------------
-layout <- 'A
-           A
-           A
-           A
-           B
-           C
-           C
-           C
-           C'
+layout <- 'AAAAB
+           CCCCC'
 (g <- gprop + guide_area() + gstr + 
    plot_layout(guides = 'collect', design = layout)
 )
