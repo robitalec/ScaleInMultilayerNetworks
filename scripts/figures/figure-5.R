@@ -53,6 +53,7 @@ gstr <- ggplot(DT, aes(color = lcname, group = lcname)) +
   geom_line(aes(x = threshold, y = meangraphstrength),
             size = 2) + 
   facet_wrap(~lcname) +
+  guides(color = FALSE) +
   scale_color_manual(values = lccolors) +
   base +
   labs(x = xlab, y = 'Graph Strength') +
