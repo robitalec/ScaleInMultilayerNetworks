@@ -80,7 +80,7 @@ gnn <- ggplot(
 ) +
   geom_edges(aes(xend = xend,
                  yend = yend,
-                 linesize = weight / 1e9)
+                 linesize = weight)
   ) +
   facet_grid(lc ~ threshold) + 
   guides(color = FALSE, size = FALSE) +
@@ -103,15 +103,8 @@ gnn <- ggplot(
 
 
 # Patchwork ---------------------------------------------------------------
-layout <- 'A
-           A
-           B
-           C
-           C'
-
-
-(g <- gprop / gnn / gstr + 
-   plot_layout(design = layout) 
+(g <- gstr + 
+   plot_layout()
 )
 
 
@@ -119,7 +112,7 @@ layout <- 'A
 
 # Output ------------------------------------------------------------------
 ggsave('graphics/figure-5.png',
-       g, width = 10, height = 10)
+       g, width = 10, height = 5)
 
 # ggsave('graphics/supp-temp-nid.png',
 #        gnid, width = 5, height = 5)
