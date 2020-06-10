@@ -39,7 +39,7 @@ randobs <- DT[!is.na(lc), sample(unique(timegroup), size = maxn), lc]
 var <- 'nobs'
 splitBy <- 'lc'
 
-nets <- lapply(seq(10, maxn, by = nstep), function(n) {
+graphs <- lapply(seq(10, maxn, by = nstep), function(n) {
   # Select first n random timegroups, 
   #  adding new observations to the tail with each iteration
   sub <- na.omit(DT, cols = splitBy)[timegroup %in% randobs[, .SD[1:n]]$V1]
@@ -62,19 +62,11 @@ nets <- lapply(seq(10, maxn, by = nstep), function(n) {
   
   # Generate graphs for each season
   gLs <- list_graphs(netLs)
-  names(gLs) <- names(gbiLs)
+  names(gLs) <- paste(names(gbiLs), n, sep = '-')
   
-  # Generate edge lists
-  eLs <- list_edges(gLs)
-  eLs[, layer := as.integer(layer)]
-  
-  # Calculate edge overlap
-  eovr <- edge_overlap(eLs)
-  eovr[, edgeoverlapmat := list(edge_overlap_mat(eLs))]
-  
+
   # Calculate eigenvector centrality for each season
   stren <- layer_strength(gLs)
-  stren[, layer := as.integer(layer)]
   setnames(stren, 'ind', idcol)
   
   # Calculate neighbors
@@ -83,20 +75,31 @@ nets <- lapply(seq(10, maxn, by = nstep), function(n) {
   # and tidy output, prep for merge
   outcols <- c('neigh', 'splitNeigh', idcol, splitBy)
   usub <- unique(sub[, .SD, .SDcols = outcols])
-  usub[, layer := lc]
+  usub[, layer := paste(lc, n, sep = '-')]
   
   # Merge eigcent+correlations with neighbors
-  wstren <- usub[stren, on = c(idcol, 'layer')]
-  
-  # Merge edge overlap
-  out <- wstren[eovr, on = 'layer']
+  out <- usub[stren, on = c(idcol, 'layer')]
   
   # Preserve window length
   set(out, j = var, value = n)
+  
+  
+  list(out = out, graph = gLs)
 })
 
-out <- rbindlist(nets)
+gLs <- unlist(lapply(graphs, function(x) x[['graph']]),
+              recursive = FALSE)
 
+outLs <- rbindlist(lapply(graphs, function(x) x[['out']]))
+
+# Generate edge lists
+eLs <- list_edges(gLs)
+
+# Calculate edge overlap
+eovr <- edge_overlap(eLs)
+eovr[, c('lc', 'nobs') := tstrsplit(layer, '-', type.convert = TRUE)]
+
+out <- outLs[eovr, on = c('lc', 'nobs')]
 
 # Output ------------------------------------------------------------------
 saveRDS(out, 'data/derived-data/05-number-of-observations.Rds')
