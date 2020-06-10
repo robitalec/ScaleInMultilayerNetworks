@@ -73,7 +73,7 @@ group_times(
 
 # Generate network for each time chunk ------------------------------------
 var <- 'season'
-splitBy <- var
+splitBy <- c(var, 'lcname')
 
 # Spatial grouping with spatsoc
 group_pts(
@@ -101,12 +101,10 @@ eLs <- list_edges(gLs)
 
 # Calculate edge overlap
 eovr <- edge_overlap(eLs)
-eovr[, layer := as.integer(layer)]
 eovr[, edgeoverlapmat := list(edge_overlap_mat(eLs))]
 
 # Calculate eigenvector centrality
 stren <- layer_strength(gLs)
-stren[, layer := as.integer(layer)]
 stren[, (splitBy) := tstrsplit(layer, '-', type.convert = TRUE)]
 setnames(stren, 'ind', idcol)
 
