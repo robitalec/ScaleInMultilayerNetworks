@@ -128,3 +128,41 @@ wedgeovr <- wstren[eovr, on = 'layer']
 # 
 # out <- wedgeovr[matrices[, .(layersim, layer)], on = 'layer']
 
+
+out <- wedgeovr
+
+
+# Generate figure data ----------------------------------------------------
+# XY for each node
+rbindxy <- rbindlist(lapply(gLs, ggnetwork), idcol = 'layer')
+xy <- rbindxy[order(-layer)][, .SD[1], by = name, .SDcols = c('x', 'y')]
+
+repxy <- xy[rep(seq_len(nrow(xy)), times = rbindxy[, uniqueN(layer)])]
+repxy[, layer := rep(names(gLs), each = uniqueN(name))]
+
+# Edges by layer
+edges <- rbindlist(lapply(gLs, as_data_frame, what = 'edges'), idcol = 'layer')
+
+# Yuck double merge for from and to coords
+mxby <- c('name', 'layer')
+myby <- c('from', 'layer')
+xyedges <- merge(repxy,
+                 edges,
+                 by.x = mxby,
+                 by.y = myby,
+                 all = TRUE)
+myby <- c('to', 'layer')
+zzz <-
+  merge(
+    repxy,
+    xyedges,
+    by.x = mxby,
+    by.y = myby,
+    suffixes = c('', 'end'),
+    all = TRUE
+  )[!is.na(name)]
+
+
+# Output ------------------------------------------------------------------
+saveRDS(out, 'data/derived-data/07-fogo-ml.Rds')
+saveRDS(zzz, 'data/derived-data/07-fogo-ml-network-fig-data.Rds')
