@@ -32,7 +32,8 @@ DT[, meangraphstrength := mean(graphstrength), by = timecut]
 gprop <- ggplot(DT) + 
   geom_segment(aes(x = mindate, xend = maxdate, 
                    y = propedges, yend = propedges),
-            size = 2) + 
+               size = 2) + 
+  geom_line(aes(x = middate, y = propedges)) + 
   scale_color_manual(values = lccolors) +
   base +
   labs(x = NULL, y = 'Edge Overlap') + 
@@ -43,12 +44,13 @@ gprop <- ggplot(DT) +
 
 # Graph strength
 gstr <- ggplot(DT) +
-  geom_segment(aes(x = mindate, xend = maxdate, 
+  geom_segment(aes(x = mindate, xend = maxdate,
                    y = graphstrength, yend = graphstrength),
-               size = 0.5, alpha = 0.3) + 
+               size = 0.5, alpha = 0.3) +
   geom_segment(aes(x = mindate, xend = maxdate, 
                    y = meangraphstrength, yend = meangraphstrength),
-               size = 2) + 
+               size = 2) +
+  geom_line(aes(x = middate, y = meangraphstrength)) + 
   guides(color = FALSE) +
   base +
   labs(x = xlab, y = 'Graph Strength') +
