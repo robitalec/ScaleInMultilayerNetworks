@@ -45,8 +45,10 @@ DT[, nid := uniqueN(ANIMAL_ID), timecut]
 
 
 # Group chunks
-# drop timecut 1
-DT <- DT[timecut != 1]
+# drop timecut 1 and na lc
+DT <- DT[timecut != 1 & !is.na(lc)]
+
+DT[, season := NULL]
 
 DT[timecut %in% 2:5, season := 1]
 DT[timecut %in% 6:11, season := 2]
