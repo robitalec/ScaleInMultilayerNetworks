@@ -34,7 +34,7 @@ lsres <- as.integer(gsub(".tif", "", unlist(tstrsplit(
 ))))
 names(lslc) <- lsres
 
-# lsres <- c(100, 300, 500, 700, 900, 1000)
+# lsres <- seq(100, 1000, by = 100)
 # lslc <- lapply(lsres, function(res) {
 #   w <- winmove(lc, res, type = 'circle', win_fun = modal)
 #   w[is.na(lc)] <- NA
