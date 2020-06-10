@@ -61,7 +61,7 @@ lsres <- c(30, lsres)
 
 splitBy <- c()
 
-graphs <- lapply(lsres, function(res) {
+nets <- lapply(lsres, function(res) {
   col <- ifelse(res == 30, 'lc', paste0('lc', res))
   splitBy <- c(splitBy, col)
   
@@ -85,18 +85,18 @@ graphs <- lapply(lsres, function(res) {
   
   # Generate graphs for each season
   gLs <- list_graphs(netLs)
-  names(gLs) <- paste(names(gbiLs), res, sep = '-')
+  names(gLs) <- names(gbiLs)
   
   # Generate edge lists
   eLs <- list_edges(gLs)
   
   # Calculate edge overlap
-  # eovr <- edge_overlap(eLs)
-  # eovr[, edgeoverlapmat := list(edge_overlap_mat(eLs))]
+  eovr <- edge_overlap(eLs)
+  eovr[, edgeoverlapmat := list(edge_overlap_mat(eLs))]
   
   # Calculate eigenvector centrality for each season
   stren <- layer_strength(gLs)
-  stren[, c(col, 'lcres') := tstrsplit(layer, '-', type.convert = TRUE)]
+  stren[, (splitBy) := tstrsplit(layer, '-', type.convert = TRUE)]
   setnames(stren, 'ind', idcol)
   
   # Calculate neighbors
@@ -107,34 +107,18 @@ graphs <- lapply(lsres, function(res) {
   usub <- unique(sub[, .SD, .SDcols = outcols])
   
   # Merge eigcent+correlations with neighbors
-  out <- usub[stren, on = c(idcol, splitBy)]
-  setnames(out, col, gsub('[0-9]', '', col))
+  wstren <- usub[stren, on = c(idcol, splitBy)]
+  setnames(wstren, col, gsub('[0-9]', '', col))
   
   # Merge edge overlap
-  # out <- wstren[eovr, on = 'layer']
+  out <- wstren[eovr, on = 'layer']
   
   # Preserve land cover resolution
-  # set(out, j = var, value = res)
-  
-  list(out = out, graph = gLs)
+  set(out, j = var, value = res)
 })
 
-graphs[[1]][['graph']]
+out <- rbindlist(nets)
 
-gLs <- unlist(lapply(graphs, function(x) x[['graph']]),
-              recursive = FALSE)
-
-outLs <- rbindlist(lapply(graphs, function(x) x[['out']]))
-
-# Generate edge lists
-eLs <- list_edges(gLs)
-eLs[, c('lc', 'lcres') := tstrsplit(layer, '-', type.convert = TRUE)]
-
-# Calculate edge overlap
-eovr <- edge_overlap(eLs)
-eovr[, c('lc', 'lcres') := tstrsplit(layer, '-', type.convert = TRUE)]
-
-out <- outLs[eovr, on = c('lc', 'lcres')]
 
 
 # Count locs in lc --------------------------------------------------------
