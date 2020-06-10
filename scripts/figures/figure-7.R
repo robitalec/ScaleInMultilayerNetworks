@@ -55,8 +55,22 @@ netDT[, c('season', 'lcname') := tstrsplit(layer, '-', type.convert = TRUE)]
     facet_wrap(~lcname) + 
     scale_color_manual(values = lccolors) + 
   base +
-  labs(x = xlab, y = 'Graph Strength')# +
-  # scale_x_date(expand = c(0, 0))
+  labs(x = xlab, y = 'Graph Strength') +
+  scale_x_date(expand = c(0, 0))
+)
+
+(gdeg <- ggplot(DT, aes(color = lcname)) +
+    geom_line(aes(x = middate, y = splitNeigh, group = ANIMAL_ID),
+                 size = 0.5, alpha = 0.3) +
+    # geom_segment(aes(x = seasonstart, xend = seasonend, 
+    #                  y = meangraphstrength, yend = meangraphstrength),
+    #              size = 2) +
+    # geom_line(aes(x = middate, y = meangraphstrength)) + 
+    guides(color = FALSE) +
+    facet_wrap(~lcname) + 
+    scale_color_manual(values = lccolors) + 
+    base +
+    labs(x = xlab, y = 'splitNeigh')
 )
 
 # Layer similarity
