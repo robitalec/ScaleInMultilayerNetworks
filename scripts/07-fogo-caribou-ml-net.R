@@ -112,8 +112,8 @@ setnames(stren, 'ind', idcol)
 layer_neighbors(DT, idcol, splitBy = splitBy)
 
 # and tidy output, prep for merge
-outcols <- c('neigh', 'splitNeigh', idcol, 'cutJDate', 
-             splitBy, 'mindate', 'maxdate', 'nid')
+outcols <- c('neigh', 'splitNeigh', idcol, 
+             splitBy, 'seasonstart', 'seasonend', 'nid')
 usub <- unique(DT[, .SD, .SDcols = outcols])
 
 # Merge eigcent+correlations with neighbors
@@ -123,8 +123,8 @@ wstren <- usub[stren, on = c(idcol, splitBy)]
 wedgeovr <- wstren[eovr, on = 'layer']
 
 # Property matrix
-matrices <- property_matrix(wedgeovr, idcol, 'splitNeigh', var)
-layer_similarity_ordinal(matrices, 'FO', var)
-
-out <- wedgeovr[matrices[, .(layersim, layer)], on = 'layer']
+# matrices <- property_matrix(wedgeovr, idcol, 'splitNeigh', 'lcname', var)
+# layer_similarity_ordinal(matrices, 'FO', var)
+# 
+# out <- wedgeovr[matrices[, .(layersim, layer)], on = 'layer']
 
