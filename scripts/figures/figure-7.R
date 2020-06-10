@@ -32,13 +32,16 @@ netDT[, c('season', 'lcname') := tstrsplit(layer, '-', type.convert = TRUE)]
 
 # Edge overlap
 (gprop <- ggplot(DT) + 
+  geom_segment(aes(x = seasonstart, xend = seasonend,
+                   y = propedges, yend = propedges),
+               size = 0.5, alpha = 0.3) +
   geom_line(aes(x = middate, y = propedges, color = lcname),
                size = 2, alpha = 0.5) + 
   scale_color_manual(values = lccolors) +
   base +
   labs(x = NULL, y = 'Edge Overlap') + 
-  ylim(0, 1))# +
-  # scale_x_date(expand = c(0, 0)))
+  ylim(0, 1) +
+  scale_x_date(expand = c(0, 0)))
 
 
 
@@ -103,9 +106,9 @@ netDT[, c('season', 'lcname') := tstrsplit(layer, '-', type.convert = TRUE)]
   scale_size_area(max_size = 1) + 
     scale_color_manual(values = lccolors) + 
   geom_nodes(aes(xend, yend)) +
-  theme_blank()# + 
-  # theme(strip.background = element_blank(),
-  #       strip.text = element_blank())
+  theme_blank() + 
+  theme(strip.background = element_blank(),
+        strip.text = element_blank())
 )
 
 # Number of individuals
