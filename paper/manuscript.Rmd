@@ -49,11 +49,12 @@ Here we discuss the role of scale in the context of multilayer networks and
 provide a social ungulate case study to illustrate the role of social, spatial,
 and temporal scale on multilayer processes. We also present perspectives on
 future development and applications of scale in multilayer networks with respect
-to: phenotypes and individual fitness, movement ecology and collective movement, and habitat selection and space use. Effective integration of social and
-spatial processes, including biologically meaningful scales, within the context
-of animal social networks is an emerging area of research, as such our
-contribution incorporates perspectives on how the social environment and spatial
-processes are linked across scales in a multilayer context.
+to: phenotypes and individual fitness, movement ecology and collective movement,
+and habitat selection and space use. Effective integration of social and spatial
+processes, including biologically meaningful scales, within the context of
+animal social networks is an emerging area of research, as such our contribution
+incorporates perspectives on how the social environment and spatial processes
+are linked across scales in a multilayer context.
 
 ## Keywords
 Social network analysis, Landscape ecology, Movement ecology, Space use 
@@ -61,7 +62,7 @@ Social network analysis, Landscape ecology, Movement ecology, Space use
 \newpage
 
 # Introduction
-Our inference regarding the ecological processes underlying ecological patterns
+Our inference regarding the processes underlying ecological patterns
 are directly linked to the scale at which they are observed [@Levin_1992;
 @Allen_2015]. Animals are influenced across scales, through processes such as
 species-specific as trophic interactions and resource availability
@@ -77,14 +78,14 @@ Sociality exists across both temporal and spatial scales (Whitehead 2008). For
 example, grooming requires close spatial proximity between conspecifics and
 occurs over brief time periods [e.g. @Carter_2015], whereas social association
 represents shared space use by members of the same social group [Figure
-\@ref(fig:spacetime), @Franks_2009]. Further, for social interactions or associations to
-occur individuals must share space, and thus have overlapping home ranges
-[@Vander_Wal_2013]. In the context of the social environment, home range overlap
-is an example of how animals share space over coarser spatial and temporal
-scales (e.g. Piza-Roca et al. 2018). Although the social environment clearly
-scales spatially and temporally, it remains unclear whether coarser scales of
-sociality, including social association and home range overlap, vary predictably
-with social interaction [@Castles_2014;
+\@ref(fig:spacetime), @Franks_2009]. Further, for social interactions or
+associations to occur individuals must share space, and thus have overlapping
+home ranges [@Vander_Wal_2013]. In the context of the social environment, home
+range overlap is an example of how animals share space over coarser spatial and
+temporal scales (e.g. Piza-Roca et al. 2018). Although the social environment
+clearly scales spatially and temporally, it remains unclear whether coarser
+scales of sociality, including social association and home range overlap, vary
+predictably with social interaction [@Castles_2014;
 @Farine_2015a]. Thus, we define social scale as the type of social relationship
 observed that can be explicitly defined and measured [@Farine_2015a].
 
@@ -100,7 +101,7 @@ complexity of animal social systems [@Finn_2019].
 
 
 Unlike traditional monolayer social networks, multilayer networks explicitly
-consider social systems across contexts, including scale-dependent contexts
+consider social systems across scale-dependent contexts
 [@Pilosof_2017]. Multilayer networks are made up of multiple layers, each
 representing (i) different classes of individuals, e.g. male or female, (ii)
 types of behaviours, e.g. grooming, travelling, or foraging, (iii) spatial
@@ -247,13 +248,13 @@ calculated the similarity of layers between seasons, across landcover classes
 (e.g. summer open compared to winter open) using the Pearson correlation
 coefficient [@Brodka_2018]. Network metrics were calculated using the R packages
 `igraph` [@Csardi_2006], `asnipe` [@Farine_2019] and `data.table` [@Dowle_2019].
-
+<!-- add used spatsoc -->
 
 
 ## Varying scale in multilayer networks
 ### Social scale
 
-We modified the distance threshold, hereafter the social threshold, required for
+We modified the distance threshold, hereafter the social <!--distance-->threshold, required for
 group assignment using `spatsoc` [@Robitaille_2019] and re-assigned groups at
 incremental distances between 5 - 500 m. For example, at the finest social
 scale, only individuals within 5 m of one another were considered in the same
