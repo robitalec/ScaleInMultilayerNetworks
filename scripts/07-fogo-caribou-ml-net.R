@@ -22,6 +22,10 @@ source('scripts/00-variables.R')
 DT <- readRDS('data/derived-data/01-sub-fogo-caribou.Rds')
 alloc.col(DT)
 
+legend <- data.table(lc = c(1, 2, 3),
+                     lcname = c('Open', 'Forest', 'Forage'))
+
+DT[legend, lcname := lcname, on = 'lc']
 
 
 # Chunk time --------------------------------------------------------------
