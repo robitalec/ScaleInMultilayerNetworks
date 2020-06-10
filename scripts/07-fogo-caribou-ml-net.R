@@ -49,14 +49,13 @@ DT[timecut %in% 6:11, season := 2]
 DT[timecut %in% 12:15, season := 3]
 DT[timecut %in% 16:20, season := 4]
 
-DT[season == 1, #c('seasonstart', 'seasonend', 'seasonnm') := 
-     c(range(datetime), 'May 2017 - October - 2017')]
+DT[, c('seasonstart', 'seasonend') := .(min(datetime), max(datetime)),
+   season]
+DT[, seasonnm := 
+     paste(format(seasonstart, '%b'), year(seasonstart), '-', 
+           format(seasonend, '%b'), year(seasonend)),
+   season]
 
-DT[timecut %in% 6:11, season := 2]
-DT[timecut %in% 12:15, season := 3]
-DT[timecut %in% 16:20, season := 4]
-
-#TODO: set years
 
 # Temporal grouping with spatsoc ------------------------------------------
 group_times(
