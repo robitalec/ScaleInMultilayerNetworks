@@ -55,7 +55,8 @@ DT[timecut %in% 6:11, season := 2]
 DT[timecut %in% 12:15, season := 3]
 DT[timecut %in% 16:20, season := 4]
 
-DT[, c('seasonstart', 'seasonend') := .(min(datetime), max(datetime)),
+DT[, c('seasonstart', 'seasonend') := 
+     .(min(as.IDate(datetime)), max(as.IDate(datetime))),
    season]
 DT[, seasonnm := 
      paste(format(seasonstart, '%b'), year(seasonstart), '-', 
