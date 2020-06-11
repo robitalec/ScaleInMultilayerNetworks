@@ -172,10 +172,9 @@ throughout the population.
 Land cover data were provided by the Newfoundland and Labrador Wildlife Division
 [@Integrated_2013]<!--TODO: check ref-->. Available land cover classification included nine habitat
 types at 30 m resolution. We reclassified the land cover types into three
-categories: foraging habitat, open habitat, and forest habitat using the R
-package `raster` [@Hijmans_2019]. Foraging habitat consisted of lichen habitat,
-open habitat consisted of wetland, rocky barrens, and anthropogenic habitat
-types, while forest habitat consisted of coniferous forest, conifer scrub,
+categories using the R
+package `raster` [@Hijmans_2019]: foraging, open, and forest habitats. Foraging habitat consisted of lichen,
+open habitat consisted of wetland, rocky barrens, and anthropogenic, while forest habitat consisted of coniferous forest, conifer scrub,
 broad leaf forest, and mixed-wood forest. Water habitat was excluded from all
 subsequent analyses.
 
