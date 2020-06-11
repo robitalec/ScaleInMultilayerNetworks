@@ -266,54 +266,63 @@ thresholds for group assignment. Spatial distance thresholds (5, 25, 50,
 75, 100, 250 and 500 m) represented a range of visual (short distance)
 to auditory (long distance) sensory modalities of caribou. Multilayer
 networks consisted of the social association between 21 individuals
-across three habitat layers (open, forest and forage). At the finest
-scale, individuals within 5 m of one another were considered in the same
-group, whereas at the coarsest scale, individuals within 500 m of one
-another were considered in the same group. We calculated graph strength
-and multidegree for each habitat layer and spatial distance threshold,
-and edge overlap across the entire series of networks to determine
-proportion of total edges observed in each combination of habitat layer
-and spatial distance threshold.
+across three habitat layers (open, forest and forage) for the entire
+study period. At the finest scale, individuals within 5 m of one another
+were considered in the same group, whereas at the coarsest scale,
+individuals within 500 m of one another were considered in the same
+group. We calculated graph strength and multidegree for each habitat
+layer and spatial distance threshold, and edge overlap across the entire
+series of networks to determine proportion of total edges observed in
+each combination of habitat layer and spatial distance threshold.
 
 ### Spatial scale
 
-To assess the influence of spatial scale on multilayer networks, we
-aggregated our land cover raster at varying scales
-<!--relevant to caribou ecology. We
-aggregated the 30 m land cover raster using the R package `grainchanger`
-[@Graham_2019] at five scales: 100 m, 250 m, 500 m, 750 m and 1000 m. Aggregation
-occurred using a modal moving window method using a circular window
-corresponding to the above scales [@Graham_2019a]. We assume 30 m and 100 m
-represents fine-scale decision making for caribou during foraging, while
-re-sampling at 500 m , 750 m and 1000 m represents the scale at which caribou tend to
-select and avoid habitat (Bastille-Rousseau et al. 2017).
-
+To assess the influence of spatial scale, we aggregated our land cover
+raster at varying scales relevant to caribou ecology. We aggregated the
+original 30 m land cover raster using the R package `grainchanger`
+(Graham 2019) across a series of scales (100 - 1000 m by 100 m steps)
+The land cover raster was aggregated using a modal moving window method
+using a circular window corresponding to the above scales (Graham et al.
+2019). We assume 30 m and 100 m represents fine-scale decision making
+for caribou during foraging, while re-sampling at 500 m , 750 m and 1000
+m represents the scale at which caribou tend to select and avoid habitat
+(Bastille-Rousseau et al. 2017). For each spatial scale, we generated a
+multilayer network consisting of the social association between 21
+individuals across three habitat layers (open, forest and forage) for
+the entire study period. We calculated graph strength and multidegree
+for each habitat layer and spatial scale, and edge overlap across the
+entire series of networks to determine proportion of total edges
+observed in each combination of habitat layer and spatial scale.
 
 ### Temporal scale
-#### Number of observations
-Studies of social network analysis vary in the number and frequency of
-observations as well as the data collection technique used to generate networks
-[@Davis_2018; @Webber_2019]. For example, GPS data is commonly collected at a
-fixed rate, e.g. every $x$ minutes or hours, continuously throughout the study
-period. Fix rate is a reflection of number of observations an individual would
-have been observed and recorded in traditional ethological studies.We
-investigated the influence of the number of observations on resulting multilayer
-networks. We randomly selected a maximum 485 timesteps for each season to
-represent all possible observations. We regenerated multilayer networks and
-calculated associations of individuals with 25 additional observations at each
-iteration (10 - 485 observations). Subsequent iterations included the previous
-set of observations to mimic collection of observational data. 
 
+#### Number of observations
+
+Studies of social network analysis vary in the number and frequency of
+observations as well as the data collection technique used to generate
+networks (Davis, Crofoot and Farine 2018; Webber and Vander Wal 2019).
+For example, GPS data is commonly collected at a fixed rate, e.g. every
+\(x\) minutes or hours, continuously throughout the study period. Fix
+rate is a reflection of number of observations an individual would have
+been observed and recorded in traditional ethological studies.We
+investigated the influence of the number of observations on resulting
+multilayer networks. We randomly selected a maximum 485 timesteps for
+each season to represent all possible observations. We regenerated
+multilayer networks and calculated associations of individuals with 25
+additional observations at each iteration (10 - 485 observations).
+Subsequent iterations included the previous set of observations to mimic
+collection of observational data.
 
 #### Time window length and position
-We altered the temporal scale of multilayer networks by varying the length and
-position of the time window used to define seasons. The length of the time
-window varied from 40-100 days using a fixed start day for summer (starting at 3
-August 2017) and winter (starting at 1 January 2018). The position of the time
-window was shifted by 1-48 days, using a fixed time window length of 48 days.
-These new time windows were iteratively used to partition data into two discrete
-seasons (summer and winter) and generate multilayer networks.
 
+We altered the temporal scale of multilayer networks by varying the
+length and position of the time window used to define seasons. The
+length of the time window varied from 40-100 days using a fixed start
+day for summer (starting at 3 August 2017) and winter (starting at 1
+January 2018). The position of the time window was shifted by 1-48 days,
+using a fixed time window length of 48 days. These new time windows were
+iteratively used to partition data into two discrete seasons (summer and
+winter) and generate multilayer networks.
 
 # Results
 
@@ -1196,6 +1205,14 @@ research. *InterJournal* 2006;**Complex Systems**:1695.
 
 </div>
 
+<div id="ref-Davis_2018">
+
+Davis GH, Crofoot MC, Farine DR. Estimating the robustness and
+uncertainty of animal social networks using different observational
+methods. *Animal Behaviour* 2018;**141**:29–44.
+
+</div>
+
 <div id="ref-Dowle_2019">
 
 Dowle M, Srinivasan A. *Data.table: Extension of ‘Data.frame‘*., 2019.
@@ -1308,6 +1325,21 @@ of bison under predation risk. *Ecology* 2009;**90**:2480–90.
 Franks DW, Ruxton GD, James R. Sampling animal association networks with
 the gambit of the group. *Behavioral Ecology and Sociobiology*
 2009;**64**:493–503.
+
+</div>
+
+<div id="ref-Graham_2019">
+
+Graham L. *Grainchanger: Moving-Window and Direct Data Aggregation*.,
+2019.
+
+</div>
+
+<div id="ref-Graham_2019a">
+
+Graham LJ, Spake R, Gillings S, Watts K, Eigenbrod F. Incorporating
+fine-scale environmental heterogeneity into broad-extent models.
+*Methods in Ecology and Evolution* 2019;**10**:767–78.
 
 </div>
 
