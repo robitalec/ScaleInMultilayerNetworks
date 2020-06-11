@@ -274,7 +274,7 @@ habitat layer and spatial distance threshold.
 
 ### Spatial scale
 
-To assess the influence of spatial scale, we aggregated our land cover raster at
+To assess the influence of spatial scale, we aggregated the land cover raster at
 varying scales relevant to caribou ecology. We aggregated the original 30 m land
 cover raster using the R package `grainchanger` [@Graham_2019] across a series
 of scales (100 - 1000 m by 100 m steps) The land cover raster was aggregated
@@ -292,6 +292,9 @@ each combination of habitat layer and spatial scale.
 
 
 ### Temporal scale
+We used a temporal multilayer network to assess seasonality of caribou social
+associations. We generated layers 
+
 #### Time window length and position
 We altered the temporal scale of multilayer networks by varying the length and
 position of the time window used to define seasons. The length of the time
