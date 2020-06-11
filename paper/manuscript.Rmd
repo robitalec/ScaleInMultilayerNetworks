@@ -170,13 +170,13 @@ throughout the population.
 
 ## Landscape data and habitat classification
 Land cover data were provided by the Newfoundland and Labrador Wildlife Division
-[@Integrated_2013]<!--TODO: check ref-->. Available land cover classification included nine habitat
-types at 30 m resolution. We reclassified the land cover types into three
-categories using the R
-package `raster` [@Hijmans_2019]: foraging, open, and forest habitats. Foraging habitat consisted of lichen,
-open habitat consisted of wetland, rocky barrens, and anthropogenic, while forest habitat consisted of coniferous forest, conifer scrub,
-broad leaf forest, and mixed-wood forest. Water habitat was excluded from all
-subsequent analyses.
+[@Integrated_2013]<!--TODO: check ref-->. Available land cover classification
+included nine habitat types at 30 m resolution. We reclassified the land cover
+types into three categories using the R package `raster` [@Hijmans_2019]:
+foraging, open, and forest habitats. Foraging habitat consisted of lichen, open
+habitat consisted of wetland, rocky barrens, and anthropogenic, while forest
+habitat consisted of coniferous forest, conifer scrub, broad leaf forest, and
+mixed-wood forest. Water habitat was excluded from all subsequent analyses.
 
 
 ## Caribou multilayer social networks
@@ -186,9 +186,7 @@ subsequent analyses.
 individual nodes and two aspects (season and land cover). Two season
 elementary-layers (summer and winter) and three land cover elementary-layers
 (forage, forest, and open) combined for a total of six layers. Single layers were
-composed of individuals linked by social associations, for each season and land cover combination. Proximity-based social
-network layers were generated using the R package `spatsoc` [@Robitaille_2019]
-in `r version$version.string` [@R_Core_Team_2019].-->
+composed of individuals linked by social associations, for each season and land cover combination.-->
 
 We generated proximity-based social networks using the R package `spatsoc`
 [@Robitaille_2019] in `r version$version.string` [@R_Core_Team_2019]. We assumed
@@ -199,7 +197,7 @@ data, the chain rule is applied by assigning a group identifier to the union of
 buffered GPS fixes at each time step. As such, individuals in a group are within
 the spatial distance threshold of at least one other though not necessarily all
 other individuals [@Robitaille_2019]. Group assignment based on the chain rule
-has previously been applied to caribou using a temporal treshold of 5 minutes
+has previously been applied to caribou using a temporal threshold of 5 minutes
 and a spatial distance threshold of 50 m [@Peignier_2019; @Lesmerises_2018].
 
 <!--In
@@ -243,8 +241,8 @@ neighbours repeated in multiple layers, and [@Berlingerio_2012]. Finally, we
 calculated the similarity of layers between seasons, across land cover classes
 (e.g. summer open compared to winter open) using the Pearson correlation
 coefficient [@Brodka_2018]. Network metrics were calculated using the R packages
-`igraph` [@Csardi_2006], `asnipe` [@Farine_2019] and `data.table` [@Dowle_2019].
-<!-- add used spatsoc -->
+`igraph` [@Csardi_2006], `asnipe` [@Farine_2019], `spatsoc`
+[@Robitaille_2019] and `data.table` [@Dowle_2019].
 
 
 ## Varying scale in multilayer networks
