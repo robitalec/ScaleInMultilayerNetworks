@@ -140,9 +140,9 @@ and space use.
 # Methods
 
 ## Caribou socioecology
-Here, we use caribou as a case study to develop scale-dependent multilayer
+<!--Here, we use caribou as a case study to develop scale-dependent multilayer
 networks based on predicted social (visual and auditory perception), spatial
-(habitat type), and temporal (seasonal) scales. Caribou are gregarious ungulates
+(habitat type), and temporal (seasonal) scales.--> Caribou are gregarious ungulates
 with fission-fusion dynamics [@Lesmerises_2018] that display temporal and
 spatial variation in social networks [@Peignier_2019]. In winter, caribou dig
 holes in the snow, termed craters, to access forage [@Bergerud_1974]. Cratering
@@ -155,12 +155,12 @@ scale (all craters within an individual’s range) [@Mayor_2009]. The distributi
 of forage for caribou is therefore seasonally heterogeneous because the
 distribution of craters on the landscape varies meaning that access to
 vegetation in winter is highly variable for caribou in winter compared to summer. Caribou therefore have
-greater access to forage in snow-free seasons. We partitioned data into two
+greater access to forage in snow-free seasons. <!--We partitioned data into two
 discrete seasons: summer (3 August - 20 September 2017) and winter (1 January – 17
-February 2018) based on caribou socioecology [@Peignier_2019].
+February 2018) based on caribou socioecology [@Peignier_2019].-->
 
 ## Caribou location data
-We used GPS location data collected from Fogo Island caribou in 2017 and 2018.
+We used GPS location data collected from Fogo Island caribou in 2017, 2018 and 2019.
 Adult female caribou were immobilized and fitted with global positioning system
 (GPS) collars (Lotek Wireless Inc., Newmarket, ON, Canada, GPS4400M collars,
 1,250 g) as described by [@Schaefer_2013]. Collars were programmed to collect
