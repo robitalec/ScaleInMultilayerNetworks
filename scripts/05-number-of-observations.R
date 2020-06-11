@@ -64,7 +64,6 @@ graphs <- lapply(seq(10, maxn, by = nstep), function(n) {
   gLs <- list_graphs(netLs)
   names(gLs) <- paste(names(gbiLs), n, sep = '-')
   
-
   # Calculate eigenvector centrality for each season
   stren <- layer_strength(gLs)
   setnames(stren, 'ind', idcol)

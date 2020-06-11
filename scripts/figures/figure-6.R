@@ -68,8 +68,6 @@ gstr <- ggplot(DT, aes(color = lcname, group = lcname)) +
 # Multidegree
 gmult <- ggplot(DT, aes(group = ANIMAL_ID)) +
   geom_line(aes(x = nobs, y = multideg)) +
-  guides(color = FALSE) +
-  scale_color_manual(values = lccolors) +
   base +
   labs(x = xlab, y = 'Multidegree')
 
