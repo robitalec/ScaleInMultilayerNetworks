@@ -748,6 +748,8 @@ for novel insights from multilayer networks.
 
 # Conclusions
 
+<!-- TODO: push gps data, HMM networks, etc-->
+
 Multilayer networks remain a nascent but powerful tool in animal behavioural
 ecology. We demonstrate the potential novel analyses that vary social, spatial,
 and temporal scale within a multilayer framework. In our caribou case study, we
