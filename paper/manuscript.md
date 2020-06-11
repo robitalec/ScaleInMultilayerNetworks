@@ -280,7 +280,7 @@ each combination of habitat layer and spatial distance threshold.
 To assess the influence of spatial scale, we aggregated the land cover
 raster at varying scales relevant to caribou ecology. We aggregated the
 original 30 m land cover raster using the R package `grainchanger`
-(Graham 2019) across a series of scales (100 - 1000 m by 100 m steps)
+(Graham 2019) across a series of scales (100 - 1000 m by steps of 100 m)
 The land cover raster was aggregated using a modal moving window method
 using a circular window corresponding to the above scales (Graham et al.
 2019). We assume 30 m and 100 m represents fine-scale decision making
@@ -289,26 +289,26 @@ m represents the scale at which caribou tend to select and avoid habitat
 (Bastille-Rousseau et al. 2017). For each spatial scale, we generated a
 multilayer network consisting of the social association between 21
 individuals across three habitat layers (open, forest and forage) for
-the entire study period. We calculated graph strength and multidegree
-for each habitat layer and spatial scale, and edge overlap across the
-entire series of networks to determine proportion of total edges
-observed in each combination of habitat layer and spatial scale.
+the entire study period. Social associations of individuals were defined
+by spatiotemporal overlap within 5 minutes and 50 m. We calculated graph
+strength and multidegree for each habitat layer and spatial scale, and
+edge overlap across the entire series of networks to determine
+proportion of total edges observed in each combination of habitat layer
+and spatial scale.
 
 ### Temporal scale
 
-We used a temporal multilayer network to assess seasonality of caribou
-social associations. We generated layers
+#### Time windows
 
-#### Time window length and position
-
-We altered the temporal scale of multilayer networks by varying the
-length and position of the time window used to define seasons. The
-length of the time window varied from 40-100 days using a fixed start
-day for summer (starting at 3 August 2017) and winter (starting at 1
-January 2018). The position of the time window was shifted by 1-48 days,
-using a fixed time window length of 48 days. These new time windows were
-iteratively used to partition data into two discrete seasons (summer and
-winter) and generate multilayer networks.
+We used a temporal multilayer network to assess the seasonality of
+caribou sociality. Multilayer networks consisted of the social
+association between 21 individuals across 20 ordinal sample periods of
+35-36 days taken from the entire study period. Social associations were
+defined by spatiotemporal overlap of individuals within 5 minutes and 50
+m. In each time window, we calculated individual graph strength and
+multidegree, and across the series of networks, we calculated edge
+overlap to determine proportion of total edges observed in each time
+window.
 
 #### Number of observations
 
@@ -318,14 +318,19 @@ networks (Davis, Crofoot and Farine 2018; Webber and Vander Wal 2019).
 For example, GPS data is commonly collected at a fixed rate, e.g. every
 \(x\) minutes or hours, continuously throughout the study period. Fix
 rate is a reflection of number of observations an individual would have
-been observed and recorded in traditional ethological studies.We
-investigated the influence of the number of observations on resulting
-multilayer networks. We randomly selected a maximum 485 timesteps for
-each season to represent all possible observations. We regenerated
-multilayer networks and calculated associations of individuals with 25
-additional observations at each iteration (10 - 485 observations).
-Subsequent iterations included the previous set of observations to mimic
-collection of observational data.
+been observed and recorded in traditional ethological studies. To
+investigate the influence of number of observations, we generated
+multilayer networks of social association between 21 individuals across
+three habitat layers (open, forest and forage) using \(N\) randomly
+selected observations. We first generated a maximum of 1000 timesteps
+and iteratively used \(N\) of these (\(N\) = 10 - 1000 observations by
+steps of 10), to ensure previously included timesteps, and resulting
+associations, were accumulated with subsequent observations to mimic
+collection of observational data. Within each multilayer network with
+\(N\) observations, we calculated individual graph strength and
+multidegree. We calculated edge overlap across the entire series of
+networks to determine proportion of total edges as number of
+observations increased.
 
 # Results
 
