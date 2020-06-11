@@ -59,6 +59,13 @@ gstr <- ggplot(DT, aes(color = lcname, group = lcname)) +
   labs(x = xlab, y = 'Graph Strength')
 
 
+# Multidegree
+gmult <- ggplot(DT, aes(group = ANIMAL_ID)) +
+  geom_line(aes(x = threshold, y = multideg)) +
+  base +
+  labs(x = xlab, y = 'Multidegree')
+
+
 # Layer similarity
 # gsim <- ggplot(DT, aes(color = lcname)) +
 #   geom_line(aes(x = threshold, y = layersim)) +
