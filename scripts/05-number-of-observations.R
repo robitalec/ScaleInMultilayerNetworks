@@ -31,7 +31,7 @@ group_times(
 
 # Generate networks for each n observations -------------------------------
 maxn <- 1000
-nstep <- 50
+nstep <- 10
 
 # Randomly select n max observations
 randobs <- DT[!is.na(lc), sample(unique(timegroup), size = maxn), lc]
