@@ -263,13 +263,14 @@ for group assignment. Spatial distance thresholds (5, 25, 50, 75, 100, 250 and
 500 m) represented a range of visual (short distance) to auditory (long
 distance) sensory modalities of caribou. Multilayer networks consisted of the
 social association between `r DT[, uniqueN(get(idcol))]` individuals across
-three habitat layers (open, forest and forage) for the entire study period. At the finest scale, individuals
-within 5 m of one another were considered in the same group, whereas at the
-coarsest scale, individuals within 500 m of one another were considered in the
-same group. We calculated graph strength and multidegree for each habitat layer
-and spatial distance threshold, and edge overlap across the entire series of
-networks to determine proportion of total edges observed in each combination of
-habitat layer and spatial distance threshold.
+three habitat layers (open, forest and forage) for the entire study period. At
+the finest scale, individuals within 5 m of one another were considered in the
+same group, whereas at the coarsest scale, individuals within 500 m of one
+another were considered in the same group. We calculated graph strength and
+multidegree for each habitat layer and spatial distance threshold, and edge
+overlap across the entire series of networks to determine proportion of total
+edges observed in each combination of habitat layer and spatial distance
+threshold.
 
 
 ### Spatial scale
@@ -285,24 +286,24 @@ and 1000 m represents the scale at which caribou tend to select and avoid
 habitat (Bastille-Rousseau et al. 2017). For each spatial scale, we generated a
 multilayer network consisting of the social association between `r DT[,
 uniqueN(get(idcol))]` individuals across three habitat layers (open, forest and
-forage) for the entire study period. We calculated graph strength and
-multidegree for each habitat layer and spatial scale, and edge overlap across
-the entire series of networks to determine proportion of total edges observed in
-each combination of habitat layer and spatial scale.
+forage) for the entire study period. Social associations of individuals were
+defined by spatiotemporal overlap within 5 minutes and 50 m. We calculated graph
+strength and multidegree for each habitat layer and spatial scale, and edge
+overlap across the entire series of networks to determine proportion of total
+edges observed in each combination of habitat layer and spatial scale.
 
 
 ### Temporal scale
-We used a temporal multilayer network to assess seasonality of caribou social
-associations. We generated layers 
+#### Time windows 
 
-#### Time window length and position
-We altered the temporal scale of multilayer networks by varying the length and
-position of the time window used to define seasons. The length of the time
-window varied from 40-100 days using a fixed start day for summer (starting at 3
-August 2017) and winter (starting at 1 January 2018). The position of the time
-window was shifted by 1-48 days, using a fixed time window length of 48 days.
-These new time windows were iteratively used to partition data into two discrete
-seasons (summer and winter) and generate multilayer networks.
+We used a temporal multilayer network to assess the seasonality of caribou
+sociality. Multilayer networks consisted of the social association between `r
+DT[, uniqueN(get(idcol))]` individuals across 20 ordinal sample periods of 35-36
+days from the entire study period. Social associations of individuals were
+defined by spatiotemporal overlap within 5 minutes and 50 m. Within each time
+window, we calculated individual's graph strength and multidegree. We calculated
+edge overlap across the entire series of networks to determine proportion of
+total edges observed in each time window.
 
 
 #### Number of observations
@@ -311,7 +312,7 @@ observations as well as the data collection technique used to generate networks
 [@Davis_2018; @Webber_2019]. For example, GPS data is commonly collected at a
 fixed rate, e.g. every $x$ minutes or hours, continuously throughout the study
 period. Fix rate is a reflection of number of observations an individual would
-have been observed and recorded in traditional ethological studies.We
+have been observed and recorded in traditional ethological studies. We
 investigated the influence of the number of observations on resulting multilayer
 networks. We randomly selected a maximum 485 timesteps for each season to
 represent all possible observations. We regenerated multilayer networks and
