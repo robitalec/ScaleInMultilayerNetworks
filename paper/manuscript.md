@@ -135,27 +135,25 @@ spatial variation in social networks (Peignier et al. 2019). In winter,
 caribou dig holes in the snow, termed craters, to access forage
 (Bergerud 1974). Cratering is presumed to be a costly behaviour and as a
 result, caribou tend to occupy and re-use craters once they are
-established and there is considerably less access to forage than when
-the landscape is snow-free. Importantly, craters exist on the landscape
-at multiple scales: the crater scale (a single crater), the feeding area
-scale (multiple craters in close proximity), and the winter range scale
-(all craters within an individual’s range) (Mayor et al. 2009). The
-distribution of forage for caribou is therefore seasonally heterogeneous
-because the distribution of craters on the landscape varies meaning that
-access to vegetation in winter is highly variable for caribou in winter
-compared to summer. Caribou therefore have greater access to forage in
-snow-free seasons. <!--We partitioned data into two
+established. <!-- and there is considerably less access
+to forage than when the landscape is snow-free.--> Importantly, craters
+exist on the landscape at multiple scales: the crater scale (a single
+crater), the feeding area scale (multiple craters in close proximity),
+and the winter range scale (all craters within an individual’s range)
+(Mayor et al. 2009). Access to forage is seasonally heterogeneous
+depending on snow cover and, in winter, variable distribution of craters
+on the landscape. <!--We partitioned data into two
 discrete seasons: summer (3 August - 20 September 2017) and winter (1 January – 17
 February 2018) based on caribou socioecology [@Peignier_2019].-->
 
 ## Caribou location data
 
-We used GPS location data collected from Fogo Island caribou in 2017,
-2018 and 2019. Adult female caribou were immobilized and fitted with
-global positioning system (GPS) collars (Lotek Wireless Inc., Newmarket,
-ON, Canada, GPS4400M collars, 1,250 g) as described by (Schaefer and
-Mahoney 2013). Collars were programmed to collect location fixes every 2
-hours. Prior to analyses, we subset GPS fixes into a discrete removed
+We used GPS location data collected from Fogo Island caribou in between
+2017-04-21 and 2019-03-27. Adult female caribou were immobilized and
+fitted with global positioning system (GPS) collars (Lotek Wireless
+Inc., Newmarket, ON, Canada, GPS4400M collars, 1,250 g) as described by
+(Schaefer and Mahoney 2013). Collars were programmed to collect location
+fixes every 2 hours. Prior to analyses, we subset GPS fixes to remove
 all erroneous and outlier GPS fixes following (Bjørneraas et al. 2010).
 We did not collar all caribou in the herd; however, the proportion of
 marked adult females was \~10% of all adult females and \~5% of all
@@ -1018,8 +1016,6 @@ Mean connective redundancy across individuals increased rapidly between
 </p>
 
 </div>
-
-\`
 
 # References
 

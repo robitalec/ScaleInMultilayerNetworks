@@ -181,19 +181,21 @@ subsequent analyses.
 
 ## Caribou multilayer social networks
 
-### Network types and construction
-We generated a multilayer social network consisting `r DT[, uniqueN(get(idcol))]`
+### Network layer construction
+<!--We generated a multilayer social network consisting `r DT[, uniqueN(get(idcol))]`
 individual nodes and two aspects (season and land cover). Two season
 elementary-layers (summer and winter) and three land cover elementary-layers
 (forage, forest, and open) combined for a total of six layers. Single layers were
 composed of individuals linked by social associations, for each season and land cover combination. Proximity-based social
 network layers were generated using the R package `spatsoc` [@Robitaille_2019]
-in `r version$version.string` [@R_Core_Team_2019].
+in `r version$version.string` [@R_Core_Team_2019].-->
 
-Within each layer, we assumed individuals were associating if simultaneous GPS
-fixes, i.e., recorded within 5 minutes of each other, were within a given
-spatial distance of one another. Typically for ungulates and other gregarious
-mammals, the ‘chain rule’ is applied for group assignment. For GPS data, the
+<!-- TODO: better lead in -->
+Within each layer, we generated proximity-based social networks using the R package `spatsoc` [@Robitaille_2019] in `r version$version.string` [@R_Core_Team_2019]. We 
+assumed individuals were associating if simultaneous GPS
+fixes, i.e., recorded within 5 minutes of each other, were within the spatial distance 
+threshold of one another. Typically for ungulates and other gregarious
+mammals, the ‘chain rule’ is applied for group assignment. <!-- TODO: simplify here-->For GPS data, the
 chain rule is applied if discrete spatiotemporal GPS fixes buffered by a given
 distance formed a contiguous buffer for two or more individuals, even if some
 individuals within the buffer were not within the given distance of one another
@@ -215,7 +217,7 @@ distance of each other, $y_{A}$ is the number of fixes from individual A when
 individual B did not have a simultaneous fix, $y_{B}$ is the number of fixes
 from individual B when individual A did not have a simultaneous fix, and
 $y_{AB}$ is the number of simultaneous fixes from individuals A and B that were
-separated by more than the given distance [@Farine_2015]. Social groups were
+separated by more than the given distance [@Farine_2015]. <!-- TODO: rm repeat?-->Social groups were
 designated if two or more individuals occurred within a given distance of one
 another at any given time point.
 
@@ -257,7 +259,7 @@ scale, only individuals within 5 m of one another were considered in the same
 group, whereas at the coarsest social scale, individuals within 500 m of one
 another were considered in the same group. We assumed these scales represented
 visual (short distance) to auditory (long distance) sensory modalities of
-caribou.
+caribou. <!-- TODO: clarify not attempting ML with multiple behaviours -->
 
 ### Spatial scale
 
