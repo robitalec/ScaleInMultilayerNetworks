@@ -1,4 +1,4 @@
-# === Figure 3 ------------------------------------------------------------
+# === Figure: Land Cover Resolution ---------------------------------------
 # Land Cover Resolution
 # Alec Robitaille
 
@@ -117,7 +117,7 @@ layout <- 'AABBCC
 
 
 # Output ------------------------------------------------------------------
-ggsave('graphics/figure-3.png',
+ggsave('graphics/figure-lc.png',
        g, width = 10, height = 10)
 
 ggsave('graphics/supp-count-lc.png',
