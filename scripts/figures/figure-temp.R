@@ -114,7 +114,7 @@ layout <- 'A
 # gsimm
 
 # Output ------------------------------------------------------------------
-ggsave('graphics/figure-4.png',
+ggsave('graphics/figure-temp.png',
        g, width = 13, height = 10)
 
 ggsave('graphics/supp-temp-nid.png',

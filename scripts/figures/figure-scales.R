@@ -51,7 +51,7 @@ ysize = 5 # silhouette size
 
 
 # Figure ------------------------------------------------------------------
-png("graphics/figure-1.png", width = 6000, height = 6000, units = "px", res = 500)
+png("graphics/figure-scales.png", width = 6000, height = 6000, units = "px", res = 500)
 aa <- ggplot() +
   geom_ellipse(data = df[species == "hyeana" & behaviour == "Association"], 
                aes(x0 = x, y0 = y, a = 7, b = 3.25, angle = 1.2), 

@@ -103,7 +103,7 @@ gmult <- ggplot(DT, aes(group = ANIMAL_ID)) +
 
 
 # Output ------------------------------------------------------------------
-ggsave('graphics/figure-5.png',
+ggsave('graphics/figure-soc.png',
        g, width = 10, height = 5)
 
 # ggsave('graphics/supp-temp-nid.png',

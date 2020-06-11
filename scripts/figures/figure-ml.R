@@ -180,4 +180,4 @@ labels <- data.table(
 
 
 # Output ------------------------------------------------------------------
-ggsave('graphics/figure-2.png', width = 8, height = 6)
+ggsave('graphics/figure-ml.png', width = 8, height = 6)

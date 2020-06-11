@@ -85,7 +85,7 @@ layout <- 'AAAAA
 
 
 # Output ------------------------------------------------------------------
-ggsave('graphics/figure-6.png',
+ggsave('graphics/figure-nobs.png',
        g, width = 10, height = 8)
 
 # ggsave('graphics/supp-temp-nid.png',
