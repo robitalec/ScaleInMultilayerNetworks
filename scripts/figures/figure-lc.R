@@ -64,7 +64,7 @@ gprop <- ggplot(DT) +
   # guides(color = FALSE) +
   scale_color_manual(values = lccolors) +
   base +
-  labs(x = NULL, y = 'Edge Overlap')
+  labs(x = NULL, y = 'Edge Overlap', subtitle = 'D)')
   
 
 gstr <- ggplot(DT) +
@@ -76,28 +76,28 @@ gstr <- ggplot(DT) +
   guides(color = FALSE) +
   scale_color_manual(values = lccolors) +
   base +
-  labs(x = xlab, y = 'Graph Strength') + 
+  labs(x = xlab, y = 'Graph Strength', subtitle = 'E)') + 
   theme(panel.spacing = unit(1, "lines"))
 
 
 g30 <- gplot(lc30) + 
   geom_tile(aes(fill = factor(value))) + 
   scale_fill_manual(values = lcvalcolors) +
-  labs(subtitle = '30 m') +
+  labs(subtitle = 'A) 30 m') +
   themelc + 
   guides(fill = FALSE)
 
 g500 <- gplot(lc500) + 
   geom_tile(aes(fill = factor(value))) + 
   scale_fill_manual(values = lcvalcolors) +
-  labs(subtitle = '500 m') +
+  labs(subtitle = 'B) 500 m') +
   themelc + 
   guides(fill = FALSE)
 
 g1000 <- gplot(lc1000) + 
   geom_tile(aes(fill = factor(value))) + 
   scale_fill_manual(values = lcvalcolors) +
-  labs(subtitle = '1000 m') +
+  labs(subtitle = 'C) 1000 m') +
   themelc + 
   guides(fill = FALSE)
 
