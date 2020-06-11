@@ -274,11 +274,9 @@ threshold.
 
 
 ### Spatial scale
-
-To assess the influence of spatial scale, we aggregated the land cover raster at
-varying scales relevant to caribou ecology. We aggregated the original 30 m land
-cover raster using the R package `grainchanger` [@Graham_2019] across a series
-of scales (100 - 1000 m by steps of 100 m) The land cover raster was aggregated
+<!-- TODO: Increased spatial scale of land cover corresponds to xyz -->
+To assess the influence of spatial scale, we aggregated the land cover raster using the R package `grainchanger` [@Graham_2019] across a series
+of scales (100 - 1000 m by steps of 100 m). The land cover raster was aggregated
 using a modal moving window method using a circular window corresponding to the
 above scales [@Graham_2019a]. We assume 30 m and 100 m represents fine-scale
 decision making for caribou during foraging, while re-sampling at 500 m , 750 m
