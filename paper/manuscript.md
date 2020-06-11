@@ -181,9 +181,7 @@ analyses.
 individual nodes and two aspects (season and land cover). Two season
 elementary-layers (summer and winter) and three land cover elementary-layers
 (forage, forest, and open) combined for a total of six layers. Single layers were
-composed of individuals linked by social associations, for each season and land cover combination. Proximity-based social
-network layers were generated using the R package `spatsoc` [@Robitaille_2019]
-in R version 4.0.1 (2020-06-06) [@R_Core_Team_2019].-->
+composed of individuals linked by social associations, for each season and land cover combination.-->
 
 We generated proximity-based social networks using the R package
 `spatsoc` (Robitaille, Webber and Vander Wal 2019) in R version 4.0.1
@@ -197,7 +195,7 @@ such, individuals in a group are within the spatial distance threshold
 of at least one other though not necessarily all other individuals
 (Robitaille, Webber and Vander Wal 2019). Group assignment based on the
 chain rule has previously been applied to caribou using a temporal
-treshold of 5 minutes and a spatial distance threshold of 50 m
+threshold of 5 minutes and a spatial distance threshold of 50 m
 (Lesmerises, Johnson and St-Laurent 2018; Peignier et al. 2019).
 
 <!--In
@@ -227,88 +225,99 @@ A and B that were separated by more than the spatial distance threshold
 <!-- TODO: expand + simplify + examples individual A, B etc -->
 
 We used a series of metrics to characterize the multilayer networks,
-focusing on the role of individuals, importance of individual layers,
-and the similarity of different layers. To measure the role of
-individuals, we calculated degree centrality and graph strength. Degree
-centrality is the number of direct connections an individual has to
-other individuals in a network layer. Graph strength is the degree
+focusing on the role of individuals within and across layers, and the
+similarity of different layers. To measure the role of individuals
+within layers, we calculated degree centrality and graph strength.
+Degree centrality is the number of direct connections an individual has
+to other individuals in a network layer. Graph strength is the degree
 weighted by the strength of association, in this case SRI, in each
-layer-specific season and land cover context. Extending degree
-centrality, we calculated multidegree, the sum of degree centrality of
-individuals across layers, and neighbourhood, the sum of unique
-neighbours to each individual across layers (Berlingerio et al. 2012;
-Kivela et al. 2014). We evaluated the relevance and redundancy of layers
-by combining the multidegree and neighbourhood to calculate layer
-relevance and connective redundancy. Layer relevance is the proportion
-of neighbours present in each layer compared to the neighbourhood for
-each individual and connective redundancy is the proportion of
-neighbours repeated in multiple layers, and (Berlingerio et al. 2012).
-Finally, we calculated the similarity of layers between seasons, across
-land cover classes (e.g. summer open compared to winter open) using the
-Pearson correlation coefficient (Br’odka et al. 2018). Network metrics
-were calculated using the R packages `igraph` (Csardi and Nepusz 2006),
-`asnipe` (Farine 2019) and `data.table` (Dowle and Srinivasan 2019).
-<!-- add used spatsoc -->
+layer. Extending degree centrality, we calculated multidegree, the sum
+of degree centrality of individuals across layers (Berlingerio et al.
+2012; Kivela et al. 2014).
+<!--We evaluated the relevance and redundancy of layers by
+combining the multidegree and neighbourhood to calculate layer relevance and
+connective redundancy. Layer relevance is the proportion of neighbours present
+in each layer compared to the neighbourhood for each individual and connective
+redundancy is the proportion of neighbours repeated in multiple layers, and
+[@Berlingerio_2012].--> Finally, we measured the similarity of layers by
+calculating edge overlap. Edge overlap is defined as the proportion of
+edges present in each network layer out of all observed edges
+(Battiston, Nicosia and Latora 2014).
+<!--between seasons, across land cover classes (e.g. summer open compared to
+winter open) using the Pearson correlation coefficient [@Brodka_2018].-->
+Network metrics were calculated using the R packages `igraph` (Csardi
+and Nepusz 2006), `asnipe` (Farine 2019), `spatsoc` (Robitaille, Webber
+and Vander Wal 2019) and `data.table` (Dowle and Srinivasan 2019).
 
 ## Varying scale in multilayer networks
 
+<!-- 
+
+social scale: variable is spatial distance threshold
+spatial scale: variable is land cover resolution
+temporal scale: variable is temporal window
+temporal scale: variable is number of observations
+-->
+
 ### Social scale
 
-We modified the distance threshold, hereafter the social
-<!--distance-->threshold, required for group assignment using `spatsoc`
-(Robitaille, Webber and Vander Wal 2019) and re-assigned groups at
-incremental distances between 5 - 500 m. For example, at the finest
-social scale, only individuals within 5 m of one another were considered
-in the same group, whereas at the coarsest social scale, individuals
-within 500 m of one another were considered in the same group. We
-assumed these scales represented visual (short distance) to auditory
-(long distance) sensory modalities of caribou.
-<!-- TODO: clarify not attempting ML with multiple behaviours -->
+We generated multilayer networks across a series of spatial distance
+thresholds for group assignment. Spatial distance thresholds (5, 25, 50,
+75, 100, 250 and 500 m) represented a range of visual (short distance)
+to auditory (long distance) sensory modalities of caribou. Multilayer
+networks consisted of the social association between 21 individuals
+across three habitat layers (open, forest and forage). At the finest
+scale, individuals within 5 m of one another were considered in the same
+group, whereas at the coarsest scale, individuals within 500 m of one
+another were considered in the same group. We calculated graph strength
+and multidegree for each habitat layer and spatial distance threshold,
+and edge overlap across the entire series of networks to determine
+proportion of total edges observed in each combination of habitat layer
+and spatial distance threshold.
 
 ### Spatial scale
 
 To assess the influence of spatial scale on multilayer networks, we
-aggregated our land cover raster at varying scales relevant to caribou
-ecology. We aggregated the 30 m land cover raster using the R package
-`grainchanger` (Graham 2019) at five scales: 100 m, 250 m, 500 m, 750 m
-and 1000 m. Aggregation occurred using a modal moving window method
-using a circular window corresponding to the above scales (Graham et al.
-2019). We assume 30 m and 100 m represents fine-scale decision making
-for caribou during foraging, while re-sampling at 500 m , 750 m and 1000
-m represents the scale at which caribou tend to select and avoid habitat
-(Bastille-Rousseau et al. 2017).
+aggregated our land cover raster at varying scales
+<!--relevant to caribou ecology. We
+aggregated the 30 m land cover raster using the R package `grainchanger`
+[@Graham_2019] at five scales: 100 m, 250 m, 500 m, 750 m and 1000 m. Aggregation
+occurred using a modal moving window method using a circular window
+corresponding to the above scales [@Graham_2019a]. We assume 30 m and 100 m
+represents fine-scale decision making for caribou during foraging, while
+re-sampling at 500 m , 750 m and 1000 m represents the scale at which caribou tend to
+select and avoid habitat (Bastille-Rousseau et al. 2017).
+
 
 ### Temporal scale
-
 #### Number of observations
-
 Studies of social network analysis vary in the number and frequency of
-observations as well as the data collection technique used to generate
-networks (Davis, Crofoot and Farine 2018; Webber and Vander Wal 2019).
-For example, GPS data is commonly collected at a fixed rate, e.g. every
-\(x\) minutes or hours, continuously throughout the study period. Fix
-rate is a reflection of number of observations an individual would have
-been observed and recorded in traditional ethological studies.We
-investigated the influence of the number of observations on resulting
-multilayer networks. We randomly selected a maximum 485 timesteps for
-each season to represent all possible observations. We regenerated
-multilayer networks and calculated associations of individuals with 25
-additional observations at each iteration (10 - 485 observations).
-Subsequent iterations included the previous set of observations to mimic
-collection of observational data.
+observations as well as the data collection technique used to generate networks
+[@Davis_2018; @Webber_2019]. For example, GPS data is commonly collected at a
+fixed rate, e.g. every $x$ minutes or hours, continuously throughout the study
+period. Fix rate is a reflection of number of observations an individual would
+have been observed and recorded in traditional ethological studies.We
+investigated the influence of the number of observations on resulting multilayer
+networks. We randomly selected a maximum 485 timesteps for each season to
+represent all possible observations. We regenerated multilayer networks and
+calculated associations of individuals with 25 additional observations at each
+iteration (10 - 485 observations). Subsequent iterations included the previous
+set of observations to mimic collection of observational data. 
+
 
 #### Time window length and position
+We altered the temporal scale of multilayer networks by varying the length and
+position of the time window used to define seasons. The length of the time
+window varied from 40-100 days using a fixed start day for summer (starting at 3
+August 2017) and winter (starting at 1 January 2018). The position of the time
+window was shifted by 1-48 days, using a fixed time window length of 48 days.
+These new time windows were iteratively used to partition data into two discrete
+seasons (summer and winter) and generate multilayer networks.
 
-We altered the temporal scale of multilayer networks by varying the
-length and position of the time window used to define seasons. The
-length of the time window varied from 40-100 days using a fixed start
-day for summer (starting at 3 August 2017) and winter (starting at 1
-January 2018). The position of the time window was shifted by 1-48 days,
-using a fixed time window length of 48 days. These new time windows were
-iteratively used to partition data into two discrete seasons (summer and
-winter) and generate multilayer networks.
 
 # Results
+
+<!-- TODO: edge overlap can indicate if some associations are dependent on context -->
 
 <!-- TODO: Add intro/general to results?-->
 
@@ -1048,6 +1057,13 @@ animal social interactions. *Canadian Journal of Zoology*
 
 </div>
 
+<div id="ref-Battiston_2014">
+
+Battiston F, Nicosia V, Latora V. Structural measures for multiplex
+networks. *Physical Review E* 2014;**89**:032804.
+
+</div>
+
 <div id="ref-Berger_2015">
 
 Berger V, Lemaître J-F, Allainé D, Gaillard J-M, Cohas A. Early and
@@ -1107,14 +1123,6 @@ selection functions. *Trends in Ecology & Evolution* 1999;**14**:268–72.
 Brent LJN, Ruiz-Lambides A, Platt ML. Family network size and survival
 across the lifespan of female macaques. *Proceedings of the Royal
 Society B: Biological Sciences* 2017;**284**:20170515.
-
-</div>
-
-<div id="ref-Brodka_2018">
-
-Br’odka P, Chmiel A, Magnani M, Ragozini G. Quantifying layer similarity
-in multiplex networks: A systematic study. *Royal Society Open Science*
-2018;**5**:171747.
 
 </div>
 
@@ -1185,14 +1193,6 @@ social networks. *Trends in Ecology & Evolution* 2011;**26**:502–7.
 
 Csardi G, Nepusz T. The igraph software package for complex network
 research. *InterJournal* 2006;**Complex Systems**:1695.
-
-</div>
-
-<div id="ref-Davis_2018">
-
-Davis GH, Crofoot MC, Farine DR. Estimating the robustness and
-uncertainty of animal social networks using different observational
-methods. *Animal Behaviour* 2018;**141**:29–44.
 
 </div>
 
@@ -1308,21 +1308,6 @@ of bison under predation risk. *Ecology* 2009;**90**:2480–90.
 Franks DW, Ruxton GD, James R. Sampling animal association networks with
 the gambit of the group. *Behavioral Ecology and Sociobiology*
 2009;**64**:493–503.
-
-</div>
-
-<div id="ref-Graham_2019">
-
-Graham L. *Grainchanger: Moving-Window and Direct Data Aggregation*.,
-2019.
-
-</div>
-
-<div id="ref-Graham_2019a">
-
-Graham LJ, Spake R, Gillings S, Watts K, Eigenbrod F. Incorporating
-fine-scale environmental heterogeneity into broad-extent models.
-*Methods in Ecology and Evolution* 2019;**10**:767–78.
 
 </div>
 

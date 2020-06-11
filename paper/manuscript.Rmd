@@ -258,19 +258,24 @@ temporal scale: variable is number of observations
 
 ### Social scale
 
-We modified the spatial distance threshold used for
-group assignment using `spatsoc` [@Robitaille_2019] and re-assigned groups at
-incremental distances between 5 and 500 m (5, 25, 50, 75, 100, 250, 500). For example, at the finest
-scale, only individuals within 5 m of one another were considered in the same
-group, whereas at the coarsest scale, individuals within 500 m of one
-another were considered in the same group. We assumed these scales represented
-visual (short distance) to auditory (long distance) sensory modalities of
-caribou. <!-- TODO: clarify not attempting ML with multiple behaviours -->
+We generated multilayer networks across a series of spatial distance thresholds
+for group assignment. Spatial distance thresholds (5, 25, 50, 75, 100, 250 and
+500 m) represented a range of visual (short distance) to auditory (long
+distance) sensory modalities of caribou. Multilayer networks consisted of the
+social association between `r DT[, uniqueN(get(idcol))]` individuals across
+three habitat layers (open, forest and forage). At the finest scale, individuals
+within 5 m of one another were considered in the same group, whereas at the
+coarsest scale, individuals within 500 m of one another were considered in the
+same group. We calculated graph strength and multidegree for each habitat layer
+and spatial distance threshold, and edge overlap across the entire series of
+networks to determine proportion of total edges observed in each combination of
+habitat layer and spatial distance threshold.
+
 
 ### Spatial scale
 
 To assess the influence of spatial scale on multilayer networks, we aggregated
-our land cover raster at varying scales relevant to caribou ecology. We
+our land cover raster at varying scales <!--relevant to caribou ecology. We
 aggregated the 30 m land cover raster using the R package `grainchanger`
 [@Graham_2019] at five scales: 100 m, 250 m, 500 m, 750 m and 1000 m. Aggregation
 occurred using a modal moving window method using a circular window
