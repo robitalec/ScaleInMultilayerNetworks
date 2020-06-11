@@ -799,7 +799,10 @@ knitr::include_graphics('../graphics/figure-1.png')
 ```
 
 \newpage
- 
+
+
+(ref:ml) Visualization of multilayer network for social ungulate case study representing social association of caribou (*Rangifer tarandus*) on Fogo Island, Newfoundland in summer 2017 and winter 2018. Individual caribou (n = `r DT[, uniqueN(get(idcol))]` females) are show as nodes and each individual is represented by a unique color. Six layers represent combinations of two seasons (summer and winter) and three habitat classes (open, forest and forage). Intralayer edges connect pairs of individuals that associated according to spatial and temporal thresholds described above, and are scaled in line thickness according to strength of association (SRI). Interlayer edges connect individuals to themselves across seasons and within habitat classes (e.g. individual "A" in summer, forest and individual "A" in winter, forest).
+
 ```{r ml, fig.cap='(ref:ml)'}
 knitr::include_graphics('../graphics/figure-2.png')
 ```
