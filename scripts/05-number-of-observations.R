@@ -72,8 +72,11 @@ graphs <- lapply(seq(10, maxn, by = nstep), function(n) {
   # Calculate neighbors
   layer_neighbors(sub, idcol, splitBy = splitBy)
   
+  # Calculate multidegree
+  multi_degree(sub, 'splitNeigh', idcol, splitBy)
+  
   # and tidy output, prep for merge
-  outcols <- c('neigh', 'splitNeigh', idcol, splitBy)
+  outcols <- c('neigh', 'splitNeigh', 'multideg', idcol, splitBy)
   usub <- unique(sub[, .SD, .SDcols = outcols])
   usub[, layer := paste(lc, n, sep = '-')]
   
@@ -99,7 +102,7 @@ eLs <- list_edges(gLs)
 eovr <- edge_overlap(eLs)
 eovr[, c('lc', 'nobs') := tstrsplit(layer, '-', type.convert = TRUE)]
 
-out <- outLs[eovr, on = c('lc', 'nobs')]
+out <- outLs[eovr, on = 'layer']
 
 # Output ------------------------------------------------------------------
 saveRDS(out, 'data/derived-data/05-number-of-observations.Rds')
