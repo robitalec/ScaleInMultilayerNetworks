@@ -210,21 +210,17 @@ habitat classes were represented as interlayer edges (Figure \@ref(fig:ml)) .-->
 <!-- eg this is connecting contexts used to calculate layer similarity -->
 
 We weighted edges of social networks by the strength of association between
-caribou using the simple ratio index [SRI, @Cairns_1987]: 
+caribou using the simple ratio index [SRI, @Cairns_1987]:
 
 $$ SRI = \frac{x}{x + y_{AB} + y_{A} + y_{B}} $$
 
-where x is the number of fixes where individuals A and B were within a given
-distance of each other, $y_{A}$ is the number of fixes from individual A when
-individual B did not have a simultaneous fix, $y_{B}$ is the number of fixes
-from individual B when individual A did not have a simultaneous fix, and
-$y_{AB}$ is the number of simultaneous fixes from individuals A and B that were
-separated by more than the given distance [@Farine_2015]. <!-- TODO: rm repeat?-->Social groups were
-designated if two or more individuals occurred within a given distance of one
-another at any given time point.
+where x is the number of fixes where individuals A and B were in the same group,
+$y_{A}$ is the number of fixes from individual A when individual B did not have
+a simultaneous fix, $y_{B}$ is the number of fixes from individual B when
+individual A did not have a simultaneous fix, and $y_{AB}$ is the number of
+simultaneous fixes from individuals A and B that were separated by more than the
+spatial distance threshold [@Farine_2015].
 
-
-(ref:ml) Visualization of multilayer network for social ungulate case study representing social association of caribou (*Rangifer tarandus*) on Fogo Island, Newfoundland in summer 2017 and winter 2018. Individual caribou (n = `r DT[, uniqueN(get(idcol))]` females) are show as nodes and each individual is represented by a unique color. Six layers represent combinations of two seasons (summer and winter) and three habitat classes (open, forest and forage). Intralayer edges connect pairs of individuals that associated according to spatial and temporal thresholds described above, and are scaled in line thickness according to strength of association (SRI). Interlayer edges connect individuals to themselves across seasons and within habitat classes (e.g. individual "A" in summer, forest and individual "A" in winter, forest).
 
 ### Network metrics 
 <!-- TODO: expand + simplify + examples individual A, B etc --> 
