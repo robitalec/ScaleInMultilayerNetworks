@@ -30,7 +30,7 @@ knitr::opts_chunk$set(
 source('../scripts/00-variables.R')
 
 library(data.table)
-DT <- readRDS('../data/derived-data/1-sub-seasons-fogo-caribou.Rds')
+DT <- readRDS('../data/derived-data/01-sub-fogo-caribou.Rds')
 ```
 
 \newpage
