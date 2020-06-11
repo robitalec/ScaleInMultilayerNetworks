@@ -34,6 +34,7 @@ DT[, meangraphstrength := mean(graphstrength), .(lc, nobs)]
 gprop <- ggplot(DT, aes(color = lcname)) +
   geom_line(aes(x = nobs, y = propedges),
             size = 2) +
+  guides(color = FALSE) +
   scale_color_manual(values = lccolors) +
   base +
   labs(x = NULL, y = 'Edge Overlap') +
@@ -49,10 +50,10 @@ gstr <- ggplot(DT, aes(color = lcname, group = lcname)) +
   geom_line(aes(x = nobs, y = meangraphstrength),
             size = 2) + 
   facet_wrap(~lcname) +
-  guides(color = FALSE) +
   scale_color_manual(values = lccolors) +
   base +
-  labs(x = xlab, y = 'Graph Strength')
+  labs(x = NULL, y = 'Graph Strength') +
+  theme(legend.position="bottom")
 
 
 # Layer similarity
@@ -64,12 +65,24 @@ gstr <- ggplot(DT, aes(color = lcname, group = lcname)) +
 #   labs(x = xlab, y = 'Layer Similarity') +
 #   scale_x_continuous(expand = c(0, 0))
 
+# Multidegree
+gmult <- ggplot(DT, aes(group = ANIMAL_ID)) +
+  geom_line(aes(x = nobs, y = multideg)) +
+  guides(color = FALSE) +
+  scale_color_manual(values = lccolors) +
+  base +
+  labs(x = xlab, y = 'Multidegree')
+
+
+
 
 # Patchwork ---------------------------------------------------------------
-layout <- 'AAAAB
-           CCCCC'
-(g <- gprop + guide_area() + gstr + 
-   plot_layout(guides = 'collect', design = layout)
+layout <- 'AAAAA
+           CCCCC
+           DDDDD'
+(g <- gstr + gprop + gmult + # guide_area() + 
+   plot_layout(#guides = 'collect', 
+     design = layout)
 )
 
 
