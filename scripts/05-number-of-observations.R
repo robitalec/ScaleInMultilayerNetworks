@@ -100,7 +100,6 @@ eLs <- list_edges(gLs)
 
 # Calculate edge overlap
 eovr <- edge_overlap(eLs)
-eovr[, c('lc', 'nobs') := tstrsplit(layer, '-', type.convert = TRUE)]
 
 out <- outLs[eovr, on = 'layer']
 
