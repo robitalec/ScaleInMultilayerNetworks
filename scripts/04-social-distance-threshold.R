@@ -31,84 +31,75 @@ group_times(
 # list spatial thresholds
 thresholds <- c(5, 25, 50, 75, 100, 250, 500)
 
-var <- 'spatialthreshold'
-splitBy <- NULL
-
+var <- 'threshold'
+splitBy <- 'lc'
 ulc <- DT[!is.na(lc), unique(lc)]
-comb <- CJ(thresh = thresholds, lc = ulc)
 
-graphs <- lapply(seq.int(nrow(comb)), function(i) {
-  sellc <- comb[i, lc]
-  selthresh <- comb[i, thresh]
-  layer <- paste(selthresh, sellc, sep = '-')
-  
-  sub <- copy(DT)[lc == sellc]
+
+graphs <- lapply(thresholds, function(thresh) {
+  sub <- na.omit(DT, cols = 'lc')
   
   # Spatial grouping with spatsoc
   group_pts(
     sub,
-    threshold = selthresh,
+    threshold = thresh,
     id = idcol,
     coords = projCols,
-    timegroup = 'timegroup'
+    timegroup = 'timegroup',
+    splitBy = splitBy
   )
   
+  # GBI for each season
+  gbiLs <- list_gbi(sub, idcol, splitBy)
+  
+  # Generate networks for each season
+  netLs <- list_nets(gbiLs)
+  
+  # Generate graphs for each season
+  gLs <- list_graphs(netLs)
+  names(gLs) <- paste(names(gbiLs), thresh, sep = '-')
+  
+  # Calculate eigenvector centrality for each season
+  stren <- layer_strength(gLs)
+  setnames(stren, 'ind', idcol)
+  
   # Calculate neighbors
-  layer_neighbors(sub, idcol, splitBy = NULL)
+  layer_neighbors(sub, idcol, splitBy = splitBy)
   
-  neighb <- unique(sub[, .(ANIMAL_ID, neigh, layer = layer)])
+  # Calculate multidegree
+  multi_degree(sub, 'splitNeigh', idcol, splitBy)
   
-  # GBI 
-  gbi <- get_gbi(sub, id = idcol)
+  # and tidy output, prep for merge
+  outcols <- c('neigh', 'splitNeigh', 'multideg', idcol, splitBy)
+  usub <- unique(sub[, .SD, .SDcols = outcols])
+  usub[, layer := paste(lc, thresh, sep = '-')]
   
-  # Generate networks 
-  net <- get_network(gbi, data_format = 'GBI', association_index = 'SRI')
+  # Merge eigcent+correlations with neighbors
+  out <- usub[stren, on = c(idcol, 'layer')]
   
-  # Generate graphs 
-  list(graph = graph.adjacency(net, mode = 'undirected', diag = FALSE, 
-                               weighted = TRUE),
-       neighs = neighb)
+  # Preserve window length
+  set(out, j = var, value = thresh)
+  
+  list(out = out, graph = gLs)
 })
 
-gLs <- lapply(graphs, function(x) x[['graph']])
-names(gLs) <- comb[, paste(thresh, lc, sep = '-')]
+gLs <- unlist(lapply(graphs, function(x) x[['graph']]),
+              recursive = FALSE)
 
-neighLs <- rbindlist(lapply(graphs, function(x) x[['neighs']]))
-
+outLs <- rbindlist(lapply(graphs, function(x) x[['out']]))
 
 # Generate edge lists
 eLs <- list_edges(gLs)
 
 # Calculate edge overlap
 eovr <- edge_overlap(eLs)
-eovr[, edgeoverlapmat := list(edge_overlap_mat(eLs))]
 
-# Calculate eigenvector centrality 
-stren <- layer_strength(gLs)
-setnames(stren, 'ind', idcol)
-  
-# and tidy output, prep for merge
-usub <- neighLs
-
-# Merge eigcent+correlations with neighbors
-wstren <- usub[stren, on = c(idcol, 'layer')]
-  
-# Merge edge overlap
-wedgeovr <- wstren[eovr, on = 'layer']
-
-# Property matrix
-matrices <- property_matrix(wedgeovr, idcol, 'neigh', by = NULL, layer = 'layer')
-matrices[, c('threshold', 'lc') := tstrsplit(layer, '-', type.convert = TRUE)]
-setorder(matrices, lc, threshold)
-lsim <- lapply(ulc, function(sellc) layer_similarity_ordinal(matrices[lc == sellc], 'FO', 'threshold')$layersim)
-matrices[, layersim := unlist(lsim)]
-
-out <- wedgeovr[matrices[, .(layersim, layer, threshold, lc)], on = 'layer']
+out <- outLs[eovr, on = 'layer']
 
 # Generate figure data ----------------------------------------------------
 # XY for each node
 rbindxy <- rbindlist(lapply(gLs, ggnetwork), idcol = 'layer')
-rbindxy[, c('threshold', 'lc') := tstrsplit(layer, '-', type.convert = TRUE)]
+rbindxy[, c('lc', 'threshold') := tstrsplit(layer, '-', type.convert = TRUE)]
 xy <- rbindxy[order(-threshold)][, .SD[1], by = .(lc, name), .SDcols = c('x', 'y')]
 
 repxy <- xy[rep(seq_len(nrow(xy)), times = length(thresholds))]
