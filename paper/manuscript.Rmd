@@ -190,21 +190,23 @@ composed of individuals linked by social associations, for each season and land 
 network layers were generated using the R package `spatsoc` [@Robitaille_2019]
 in `r version$version.string` [@R_Core_Team_2019].-->
 
-<!-- TODO: better lead in -->
-Within each layer, we generated proximity-based social networks using the R package `spatsoc` [@Robitaille_2019] in `r version$version.string` [@R_Core_Team_2019]. We 
-assumed individuals were associating if simultaneous GPS
-fixes, i.e., recorded within 5 minutes of each other, were within the spatial distance 
-threshold of one another. Typically for ungulates and other gregarious
-mammals, the ‘chain rule’ is applied for group assignment. <!-- TODO: simplify here-->For GPS data, the
-chain rule is applied if discrete spatiotemporal GPS fixes buffered by a given
-distance formed a contiguous buffer for two or more individuals, even if some
-individuals within the buffer were not within the given distance of one another
-[@Robitaille_2019]. Group assignment based on the chain rule has previously been
-applied to caribou at a distance of 50 m [@Peignier_2019; @Lesmerises_2018]. In
+We generated proximity-based social networks using the R package `spatsoc`
+[@Robitaille_2019] in `r version$version.string` [@R_Core_Team_2019]. We assumed
+individuals were associating if simultaneous GPS fixes were within the spatial
+distance threshold of one another. Typically for ungulates and other gregarious
+mammals, the ‘chain rule’ is used for group assignment [@Croft_2008]. For GPS
+data, the chain rule is applied by assigning a group identifier to the union of
+buffered GPS fixes at each time step. As such, individuals in a group are within
+the spatial distance threshold of at least one other though not necessarily all
+other individuals [@Robitaille_2019]. Group assignment based on the chain rule
+has previously been applied to caribou using a temporal treshold of 5 minutes
+and a spatial distance threshold of 50 m [@Peignier_2019; @Lesmerises_2018].
+
+<!--In
 all networks, individual caribou were represented as nodes, associations between
 individuals in a given habitat type and season were represented as intralayer
 edges, and connections between the same individuals across seasons and within
-habitat classes were represented as interlayer edges (Figure \@ref(fig:ml)) .
+habitat classes were represented as interlayer edges (Figure \@ref(fig:ml)) .-->
 <!-- eg this is connecting contexts used to calculate layer similarity -->
 
 We weighted edges of social networks by the strength of association between
