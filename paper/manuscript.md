@@ -277,7 +277,7 @@ each combination of habitat layer and spatial distance threshold.
 
 ### Spatial scale
 
-To assess the influence of spatial scale, we aggregated our land cover
+To assess the influence of spatial scale, we aggregated the land cover
 raster at varying scales relevant to caribou ecology. We aggregated the
 original 30 m land cover raster using the R package `grainchanger`
 (Graham 2019) across a series of scales (100 - 1000 m by 100 m steps)
@@ -295,6 +295,9 @@ entire series of networks to determine proportion of total edges
 observed in each combination of habitat layer and spatial scale.
 
 ### Temporal scale
+
+We used a temporal multilayer network to assess seasonality of caribou
+social associations. We generated layers
 
 #### Time window length and position
 
@@ -423,10 +426,11 @@ of the time window. Mean graph strength was weak but became slightly
 stronger with increasing time window length during the summer, but the
 higher mean graph strength during the winter showed a slight increase
 then decrease with increasing winter length (Figure
-<a href="#fig:winlen">4</a>a). Layer relevance increased for all summer
-layers as individuals became more connected with increasing window
-lengths, but winter layers showed relatively stable but high layer
-relevance (Figure <a href="#fig:winlen">4</a>b). This pattern indicates
+<a href="#fig:winlen"><strong>??</strong></a>a). Layer relevance
+increased for all summer layers as individuals became more connected
+with increasing window lengths, but winter layers showed relatively
+stable but high layer relevance (Figure
+<a href="#fig:winlen"><strong>??</strong></a>b). This pattern indicates
 that the proportion of neighbours that were the same across layers
 increased with a longer time frame during the summer, but there were a
 high proportion of neighbors that remained the same across layers during
@@ -434,15 +438,15 @@ the winter, regardless of time length. Furthermore, though the layers
 were generally not very similar between the summer and winter, the
 length of the time window created slight variability in this metric,
 particularly for forage and open habitat types (Figure
-<a href="#fig:winlen">4</a>c). Connective redundancy increased
-marginally with increasing window length, indicating that the
+<a href="#fig:winlen"><strong>??</strong></a>c). Connective redundancy
+increased marginally with increasing window length, indicating that the
 proportions of neighbours that were the same across layers, though
 relatively high in general, slightly increased when time length was
-greater (Figure <a href="#fig:winlen">4</a>d). These results suggest
-that an increasing window length, especially for the summer season, may
-be resulting in less precisely defined seasons that are not clearly
-capturing periods of aggregation and dissaggregation related to resource
-availability.
+greater (Figure <a href="#fig:winlen"><strong>??</strong></a>d). These
+results suggest that an increasing window length, especially for the
+summer season, may be resulting in less precisely defined seasons that
+are not clearly capturing periods of aggregation and dissaggregation
+related to resource availability.
 
 Moving window positions defining seasons showed some dramatic changes in
 the multilayer network metrics as the seasons were redefined. Graph
@@ -472,7 +476,13 @@ the importance of carefully selecting temporal scale of analysis.
 
 <!-- Figure: metrics by number of observations -->
 
+<!-- TODO: update to temp -->
+
+<!-- (ref:nobs) Varying scale in number of observations. For each iteration, a number of observations (10-485 observations in steps of 25) were selected from the complete data set to construct multilayer networks of caribou social associations (*Rangifer tarandus*, n = 21 females) on Fogo Island, Newfoundland in summer 2017 and winter 2018 across three habitat classes (forage, forest, and open). A) Mean graph strength across individuals remained weak throughout for summer layers and varied for winter layers becoming relatively stable by 100 observations. B) Mean layer relevance across individuals in summer layers had consistent low layer relevance but increased sharply for winter layers between ~10 m and ~50 m observations before stabilizing. C) Similarity of network layers across habitat classes and between seasons (e.g. open summer compared to open winter) was relatively consistent across number of observations for forest and open habitats. Note, forage habitats are not shown given no individuals interacted in the summer forage layer. D) Mean connective redundancy across individuals increased rapidly between ~10 m and ~50 m observations and then remained constant. -->
+
 <!-- Figure: Window length -->
+
+<!-- (ref:winlen) Varying temporal scale in time window length. For each time window length (40 to 100 days in length increasing by 5 days in sequence), multilayer networks were constructed of caribou social associations (*Rangifer tarandus*, n = 21 females) on Fogo Island, Newfoundland in summer 2017 and winter 2018 across three habitat classes (forage, forest, and open). A) Mean graph strength across individuals in summer layers was weak but stable across increasing lengths of time except for a slight increase in strength for open and forage habitats when the season lasted more than 70 days. Mean graph strength was relatively stable over increasing time window lengths for winter layers, though there was more variation in strength between land cover types as window length increased. B) Mean layer relevance increased for summer layers across habitat classes and was stable for winter layers. C) Similarity of layers across habitat classes and between seasons (e.g. open summer compared to open winter) was variable with increasing window lengths, particularly for forage and open habitat types. D) Mean connective redundancy across individuals increased marginally with increasing window length. -->
 
 <!-- Figure: Window position -->
 
@@ -549,7 +559,7 @@ integrated in a holistic way.
 Temporal scale is also important for understanding the repercussions of
 social phenotypes. Varying the time window length and position for
 caribou, we found there was a lot of variation in the multilayer network
-metrics (Figure <a href="#fig:winlen">4</a>, Figure
+metrics (Figure <a href="#fig:winlen"><strong>??</strong></a>, Figure
 <a href="#fig:winpos"><strong>??</strong></a>). These changes in the
 outcome depending on how the time window is defined highlight how
 critical it is to properly define the time window appropriately to
@@ -768,11 +778,12 @@ spatial contexts, defined, for example, by habitat types as in Figure
 can be directly measured by differences in habitat selection and
 sociality across temporal layers as in Figure
 <a href="#fig:winpos"><strong>??</strong></a> and Figure
-<a href="#fig:winlen">4</a>. Habitat selection can be explicitly
-integrated using network layers defined by selection coefficients for
-individuals. These examples of explicit integrations of habitat
-selection and sociality across social, spatial and temporal scales
-highlight the potential for novel insights from multilayer networks.
+<a href="#fig:winlen"><strong>??</strong></a>. Habitat selection can be
+explicitly integrated using network layers defined by selection
+coefficients for individuals. These examples of explicit integrations of
+habitat selection and sociality across social, spatial and temporal
+scales highlight the potential for novel insights from multilayer
+networks.
 
 # Conclusions
 
@@ -859,7 +870,7 @@ Canada Graduate Scholarship to QMRW and a NSERC Discovery Grant to EVW.
 
 <div class="figure">
 
-<img src="../graphics/figure-1.png" alt="Space-time diagram representing variation the relative spatial and temporal extent required for different types of social and communication processes for four species, including spotted hyaena, passerine birds, sleepy lizards, and elephants. Spatial and temporal extent for social interactions, e.g. mating, grooming, or aggression, are similar for most species because physical contact between two individuals is required for many social interactions. The logical extension is that spatial and temporal extent for social interaction is hierarchically nested within the spatial and temporal extent for social association because individuals must share space to interact. By contrast, different species have potential for greater spatial and temporal extents, for example, temporal extent for vocal communication is similar for most species because most vocal calls only persist in the environment for seconds, but spatial extent for vocal communication is highly variable with elephant calls extending the great distance and passerine calls extending the shortest distance." width="\linewidth" />
+<img src="../graphics/figure-scales.png" alt="Space-time diagram representing variation the relative spatial and temporal extent required for different types of social and communication processes for four species, including spotted hyaena, passerine birds, sleepy lizards, and elephants. Spatial and temporal extent for social interactions, e.g. mating, grooming, or aggression, are similar for most species because physical contact between two individuals is required for many social interactions. The logical extension is that spatial and temporal extent for social interaction is hierarchically nested within the spatial and temporal extent for social association because individuals must share space to interact. By contrast, different species have potential for greater spatial and temporal extents, for example, temporal extent for vocal communication is similar for most species because most vocal calls only persist in the environment for seconds, but spatial extent for vocal communication is highly variable with elephant calls extending the great distance and passerine calls extending the shortest distance." width="\linewidth" />
 
 <p class="caption">
 
@@ -886,7 +897,7 @@ passerine calls extending the shortest distance.
 
 <div class="figure">
 
-\<img src=“../graphics/figure-2.png” alt=“Visualization of multilayer
+\<img src=“../graphics/figure-ml.png” alt=“Visualization of multilayer
 network for social ungulate case study representing social association
 of caribou (*Rangifer tarandus*) on Fogo Island, Newfoundland in summer
 2017 and winter 2018. Individual caribou (n = 21 females) are show as
@@ -921,7 +932,7 @@ individual “A” in winter, forest).
 
 <div class="figure">
 
-<img src="../graphics/figure-3.png" alt="Varying spatial scale in land cover resolution. For each land cover resolution, multilayer networks were constructed of caribou social associations (*Rangifer tarandus*, n = 21 females) on Fogo Island, Newfoundland in summer 2017 and winter 2018 across three habitat classes (forage, forest, and open). A) Mean graph strength of individuals in summer layers had consistent weak connections. Individuals in winter forest and open habitats increased consistently while winter forage varied with a peak at 250 m and valley at 500 m. B) Mean layer relevance showed sparse connectivity in summer compared to winter networks and a decrease in winter forage layer relevance at higher land cover resolutions. C) Similarity of land cover network layers between seasons (e.g. open summer compared to open winter) forage and forest habitats but showed more variation in open habitats with increasing social thresholds. Note that layer similarity in forage is not shown because individuals did not interact at land cover resolutions greater than 30 m during the summer in forage habitats, so layer similarity could not be calculated. D) Mean connective redundancy across individuals showed a slight decreasing trend with increasing land cover resolution." width="\linewidth" />
+<img src="../graphics/figure-lc.png" alt="Varying spatial scale in land cover resolution. For each land cover resolution, multilayer networks were constructed of caribou social associations (*Rangifer tarandus*, n = 21 females) on Fogo Island, Newfoundland in summer 2017 and winter 2018 across three habitat classes (forage, forest, and open). A) Mean graph strength of individuals in summer layers had consistent weak connections. Individuals in winter forest and open habitats increased consistently while winter forage varied with a peak at 250 m and valley at 500 m. B) Mean layer relevance showed sparse connectivity in summer compared to winter networks and a decrease in winter forage layer relevance at higher land cover resolutions. C) Similarity of land cover network layers between seasons (e.g. open summer compared to open winter) forage and forest habitats but showed more variation in open habitats with increasing social thresholds. Note that layer similarity in forage is not shown because individuals did not interact at land cover resolutions greater than 30 m during the summer in forage habitats, so layer similarity could not be calculated. D) Mean connective redundancy across individuals showed a slight decreasing trend with increasing land cover resolution." width="\linewidth" />
 
 <p class="caption">
 
@@ -948,32 +959,13 @@ slight decreasing trend with increasing land cover resolution.
 
 </div>
 
-<!-- TODO: fix to temp -->
-
 <div class="figure">
 
-<img src="../graphics/figure-4.png" alt="Varying temporal scale in time window length. For each time window length (40 to 100 days in length increasing by 5 days in sequence), multilayer networks were constructed of caribou social associations (*Rangifer tarandus*, n = 21 females) on Fogo Island, Newfoundland in summer 2017 and winter 2018 across three habitat classes (forage, forest, and open). A) Mean graph strength across individuals in summer layers was weak but stable across increasing lengths of time except for a slight increase in strength for open and forage habitats when the season lasted more than 70 days. Mean graph strength was relatively stable over increasing time window lengths for winter layers, though there was more variation in strength between land cover types as window length increased. B) Mean layer relevance increased for summer layers across habitat classes and was stable for winter layers. C) Similarity of layers across habitat classes and between seasons (e.g. open summer compared to open winter) was variable with increasing window lengths, particularly for forage and open habitat types. D) Mean connective redundancy across individuals increased marginally with increasing window length." width="\linewidth" />
+<img src="../graphics/figure-temp.png" alt="(ref:temp)" width="\linewidth" />
 
 <p class="caption">
 
-Figure 4: Varying temporal scale in time window length. For each time
-window length (40 to 100 days in length increasing by 5 days in
-sequence), multilayer networks were constructed of caribou social
-associations (*Rangifer tarandus*, n = 21 females) on Fogo Island,
-Newfoundland in summer 2017 and winter 2018 across three habitat classes
-(forage, forest, and open). A) Mean graph strength across individuals in
-summer layers was weak but stable across increasing lengths of time
-except for a slight increase in strength for open and forage habitats
-when the season lasted more than 70 days. Mean graph strength was
-relatively stable over increasing time window lengths for winter layers,
-though there was more variation in strength between land cover types as
-window length increased. B) Mean layer relevance increased for summer
-layers across habitat classes and was stable for winter layers. C)
-Similarity of layers across habitat classes and between seasons
-(e.g. open summer compared to open winter) was variable with increasing
-window lengths, particularly for forage and open habitat types. D) Mean
-connective redundancy across individuals increased marginally with
-increasing window length.
+Figure 4: (ref:temp)
 
 </p>
 
@@ -981,7 +973,7 @@ increasing window length.
 
 <div class="figure">
 
-<img src="../graphics/figure-5.png" alt="Varying scale in social threshold. For each social threshold, multilayer networks were constructed of caribou social associations (*Rangifer tarandus*, n = 21 females) on Fogo Island, Newfoundland in summer 2017 and winter 2018 across three habitat classes (forage, forest, and open). A) Mean graph strength across individuals showed an increase for winter network layers while summer network layers had consistently weak connections. B) Mean layer relevance was increased for winter layers between 5 m and 50 m, otherwise stable for all social thresholds >50
+<img src="../graphics/figure-soc.png" alt="Varying scale in social threshold. For each social threshold, multilayer networks were constructed of caribou social associations (*Rangifer tarandus*, n = 21 females) on Fogo Island, Newfoundland in summer 2017 and winter 2018 across three habitat classes (forage, forest, and open). A) Mean graph strength across individuals showed an increase for winter network layers while summer network layers had consistently weak connections. B) Mean layer relevance was increased for winter layers between 5 m and 50 m, otherwise stable for all social thresholds >50
 m for winter and all social thresholds for summer. C) Similarity of
 network layers across seasons and within habitat classes (e.g. open
 summer compared to open winter) was relatively stable for all habitat
@@ -1012,27 +1004,11 @@ all other social thresholds.
 
 <div class="figure">
 
-<img src="../graphics/figure-6.png" alt="Varying scale in number of observations. For each iteration, a number of observations (10-485 observations in steps of 25) were selected from the complete data set to construct multilayer networks of caribou social associations (*Rangifer tarandus*, n = 21 females) on Fogo Island, Newfoundland in summer 2017 and winter 2018 across three habitat classes (forage, forest, and open). A) Mean graph strength across individuals remained weak throughout for summer layers and varied for winter layers becoming relatively stable by 100 observations. B) Mean layer relevance across individuals in summer layers had consistent low layer relevance but increased sharply for winter layers between ~10 m and ~50 m observations before stabilizing. C) Similarity of network layers across habitat classes and between seasons (e.g. open summer compared to open winter) was relatively consistent across number of observations for forest and open habitats. Note, forage habitats are not shown given no individuals interacted in the summer forage layer. D) Mean connective redundancy across individuals increased rapidly between ~10 m and ~50 m observations and then remained constant." width="\linewidth" />
+<img src="../graphics/figure-nobs.png" alt="(ref:nobs)" width="\linewidth" />
 
 <p class="caption">
 
-Figure 6: Varying scale in number of observations. For each iteration, a
-number of observations (10-485 observations in steps of 25) were
-selected from the complete data set to construct multilayer networks of
-caribou social associations (*Rangifer tarandus*, n = 21 females) on
-Fogo Island, Newfoundland in summer 2017 and winter 2018 across three
-habitat classes (forage, forest, and open). A) Mean graph strength
-across individuals remained weak throughout for summer layers and varied
-for winter layers becoming relatively stable by 100 observations. B)
-Mean layer relevance across individuals in summer layers had consistent
-low layer relevance but increased sharply for winter layers between \~10
-m and \~50 m observations before stabilizing. C) Similarity of network
-layers across habitat classes and between seasons (e.g. open summer
-compared to open winter) was relatively consistent across number of
-observations for forest and open habitats. Note, forage habitats are not
-shown given no individuals interacted in the summer forage layer. D)
-Mean connective redundancy across individuals increased rapidly between
-\~10 m and \~50 m observations and then remained constant.
+Figure 6: (ref:nobs)
 
 </p>
 
