@@ -165,43 +165,47 @@ distributed throughout the population.
 Land cover data were provided by the Newfoundland and Labrador Wildlife
 Division (Integrated Informatics Inc.)<!--TODO: check ref-->. Available
 land cover classification included nine habitat types at 30 m
-resolution. We reclassified the land cover types into three categories:
-foraging habitat, open habitat, and forest habitat using the R package
-`raster` (Hijmans 2019). Foraging habitat consisted of lichen habitat,
-open habitat consisted of wetland, rocky barrens, and anthropogenic
-habitat types, while forest habitat consisted of coniferous forest,
-conifer scrub, broad leaf forest, and mixed-wood forest. Water habitat
-was excluded from all subsequent analyses.
+resolution. We reclassified the land cover types into three categories
+using the R package `raster` (Hijmans 2019): foraging, open, and forest
+habitats. Foraging habitat consisted of lichen, open habitat consisted
+of wetland, rocky barrens, and anthropogenic, while forest habitat
+consisted of coniferous forest, conifer scrub, broad leaf forest, and
+mixed-wood forest. Water habitat was excluded from all subsequent
+analyses.
 
 ## Caribou multilayer social networks
 
-### Network types and construction
+### Network layer construction
 
-We generated a multilayer social network consisting 21 individual nodes
-and two aspects (season and land cover). Two season elementary-layers
-(summer and winter) and three land cover elementary-layers (forage,
-forest, and open) combined for a total of six layers. Single layers were
-composed of individuals linked by social associations, for each season
-and land cover combination. Proximity-based social network layers were
-generated using the R package `spatsoc` (Robitaille, Webber and Vander
-Wal 2019) in R version 4.0.1 (2020-06-06) (R Core Team 2019).
+<!--We generated a multilayer social network consisting 21
+individual nodes and two aspects (season and land cover). Two season
+elementary-layers (summer and winter) and three land cover elementary-layers
+(forage, forest, and open) combined for a total of six layers. Single layers were
+composed of individuals linked by social associations, for each season and land cover combination. Proximity-based social
+network layers were generated using the R package `spatsoc` [@Robitaille_2019]
+in R version 4.0.1 (2020-06-06) [@R_Core_Team_2019].-->
 
-Within each layer, we assumed individuals were associating if
-simultaneous GPS fixes, i.e., recorded within 5 minutes of each other,
-were within a given spatial distance of one another. Typically for
-ungulates and other gregarious mammals, the ‘chain rule’ is applied for
-group assignment. For GPS data, the chain rule is applied if discrete
-spatiotemporal GPS fixes buffered by a given distance formed a
-contiguous buffer for two or more individuals, even if some individuals
-within the buffer were not within the given distance of one another
+We generated proximity-based social networks using the R package
+`spatsoc` (Robitaille, Webber and Vander Wal 2019) in R version 4.0.1
+(2020-06-06) (R Core Team 2019). We assumed individuals were associating
+if simultaneous GPS fixes were within the spatial distance threshold of
+one another. Typically for ungulates and other gregarious mammals, the
+‘chain rule’ is used for group assignment (Croft, James and Krause
+2008). For GPS data, the chain rule is applied by assigning a group
+identifier to the union of buffered GPS fixes at each time step. As
+such, individuals in a group are within the spatial distance threshold
+of at least one other though not necessarily all other individuals
 (Robitaille, Webber and Vander Wal 2019). Group assignment based on the
-chain rule has previously been applied to caribou at a distance of 50 m
-(Lesmerises, Johnson and St-Laurent 2018; Peignier et al. 2019). In all
-networks, individual caribou were represented as nodes, associations
-between individuals in a given habitat type and season were represented
-as intralayer edges, and connections between the same individuals across
-seasons and within habitat classes were represented as interlayer edges
-(Figure <a href="#fig:ml">2</a>) .
+chain rule has previously been applied to caribou using a temporal
+treshold of 5 minutes and a spatial distance threshold of 50 m
+(Lesmerises, Johnson and St-Laurent 2018; Peignier et al. 2019).
+
+<!--In
+all networks, individual caribou were represented as nodes, associations between
+individuals in a given habitat type and season were represented as intralayer
+edges, and connections between the same individuals across seasons and within
+habitat classes were represented as interlayer edges (Figure <a href="#fig:ml">2</a>) .-->
+
 <!-- eg this is connecting contexts used to calculate layer similarity -->
 
 We weighted edges of social networks by the strength of association
@@ -210,15 +214,13 @@ between caribou using the simple ratio index (SRI, Cairns and Schwager
 
 \[ SRI = \frac{x}{x + y_{AB} + y_{A} + y_{B}} \]
 
-where x is the number of fixes where individuals A and B were within a
-given distance of each other, \(y_{A}\) is the number of fixes from
-individual A when individual B did not have a simultaneous fix,
-\(y_{B}\) is the number of fixes from individual B when individual A did
-not have a simultaneous fix, and \(y_{AB}\) is the number of
-simultaneous fixes from individuals A and B that were separated by more
-than the given distance (Farine and Whitehead 2015). Social groups were
-designated if two or more individuals occurred within a given distance
-of one another at any given time point.
+where x is the number of fixes where individuals A and B were in the
+same group, \(y_{A}\) is the number of fixes from individual A when
+individual B did not have a simultaneous fix, \(y_{B}\) is the number of
+fixes from individual B when individual A did not have a simultaneous
+fix, and \(y_{AB}\) is the number of simultaneous fixes from individuals
+A and B that were separated by more than the spatial distance threshold
+(Farine and Whitehead 2015).
 
 ### Network metrics
 
@@ -261,6 +263,7 @@ in the same group, whereas at the coarsest social scale, individuals
 within 500 m of one another were considered in the same group. We
 assumed these scales represented visual (short distance) to auditory
 (long distance) sensory modalities of caribou.
+<!-- TODO: clarify not attempting ML with multiple behaviours -->
 
 ### Spatial scale
 
@@ -1161,6 +1164,13 @@ Hamer KC. Using time-series similarity measures to compare animal
 movement trajectories in ecology. *Behavioral Ecology and Sociobiology*
 2019;**73**, DOI:
 [10.1007/s00265-019-2761-1](https://doi.org/10.1007/s00265-019-2761-1).
+
+</div>
+
+<div id="ref-Croft_2008">
+
+Croft DP, James R, Krause J. *Exploring Animal Social Networks*.
+Princeton University Press, 2008.
 
 </div>
 
