@@ -158,8 +158,7 @@ discrete seasons: summer (3 August - 20 September 2017) and winter (1 January â€
 February 2018) based on caribou socioecology [@Peignier_2019].-->
 
 ## Caribou location data
-We used GPS location data collected from Fogo Island caribou in 2017, 2018 and
-2019. Adult female caribou were immobilized and fitted with global positioning
+We used GPS location data collected from Fogo Island caribou in between `r DT[, format(min(datetime), '%F')]` and `r DT[, format(max(datetime), '%F')]`. Adult female caribou were immobilized and fitted with global positioning
 system (GPS) collars (Lotek Wireless Inc., Newmarket, ON, Canada, GPS4400M
 collars, 1,250 g) as described by [@Schaefer_2013]. Collars were programmed to
 collect location fixes every 2 hours. Prior to analyses, we subset GPS fixes
