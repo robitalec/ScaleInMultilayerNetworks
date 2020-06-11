@@ -94,7 +94,7 @@ connective_redudancy <- function(DT) {
 #'
 #' @param DT 
 #' @param degree 
-#' @param splitBy this is not the splitBy (eg season)
+#' @param splitBy
 #' @param id 
 #'
 #' @return
@@ -102,13 +102,14 @@ connective_redudancy <- function(DT) {
 #' @export
 #'
 #' @examples
-multi_degree <- function(DT, degree, id, splitBy = NULL) {
-  # TODO: check columns
-  # TODO: warn overwrite
+multi_degree <- function(DT, degree, id, splitBy) {
+  md <- DT[, unique(.SD), .SDcols = c(degree, id, splitBy)][, 
+      .(multideg = sum(.SD[[1]])), .SDcols = degree, by = id]
   
-  DT[, multideg := sum(.SD),
-     .SDcol = degree,
-     by = c(id, splitBy)][]
+  DT[md, multideg := multideg, on = id]
+  # DT[, multideg := sum(.SD),
+  #    .SDcol = degree,
+  #    by = c(id, splitBy)][]
 }
 
 
