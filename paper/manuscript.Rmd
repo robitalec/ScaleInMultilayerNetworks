@@ -292,6 +292,16 @@ each combination of habitat layer and spatial scale.
 
 
 ### Temporal scale
+#### Time window length and position
+We altered the temporal scale of multilayer networks by varying the length and
+position of the time window used to define seasons. The length of the time
+window varied from 40-100 days using a fixed start day for summer (starting at 3
+August 2017) and winter (starting at 1 January 2018). The position of the time
+window was shifted by 1-48 days, using a fixed time window length of 48 days.
+These new time windows were iteratively used to partition data into two discrete
+seasons (summer and winter) and generate multilayer networks.
+
+
 #### Number of observations
 Studies of social network analysis vary in the number and frequency of
 observations as well as the data collection technique used to generate networks
@@ -307,14 +317,6 @@ iteration (10 - 485 observations). Subsequent iterations included the previous
 set of observations to mimic collection of observational data. 
 
 
-#### Time window length and position
-We altered the temporal scale of multilayer networks by varying the length and
-position of the time window used to define seasons. The length of the time
-window varied from 40-100 days using a fixed start day for summer (starting at 3
-August 2017) and winter (starting at 1 January 2018). The position of the time
-window was shifted by 1-48 days, using a fixed time window length of 48 days.
-These new time windows were iteratively used to partition data into two discrete
-seasons (summer and winter) and generate multilayer networks.
 
 
 # Results
