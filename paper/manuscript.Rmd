@@ -799,7 +799,7 @@ NSERC Discovery Grant to EVW.
 \newpage
 
 ```{r spacetime, fig.cap='(ref:spacetime)'}
-knitr::include_graphics('../graphics/figure1.png')
+knitr::include_graphics('../graphics/figure-1.png')
 ```
 
 \newpage
@@ -808,35 +808,30 @@ knitr::include_graphics('../graphics/figure1.png')
 knitr::include_graphics('../graphics/figure-2.png')
 ```
 
-\newpage
-
-```{r socres, fig.cap='(ref:socres)'}
-knitr::include_graphics('../graphics/figure-spatialthreshold.png')
-```
 
 \newpage
 
 ```{r lcres, fig.cap='(ref:lcres)'}
-knitr::include_graphics('../graphics/figure-lcres.png')
+knitr::include_graphics('../graphics/figure-3.png')
+```
+
+\newpage
+
+<!-- TODO: fix to temp -->
+```{r winlen, fig.cap='(ref:winlen)'}
+knitr::include_graphics('../graphics/figure-4.png')
+```
+
+\newpage
+
+```{r socres, fig.cap='(ref:socres)'}
+knitr::include_graphics('../graphics/figure-5.png')
 ```
 
 \newpage
 
 ```{r nobs, fig.cap='(ref:nobs)'}
-knitr::include_graphics('../graphics/figure-nobs.png')
-```
-
-\newpage
-
-
-```{r winlen, fig.cap='(ref:winlen)'}
-knitr::include_graphics('../graphics/figure-winlength.png')
-```
-
-\newpage
-
-```{r winpos, fig.cap='(ref:winpos)'}
-knitr::include_graphics('../graphics/figure-winpos.png')
+knitr::include_graphics('../graphics/figure-6.png')
 ```
 
 \newpage
