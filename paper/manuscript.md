@@ -277,15 +277,16 @@ each combination of habitat layer and spatial distance threshold.
 
 ### Spatial scale
 
+<!-- TODO: Increased spatial scale of land cover corresponds to xyz -->
+
 To assess the influence of spatial scale, we aggregated the land cover
-raster at varying scales relevant to caribou ecology. We aggregated the
-original 30 m land cover raster using the R package `grainchanger`
-(Graham 2019) across a series of scales (100 - 1000 m by steps of 100 m)
-The land cover raster was aggregated using a modal moving window method
-using a circular window corresponding to the above scales (Graham et al.
-2019). We assume 30 m and 100 m represents fine-scale decision making
-for caribou during foraging, while re-sampling at 500 m , 750 m and 1000
-m represents the scale at which caribou tend to select and avoid habitat
+raster using the R package `grainchanger` (Graham 2019) across a series
+of scales (100 - 1000 m by steps of 100 m). The land cover raster was
+aggregated using a modal moving window method using a circular window
+corresponding to the above scales (Graham et al. 2019). We assume 30 m
+and 100 m represents fine-scale decision making for caribou during
+foraging, while re-sampling at 500 m , 750 m and 1000 m represents the
+scale at which caribou tend to select and avoid habitat
 (Bastille-Rousseau et al. 2017). For each spatial scale, we generated a
 multilayer network consisting of the social association between 21
 individuals across three habitat layers (open, forest and forage) for
@@ -483,15 +484,13 @@ the importance of carefully selecting temporal scale of analysis.
 
 <!-- TODO: update to temp -->
 
-<!-- (ref:nobs) Varying scale in number of observations. For each iteration, a number of observations (10-485 observations in steps of 25) were selected from the complete data set to construct multilayer networks of caribou social associations (*Rangifer tarandus*, n = 21 females) on Fogo Island, Newfoundland in summer 2017 and winter 2018 across three habitat classes (forage, forest, and open). A) Mean graph strength across individuals remained weak throughout for summer layers and varied for winter layers becoming relatively stable by 100 observations. B) Mean layer relevance across individuals in summer layers had consistent low layer relevance but increased sharply for winter layers between ~10 m and ~50 m observations before stabilizing. C) Similarity of network layers across habitat classes and between seasons (e.g. open summer compared to open winter) was relatively consistent across number of observations for forest and open habitats. Note, forage habitats are not shown given no individuals interacted in the summer forage layer. D) Mean connective redundancy across individuals increased rapidly between ~10 m and ~50 m observations and then remained constant. -->
-
 <!-- Figure: Window length -->
 
-<!-- (ref:winlen) Varying temporal scale in time window length. For each time window length (40 to 100 days in length increasing by 5 days in sequence), multilayer networks were constructed of caribou social associations (*Rangifer tarandus*, n = 21 females) on Fogo Island, Newfoundland in summer 2017 and winter 2018 across three habitat classes (forage, forest, and open). A) Mean graph strength across individuals in summer layers was weak but stable across increasing lengths of time except for a slight increase in strength for open and forage habitats when the season lasted more than 70 days. Mean graph strength was relatively stable over increasing time window lengths for winter layers, though there was more variation in strength between land cover types as window length increased. B) Mean layer relevance increased for summer layers across habitat classes and was stable for winter layers. C) Similarity of layers across habitat classes and between seasons (e.g. open summer compared to open winter) was variable with increasing window lengths, particularly for forage and open habitat types. D) Mean connective redundancy across individuals increased marginally with increasing window length. -->
-
-<!-- Figure: Window position -->
+(ref:temp) Varying temporal scale in time window length.
 
 # Discussion
+
+<!-- TODO: caveat social scale could also be diff types of relationships but GPS but point to hmm -->
 
 The integration of behavioural and ecological theory has shown the value
 of considering the importance of various ecological disciplines to
@@ -792,6 +791,8 @@ networks.
 
 # Conclusions
 
+<!-- TODO: push gps data, HMM networks, etc-->
+
 Multilayer networks remain a nascent but powerful tool in animal
 behavioural ecology. We demonstrate the potential novel analyses that
 vary social, spatial, and temporal scale within a multilayer framework.
@@ -937,28 +938,26 @@ individual “A” in winter, forest).
 
 <div class="figure">
 
-<img src="../graphics/figure-lc.png" alt="Varying spatial scale in land cover resolution. For each land cover resolution, multilayer networks were constructed of caribou social associations (*Rangifer tarandus*, n = 21 females) on Fogo Island, Newfoundland in summer 2017 and winter 2018 across three habitat classes (forage, forest, and open). A) Mean graph strength of individuals in summer layers had consistent weak connections. Individuals in winter forest and open habitats increased consistently while winter forage varied with a peak at 250 m and valley at 500 m. B) Mean layer relevance showed sparse connectivity in summer compared to winter networks and a decrease in winter forage layer relevance at higher land cover resolutions. C) Similarity of land cover network layers between seasons (e.g. open summer compared to open winter) forage and forest habitats but showed more variation in open habitats with increasing social thresholds. Note that layer similarity in forage is not shown because individuals did not interact at land cover resolutions greater than 30 m during the summer in forage habitats, so layer similarity could not be calculated. D) Mean connective redundancy across individuals showed a slight decreasing trend with increasing land cover resolution." width="\linewidth" />
+<img src="../graphics/figure-lc.png" alt="Varying spatial scale of land cover raster. For each land cover resolution (5, 25, 50, 75, 100, 250 and 500 m), multilayer networks were constructed of caribou social associations (*Rangifer tarandus*, n = 21 females) on Fogo Island, Newfoundland between 2017-04-21 and 2019-03-27 across three habitat classes (forage, forest, and open). A, B, C) Three land cover rasters: the original resolution (30 m) and two aggregated rasters (500 m and 1000 m). D) Edge overlap of habitat layers across spatial resolutions. Open and forest layers show consistent edge overlap with increasing spatial resolution while forage shows a sharp decline in edge overlap between 30 m and 600 m. Above 600 m, the forage layers are stable. E) Graph strength (mean of individuals in bold) within habitat layers across spatial resolution. Forage layers showed high variation in graph strength with many individuals dropping to 0 after 500 m and others increasing with spatial resolution. Open layers and forest layers were relatively stable across spatial resolutions, with higher mean graph strength in open compared to forest." width="\linewidth" />
 
 <p class="caption">
 
-Figure 3: Varying spatial scale in land cover resolution. For each land
-cover resolution, multilayer networks were constructed of caribou social
-associations (*Rangifer tarandus*, n = 21 females) on Fogo Island,
-Newfoundland in summer 2017 and winter 2018 across three habitat classes
-(forage, forest, and open). A) Mean graph strength of individuals in
-summer layers had consistent weak connections. Individuals in winter
-forest and open habitats increased consistently while winter forage
-varied with a peak at 250 m and valley at 500 m. B) Mean layer relevance
-showed sparse connectivity in summer compared to winter networks and a
-decrease in winter forage layer relevance at higher land cover
-resolutions. C) Similarity of land cover network layers between seasons
-(e.g. open summer compared to open winter) forage and forest habitats
-but showed more variation in open habitats with increasing social
-thresholds. Note that layer similarity in forage is not shown because
-individuals did not interact at land cover resolutions greater than 30 m
-during the summer in forage habitats, so layer similarity could not be
-calculated. D) Mean connective redundancy across individuals showed a
-slight decreasing trend with increasing land cover resolution.
+Figure 3: Varying spatial scale of land cover raster. For each land
+cover resolution (5, 25, 50, 75, 100, 250 and 500 m), multilayer
+networks were constructed of caribou social associations (*Rangifer
+tarandus*, n = 21 females) on Fogo Island, Newfoundland between
+2017-04-21 and 2019-03-27 across three habitat classes (forage, forest,
+and open). A, B, C) Three land cover rasters: the original resolution
+(30 m) and two aggregated rasters (500 m and 1000 m). D) Edge overlap of
+habitat layers across spatial resolutions. Open and forest layers show
+consistent edge overlap with increasing spatial resolution while forage
+shows a sharp decline in edge overlap between 30 m and 600 m. Above 600
+m, the forage layers are stable. E) Graph strength (mean of individuals
+in bold) within habitat layers across spatial resolution. Forage layers
+showed high variation in graph strength with many individuals dropping
+to 0 after 500 m and others increasing with spatial resolution. Open
+layers and forest layers were relatively stable across spatial
+resolutions, with higher mean graph strength in open compared to forest.
 
 </p>
 
@@ -978,30 +977,20 @@ Figure 4: (ref:temp)
 
 <div class="figure">
 
-<img src="../graphics/figure-soc.png" alt="Varying scale in social threshold. For each social threshold, multilayer networks were constructed of caribou social associations (*Rangifer tarandus*, n = 21 females) on Fogo Island, Newfoundland in summer 2017 and winter 2018 across three habitat classes (forage, forest, and open). A) Mean graph strength across individuals showed an increase for winter network layers while summer network layers had consistently weak connections. B) Mean layer relevance was increased for winter layers between 5 m and 50 m, otherwise stable for all social thresholds >50
-m for winter and all social thresholds for summer. C) Similarity of
-network layers across seasons and within habitat classes (e.g. open
-summer compared to open winter) was relatively stable for all habitat
-class layers. D) Mean connective redundancy across individuals showed an
-increase between 5 m and 50 m before remaining stable through all other
-social thresholds." width=“” /\>
+<img src="../graphics/figure-soc.png" alt="Varying scale in spatial distance threshold. For each spatial distance threshold (100 - 1000 m by steps of 100 m), multilayer networks were constructed of caribou social associations (*Rangifer tarandus*, n = 21 females) on Fogo Island, Newfoundland between 2017-04-21 and 2019-03-27 across three habitat classes (forage, forest, and open). Graph strength (mean of individuals in bold) showed a sharp increase between 5 m and 100 m for all habitat classes. After 100 m, graph strength continued to increase at a slower rate. Open and forage layers showed higher variation in graph strength between individuals while the forest layer had less variation and lower mean graph strength." width="\linewidth" />
 
 <p class="caption">
 
-Figure 5: Varying scale in social threshold. For each social threshold,
-multilayer networks were constructed of caribou social associations
-(*Rangifer tarandus*, n = 21 females) on Fogo Island, Newfoundland in
-summer 2017 and winter 2018 across three habitat classes (forage,
-forest, and open). A) Mean graph strength across individuals showed an
-increase for winter network layers while summer network layers had
-consistently weak connections. B) Mean layer relevance was increased for
-winter layers between 5 m and 50 m, otherwise stable for all social
-thresholds \>50 m for winter and all social thresholds for summer. C)
-Similarity of network layers across seasons and within habitat classes
-(e.g. open summer compared to open winter) was relatively stable for all
-habitat class layers. D) Mean connective redundancy across individuals
-showed an increase between 5 m and 50 m before remaining stable through
-all other social thresholds.
+Figure 5: Varying scale in spatial distance threshold. For each spatial
+distance threshold (100 - 1000 m by steps of 100 m), multilayer networks
+were constructed of caribou social associations (*Rangifer tarandus*, n
+= 21 females) on Fogo Island, Newfoundland between 2017-04-21 and
+2019-03-27 across three habitat classes (forage, forest, and open).
+Graph strength (mean of individuals in bold) showed a sharp increase
+between 5 m and 100 m for all habitat classes. After 100 m, graph
+strength continued to increase at a slower rate. Open and forage layers
+showed higher variation in graph strength between individuals while the
+forest layer had less variation and lower mean graph strength.
 
 </p>
 
@@ -1009,11 +998,23 @@ all other social thresholds.
 
 <div class="figure">
 
-<img src="../graphics/figure-nobs.png" alt="(ref:nobs)" width="\linewidth" />
+<img src="../graphics/figure-nobs.png" alt="Varying scale in number of observations. Multilayer networks were generated using a sample number of observations (10 - 1000 observations by steps of 10) of caribou social associations (*Rangifer tarandus*, n = 21 females) on Fogo Island, Newfoundland between 2017-04-21 and 2019-03-27 across three habitat classes (forage, forest, and open). A) Graph strength was highly variable at low number of observations (less than 100) for all habitat layers and relatively stable after 200 observations. B) Edge overlap increased for all habitat layers with increasing number of observations. Open and forage layers had higher edge overlap than forest layers. C) Multidegree increased for all individuals with increasing number of observations. Individuals showed high variability (3 - 51) at the maximal number of observations (1000)." width="\linewidth" />
 
 <p class="caption">
 
-Figure 6: (ref:nobs)
+Figure 6: Varying scale in number of observations. Multilayer networks
+were generated using a sample number of observations (10 - 1000
+observations by steps of 10) of caribou social associations (*Rangifer
+tarandus*, n = 21 females) on Fogo Island, Newfoundland between
+2017-04-21 and 2019-03-27 across three habitat classes (forage, forest,
+and open). A) Graph strength was highly variable at low number of
+observations (less than 100) for all habitat layers and relatively
+stable after 200 observations. B) Edge overlap increased for all habitat
+layers with increasing number of observations. Open and forage layers
+had higher edge overlap than forest layers. C) Multidegree increased for
+all individuals with increasing number of observations. Individuals
+showed high variability (3 - 51) at the maximal number of observations
+(1000).
 
 </p>
 
