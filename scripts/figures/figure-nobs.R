@@ -37,7 +37,7 @@ gprop <- ggplot(DT, aes(color = lcname)) +
   guides(color = FALSE) +
   scale_color_manual(values = lccolors) +
   base +
-  labs(x = NULL, y = 'Edge Overlap') +
+  labs(x = NULL, y = 'Edge Overlap', subtitle = 'B)') +
   ylim(0, 1)
 
 
@@ -52,8 +52,8 @@ gstr <- ggplot(DT, aes(color = lcname, group = lcname)) +
   facet_wrap(~lcname) +
   scale_color_manual(values = lccolors) +
   base +
-  labs(x = NULL, y = 'Graph Strength') +
-  theme(legend.position="bottom")
+  labs(x = NULL, y = 'Graph Strength', subtitle = 'A)') +
+  theme(legend.position = 'bottom')
 
 
 # Layer similarity
@@ -69,7 +69,7 @@ gstr <- ggplot(DT, aes(color = lcname, group = lcname)) +
 gmult <- ggplot(DT, aes(group = ANIMAL_ID)) +
   geom_line(aes(x = nobs, y = multideg)) +
   base +
-  labs(x = xlab, y = 'Multidegree')
+  labs(x = xlab, y = 'Multidegree', subtitle = 'C)')
 
 
 
