@@ -298,10 +298,11 @@ edges observed in each combination of habitat layer and spatial scale.
 We used a temporal multilayer network to assess the seasonality of caribou
 sociality. Multilayer networks consisted of the social association between 
 `r DT[, uniqueN(get(idcol))]` individuals across 20 ordinal sample periods of 35-36
-days taken from the entire study period. Social associations were
-defined by spatiotemporal overlap of individuals within 5 minutes and 50 m. In each time
-window, we calculated individual graph strength and multidegree, and across the series of networks, we calculated edge overlap to determine proportion of
-total edges observed in each time window.
+days taken from the entire study period. Social associations were defined by
+spatiotemporal overlap of individuals within 5 minutes and 50 m. In each time
+window, we calculated individual graph strength and multidegree, and across the
+series of networks, we calculated edge overlap to determine proportion of total
+edges observed in each time window.
 
 
 #### Number of observations
@@ -461,9 +462,10 @@ highlighting the importance of carefully selecting temporal scale of analysis.
 
 
 <!-- Figure: Window length -->
-(ref:temp) Varying temporal scale in time window length. 
+(ref:temp) Varying temporal scale in multilayer networks.  
+Multilayer networks were generated of caribou social associations (*Rangifer tarandus*, n = `r DT[, uniqueN(get(idcol))]` females) on Fogo Island, Newfoundland within ordinal time windows (20 ordinal sample periods of 35-36 days) between `r DT[, format(min(datetime), '%F')]` and `r DT[, format(max(datetime), '%F')]`. A) Edge overlap across time windows showed two periods of low overlap (time windows 2-5 and 12-15), and three periods of high overlap (time windows 1, 6-11, 15-20). B) Ordinal network layers showing unweighted edges between individuals within time windows. Like edge overlap, individuals were more connected in time window 1, 6-11, and 15-20, compared to 2-5 and 12-15. C) Graph strength within time windows showing individuals as thin grey lines and mean across individuals as thick grey lines. Graph strength peaked in time window 9, with noticeable higher strength than the following year. 
 
-
+<!-- a bit more for g strength? -->
 
 # Discussion
 
