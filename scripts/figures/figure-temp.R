@@ -36,7 +36,7 @@ gprop <- ggplot(DT) +
   geom_line(aes(x = middate, y = propedges)) + 
   scale_color_manual(values = lccolors) +
   base +
-  labs(x = NULL, y = 'Edge Overlap') + 
+  labs(x = NULL, y = 'Edge Overlap', subtitle = 'A)') + 
   ylim(0, 1) +
   scale_x_date(expand = c(0, 0))
 
@@ -53,7 +53,7 @@ gstr <- ggplot(DT) +
   geom_line(aes(x = middate, y = meangraphstrength)) + 
   guides(color = FALSE) +
   base +
-  labs(x = xlab, y = 'Graph Strength') +
+  labs(x = xlab, y = 'Graph Strength', subtitle = 'C)') +
   scale_x_date(expand = c(0, 0))
 
 
@@ -85,7 +85,8 @@ gnn <- ggplot(
     geom_nodes(aes(xend, yend)) +
     theme_blank() + 
     theme(strip.background = element_blank(),
-          strip.text = element_blank())
+          strip.text = element_blank()) + 
+    labs(subtitle = 'B)')
 
 # Number of individuals
 (gnid <- ggplot(unique(DT[, .(middate, mindate, maxdate, nid)])) +
