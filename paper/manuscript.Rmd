@@ -446,20 +446,12 @@ highlighting the importance of carefully selecting temporal scale of analysis.
 
 
 <!-- Figure: metrics by social scale -->
-(ref:socres) Varying scale in spatial distance threshold. For each spatial distance threshold, multilayer networks were constructed of caribou social associations (*Rangifer tarandus*, n = `r DT[, uniqueN(get(idcol))]` females) on Fogo Island, Newfoundland between `r DT[, format(min(datetime), '%F')]` and `r DT[, format(max(datetime), '%F')]` across three habitat classes (forage, forest, and open). Graph strength showed a sharp increase between 5 m and 100 m for all habitat classes. After 100 m, graph strength continued to increase at a slower rate. Open and forage layers showed higher variation in graph strength between individuals while the forest layer had 
-
-less variation, overall lower strength
-
-
+(ref:socres) Varying scale in spatial distance threshold. For each spatial distance threshold, multilayer networks were constructed of caribou social associations (*Rangifer tarandus*, n = `r DT[, uniqueN(get(idcol))]` females) on Fogo Island, Newfoundland between `r DT[, format(min(datetime), '%F')]` and `r DT[, format(max(datetime), '%F')]` across three habitat classes (forage, forest, and open). Graph strength (mean of individuals in bold) showed a sharp increase between 5 m and 100 m for all habitat classes. After 100 m, graph strength continued to increase at a slower rate. Open and forage layers showed higher variation in graph strength between individuals while the forest layer had 
+less variation and lower mean graph strength. 
 
 
 <!-- Figure: metrics by land cover resolution -->
-(ref:lcres) Varying spatial scale of land cover raster.
-
-
-For each land cover resolution, multilayer networks were constructed of caribou social associations (*Rangifer tarandus*, n = `r DT[, uniqueN(get(idcol))]` females) on Fogo Island, Newfoundland between `r DT[, format(min(datetime), '%F')]` and `r DT[, format(max(datetime), '%F')]` across three habitat classes (forage, forest, and open). A, B, C) Three land cover rasters include the original resolution (30 m) and two aggregated rasters (500 m and 1000 m). D) Edge overlap of habitat layers across spatial resolutions. Open and forest layers show consistent edge overlap with increasing spatial resolution while forage shows a sharp decline in edge overlap between 30 m and 600 m. Above 600 m, the forage layers are stable  
-
-E) Graph strength within habitat layers across spatial resolution. 
+(ref:lcres) Varying spatial scale of land cover raster. For each land cover resolution, multilayer networks were constructed of caribou social associations (*Rangifer tarandus*, n = `r DT[, uniqueN(get(idcol))]` females) on Fogo Island, Newfoundland between `r DT[, format(min(datetime), '%F')]` and `r DT[, format(max(datetime), '%F')]` across three habitat classes (forage, forest, and open). A, B, C) Three land cover rasters: the original resolution (30 m) and two aggregated rasters (500 m and 1000 m). D) Edge overlap of habitat layers across spatial resolutions. Open and forest layers show consistent edge overlap with increasing spatial resolution while forage shows a sharp decline in edge overlap between 30 m and 600 m. Above 600 m, the forage layers are stable. E) Graph strength within habitat layers across spatial resolution. 
 
 high variability and maximum in  forage
 relatively stable in forest
