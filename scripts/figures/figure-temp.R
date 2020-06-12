@@ -38,7 +38,7 @@ gprop <- ggplot(DT) +
   base +
   labs(x = NULL, y = 'Edge Overlap', subtitle = 'A)') + 
   ylim(0, 1) +
-  scale_x_date(expand = c(0, 0))
+  scale_x_date(expand = c(0, 0), breaks = scales::pretty_breaks(n = 10))
 
 
 
@@ -54,19 +54,19 @@ gstr <- ggplot(DT) +
   guides(color = FALSE) +
   base +
   labs(x = xlab, y = 'Graph Strength', subtitle = 'C)') +
-  scale_x_date(expand = c(0, 0))
+  scale_x_date(expand = c(0, 0), breaks = scales::pretty_breaks(n = 10))
 
 
 # Layer similarity
-gsim <- ggplot(DT) +
-    geom_line(aes(x = middate, layersim)) + 
-    geom_segment(aes(x = mindate, xend = maxdate, 
-                     y = layersim, yend = layersim),
-                 size = 0.5, alpha = 0.3) + 
-    guides(color = FALSE) +
-    base +
-    labs(x = xlab, y = 'Layer Similarity') +
-  scale_x_date(expand = c(0, 0))
+# gsim <- ggplot(DT) +
+#     geom_line(aes(x = middate, layersim)) + 
+#     geom_segment(aes(x = mindate, xend = maxdate, 
+#                      y = layersim, yend = layersim),
+#                  size = 0.5, alpha = 0.3) + 
+#     guides(color = FALSE) +
+#     base +
+#     labs(x = xlab, y = 'Layer Similarity') +
+#   scale_x_date(expand = c(0, 0), breaks = scales::pretty_breaks(n = 10))
 
 # Network
 gnn <- ggplot(
