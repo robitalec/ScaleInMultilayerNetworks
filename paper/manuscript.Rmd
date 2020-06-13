@@ -354,33 +354,6 @@ features and habitats relevant to study species, such as important patchy and
 rare habitats.
 
 
-As the number of observations used to generate multilayer networks increased,
-individuals became more connected and metrics appeared to stabilize. Mean graph
-strength was consistently weak in summer layers but varied in winter layers at
-low number of observations, becoming stable at ~75 observations (Figure
-\@ref(fig:nobs)a). Layer relevance in the summer was consistently low, but
-winter layers increased between approximately 10  and 100  observations,
-remaining stable with additional observations (Figure \@ref(fig:nobs)b). Like
-coarse land cover resolution (Figure \@ref(fig:lcres)), low numbers of
-observations were not sufficient for capturing individuals in all contexts and
-therefore layer similarity could not be calculated below ~30 observations for
-forest, approximately ~80 observations for open (Figure \@ref(fig:nobs)c). Layer
-similarity was not possible to calculate for forage layers because there were no
-connected individuals in summer forage. Once sufficient observations were
-obtained, layer similarity showed some variability with increasing numbers of
-observations for forest and was relatively stable in open layers. Connective
-redundancy increased dramatically between ~10 and ~50 observations before
-stabilizing with additional observations included (Figure \@ref(fig:nobs)d).
-Given the observed trend of these multilayer metrics stabilizing after a certain
-number of observations are included, the results suggest this sensitivity method
-could be useful for determining the number of observations necessary for
-sufficiently describing social dynamics across contexts.
-
-<!-- TODO: I'm not sure this is relevant since this is the main way it
-is already done, can we make this thought more relevant to picking scales or
-multilayer networks in general? I think it's important for building robust
-networks -->
-
 Some multilayer network metrics were strongly influenced by the length of the
 time window. Mean graph strength was weak but became slightly stronger with
 increasing time window length during the summer, but the higher mean graph
@@ -423,6 +396,33 @@ time window in this case results in a mismatch between expected periods of
 resource seasonality and corresponding sociality, particularly for the summer,
 highlighting the importance of carefully selecting temporal scale of analysis.
 
+
+As the number of observations used to generate multilayer networks increased,
+individuals became more connected and metrics appeared to stabilize. Mean graph
+strength was consistently weak in summer layers but varied in winter layers at
+low number of observations, becoming stable at ~75 observations (Figure
+\@ref(fig:nobs)a). Layer relevance in the summer was consistently low, but
+winter layers increased between approximately 10  and 100  observations,
+remaining stable with additional observations (Figure \@ref(fig:nobs)b). Like
+coarse land cover resolution (Figure \@ref(fig:lcres)), low numbers of
+observations were not sufficient for capturing individuals in all contexts and
+therefore layer similarity could not be calculated below ~30 observations for
+forest, approximately ~80 observations for open (Figure \@ref(fig:nobs)c). Layer
+similarity was not possible to calculate for forage layers because there were no
+connected individuals in summer forage. Once sufficient observations were
+obtained, layer similarity showed some variability with increasing numbers of
+observations for forest and was relatively stable in open layers. Connective
+redundancy increased dramatically between ~10 and ~50 observations before
+stabilizing with additional observations included (Figure \@ref(fig:nobs)d).
+Given the observed trend of these multilayer metrics stabilizing after a certain
+number of observations are included, the results suggest this sensitivity method
+could be useful for determining the number of observations necessary for
+sufficiently describing social dynamics across contexts.
+
+<!-- TODO: I'm not sure this is relevant since this is the main way it
+is already done, can we make this thought more relevant to picking scales or
+multilayer networks in general? I think it's important for building robust
+networks -->
 
 
 <!-- Figure: metrics by social scale -->
