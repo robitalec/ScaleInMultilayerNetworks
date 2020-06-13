@@ -353,6 +353,13 @@ land cover product used has a resolution fine enough to detect landscape
 features and habitats relevant to study species, such as important patchy and
 rare habitats.
 
+The ordinal multilayer network generated from discrete time windows indicated 
+within-year periods of increased caribou sociality. Edge overlap 
+
+
+
+
+
 
 Some multilayer network metrics were strongly influenced by the length of the
 time window. Mean graph strength was weak but became slightly stronger with
