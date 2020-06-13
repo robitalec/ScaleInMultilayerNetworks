@@ -2,6 +2,11 @@
 .Rhistory
 .RData
 .Ruserdata
-data/
+
 .DS_Store
 .~lock*
+
+data/derived-data
+data/raw-data
+data/supp-data/*
+!data/supp-data/timecut-defs.csv

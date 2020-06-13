@@ -39,6 +39,8 @@ DT[, maxdate := max(date), by = timecut]
 
 DT[, nid := uniqueN(ANIMAL_ID), timecut]
 
+fwrite(unique(DT[, .(timecut, mindate, maxdate)]),
+       'data/supp-data/timecut-defs.csv')
 
 # Temporal grouping with spatsoc ------------------------------------------
 group_times(
