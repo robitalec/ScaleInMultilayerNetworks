@@ -339,30 +339,19 @@ for generating social networks in caribou and similar species.
 
 Increasing land cover resolution resulted in a decreased availability of forage,
 a rare and patchy habitat, and corresponding low connectivity of individuals in
-these habitats. Individuals in summer layers had consistent weak connections
-(Figure \@ref(fig:lcres)a). Mean graph strength increased consistently in winter
-forest and open habitats but varied in winter forage varied across land cover
-resolutions with an increase at 250 m and decrease at 500 m (Figure
-\@ref(fig:lcres)a). Layer relevance was stable for all habitat classes in summer
-layers; layer relevance was significantly higher in winter and stable in open
-and forest habitats but decreased for forage habitats (Figure
-\@ref(fig:lcres)b). <!--This pattern during the winter indicates that
-individuals had fewer neighbours in forage habitat habitats compared to their
-overall neighbourhood across habitats, likely due to the patchy nature of
-forage-->Layer similarity was low but stable for forest and open, except for a
-sharp decrease in layer similarity in open at 100 m and 250 m (Figure
-\@ref(fig:lcres)c). Layer similarity was not possible to calculate between
-summer and winter forage because, at all land cover resolutions greater than 30
-m, there were no individuals connected in the network layers. Individuals still
-used forage habitats, but given the lower availability due to increasing
-land cover resolution, at a much lower rate. Connective redundancy was moderately
-high but decreased slightly as land cover resolution increased, indicating that
-many neighbours were the same between layers, but the proportion of neighbours
-in each layer slightly decreased at increasing land cover resolutions (Figure
-\@ref(fig:lcres)d). Overall, these results indicate the importance of matching
-land cover resolution to scale of selection as well as ensuring the land cover
-product used has a resolution fine enough to detect landscape features and
-habitats relevant to study species, such as important patchy and rare habitats.
+these habitats at higher resolution (Figure \@ref(fig:lcres)). Graph strength
+and edge overlap was relatively consistent across land cover resolutions for
+forest and open layers (Figure \@ref(fig:lcres) D, E). Edge overlap decreased
+sharply between 30 m and 600 m in forage layers, afterwards remaining stable to
+1000 m (Figure \@ref(fig:lcres) D). Graph strength was more variable within
+forage layers across land cover resolutions than open and forest (Figure
+\@ref(fig:lcres) D). The proportion of relocations in forest and open habitats
+increased with increasing spatial resolution, while decreasing in forage habitat
+(Supp. 1 <!-- todo-->).  Overall, these results indicate the importance of
+matching land cover resolution to scale of selection as well as ensuring the
+land cover product used has a resolution fine enough to detect landscape
+features and habitats relevant to study species, such as important patchy and
+rare habitats.
 
 
 As the number of observations used to generate multilayer networks increased,
