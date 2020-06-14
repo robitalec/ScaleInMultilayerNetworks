@@ -24,8 +24,8 @@ base <-
       colour = 'black',
       fill = NA,
       size = 1
-    )
-  
+    ),
+    strip.background = element_rect(fill = NA, color = 'black')
 )
 
 
