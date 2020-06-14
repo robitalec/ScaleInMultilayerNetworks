@@ -356,9 +356,9 @@ rare habitats.
 
 <!-- TODO add? each ordinal network layer consisted of avg 380 fixes * ID -->
 
-The ordinal multilayer network generated from discrete time windows indicate
-within-year periods of increased caribou sociality. Edge overlap was higher in time windows 1, 6-11 and 15-20 than in time windows 2-5 and 12-15  (Figure \@ref(fig:temp) A). Time windows of higher edge overlap, between approximately October and May, had correspondingly higher graph strength compared to time windows of lower edge overlap, between approximately May and October (Figure \@ref(fig:temp) C). Graph strength peaked across the time series in periods 9 and 10. These results suggest that ordinal multilayer networks
-can effectively capture discrete time windows of aggregation and dissaggregation related to resource availability, and the importance of carefully selecting the temporal scale of analysis. 
+The ordinal multilayer network generated indicated
+within-year time windows of increased caribou sociality. Edge overlap was higher in time windows 1, 6-11 and 15-20 than in time windows 2-5 and 12-15  (Figure \@ref(fig:temp) A). Time windows of higher edge overlap, between approximately October and May, had correspondingly higher graph strength compared to time windows of lower edge overlap, between approximately May and October (Figure \@ref(fig:temp) C). Graph strength peaked across the time series in periods 9 and 10. These results suggest that ordinal multilayer networks
+can effectively capture discrete time windows of aggregation and dissaggregation related to resource availability, and highlight the importance of carefully selecting the temporal scale of analysis. 
 
 <!-- TODO: reduce to this version -->
 As the number of observations used to generate multilayer networks increased,
