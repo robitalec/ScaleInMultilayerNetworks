@@ -375,51 +375,37 @@ important patchy and rare habitats.
 
 <!-- TODO add? each ordinal network layer consisted of avg 380 fixes * ID -->
 
-The ordinal multilayer network generated from discrete time windows
-indicate within-year periods of increased caribou sociality. Edge
-overlap was higher in time windows 1, 6-11 and 15-20 than in time
-windows 2-5 and 12-15 (Figure <a href="#fig:temp">4</a> A). Time windows
-of higher edge overlap, between approximately October and May, had
-correspondingly higher graph strength compared to time windows of lower
-edge overlap, between approximately May and October (Figure
-<a href="#fig:temp">4</a> C). Graph strength peaked across the time
-series in periods 9 and 10. These results suggest that ordinal
-multilayer networks can effectively capture discrete time windows of
-aggregation and dissaggregation related to resource availability, and
-the importance of carefully selecting the temporal scale of analysis.
+The ordinal multilayer network generated indicated within-year time
+windows of increased caribou sociality. Edge overlap was higher in time
+windows 1, 6-11 and 15-20 than in time windows 2-5 and 12-15 (Figure
+<a href="#fig:temp">4</a> A). Time windows of higher edge overlap,
+between approximately October and May, had correspondingly higher graph
+strength compared to time windows of lower edge overlap, between
+approximately May and October (Figure <a href="#fig:temp">4</a> C).
+Graph strength peaked across the time series in periods 9 and 10. These
+results suggest that ordinal multilayer networks can effectively capture
+discrete time windows of aggregation and dissaggregation related to
+resource availability, and highlight the importance of carefully
+selecting the temporal scale of analysis.
 
 <!-- TODO: reduce to this version -->
 
 As the number of observations used to generate multilayer networks
-increased, individuals became more connected and metrics appeared to
-stabilize. Mean graph strength was consistently weak in summer layers
-but varied in winter layers at low number of observations, becoming
-stable at \~75 observations (Figure <a href="#fig:nobs">6</a>a). Layer
-relevance in the summer was consistently low, but winter layers
-increased between approximately 10 and 100 observations, remaining
-stable with additional observations (Figure <a href="#fig:nobs">6</a>b).
-Like coarse land cover resolution (Figure <a href="#fig:lcres">3</a>),
-low numbers of observations were not sufficient for capturing
-individuals in all contexts and therefore layer similarity could not be
-calculated below \~30 observations for forest, approximately \~80
-observations for open (Figure <a href="#fig:nobs">6</a>c). Layer
-similarity was not possible to calculate for forage layers because there
-were no connected individuals in summer forage. Once sufficient
-observations were obtained, layer similarity showed some variability
-with increasing numbers of observations for forest and was relatively
-stable in open layers. Connective redundancy increased dramatically
-between \~10 and \~50 observations before stabilizing with additional
-observations included (Figure <a href="#fig:nobs">6</a>d). Given the
-observed trend of these multilayer metrics stabilizing after a certain
-number of observations are included, the results suggest this
-sensitivity method could be useful for determining the number of
-observations necessary for sufficiently describing social dynamics
-across contexts.
+increased, individuals became more connected and metrics generally
+appeared to stabilize. Graph strength across individuals in all three
+habitat layers was highly variable at low number of observations and
+stabilized after \~100 observations (Figure <a href="#fig:nobs">6</a>
+A). Edge overlap increased across all three habitat layers with
+increasing number of observations (Figure <a href="#fig:nobs">6</a> B).
+Similarly, multidegree for all individuals increased quickly between 10
+and 100 observations, and continued to increase until 1000 observations
+(Figure <a href="#fig:nobs">6</a> C). Given the observed trend of these
+multilayer metrics stabilizing after a certain number of observations
+are included, the results suggest this sensitivity method could be
+useful for determining the number of observations necessary for
+sufficiently describing social dynamics across contexts.
 
-<!-- TODO: I'm not sure this is relevant since this is the main way it
-is already done, can we make this thought more relevant to picking scales or
-multilayer networks in general? I think it's important for building robust
-networks -->
+<!-- sufficient observations is essential for capturing reliable networ -->
 
 <!-- Figure: metrics by social scale -->
 
@@ -430,20 +416,6 @@ networks -->
 <!-- TODO: update to temp -->
 
 <!-- Figure: Time window -->
-
-(ref:temp) Varying temporal scale in multilayer networks. Multilayer
-networks were generated of caribou social associations (*Rangifer
-tarandus*, n = 21 females) on Fogo Island, Newfoundland within ordinal
-time windows (20 ordinal sample periods of 35-36 days) between
-2017-04-21 and 2019-03-27. A) Edge overlap across time windows showed
-two periods of low overlap (time windows 2-5 and 12-15), and three
-periods of high overlap (time windows 1, 6-11, 15-20). B) Ordinal
-network layers showing unweighted edges between individuals within time
-windows. Like edge overlap, individuals were more connected in time
-window 1, 6-11, and 15-20, compared to 2-5 and 12-15. C) Graph strength
-within time windows showing individuals as thin grey lines and mean
-across individuals as thick grey lines. Graph strength peaked in time
-window 9, with noticeable higher strength than the following year.
 
 <!-- TODO: a bit more for g strength? -->
 
@@ -924,11 +896,23 @@ resolutions, with higher mean graph strength in open compared to forest.
 
 <div class="figure">
 
-<img src="../graphics/figure-temp.png" alt="(ref:temp)" width="\linewidth" />
+<img src="../graphics/figure-temp.png" alt="Varying temporal scale in multilayer networks. Multilayer networks were generated of caribou social associations (*Rangifer tarandus*, n = 21 females) on Fogo Island, Newfoundland within ordinal time windows (20 ordinal sample periods of 35-36 days) between 2017-04-21 and 2019-03-27. A) Edge overlap across time windows showed two periods of low overlap (time windows 2-5 and 12-15), and three periods of high overlap (time windows 1, 6-11, 15-20). B) Ordinal network layers showing unweighted edges between individuals within time windows. Like edge overlap, individuals were more connected in time window 1, 6-11, and 15-20, compared to 2-5 and 12-15. C) Graph strength within time windows showing individuals as thin grey lines and mean across individuals as thick grey lines. Graph strength peaked in time window 9, with noticeable higher strength than the following year." width="\linewidth" />
 
 <p class="caption">
 
-Figure 4: (ref:temp)
+Figure 4: Varying temporal scale in multilayer networks. Multilayer
+networks were generated of caribou social associations (*Rangifer
+tarandus*, n = 21 females) on Fogo Island, Newfoundland within ordinal
+time windows (20 ordinal sample periods of 35-36 days) between
+2017-04-21 and 2019-03-27. A) Edge overlap across time windows showed
+two periods of low overlap (time windows 2-5 and 12-15), and three
+periods of high overlap (time windows 1, 6-11, 15-20). B) Ordinal
+network layers showing unweighted edges between individuals within time
+windows. Like edge overlap, individuals were more connected in time
+window 1, 6-11, and 15-20, compared to 2-5 and 12-15. C) Graph strength
+within time windows showing individuals as thin grey lines and mean
+across individuals as thick grey lines. Graph strength peaked in time
+window 9, with noticeable higher strength than the following year.
 
 </p>
 
