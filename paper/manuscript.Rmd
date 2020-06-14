@@ -324,12 +324,12 @@ total edges as number of observations increased.
 <!-- TODO: Add intro/general to results?-->
 <!-- major points then details -->
 
-In general, individuals in multilayer networks became more connected as the
-spatial distance threshold defining caribou social associations increased. Mean
+Individuals in multilayer networks became more connected as the
+spatial distance threshold increased. Mean
 graph strength differed across habitat layers with similar and higher graph
 strength in open and forage layers, and lower strength in forest layers (Figure
 \@ref(fig:socres)). Individual graph strength increased sharply between 5 m and
-100 m across habitat classes followed by decrease in rate after 100 m. These
+100 m in all three habitat classes followed by a decrease in rate after 100 m. These
 results suggest the optimal social scale at which groups should be assigned is
 likely somewhere between ~20 - 100 m based on the rate at which network metrics
 stabilized. For ungulates, groups are often assigned based on 50 m threshold
