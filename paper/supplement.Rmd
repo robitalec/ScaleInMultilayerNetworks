@@ -1,5 +1,5 @@
 ---
-title: Supplement\: Considering scale in multilayer animal social networks
+title: Supplement - Considering scale in multilayer animal social networks
 author: Alec L. Robitaille^1\*^, Quinn M.R. Webber^2^, Julie W. Turner^1^, Eric Vander Wal^1,2^
 date: |
   | ^1^Department of Biology, Memorial University of Newfoundland, Canada
@@ -46,8 +46,16 @@ knitr::kable(timedefs)
 ```
 
 
-Figure S1: n individuals
+Figure S1: lc count by res
 
 ```{r}
-knitr::include_graphics(')
+knitr::include_graphics('../graphics/supp-count-lc.png')
+```
+
+
+
+Figure S2: n individuals by time
+
+```{r}
+knitr::include_graphics('../graphics/supp-temp-nid.png')
 ```
