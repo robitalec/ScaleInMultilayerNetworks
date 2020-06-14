@@ -32,6 +32,7 @@ source('../scripts/00-variables.R')
 library(data.table)
 DT <- readRDS('../data/derived-data/01-sub-fogo-caribou.Rds')
 nobs <- readRDS('../data/derived-data/05-number-of-observations.Rds')
+timedefs <- fread('../data/supp-data/timecut-defs.csv')
 ```
 
 \newpage
