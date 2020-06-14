@@ -18,22 +18,7 @@ csl: csl.csl
 
 \newpage
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(
-    echo = FALSE,
-    # warning = FALSE,
-    # message = FALSE,
-    eval = TRUE,
-    out.width = '\\linewidth'
-)
 
-source('../scripts/00-variables.R')
-
-library(data.table)
-DT <- readRDS('../data/derived-data/01-sub-fogo-caribou.Rds')
-nobs <- readRDS('../data/derived-data/05-number-of-observations.Rds')
-timedefs <- fread('../data/supp-data/timecut-defs.csv')
-```
 
 \newpage
 
@@ -80,7 +65,7 @@ Sociality exists across both temporal and spatial scales (Whitehead 2008). For
 example, grooming requires close spatial proximity between conspecifics and
 occurs over brief time periods [e.g. @Carter_2015], whereas social association
 represents shared space use by members of the same social group [Figure
-\@ref(fig:spacetime), @Franks_2009]. Further, for social interactions or
+<a href="#fig:spacetime">1</a>, @Franks_2009]. Further, for social interactions or
 associations to occur individuals must share space, and thus have overlapping
 home ranges [@Vander_Wal_2013]. In the context of the social environment, home
 range overlap is an example of how animals share space over coarser spatial and
@@ -134,7 +119,7 @@ and space use.
 <!-- TODO: we answer the first question in the discussion, but not the second-->
 <!-- TODO: Webber reference should be 2018, but defaulting to 2017-->
 
-(ref:spacetime) Space-time diagram representing variation the relative spatial and temporal extent required for different types of social and communication processes for four species, including spotted hyaena, passerine birds, sleepy lizards, and elephants. Spatial and temporal extent for social interactions, e.g. mating, grooming, or aggression, are similar for most species because physical contact between two individuals is required for many social interactions. The logical extension is that spatial and temporal extent for social interaction is hierarchically nested within the spatial and temporal extent for social association because individuals must share space to interact. By contrast, different species have potential for greater spatial and temporal extents, for example, temporal extent for vocal communication is similar for most species because most vocal calls only persist in the environment for seconds, but spatial extent for vocal communication is highly variable with elephant calls extending the great distance and passerine calls extending the shortest distance.
+
 
 <!-- TODO: units of spatial scale? --> 
 <!-- TODO: citations? -->
@@ -160,7 +145,7 @@ discrete seasons: summer (3 August - 20 September 2017) and winter (1 January �
 February 2018) based on caribou socioecology [@Peignier_2019].-->
 
 ## Caribou location data
-We used GPS location data collected from Fogo Island caribou in between `r DT[, format(min(datetime), '%F')]` and `r DT[, format(max(datetime), '%F')]`. Adult female caribou were immobilized and fitted with global positioning
+We used GPS location data collected from Fogo Island caribou in between 2017-04-21 and 2019-03-27. Adult female caribou were immobilized and fitted with global positioning
 system (GPS) collars (Lotek Wireless Inc., Newmarket, ON, Canada, GPS4400M
 collars, 1,250 g) as described by [@Schaefer_2013]. Collars were programmed to
 collect location fixes every 2 hours. Prior to analyses, we subset GPS fixes
@@ -184,14 +169,14 @@ mixed-wood forest. Water habitat was excluded from all subsequent analyses.
 ## Caribou multilayer social networks
 
 ### Network layer construction
-<!--We generated a multilayer social network consisting `r DT[, uniqueN(get(idcol))]`
+<!--We generated a multilayer social network consisting 21
 individual nodes and two aspects (season and land cover). Two season
 elementary-layers (summer and winter) and three land cover elementary-layers
 (forage, forest, and open) combined for a total of six layers. Single layers were
 composed of individuals linked by social associations, for each season and land cover combination.-->
 
 We generated proximity-based social networks using the R package `spatsoc`
-[@Robitaille_2019] in `r version$version.string` [@R_Core_Team_2019]. We assumed
+[@Robitaille_2019] in R version 4.0.1 (2020-06-06) [@R_Core_Team_2019]. We assumed
 individuals were associating if simultaneous GPS fixes were within the spatial
 distance threshold of one another. Typically for ungulates and other gregarious
 mammals, the ‘chain rule’ is used for group assignment [@Croft_2008]. For GPS
@@ -206,7 +191,7 @@ and a spatial distance threshold of 50 m [@Peignier_2019; @Lesmerises_2018].
 all networks, individual caribou were represented as nodes, associations between
 individuals in a given habitat type and season were represented as intralayer
 edges, and connections between the same individuals across seasons and within
-habitat classes were represented as interlayer edges (Figure \@ref(fig:ml)) .-->
+habitat classes were represented as interlayer edges (Figure <a href="#fig:ml">2</a>) .-->
 <!-- eg this is connecting contexts used to calculate layer similarity -->
 
 We weighted edges of social networks by the strength of association between
@@ -264,7 +249,7 @@ We generated multilayer networks across a series of spatial distance thresholds
 for group assignment. Spatial distance thresholds (5, 25, 50, 75, 100, 250 and
 500 m) represented a range of visual (short distance) to auditory (long
 distance) sensory modalities of caribou. Multilayer networks consisted of the
-social association between `r DT[, uniqueN(get(idcol))]` individuals across
+social association between 21 individuals across
 three habitat layers (open, forest and forage) for the entire study period. At
 the finest scale, individuals within 5 m of one another were considered in the
 same group, whereas at the coarsest scale, individuals within 500 m of one
@@ -285,7 +270,7 @@ decision making for caribou during foraging, while re-sampling at 500 m , 750 m
 and 1000 m represents the scale at which caribou tend to select and avoid
 habitat (Bastille-Rousseau et al. 2017). For each spatial scale, we generated a
 multilayer network consisting of the social association between 
-`r DT[, uniqueN(get(idcol))]` individuals across three habitat layers (open, forest and
+21 individuals across three habitat layers (open, forest and
 forage) for the entire study period. Social associations of individuals were
 defined by spatiotemporal overlap within 5 minutes and 50 m. We calculated graph
 strength and multidegree for each habitat layer and spatial scale, and edge
@@ -298,7 +283,7 @@ edges observed in each combination of habitat layer and spatial scale.
 
 We used a temporal multilayer network to assess the seasonality of caribou
 sociality. Multilayer networks consisted of the social association between 
-`r DT[, uniqueN(get(idcol))]` individuals across 20 ordinal sample periods of 35-36
+21 individuals across 20 ordinal sample periods of 35-36
 days taken from the entire study period. Social associations were defined by
 spatiotemporal overlap of individuals within 5 minutes and 50 m. In each time
 window, we calculated individual graph strength and multidegree, and across the
@@ -312,7 +297,7 @@ observations as well as the data collection technique used to generate networks
 [@Davis_2018; @Webber_2019]. For example, GPS data is commonly collected at a
 fixed rate, e.g. every $x$ minutes or hours, continuously throughout the study
 period. Fix rate is a reflection of number of observations an individual would
-have been observed and recorded in traditional ethological studies. To investigate the influence of number of observations, we generated multilayer networks of social association between `r DT[, uniqueN(get(idcol))]` individuals across three habitat layers (open, forest and forage) using $N$ randomly selected observations. We first generated a maximum of 1000 timesteps and iteratively used $N$ of these ($N$ = 10 - 1000 observations by steps of 10), to ensure previously included timesteps, and resulting associations, were accumulated with subsequent observations to mimic collection of observational data. Within each multilayer network with $N$ observations, we calculated individual graph strength and multidegree. We calculated
+have been observed and recorded in traditional ethological studies. To investigate the influence of number of observations, we generated multilayer networks of social association between 21 individuals across three habitat layers (open, forest and forage) using $N$ randomly selected observations. We first generated a maximum of 1000 timesteps and iteratively used $N$ of these ($N$ = 10 - 1000 observations by steps of 10), to ensure previously included timesteps, and resulting associations, were accumulated with subsequent observations to mimic collection of observational data. Within each multilayer network with $N$ observations, we calculated individual graph strength and multidegree. We calculated
 edge overlap across the entire series of networks to determine proportion of
 total edges as number of observations increased.
 
@@ -328,7 +313,7 @@ Individuals in multilayer networks became more connected as the
 spatial distance threshold increased. Mean
 graph strength differed across habitat layers with similar and higher graph
 strength in open and forage layers, and lower strength in forest layers (Figure
-\@ref(fig:socres)). Individual graph strength increased sharply between 5 m and
+<a href="#fig:socres">5</a>). Individual graph strength increased sharply between 5 m and
 100 m in all three habitat classes followed by a decrease in rate after 100 m. These
 results suggest the optimal social scale at which groups should be assigned is
 likely somewhere between ~20 - 100 m based on the rate at which network metrics
@@ -340,13 +325,13 @@ for generating social networks in caribou and similar species.
 
 Increasing land cover resolution resulted in decreased availability of forage,
 a rare and patchy habitat, and corresponding low connectivity of individuals in
-these habitats at higher resolution (Figure \@ref(fig:lcres)). Graph strength
+these habitats at higher resolution (Figure <a href="#fig:lcres">3</a>). Graph strength
 and edge overlap were relatively consistent across land cover resolutions for
-forest and open layers (Figure \@ref(fig:lcres) D, E). Edge overlap decreased
+forest and open layers (Figure <a href="#fig:lcres">3</a> D, E). Edge overlap decreased
 sharply between 30 m and 600 m in forage layers, afterwards remaining stable to
-1000 m (Figure \@ref(fig:lcres) D). Graph strength was more variable within
+1000 m (Figure <a href="#fig:lcres">3</a> D). Graph strength was more variable within
 forage layers across land cover resolutions than open and forest (Figure
-\@ref(fig:lcres) D). The proportion of relocations in forest and open habitats
+<a href="#fig:lcres">3</a> D). The proportion of relocations in forest and open habitats
 increased with increasing spatial resolution, while decreasing in forage habitat
 (Supp. 1 <!-- todo-->).  Overall, these results indicate the importance of
 matching land cover resolution to scale of selection as well as ensuring the
@@ -357,7 +342,7 @@ rare habitats.
 <!-- TODO add? each ordinal network layer consisted of avg 380 fixes * ID -->
 
 The ordinal multilayer network generated from discrete time windows indicate
-within-year periods of increased caribou sociality. Edge overlap was higher in time windows 1, 6-11 and 15-20 than in time windows 2-5 and 12-15  (Figure \@ref(fig:temp) A). Time windows of higher edge overlap, between approximately October and May, had correspondingly higher graph strength compared to time windows of lower edge overlap, between approximately May and October (Figure \@ref(fig:temp) C). Graph strength peaked across the time series in periods 9 and 10. These results suggest that ordinal multilayer networks
+within-year periods of increased caribou sociality. Edge overlap was higher in time windows 1, 6-11 and 15-20 than in time windows 2-5 and 12-15  (Figure <a href="#fig:temp">4</a> A). Time windows of higher edge overlap, between approximately October and May, had correspondingly higher graph strength compared to time windows of lower edge overlap, between approximately May and October (Figure <a href="#fig:temp">4</a> C). Graph strength peaked across the time series in periods 9 and 10. These results suggest that ordinal multilayer networks
 can effectively capture discrete time windows of aggregation and dissaggregation related to resource availability, and the importance of carefully selecting the temporal scale of analysis. 
 
 <!-- TODO: reduce to this version -->
@@ -365,19 +350,19 @@ As the number of observations used to generate multilayer networks increased,
 individuals became more connected and metrics appeared to stabilize. Mean graph
 strength was consistently weak in summer layers but varied in winter layers at
 low number of observations, becoming stable at ~75 observations (Figure
-\@ref(fig:nobs)a). Layer relevance in the summer was consistently low, but
+<a href="#fig:nobs">6</a>a). Layer relevance in the summer was consistently low, but
 winter layers increased between approximately 10  and 100  observations,
-remaining stable with additional observations (Figure \@ref(fig:nobs)b). Like
-coarse land cover resolution (Figure \@ref(fig:lcres)), low numbers of
+remaining stable with additional observations (Figure <a href="#fig:nobs">6</a>b). Like
+coarse land cover resolution (Figure <a href="#fig:lcres">3</a>), low numbers of
 observations were not sufficient for capturing individuals in all contexts and
 therefore layer similarity could not be calculated below ~30 observations for
-forest, approximately ~80 observations for open (Figure \@ref(fig:nobs)c). Layer
+forest, approximately ~80 observations for open (Figure <a href="#fig:nobs">6</a>c). Layer
 similarity was not possible to calculate for forage layers because there were no
 connected individuals in summer forage. Once sufficient observations were
 obtained, layer similarity showed some variability with increasing numbers of
 observations for forest and was relatively stable in open layers. Connective
 redundancy increased dramatically between ~10 and ~50 observations before
-stabilizing with additional observations included (Figure \@ref(fig:nobs)d).
+stabilizing with additional observations included (Figure <a href="#fig:nobs">6</a>d).
 Given the observed trend of these multilayer metrics stabilizing after a certain
 number of observations are included, the results suggest this sensitivity method
 could be useful for determining the number of observations necessary for
@@ -390,21 +375,21 @@ networks -->
 
 
 <!-- Figure: metrics by social scale -->
-(ref:socres) Varying scale in spatial distance threshold. For each spatial distance threshold (100 - 1000 m by steps of 100 m), multilayer networks were constructed of caribou social associations (*Rangifer tarandus*, n = `r DT[, uniqueN(get(idcol))]` females) on Fogo Island, Newfoundland between `r DT[, format(min(datetime), '%F')]` and `r DT[, format(max(datetime), '%F')]` across three habitat classes (forage, forest, and open). Graph strength (mean of individuals in bold) showed a sharp increase between 5 m and 100 m for all habitat classes. After 100 m, graph strength continued to increase at a slower rate. Open and forage layers showed higher variation in graph strength between individuals while the forest layer had less variation and lower mean graph strength.
+
 
 
 <!-- Figure: metrics by land cover resolution -->
-(ref:lcres) Varying spatial scale of land cover raster. For each land cover resolution (5, 25, 50, 75, 100, 250 and 500 m), multilayer networks were constructed of caribou social associations (*Rangifer tarandus*, n = `r DT[, uniqueN(get(idcol))]` females) on Fogo Island, Newfoundland between `r DT[, format(min(datetime), '%F')]` and `r DT[, format(max(datetime), '%F')]` across three habitat classes (forage, forest, and open). A, B, C) Three land cover rasters: the original resolution (30 m) and two aggregated rasters (500 m and 1000 m). D) Edge overlap of habitat layers across spatial resolutions. Open and forest layers show consistent edge overlap with increasing spatial resolution while forage shows a sharp decline in edge overlap between 30 m and 600 m. Above 600 m, the forage layers are stable. E) Graph strength (mean of individuals in bold) within habitat layers across spatial resolution. Forage layers showed high variation in graph strength with many individuals dropping to 0 after 500 m and others increasing with spatial resolution. Open layers and forest layers were relatively stable across spatial resolutions, with higher mean graph strength in open compared to forest.
+
 
 
 
 <!-- Figure: metrics by number of observations -->
 <!-- TODO: update to temp -->
-(ref:nobs) Varying scale in number of observations. Multilayer networks were generated using a  sample number of observations (10 - 1000 observations by steps of 10) of caribou social associations (*Rangifer tarandus*, n = `r DT[, uniqueN(get(idcol))]` females) on Fogo Island, Newfoundland between `r DT[, format(min(datetime), '%F')]` and `r DT[, format(max(datetime), '%F')]` across three habitat classes (forage, forest, and open). A) Graph strength was highly variable at low number of observations (less than 100) for all habitat layers and relatively stable after 200 observations. B) Edge overlap increased for all habitat layers with increasing number of observations. Open and forage layers had higher edge overlap than forest layers. C) Multidegree increased for all individuals with increasing number of observations. Individuals showed high variability (`r nobs[nobs == max(nobs), paste(range(multideg), collapse = ' - ')]`) at the maximal number of observations (1000).
+
 
 
 <!-- Figure: Time window -->
-(ref:temp) Varying temporal scale in multilayer networks. Multilayer networks were generated of caribou social associations (*Rangifer tarandus*, n = `r DT[, uniqueN(get(idcol))]` females) on Fogo Island, Newfoundland within ordinal time windows (20 ordinal sample periods of 35-36 days) between `r DT[, format(min(datetime), '%F')]` and `r DT[, format(max(datetime), '%F')]`. A) Edge overlap across time windows showed two periods of low overlap (time windows 2-5 and 12-15), and three periods of high overlap (time windows 1, 6-11, 15-20). B) Ordinal network layers showing unweighted edges between individuals within time windows. Like edge overlap, individuals were more connected in time window 1, 6-11, and 15-20, compared to 2-5 and 12-15. C) Graph strength within time windows showing individuals as thin grey lines and mean across individuals as thick grey lines. Graph strength peaked in time window 9, with noticeable higher strength than the following year. 
+(ref:temp) Varying temporal scale in multilayer networks. Multilayer networks were generated of caribou social associations (*Rangifer tarandus*, n = 21 females) on Fogo Island, Newfoundland within ordinal time windows (20 ordinal sample periods of 35-36 days) between 2017-04-21 and 2019-03-27. A) Edge overlap across time windows showed two periods of low overlap (time windows 2-5 and 12-15), and three periods of high overlap (time windows 1, 6-11, 15-20). B) Ordinal network layers showing unweighted edges between individuals within time windows. Like edge overlap, individuals were more connected in time window 1, 6-11, and 15-20, compared to 2-5 and 12-15. C) Graph strength within time windows showing individuals as thin grey lines and mean across individuals as thick grey lines. Graph strength peaked in time window 9, with noticeable higher strength than the following year. 
 
 <!-- TODO: a bit more for g strength? -->
 
@@ -461,7 +446,7 @@ study results indicate that there are different social patterns in different
 habitat types, likely indicating different types of interactions. When the
 social threshold is greater than approximately 50 m during the winter,
 individuals demonstrate dramatically different graph strength (Figure 
-\@ref(fig:socres)) in different habitat types, having higher graph strength in
+<a href="#fig:socres">5</a>) in different habitat types, having higher graph strength in
 forage and open habitats where they can likely see each other and still interact
 with visual cues unlike in forest habitats. Varying social scales can have
 different fitness repercussions for individuals. Rhesus macaques (*Macaca
@@ -476,7 +461,7 @@ layers of interaction integrated in a holistic way.
 Temporal scale is also important for understanding the repercussions of social
 phenotypes. Varying the time window length and position for caribou, we found
 there was a lot of variation in the multilayer network metrics (Figure
-\@ref(fig:winlen), Figure \@ref(fig:winpos)). These changes in the outcome
+<a href="#fig:winlen"><strong>??</strong></a>, Figure <a href="#fig:winpos"><strong>??</strong></a>). These changes in the outcome
 depending on how the time window is defined highlight how critical it is to
 properly define the time window appropriately to address the questions and
 hypotheses of interest. For instance, social phenotypes can change over ontogeny
@@ -575,8 +560,8 @@ fine [i.e. minute-to-minute: @Cleasby_2019] or coarse scale [global migration:
 @Flack_2018]. Our case study integrates variation in temporal and spatial scale
 to assess the role of scale in predicting multilayer networks. As one might
 expect, we found increasing social threshold results in saturation of potential
-social connections (Figure \@ref(fig:socres)).<!--TODO: what??, while increasing temporal scale had little effect
-on habitat-specific networks (Figure \@ref(fig:))-->. Another potential application would be
+social connections (Figure <a href="#fig:socres">5</a>).<!--TODO: what??, while increasing temporal scale had little effect
+on habitat-specific networks (Figure <a href="#fig:"><strong>??</strong></a>)-->. Another potential application would be
 to generate social networks during times when animals are engaged in different
 behaviours, including travelling, interacting, or foraging [@Muller_2018;
 @Finn_2019] and construct a multilayer network based on behaviour-specific
@@ -668,9 +653,9 @@ are implicitly multilayer analyses.
 Multilayer networks can be used to explicitly consider
 habitat selection and sociality across scales. Animal social systems can be
 parsed by spatial contexts, defined, for example, by habitat types as in Figure
-\@ref(fig:lcres). The effect of seasonality of resources can can be directly
+<a href="#fig:lcres">3</a>. The effect of seasonality of resources can can be directly
 measured by differences in habitat selection and sociality across temporal
-layers as in Figure \@ref(fig:winpos) and Figure \@ref(fig:winlen). Habitat
+layers as in Figure <a href="#fig:winpos"><strong>??</strong></a> and Figure <a href="#fig:winlen"><strong>??</strong></a>. Habitat
 selection can be explicitly integrated using network layers defined by selection
 coefficients for individuals. These examples of explicit integrations of habitat selection
 and sociality across social, spatial and temporal scales highlight the potential
@@ -761,43 +746,49 @@ NSERC Discovery Grant to EVW.
 
 \newpage
 
-```{r spacetime, fig.cap='(ref:spacetime)'}
-knitr::include_graphics('../graphics/figure-scales.png')
-```
+<div class="figure">
+<img src="../graphics/figure-scales.png" alt="Space-time diagram representing variation the relative spatial and temporal extent required for different types of social and communication processes for four species, including spotted hyaena, passerine birds, sleepy lizards, and elephants. Spatial and temporal extent for social interactions, e.g. mating, grooming, or aggression, are similar for most species because physical contact between two individuals is required for many social interactions. The logical extension is that spatial and temporal extent for social interaction is hierarchically nested within the spatial and temporal extent for social association because individuals must share space to interact. By contrast, different species have potential for greater spatial and temporal extents, for example, temporal extent for vocal communication is similar for most species because most vocal calls only persist in the environment for seconds, but spatial extent for vocal communication is highly variable with elephant calls extending the great distance and passerine calls extending the shortest distance." width="\linewidth" />
+<p class="caption">Figure 1: Space-time diagram representing variation the relative spatial and temporal extent required for different types of social and communication processes for four species, including spotted hyaena, passerine birds, sleepy lizards, and elephants. Spatial and temporal extent for social interactions, e.g. mating, grooming, or aggression, are similar for most species because physical contact between two individuals is required for many social interactions. The logical extension is that spatial and temporal extent for social interaction is hierarchically nested within the spatial and temporal extent for social association because individuals must share space to interact. By contrast, different species have potential for greater spatial and temporal extents, for example, temporal extent for vocal communication is similar for most species because most vocal calls only persist in the environment for seconds, but spatial extent for vocal communication is highly variable with elephant calls extending the great distance and passerine calls extending the shortest distance.</p>
+</div>
 
 \newpage
 
 
-(ref:ml) Visualization of multilayer network for social ungulate case study representing social association of caribou (*Rangifer tarandus*) on Fogo Island, Newfoundland in summer 2017 and winter 2018. Individual caribou (n = `r DT[, uniqueN(get(idcol))]` females) are show as nodes and each individual is represented by a unique color. Six layers represent combinations of two seasons (summer and winter) and three habitat classes (open, forest and forage). Intralayer edges connect pairs of individuals that associated according to spatial and temporal thresholds described above, and are scaled in line thickness according to strength of association (SRI). Interlayer edges connect individuals to themselves across seasons and within habitat classes (e.g. individual "A" in summer, forest and individual "A" in winter, forest).
-
-```{r ml, fig.cap='(ref:ml)'}
-knitr::include_graphics('../graphics/figure-ml.png')
-```
 
 
-\newpage
+<div class="figure">
+<img src="../graphics/figure-ml.png" alt="Visualization of multilayer network for social ungulate case study representing social association of caribou (*Rangifer tarandus*) on Fogo Island, Newfoundland in summer 2017 and winter 2018. Individual caribou (n = 21 females) are show as nodes and each individual is represented by a unique color. Six layers represent combinations of two seasons (summer and winter) and three habitat classes (open, forest and forage). Intralayer edges connect pairs of individuals that associated according to spatial and temporal thresholds described above, and are scaled in line thickness according to strength of association (SRI). Interlayer edges connect individuals to themselves across seasons and within habitat classes (e.g. individual "A" in summer, forest and individual "A" in winter, forest)." width="\linewidth" />
+<p class="caption">Figure 2: Visualization of multilayer network for social ungulate case study representing social association of caribou (*Rangifer tarandus*) on Fogo Island, Newfoundland in summer 2017 and winter 2018. Individual caribou (n = 21 females) are show as nodes and each individual is represented by a unique color. Six layers represent combinations of two seasons (summer and winter) and three habitat classes (open, forest and forage). Intralayer edges connect pairs of individuals that associated according to spatial and temporal thresholds described above, and are scaled in line thickness according to strength of association (SRI). Interlayer edges connect individuals to themselves across seasons and within habitat classes (e.g. individual "A" in summer, forest and individual "A" in winter, forest).</p>
+</div>
 
-```{r lcres, fig.cap='(ref:lcres)'}
-knitr::include_graphics('../graphics/figure-lc.png')
-```
 
 \newpage
 
-```{r temp, fig.cap='(ref:temp)'}
-knitr::include_graphics('../graphics/figure-temp.png')
-```
+<div class="figure">
+<img src="../graphics/figure-lc.png" alt="Varying spatial scale of land cover raster. For each land cover resolution (5, 25, 50, 75, 100, 250 and 500 m), multilayer networks were constructed of caribou social associations (*Rangifer tarandus*, n = 21 females) on Fogo Island, Newfoundland between 2017-04-21 and 2019-03-27 across three habitat classes (forage, forest, and open). A, B, C) Three land cover rasters: the original resolution (30 m) and two aggregated rasters (500 m and 1000 m). D) Edge overlap of habitat layers across spatial resolutions. Open and forest layers show consistent edge overlap with increasing spatial resolution while forage shows a sharp decline in edge overlap between 30 m and 600 m. Above 600 m, the forage layers are stable. E) Graph strength (mean of individuals in bold) within habitat layers across spatial resolution. Forage layers showed high variation in graph strength with many individuals dropping to 0 after 500 m and others increasing with spatial resolution. Open layers and forest layers were relatively stable across spatial resolutions, with higher mean graph strength in open compared to forest." width="\linewidth" />
+<p class="caption">Figure 3: Varying spatial scale of land cover raster. For each land cover resolution (5, 25, 50, 75, 100, 250 and 500 m), multilayer networks were constructed of caribou social associations (*Rangifer tarandus*, n = 21 females) on Fogo Island, Newfoundland between 2017-04-21 and 2019-03-27 across three habitat classes (forage, forest, and open). A, B, C) Three land cover rasters: the original resolution (30 m) and two aggregated rasters (500 m and 1000 m). D) Edge overlap of habitat layers across spatial resolutions. Open and forest layers show consistent edge overlap with increasing spatial resolution while forage shows a sharp decline in edge overlap between 30 m and 600 m. Above 600 m, the forage layers are stable. E) Graph strength (mean of individuals in bold) within habitat layers across spatial resolution. Forage layers showed high variation in graph strength with many individuals dropping to 0 after 500 m and others increasing with spatial resolution. Open layers and forest layers were relatively stable across spatial resolutions, with higher mean graph strength in open compared to forest.</p>
+</div>
 
 \newpage
 
-```{r socres, fig.cap='(ref:socres)'}
-knitr::include_graphics('../graphics/figure-soc.png')
-```
+<div class="figure">
+<img src="../graphics/figure-temp.png" alt="(ref:temp)" width="\linewidth" />
+<p class="caption">Figure 4: (ref:temp)</p>
+</div>
 
 \newpage
 
-```{r nobs, fig.cap='(ref:nobs)'}
-knitr::include_graphics('../graphics/figure-nobs.png')
-```
+<div class="figure">
+<img src="../graphics/figure-soc.png" alt="Varying scale in spatial distance threshold. For each spatial distance threshold (100 - 1000 m by steps of 100 m), multilayer networks were constructed of caribou social associations (*Rangifer tarandus*, n = 21 females) on Fogo Island, Newfoundland between 2017-04-21 and 2019-03-27 across three habitat classes (forage, forest, and open). Graph strength (mean of individuals in bold) showed a sharp increase between 5 m and 100 m for all habitat classes. After 100 m, graph strength continued to increase at a slower rate. Open and forage layers showed higher variation in graph strength between individuals while the forest layer had less variation and lower mean graph strength." width="\linewidth" />
+<p class="caption">Figure 5: Varying scale in spatial distance threshold. For each spatial distance threshold (100 - 1000 m by steps of 100 m), multilayer networks were constructed of caribou social associations (*Rangifer tarandus*, n = 21 females) on Fogo Island, Newfoundland between 2017-04-21 and 2019-03-27 across three habitat classes (forage, forest, and open). Graph strength (mean of individuals in bold) showed a sharp increase between 5 m and 100 m for all habitat classes. After 100 m, graph strength continued to increase at a slower rate. Open and forage layers showed higher variation in graph strength between individuals while the forest layer had less variation and lower mean graph strength.</p>
+</div>
+
+\newpage
+
+<div class="figure">
+<img src="../graphics/figure-nobs.png" alt="Varying scale in number of observations. Multilayer networks were generated using a sample number of observations (10 - 1000 observations by steps of 10) of caribou social associations (*Rangifer tarandus*, n = 21 females) on Fogo Island, Newfoundland between 2017-04-21 and 2019-03-27 across three habitat classes (forage, forest, and open). A) Graph strength was highly variable at low number of observations (less than 100) for all habitat layers and relatively stable after 200 observations. B) Edge overlap increased for all habitat layers with increasing number of observations. Open and forage layers had higher edge overlap than forest layers. C) Multidegree increased for all individuals with increasing number of observations. Individuals showed high variability (3 - 51) at the maximal number of observations (1000)." width="\linewidth" />
+<p class="caption">Figure 6: Varying scale in number of observations. Multilayer networks were generated using a  sample number of observations (10 - 1000 observations by steps of 10) of caribou social associations (*Rangifer tarandus*, n = 21 females) on Fogo Island, Newfoundland between 2017-04-21 and 2019-03-27 across three habitat classes (forage, forest, and open). A) Graph strength was highly variable at low number of observations (less than 100) for all habitat layers and relatively stable after 200 observations. B) Edge overlap increased for all habitat layers with increasing number of observations. Open and forage layers had higher edge overlap than forest layers. C) Multidegree increased for all individuals with increasing number of observations. Individuals showed high variability (3 - 51) at the maximal number of observations (1000).</p>
+</div>
 
 \newpage
 \clearpage

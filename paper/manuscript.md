@@ -341,25 +341,24 @@ observations increased.
 
 <!-- major points then details -->
 
-In general, individuals in multilayer networks became more connected as
-the spatial distance threshold defining caribou social associations
-increased. Mean graph strength differed across habitat layers with
-similar and higher graph strength in open and forage layers, and lower
-strength in forest layers (Figure <a href="#fig:socres">5</a>).
-Individual graph strength increased sharply between 5 m and 100 m across
-habitat classes followed by decrease in rate after 100 m. These results
-suggest the optimal social scale at which groups should be assigned is
-likely somewhere between \~20 - 100 m based on the rate at which network
-metrics stabilized. For ungulates, groups are often assigned based on 50
-m threshold (Lingle 2003; Lesmeries et al. 2018; Peignier et al. 2019),
-suggesting that given similar quantities of data, \~50 m is likely an
-appropriate social scale for generating social networks in caribou and
-similar species.
+Individuals in multilayer networks became more connected as the spatial
+distance threshold increased. Mean graph strength differed across
+habitat layers with similar and higher graph strength in open and forage
+layers, and lower strength in forest layers (Figure
+<a href="#fig:socres">5</a>). Individual graph strength increased
+sharply between 5 m and 100 m in all three habitat classes followed by a
+decrease in rate after 100 m. These results suggest the optimal social
+scale at which groups should be assigned is likely somewhere between
+\~20 - 100 m based on the rate at which network metrics stabilized. For
+ungulates, groups are often assigned based on 50 m threshold (Lingle
+2003; Lesmeries et al. 2018; Peignier et al. 2019), suggesting that
+given similar quantities of data, \~50 m is likely an appropriate social
+scale for generating social networks in caribou and similar species.
 
-Increasing land cover resolution resulted in a decreased availability of
+Increasing land cover resolution resulted in decreased availability of
 forage, a rare and patchy habitat, and corresponding low connectivity of
 individuals in these habitats at higher resolution (Figure
-<a href="#fig:lcres">3</a>). Graph strength and edge overlap was
+<a href="#fig:lcres">3</a>). Graph strength and edge overlap were
 relatively consistent across land cover resolutions for forest and open
 layers (Figure <a href="#fig:lcres">3</a> D, E). Edge overlap decreased
 sharply between 30 m and 600 m in forage layers, afterwards remaining
@@ -378,24 +377,16 @@ important patchy and rare habitats.
 
 The ordinal multilayer network generated from discrete time windows
 indicate within-year periods of increased caribou sociality. Edge
-overlap was higher in time windows 1, 6-11 and 15-20 than time windows
-2-5 and 12-15 (Figure <a href="#fig:temp">4</a> A). These periods
-between approximately October and May
-
-increasing graph strength with overall peak in 2018 but still increases
-in 2019 note graph connectedness is evident panel B
-
-<!-- Edge overlap across time windows showed two periods of low overlap (time windows 2-5 and 12-15), and three periods of high overlap (time windows 1, 6-11, 15-20). B) Ordinal network layers showing unweighted edges between individuals within time windows. Like edge overlap, individuals were more connected in time window 1, 6-11, and 15-20, compared to 2-5 and 12-15. C) Graph strength within time windows showing individuals as thin grey lines and mean across individuals as thick grey lines. Graph strength peaked in time window 9, with noticeable higher strength than the following year.  -->
-
-These results suggest that an increasing window length, especially for
-the summer season, may be resulting in less precisely defined seasons
-that are not clearly capturing periods of aggregation and
-dissaggregation related to resource availability.
-
-changing the position of the time window in this case results in a
-mismatch between expected periods of resource seasonality and
-corresponding sociality, particularly for the summer, highlighting the
-importance of carefully selecting temporal scale of analysis.
+overlap was higher in time windows 1, 6-11 and 15-20 than in time
+windows 2-5 and 12-15 (Figure <a href="#fig:temp">4</a> A). Time windows
+of higher edge overlap, between approximately October and May, had
+correspondingly higher graph strength compared to time windows of lower
+edge overlap, between approximately May and October (Figure
+<a href="#fig:temp">4</a> C). Graph strength peaked across the time
+series in periods 9 and 10. These results suggest that ordinal
+multilayer networks can effectively capture discrete time windows of
+aggregation and dissaggregation related to resource availability, and
+the importance of carefully selecting the temporal scale of analysis.
 
 <!-- TODO: reduce to this version -->
 

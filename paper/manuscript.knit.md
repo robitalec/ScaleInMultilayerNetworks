@@ -18,22 +18,7 @@ csl: csl.csl
 
 \newpage
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(
-    echo = FALSE,
-    # warning = FALSE,
-    # message = FALSE,
-    eval = TRUE,
-    out.width = '\\linewidth'
-)
 
-source('../scripts/00-variables.R')
-
-library(data.table)
-DT <- readRDS('../data/derived-data/01-sub-fogo-caribou.Rds')
-nobs <- readRDS('../data/derived-data/05-number-of-observations.Rds')
-timedefs <- fread('../data/supp-data/timecut-defs.csv')
-```
 
 \newpage
 
@@ -160,7 +145,7 @@ discrete seasons: summer (3 August - 20 September 2017) and winter (1 January �
 February 2018) based on caribou socioecology [@Peignier_2019].-->
 
 ## Caribou location data
-We used GPS location data collected from Fogo Island caribou in between `r DT[, format(min(datetime), '%F')]` and `r DT[, format(max(datetime), '%F')]`. Adult female caribou were immobilized and fitted with global positioning
+We used GPS location data collected from Fogo Island caribou in between 2017-04-21 and 2019-03-27. Adult female caribou were immobilized and fitted with global positioning
 system (GPS) collars (Lotek Wireless Inc., Newmarket, ON, Canada, GPS4400M
 collars, 1,250 g) as described by [@Schaefer_2013]. Collars were programmed to
 collect location fixes every 2 hours. Prior to analyses, we subset GPS fixes
@@ -184,14 +169,14 @@ mixed-wood forest. Water habitat was excluded from all subsequent analyses.
 ## Caribou multilayer social networks
 
 ### Network layer construction
-<!--We generated a multilayer social network consisting `r DT[, uniqueN(get(idcol))]`
+<!--We generated a multilayer social network consisting 21
 individual nodes and two aspects (season and land cover). Two season
 elementary-layers (summer and winter) and three land cover elementary-layers
 (forage, forest, and open) combined for a total of six layers. Single layers were
 composed of individuals linked by social associations, for each season and land cover combination.-->
 
 We generated proximity-based social networks using the R package `spatsoc`
-[@Robitaille_2019] in `r version$version.string` [@R_Core_Team_2019]. We assumed
+[@Robitaille_2019] in R version 4.0.1 (2020-06-06) [@R_Core_Team_2019]. We assumed
 individuals were associating if simultaneous GPS fixes were within the spatial
 distance threshold of one another. Typically for ungulates and other gregarious
 mammals, the ‘chain rule’ is used for group assignment [@Croft_2008]. For GPS
@@ -264,7 +249,7 @@ We generated multilayer networks across a series of spatial distance thresholds
 for group assignment. Spatial distance thresholds (5, 25, 50, 75, 100, 250 and
 500 m) represented a range of visual (short distance) to auditory (long
 distance) sensory modalities of caribou. Multilayer networks consisted of the
-social association between `r DT[, uniqueN(get(idcol))]` individuals across
+social association between 21 individuals across
 three habitat layers (open, forest and forage) for the entire study period. At
 the finest scale, individuals within 5 m of one another were considered in the
 same group, whereas at the coarsest scale, individuals within 500 m of one
@@ -285,7 +270,7 @@ decision making for caribou during foraging, while re-sampling at 500 m , 750 m
 and 1000 m represents the scale at which caribou tend to select and avoid
 habitat (Bastille-Rousseau et al. 2017). For each spatial scale, we generated a
 multilayer network consisting of the social association between 
-`r DT[, uniqueN(get(idcol))]` individuals across three habitat layers (open, forest and
+21 individuals across three habitat layers (open, forest and
 forage) for the entire study period. Social associations of individuals were
 defined by spatiotemporal overlap within 5 minutes and 50 m. We calculated graph
 strength and multidegree for each habitat layer and spatial scale, and edge
@@ -298,7 +283,7 @@ edges observed in each combination of habitat layer and spatial scale.
 
 We used a temporal multilayer network to assess the seasonality of caribou
 sociality. Multilayer networks consisted of the social association between 
-`r DT[, uniqueN(get(idcol))]` individuals across 20 ordinal sample periods of 35-36
+21 individuals across 20 ordinal sample periods of 35-36
 days taken from the entire study period. Social associations were defined by
 spatiotemporal overlap of individuals within 5 minutes and 50 m. In each time
 window, we calculated individual graph strength and multidegree, and across the
@@ -312,7 +297,7 @@ observations as well as the data collection technique used to generate networks
 [@Davis_2018; @Webber_2019]. For example, GPS data is commonly collected at a
 fixed rate, e.g. every $x$ minutes or hours, continuously throughout the study
 period. Fix rate is a reflection of number of observations an individual would
-have been observed and recorded in traditional ethological studies. To investigate the influence of number of observations, we generated multilayer networks of social association between `r DT[, uniqueN(get(idcol))]` individuals across three habitat layers (open, forest and forage) using $N$ randomly selected observations. We first generated a maximum of 1000 timesteps and iteratively used $N$ of these ($N$ = 10 - 1000 observations by steps of 10), to ensure previously included timesteps, and resulting associations, were accumulated with subsequent observations to mimic collection of observational data. Within each multilayer network with $N$ observations, we calculated individual graph strength and multidegree. We calculated
+have been observed and recorded in traditional ethological studies. To investigate the influence of number of observations, we generated multilayer networks of social association between 21 individuals across three habitat layers (open, forest and forage) using $N$ randomly selected observations. We first generated a maximum of 1000 timesteps and iteratively used $N$ of these ($N$ = 10 - 1000 observations by steps of 10), to ensure previously included timesteps, and resulting associations, were accumulated with subsequent observations to mimic collection of observational data. Within each multilayer network with $N$ observations, we calculated individual graph strength and multidegree. We calculated
 edge overlap across the entire series of networks to determine proportion of
 total edges as number of observations increased.
 
@@ -390,21 +375,21 @@ networks -->
 
 
 <!-- Figure: metrics by social scale -->
-(ref:socres) Varying scale in spatial distance threshold. For each spatial distance threshold (100 - 1000 m by steps of 100 m), multilayer networks were constructed of caribou social associations (*Rangifer tarandus*, n = `r DT[, uniqueN(get(idcol))]` females) on Fogo Island, Newfoundland between `r DT[, format(min(datetime), '%F')]` and `r DT[, format(max(datetime), '%F')]` across three habitat classes (forage, forest, and open). Graph strength (mean of individuals in bold) showed a sharp increase between 5 m and 100 m for all habitat classes. After 100 m, graph strength continued to increase at a slower rate. Open and forage layers showed higher variation in graph strength between individuals while the forest layer had less variation and lower mean graph strength.
+(ref:socres) Varying scale in spatial distance threshold. For each spatial distance threshold (100 - 1000 m by steps of 100 m), multilayer networks were constructed of caribou social associations (*Rangifer tarandus*, n = 21 females) on Fogo Island, Newfoundland between 2017-04-21 and 2019-03-27 across three habitat classes (forage, forest, and open). Graph strength (mean of individuals in bold) showed a sharp increase between 5 m and 100 m for all habitat classes. After 100 m, graph strength continued to increase at a slower rate. Open and forage layers showed higher variation in graph strength between individuals while the forest layer had less variation and lower mean graph strength.
 
 
 <!-- Figure: metrics by land cover resolution -->
-(ref:lcres) Varying spatial scale of land cover raster. For each land cover resolution (5, 25, 50, 75, 100, 250 and 500 m), multilayer networks were constructed of caribou social associations (*Rangifer tarandus*, n = `r DT[, uniqueN(get(idcol))]` females) on Fogo Island, Newfoundland between `r DT[, format(min(datetime), '%F')]` and `r DT[, format(max(datetime), '%F')]` across three habitat classes (forage, forest, and open). A, B, C) Three land cover rasters: the original resolution (30 m) and two aggregated rasters (500 m and 1000 m). D) Edge overlap of habitat layers across spatial resolutions. Open and forest layers show consistent edge overlap with increasing spatial resolution while forage shows a sharp decline in edge overlap between 30 m and 600 m. Above 600 m, the forage layers are stable. E) Graph strength (mean of individuals in bold) within habitat layers across spatial resolution. Forage layers showed high variation in graph strength with many individuals dropping to 0 after 500 m and others increasing with spatial resolution. Open layers and forest layers were relatively stable across spatial resolutions, with higher mean graph strength in open compared to forest.
+(ref:lcres) Varying spatial scale of land cover raster. For each land cover resolution (5, 25, 50, 75, 100, 250 and 500 m), multilayer networks were constructed of caribou social associations (*Rangifer tarandus*, n = 21 females) on Fogo Island, Newfoundland between 2017-04-21 and 2019-03-27 across three habitat classes (forage, forest, and open). A, B, C) Three land cover rasters: the original resolution (30 m) and two aggregated rasters (500 m and 1000 m). D) Edge overlap of habitat layers across spatial resolutions. Open and forest layers show consistent edge overlap with increasing spatial resolution while forage shows a sharp decline in edge overlap between 30 m and 600 m. Above 600 m, the forage layers are stable. E) Graph strength (mean of individuals in bold) within habitat layers across spatial resolution. Forage layers showed high variation in graph strength with many individuals dropping to 0 after 500 m and others increasing with spatial resolution. Open layers and forest layers were relatively stable across spatial resolutions, with higher mean graph strength in open compared to forest.
 
 
 
 <!-- Figure: metrics by number of observations -->
 <!-- TODO: update to temp -->
-(ref:nobs) Varying scale in number of observations. Multilayer networks were generated using a  sample number of observations (10 - 1000 observations by steps of 10) of caribou social associations (*Rangifer tarandus*, n = `r DT[, uniqueN(get(idcol))]` females) on Fogo Island, Newfoundland between `r DT[, format(min(datetime), '%F')]` and `r DT[, format(max(datetime), '%F')]` across three habitat classes (forage, forest, and open). A) Graph strength was highly variable at low number of observations (less than 100) for all habitat layers and relatively stable after 200 observations. B) Edge overlap increased for all habitat layers with increasing number of observations. Open and forage layers had higher edge overlap than forest layers. C) Multidegree increased for all individuals with increasing number of observations. Individuals showed high variability (`r nobs[nobs == max(nobs), paste(range(multideg), collapse = ' - ')]`) at the maximal number of observations (1000).
+(ref:nobs) Varying scale in number of observations. Multilayer networks were generated using a  sample number of observations (10 - 1000 observations by steps of 10) of caribou social associations (*Rangifer tarandus*, n = 21 females) on Fogo Island, Newfoundland between 2017-04-21 and 2019-03-27 across three habitat classes (forage, forest, and open). A) Graph strength was highly variable at low number of observations (less than 100) for all habitat layers and relatively stable after 200 observations. B) Edge overlap increased for all habitat layers with increasing number of observations. Open and forage layers had higher edge overlap than forest layers. C) Multidegree increased for all individuals with increasing number of observations. Individuals showed high variability (3 - 51) at the maximal number of observations (1000).
 
 
 <!-- Figure: Time window -->
-(ref:temp) Varying temporal scale in multilayer networks. Multilayer networks were generated of caribou social associations (*Rangifer tarandus*, n = `r DT[, uniqueN(get(idcol))]` females) on Fogo Island, Newfoundland within ordinal time windows (20 ordinal sample periods of 35-36 days) between `r DT[, format(min(datetime), '%F')]` and `r DT[, format(max(datetime), '%F')]`. A) Edge overlap across time windows showed two periods of low overlap (time windows 2-5 and 12-15), and three periods of high overlap (time windows 1, 6-11, 15-20). B) Ordinal network layers showing unweighted edges between individuals within time windows. Like edge overlap, individuals were more connected in time window 1, 6-11, and 15-20, compared to 2-5 and 12-15. C) Graph strength within time windows showing individuals as thin grey lines and mean across individuals as thick grey lines. Graph strength peaked in time window 9, with noticeable higher strength than the following year. 
+(ref:temp) Varying temporal scale in multilayer networks. Multilayer networks were generated of caribou social associations (*Rangifer tarandus*, n = 21 females) on Fogo Island, Newfoundland within ordinal time windows (20 ordinal sample periods of 35-36 days) between 2017-04-21 and 2019-03-27. A) Edge overlap across time windows showed two periods of low overlap (time windows 2-5 and 12-15), and three periods of high overlap (time windows 1, 6-11, 15-20). B) Ordinal network layers showing unweighted edges between individuals within time windows. Like edge overlap, individuals were more connected in time window 1, 6-11, and 15-20, compared to 2-5 and 12-15. C) Graph strength within time windows showing individuals as thin grey lines and mean across individuals as thick grey lines. Graph strength peaked in time window 9, with noticeable higher strength than the following year. 
 
 <!-- TODO: a bit more for g strength? -->
 
@@ -761,43 +746,49 @@ NSERC Discovery Grant to EVW.
 
 \newpage
 
-```{r spacetime, fig.cap='(ref:spacetime)'}
-knitr::include_graphics('../graphics/figure-scales.png')
-```
+<div class="figure">
+<img src="../graphics/figure-scales.png" alt="(ref:spacetime)" width="\linewidth" />
+<p class="caption">(\#fig:spacetime)(ref:spacetime)</p>
+</div>
 
 \newpage
 
 
-(ref:ml) Visualization of multilayer network for social ungulate case study representing social association of caribou (*Rangifer tarandus*) on Fogo Island, Newfoundland in summer 2017 and winter 2018. Individual caribou (n = `r DT[, uniqueN(get(idcol))]` females) are show as nodes and each individual is represented by a unique color. Six layers represent combinations of two seasons (summer and winter) and three habitat classes (open, forest and forage). Intralayer edges connect pairs of individuals that associated according to spatial and temporal thresholds described above, and are scaled in line thickness according to strength of association (SRI). Interlayer edges connect individuals to themselves across seasons and within habitat classes (e.g. individual "A" in summer, forest and individual "A" in winter, forest).
+(ref:ml) Visualization of multilayer network for social ungulate case study representing social association of caribou (*Rangifer tarandus*) on Fogo Island, Newfoundland in summer 2017 and winter 2018. Individual caribou (n = 21 females) are show as nodes and each individual is represented by a unique color. Six layers represent combinations of two seasons (summer and winter) and three habitat classes (open, forest and forage). Intralayer edges connect pairs of individuals that associated according to spatial and temporal thresholds described above, and are scaled in line thickness according to strength of association (SRI). Interlayer edges connect individuals to themselves across seasons and within habitat classes (e.g. individual "A" in summer, forest and individual "A" in winter, forest).
 
-```{r ml, fig.cap='(ref:ml)'}
-knitr::include_graphics('../graphics/figure-ml.png')
-```
+<div class="figure">
+<img src="../graphics/figure-ml.png" alt="(ref:ml)" width="\linewidth" />
+<p class="caption">(\#fig:ml)(ref:ml)</p>
+</div>
 
-
-\newpage
-
-```{r lcres, fig.cap='(ref:lcres)'}
-knitr::include_graphics('../graphics/figure-lc.png')
-```
 
 \newpage
 
-```{r temp, fig.cap='(ref:temp)'}
-knitr::include_graphics('../graphics/figure-temp.png')
-```
+<div class="figure">
+<img src="../graphics/figure-lc.png" alt="(ref:lcres)" width="\linewidth" />
+<p class="caption">(\#fig:lcres)(ref:lcres)</p>
+</div>
 
 \newpage
 
-```{r socres, fig.cap='(ref:socres)'}
-knitr::include_graphics('../graphics/figure-soc.png')
-```
+<div class="figure">
+<img src="../graphics/figure-temp.png" alt="(ref:temp)" width="\linewidth" />
+<p class="caption">(\#fig:temp)(ref:temp)</p>
+</div>
 
 \newpage
 
-```{r nobs, fig.cap='(ref:nobs)'}
-knitr::include_graphics('../graphics/figure-nobs.png')
-```
+<div class="figure">
+<img src="../graphics/figure-soc.png" alt="(ref:socres)" width="\linewidth" />
+<p class="caption">(\#fig:socres)(ref:socres)</p>
+</div>
+
+\newpage
+
+<div class="figure">
+<img src="../graphics/figure-nobs.png" alt="(ref:nobs)" width="\linewidth" />
+<p class="caption">(\#fig:nobs)(ref:nobs)</p>
+</div>
 
 \newpage
 \clearpage
