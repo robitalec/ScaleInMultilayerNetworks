@@ -339,24 +339,15 @@ observations increased.
 
 <!-- TODO: Add intro/general to results?-->
 
+<!-- major points then details -->
+
 In general, individuals in multilayer networks became more connected as
-social scale increased; however, this relationship varied by habitat
-type and season. As social scale increased, mean graph strength for
-summer networks did not change as the social threshold increased, but
-graph strength in winter networks increased rapidly between 5 m and 50 m
-thresholds, followed by a plateau (Figure <a href="#fig:socres">5</a>a).
-Layer relevance was stable around 0 during the summer but increased for
-winter networks between 5 and 50 m social thresholds, then did not
-change for any habitat types (Figure <a href="#fig:socres">5</a>b). This
-pattern suggests the winter habitat layers captured most, if not all, of
-the potential connections an individual would have across these
-networks. Layer similarity was not very strong for any habitat type,
-indicating that summer and winter networks are only weakly correlated.
-Furthermore, layer similarity in open habitats showed more variation as
-social threshold increased compared to forage and forest habitats
-(Figure <a href="#fig:socres">5</a>c). Connective redundancy was
-relatively stable across social thresholds, especially after 50 m
-(Figure <a href="#fig:socres">5</a>d). Taken together, these results
+the spatial distance threshold defining caribou social associations
+increased. Mean graph strength differed across habitat layers with
+similar and higher graph strength in open and forage layers, and lower
+strength in forest layers (Figure <a href="#fig:socres">5</a>).
+Individual graph strength increased sharply between 5 m and 100 m across
+habitat classes followed by decrease in rate after 100 m. These results
 suggest the optimal social scale at which groups should be assigned is
 likely somewhere between \~20 - 100 m based on the rate at which network
 metrics stabilized. For ungulates, groups are often assigned based on 50
@@ -367,34 +358,46 @@ similar species.
 
 Increasing land cover resolution resulted in a decreased availability of
 forage, a rare and patchy habitat, and corresponding low connectivity of
-individuals in these habitats. Individuals in summer layers had
-consistent weak connections (Figure <a href="#fig:lcres">3</a>a). Mean
-graph strength increased consistently in winter forest and open habitats
-but varied in winter forage varied across land cover resolutions with an
-increase at 250 m and decrease at 500 m (Figure
-<a href="#fig:lcres">3</a>a). Layer relevance was stable for all habitat
-classes in summer layers; layer relevance was significantly higher in
-winter and stable in open and forest habitats but decreased for forage
-habitats (Figure <a href="#fig:lcres">3</a>b).
-<!--This pattern during the winter indicates that
-individuals had fewer neighbours in forage habitat habitats compared to their
-overall neighbourhood across habitats, likely due to the patchy nature of
-forage-->Layer similarity was low but stable for forest and open, except
-for a sharp decrease in layer similarity in open at 100 m and 250 m
-(Figure <a href="#fig:lcres">3</a>c). Layer similarity was not possible
-to calculate between summer and winter forage because, at all land cover
-resolutions greater than 30 m, there were no individuals connected in
-the network layers. Individuals still used forage habitats, but given
-the lower availability due to increasing land cover resolution, at a
-much lower rate. Connective redundancy was moderately high but decreased
-slightly as land cover resolution increased, indicating that many
-neighbours were the same between layers, but the proportion of
-neighbours in each layer slightly decreased at increasing land cover
-resolutions (Figure <a href="#fig:lcres">3</a>d). Overall, these results
-indicate the importance of matching land cover resolution to scale of
-selection as well as ensuring the land cover product used has a
-resolution fine enough to detect landscape features and habitats
-relevant to study species, such as important patchy and rare habitats.
+individuals in these habitats at higher resolution (Figure
+<a href="#fig:lcres">3</a>). Graph strength and edge overlap was
+relatively consistent across land cover resolutions for forest and open
+layers (Figure <a href="#fig:lcres">3</a> D, E). Edge overlap decreased
+sharply between 30 m and 600 m in forage layers, afterwards remaining
+stable to 1000 m (Figure <a href="#fig:lcres">3</a> D). Graph strength
+was more variable within forage layers across land cover resolutions
+than open and forest (Figure <a href="#fig:lcres">3</a> D). The
+proportion of relocations in forest and open habitats increased with
+increasing spatial resolution, while decreasing in forage habitat (Supp.
+1 <!-- todo-->). Overall, these results indicate the importance of
+matching land cover resolution to scale of selection as well as ensuring
+the land cover product used has a resolution fine enough to detect
+landscape features and habitats relevant to study species, such as
+important patchy and rare habitats.
+
+<!-- TODO add? each ordinal network layer consisted of avg 380 fixes * ID -->
+
+The ordinal multilayer network generated from discrete time windows
+indicate within-year periods of increased caribou sociality. Edge
+overlap was higher in time windows 1, 6-11 and 15-20 than time windows
+2-5 and 12-15 (Figure <a href="#fig:temp">4</a> A). These periods
+between approximately October and May
+
+increasing graph strength with overall peak in 2018 but still increases
+in 2019 note graph connectedness is evident panel B
+
+<!-- Edge overlap across time windows showed two periods of low overlap (time windows 2-5 and 12-15), and three periods of high overlap (time windows 1, 6-11, 15-20). B) Ordinal network layers showing unweighted edges between individuals within time windows. Like edge overlap, individuals were more connected in time window 1, 6-11, and 15-20, compared to 2-5 and 12-15. C) Graph strength within time windows showing individuals as thin grey lines and mean across individuals as thick grey lines. Graph strength peaked in time window 9, with noticeable higher strength than the following year.  -->
+
+These results suggest that an increasing window length, especially for
+the summer season, may be resulting in less precisely defined seasons
+that are not clearly capturing periods of aggregation and
+dissaggregation related to resource availability.
+
+changing the position of the time window in this case results in a
+mismatch between expected periods of resource seasonality and
+corresponding sociality, particularly for the summer, highlighting the
+importance of carefully selecting temporal scale of analysis.
+
+<!-- TODO: reduce to this version -->
 
 As the number of observations used to generate multilayer networks
 increased, individuals became more connected and metrics appeared to
@@ -427,55 +430,6 @@ is already done, can we make this thought more relevant to picking scales or
 multilayer networks in general? I think it's important for building robust
 networks -->
 
-Some multilayer network metrics were strongly influenced by the length
-of the time window. Mean graph strength was weak but became slightly
-stronger with increasing time window length during the summer, but the
-higher mean graph strength during the winter showed a slight increase
-then decrease with increasing winter length (Figure
-<a href="#fig:winlen"><strong>??</strong></a>a). Layer relevance
-increased for all summer layers as individuals became more connected
-with increasing window lengths, but winter layers showed relatively
-stable but high layer relevance (Figure
-<a href="#fig:winlen"><strong>??</strong></a>b). This pattern indicates
-that the proportion of neighbours that were the same across layers
-increased with a longer time frame during the summer, but there were a
-high proportion of neighbors that remained the same across layers during
-the winter, regardless of time length. Furthermore, though the layers
-were generally not very similar between the summer and winter, the
-length of the time window created slight variability in this metric,
-particularly for forage and open habitat types (Figure
-<a href="#fig:winlen"><strong>??</strong></a>c). Connective redundancy
-increased marginally with increasing window length, indicating that the
-proportions of neighbours that were the same across layers, though
-relatively high in general, slightly increased when time length was
-greater (Figure <a href="#fig:winlen"><strong>??</strong></a>d). These
-results suggest that an increasing window length, especially for the
-summer season, may be resulting in less precisely defined seasons that
-are not clearly capturing periods of aggregation and dissaggregation
-related to resource availability.
-
-Moving window positions defining seasons showed some dramatic changes in
-the multilayer network metrics as the seasons were redefined. Graph
-strength increased at time window position \~20 for summer and winter
-layers and, while summer layers continued to increase, winter layers
-showed a decrease in graph strength at time window position \~35 (Figure
-<a href="#fig:winpos"><strong>??</strong></a>a). Layer relevance
-increased across moving window positions for summer layers and slightly
-decreased for winter layers (Figure
-<a href="#fig:winpos"><strong>??</strong></a>b). These results indicate
-increased connectivity in summer layers and slightly decreasing
-connectivity at shifted winter time windows. Layer similarity was
-relatively stable across moving window positions except for a sharp
-decline at window position \~28 in forage and open layers (Figure
-<a href="#fig:winpos"><strong>??</strong></a> c). Connective redundancy
-showed a marginal increase with increasing window position indicating
-individuals had more of the same neighbours in each habitat network
-(Figure <a href="#fig:winpos"><strong>??</strong></a> d). Similar to
-window length, changing the position of the time window in this case
-results in a mismatch between expected periods of resource seasonality
-and corresponding sociality, particularly for the summer, highlighting
-the importance of carefully selecting temporal scale of analysis.
-
 <!-- Figure: metrics by social scale -->
 
 <!-- Figure: metrics by land cover resolution -->
@@ -484,9 +438,23 @@ the importance of carefully selecting temporal scale of analysis.
 
 <!-- TODO: update to temp -->
 
-<!-- Figure: Window length -->
+<!-- Figure: Time window -->
 
-(ref:temp) Varying temporal scale in time window length.
+(ref:temp) Varying temporal scale in multilayer networks. Multilayer
+networks were generated of caribou social associations (*Rangifer
+tarandus*, n = 21 females) on Fogo Island, Newfoundland within ordinal
+time windows (20 ordinal sample periods of 35-36 days) between
+2017-04-21 and 2019-03-27. A) Edge overlap across time windows showed
+two periods of low overlap (time windows 2-5 and 12-15), and three
+periods of high overlap (time windows 1, 6-11, 15-20). B) Ordinal
+network layers showing unweighted edges between individuals within time
+windows. Like edge overlap, individuals were more connected in time
+window 1, 6-11, and 15-20, compared to 2-5 and 12-15. C) Graph strength
+within time windows showing individuals as thin grey lines and mean
+across individuals as thick grey lines. Graph strength peaked in time
+window 9, with noticeable higher strength than the following year.
+
+<!-- TODO: a bit more for g strength? -->
 
 # Discussion
 
