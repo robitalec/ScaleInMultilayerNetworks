@@ -131,19 +131,14 @@ perspectives for further development and application of scale in multilayer
 networks with respect to phenotypes and individual fitness,
 movement ecology and collective movement, and habitat selection
 and space use.
-<!-- TODO: we answer the first question in the discussion, but not the second-->
 
 (ref:spacetime) Space-time diagram representing variation the relative spatial and temporal extent required for different types of social and communication processes for four species, including spotted hyaena, passerine birds, sleepy lizards, and elephants. Spatial and temporal extent for social interactions, e.g. mating, grooming, or aggression, are similar for most species because physical contact between two individuals is required for many social interactions. The logical extension is that spatial and temporal extent for social interaction is hierarchically nested within the spatial and temporal extent for social association because individuals must share space to interact. By contrast, different species have potential for greater spatial and temporal extents, for example, temporal extent for vocal communication is similar for most species because most vocal calls only persist in the environment for seconds, but spatial extent for vocal communication is highly variable with elephant calls extending the great distance and passerine calls extending the shortest distance.
 
-<!-- TODO: units of spatial scale? --> 
-<!-- TODO: citations? -->
 
 # Methods
 
 ## Caribou socioecology
-<!--Here, we use caribou as a case study to develop scale-dependent multilayer
-networks based on predicted social (visual and auditory perception), spatial
-(habitat type), and temporal (seasonal) scales.--> Caribou are gregarious
+Caribou are gregarious
 ungulates with fission-fusion dynamics [@Lesmerises_2018] that display temporal
 and spatial variation in social networks [@Peignier_2019]. In winter, caribou
 dig holes in the snow, termed craters, to access forage [@Bergerud_1974].
@@ -252,7 +247,6 @@ threshold.
 
 
 ### Spatial scale
-<!-- TODO: Increased spatial scale of land cover corresponds to xyz -->
 To assess the influence of spatial scale, we aggregated the land cover raster using the R package `grainchanger` [@Graham_2019] across a series
 of scales (100 - 1000 m by steps of 100 m). The land cover raster was aggregated
 using a modal moving window method using a circular window corresponding to the
@@ -295,8 +289,6 @@ total edges as number of observations increased.
 
 
 # Results
-<!-- TODO: Add intro/general to results?-->
-
 Individuals in multilayer networks became more connected as the spatial distance
 threshold increased. Mean graph strength differed across habitat layers with
 similar and higher graph strength in open and forage layers, and lower strength
@@ -368,7 +360,7 @@ contexts.
 
 
 <!-- Figure: Time window -->
-(ref:temp) Varying temporal scale in multilayer networks. Multilayer networks were generated of caribou social associations (*Rangifer tarandus*, n = `r DT[, uniqueN(get(idcol))]` females) on Fogo Island, Newfoundland within ordinal time windows (20 ordinal sample periods of 35-36 days) between `r DT[, format(min(datetime), '%F')]` and `r DT[, format(max(datetime), '%F')]`. A) Edge overlap across time windows showed two periods of low overlap (time windows 2-5 and 12-15), and three periods of high overlap (time windows 1, 6-11, 15-20). B) Ordinal network layers showing unweighted edges between individuals within time windows. Like edge overlap, individuals were more connected in time window 1, 6-11, and 15-20, compared to 2-5 and 12-15. C) Graph strength within time windows showing individuals as thin grey lines and mean across individuals as thick grey lines. Graph strength peaked in time window 9, with noticeable higher strength than the following year.
+(ref:temp) Varying temporal scale in multilayer networks. Multilayer networks were generated of caribou social associations (*Rangifer tarandus*, n = `r DT[, uniqueN(get(idcol))]` females) on Fogo Island, Newfoundland within ordinal time windows (20 ordinal sample periods of 35-36 days) between `r DT[, format(min(datetime), '%F')]` and `r DT[, format(max(datetime), '%F')]`. A) Edge overlap across time windows showed two periods of low overlap (time windows 2-5 and 12-15), and three periods of high overlap (time windows 1, 6-11, 15-20). B) Ordinal network layers showing unweighted edges between individuals within time windows. Like edge overlap, individuals were more connected in time windows 1, 6-11, and 15-20, compared to 2-5 and 12-15. C) Graph strength within time windows showing individuals as thin grey lines and mean across individuals as thick grey lines. Graph strength peaked in time window 9, with noticeable higher strength than the following year.
 
 
 # Discussion
@@ -570,23 +562,13 @@ In contrast to multilayer networks formed by combining layers defined
 by different types of interactions, multilayer networks with GPS data are limited to 
 proximity based measures. An alternative which has been explored is using 
 hidden markov models behavioural states, within which individuals are associating. [@Jones_2020]
+
+t bon
+
 -->
 
 
-<!-- temp -->
-These changes in the outcome
-depending on how the time window is defined highlight how critical it is to
-properly define the time window appropriately to address the questions and
-hypotheses of interest. 
-
-
-
-
-
-
-
-## Synth
-
+<!-- put this in -->
 Importantly, the key to incorporating movement in multilayer networks across
 scales is the technological advancements available to overcome previous
 limitations [@Hughey_2018]. Biologging and wildlife tracking technology has
