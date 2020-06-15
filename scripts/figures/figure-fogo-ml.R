@@ -89,6 +89,8 @@ netDT[, c('season', 'lcname') := tstrsplit(layer, '-', type.convert = TRUE)]
 #   scale_x_date(expand = c(0, 0))
 
 # Network
+netDT[DT, middate := middate, on = 'season']
+
 shear_xy(netDT, c('xend', 'yend'))
 netDT[, c('shearxend', 'shearyend') := .(shearx, sheary)]
 shear_xy(netDT, c('x', 'y'))
@@ -106,8 +108,7 @@ box[, lcname := netDT[, rep(unique(lcname), each = 4)]]
   netDT,
   aes(
     x = shearx,
-    y = sheary)#,
-    #color = lcname)
+    y = sheary)
 ) +
   geom_polygon(data = box[order(ord)], alpha = 0.5, 
                aes(fill = lcname)) + 
@@ -116,15 +117,15 @@ box[, lcname := netDT[, rep(unique(lcname), each = 4)]]
                  size = weight),
              alpha = 0.8
   ) +
-  facet_grid(season ~ lcname) + 
+  facet_grid(lcname ~ season, switch = 'both') +
   guides(fill = FALSE, size = FALSE) +
   geom_nodes() +
   scale_size_area(max_size = 1) + 
   scale_fill_manual(values = lccolors) + 
   geom_nodes(aes(shearxend, shearyend)) +
-  theme_blank() + 
-  theme(strip.background = element_rect(fill = NA, color = 'black'),
-        strip.text.y = element_text(angle = 0),
+  theme_blank() +
+  theme(strip.background = element_rect(fill = NA, color = NA),
+        strip.text = element_text(size = 14),
         panel.spacing = unit(0.2, "lines"))
 )
 
