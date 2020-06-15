@@ -89,27 +89,42 @@ netDT[, c('season', 'lcname') := tstrsplit(layer, '-', type.convert = TRUE)]
 #   scale_x_date(expand = c(0, 0))
 
 # Network
+shear_xy(netDT, c('xend', 'yend'))
+netDT[, c('shearxend', 'shearyend') := .(shearx, sheary)]
+shear_xy(netDT, c('x', 'y'))
+
+push <- 0.1
+box <- netDT[, CJ(x = c(max(x), min(x)), y = c(max(y), min(y)))]
+shear_xy(box, c('x', 'y'))
+box[, c('shearx', 'sheary') := .(shearx + c(-push, -push, push, push),
+                                 sheary + c(-push, push, -push, push))]
+box[, ord := rep(c(1, 2, 4, 3), length.out = .N)]
+box <- box[rep(seq.int(.N), times = netDT[, uniqueN(lcname)])]
+box[, lcname := netDT[, rep(unique(lcname), each = 4)]]
+
 (gnn <- ggplot(
   netDT,
   aes(
-    x = x,
-    y = y,
-    color = lcname)
+    x = shearx,
+    y = sheary)#,
+    #color = lcname)
 ) +
-  geom_edges(aes(xend = xend,
-                 yend = yend,
+  geom_polygon(data = box[order(ord)], alpha = 0.5, 
+               aes(fill = lcname)) + 
+  geom_edges(aes(xend = shearxend,
+                 yend = shearyend,
                  size = weight),
              alpha = 0.8
   ) +
-  facet_grid(lcname ~ season) + 
-  guides(color = FALSE, size = FALSE) +
+  facet_grid(season ~ lcname) + 
+  guides(fill = FALSE, size = FALSE) +
   geom_nodes() +
   scale_size_area(max_size = 1) + 
-    scale_color_manual(values = lccolors) + 
-  geom_nodes(aes(xend, yend)) +
+  scale_fill_manual(values = lccolors) + 
+  geom_nodes(aes(shearxend, shearyend)) +
   theme_blank() + 
-  theme(strip.background = element_blank(),
-        strip.text = element_blank())
+  theme(strip.background = element_rect(fill = NA, color = 'black'),
+        strip.text.y = element_text(angle = 0))
 )
 
 # Number of individuals
