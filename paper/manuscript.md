@@ -416,11 +416,11 @@ became more connected with increasing spatial distance threshold.
 Increasing land cover resolution lead to a decrease in availability of
 patchy and rare habitats and, correspondingly, lower connectivity of
 individuals in these habitats. Temporal windows highlighted clear
-periods of increased sociality across individuals. Finally, increasing
-number of observations lead to a stabilizing in network measures. As
-such, scale is inherently tied to the generation of multilayer networks
-and metrics evaluating them, as well as the individual layers that make
-them up.
+periods of increased sociality among individuals. Finally, increasing
+number of observations lead to a general stabilizing in network metrics.
+As such, scale is inherently tied to the generation of multilayer
+networks and metrics evaluating them, as well as the individual layers
+that make them up.
 
 Monolayer network approaches have been increasingly used to link social
 network position with individual fitness, including in primates (Brent,
@@ -439,8 +439,8 @@ distance threshold, to define social associations. We found increasing
 individual graph strength across three habitat layers with increasing
 spatial distance threshold (Figure <a href="#fig:socres">5</a>). In
 addition, habitat layers differed in their response to spatial distance
-threshold, with open and forage have a much larger increase in graph
-strength and variation across individuals. These results emphasize that
+threshold, with open and forage with a larger increase in graph strength
+and greater variation across individuals. These results emphasize that
 multilayer network metrics are directly influenced by social scale, in
 this case the spatial distance threshold.
 
@@ -479,45 +479,58 @@ selection (Fortin et al. 2009). These examples, comparing sociality and
 habitat selection across temporal or spatial contexts, are implicitly
 multilayer analyses.
 
-Multilayer networks represents a novel framework for explicitly testing
+Multilayer networks represent a novel framework for explicitly testing
 the influence of habitat selection on sociality across scales. Animal
-social systems can be parsed by spatial contexts, defined by habitat
-types as in Figure <a href="#fig:lcres">3</a>. Given that habitat data
-are available across a wide range of spatial scales, we evaluated the
-influence of habitat spatial resolution on multilayer network metrics.
-The results indicate varied influence of increasing spatial resolution
-depending on the habitat layer. As spatial resolution increased, edge
-overlap decreased in forage while remaining stable in open and forest
-habitats (Figure <a href="#fig:socres">5</a> D). Forage is a rare and
-patchy habitat on Fogo Island, as is indicated by a decrease in the
-proportion of relocations in this habitat type with increasing spatial
-resolution (Figure S1)<!--TODO-->. Similar to increasing spatial
-distance threshold, the influence of increasing spatial resolution on
-graph strength was notably different between habitat layers. Forest
-layers showed little change in graph strength with increasing spatial
-resolution and variation between individuals. Forage and open layers had
-greater individual variation in graph strength, while forage was the
-sole layer to show large responses in graph strength to increasing
-spatial resolution (Figure <a href="#fig:socres">5</a> E). As such,
-multilayer network measures related to habitat are explicitly dependent
-on spatial scale. Edge overlap can indicate if some associations between
-individuals are dependent on the habitat-context (Battiston, Nicosia and
-Latora 2014). If the spatial resolution of the habitat data are
-insufficient to capture rare habitats, context-specific relationships
-between individuals may not be captured by multilayer networks.
+social systems can be parsed by spatial contexts, for example as defined
+by habitat types as in Figure <a href="#fig:lcres">3</a>. Given that
+habitat data are available across a wide range of spatial scales, we
+evaluated the influence of habitat spatial resolution on multilayer
+network metrics. The results indicate varied influence of increasing
+spatial resolution depending on the habitat layer. As spatial resolution
+increased, edge overlap decreased in forage while remaining stable in
+open and forest habitats (Figure <a href="#fig:socres">5</a> D). Forage
+is a rare and patchy habitat on Fogo Island, as is indicated by a
+decrease in the proportion of relocations in this habitat type with
+increasing spatial resolution (Figure S1)<!--TODO-->. Similar to
+increasing spatial distance threshold, the influence of increasing
+spatial resolution on graph strength was notably different between
+habitat layers. Forest layers showed little change in graph strength
+with increasing spatial resolution and variation between individuals.
+Forage and open layers had greater individual variation in graph
+strength, while forage was the sole layer to show large responses in
+graph strength to increasing spatial resolution (Figure
+<a href="#fig:socres">5</a> E). As such, multilayer network measures
+related to habitat are explicitly dependent on spatial scale. Edge
+overlap can indicate if some associations between individuals are
+dependent on the habitat-context (Battiston, Nicosia and Latora 2014).
+If the spatial resolution of the habitat data are insufficient to
+capture rare habitats, context-specific relationships between
+individuals may not be captured by multilayer networks.
 
 The effect of seasonality of resources on sociality can be directly
-measured by differences in association between individuals across time
-windows of resource availability. Using an ordinal multilayer network
-consisting of 20 discrete time windows throughout the study period, we
-observed periods of increased sociality in caribou on Fogo Island
-(Figure <a href="#fig:temp">4</a>)
+measured by differences in sociality in discrete time windows. Using an
+ordinal multilayer network consisting of 20 discrete time windows
+throughout the study period, we observed periods of increased sociality
+in caribou on Fogo Island (Figure <a href="#fig:temp">4</a>).
 
 <!-- These examples of explicit integrations of habitat -->
 
 <!-- selection and sociality across social, spatial and temporal scales highlight the -->
 
 <!-- potential for novel insights from multilayer networks. -->
+
+The ordinal multilayer network generated indicated within-year time
+windows of increased caribou sociality. Edge overlap was higher in time
+windows 1, 6-11 and 15-20 than in time windows 2-5 and 12-15 (Figure
+<a href="#fig:temp">4</a> A). Time windows of higher edge overlap,
+between approximately October and May, had correspondingly higher graph
+strength compared to time windows of lower edge overlap, between
+approximately May and October (Figure <a href="#fig:temp">4</a> C).
+Graph strength peaked across the time series in periods 9 and 10. These
+results suggest that ordinal multilayer networks can effectively capture
+discrete time windows of aggregation and dissaggregation related to
+resource availability, and highlight the importance of carefully
+selecting the temporal scale of analysis.
 
 <!-- Multilayer network extensions:
 movement
