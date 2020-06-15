@@ -321,7 +321,7 @@ sharply between 30 m and 600 m in forage layers, afterwards remaining stable to
 forage layers across land cover resolutions than open and forest (Figure
 \@ref(fig:lcres) D). The proportion of relocations in forest and open habitats
 increased with increasing spatial resolution, while decreasing in forage habitat
-(Supp. 1 <!-- TODO-->).  Overall, these results indicate the importance of
+(Supplementary 1 Figure 1).  Overall, these results indicate the importance of
 matching land cover resolution to scale of selection as well as ensuring the
 land cover product used has a resolution fine enough to detect landscape
 features and habitats relevant to study species, such as important patchy and
@@ -460,8 +460,8 @@ of increasing spatial resolution depending on the habitat layer. As spatial
 resolution increased, edge overlap decreased in forage while remaining stable in
 open and forest habitats (Figure \@ref(fig:socres) D). Forage is a rare and
 patchy habitat on Fogo Island, as is indicated by a decrease in the proportion
-of relocations in this habitat type with increasing spatial resolution (Figure
-S1)<!--TODO-->. Similar to increasing spatial distance threshold, the influence
+of relocations in this habitat type with increasing spatial resolution (Supplementary 1
+Figure 1). Similar to increasing spatial distance threshold, the influence
 of increasing spatial resolution on graph strength was notably different between
 habitat layers. Forest layers showed little change in graph strength with
 increasing spatial resolution and variation between individuals. Forage and open
@@ -473,7 +473,6 @@ indicate if some associations between individuals are dependent on the
 habitat-context [@Battiston_2014]. If the spatial resolution of the habitat data
 are insufficient to capture rare habitats, context-specific relationships
 between individuals may not be captured by multilayer networks.
-<!-- --- -->
 
 Another extension of multilayer networks using GPS location data is integrating
 movement. Given the existing framework for constructing multilayer networks from
