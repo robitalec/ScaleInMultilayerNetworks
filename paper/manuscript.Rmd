@@ -436,77 +436,40 @@ across individuals. These results emphasize that multilayer network metrics are
 directly influenced by social scale, in this case the spatial distance
 threshold.
 
-In contrast to multilayer networks formed by combining layers defined
-by different types of interactions, multilayer networks with GPS data are limited to 
-proximity based measures. An alternative which has been explored is using 
-hidden markov models behavioural states, within which individuals are associating. [@Jones_2020]
+Social structure and habitat selection are intimately linked: individuals must
+share space to interact and the distribution of resources influences group
+dynamics and home range size [@Webber_2018]. Social structure is influenced by
+resource availability and seasonality [@Peignier_2019], configuration [@He_2019]
+and fragmentation [@Banks_2007]. Habitat selection, the disproportionate use of
+available resources or landscape features by animals [@Manly_1993; @Boyce_1999],
+is a scale-dependent process [@Mayor_2009]. Multilayer networks represent a
+novel framework for considering the influence of habitat selection and space use
+on sociality. 
+
+Given that habitat data are available across a wide range of spatial scales, we
+evaluated the influence of spatial resolution on multilayer network metrics. The
+results indicate varied influence of increasing spatial resolution depending on
+the habitat layer. As spatial resolution increased, edge overlap decreased in
+forage while remaining stable in open and forest habitats (Figure
+\@ref(fig:socres) D). Forage is a rare and patchy habitat on Fogo Island, as is
+indicated by a decrease in the proportion of relocations in this habitat type
+with increasing spatial resolution (Figure S1)<!--TODO-->. Similar to increasing
+spatial distance threshold, the influence of increasing spatial resolution on
+graph strength was notably different between habitat layers. Forest layers
+showed little change in graph strength with increasing spatial resolution and
+variation between individuals. Forage and open layers had greater individual
+variation in graph strength, while forage was the sole layer to show large
+responses in graph strength to increasing spatial resolution (Figure
+\@ref(fig:socres) E). As such, multilayer network measures related to habitat
+are explicitly dependent on spatial scale. Edge overlap can indicate if some
+associations between individuals are dependent on the habitat-context
+[@Battiston_2014]. If the spatial resolution of the habitat data are
+insufficient to capture rare habitats, context-specific relationships between
+individuals may not be captured by multilayer networks.
 
 
-
-<!-- types of relationships, ML nets -->
-<!-- GPS caveat HMM -->
-
-
-
-
-
-Furthermore, it is a
-common trope that individuals must be associating to interact, and many studies
-therefore assume that proximity is proxy for interacting [@Farine_2015a]. 
-
-For
-instance, baboons need to be in proximity to groom each other. However, animals
-have certain interactions that do not require proximity such as long-distance
-vocalization and olfactory signals [@Carter_2015]. With the advancement of
-biologging technology, we have the ability to record social interactions that do
-not require proximity, particularly long-distance communication networks with
-devices like microphone arrays [@Snijders_2017]. 
-
-Varying social scales can have
-different fitness repercussions for individuals. Rhesus macaques (*Macaca
-mulatta*) had higher survivorship when they had fewer but stronger, more stable
-social associates and grooming partners rather than simply more associates
-[@Ellis_2019]. This finding highlights that different qualities of social scales
-have lasting consequences. Multilayer networks provide the opportunity to
-address these types of questions involving social scale with all the individual
-layers of interaction integrated in a holistic way.
-
-
-
-social scale results
-
-
-
-
-## Social scale
-
-Social scale is a major consideration for social network analysis,
-especially in the context of different types of relationships, such as grooming
-and association, that are typically examined separately while answering a single
-question [@Castles_2014; @Carter_2015; @Farine_2015a]. Furthermore, it is a
-common trope that individuals must be associating to interact, and many studies
-therefore assume that proximity is proxy for interacting [@Farine_2015a]. For
-instance, baboons need to be in proximity to groom each other. However, animals
-have certain interactions that do not require proximity such as long-distance
-vocalization and olfactory signals [@Carter_2015]. With the advancement of
-biologging technology, we have the ability to record social interactions that do
-not require proximity, particularly long-distance communication networks with
-devices like microphone arrays [@Snijders_2017]. Using relocation data, our case
-study results indicate that there are different social patterns in different
-habitat types, likely indicating different types of interactions. When the
-social threshold is greater than approximately 50 m during the winter,
-individuals demonstrate dramatically different graph strength (Figure 
-\@ref(fig:socres)) in different habitat types, having higher graph strength in
-forage and open habitats where they can likely see each other and still interact
-with visual cues unlike in forest habitats. Varying social scales can have
-different fitness repercussions for individuals. Rhesus macaques (*Macaca
-mulatta*) had higher survivorship when they had fewer but stronger, more stable
-social associates and grooming partners rather than simply more associates
-[@Ellis_2019]. This finding highlights that different qualities of social scales
-have lasting consequences. Multilayer networks provide the opportunity to
-address these types of questions involving social scale with all the individual
-layers of interaction integrated in a holistic way.
-
+<!-- Multilayer network extensions:
+movement
 
 
 Given the existing framework for constructing multilayer networks from
@@ -533,16 +496,19 @@ effects of habitat configuration on the formation of the social environment
 [@He_2019; @Webber_2018].
 
 
+GPS caveat HMM 
 
-Social structure and habitat selection are intimately linked: individuals must
-share space to interact and the distribution of resources influences group
-dynamics and home range size [@Webber_2018]. Social structure is influenced by
-resource availability and seasonality [@Peignier_2019], configuration [@He_2019]
-and fragmentation [@Banks_2007]. Habitat selection, the disproportionate use of
-available resources or landscape features by animals [@Manly_1993; @Boyce_1999],
-is a scale-dependent process [@Mayor_2009]. Multilayer networks represent a
-novel framework for considering the influence of habitat selection and space use
-on sociality across scales.
+Multilayer networks can be built with different types of interactions, a differ
+In contrast to multilayer networks formed by combining layers defined
+by different types of interactions, multilayer networks with GPS data are limited to 
+proximity based measures. An alternative which has been explored is using 
+hidden markov models behavioural states, within which individuals are associating. [@Jones_2020]
+-->
+
+
+
+
+
 
 
 
@@ -657,6 +623,35 @@ analysis to answer complex questions about animal socioecology.
 
 
 ## Etc
+<!-- soc -->
+Social scale is a major consideration for social network analysis,
+especially in the context of different types of relationships, such as grooming
+and association, that are typically examined separately while answering a single
+question [@Castles_2014; @Carter_2015; @Farine_2015a]. Furthermore, it is a
+common trope that individuals must be associating to interact, and many studies
+therefore assume that proximity is proxy for interacting [@Farine_2015a]. For
+instance, baboons need to be in proximity to groom each other. However, animals
+have certain interactions that do not require proximity such as long-distance
+vocalization and olfactory signals [@Carter_2015]. With the advancement of
+biologging technology, we have the ability to record social interactions that do
+not require proximity, particularly long-distance communication networks with
+devices like microphone arrays [@Snijders_2017]. Using relocation data, our case
+study results indicate that there are different social patterns in different
+habitat types, likely indicating different types of interactions. When the
+social threshold is greater than approximately 50 m during the winter,
+individuals demonstrate dramatically different graph strength (Figure 
+\@ref(fig:socres)) in different habitat types, having higher graph strength in
+forage and open habitats where they can likely see each other and still interact
+with visual cues unlike in forest habitats. Varying social scales can have
+different fitness repercussions for individuals. Rhesus macaques (*Macaca
+mulatta*) had higher survivorship when they had fewer but stronger, more stable
+social associates and grooming partners rather than simply more associates
+[@Ellis_2019]. This finding highlights that different qualities of social scales
+have lasting consequences. Multilayer networks provide the opportunity to
+address these types of questions involving social scale with all the individual
+layers of interaction integrated in a holistic way.
+
+
 
 The integration of behavioural and ecological theory has shown the value of
 considering the importance of various ecological disciplines to better
