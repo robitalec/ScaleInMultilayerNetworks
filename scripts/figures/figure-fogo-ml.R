@@ -124,7 +124,8 @@ box[, lcname := netDT[, rep(unique(lcname), each = 4)]]
   geom_nodes(aes(shearxend, shearyend)) +
   theme_blank() + 
   theme(strip.background = element_rect(fill = NA, color = 'black'),
-        strip.text.y = element_text(angle = 0))
+        strip.text.y = element_text(angle = 0),
+        panel.spacing = unit(0.2, "lines"))
 )
 
 # Number of individuals
@@ -151,11 +152,12 @@ layout <- 'A
 )
 
 
+g <- gnn
 # gsimm
 
 # Output ------------------------------------------------------------------
 ggsave('graphics/figure-fogo-ml.png',
-       g, width = 13, height = 10)
+       g, width = 10, height = 9)
 
 # ggsave('graphics/supp-temp-nid.png',
 #        gnid, width = 5, height = 5)
