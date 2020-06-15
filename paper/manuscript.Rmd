@@ -597,20 +597,6 @@ behavioural ecology literature.
 
 
 
-Multilayer networks provide unique opportunities and challenges, linking these
-various scales, for understanding the social phenotypes and environments of
-individuals and their fitness outcomes. 
-
-
-
-This multilevel network
-metric could be used to assess the relationship between an individual’s social
-phenotype and fitness. It would also be a meaningful reduction of many
-network metrics that could help simplify statistical analyses and deal with the
-frequent correlations between social network metrics in different types of
-networks [@Castles_2014].
-
-
 
 ## Movement ecology and collective movement
 
