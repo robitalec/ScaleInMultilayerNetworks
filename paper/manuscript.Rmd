@@ -561,13 +561,6 @@ and rarer relationships were recorded revealing the value of this form of
 sensitivity analysis.
 
 
-<!-- First, to what degree does the social scale of relationships, spatial -->
-<!-- scale of landscapes, and temporal scale of analysis influence our ability to -->
-<!-- interpret complex social systems?  -->
-<!-- Second, can variation in the social, spatial, -->
-<!-- and temporal scale improve predictions associated with biological differences in -->
-<!-- seasonal resource availability and social association?  -->
-
 <!--
 Multilayer networks can be built with different types of interactions
 
@@ -598,75 +591,6 @@ not require proximity, particularly long-distance communication networks with
 devices like microphone arrays [@Snijders_2017]. 
 
 -->
-
-
-
-## Etc
-The integration of behavioural and ecological theory has shown the value of
-considering the importance of various ecological disciplines to better
-understand and predict animal social networks, including demography
-[@Shizuka_2019], evolutionary and quantitative genetics [@Fisher_2017], disease
-ecology [@Silk_2017], and animal personality [@Sih_2018]. While the number of
-studies integrating social network theory into a broader array of behavioural
-and ecological sub-disciplines is impressive, only recently has the role of
-animal space use been considered in describing the causes and consequences of
-the social environment in the context of (1) phenotypes and individual fitness
-[@Webber_2018], (2) movement ecology and collective movement [@Bode_2011], and
-(3) habitat selection and space use [@He_2019]. Importantly, much of the work
-linking space use and the social environment has been theoretical and empirical
-studies are lacking [but see @Peignier_2019; @Strandburg_Peshkin_2015;
-@Strandburg_Peshkin_2017]. Here, we discuss the role of scale and multilayer
-networks in the emerging integration of social and spatial ecology within the
-behavioural ecology literature.
-
-
-
-
-## Movement ecology and collective movement
-
-Social processes, movement decisions, and space use are inextricably linked and
-multilayer networks represent a potential analytical framework for linking these
-processes [@Mourier_2019]. Movement as a collective group can reduce per capita
-predation risk via detection-dilution trade-offs and improve information
-transfer about the quality or location of resources to other group members
-[@Jolles_2019]. We integrate proximity based social networks
-that inherently rely on animal collective movement, and, in general, we found
-that movement is likely an important mechanism driving social network
-connectivity within and between habitat types.
-
-<!-- fixed array -->
-Although multilayer animal social networks are relatively novel [@Silk_2018],
-movement behaviour within multilayer networks has been considered. Spatial
-networks are physical locations (nodes) which are connected in a network when
-individuals move between said locations (edges). For example, spatial networks
-were applied to monitor movement of sharks (*Carcharhinus amblyrhynchos* and
-*Carcharhinus melanopterus*) between fixed location autonomous arrays. In this
-example, nodes represent locations within the array, *intralayer edges*
-represent individual movement frequency, and *interlayer edges* represent
-contact probability among individuals at a given node [@Mourier_2019]. Although
-movement between fixed arrays is inherent, networks are not constructed based on
-continuous measures of dyadic or collective movement [@Long_2014]. Our
-study builds on the work of Mourier et al. (2019) and explicitly integrates
-continuous and simultaneous measures of animal movement through space and time
-as layers of a multilayer social network.
-
-In contrast to spatial networks, where nodes represent spatial locations that
-are fixed in space, movement networks can represent continuous and simultaneous
-movement trajectories of multiple animals. In a recent study of vulturine
-gunieafowl (*Acryllium vulturinum*), GPS movement data were used to generate
-monolayer association networks within a multilayer network [@Papageorgiou_2019].
-However, despite potential to generate networks in different spatial or social
-contexts, layers in the multilayer network represented social associations
-within and between groups. Continuous collection of animal relocation data using
-GPS technology can be used to measure how groups of animals make collective
-movement decisions in the context of their local environment
-[@Strandburg_Peshkin_2015; @Strandburg_Peshkin_2017] and across scales. A
-collective movement layer could constitute similarity in movement for dyads
-[@Long_2014] or groups [@Bode_2011]. This movement layer could be made at a
-fine [i.e. minute-to-minute: @Cleasby_2019] or coarse scale [global migration:
-@Flack_2018]. 
-
-
 
 
 
