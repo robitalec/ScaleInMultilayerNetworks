@@ -45,7 +45,7 @@ DT[, meangraphstrength := mean(graphstrength, na.rm = TRUE),
    by = .(lcname, lcres)]
 
 
-xlab <- 'Land Cover Resolution'
+xlab <- 'Land Cover Spatial Resolution'
 
 
 
