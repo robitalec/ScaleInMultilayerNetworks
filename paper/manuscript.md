@@ -479,33 +479,32 @@ selection (Fortin et al. 2009). These examples, comparing sociality and
 habitat selection across temporal or spatial contexts, are implicitly
 multilayer analyses.
 
-Multilayer networks represent a novel framework for explicitly scale on
-the influence of habitat selection and space use on sociality. Animal
-social systems can be parsed by spatial contexts, defined, for example,
-by habitat types as in Figure <a href="#fig:lcres">3</a>. Given that
-habitat data are available across a wide range of spatial scales, we
-evaluated the influence of land cover spatial resolution on multilayer
-network metrics. The results indicate varied influence of increasing
-spatial resolution depending on the habitat layer. As spatial resolution
-increased, edge overlap decreased in forage while remaining stable in
-open and forest habitats (Figure <a href="#fig:socres">5</a> D). Forage
-is a rare and patchy habitat on Fogo Island, as is indicated by a
-decrease in the proportion of relocations in this habitat type with
-increasing spatial resolution (Figure S1)<!--TODO-->. Similar to
-increasing spatial distance threshold, the influence of increasing
-spatial resolution on graph strength was notably different between
-habitat layers. Forest layers showed little change in graph strength
-with increasing spatial resolution and variation between individuals.
-Forage and open layers had greater individual variation in graph
-strength, while forage was the sole layer to show large responses in
-graph strength to increasing spatial resolution (Figure
-<a href="#fig:socres">5</a> E). As such, multilayer network measures
-related to habitat are explicitly dependent on spatial scale. Edge
-overlap can indicate if some associations between individuals are
-dependent on the habitat-context (Battiston, Nicosia and Latora 2014).
-If the spatial resolution of the habitat data are insufficient to
-capture rare habitats, context-specific relationships between
-individuals may not be captured by multilayer networks.
+Multilayer networks represents a novel framework for explicitly testing
+the influence of habitat selection on sociality across scales. Animal
+social systems can be parsed by spatial contexts, defined by habitat
+types as in Figure <a href="#fig:lcres">3</a>. Given that habitat data
+are available across a wide range of spatial scales, we evaluated the
+influence of habitat spatial resolution on multilayer network metrics.
+The results indicate varied influence of increasing spatial resolution
+depending on the habitat layer. As spatial resolution increased, edge
+overlap decreased in forage while remaining stable in open and forest
+habitats (Figure <a href="#fig:socres">5</a> D). Forage is a rare and
+patchy habitat on Fogo Island, as is indicated by a decrease in the
+proportion of relocations in this habitat type with increasing spatial
+resolution (Figure S1)<!--TODO-->. Similar to increasing spatial
+distance threshold, the influence of increasing spatial resolution on
+graph strength was notably different between habitat layers. Forest
+layers showed little change in graph strength with increasing spatial
+resolution and variation between individuals. Forage and open layers had
+greater individual variation in graph strength, while forage was the
+sole layer to show large responses in graph strength to increasing
+spatial resolution (Figure <a href="#fig:socres">5</a> E). As such,
+multilayer network measures related to habitat are explicitly dependent
+on spatial scale. Edge overlap can indicate if some associations between
+individuals are dependent on the habitat-context (Battiston, Nicosia and
+Latora 2014). If the spatial resolution of the habitat data are
+insufficient to capture rare habitats, context-specific relationships
+between individuals may not be captured by multilayer networks.
 
 The effect of seasonality of resources on sociality can be directly
 measured by differences in association between individuals across time
@@ -556,39 +555,6 @@ by different types of interactions, multilayer networks with GPS data are limite
 proximity based measures. An alternative which has been explored is using 
 hidden markov models behavioural states, within which individuals are associating. [@Jones_2020]
 -->
-
-Habitat selection depends on the scale at which it is measured and a
-singular scale is insufficient for generalizing across scales (Mayor et
-al. 2009). Habitat selection is measured using resource selection
-functions (RSFs), based on the proportion of used and available
-resources for an animal (Manly, McDonald and Thomas 1993; Boyce and
-McDonald 1999). Johnson (1980) identified four orders of habitat
-selection: (1) the geographical range of a species, (2) the home range
-of an individual, the (3) habitat patches within the home range and (4)
-specific resources within a habitat patch. Kie et al. (2002) found that,
-independently, third order of selection was insufficient for capturing
-landscape attributes selected for by mule deer (*Odocoileus hemionus*),
-at a scale larger than their home range size. Moving past this
-hierarchical perspective, Mayor (2007) emphasized the importance of
-considering a broad continuum of scales to reveal scale-dependent
-selection and avoid the bias of predefined scales assumed to be
-associated with certain behaviours. Despite animals selecting for
-different landscape attributes at different scales (Mayor et al. 2009),
-the use of multiscale analyses for habitat selection is still critically
-lacking (McGarigal et al. 2016).
-
-The emergent relationship between habitat and sociality has been
-explored by the distribution and phenology of resources and use of
-social information. Cougar (*Puma concolor*) home ranges overlapped more
-in regions with high hunting opportunity, a proxy for resource richness
-(Elbroch et al. 2015). Caribou (*Rangifer tarandus*) sociality differed
-between seasons, where social associations were stronger in winter and
-contrastingly low in summer when resource availability are more
-homogeneous (Peignier et al. 2019). Bison (*Bison bison*) showed
-stronger habitat selection in larger groups and avoidance of predation
-risk was a main factor contributing to their habitat selection (Fortin
-et al. 2009). These examples, comparing sociality and habitat selection
-across temporal or spatial contexts, are implicitly multilayer analyses.
 
 ## Temporal scale
 
@@ -658,39 +624,6 @@ animal socioecology.
 
 ## Etc
 
-<!-- soc -->
-
-Social scale is a major consideration for social network analysis,
-especially in the context of different types of relationships, such as
-grooming and association, that are typically examined separately while
-answering a single question (Castles et al. 2014; Carter, Lee and
-Marshall 2015; Farine 2015). Furthermore, it is a common trope that
-individuals must be associating to interact, and many studies therefore
-assume that proximity is proxy for interacting (Farine 2015). For
-instance, baboons need to be in proximity to groom each other. However,
-animals have certain interactions that do not require proximity such as
-long-distance vocalization and olfactory signals (Carter, Lee and
-Marshall 2015). With the advancement of biologging technology, we have
-the ability to record social interactions that do not require proximity,
-particularly long-distance communication networks with devices like
-microphone arrays (Snijders and Naguib 2017). Using relocation data, our
-case study results indicate that there are different social patterns in
-different habitat types, likely indicating different types of
-interactions. When the social threshold is greater than approximately 50
-m during the winter, individuals demonstrate dramatically different
-graph strength (Figure <a href="#fig:socres">5</a>) in different habitat
-types, having higher graph strength in forage and open habitats where
-they can likely see each other and still interact with visual cues
-unlike in forest habitats. Varying social scales can have different
-fitness repercussions for individuals. Rhesus macaques (*Macaca
-mulatta*) had higher survivorship when they had fewer but stronger, more
-stable social associates and grooming partners rather than simply more
-associates (Ellis et al. 2019). This finding highlights that different
-qualities of social scales have lasting consequences. Multilayer
-networks provide the opportunity to address these types of questions
-involving social scale with all the individual layers of interaction
-integrated in a holistic way.
-
 The integration of behavioural and ecological theory has shown the value
 of considering the importance of various ecological disciplines to
 better understand and predict animal social networks, including
@@ -710,21 +643,6 @@ see Peignier et al. 2019; Strandburg-Peshkin et al. 2015, 2017). Here,
 we discuss the role of scale and multilayer networks in the emerging
 integration of social and spatial ecology within the behavioural ecology
 literature.
-
-Social network positions are frequently used to represent the social
-environment that an individual experiences or their social phenotype.
-Multilayer networks provide a way to bridge these different scales so
-that we can examine social phenotypes in more holistic ways rather than
-looking at each scale separately as has traditionally been done. From a
-monolayer network perspective, social phenotypes are increasingly linked
-to important fitness for individuals of various species, including
-primates (Brent, Ruiz-Lambides and Platt 2017; Thompson 2019), dolphins
-(Stanton, Gibson and Mann 2011; Stanton and Mann 2012), and birds
-(McDonald 2007; Royle et al. 2012). Both social scales, types of
-interactions, and temporal, seasons and stages of life, have emerged as
-important for understanding fitness consequences in the context of
-social network positions (Holekamp et al. 2011; Berger et al. 2015;
-Almeling et al. 2016; Brent, Ruiz-Lambides and Platt 2017).
 
 Multilayer networks provide unique opportunities and challenges, linking
 these various scales, for understanding the social phenotypes and
@@ -1242,15 +1160,6 @@ Ecology, Evolution, and Systematics* 2009;**40**:677–97.
 
 </div>
 
-<div id="ref-Ellis_2019">
-
-Ellis S, Snyder-Mackler N, Ruiz-Lambides A, Platt ML, Brent LJN.
-Deconstructing sociality: The types of social connections that predict
-longevity in a group-living primate. *Proceedings of the Royal Society
-B: Biological Sciences* 2019;**286**:20191991.
-
-</div>
-
 <div id="ref-Farine_2015a">
 
 Farine DR. Proximity as a proxy for interactions: Issues of scale in
@@ -1488,14 +1397,6 @@ network. *Proceedings of the National Academy of Sciences*
 
 </div>
 
-<div id="ref-McGarigal_2016">
-
-McGarigal K, Wan HY, Zeller KA, Timm BC, Cushman SA. Multi-scale habitat
-selection modeling: A review and outlook. *Landscape Ecology*
-2016;**31**:1161–75.
-
-</div>
-
 <div id="ref-Mourier_2019">
 
 Mourier J, Lédée EJI, Jacoby DMP. A multilayer perspective for inferring
@@ -1634,13 +1535,6 @@ advance animal behavior research? *Trends in Ecology & Evolution*
 Smith-Aguilar SE, Aureli F, Busia L, Schaffner C, Ramos-Fern’andez G.
 Using multiplex networks to capture the multidimensional nature of
 social structure. *Primates* 2019;**60**:277–95.
-
-</div>
-
-<div id="ref-Snijders_2017">
-
-Snijders L, Naguib M. Communication in animal social networks. In.
-*Advances in the Study of Behavior*. Elsevier, 2017, 297–359.
 
 </div>
 
