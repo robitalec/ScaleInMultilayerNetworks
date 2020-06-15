@@ -1,4 +1,4 @@
-Supplement - Considering scale in multilayer animal social networks
+Supplementary 1 - Considering scale in multilayer animal social networks
 ================
 Alec L. Robitaille<sup>1\*</sup>, Quinn M.R. Webber<sup>2</sup>, Julie
 W. Turner<sup>1</sup>, Eric Vander Wal<sup>1,2</sup>
@@ -7,8 +7,6 @@ Canada
 <sup>2</sup>Cognitive and Behavioural Ecology Interdisciplinary Program,
 Memorial University of Newfoundland  
 \*Corresponding author: Alec L. Robitaille (<robit.alec@gmail.com>)
-
-Table S1: Time cut definitions
 
 | timecut | mindate    | maxdate    |
 | ------: | :--------- | :--------- |
@@ -33,10 +31,28 @@ Table S1: Time cut definitions
 |      19 | 2019-01-16 | 2019-02-19 |
 |      20 | 2019-02-20 | 2019-03-27 |
 
-Figure S1: lc count by res
+Table 1: Time cut definitions
 
-<img src="../graphics/supp-count-lc.png" width="\linewidth" />
+<div class="figure">
 
-Figure S2: n individuals by time
+<img src="../graphics/supp-count-lc.png" alt="lc count by res" width="\linewidth" />
 
-<img src="../graphics/supp-temp-nid.png" width="\linewidth" />
+<p class="caption">
+
+Figure 1: lc count by res
+
+</p>
+
+</div>
+
+<div class="figure">
+
+<img src="../graphics/supp-temp-nid.png" alt="n individuals by time" width="\linewidth" />
+
+<p class="caption">
+
+Figure 2: n individuals by time
+
+</p>
+
+</div>

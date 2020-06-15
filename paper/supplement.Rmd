@@ -1,5 +1,5 @@
 ---
-title: Supplement - Considering scale in multilayer animal social networks
+title: Supplementary 1 - Considering scale in multilayer animal social networks
 author: Alec L. Robitaille^1\*^, Quinn M.R. Webber^2^, Julie W. Turner^1^, Eric Vander Wal^1,2^
 date: |
   | ^1^Department of Biology, Memorial University of Newfoundland, Canada
@@ -36,26 +36,22 @@ timedefs <- fread('../data/supp-data/timecut-defs.csv')
 ```
 
 
+(ref:cutdefs) Time cut definitions
 
-
-
-Table S1: Time cut definitions 
-
-```{r}
-knitr::kable(timedefs)
+```{r cutdefs}
+knitr::kable(timedefs, caption = '(ref:cutdefs)')
 ```
 
 
-Figure S1: lc count by res
+(ref:lccount) lc count by res
 
-```{r}
+```{r lccount, fig.cap = '(ref:lccount)'}
 knitr::include_graphics('../graphics/supp-count-lc.png')
 ```
 
 
+(ref:nid) n individuals by time
 
-Figure S2: n individuals by time
-
-```{r}
+```{r nid, fig.cap = '(ref:nid)'}
 knitr::include_graphics('../graphics/supp-temp-nid.png')
 ```
