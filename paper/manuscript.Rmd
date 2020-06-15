@@ -493,7 +493,9 @@ Edge overlap was higher between approximately October and May
 (time windows 2-5, 12-15) (Figure \@ref(fig:temp) A). These periods of high edge
 overlap correspond to seasons of low resource availability [Peigner_2019].
 Similarly, individual graph strength was also highest in these periods (Figure
-\@ref(fig:temp) B).
+\@ref(fig:temp) B). By explicitly considering the temporal context of social interactions
+in separate layers, multilayer networks provide a detailed and dynamic perspective at
+animal social networks. 
 
 The selection of time windows is essential for capturing sociality in specific
 life stages of interest. Social phenotypes can change over ontogeny in ways that
@@ -512,27 +514,26 @@ models to test questions about the dynamics of an individual’s social network
 position over multiple aggregated time periods.
 
 Finally, it is crucial to consider sufficient data to construct robust networks
-when selecting time windows and study periods. 
+when selecting time windows and study periods. Time windows should be long
+enough for each layer to have enough data for robust networks [@Farine_2017]. To
+test the influence of data quantity on multilayer networks, we used a subset of
+observations to generate multilayer networks. All network metrics across all
+three habitat layers appeared to stabilize with increasing number of
+observations. Individual graph strength showed high variability at low number of
+observations, while edge overlap and multidegree increased sharply. After
+approximately 200 observations, the rate of change for all metrics decreased and
+and graph strength remained relatively static, while edge overlap and
+multidegree continued to increase slowly. As more observations were added, more
+and rarer relationships were recorded revealing the value of this form of
+sensitivity analysis.
 
 
-Conversely, picking the proper temporal scale is important but a challenge
-because all layers in the multilayer network should reflect the same time
-period, and the period should be long enough for each layer to have enough data
-for robust networks [@Farine_2017]. These considerations may be limiting factors
-when answering questions that require time frames that are relevant to different
-individuals, for instance. In both mono- and multilayer networks, the effect of
-scale on the relationship between an individual’s social network position and
-fitness need to be considered based on the hypotheses being tested and
-logistical constraints.
-
-
-
-These results
-suggest that ordinal multilayer networks can effectively capture discrete time
-windows of aggregation and dissaggregation related to resource availability, and
-highlight the importance of carefully selecting the temporal scale of analysis.
-
-
+<!-- First, to what degree does the social scale of relationships, spatial -->
+<!-- scale of landscapes, and temporal scale of analysis influence our ability to -->
+<!-- interpret complex social systems?  -->
+<!-- Second, can variation in the social, spatial, -->
+<!-- and temporal scale improve predictions associated with biological differences in -->
+<!-- seasonal resource availability and social association?  -->
 
 <!-- Multilayer network extensions:
 movement
