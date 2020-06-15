@@ -14,24 +14,24 @@ Scale remains a foundational concept in ecology. Spatial scale, for
 instance, has become a central consideration in the way we understand
 landscape ecology and animal space use. Meanwhile, social processes can
 also scale from fine-scale interactions to co-occurrence to overlapping
-home ranges. <!-- TODO: add
-temporal scale --> Multilayer networks promise the integration of
-monolayer animal social networks with the complexity and importance of
-animal space use and movement in heterogeneous landscapes. Despite the
-complex interplay between social networks and how animals use space,
-there remains an important biological and methodological gap in our
-understanding of an animal’s perception of scale. Here we discuss the
-role of scale in the context of multilayer networks and provide a social
-ungulate case study to illustrate the role of social, spatial, and
-temporal scale on multilayer processes. We also present perspectives on
-future development and applications of scale in multilayer networks with
-respect to: phenotypes and individual fitness, movement ecology and
-collective movement, and habitat selection and space use. Effective
-integration of social and spatial processes, including biologically
-meaningful scales, within the context of animal social networks is an
-emerging area of research, as such our contribution incorporates
-perspectives on how the social environment and spatial processes are
-linked across scales in a multilayer context.
+home ranges, and vary within and across seasons. Multilayer networks
+promise the integration of monolayer animal social networks with the
+complexity and importance of animal space use and movement in
+heterogeneous landscapes. Despite the complex interplay between social
+networks and animal space use, there remains an important biological and
+methodological gap in our understanding of an animal’s perception of
+scale. Here we discuss the role of scale in the context of multilayer
+networks and provide a social ungulate case study to illustrate the role
+of social, spatial, and temporal scale on multilayer processes.
+<!--We also present perspectives on
+future development and applications of scale in multilayer networks with respect
+to: phenotypes and individual fitness, movement ecology and collective movement,
+and habitat selection and space use.--> Effective integration of social
+and spatial processes, including biologically meaningful scales, within
+the context of animal social networks is an emerging area of research,
+as such our contribution incorporates perspectives on how the social
+environment and spatial processes are linked across scales in a
+multilayer context.
 
 ## Keywords
 
@@ -114,19 +114,10 @@ association? We conclude with perspectives for further development and
 application of scale in multilayer networks with respect to phenotypes
 and individual fitness, movement ecology and collective movement, and
 habitat selection and space use.
-<!-- TODO: we answer the first question in the discussion, but not the second-->
-
-<!-- TODO: units of spatial scale? -->
-
-<!-- TODO: citations? -->
 
 # Methods
 
 ## Caribou socioecology
-
-<!--Here, we use caribou as a case study to develop scale-dependent multilayer
-networks based on predicted social (visual and auditory perception), spatial
-(habitat type), and temporal (seasonal) scales.-->
 
 Caribou are gregarious ungulates with fission-fusion dynamics
 (Lesmerises, Johnson and St-Laurent 2018) that display temporal and
@@ -251,8 +242,6 @@ each combination of habitat layer and spatial distance threshold.
 
 ### Spatial scale
 
-<!-- TODO: Increased spatial scale of land cover corresponds to xyz -->
-
 To assess the influence of spatial scale, we aggregated the land cover
 raster using the R package `grainchanger` (Graham 2019) across a series
 of scales (100 - 1000 m by steps of 100 m). The land cover raster was
@@ -308,8 +297,6 @@ networks to determine proportion of total edges as number of
 observations increased.
 
 # Results
-
-<!-- TODO: Add intro/general to results?-->
 
 Individuals in multilayer networks became more connected as the spatial
 distance threshold increased. Mean graph strength differed across
@@ -603,15 +590,12 @@ In contrast to multilayer networks formed by combining layers defined
 by different types of interactions, multilayer networks with GPS data are limited to 
 proximity based measures. An alternative which has been explored is using 
 hidden markov models behavioural states, within which individuals are associating. [@Jones_2020]
+
+t bon
+
 -->
 
-<!-- temp -->
-
-These changes in the outcome depending on how the time window is defined
-highlight how critical it is to properly define the time window
-appropriately to address the questions and hypotheses of interest.
-
-## Synth
+<!-- put this in -->
 
 Importantly, the key to incorporating movement in multilayer networks
 across scales is the technological advancements available to overcome
@@ -904,7 +888,7 @@ resolutions, with higher mean graph strength in open compared to forest.
 
 <div class="figure">
 
-<img src="../graphics/figure-temp.png" alt="Varying temporal scale in multilayer networks. Multilayer networks were generated of caribou social associations (*Rangifer tarandus*, n = 21 females) on Fogo Island, Newfoundland within ordinal time windows (20 ordinal sample periods of 35-36 days) between 2017-04-21 and 2019-03-27. A) Edge overlap across time windows showed two periods of low overlap (time windows 2-5 and 12-15), and three periods of high overlap (time windows 1, 6-11, 15-20). B) Ordinal network layers showing unweighted edges between individuals within time windows. Like edge overlap, individuals were more connected in time window 1, 6-11, and 15-20, compared to 2-5 and 12-15. C) Graph strength within time windows showing individuals as thin grey lines and mean across individuals as thick grey lines. Graph strength peaked in time window 9, with noticeable higher strength than the following year." width="\linewidth" />
+<img src="../graphics/figure-temp.png" alt="Varying temporal scale in multilayer networks. Multilayer networks were generated of caribou social associations (*Rangifer tarandus*, n = 21 females) on Fogo Island, Newfoundland within ordinal time windows (20 ordinal sample periods of 35-36 days) between 2017-04-21 and 2019-03-27. A) Edge overlap across time windows showed two periods of low overlap (time windows 2-5 and 12-15), and three periods of high overlap (time windows 1, 6-11, 15-20). B) Ordinal network layers showing unweighted edges between individuals within time windows. Like edge overlap, individuals were more connected in time windows 1, 6-11, and 15-20, compared to 2-5 and 12-15. C) Graph strength within time windows showing individuals as thin grey lines and mean across individuals as thick grey lines. Graph strength peaked in time window 9, with noticeable higher strength than the following year." width="\linewidth" />
 
 <p class="caption">
 
@@ -917,7 +901,7 @@ two periods of low overlap (time windows 2-5 and 12-15), and three
 periods of high overlap (time windows 1, 6-11, 15-20). B) Ordinal
 network layers showing unweighted edges between individuals within time
 windows. Like edge overlap, individuals were more connected in time
-window 1, 6-11, and 15-20, compared to 2-5 and 12-15. C) Graph strength
+windows 1, 6-11, and 15-20, compared to 2-5 and 12-15. C) Graph strength
 within time windows showing individuals as thin grey lines and mean
 across individuals as thick grey lines. Graph strength peaked in time
 window 9, with noticeable higher strength than the following year.
