@@ -474,8 +474,12 @@ habitat-context [@Battiston_2014]. If the spatial resolution of the habitat data
 are insufficient to capture rare habitats, context-specific relationships
 between individuals may not be captured by multilayer networks.
 
-Another extension of multilayer networks using GPS location data is integrating
-movement. Given the existing framework for constructing multilayer networks from
+Social processes, movement decisions, and space use are inextricably linked and
+multilayer networks represent a potential analytical framework for linking these
+processes [@Mourier_2019]. Movement as a collective group can reduce per capita
+predation risk via detection-dilution trade-offs and improve information
+transfer about the quality or location of resources to other group members
+[@Jolles_2019]. Given the existing framework for constructing multilayer networks from
 behavioural layers [e.g. @Smith_Aguilar_2019], monolayer networks that explicitly
 quantify movement parameters could be integrated. For example, edges could
 represent measures of dyadic or collective movement based on dynamic interaction
