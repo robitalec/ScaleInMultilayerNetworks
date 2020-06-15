@@ -533,7 +533,7 @@ different stages of ontogeny, or seasons as in our case study, which can be
 difficult to detect.
 
 
-Multilayer networks provide unique opportunities and challenges, linking these
+Multilayer networks provide unique opportunities and challenges, linking
 various scales, for understanding the social phenotypes and environments of
 individuals and their fitness outcomes. The multilayer network framework enables
 researchers to examine these different social scales simultaneously rather than
