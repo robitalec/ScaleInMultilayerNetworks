@@ -675,15 +675,6 @@ NSERC Discovery Grant to EVW.
 knitr::include_graphics('../graphics/figure-scales.png')
 ```
 
-\newpage
-
-
-(ref:ml) Visualization of multilayer network representing social association of caribou (*Rangifer tarandus*) on Fogo Island, Newfoundland between `r DT[, format(min(datetime), '%F')]` and `r DT[, format(max(datetime), '%F')]`. Individual caribou (n = `r DT[, uniqueN(get(idcol))]` females) are show as nodes and each individual is represented by a unique color. Twelve layers represent combinations of four time windows and three habitat classes (open, forest and forage). Intralayer edges connect pairs of individuals that associated according to spatial and temporal thresholds described above, and are scaled in line thickness according to strength of association (SRI). 
-
-```{r ml, fig.cap='(ref:ml)'}
-knitr::include_graphics('../graphics/figure-fogo-ml.png')
-```
-
 
 \newpage
 
@@ -707,6 +698,15 @@ knitr::include_graphics('../graphics/figure-soc.png')
 
 ```{r nobs, fig.cap='(ref:nobs)'}
 knitr::include_graphics('../graphics/figure-nobs.png')
+```
+
+\newpage
+
+
+(ref:ml) Visualization of multilayer network representing social association of caribou (*Rangifer tarandus*) on Fogo Island, Newfoundland between `r DT[, format(min(datetime), '%F')]` and `r DT[, format(max(datetime), '%F')]`. Individual caribou (n = `r DT[, uniqueN(get(idcol))]` females) are show as nodes and each individual is represented by a unique color. Twelve layers represent combinations of four time windows and three habitat classes (open, forest and forage). Intralayer edges connect pairs of individuals that associated according to spatial and temporal thresholds described above, and are scaled in line thickness according to strength of association (SRI).
+
+```{r ml, fig.cap='(ref:ml)'}
+knitr::include_graphics('../graphics/figure-fogo-ml.png')
 ```
 
 \newpage
