@@ -485,29 +485,34 @@ are insufficient to capture rare habitats, context-specific relationships
 between individuals may not be captured by multilayer networks.
 
 The effect of seasonality of resources on sociality can be directly measured by
-differences in sociality in discrete time windows. Using an ordinal multilayer
-network consisting of 20 discrete time windows throughout the study period, we
-observed periods of increased sociality in caribou on Fogo Island (Figure
-\@ref(fig:temp)). Edge overlap was higher between approximately October and May
+differences across discrete time windows. Using an ordinal multilayer network
+consisting of 20 discrete time windows throughout the study period, we observed
+periods of increased sociality in caribou on Fogo Island (Figure \@ref(fig:temp)). 
+Edge overlap was higher between approximately October and May
 (time windows 1, 6-11, 15-20) compared to between approximately May and October
-(time windows 2-5, 12-15) (Figure \@ref(fig:temp) A).
-<!-- not done -->
+(time windows 2-5, 12-15) (Figure \@ref(fig:temp) A). These periods of high edge
+overlap correspond to seasons of low resource availability [Peigner_2019].
+Similarly, individual graph strength was also highest in these periods (Figure
+\@ref(fig:temp) B).
 
-Furthermore, the selection of time windows is essential for both capturing life
-stages of interest and having sufficient data to construct robust networks.
-Social phenotypes can change over ontogeny in ways that can affect fitness
-[@Berger_2015; @Brent_2017]. Further complicating the issue, individuals can
-vary in their rate of development [@Tarka_2018]. This variation can make
-defining the appropriate temporal scale for testing the fitness implications of
-an individual’s social phenotype over different stages of ontogeny difficult.
-However, considering fine temporal scales has been show to provide insight across developmental
-stages that may otherwise be missed [@Turner_2017]. Furthermore, given the non-independent nature of social interactions and associations,
-especially over time, it can be challenging to test hypotheses about social dynamics with a
-suitable null control [@Farine_2017; @Proskurnikov_2017]. Using the framework of
-multilayer networks, ordinal layers of discrete time windows provide a way
-to make appropriate null models to test questions about the dynamics of an
-individual’s social network position over multiple aggregated time periods. <!--hmm-->
+The selection of time windows is essential for capturing sociality in specific
+life stages of interest. Social phenotypes can change over ontogeny in ways that
+can affect fitness [@Berger_2015; @Brent_2017]. Further complicating the issue,
+individuals can vary in their rate of development [@Tarka_2018]. This variation
+can make defining the appropriate temporal scale for testing the fitness
+implications of an individual’s social phenotype over different stages of
+ontogeny difficult. However, considering fine temporal scales has been show to
+provide insight across developmental stages that may otherwise be missed
+[@Turner_2017]. Furthermore, given the non-independent nature of social
+interactions and associations, especially over time, it can be challenging to
+test hypotheses about social dynamics with a suitable null control
+[@Farine_2017; @Proskurnikov_2017]. Using the framework of multilayer networks,
+ordinal layers of discrete time windows provide a way to make appropriate null
+models to test questions about the dynamics of an individual’s social network
+position over multiple aggregated time periods.
 
+Finally, it is crucial to consider sufficient data to construct robust networks
+when selecting time windows and study periods. 
 
 
 Conversely, picking the proper temporal scale is important but a challenge
