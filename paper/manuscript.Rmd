@@ -405,9 +405,9 @@ multilayer networks. For social scale, we found individuals became more
 connected with increasing spatial distance threshold. Increasing land cover
 resolution lead to a decrease in availability of patchy and rare habitats and,
 correspondingly, lower connectivity of individuals in these habitats. Temporal
-windows highlighted clear periods of increased sociality across individuals.
-Finally, increasing number of observations lead to a stabilizing in network
-measures. As such, scale is inherently tied to the generation  of multilayer
+windows highlighted clear periods of increased sociality among individuals.
+Finally, increasing number of observations lead to a general stabilizing in network
+metrics. As such, scale is inherently tied to the generation  of multilayer
 networks and metrics evaluating them, as well as the individual layers that make
 them up.
 
@@ -425,7 +425,7 @@ specifically a spatial distance threshold, to define social associations. We
 found increasing individual graph strength across three habitat layers with
 increasing spatial distance threshold (Figure \@ref(fig:socres)). In addition,
 habitat layers differed in their response to spatial distance threshold, with
-open and forage have a much larger increase in graph strength and variation
+open and forage with a larger increase in graph strength and greater variation
 across individuals. These results emphasize that multilayer network metrics are
 directly influenced by social scale, in this case the spatial distance
 threshold.
@@ -460,9 +460,9 @@ predation risk was a main factor contributing to their habitat selection
 [@Fortin_2009]. These examples, comparing sociality and habitat selection across
 temporal or spatial contexts, are implicitly multilayer analyses.
 
-Multilayer networks represents a novel framework for explicitly testing the
+Multilayer networks represent a novel framework for explicitly testing the
 influence of habitat selection on sociality across scales. Animal social systems
-can be parsed by spatial contexts, defined by habitat types as in
+can be parsed by spatial contexts, for example as defined by habitat types as in
 Figure \@ref(fig:lcres). Given that habitat data are available across a wide
 range of spatial scales, we evaluated the influence of habitat spatial
 resolution on multilayer network metrics. The results indicate varied influence
@@ -484,16 +484,48 @@ habitat-context [@Battiston_2014]. If the spatial resolution of the habitat data
 are insufficient to capture rare habitats, context-specific relationships
 between individuals may not be captured by multilayer networks.
 
-The effect of seasonality of resources on sociality can be directly
-measured by differences in association between individuals across time windows of resource availability. Using an ordinal multilayer network consisting of 20 discrete time windows throughout the study period, we observed periods of increased sociality
-in caribou on Fogo Island (Figure \@ref(fig:temp))
+The effect of seasonality of resources on sociality can be directly measured by
+differences in sociality in discrete time windows. Using an ordinal multilayer
+network consisting of 20 discrete time windows throughout the study period, we
+observed periods of increased sociality in caribou on Fogo Island (Figure
+\@ref(fig:temp)). Edge overlap was higher between approximately October and May
+(time windows 1, 6-11, 15-20) compared to between approximately May and October
+(time windows 2-5, 12-15) (Figure \@ref(fig:temp) A).
+<!-- not done -->
+
+Furthermore, the selection of time windows is essential for both capturing life
+stages of interest and having sufficient data to construct robust networks.
+Social phenotypes can change over ontogeny in ways that can affect fitness
+[@Berger_2015; @Brent_2017]. Further complicating the issue, individuals can
+vary in their rate of development [@Tarka_2018]. This variation can make
+defining the appropriate temporal scale for testing the fitness implications of
+an individual’s social phenotype over different stages of ontogeny difficult.
+However, considering fine temporal scales has been show to provide insight across developmental
+stages that may otherwise be missed [@Turner_2017]. Furthermore, given the non-independent nature of social interactions and associations,
+especially over time, it can be challenging to test hypotheses about social dynamics with a
+suitable null control [@Farine_2017; @Proskurnikov_2017]. Using the framework of
+multilayer networks, ordinal layers of discrete time windows provide a way
+to make appropriate null models to test questions about the dynamics of an
+individual’s social network position over multiple aggregated time periods. <!--hmm-->
 
 
-<!-- These examples of explicit integrations of habitat -->
-<!-- selection and sociality across social, spatial and temporal scales highlight the -->
-<!-- potential for novel insights from multilayer networks. -->
+
+Conversely, picking the proper temporal scale is important but a challenge
+because all layers in the multilayer network should reflect the same time
+period, and the period should be long enough for each layer to have enough data
+for robust networks [@Farine_2017]. These considerations may be limiting factors
+when answering questions that require time frames that are relevant to different
+individuals, for instance. In both mono- and multilayer networks, the effect of
+scale on the relationship between an individual’s social network position and
+fitness need to be considered based on the hypotheses being tested and
+logistical constraints.
 
 
+
+These results
+suggest that ordinal multilayer networks can effectively capture discrete time
+windows of aggregation and dissaggregation related to resource availability, and
+highlight the importance of carefully selecting the temporal scale of analysis.
 
 
 
@@ -535,51 +567,15 @@ hidden markov models behavioural states, within which individuals are associatin
 -->
 
 
-
-## Temporal scale
-Temporal scale is also important for understanding the repercussions of social
-phenotypes. Varying the time window length and position for caribou, we found
-there was a lot of variation in the multilayer network metrics (Figure
-\@ref(fig:winlen), Figure \@ref(fig:winpos)). These changes in the outcome
+<!-- temp -->
+These changes in the outcome
 depending on how the time window is defined highlight how critical it is to
 properly define the time window appropriately to address the questions and
-hypotheses of interest. For instance, social phenotypes can change over ontogeny
-in ways that can affect fitness [@Berger_2015; @Brent_2017]. Thus, it is
-critical to carefully consider the temporal scale that is meaningful for the
-proposed hypotheses. Further complicating the issue of selecting suitable time
-scales across ontogeny, individuals progress through development at different
-rates [@Tarka_2018]. This variation can make defining appropriate temporal
-scales for testing the fitness implications of an individual’s social phenotype
-over different stages of ontogeny even more difficult when they vary by
-individual. However, considering fine temporal scales provide insight across
-developmental stages that may otherwise be missed [@Turner_2017]. Defining
-temporal scales is a challenge in multilayer networks just as in monolayer
-networks; however, multilayer networks provide metrics that enable researchers
-to look at similarities and differences in separate layers representing
-different stages of ontogeny, or seasons as in our case study, which can be
-difficult to detect.
-
-
-Furthermore, multilayer networks provide a framework
-to test hypotheses linking social phenotypes and fitness across temporal scales.
-Because of the non-independent nature of social interactions and associations,
-especially over time, it is hard to test hypotheses about social dynamics with a
-suitable null control [@Farine_2017; @Proskurnikov_2017]. Using the framework of
-multilayer networks, making layers of different temporal periods provides a way
-to make appropriate null models to test questions about the dynamics of an
-individual’s social network position over multiple aggregated time periods.
+hypotheses of interest. 
 
 
 
-Conversely, picking the proper temporal scale is important but a challenge
-because all layers in the multilayer network should reflect the same time
-period, and the period should be long enough for each layer to have enough data
-for robust networks [@Farine_2017]. These considerations may be limiting factors
-when answering questions that require time frames that are relevant to different
-individuals, for instance. In both mono- and multilayer networks, the effect of
-scale on the relationship between an individual’s social network position and
-fitness need to be considered based on the hypotheses being tested and
-logistical constraints.
+
 
 
 
