@@ -195,7 +195,7 @@ has previously been applied to caribou using a temporal threshold of 5 minutes
 and a spatial distance threshold of 50 m [@Peignier_2019; @Lesmerises_2018]. In
 all networks, individual caribou were represented as nodes and associations between
 individuals in a given network layer were represented as intralayer
-edges. <!-- (Figure \@ref(fig:ml)) .-->
+edges.
 
 
 We weighted edges of social networks by the strength of association between
@@ -247,13 +247,14 @@ threshold.
 
 
 ### Spatial scale
-To assess the influence of spatial scale, we aggregated the land cover raster using the R package `grainchanger` [@Graham_2019] across a series
-of scales (100 - 1000 m by steps of 100 m). The land cover raster was aggregated
-using a modal moving window method using a circular window corresponding to the
-above scales [@Graham_2019a]. We assume 30 m and 100 m represents fine-scale
-decision making for caribou during foraging, while re-sampling at 500 m , 750 m
-and 1000 m represents the scale at which caribou tend to select and avoid
-habitat (Bastille-Rousseau et al. 2017). For each spatial scale, we generated a
+To assess the influence of spatial scale, we aggregated the land cover raster
+using the R package `grainchanger` [@Graham_2019] across a series of scales (100
+- 1000 m by steps of 100 m). The land cover raster was aggregated using a modal
+moving window method using a circular window corresponding to the above scales
+[@Graham_2019a]. We assume 30 m and 100 m represents fine-scale decision making
+for caribou during foraging, while re-sampling at 500 m , 750 m and 1000 m
+represents the scale at which caribou tend to select and avoid habitat
+(Bastille-Rousseau et al. 2017). For each spatial scale, we generated a
 multilayer network consisting of the social association between 
 `r DT[, uniqueN(get(idcol))]` individuals across three habitat layers (open, forest and
 forage) for the entire study period. Social associations of individuals were
@@ -281,11 +282,18 @@ observations as well as the data collection technique used to generate networks
 [@Davis_2018; @Webber_2019]. For example, GPS data is commonly collected at a
 fixed rate, e.g. every $x$ minutes or hours, continuously throughout the study
 period. Fix rate is a reflection of number of observations an individual would
-have been observed and recorded in traditional ethological studies. To investigate the influence of number of observations, we generated multilayer networks of social association between `r DT[, uniqueN(get(idcol))]` individuals across three habitat layers (open, forest and forage) using $N$ randomly selected observations. We first generated a maximum of 1000 timesteps and iteratively used $N$ of these ($N$ = 10 - 1000 observations by steps of 10), to ensure previously included timesteps, and resulting associations, were accumulated with subsequent observations to mimic collection of observational data. Within each multilayer network with $N$ observations, we calculated individual graph strength and multidegree. We calculated
-edge overlap across the entire series of networks to determine proportion of
-total edges as number of observations increased.
-
-
+have been observed and recorded in traditional ethological studies. To
+investigate the influence of number of observations, we generated multilayer
+networks of social association between `r DT[, uniqueN(get(idcol))]` individuals
+across three habitat layers (open, forest and forage) using $N$ randomly
+selected observations. We first generated a maximum of 1000 timesteps and
+iteratively used $N$ of these ($N$ = 10 - 1000 observations by steps of 10), to
+ensure previously included timesteps, and resulting associations, were
+accumulated with subsequent observations to mimic collection of observational
+data. Within each multilayer network with $N$ observations, we calculated
+individual graph strength and multidegree. We calculated edge overlap across the
+entire series of networks to determine proportion of total edges as number of
+observations increased.
 
 
 # Results
