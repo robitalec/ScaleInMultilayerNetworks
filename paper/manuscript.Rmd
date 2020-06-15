@@ -401,41 +401,40 @@ and space use.
 
 
 
+
 <!-- 1: refresh why and what  -->
 <!-- importance of scale in ml -->
-Our results highlight the influence of social, spatial and temporal scale on multilayer networks. We found increasing connectedness between individuals with increasing 
-
-Our examinations is motivated by behavioural, landscape, and spatial ecology to
-build a conceptual and analytical framework for scale-dependent multilayer
-networks, and we apply this framework to a case study of caribou (*Rangifer
-tarandus*) in Newfoundland, Canada [@Peignier_2019]. We use this case study to
-address two principal questions associated with scale-dependent multilayer
-networks. First, to what degree does the social scale of relationships, spatial
-scale of landscapes, and temporal scale of analysis influence our ability to
-interpret complex social systems? Second, can variation in the social, spatial,
-and temporal scale improve predictions associated with biological differences in
-seasonal resource availability and social association? We conclude with
-perspectives for further development and application of scale in multilayer
-networks with respect to phenotypes and individual fitness,
-movement ecology and collective movement, and habitat selection
-and space use.
+Our results highlight the influence of social, spatial and temporal scale on
+multilayer networks. For social scale, we found individuals became more
+connected with increasing spatial distance threshold. Increasing land cover
+resolution lead to a decrease in availability of patchy and rare habitats and,
+correspondingly, lower connectivity of individuals in these habitats. Temporal
+windows highlighted clear periods of increased sociality across individuals.
+Finally, increasing number of observations lead to a stabilizing in network
+measures. As such, scale is inherently tied to the generation  of multilayer
+networks and metrics evaluating them, as well as the individual layers that make
+them up.
 
 <!-- 2: measuring sociality is powerful, fitness -->
-
 
 Monolayer network approaches have been increasingly used to link social network
 position with individual fitness, including in primates [@Brent_2017;
 @Thompson_2019], dolphins [@Stanton_2012; @Stanton_2011], and birds
-[@McDonald_2007; @Royle_2012]. Social scale have emerged as important for
-understanding fitness consequences in the context of social network positions
-<!-- TODO JWT check --> [@Almeling_2016; @Berger_2015; @Brent_2017;
+[@McDonald_2007; @Royle_2012]. Social scale has emerged as an important variable
+for understanding fitness consequences in the context of social network
+positions <!-- TODO JWT check --> [@Almeling_2016; @Berger_2015; @Brent_2017;
 @Holekamp_2011]. Defining the social scale at which to generate networks is an
-essential consideration for social network analysis with direct impacts on
-outcomes <!--blah-->[@Castles_2014; @Carter_2015; @Farine_2015a]. Proximity-based social networks generated using GPS location data require using a social scale, specifically a spatial distance threshold, that defines social associations. 
-In 
-threshold to 
-
-Multilayer networks
+essential consideration for social network analysis <!-- with direct impacts on
+outcomes blah-->[@Castles_2014; @Carter_2015; @Farine_2015a]. Proximity-based
+social networks generated using GPS location data require using a social scale,
+specifically a spatial distance threshold, to define social associations. We
+found increasing individual graph strength across three habitat layers with
+increasing spatial distance threshold (Figure \@ref(fig:socres)). In addition,
+habitat layers differed in their response to spatial distance threshold, with
+open and forage have a much larger increase in graph strength and variation
+across individuals. These results emphasize that multilayer network metrics are
+directly influenced by social scale, in this case the spatial distance
+threshold.
 
 In contrast to multilayer networks formed by combining layers defined
 by different types of interactions, multilayer networks with GPS data are limited to 
