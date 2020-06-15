@@ -7,8 +7,8 @@ date: |
   | \*Corresponding author: Alec L. Robitaille (robit.alec@gmail.com)
 output:
    bookdown::github_document2: default
-   # bookdown::word_document2:
-   #   reference_docx: template.docx
+   bookdown::word_document2:
+     reference_docx: template.docx
 knit: (function(inputFile, encoding) {
   rmarkdown::render(inputFile, encoding = encoding,
   output_format = "all") })
@@ -595,7 +595,7 @@ devices like microphone arrays [@Snijders_2017].
 
 
 
-# Conclusions
+# Conclusion
 Multilayer networks remain a nascent but powerful tool in animal behavioural
 ecology. We demonstrate the potential novel analyses that vary social, spatial,
 and temporal scale within a multilayer framework. We

@@ -613,7 +613,7 @@ devices like microphone arrays [@Snijders_2017].
 
 -->
 
-# Conclusions
+# Conclusion
 
 Multilayer networks remain a nascent but powerful tool in animal
 behavioural ecology. We demonstrate the potential novel analyses that
