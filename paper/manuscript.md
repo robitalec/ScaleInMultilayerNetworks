@@ -410,10 +410,6 @@ and space use.
 
 <!-- -------------------------------------------------- -->
 
-<!-- 1: refresh why and what  -->
-
-<!-- importance of scale in ml -->
-
 Our results highlight the influence of social, spatial and temporal
 scale on multilayer networks. For social scale, we found individuals
 became more connected with increasing spatial distance threshold.
@@ -425,8 +421,6 @@ number of observations lead to a stabilizing in network measures. As
 such, scale is inherently tied to the generation of multilayer networks
 and metrics evaluating them, as well as the individual layers that make
 them up.
-
-<!-- 2: measuring sociality is powerful, fitness -->
 
 Monolayer network approaches have been increasingly used to link social
 network position with individual fitness, including in primates (Brent,
@@ -450,7 +444,7 @@ strength and variation across individuals. These results emphasize that
 multilayer network metrics are directly influenced by social scale, in
 this case the spatial distance threshold.
 
-Social structure and habitat selection are intimately linked:
+Social structure and habitat selection are intimately related:
 individuals must share space to interact and the distribution of
 resources influences group dynamics and home range size (Webber and
 Vander Wal 2018). Social structure is influenced by resource
@@ -459,12 +453,38 @@ Maldonado-Chaparro and Farine 2019) and fragmentation (Banks et al.
 2007). Habitat selection, the disproportionate use of available
 resources or landscape features by animals (Manly, McDonald and Thomas
 1993; Boyce and McDonald 1999), is a scale-dependent process (Mayor et
-al. 2009). Multilayer networks represent a novel framework for
-considering the influence of habitat selection and space use on
-sociality.
+al. 2009). Johnson (1980) identified four orders of habitat selection:
+(1) the geographical range of a species, (2) the home range of an
+individual, the (3) habitat patches within the home range and (4)
+specific resources within a habitat patch. Kie et al. (2002) found that,
+independently, third order of selection was insufficient for capturing
+landscape attributes selected for by mule deer (*Odocoileus hemionus*),
+at a scale larger than their home range size. Moving past this
+hierarchical perspective, Mayor (2007) emphasized the importance of
+considering a broad continuum of scales to reveal scale-dependent
+selection and avoid the bias of predefined scales assumed to be
+associated with certain behaviours.
 
-Given that habitat data are available across a wide range of spatial
-scales, we evaluated the influence of spatial resolution on multilayer
+The emergent relationship between habitat and sociality has been
+explored by the distribution and phenology of resources and use of
+social information. For example, cougar (*Puma concolor*) home ranges
+overlapped more in regions with high hunting opportunity, a proxy for
+resource richness (Elbroch et al. 2015). Caribou (*Rangifer tarandus*)
+sociality differed between seasons, where social associations were
+stronger in winter and contrastingly low in summer when resource
+availability are more homogeneous (Peignier et al. 2019). Bison (*Bison
+bison*) showed stronger habitat selection in larger groups and avoidance
+of predation risk was a main factor contributing to their habitat
+selection (Fortin et al. 2009). These examples, comparing sociality and
+habitat selection across temporal or spatial contexts, are implicitly
+multilayer analyses.
+
+Multilayer networks represent a novel framework for explicitly scale on
+the influence of habitat selection and space use on sociality. Animal
+social systems can be parsed by spatial contexts, defined, for example,
+by habitat types as in Figure <a href="#fig:lcres">3</a>. Given that
+habitat data are available across a wide range of spatial scales, we
+evaluated the influence of land cover spatial resolution on multilayer
 network metrics. The results indicate varied influence of increasing
 spatial resolution depending on the habitat layer. As spatial resolution
 increased, edge overlap decreased in forage while remaining stable in
@@ -486,6 +506,19 @@ dependent on the habitat-context (Battiston, Nicosia and Latora 2014).
 If the spatial resolution of the habitat data are insufficient to
 capture rare habitats, context-specific relationships between
 individuals may not be captured by multilayer networks.
+
+The effect of seasonality of resources on sociality can be directly
+measured by differences in association between individuals across time
+windows of resource availability. Using an ordinal multilayer network
+consisting of 20 discrete time windows throughout the study period, we
+observed periods of increased sociality in caribou on Fogo Island
+(Figure <a href="#fig:temp">4</a>)
+
+<!-- These examples of explicit integrations of habitat -->
+
+<!-- selection and sociality across social, spatial and temporal scales highlight the -->
+
+<!-- potential for novel insights from multilayer networks. -->
 
 <!-- Multilayer network extensions:
 movement
@@ -524,8 +557,6 @@ proximity based measures. An alternative which has been explored is using
 hidden markov models behavioural states, within which individuals are associating. [@Jones_2020]
 -->
 
-## Spatial scale
-
 Habitat selection depends on the scale at which it is measured and a
 singular scale is insufficient for generalizing across scales (Mayor et
 al. 2009). Habitat selection is measured using resource selection
@@ -558,20 +589,6 @@ stronger habitat selection in larger groups and avoidance of predation
 risk was a main factor contributing to their habitat selection (Fortin
 et al. 2009). These examples, comparing sociality and habitat selection
 across temporal or spatial contexts, are implicitly multilayer analyses.
-
-Multilayer networks can be used to explicitly consider habitat selection
-and sociality across scales. Animal social systems can be parsed by
-spatial contexts, defined, for example, by habitat types as in Figure
-<a href="#fig:lcres">3</a>. The effect of seasonality of resources can
-can be directly measured by differences in habitat selection and
-sociality across temporal layers as in Figure
-<a href="#fig:winpos"><strong>??</strong></a> and Figure
-<a href="#fig:winlen"><strong>??</strong></a>. Habitat selection can be
-explicitly integrated using network layers defined by selection
-coefficients for individuals. These examples of explicit integrations of
-habitat selection and sociality across social, spatial and temporal
-scales highlight the potential for novel insights from multilayer
-networks.
 
 ## Temporal scale
 
