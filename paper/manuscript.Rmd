@@ -567,12 +567,32 @@ sensitivity analysis.
 <!--
 Multilayer networks can be built with different types of interactions
 
+
 In contrast to multilayer networks formed by combining layers defined
 by different types of interactions, multilayer networks with GPS data are limited to 
 proximity based measures. An alternative which has been explored is using 
 hidden markov models behavioural states, within which individuals are associating. [@Jones_2020]
 
+Another potential application would be
+to generate social networks during times when animals are engaged in different
+behaviours, including travelling, interacting, or foraging [@Muller_2018;
+@Finn_2019] and construct a multilayer network based on behaviour-specific
+monolayer networks [e.g. @Smith_Aguilar_2019].
+
+
+
 netTS
+
+
+However, animals
+have certain interactions that do not require proximity such as long-distance
+vocalization and olfactory signals [@Carter_2015]. 
+
+With the advancement of
+biologging technology, we have the ability to record social interactions that do
+not require proximity, particularly long-distance communication networks with
+devices like microphone arrays [@Snijders_2017]. 
+
 -->
 
 
@@ -642,34 +662,12 @@ collective movement layer could constitute similarity in movement for dyads
 fine [i.e. minute-to-minute: @Cleasby_2019] or coarse scale [global migration:
 @Flack_2018]. 
 
-Our case study integrates variation in temporal and spatial scale
-to assess the role of scale in predicting multilayer networks. As one might
-expect, we found increasing social threshold results in saturation of potential
-social connections (Figure \@ref(fig:socres)).<!--TODO: what??, while increasing temporal scale had little effect
-on habitat-specific networks (Figure \@ref(fig:))-->. Another potential application would be
-to generate social networks during times when animals are engaged in different
-behaviours, including travelling, interacting, or foraging [@Muller_2018;
-@Finn_2019] and construct a multilayer network based on behaviour-specific
-monolayer networks [e.g. @Smith_Aguilar_2019].
-
-
-
-
-
-
-## Habitat selection and space use
-
-
-
 
 
 
 
 
 # Conclusions
-
-<!-- TODO: push gps data, HMM networks, etc-->
-
 Multilayer networks remain a nascent but powerful tool in animal behavioural
 ecology. We demonstrate the potential novel analyses that vary social, spatial,
 and temporal scale within a multilayer framework. We
@@ -732,7 +730,6 @@ visual, or chemotaxis, influence the social environment? What is the role of
 memory, and by extension social and spatial cognition, as animals navigate their
 environment and make decisions about where to move next?
 
-<!-- TODO: In summary, -->
 
 
 # Acknowledgements
