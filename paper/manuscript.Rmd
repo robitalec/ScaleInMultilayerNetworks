@@ -372,6 +372,24 @@ contexts.
 
 
 # Discussion
+<!-- 1)
+First, to what degree does the social scale of relationships, spatial
+scale of landscapes, and temporal scale of analysis influence our ability to
+interpret complex social systems? 
+-->
+
+<!-- 2)
+Second, can variation in the social, spatial,
+and temporal scale improve predictions associated with biological differences in
+seasonal resource availability and social association? 
+
++
+We conclude with
+perspectives for further development and application of scale in multilayer
+networks with respect to phenotypes and individual fitness,
+movement ecology and collective movement, and habitat selection
+and space use.
+-->
 
 <!-- TODO: edge overlap can indicate if some associations are dependent on context -->
 <!-- sufficient observations is essential for capturing reliable networ -->
