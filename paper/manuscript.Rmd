@@ -415,6 +415,11 @@ Finally, increasing number of observations lead to a general stabilizing in netw
 metrics. As such, scale is inherently tied to the generation  of multilayer
 networks and metrics evaluating them, as well as the individual layers that make
 them up.
+<!--QW: I will pre-empt Eric and say I think this paragraph could maybe not mention the results at all. 
+You could focus on just talking about the importance of scale for behavioural and spatial ecology.
+Why is it important and what are the more broadly applicable ideas that lead us to this paper? 
+Maybe keep this little summary paragraph for now - I think likely we could integrate what I describe 
+above with what you already have-->
 
 Monolayer network approaches have been increasingly used to link social network
 position with individual fitness, including in primates [@Brent_2017;
