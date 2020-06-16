@@ -74,7 +74,8 @@ Multiscale ecology has been integrated into species distribution modelling
 among others. Meanwhile, in the context of animal behaviour, certain behaviours
 are scale-dependent; for example, acoustic communication in birds varies with
 spatial scales [@Luther_2009]. We posit that it is important to consider that
-animal behaviour within the social environment will be scale-dependent.
+animal behaviour within the social environment will be scale-dependent. 
+<!-- QW: I think this last sentence needs to be a bit stronger. Why is it important? -->
 
 Sociality exists across both temporal and spatial scales (Whitehead 2008). For
 example, grooming requires close spatial proximity between conspecifics and
