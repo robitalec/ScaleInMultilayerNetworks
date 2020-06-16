@@ -14,7 +14,7 @@ p <- lapply(pkgs, library, character.only = TRUE)
 
 
 # Variables ---------------------------------------------------------------
-source('scripts/00-variables.R')
+# source('scripts/00-variables.R')
 
 # Input -------------------------------------------------------------------
 DT <- readRDS('data/derived-data/01-sub-fogo-caribou.Rds')
