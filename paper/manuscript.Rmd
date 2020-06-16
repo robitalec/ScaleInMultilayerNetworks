@@ -341,7 +341,7 @@ rare habitats.
 The ordinal multilayer network generated indicated within-year time windows of
 increased caribou sociality. <!--QW: I'm not sure what you are trying to say in this first sentence. Is it that there are distinct within-year time windows where social network metrics increased? -->
 Edge overlap was higher in time windows 1, 6-11 and
-15-20 than in time windows 2-5 and 12-15  (Figure \@ref(fig:temp) A). Time
+15-20 than in time windows 2-5 and 12-15  (Figure \@ref(fig:temp) A). <!--QW: I'm not sure about using the window number - it doesn't really mean anyhting. Can you use actual dates?--> Time
 windows of higher edge overlap, between approximately October and May, had
 correspondingly higher graph strength compared to time windows of lower edge
 overlap, between approximately May and October (Figure \@ref(fig:temp) C). Graph
