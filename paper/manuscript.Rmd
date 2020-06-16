@@ -320,7 +320,9 @@ the use of 50m buffer that has long been used for studies in the field (e.g. Lin
 any Clutton-Brock red deer paper that uses group size data)-->
 
 
-Increasing land cover resolution resulted in decreased availability of forage,
+Increasing land cover resolution resulted in decreased availability of foraging habitat 
+<!--QW: I think we need to call this foraging habitat, when possible... forage to me 
+refers to the thing an animal is eating-->,
 a rare and patchy habitat, and corresponding low connectivity of individuals in
 these habitats at higher resolution (Figure \@ref(fig:lcres)). Graph strength
 and edge overlap were relatively consistent across land cover resolutions for
