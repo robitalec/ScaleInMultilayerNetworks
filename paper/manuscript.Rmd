@@ -427,12 +427,12 @@ position with individual fitness, including in primates [@Brent_2017;
 [@McDonald_2007; @Royle_2012]. Social scale has emerged as an important variable
 for understanding fitness consequences in the context of social network
 positions <!-- TODO JWT check --> [@Almeling_2016; @Berger_2015; @Brent_2017;
-@Holekamp_2011]. Defining the social scale at which to generate networks is an
+@Holekamp_2011]. Defining the social scale to generate networks is an
 essential consideration for social network analysis <!-- with direct impacts on
 outcomes blah-->[@Castles_2014; @Carter_2015; @Farine_2015a]. Proximity-based
 social networks generated using GPS location data require using a social scale,
 specifically a spatial distance threshold, to define social associations. We
-found increasing individual graph strength across three habitat layers with
+found increasing individual graph strength across three habitat types with
 increasing spatial distance threshold (Figure \@ref(fig:socres)). In addition,
 habitat layers differed in their response to spatial distance threshold, with
 open and forage with a larger increase in graph strength and greater variation
@@ -461,8 +461,8 @@ The emergent relationship between habitat and sociality has been explored by the
 distribution and phenology of resources and use of social information. For
 example, cougar (*Puma concolor*) home ranges overlapped more in regions with
 high hunting opportunity, a proxy for resource richness [@Elbroch_2015]. Caribou
-(*Rangifer tarandus*) sociality differed between seasons, where social
-associations were stronger in winter and contrastingly low in summer when
+(*Rangifer tarandus*) social network graph strength differed between seasons, where 
+graph strength was stronger in winter and contrastingly low in summer when
 resource availability are more homogeneous [@Peignier_2019]. Bison (*Bison
 bison*) showed stronger habitat selection in larger groups and avoidance of
 predation risk was a main factor contributing to their habitat selection
