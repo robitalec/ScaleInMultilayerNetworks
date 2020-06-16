@@ -337,7 +337,7 @@ matching land cover resolution to scale of selection as well as ensuring the
 land cover product used has a resolution fine enough to detect landscape
 features and habitats relevant to study species, such as important patchy and
 rare habitats.
-
+<!--QW: what makes it ordinal again? Is it ordinal OR continuous? -->
 The ordinal multilayer network generated indicated within-year time windows of
 increased caribou sociality. <!--QW: I'm not sure what you are trying to say in this first sentence. Is it that there are distinct within-year time windows where social network metrics increased? -->
 Edge overlap was higher in time windows 1, 6-11 and
