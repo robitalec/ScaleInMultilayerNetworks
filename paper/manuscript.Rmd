@@ -314,7 +314,10 @@ the rate at which network metrics <!--QW: which metrics?--> stabilized. For ungu
 assigned based on 50 m threshold (Lingle 2003; Lesmeries et al. 2018; Peignier
 et al. 2019), suggesting that given similar quantities of data, ~50 m is likely
 an appropriate social scale for generating social networks in caribou and
-similar species.
+similar species. <!--QW: I'm not sure about this statement. Should it be more about 
+how GPS data allows (e.g. from this study and Peignier et al; Lesmerises et al.) us to confirm 
+the use of 50m buffer that has long been used for studies in the field (e.g. Lingle 2003 and 
+any Clutton-Brock red deer paper that uses group size data)-->
 
 
 Increasing land cover resolution resulted in decreased availability of forage,
