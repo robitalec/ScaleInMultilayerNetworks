@@ -40,24 +40,23 @@ plan <- drake_plan(
   data = data_prep,
   
   # Figure 1 
-  figure1 = figure_1(), 
+  figure1 = fig_1(), 
   
   # Land cover
-  lc = lc_scale(data),
-  lc_figure = lc_fig(lc),
+  lc = scale_lc(data),
+  lc_figure = fig_lc(lc),
   
   # Temporal
-  temp = temp_scale(data),
-  temp_figure = temp_fig(temp),
+  temp = scale_temp(data),
+  temp_figure = fig_temp(temp),
   
   # Social threshold
-  soc = soc_scale(data),
-  soc_figure = soc_fig(soc),
+  soc = scale_soc(data),
+  soc_figure = fig_soc(soc),
   
-
   # Number of observations
-  nobs = nobs_scale(data),
-  nobs_figure = nobs_fig(nobs)
+  nobs = scale_nobs(data),
+  nobs_figure = fig_nobs(nobs)
   
   # TODO: fogo car ml
 )
