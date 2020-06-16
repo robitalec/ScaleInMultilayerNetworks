@@ -40,7 +40,7 @@ plan <- drake_plan(
   data = data_prep,
   
   # Figure 1 
-  figure1 = fig_1(), 
+  # figure1 = fig_1(), 
   
   # Land cover
   lc = scale_lc(data),
@@ -59,4 +59,6 @@ plan <- drake_plan(
   nobs_figure = fig_nobs(nobs)
   
   # TODO: fogo car ml
+  
+  # TODO: add manuscript
 )
