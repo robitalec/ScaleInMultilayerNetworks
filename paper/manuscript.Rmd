@@ -406,7 +406,9 @@ and space use.
 Our results highlight the influence of social, spatial and temporal scale on
 multilayer networks. For social scale, we found individuals became more
 connected with increasing spatial distance threshold. Increasing land cover
-resolution lead to a decrease in availability of patchy and rare habitats and,
+resolution lead to a decrease in availability of patchy and rare habitats and, 
+<!--QW: not sure I'd mention 'rare' since there are only 3 habitat types. 
+Could you just say 'less common' or even just 'patchy'?-->
 correspondingly, lower connectivity of individuals in these habitats. Temporal
 windows highlighted clear periods of increased sociality among individuals.
 Finally, increasing number of observations lead to a general stabilizing in network
