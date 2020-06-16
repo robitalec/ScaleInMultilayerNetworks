@@ -477,7 +477,7 @@ range of spatial scales, we evaluated the influence of habitat spatial
 resolution on multilayer network metrics. The results indicate varied influence
 of increasing spatial resolution depending on the habitat layer. As spatial
 resolution increased, edge overlap decreased in forage while remaining stable in
-open and forest habitats (Figure \@ref(fig:socres) D). Forage <!--Lichen? I think we need to call this lichen and not forage --> is a rare and
+open and forest habitats (Figure \@ref(fig:socres) D). Forage <!--Lichen? I think we need to call this lichen and not forage --> is a rare (<!--TODO--> XX % of the landscape) and
 patchy habitat on Fogo Island, as is indicated by a decrease in the proportion
 of relocations in this habitat type with increasing spatial resolution (Supplementary 1
 Figure 1). Similar to increasing spatial distance threshold, the influence
