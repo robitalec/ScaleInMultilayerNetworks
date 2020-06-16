@@ -350,8 +350,8 @@ suggest that ordinal multilayer networks can effectively capture discrete time
 windows of aggregation and dissaggregation related to resource availability, and
 highlight the importance of carefully selecting the temporal scale of analysis.
 
-As the number of observations used to generate multilayer networks increased,
-individuals became more connected and metrics generally appeared to stabilize.
+As one might expect, when the number of observations used to generate multilayer networks increased,
+individuals became more connected and variance in metrics decreased. <!--QW: I think throughout you want to say "variance decreased" instead of "stabilized" -->
 Graph strength across individuals in all three habitat layers was highly
 variable at low number of observations and stabilized after ~100 observations
 (Figure \@ref(fig:nobs) A). Edge overlap increased across all three habitat
