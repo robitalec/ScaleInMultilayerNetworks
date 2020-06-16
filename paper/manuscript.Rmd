@@ -329,7 +329,7 @@ and edge overlap were relatively consistent across land cover resolutions for
 forest and open layers (Figure \@ref(fig:lcres) D, E). Edge overlap decreased
 sharply between 30 m and 600 m in forage layers, afterwards remaining stable to
 1000 m (Figure \@ref(fig:lcres) D). Graph strength was more variable within
-forage layers across land cover resolutions than open and forest (Figure
+foraging habitat layers across land cover resolutions than open and forest habitat layers (Figure
 \@ref(fig:lcres) D). The proportion of relocations in forest and open habitats
 increased with increasing spatial resolution, while decreasing in forage habitat
 (Supplementary 1 Figure 1).  Overall, these results indicate the importance of
