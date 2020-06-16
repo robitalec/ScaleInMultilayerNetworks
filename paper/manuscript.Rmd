@@ -89,8 +89,12 @@ temporal scales (e.g. Piza-Roca et al. 2018). Although the social environment
 clearly scales spatially and temporally, it remains unclear whether coarser
 scales of sociality, including social association and home range overlap, vary
 predictably with social interaction [@Castles_2014;
-@Farine_2015a]. Thus, we define social scale as the type of social relationship
-observed that can be explicitly defined and measured [@Farine_2015a].
+@Farine_2015a]. We therefore define social scale as the type of social relationship
+observed that can be explicitly defined and measured [@Farine_2015a] and suggest the 
+potential for adaptive variance in social relationships is also scale-dependent. 
+<!--QW: also need to fix up this last sentence- I added the 'adaptive variance part 
+under the expectation that there is some scale at which variance is greatest, and presumably
+it is this scale that has the greatest effect on fitness or other traits-->
 
 Animal social network analysis is a well-developed tool used to measure the
 relationships of individuals and organization of social systems [@Krause_2009;
