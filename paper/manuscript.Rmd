@@ -122,7 +122,7 @@ novel understanding of variation in the social, spatial or temporal scales assoc
 with social systems.
 
 
-Our examinations is motivated by behavioural, landscape, and spatial ecology to
+Our examinations are motivated by behavioural, landscape, and spatial ecology to
 build a conceptual and analytical framework for scale-dependent multilayer
 networks, and we apply this framework to a case study of caribou (*Rangifer
 tarandus*) in Newfoundland, Canada [@Peignier_2019]. We use this case study to
