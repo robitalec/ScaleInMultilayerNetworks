@@ -273,7 +273,7 @@ edges observed in each combination of habitat layer and spatial scale.
 #### Time windows 
 We used a temporal multilayer network to assess the seasonality of caribou
 sociality. Multilayer networks consisted of the social association between 
-`r DT[, uniqueN(get(idcol))]` individuals across 20 ordinal sample periods of 35-36
+`r DT[, uniqueN(get(idcol))]` individuals across 20 ordinal sample periods of 35-36 <!--QW: why 35-36 and not just 35 or 36?-->
 days taken from the entire study period. Social associations were defined by
 spatiotemporal overlap of individuals within 5 minutes and 50 m. In each time
 window, we calculated individual graph strength and multidegree, and across the
