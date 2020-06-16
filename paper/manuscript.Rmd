@@ -483,9 +483,9 @@ of relocations in this habitat type with increasing spatial resolution (Suppleme
 Figure 1). Similar to increasing spatial distance threshold, the influence
 of increasing spatial resolution on graph strength was notably different between
 habitat layers. Forest layers showed little change in graph strength with
-increasing spatial resolution and variation between individuals. Forage and open
-layers had greater individual variation in graph strength, while forage was the
-sole layer to show large responses in graph strength to increasing spatial
+increasing spatial resolution and variation between individuals. Lichen and open
+layers had greater individual variation in graph strength, while lichen was the
+only layer to show large responses in graph strength to increasing spatial
 resolution (Figure \@ref(fig:socres) E). As such, multilayer network measures
 related to habitat are explicitly dependent on spatial scale. Edge overlap can
 indicate if some associations between individuals are dependent on the
@@ -549,7 +549,7 @@ Similarly, individual graph strength was also highest in these periods (Figure
 in separate layers, multilayer networks provide a detailed and dynamic perspective at
 animal social networks. 
 
-The selection of time windows is essential for capturing sociality in specific
+Selection of appropriate time windows is essential for capturing sociality in specific
 life stages of interest. Social phenotypes can change over ontogeny in ways that
 can affect fitness [@Berger_2015; @Brent_2017]. Further complicating the issue,
 individuals can vary in their rate of development [@Tarka_2018]. This variation
