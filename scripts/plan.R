@@ -13,7 +13,7 @@ figure_lc <- code_to_function('scripts/figures/figure-lc.R')
 
 # Plan
 plan <- drake_plan(
-  data_prep = data_prep,
-  landcover_scale = landcover_scale(data_prep),
-  figure_lc = figure_lc(landcover_scale)
+  data = data_prep,
+  lc = landcover_scale(data),
+  fig_lc = figure_lc(lc)
 )
