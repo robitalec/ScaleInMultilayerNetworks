@@ -66,9 +66,9 @@ Social network analysis, Landscape ecology, Movement ecology, Space use
 # Introduction
 Our inference regarding the processes underlying ecological patterns
 are directly linked to the scale at which they are observed [@Levin_1992;
-@Allen_2015]. Animals are influenced across scales, through processes such as
+@Allen_2015]. Animals are influenced across scales, through ecological processes such as
 species-specific as trophic interactions and resource availability
-[@Legendre_1993; @Chave_2013] and global climate and productivity [@Field_2009].
+[@Legendre_1993; @Chave_2013], and global climate and productivity [@Field_2009].
 Multiscale ecology has been integrated into species distribution modelling
 [@Elith_2009], habitat selection [@Mayor_2007], and food webs [@Sugihara_1989],
 among others. Meanwhile, in the context of animal behaviour, certain behaviours
