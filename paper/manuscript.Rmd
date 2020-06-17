@@ -238,7 +238,9 @@ calculated using the R packages `igraph` [@Csardi_2006], `asnipe`
 
 ### Social scale
 
-We generated multilayer networks across a series of spatial distance thresholds
+We generated multilayer networks across a series of spatial distance thresholds 
+that relate to behavioural interactions that could occur within those distances
+<!-- JWT: or something like that needs to be in the first sentence to relate the spatial distance to social scale upfront -->
 for group assignment. Spatial distance thresholds (5, 25, 50, 75, 100, 250 and
 500 m) represented a range of visual (short distance) to auditory (long
 distance) sensory modalities of caribou. Multilayer networks consisted of the
@@ -248,6 +250,7 @@ the finest scale, individuals within 5 m of one another were considered in the
 same group, whereas at the coarsest scale, individuals within 500 m of one
 another were considered in the same group. We calculated graph strength and
 multidegree for each habitat layer and spatial distance threshold, and edge
+<!-- JWT: can we call spatial distance social distance? -->
 overlap across the entire series of networks to determine proportion of total
 edges observed in each combination of habitat layer and spatial distance
 threshold.
@@ -262,19 +265,20 @@ moving window method using a circular window corresponding to the above scales
 for caribou during foraging, while re-sampling at 500 m , 750 m and 1000 m
 represents the scale at which caribou tend to select and avoid habitat
 (Bastille-Rousseau et al. 2017). For each spatial scale, we generated a
-multilayer network consisting of the social association between 
+multilayer network consisting of the social associations between 
 `r DT[, uniqueN(get(idcol))]` individuals across three habitat layers (open, forest and
 forage) for the entire study period. Social associations of individuals were
 defined by spatiotemporal overlap within 5 minutes and 50 m. We calculated graph
 strength and multidegree for each habitat layer and spatial scale, and edge
 overlap across the entire series of networks to determine proportion of total
 edges observed in each combination of habitat layer and spatial scale.
+<!-- JWT: Your graphs present things in the order of Forage, Forest, Open, but in the text you do open, forest, forage. They need to be consistent -->
 
 
 ### Temporal scale
 #### Time windows 
 We used a temporal multilayer network to assess the seasonality of caribou
-sociality. Multilayer networks consisted of the social association between 
+sociality. Multilayer networks consisted of the social associations between 
 `r DT[, uniqueN(get(idcol))]` individuals across 20 ordinal sample periods of 35-36 <!--QW: why 35-36 and not just 35 or 36?-->
 days taken from the entire study period. Social associations were defined by
 spatiotemporal overlap of individuals within 5 minutes and 50 m. In each time
