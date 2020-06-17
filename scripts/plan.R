@@ -29,6 +29,12 @@ fig_soc <- code_to_function('scripts/figures/figure-lc.R')
 scale_nobs <- code_to_function('scripts/05-number-of-observations.R')
 fig_nobs <- code_to_function('scripts/figures/figure-nobs.R')
 
+# Manuscript
+render_manuscript <- function() {
+  rmarkdown::render(
+    'paper/manuscript.Rmd'
+  )
+}
 
 # TODO: fogo car ml
 
@@ -63,8 +69,11 @@ plan <- drake_plan(
   # TODO: fogo car ml
   
   # Manuscript
-  manuscript = rmarkdown::render(
-    'paper/manuscript.Rmd'
+  manuscript = render_manuscript(
+    lc_figure,
+    temp_figure,
+    soc_figure, 
+    nobs_figure
   ),
   
   # Supplement
