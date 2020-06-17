@@ -470,10 +470,10 @@ The emergent relationship between habitat and sociality has been explored by the
 distribution and phenology of resources and use of social information. For
 example, cougar (*Puma concolor*) home ranges overlapped more in regions with
 high hunting opportunity, a proxy for resource richness [@Elbroch_2015]. Caribou
-(*Rangifer tarandus*) social network graph strength differed between seasons, where 
+(*R. tarandus*) social network graph strength differed between seasons, where 
 graph strength was stronger in winter and contrastingly low in summer when
 resource availability are more homogeneous [@Peignier_2019]. Bison (*Bison
-bison*) showed stronger habitat selection in larger groups and avoidance of
+bison*) showed stronger habitat selection in larger groups, and avoidance of
 predation risk was a main factor contributing to their habitat selection
 [@Fortin_2009]. These examples, comparing sociality and habitat selection across
 temporal or spatial contexts, are implicitly multilayer analyses.
@@ -489,7 +489,7 @@ resolution increased, edge overlap decreased in forage while remaining stable in
 open and forest habitats (Figure \@ref(fig:socres) D). Forage <!--Lichen? I think we need to call this lichen and not forage --> is a rare (<!--TODO--> XX % of the landscape) and
 patchy habitat on Fogo Island, as is indicated by a decrease in the proportion
 of relocations in this habitat type with increasing spatial resolution (Supplementary 1
-Figure 1). Similar to increasing spatial distance threshold, the influence
+Figure 1). Similar to increasing social distance threshold, the influence
 of increasing spatial resolution on graph strength was notably different between
 habitat layers. Forest layers showed little change in graph strength with
 increasing spatial resolution and variation between individuals. Lichen and open
