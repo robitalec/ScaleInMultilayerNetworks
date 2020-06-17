@@ -58,9 +58,17 @@ plan <- drake_plan(
   
   # Number of observations
   nobs = scale_nobs(data),
-  nobs_figure = fig_nobs(nobs)
+  nobs_figure = fig_nobs(nobs),
   
   # TODO: fogo car ml
   
-  # TODO: add manuscript
+  # Manuscript
+  manuscript = rmarkdown::render(
+    'paper/manuscript.Rmd'
+  ),
+  
+  # Supplement
+  supplement = rmarkdown::render(
+    'paper/supplemet.Rmd'
+  )
 )
