@@ -119,7 +119,7 @@ studies of animal behaviour [@Silk_2018; @Finn_2019], although they have been
 used to describe multidimensional human social systems, complex transportation
 networks, and neural networks [@Silk_2018]. The role of scale within multilayer
 social networks remains unexplored but provides a unique opportunity to develop
-novel understanding of variation in the social, spatial or temporal scales associated
+novel understanding of variation in the social, spatial, or temporal scales associated
 with social systems.
 
 
@@ -137,6 +137,7 @@ perspectives for further development and application of scale in multilayer
 networks with respect to phenotypes and individual fitness,
 movement ecology and collective movement, and habitat selection
 and space use.
+<!-- JWT: This part may have to change depending on how we do the disc -->
 
 (ref:spacetime) Space-time diagram representing variation the relative spatial and temporal extent required for different types of social and communication processes for four species, including spotted hyaena, passerine birds, sleepy lizards, and elephants. Spatial and temporal extent for social interactions, e.g. mating, grooming, or aggression, are similar for most species because physical contact between two individuals is required for many social interactions. The logical extension is that spatial and temporal extent for social interaction is hierarchically nested within the spatial and temporal extent for social association because individuals must share space to interact. By contrast, different species have potential for greater spatial and temporal extents, for example, temporal extent for vocal communication is similar for most species because most vocal calls only persist in the environment for seconds, but spatial extent for vocal communication is highly variable with elephant calls extending the great distance and passerine calls extending the shortest distance.
 
