@@ -35,9 +35,11 @@ fig_nobs <- code_to_function('scripts/figures/figure-nobs.R')
 
 # Plan --------------------------------------------------------------------
 plan <- drake_plan(
+  # Package
+  scalepkg = expose_imports('ScaleInMultilayerNetworks'),
   
   # Prep data
-  data = data_prep,
+  data = data_prep(scalepkg),
   
   # Figure 1 
   # figure1 = fig_1(), 
