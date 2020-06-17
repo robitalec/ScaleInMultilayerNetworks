@@ -687,7 +687,7 @@ visual, or chemotaxis, influence the social environment? What is the role of
 memory, and by extension social and spatial cognition, as animals navigate their
 environment and make decisions about where to move next?
 
-
+<!-- JWT: It think we need an ending thought or punch or something, not end it on a question. -->
 
 # Acknowledgements
 
