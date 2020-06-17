@@ -41,7 +41,7 @@ timedefs <- fread('../data/supp-data/timecut-defs.csv')
 Scale remains a foundational concept in ecology. Spatial scale, for instance,
 has become a central consideration in the way we understand landscape ecology
 and animal space use. Meanwhile, social processes can also scale from fine-scale
-interactions to co-occurrence to overlapping home ranges, and vary within and 
+interactions to co-occurrence to overlapping home ranges and vary within and 
 across seasons. Multilayer networks promise the integration of monolayer
 animal social networks with the complexity and importance of animal space use
 and movement in heterogeneous landscapes. Despite the complex interplay between
@@ -54,8 +54,8 @@ future development and applications of scale in multilayer networks with respect
 to: phenotypes and individual fitness, movement ecology and collective movement,
 and habitat selection and space use.--> Effective integration of social and spatial
 processes, including biologically meaningful scales, within the context of
-animal social networks is an emerging area of research, as such our contribution
-incorporates perspectives on how the social environment and spatial processes
+animal social networks is an emerging area of research. Here, we
+incorporate perspectives on how the social environment and spatial processes
 are linked across scales in a multilayer context.
 
 ## Keywords
