@@ -30,9 +30,13 @@ scale_nobs <- code_to_function('scripts/05-number-of-observations.R')
 fig_nobs <- code_to_function('scripts/figures/figure-nobs.R')
 
 # Render
-render_man <- code_to_function('scripts/render/render-manuscript.R')
-render_sup <- code_to_function('scripts/render/render-supplement.R')
-
+render <- function(filename, depends) {
+  rmarkdown::render(
+    filename,
+    output_format = NULL,
+    quiet = TRUE
+  )
+}
 
 # TODO: fogo car ml
 
@@ -67,18 +71,22 @@ plan <- drake_plan(
   # TODO: fogo car ml
   
   # Manuscript
-  manuscript = render_man(
-    lc_figure,
-    temp_figure,
-    soc_figure, 
-    nobs_figure
+  manuscript = render(
+    knitr_in('paper/manuscript.Rmd'),
+    list(
+      lc_figure,
+      temp_figure,
+      soc_figure, 
+      nobs_figure
+    )
   ),
   
   # Supplement
-  supplement = render_sup(
-    lc_figure,
-    temp_figure,
-    soc_figure, 
-    nobs_figure
+  supplement = render(
+    knitr_in('paper/supplement.Rmd'),
+    list(lc_figure,
+         temp_figure,
+         soc_figure, 
+         nobs_figure)
   )
 )
