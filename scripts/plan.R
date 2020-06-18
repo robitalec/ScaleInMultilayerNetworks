@@ -53,47 +53,43 @@ plan <- drake_plan(
   # Package
   scalepkg = expose_imports('ScaleInMultilayerNetworks'),
   
+  # Vars
+  vars = get_vars(),
+  
+  # Theme
+  theme = get_theme(),
+  
   # Prep data
-  data = data_prep(scalepkg),
+  data = data_prep(scalepkg, vars),
   
   # Figure 1 
   # figure1 = fig_1(), 
   
   # Land cover
-  lc = scale_lc(data),
-  lc_figure = fig_lc(lc),
+  lc = scale_lc(data, vars),
+  lc_figure = fig_lc(lc, vars, theme),
   
   # Temporal
-  temp = scale_temp(data),
-  temp_figure = fig_temp(temp),
+  temp = scale_temp(data, vars),
+  temp_figure = fig_temp(temp, vars, theme),
   
   # Social threshold
-  soc = scale_soc(data),
-  soc_figure = fig_soc(soc),
+  soc = scale_soc(data, vars),
+  soc_figure = fig_soc(soc, vars, theme),
   
   # Number of observations
-  nobs = scale_nobs(data),
-  nobs_figure = fig_nobs(nobs),
+  nobs = scale_nobs(data, vars),
+  nobs_figure = fig_nobs(nobs, vars, theme),
   
   # TODO: fogo car ml
   
   # Manuscript
-  manuscript = render(
-    knitr_in('paper/manuscript.Rmd'),
-    list(
-      lc_figure,
-      temp_figure,
-      soc_figure, 
-      nobs_figure
-    )
+  manuscript = rmarkdown::render(
+    knitr_in('paper/manuscript.Rmd')
   ),
   
   # Supplement
-  supplement = render(
-    knitr_in('paper/supplement.Rmd'),
-    list(lc_figure,
-         temp_figure,
-         soc_figure, 
-         nobs_figure)
+  supplement = rmarkdown::render(
+    knitr_in('paper/supplement.Rmd')
   )
 )
