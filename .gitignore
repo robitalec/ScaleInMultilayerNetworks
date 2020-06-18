@@ -11,3 +11,4 @@ data/raw-data
 data/supp-data/*
 !data/supp-data/timecut-defs.csv
 .drake/
+packrat/lib*/

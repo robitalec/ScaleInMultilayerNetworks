@@ -7,3 +7,5 @@
 ^graphics$
 ^paper$
 ^references$
+^packrat/
+^\.Rprofile$
