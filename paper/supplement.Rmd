@@ -9,9 +9,8 @@ output:
    bookdown::github_document2: default
    # bookdown::word_document2:
    #   reference_docx: template.docx
-knit: (function(inputFile) {
-  rmarkdown::render(inputFile,
-  output_format = "all") })
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(input = inputFile, encoding = encoding, output_format = "all") })
 bibliography: ../references/knitcite.bib
 csl: csl.csl
 ---
