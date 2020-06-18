@@ -2,12 +2,19 @@
 library(drake)
 
 
-# Source universal variables and figure theme -----------------------------
-source('scripts/figures/theme.R')
-source('scripts/00-variables.R')
+# Options -----------------------------------------------------------------
+# Set renv option for auto snapshots 
+options(renv.config.auto.snapshot = TRUE)
 
 
 # Setup scripts as functions ----------------------------------------------
+# Variables
+get_vars <- code_to_function('scripts/00-variables.R')
+
+# Figure themes
+get_theme <- code_to_function('scripts/figures/theme.R')
+
+# Data prep
 data_prep <- code_to_function('scripts/01-data-prep.R')
 
 # Figure 1
