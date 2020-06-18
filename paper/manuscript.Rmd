@@ -677,8 +677,7 @@ knitr::include_graphics('../graphics/figure-scales.png')
 \newpage
 
 ```{r lcres, fig.cap='(ref:lcres)'}
-# knitr::include_graphics('../graphics/figure-lc.png')
-drake::readd(lc_figure)
+knitr::include_graphics('../graphics/figure-lc.png')
 ```
 
 \newpage

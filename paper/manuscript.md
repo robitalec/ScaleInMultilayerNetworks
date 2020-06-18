@@ -793,7 +793,7 @@ forest layer had less variation and lower mean graph strength.
 
 <div class="figure">
 
-<img src="../graphics/figure-nobs.png" alt="Varying scale in number of observations. Multilayer networks were generated using a sample number of observations (10 - 1000 observations by steps of 10) of caribou social associations (*Rangifer tarandus*, n = 21 females) on Fogo Island, Newfoundland between 2017-04-21 and 2019-03-27 across three habitat classes (forage, forest, and open). A) Graph strength was highly variable at low number of observations (less than 100) for all habitat layers and relatively stable after 200 observations. B) Edge overlap increased for all habitat layers with increasing number of observations. Open and forage layers had higher edge overlap than forest layers. C) Multidegree increased for all individuals with increasing number of observations. Individuals showed high variability (3 - 51) at the maximal number of observations (1000)." width="\linewidth" />
+<img src="../graphics/figure-nobs.png" alt="Varying scale in number of observations. Multilayer networks were generated using a sample number of observations (10 - 1000 observations by steps of 10) of caribou social associations (*Rangifer tarandus*, n = 21 females) on Fogo Island, Newfoundland between 2017-04-21 and 2019-03-27 across three habitat classes (forage, forest, and open). A) Graph strength was highly variable at low number of observations (less than 100) for all habitat layers and relatively stable after 200 observations. B) Edge overlap increased for all habitat layers with increasing number of observations. Open and forage layers had higher edge overlap than forest layers. C) Multidegree increased for all individuals with increasing number of observations. Individuals showed high variability (2 - 51) at the maximal number of observations (1000)." width="\linewidth" />
 
 <p class="caption">
 
@@ -808,7 +808,7 @@ stable after 200 observations. B) Edge overlap increased for all habitat
 layers with increasing number of observations. Open and forage layers
 had higher edge overlap than forest layers. C) Multidegree increased for
 all individuals with increasing number of observations. Individuals
-showed high variability (3 - 51) at the maximal number of observations
+showed high variability (2 - 51) at the maximal number of observations
 (1000).
 
 </p>
