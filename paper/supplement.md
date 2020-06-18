@@ -8,6 +8,8 @@ Canada
 Memorial University of Newfoundland  
 \*Corresponding author: Alec L. Robitaille (<robit.alec@gmail.com>)
 
+(ref:cutdefs) Time cut definitions
+
 | timecut | mindate    | maxdate    |
 | ------: | :--------- | :--------- |
 |       1 | 2017-04-21 | 2017-05-26 |
@@ -31,27 +33,31 @@ Memorial University of Newfoundland
 |      19 | 2019-01-16 | 2019-02-19 |
 |      20 | 2019-02-20 | 2019-03-27 |
 
-Table 1: Time cut definitions
+(ref:cutdefs)
+
+(ref:lccount) lc count by res
 
 <div class="figure">
 
-<img src="../graphics/supp-count-lc.png" alt="lc count by res" width="\linewidth" />
+<img src="../graphics/supp-count-lc.png" alt="(ref:lccount)" width="\linewidth" />
 
 <p class="caption">
 
-Figure 1: lc count by res
+(ref:lccount)
 
 </p>
 
 </div>
 
+(ref:nid) n individuals by time
+
 <div class="figure">
 
-<img src="../graphics/supp-temp-nid.png" alt="n individuals by time" width="\linewidth" />
+<img src="../graphics/supp-temp-nid.png" alt="(ref:nid)" width="\linewidth" />
 
 <p class="caption">
 
-Figure 2: n individuals by time
+(ref:nid)
 
 </p>
 
