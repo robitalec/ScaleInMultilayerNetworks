@@ -14,29 +14,15 @@ grep -rni 'paper/manuscript.Rmd' -e 'TODO' || true;
 #> R/etc.R:13:  # TODO: check that coordcols exist in DT and are length two
 #> R/metrics.R:85:  # TODO: Check cols
 #> R/metrics.R:86:  # TODO: warn overwrite 
-#> R/metrics.R:106:  # TODO: check columns
-#> R/metrics.R:107:  # TODO: warn overwrite
-#> R/metrics.R:128:  # TODO: check columns
-#> R/metrics.R:129:  # TODO: warn overwrite
-#> R/metrics.R:154:  # TODO: check for splitNeigh variable and neigh
-#> R/metrics.R:155:  # TODO: check overwrite
-#> scripts/04-time-window-length.R:29:# TODO: check consistent N by cut * year
-#> scripts/04-time-window-length.R:47:# TODO: double fixes
-#> scripts/07-metrics.R:60:# TODO: check light grey, with mean on top
-#> scripts/try-behavioural-states.R:30:# TODO: randomize + compare m
-#> scripts/try-behavioural-states.R:41:# TODO: Some of the parameter estimates seem to lie close to the boundaries of their parameter space.
-#> scripts/try-behavioural-states.R:109:# TODO: hmm
-#> scripts/01-data-prep.R:77:# TODO: drop if drop time sensitivity
-#> 42:interactions to co-occurrence to overlapping home ranges. <!-- TODO: add
-#> 131:<!-- TODO: we answer the first question in the discussion, but not the second-->
-#> 132:<!-- TODO: Webber reference should be 2018, but defaulting to 2017-->
-#> 136:<!-- TODO: units of spatial scale? --> 
-#> 137:<!-- TODO: citations? -->
-#> 229:<!-- TODO: expand + simplify + examples individual A, B etc --> 
-#> 305:<!-- TODO: Add intro/general to results?-->
-#> 380:<!-- TODO: I'm not sure this is relevant since this is the main way it
-#> 615:social connections (Figure \@ref(fig:socres)).<!--TODO: what??, while increasing temporal scale had little effect
-#> 672:<!-- TODO: point to figure 1 -->
-#> 704:<!-- TODO: weak --> 
-#> 785:<!-- TODO: In summary, -->
+#> R/metrics.R:129:  # TODO: check columns
+#> R/metrics.R:130:  # TODO: warn overwrite
+#> R/metrics.R:155:  # TODO: check for splitNeigh variable and neigh
+#> R/metrics.R:156:  # TODO: check overwrite
+#> scripts/plan.R:41:# TODO: fogo car ml
+#> scripts/plan.R:71:  # TODO: fogo car ml
+#> scripts/00-variables.R:2:# TODO: save as data
+#> scripts/figures/archive/08-plots.R:49:# TODO: fix
+#> scripts/01-data-prep.R:85:# TODO: drop if drop time sensitivity
+#> 166:[@Integrated_2013]<!--TODO: check ref-->. Available land cover classification
+#> 409:positions <!-- TODO JWT check --> [@Almeling_2016; @Berger_2015; @Brent_2017;
 ```
