@@ -36,15 +36,6 @@ fig_soc <- code_to_function('scripts/figures/figure-lc.R')
 scale_nobs <- code_to_function('scripts/05-number-of-observations.R')
 fig_nobs <- code_to_function('scripts/figures/figure-nobs.R')
 
-# Render
-render <- function(filename, depends) {
-  rmarkdown::render(
-    filename,
-    output_format = NULL,
-    quiet = TRUE
-  )
-}
-
 # TODO: fogo car ml
 
 
