@@ -6,7 +6,7 @@ date: |
   | ^2^Cognitive and Behavioural Ecology Interdisciplinary Program, Memorial University of Newfoundland 
   | \*Corresponding author: Alec L. Robitaille (robit.alec@gmail.com)
 output:
-   bookdown::github_document2: default
+   # bookdown::github_document2: default
    bookdown::word_document2:
      reference_docx: template.docx
 knit: (function(inputFile, encoding) {
@@ -345,6 +345,7 @@ matching land cover resolution to scale of selection as well as ensuring the
 land cover product used has a resolution fine enough to detect landscape
 features and habitats relevant to study species, such as important patchy and
 rare habitats.
+
 <!--QW: what makes it ordinal again? Is it ordinal OR continuous? -->
 The ordinal multilayer network generated indicated within-year time windows of
 increased caribou sociality. <!--QW: I'm not sure what you are trying to say in this first sentence. Is it that there are distinct within-year time windows where social network metrics increased? -->
@@ -517,7 +518,7 @@ of the social and spatial environments an individual experiences [@Webber_2018].
 We generated multilayer networks based on habitat-specific layers of 
 social association. Coordinated movement of dyads, or groups, could vary based on
 habitat, and the approach we outline could be used to explore mechanisms linking
-the social and spatial environments.<!--  <- long sentence with two coulds -->For example, social processes may be an 
+the social and spatial environments.<!--  <- long sentence with two coulds --> For example, social processes may be an 
 emergent property of the landscape because animals aggregate at resources, such
 as waterholes [@Chamaill_Jammes_2008]. Movement to, from, or within habitat
 patches or territories can also contribute to the formation of the social
