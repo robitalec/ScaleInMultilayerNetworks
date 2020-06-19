@@ -38,7 +38,7 @@ linesize <- 1.3
 
 # Colors ------------------------------------------------------------------
 lccolors <- c('#fdc086', '#7fc97f', '#beaed4')
-names(lccolors) <- c('Open', 'Forest', 'Forage')
+names(lccolors) <- c('Open', 'Forest', 'Foraging')
 lcvalcolors <- lccolors
 names(lcvalcolors) <-c(1, 2, 3)
 
