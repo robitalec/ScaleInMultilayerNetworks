@@ -38,8 +38,6 @@ linesize <- 1.3
 
 # Colors ------------------------------------------------------------------
 lccolors <- c('#fdc086', '#7fc97f', '#beaed4')
-# lccolors <- scales::viridis_pal(alpha = 1, option = 'E')(5)[c(1, 3, 4)]
-  # scales::viridis_pal(alpha = 0.7)(4)[1:3]
 names(lccolors) <- c('Open', 'Forest', 'Forage')
 lcvalcolors <- lccolors
 names(lcvalcolors) <-c(1, 2, 3)
