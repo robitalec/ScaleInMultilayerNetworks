@@ -118,10 +118,11 @@ rbindxy[, layer := as.integer(layer)][, dif := abs(layer - 8)]
 xy <- rbindxy[order(dif)][, .SD[1], by = name, .SDcols = c('x', 'y')]
 
 repxy <- xy[rep(seq_len(nrow(xy)), times = nchunk)]
-repxy[, layer := rep(names(gLs), each = uniqueN(name))]
+repxy[, layer := rep(as.integer(names(gLs)), each = uniqueN(name))]
 
 # Edges by layer
 edges <- rbindlist(lapply(gLs, as_data_frame, what = 'edges'), idcol = 'layer')
+edges[, layer := as.integer(layer)]
 
 # Yuck double merge for from and to coords
 mxby <- c('name', 'layer')
@@ -144,7 +145,11 @@ zzz <-
 
 zzz[, layerfctr := factor(layer, sort(unique(as.integer(layer))))]
 
+only <- merge(unique(rbindxy[, .(layer, name)]),
+              zzz,
+              by = c('layer', 'name'),
+              all.y = FALSE)
 
 # Output ------------------------------------------------------------------
 saveRDS(out, 'data/derived-data/03-temporal-layers.Rds')
-saveRDS(zzz, 'data/derived-data/03-temporal-network-fig-data.Rds')
+saveRDS(only, 'data/derived-data/03-temporal-network-fig-data.Rds')
