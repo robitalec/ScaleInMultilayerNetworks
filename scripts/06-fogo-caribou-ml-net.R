@@ -124,13 +124,6 @@ wstren <- usub[stren, on = c(idcol, splitBy)]
 # Merge edge overlap
 wedgeovr <- wstren[eovr, on = 'layer']
 
-# Property matrix
-# matrices <- property_matrix(wedgeovr, idcol, 'splitNeigh', 'lcname', var)
-# layer_similarity_ordinal(matrices, 'FO', var)
-# 
-# out <- wedgeovr[matrices[, .(layersim, layer)], on = 'layer']
-
-
 out <- wedgeovr
 
 
@@ -164,7 +157,12 @@ zzz <-
     all = TRUE
   )[!is.na(name)]
 
+only <- merge(unique(rbindxy[, .(layer, name)]),
+              zzz,
+              by = c('layer', 'name'),
+              all.y = FALSE)
+
 
 # Output ------------------------------------------------------------------
 saveRDS(out, 'data/derived-data/07-fogo-ml.Rds')
-saveRDS(zzz, 'data/derived-data/07-fogo-ml-network-fig-data.Rds')
+saveRDS(only, 'data/derived-data/07-fogo-ml-network-fig-data.Rds')
