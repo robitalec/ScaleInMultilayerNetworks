@@ -150,7 +150,7 @@ labels <- data.table(
   x = c(1.75, 4.5, rep(0, 3)),
   y = c(rep(4.25, 2), .5, 2, 3.5),
   label = c('summer', 'winter',
-            'forage', 'forest', 'open')
+            'foraging', 'forest', 'open')
 )
 
 (gnn <- ggplot(
