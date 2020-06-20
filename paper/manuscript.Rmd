@@ -196,10 +196,10 @@ distance threshold of one another. Typically for ungulates and other gregarious
 mammals, the ‘chain rule’ is used for group assignment [@Croft_2008]. For GPS
 data, the chain rule is applied by assigning a group identifier to the union of
 buffered GPS fixes at each time step. As such, individuals in a group are within
-the spatial distance threshold of at least one other though not necessarily all
+the social distance threshold of at least one other though not necessarily all
 other individuals [@Robitaille_2019]. Group assignment based on the chain rule
 has previously been applied to caribou using a temporal threshold of 5 minutes
-and a spatial distance threshold of 50 m [@Peignier_2019; @Lesmerises_2018]. In
+and a social distance threshold of 50 m [@Peignier_2019; @Lesmerises_2018]. In
 all networks, individual caribou were represented as nodes and associations between
 individuals in a given network layer were represented as intralayer
 edges.
@@ -215,7 +215,7 @@ $y_{A}$ is the number of fixes from individual A when individual B did not have
 a simultaneous fix, $y_{B}$ is the number of fixes from individual B when
 individual A did not have a simultaneous fix, and $y_{AB}$ is the number of
 simultaneous fixes from individuals A and B that were separated by more than the
-spatial distance threshold [@Farine_2015].
+social distance threshold [@Farine_2015].
 
 
 ### Network metrics 
@@ -238,10 +238,10 @@ calculated using the R packages `igraph` [@Csardi_2006], `asnipe`
 
 ### Social scale
 
-We generated multilayer networks across a series of spatial distance thresholds 
+We generated multilayer networks across a series of social distance thresholds 
 that relate to behavioural interactions that could occur within those distances
 <!-- JWT: or something like that needs to be in the first sentence to relate the spatial distance to social scale upfront -->
-for group assignment. Spatial distance thresholds (5, 25, 50, 75, 100, 250 and
+for group assignment. Social distance thresholds (5, 25, 50, 75, 100, 250 and
 500 m) represented a range of visual (short distance) to auditory (long
 distance) sensory modalities of caribou. Multilayer networks consisted of the
 social association between `r DT[, uniqueN(get(idcol))]` individuals across
@@ -249,7 +249,7 @@ three habitat layers (open, forest and forage) for the entire study period. At
 the finest scale, individuals within 5 m of one another were considered in the
 same group, whereas at the coarsest scale, individuals within 500 m of one
 another were considered in the same group. We calculated graph strength and
-multidegree for each habitat layer and spatial distance threshold, and edge
+multidegree for each habitat layer and social distance threshold, and edge
 <!-- JWT: can we call spatial distance social distance? -->
 overlap across the entire series of networks to determine proportion of total
 edges observed in each combination of habitat layer and spatial distance
@@ -359,7 +359,7 @@ suggest that ordinal multilayer networks can effectively capture discrete time
 windows of aggregation and dissaggregation related to resource availability, and
 highlight the importance of carefully selecting the temporal scale of analysis.
 
-As one might expect, when the number of observations used to generate multilayer networks increased,
+As the number of observations used to generate multilayer networks increased,
 individuals became more connected and variance in metrics decreased. <!--QW: I think throughout you want to say "variance decreased" instead of "stabilized" -->
 Graph strength across individuals in all three habitat layers was highly
 variable at low number of observations and stabilized after ~100 observations
@@ -415,7 +415,7 @@ and space use.
 
 Our results highlight the influence of social, spatial and temporal scale on
 multilayer networks. For social scale, we found individuals became more
-connected with increasing spatial distance threshold. Increasing land cover
+connected with increasing social distance threshold. Increasing land cover
 resolution lead to a decrease in availability of patchy and rare habitats and, 
 <!--QW: not sure I'd mention 'rare' since there are only 3 habitat types. 
 Could you just say 'less common' or even just 'patchy'?-->
@@ -441,10 +441,10 @@ positions <!-- TODO JWT check-- JWT: these are right, and we could potentially r
 essential consideration for social network analysis <!-- with direct impacts on
 outcomes blah-->[@Castles_2014; @Carter_2015; @Farine_2015a]. Proximity-based
 social networks generated using GPS location data require using a social scale,
-specifically a spatial distance threshold, to define social associations. We
+specifically a social distance threshold, to define social associations. We
 found increasing individual graph strength across three habitat types with
-increasing spatial distance threshold (Figure \@ref(fig:socres)). <!-- This means blah blah for different types of interactions.--> In addition, 
-habitat layers differed in their response to spatial distance threshold, with
+increasing social distance threshold (Figure \@ref(fig:socres)). <!-- This means blah blah for different types of interactions.--> In addition, 
+habitat layers differed in their response to social distance threshold, with
 open and forage with a larger increase in graph strength and greater variation
 across individuals. <!-- What could this mean biologically? --> These results emphasize that multilayer network metrics are
 directly influenced by social scale, in this case the spatial distance
