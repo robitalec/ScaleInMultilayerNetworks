@@ -18,7 +18,9 @@ netDT <- readRDS('data/derived-data/07-fogo-ml-network-fig-data.Rds')
 
 
 # Theme -------------------------------------------------------------------
-# source('scripts/figures/theme.R')
+if(interactive()) {
+  source('scripts/figures/theme.R')
+}
 
 
 
