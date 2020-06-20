@@ -34,7 +34,9 @@ fig_soc <- code_to_function('scripts/figures/figure-lc.R')
 scale_nobs <- code_to_function('scripts/05-number-of-observations.R')
 fig_nobs <- code_to_function('scripts/figures/figure-nobs.R')
 
-# TODO: fogo car ml
+# Fogo Multilayer Network
+ml_fogo <- code_to_function('scripts/06-fogo-caribou-ml-net.R')
+fig_ml_fogo <- code_to_function('scripts/figures/figure-fogo-ml.R')
 
 
 # Plan --------------------------------------------------------------------
@@ -62,9 +64,11 @@ plan <- drake_plan(
   
   # Number of observations
   nobs = scale_nobs(data),
-  nobs_figure = fig_nobs(nobs)
+  nobs_figure = fig_nobs(nobs),
   
-  # TODO: fogo car ml
+  # Fogo Multilayer Network
+  fogo_ml = ml_fogo(data),
+  fogo_ml_figure = fig_ml_fogo(fogo_ml)
   
   # Manuscript
   # manuscript = rmarkdown::render(
