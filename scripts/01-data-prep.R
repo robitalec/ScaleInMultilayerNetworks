@@ -7,6 +7,12 @@ pkgs <- c('data.table', 'rgdal', 'raster')
 p <- lapply(pkgs, library, character.only = TRUE)
 
 
+# Variables ---------------------------------------------------------------
+if(interactive()) {
+  source('scripts/00-variables.R')
+}
+
+
 # Input -------------------------------------------------------------------
 DT <- fread('data/raw-data/FogoCaribou.csv')
 
