@@ -82,13 +82,14 @@ netDT[, c('season', 'lcname') := tstrsplit(layer, '-', type.convert = TRUE)]
 # Network
 netDT[DT, middate := middate, on = 'season']
 
-shear_xy(netDT, c('xend', 'yend'))
+mat <- matrix(c(3,1,0,1),2,2)
+shear_xy(netDT, c('xend', 'yend'), shearmatrix = mat)
 netDT[, c('shearxend', 'shearyend') := .(shearx, sheary)]
-shear_xy(netDT, c('x', 'y'))
+shear_xy(netDT, c('x', 'y'), shearmatrix = mat)
 
 push <- 0.1
 box <- netDT[, CJ(x = c(max(x), min(x)), y = c(max(y), min(y)))]
-shear_xy(box, c('x', 'y'))
+shear_xy(box, c('x', 'y'), shearmatrix = mat)
 box[, c('shearx', 'sheary') := .(shearx + c(-push, -push, push, push),
                                  sheary + c(-push, push, -push, push))]
 box[, ord := rep(c(1, 2, 4, 3), length.out = .N)]
@@ -118,7 +119,7 @@ nodesize <- 3
   theme_blank() +
   theme(strip.background = element_rect(fill = NA, color = NA),
         strip.text = element_text(size = 14),
-        panel.spacing = unit(0.2, "lines"))
+        panel.spacing = unit(-0.5, "lines"))
 )
 
 # Number of individuals
