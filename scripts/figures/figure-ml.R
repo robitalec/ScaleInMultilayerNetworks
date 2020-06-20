@@ -14,7 +14,9 @@ p <- lapply(pkgs, library, character.only = TRUE)
 
 
 # Variables ---------------------------------------------------------------
-# source('scripts/00-variables.R')
+if(interactive()) {
+  source('scripts/figures/theme.R')
+}
 
 
 # Input -------------------------------------------------------------------

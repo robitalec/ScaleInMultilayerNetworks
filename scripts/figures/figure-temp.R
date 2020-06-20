@@ -18,7 +18,9 @@ netDT <- readRDS('data/derived-data/03-temporal-network-fig-data.Rds')
 
 
 # Theme -------------------------------------------------------------------
-# source('scripts/figures/theme.R')
+if(interactive()) {
+  source('scripts/figures/theme.R')
+}
 
 
 

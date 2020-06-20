@@ -21,7 +21,9 @@ DT[legend, lcname := lcname, on = 'lc']
 
 
 # Theme -------------------------------------------------------------------
-# source('scripts/figures/theme.R')
+if(interactive()) {
+  source('scripts/figures/theme.R')
+}
 
 
 
