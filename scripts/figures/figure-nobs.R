@@ -15,7 +15,7 @@ DT <- readRDS('data/derived-data/05-number-of-observations.Rds')
 
 
 legend <- data.table(lc = c(1, 2, 3),
-                     lcname = c('Open', 'Forest', 'Forage'))
+                     lcname = c('Open', 'Forest', 'Foraging'))
 
 DT[legend, lcname := lcname, on = 'lc']
 
