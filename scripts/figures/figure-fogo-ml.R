@@ -119,7 +119,7 @@ nodesize <- 3
   theme_blank() +
   theme(strip.background = element_rect(fill = NA, color = NA),
         strip.text = element_text(size = 14),
-        panel.spacing = unit(-0.5, "lines"))
+        panel.spacing = unit(0, "lines"))
 )
 
 # Number of individuals
