@@ -125,7 +125,3 @@ ggsave('graphics/figure-temp.png',
 
 ggsave('graphics/supp-temp-nid.png',
        gnid, width = 5, height = 5)
-
-
-# For drake
-g

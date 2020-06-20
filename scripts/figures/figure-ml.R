@@ -183,6 +183,3 @@ labels <- data.table(
 
 # Output ------------------------------------------------------------------
 ggsave('graphics/figure-ml.png', width = 8, height = 6)
-
-# For drake
-gnn
