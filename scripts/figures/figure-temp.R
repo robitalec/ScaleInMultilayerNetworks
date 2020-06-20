@@ -69,6 +69,8 @@ gstr <- ggplot(DT) +
 #   scale_x_date(expand = c(0, 0), breaks = pretty_breaks(n = 10))
 
 # Network
+netDT[, degree := paste0('N = ', uniqueN(name)), layer]
+netDT[, c('capX', 'capY') := .(mean(x), min(y) - 0.2), layer]
 gnn <- ggplot(
   netDT,
   aes(
@@ -86,7 +88,8 @@ gnn <- ggplot(
     theme_blank() + 
     theme(strip.background = element_blank(),
           strip.text = element_blank()) + 
-    labs(subtitle = 'B)')
+    labs(subtitle = 'B)') +
+  geom_text(aes(capX, capY, label = degree))
 
 # Number of individuals
 (gnid <- ggplot(unique(DT[, .(middate, mindate, maxdate, nid)])) +
