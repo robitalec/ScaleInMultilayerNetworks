@@ -30,20 +30,16 @@ DT[, middate := mean(c(mindate, maxdate)), layer]
 DT[, meangraphstrength := mean(graphstrength), by = timecut]
 
 # Edge overlap
-breaks <- DT[, c(unique(mindate), max(maxdate))]
-labels <- format(breaks, '%b %d')
 gprop <- ggplot(DT) + 
   geom_segment(aes(x = mindate, xend = maxdate, 
                    y = propedges, yend = propedges),
                size = 2) + 
-  # geom_line(aes(x = middate, y = propedges)) + 
+  geom_line(aes(x = middate, y = propedges)) +
   scale_color_manual(values = lccolors) +
   base +
   labs(x = NULL, y = 'Edge Overlap', subtitle = 'A)') + 
   ylim(0, 1) +
-  scale_x_date(expand = c(0, 0), 
-               breaks= breaks,
-               labels = labels)
+  scale_x_date(expand = c(0, 0), breaks = pretty_breaks(13))
 
 
 # Graph strength
@@ -58,7 +54,7 @@ gstr <- ggplot(DT) +
   guides(color = FALSE) +
   base +
   labs(x = xlab, y = 'Graph Strength', subtitle = 'C)') +
-  scale_x_date(expand = c(0, 0), breaks = pretty_breaks(n = 10))
+  scale_x_date(expand = c(0, 0), breaks = pretty_breaks(n = 13))
 
 
 # Layer similarity
