@@ -17,7 +17,7 @@ netDT <- readRDS('data/derived-data/04-spatial-threshold-fig-data.Rds')
 
 
 legend <- data.table(lc = c(1, 2, 3),
-                     lcname = c('Open', 'Forest', 'Forage'))
+                     lcname = c('Open', 'Forest', 'Foraging'))
 
 DT[legend, lcname := lcname, on = 'lc']
 netDT[legend, lcname := lcname, on = 'lc']
