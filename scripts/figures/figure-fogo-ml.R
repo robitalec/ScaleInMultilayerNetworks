@@ -79,17 +79,6 @@ netDT[, c('season', 'lcname') := tstrsplit(layer, '-', type.convert = TRUE)]
     labs(x = xlab, y = 'splitNeigh')
 )
 
-# Layer similarity
-# gsim <- ggplot(DT) +
-#   geom_line(aes(x = middate, layersim)) + 
-#   geom_segment(aes(x = seasonstart, xend = seasonend, 
-#                    y = layersim, yend = layersim),
-#                size = 0.5, alpha = 0.3) + 
-#   guides(color = FALSE) +
-#   base +
-#   labs(x = xlab, y = 'Layer Similarity') +
-#   scale_x_date(expand = c(0, 0))
-
 # Network
 netDT[DT, middate := middate, on = 'season']
 
@@ -106,6 +95,7 @@ box[, ord := rep(c(1, 2, 4, 3), length.out = .N)]
 box <- box[rep(seq.int(.N), times = netDT[, uniqueN(lcname)])]
 box[, lcname := netDT[, rep(unique(lcname), each = 4)]]
 
+nodesize <- 3
 (gnn <- ggplot(
   netDT,
   aes(
@@ -121,10 +111,10 @@ box[, lcname := netDT[, rep(unique(lcname), each = 4)]]
   ) +
   facet_grid(lcname ~ season, switch = 'both') +
   guides(fill = FALSE, size = FALSE) +
-  geom_nodes() +
+  geom_nodes(size = nodesize) +
+  geom_nodes(aes(shearxend, shearyend), size = nodesize) +
   scale_size_area(max_size = 1) + 
   scale_fill_manual(values = lccolors) + 
-  geom_nodes(aes(shearxend, shearyend)) +
   theme_blank() +
   theme(strip.background = element_rect(fill = NA, color = NA),
         strip.text = element_text(size = 14),
