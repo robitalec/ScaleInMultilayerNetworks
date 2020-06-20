@@ -6,6 +6,7 @@
 # Packages ----------------------------------------------------------------
 pkgs <- c('data.table',
           'ggplot2',
+          'scales',
           'patchwork',
           'ggnetwork')
 p <- lapply(pkgs, library, character.only = TRUE)
@@ -17,7 +18,7 @@ netDT <- readRDS('data/derived-data/03-temporal-network-fig-data.Rds')
 
 
 # Theme -------------------------------------------------------------------
-source('scripts/figures/theme.R')
+# source('scripts/figures/theme.R')
 
 
 
@@ -38,7 +39,7 @@ gprop <- ggplot(DT) +
   base +
   labs(x = NULL, y = 'Edge Overlap', subtitle = 'A)') + 
   ylim(0, 1) +
-  scale_x_date(expand = c(0, 0), breaks = scales::pretty_breaks(n = 10))
+  scale_x_date(expand = c(0, 0), breaks = pretty_breaks(n = 10))
 
 
 
@@ -54,7 +55,7 @@ gstr <- ggplot(DT) +
   guides(color = FALSE) +
   base +
   labs(x = xlab, y = 'Graph Strength', subtitle = 'C)') +
-  scale_x_date(expand = c(0, 0), breaks = scales::pretty_breaks(n = 10))
+  scale_x_date(expand = c(0, 0), breaks = pretty_breaks(n = 10))
 
 
 # Layer similarity
@@ -66,7 +67,7 @@ gstr <- ggplot(DT) +
 #     guides(color = FALSE) +
 #     base +
 #     labs(x = xlab, y = 'Layer Similarity') +
-#   scale_x_date(expand = c(0, 0), breaks = scales::pretty_breaks(n = 10))
+#   scale_x_date(expand = c(0, 0), breaks = pretty_breaks(n = 10))
 
 # Network
 gnn <- ggplot(
@@ -120,3 +121,7 @@ ggsave('graphics/figure-temp.png',
 
 ggsave('graphics/supp-temp-nid.png',
        gnid, width = 5, height = 5)
+
+
+# For drake
+g

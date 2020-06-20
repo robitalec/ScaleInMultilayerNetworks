@@ -18,7 +18,7 @@ netDT <- readRDS('data/derived-data/07-fogo-ml-network-fig-data.Rds')
 
 
 # Theme -------------------------------------------------------------------
-source('scripts/figures/theme.R')
+# source('scripts/figures/theme.R')
 
 
 
@@ -162,3 +162,6 @@ ggsave('graphics/figure-fogo-ml.png',
 
 # ggsave('graphics/supp-temp-nid.png',
 #        gnid, width = 5, height = 5)
+
+# For drake
+g

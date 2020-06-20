@@ -1,5 +1,5 @@
 # === Variables -----------------------------------------------------------
-
+# TODO: save as data
 ## ID
 idcol <- 'ANIMAL_ID'
 

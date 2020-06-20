@@ -1,7 +1,11 @@
+^renv$
+^renv\.lock$
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^README\.Rmd$
 ^data$
 ^scripts$
-^figures$
-^Makefile$
+^_drake\.R$
+^graphics$
+^paper$
+^references$

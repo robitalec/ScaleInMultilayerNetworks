@@ -21,7 +21,7 @@ DT[legend, lcname := lcname, on = 'lc']
 
 
 # Theme -------------------------------------------------------------------
-source('scripts/figures/theme.R')
+# source('scripts/figures/theme.R')
 
 
 
@@ -89,3 +89,7 @@ ggsave('graphics/figure-nobs.png',
 
 # ggsave('graphics/supp-temp-nid.png',
 #        gnid, width = 5, height = 5)
+
+
+# For drake
+g

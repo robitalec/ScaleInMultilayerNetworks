@@ -14,7 +14,7 @@ p <- lapply(pkgs, library, character.only = TRUE)
 
 
 # Variables ---------------------------------------------------------------
-source('scripts/00-variables.R')
+# source('scripts/00-variables.R')
 
 
 # Input -------------------------------------------------------------------
@@ -181,3 +181,6 @@ labels <- data.table(
 
 # Output ------------------------------------------------------------------
 ggsave('graphics/figure-ml.png', width = 8, height = 6)
+
+# For drake
+gnn

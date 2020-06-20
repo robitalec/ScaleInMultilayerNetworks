@@ -25,7 +25,7 @@ lc1000 <- raster('data/derived-data/02-landcover-res-1000.tif')
 
 
 # Theme -------------------------------------------------------------------
-source('scripts/figures/theme.R')
+# source('scripts/figures/theme.R')
 
 themelc <- theme(
   panel.border = element_rect(size = 1, fill = NA),
@@ -122,3 +122,7 @@ ggsave('graphics/figure-lc.png',
 
 ggsave('graphics/supp-count-lc.png',
        gcount, width = 5, height = 5)
+
+
+# For drake
+g
