@@ -134,27 +134,23 @@ nodesize <- 3
 
 
 # Patchwork ---------------------------------------------------------------
-layout <- 'A
-           A
-           B
-           C
-           C'
+# layout <- 'A
+#            A
+#            B
+#            C
+#            C'
 
 
-(g <- gprop / gnn / gstr + 
-   plot_layout(design = layout) 
-)
+# (g <- gprop / gnn / gstr + 
+#    plot_layout(design = layout) 
+# )
 
 
-g <- gnn
-# gsimm
+g <- gnn + 
+  plot_annotation(caption = 'Temporal Window') & 
+  theme(plot.caption = element_text(hjust = 0.5, 
+                                    size = rel(1.2)))
 
 # Output ------------------------------------------------------------------
 ggsave('graphics/figure-fogo-ml.png',
        g, width = 10, height = 9)
-
-# ggsave('graphics/supp-temp-nid.png',
-#        gnid, width = 5, height = 5)
-
-# For drake
-g
