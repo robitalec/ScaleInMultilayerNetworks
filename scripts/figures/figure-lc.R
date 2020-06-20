@@ -14,7 +14,7 @@ count <- readRDS('data/derived-data/02-landcover-scale-count.Rds')
 
 
 legend <- data.table(lc = c(1, 2, 3),
-                     lcname = c('Open', 'Forest', 'Forage'))
+                     lcname = c('Open', 'Forest', 'Foraging'))
 
 DT[legend, lcname := lcname, on = 'lc']
 count[legend, lcname := lcname, on = 'lc']
