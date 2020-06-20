@@ -51,3 +51,9 @@ knitr::include_graphics('../graphics/supp-count-lc.png')
 ```{r nid, fig.cap = '(ref:nid)'}
 knitr::include_graphics('../graphics/supp-temp-nid.png')
 ```
+
+
+```{r}
+data.table(freq(lc))[!is.na(value), count / sum(count)]
+
+```
