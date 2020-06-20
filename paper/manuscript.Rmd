@@ -174,7 +174,7 @@ Land cover data were provided by the Newfoundland and Labrador Wildlife Division
 [@Integrated_2013]<!--TODO: check ref-->. Available land cover classification
 included nine habitat types at 30 m resolution. We reclassified the land cover
 types into three categories using the R package `raster` [@Hijmans_2019]:
-foraging, open, and forest habitats. Foraging habitat consisted of lichen, open
+foraging, open, and forest habitats. Foraging habitat consisted of foraging, open
 habitat consisted of wetland, rocky barrens, and anthropogenic, while forest
 habitat consisted of coniferous forest, conifer scrub, broad leaf forest, and
 mixed-wood forest. Water habitat was excluded from all subsequent analyses.
@@ -442,7 +442,7 @@ essential consideration for social network analysis <!-- with direct impacts on
 outcomes blah-->[@Castles_2014; @Carter_2015; @Farine_2015a]. Proximity-based
 social networks generated using GPS location data require using a social scale,
 specifically a social distance threshold, to define social associations. We
-found increasing individual graph strength across three habitat types with
+found increasing individual graph strength across three habitat layers with
 increasing social distance threshold (Figure \@ref(fig:socres)). <!-- This means blah blah for different types of interactions.--> In addition, 
 habitat layers differed in their response to social distance threshold, with
 open and forage with a larger increase in graph strength and greater variation
@@ -487,14 +487,14 @@ range of spatial scales, we evaluated the influence of habitat spatial
 resolution on multilayer network metrics. The results indicate varied influence
 of increasing spatial resolution depending on the habitat layer. As spatial
 resolution increased, edge overlap decreased in forage while remaining stable in
-open and forest habitats (Figure \@ref(fig:socres) D). Forage <!--Lichen? I think we need to call this lichen and not forage --> is a rare (<!--TODO--> XX % of the landscape) and
+open and forest habitats (Figure \@ref(fig:socres) D). Foraging <!--Lichen? I think we need to call this lichen and not forage --> is a rare (<!--TODO--> XX % of the landscape) and
 patchy habitat on Fogo Island, as is indicated by a decrease in the proportion
 of relocations in this habitat type with increasing spatial resolution (Supplementary 1
 Figure 1). Similar to increasing social distance threshold, the influence
 of increasing spatial resolution on graph strength was notably different between
 habitat layers. Forest layers showed little change in graph strength with
-increasing spatial resolution and variation between individuals. Lichen and open
-layers had greater individual variation in graph strength, while lichen was the
+increasing spatial resolution and variation between individuals. Foraging and open
+layers had greater individual variation in graph strength, while foraging was the
 only layer to show large responses in graph strength to increasing spatial
 resolution (Figure \@ref(fig:socres) E). As such, multilayer network measures
 related to habitat are explicitly dependent on spatial scale. Edge overlap can
