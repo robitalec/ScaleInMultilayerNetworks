@@ -174,10 +174,10 @@ Land cover data were provided by the Newfoundland and Labrador Wildlife Division
 [@Integrated_2013]<!--TODO: check ref-->. Available land cover classification
 included nine habitat types at 30 m resolution. We reclassified the land cover
 types into three categories using the R package `raster` [@Hijmans_2019]:
-foraging, open, and forest habitats. Foraging habitat consisted of foraging, open
-habitat consisted of wetland, rocky barrens, and anthropogenic, while forest
-habitat consisted of coniferous forest, conifer scrub, broad leaf forest, and
-mixed-wood forest. Water habitat was excluded from all subsequent analyses.
+foraging, forest, and open habitats. Foraging habitat consisted of foraging,
+forest habitat consisted of coniferous forest, conifer scrub, broad leaf forest,
+and mixed-wood forest, while open habitat consisted of wetland, rocky barrens,
+and anthropogenic. Water habitat was excluded from all subsequent analyses.
 
 
 ## Caribou multilayer social networks
@@ -243,7 +243,7 @@ for group assignment. Social distance thresholds (5, 25, 50, 75, 100, 250 and
 500 m) represented a range of visual (short distance) to auditory (long
 distance) sensory modalities of caribou. Multilayer networks consisted of the
 social association between `r DT[, uniqueN(get(idcol))]` individuals across
-three habitat layers (open, forest and foraging) for the entire study period. At
+three habitat layers (foraging, forest and open) for the entire study period. At
 the finest scale, individuals within 5 m of one another were considered in the
 same group, whereas at the coarsest scale, individuals within 500 m of one
 another were considered in the same group. Increasing social distance threshold 
@@ -265,8 +265,8 @@ for caribou during foraging, while re-sampling at 500 m , 750 m and 1000 m
 represents the scale at which caribou tend to select and avoid habitat
 (Bastille-Rousseau et al. 2017). For each spatial scale, we generated a
 multilayer network consisting of the social associations between 
-`r DT[, uniqueN(get(idcol))]` individuals across three habitat layers (open, forest and
-foraging) for the entire study period. Social associations of individuals were
+`r DT[, uniqueN(get(idcol))]` individuals across three habitat layers (foraging, forest and
+open) for the entire study period. Social associations of individuals were
 defined by spatiotemporal overlap within 5 minutes and 50 m. We calculated graph
 strength and multidegree for each habitat layer and spatial scale, and edge
 overlap across the entire series of networks to determine proportion of total
@@ -295,7 +295,7 @@ period. Fix rate is a reflection of number of observations an individual would
 have been observed and recorded in traditional ethological studies. To
 investigate the influence of number of observations, we generated multilayer
 networks of social association between `r DT[, uniqueN(get(idcol))]` individuals
-across three habitat layers (open, forest and foraging) using $N$ randomly
+across three habitat layers (foraging, forest and open) using $N$ randomly
 selected observations. We first generated a maximum of 1000 timesteps and
 iteratively used $N$ of these ($N$ = 10 - 1000 observations by steps of 10), to
 ensure previously included timesteps, and resulting associations, were
@@ -309,7 +309,7 @@ observations increased.
 # Results
 Individuals in multilayer networks became more connected as the spatial distance
 threshold increased. Mean graph strength differed across habitat layers with
-similar and higher graph strength in open and foraging layers, and lower strength
+similar and higher graph strength in foraging and open layers, and lower strength
 in forest layers (Figure \@ref(fig:socres)). Individual graph strength increased
 sharply between 5 m and 100 m in all three habitat classes followed by a plateau in
 the rate of increase after 100 m (<!--TODO: figure XX-->). 
@@ -326,7 +326,7 @@ any Clutton-Brock red deer paper that uses group size data)-->
 
 
 Increasing land cover resolution resulted in decreased availability of foraging habitat,
-a rare and patchy habitat, and corresponding low connectivity of individuals in
+a rare habitat, and corresponding low connectivity of individuals in
 these habitats at higher resolution (Figure \@ref(fig:lcres)). Graph strength
 and edge overlap were relatively consistent across land cover resolutions for
 forest and open layers (Figure \@ref(fig:lcres) D, E). Edge overlap decreased
