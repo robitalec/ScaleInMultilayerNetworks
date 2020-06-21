@@ -158,7 +158,8 @@ and the winter range scale (all craters within an individual’s range)
 cover and, in winter, variable distribution of craters on the landscape.
 
 ## Caribou location data
-We used GPS location data collected from Fogo Island caribou between `r DT[, format(min(datetime), '%F')]` and `r DT[, format(max(datetime), '%F')]`. Adult female caribou were immobilized and fitted with global positioning
+We used GPS location data collected from Fogo Island caribou between `r DT[, format(min(datetime), '%F')]` and `r DT[, format(max(datetime), '%F')]`. 
+Adult female caribou were immobilized and fitted with global positioning
 system (GPS) collars (Lotek Wireless Inc., Newmarket, ON, Canada, GPS4400M
 collars, 1,250 g) as described by [@Schaefer_2013]. Collars were programmed to
 collect location fixes every 2 hours. Prior to analyses, we subset GPS fixes
@@ -238,8 +239,6 @@ calculated using the R packages `igraph` [@Csardi_2006], `asnipe`
 ### Social scale
 
 We generated multilayer networks across a series of social distance thresholds 
-that relate to behavioural interactions that could occur within those distances
-<!-- JWT: or something like that needs to be in the first sentence to relate the spatial distance to social scale upfront -->
 for group assignment. Social distance thresholds (5, 25, 50, 75, 100, 250 and
 500 m) represented a range of visual (short distance) to auditory (long
 distance) sensory modalities of caribou. Multilayer networks consisted of the
@@ -247,9 +246,10 @@ social association between `r DT[, uniqueN(get(idcol))]` individuals across
 three habitat layers (open, forest and foraging) for the entire study period. At
 the finest scale, individuals within 5 m of one another were considered in the
 same group, whereas at the coarsest scale, individuals within 500 m of one
-another were considered in the same group. We calculated graph strength and
+another were considered in the same group. Increasing social distance threshold 
+is a proxy for potential behavioural interactions that occur across these distances.
+We calculated graph strength and
 multidegree for each habitat layer and social distance threshold, and edge
-<!-- JWT: can we call spatial distance social distance? -->
 overlap across the entire series of networks to determine proportion of total
 edges observed in each combination of habitat layer and spatial distance
 threshold.
@@ -408,6 +408,10 @@ networks with respect to phenotypes and individual fitness,
 movement ecology and collective movement, and habitat selection
 and space use.
 -->
+
+
+<!-- TODO: somewhere ref:ml -->
+
 
 Our results highlight the influence of social, spatial and temporal scale on
 multilayer networks. For social scale, we found individuals became more
