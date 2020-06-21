@@ -530,6 +530,19 @@ effects of habitat configuration on the formation of the social environment
 [@He_2019; @Webber_2018].
 
 
+<!-- 
+TODO: cut down to this
+
+Given recent technological advancements in biologging and wildlife tracking technology 
+[@Borger_2020], remotely sensed data provides a unique opportunity to use
+multilayer social network analysis to answer complex questions about animal
+socioecology
+
+track the fine-scale movements of groups over large distances and time scales
+[@Torney_2018]
+-->
+
+
 Importantly, the key to incorporating movement in multilayer networks across
 scales is the technological advancements available to overcome previous
 limitations [@Hughey_2018]. Biologging and wildlife tracking technology has
