@@ -117,9 +117,11 @@ nodesize <- 3
   scale_size_area(max_size = 1) + 
   scale_fill_manual(values = lccolors) + 
   theme_blank() +
-  theme(strip.background = element_rect(fill = NA, color = NA),
+  theme(axis.title.x = element_text(size = 14), 
+        strip.background = element_rect(fill = NA, color = NA),
         strip.text = element_text(size = 14),
-        panel.spacing = unit(0, "lines"))
+        panel.spacing = unit(0, "lines")) +
+    xlab('Temporal Window')
 )
 
 # Number of individuals
