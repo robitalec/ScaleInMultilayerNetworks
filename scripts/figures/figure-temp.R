@@ -93,10 +93,9 @@ gnn <- ggplot(
     geom_nodes() +
     geom_nodes(aes(xend, yend)) +
     theme_blank() + 
-    theme(strip.background = element_blank(),
-          strip.text = element_blank()) + 
+    theme(strip.background = element_blank(), text = element_text(size = 11)) + 
     labs(subtitle = 'B)') +
-  geom_text(aes(capX, capY, label = degree))
+  geom_text(aes(capX, capY, label = degree), size = (5/14) * 9)
 
 # Number of individuals
 (gnid <- ggplot(unique(DT[, .(middate, mindate, maxdate, nid)])) +
@@ -117,7 +116,7 @@ layout <- 'A
            C'
 
 
-(g <- gprop / gnn / gstr + 
+(g <- gprop + gnn + gstr + 
    plot_layout(design = layout)
 )
 
