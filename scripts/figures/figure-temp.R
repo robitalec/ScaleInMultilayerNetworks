@@ -31,6 +31,9 @@ DT[, middate := mean(c(mindate, maxdate)), layer]
 
 DT[, meangraphstrength := mean(graphstrength), by = timecut]
 
+yrs <- data.table(date = as.IDate(paste0(DT[, unique(year(mindate))], 
+                                         '-01-01')))
+
 # Edge overlap
 gprop <- ggplot(DT) + 
   geom_segment(aes(x = mindate, xend = maxdate, 
@@ -41,7 +44,8 @@ gprop <- ggplot(DT) +
   base +
   labs(x = NULL, y = 'Edge Overlap', subtitle = 'A)') + 
   ylim(0, 1) +
-  scale_x_date(expand = c(0, 0), breaks = pretty_breaks(13))
+  geom_vline(aes(xintercept = date), data = yrs, alpha = 0.5, size = 0.3) +
+  scale_x_date(expand = c(0, 0), date_breaks = '1 month', date_labels = '%b')
 
 
 # Graph strength
@@ -56,7 +60,8 @@ gstr <- ggplot(DT) +
   guides(color = FALSE) +
   base +
   labs(x = xlab, y = 'Graph Strength', subtitle = 'C)') +
-  scale_x_date(expand = c(0, 0), breaks = pretty_breaks(n = 13))
+  geom_vline(aes(xintercept = date), data = yrs, alpha = 0.5, size = 0.3) +
+  scale_x_date(expand = c(0, 0), date_breaks = '1 month', date_labels = '%b')
 
 
 # Layer similarity
@@ -71,7 +76,7 @@ gstr <- ggplot(DT) +
 #   scale_x_date(expand = c(0, 0), breaks = pretty_breaks(n = 10))
 
 # Network
-netDT[, degree := paste0('N = ', uniqueN(name)), layer]
+netDT[, degree := paste0('N=', uniqueN(name)), layer]
 netDT[, c('capX', 'capY') := .(mean(x), min(y) - 0.2), layer]
 gnn <- ggplot(
   netDT,
@@ -113,7 +118,7 @@ layout <- 'A
 
 
 (g <- gprop / gnn / gstr + 
-   plot_layout(design = layout) 
+   plot_layout(design = layout)
 )
 
 
