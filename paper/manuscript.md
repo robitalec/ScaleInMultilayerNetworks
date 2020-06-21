@@ -418,6 +418,8 @@ movement ecology and collective movement, and habitat selection
 and space use.
 -->
 
+<!-- TODO: somewhere ref:ml -->
+
 Our results highlight the influence of social, spatial and temporal
 scale on multilayer networks. For social scale, we found individuals
 became more connected with increasing social distance threshold.
@@ -507,9 +509,7 @@ network metrics. The results indicate varied influence of increasing
 spatial resolution depending on the habitat layer. As spatial resolution
 increased, edge overlap decreased in foraging while remaining stable in
 open and forest habitats (Figure <a href="#fig:socres">4</a> D).
-Foraging
-<!--Lichen? I think we need to call this lichen and not forage --> is a
-rare (<!--TODO--> XX % of the landscape) and patchy habitat on Fogo
+Foraging is a rare (13% of the landscape) and patchy habitat on Fogo
 Island, as is indicated by a decrease in the proportion of relocations
 in this habitat type with increasing spatial resolution (Supplementary 1
 Figure 1). Similar to increasing social distance threshold, the
@@ -819,7 +819,7 @@ the following year.
 
 <div class="figure">
 
-<img src="../graphics/figure-soc.png" alt="Varying scale in social distance threshold. For each social distance threshold (100 - 1000 m by steps of 100 m), multilayer networks were constructed of caribou social associations (n = 21 females) on Fogo Island, Newfoundland between 2017-04-21 and 2019-03-27 across three habitat classes (forage, forest, and open). Graph strength (mean of individuals in bold) showed a sharp increase between 5 m and 100 m for all habitat classes. After 100 m, graph strength continued to increase at a slower rate. Open and foraging layers showed higher variation in graph strength between individuals while the forest layer had less variation and lower mean graph strength." width="\linewidth" />
+<img src="../graphics/figure-soc.png" alt="Varying scale in social distance threshold. For each social distance threshold (100 - 1000 m by steps of 100 m), multilayer networks were constructed of caribou social associations (n = 21 females) on Fogo Island, Newfoundland between 2017-04-21 and 2019-03-27 across three habitat classes (foraging, forest, and open). Graph strength (mean of individuals in bold) showed a sharp increase between 5 m and 100 m for all habitat classes. After 100 m, graph strength continued to increase at a slower rate. Open and foraging layers showed higher variation in graph strength between individuals while the forest layer had less variation and lower mean graph strength." width="\linewidth" />
 
 <p class="caption">
 
@@ -827,7 +827,7 @@ Figure 4: Varying scale in social distance threshold. For each social
 distance threshold (100 - 1000 m by steps of 100 m), multilayer networks
 were constructed of caribou social associations (n = 21 females) on Fogo
 Island, Newfoundland between 2017-04-21 and 2019-03-27 across three
-habitat classes (forage, forest, and open). Graph strength (mean of
+habitat classes (foraging, forest, and open). Graph strength (mean of
 individuals in bold) showed a sharp increase between 5 m and 100 m for
 all habitat classes. After 100 m, graph strength continued to increase
 at a slower rate. Open and foraging layers showed higher variation in
@@ -863,19 +863,18 @@ high variability (2 - 51) at the maximal number of observations (1000).
 
 <div class="figure">
 
-<img src="../graphics/figure-fogo-ml.png" alt="Visualization of multilayer network representing social association of caribou on Fogo Island, Newfoundland between 2017-04-21 and 2019-03-27. Individual caribou (n = 21 females) are show as nodes and each individual is represented by a unique color. Twelve layers represent combinations of four time windows and three habitat classes (open, forest and foraging). Intralayer edges connect pairs of individuals that associated according to spatial and temporal thresholds described above, and are scaled in line thickness according to strength of association (SRI)." width="\linewidth" />
+<img src="../graphics/figure-fogo-ml.png" alt="Multilayer network representing social association of caribou on Fogo Island, Newfoundland between 2017-05-27 and 2019-03-27. Individual caribou (n = 21 females) are represented as nodes in a constant location in layers they were observed. Twelve layers represent combinations of four time windows and three habitat classes (open, forest and foraging). Intralayer edges represent association between individuals and line thickness is scaled by strength of association (SRI)." width="\linewidth" />
 
 <p class="caption">
 
-Figure 6: Visualization of multilayer network representing social
-association of caribou on Fogo Island, Newfoundland between 2017-04-21
-and 2019-03-27. Individual caribou (n = 21 females) are show as nodes
-and each individual is represented by a unique color. Twelve layers
-represent combinations of four time windows and three habitat classes
-(open, forest and foraging). Intralayer edges connect pairs of
-individuals that associated according to spatial and temporal thresholds
-described above, and are scaled in line thickness according to strength
-of association (SRI).
+Figure 6: Multilayer network representing social association of caribou
+on Fogo Island, Newfoundland between 2017-05-27 and 2019-03-27.
+Individual caribou (n = 21 females) are represented as nodes in a
+constant location in layers they were observed. Twelve layers represent
+combinations of four time windows and three habitat classes (open,
+forest and foraging). Intralayer edges represent association between
+individuals and line thickness is scaled by strength of association
+(SRI).
 
 </p>
 
