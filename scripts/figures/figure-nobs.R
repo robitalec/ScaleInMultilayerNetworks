@@ -38,7 +38,7 @@ gprop <- ggplot(DT, aes(color = lcname)) +
             size = 2) +
   scale_color_manual(values = lccolors) +
   base +
-  labs(x = NULL, y = 'Edge Overlap', subtitle = 'B)') +
+  labs(x = NULL, y = 'Edge Overlap', subtitle = 'A)') +
   ylim(0, 1)
 
 
@@ -54,7 +54,7 @@ gstr <- ggplot(DT, aes(color = lcname, group = lcname)) +
   guides(color = FALSE) + 
   scale_color_manual(values = lccolors) +
   base +
-  labs(x = NULL, y = 'Graph Strength', subtitle = 'A)')
+  labs(x = NULL, y = 'Graph Strength', subtitle = 'B)')
 
 
 # Layer similarity
