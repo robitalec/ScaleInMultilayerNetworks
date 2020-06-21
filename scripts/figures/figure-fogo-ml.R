@@ -148,10 +148,7 @@ nodesize <- 3
 # )
 
 
-g <- gnn + 
-  plot_annotation(caption = 'Temporal Window') & 
-  theme(plot.caption = element_text(hjust = 0.5, 
-                                    size = rel(1.2)))
+g <- gnn
 
 # Output ------------------------------------------------------------------
 ggsave('graphics/figure-fogo-ml.png',
