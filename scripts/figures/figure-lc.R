@@ -57,7 +57,7 @@ gcount <- ggplot(count[lc %in% c(1, 2, 3)]) +
             size = 2) + 
   scale_color_manual(values = lccolors) +
   base +
-  labs(x = xlab, y = 'Proportion of Relocations')
+  labs(x = NULL, y = 'Proportion of Relocations')
 
 gprop <- ggplot(DT) + 
   geom_line(aes(lcres, propedges, 
@@ -66,7 +66,7 @@ gprop <- ggplot(DT) +
   # guides(color = FALSE) +
   scale_color_manual(values = lccolors) +
   base +
-  labs(x = NULL, y = 'Edge Overlap', subtitle = 'D)')
+  labs(x = NULL, y = 'Edge Overlap', subtitle = 'A)')
   
 
 gstr <- ggplot(DT) +
@@ -78,42 +78,46 @@ gstr <- ggplot(DT) +
   guides(color = FALSE) +
   scale_color_manual(values = lccolors) +
   base +
-  labs(x = xlab, y = 'Graph Strength', subtitle = 'E)') + 
+  labs(x = NULL, y = 'Graph Strength', subtitle = 'B)') + 
   theme(panel.spacing = unit(1, "lines"))
 
 
 g30 <- gplot(lc30) + 
   geom_tile(aes(fill = factor(value))) + 
   scale_fill_manual(values = lcvalcolors) +
-  labs(subtitle = 'A) 30 m') +
+  labs(subtitle = 'C) 30 m') +
   themelc + 
   guides(fill = FALSE)
 
 g500 <- gplot(lc500) + 
   geom_tile(aes(fill = factor(value))) + 
   scale_fill_manual(values = lcvalcolors) +
-  labs(subtitle = 'B) 500 m') +
+  labs(subtitle = 'D) 500 m') +
   themelc + 
   guides(fill = FALSE)
 
 g1000 <- gplot(lc1000) + 
   geom_tile(aes(fill = factor(value))) + 
   scale_fill_manual(values = lcvalcolors) +
-  labs(subtitle = 'C) 1000 m') +
+  labs(subtitle = 'E) 1000 m') +
   themelc + 
   guides(fill = FALSE)
 
 
 
 # Patchwork ---------------------------------------------------------------
-layout <- 'AABBCC
-           DDDDDE
-           FFFFFF'
+layout <- 'AAAAAB
+           CCCCCC
+           DDEEFF'
 
-(g <- g30 + g500 + g1000 + 
-   gprop + guide_area() + gstr +
+(g <- gprop + guide_area() + gstr +
+   g30 + g500 + g1000 + 
+   # plot_annotation(caption = xlab) +
    plot_layout(design = layout,
-               guides = 'collect')
+               guides = 'collect') + 
+   plot_annotation(caption = 'Land Cover Resolution') &
+   theme(plot.caption = element_text(hjust = 0.5, size = 16))
+   
 )
 
 
