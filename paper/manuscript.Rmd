@@ -327,13 +327,12 @@ any Clutton-Brock red deer paper that uses group size data)-->
 
 Increasing land cover resolution resulted in decreased availability of foraging habitat,
 a rare habitat, and corresponding low connectivity of individuals in
-these habitats at higher resolution (Figure \@ref(fig:lcres)). Graph strength
-and edge overlap were relatively consistent across land cover resolutions for
+these habitats at higher resolution (Figure \@ref(fig:lcres)). Edge overlap were relatively consistent across land cover resolutions for
 forest and open layers (Figure \@ref(fig:lcres) D, E). Edge overlap decreased
 sharply between 30 m and 600 m in foraging layers, afterwards remaining stable to
 1000 m (Figure \@ref(fig:lcres) D). Graph strength was more variable within
 foraging habitat layers across land cover resolutions than open and forest habitat layers (Figure
-\@ref(fig:lcres) D). <!-- JWT: the order things are discussed here is a little confusing, you discuss strength, edge overlap, then strenght again. I think this should be reordered so it's easier to follow. -->
+\@ref(fig:lcres) D). 
 The proportion of relocations in forest and open habitats
 increased with increasing spatial resolution, while decreasing in foraging habitat
 (Supplementary 1 Figure 1).  Overall, these results indicate the importance of
