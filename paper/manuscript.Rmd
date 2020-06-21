@@ -312,10 +312,10 @@ threshold increased. Mean graph strength differed across habitat layers with
 similar and higher graph strength in foraging and open layers, and lower strength
 in forest layers (Figure \@ref(fig:socres)). Individual graph strength increased
 sharply between 5 m and 100 m in all three habitat classes followed by a plateau in
-the rate of increase after 100 m (<!--TODO: figure XX-->). 
+the rate of increase after 100 m (Figure \@ref(fig:socres)). 
 These results suggest the optimal social scale at
 which groups should be assigned is between ~20 - 100 m based on
-the rate at which network metrics <!--QW: which metrics?--> stabilized. For ungulates, groups are often
+the rate at which graph strength stabilized. For ungulates, groups are often
 assigned based on 50 m threshold (Lingle 2003; Lesmeries et al. 2018; Peignier
 et al. 2019), suggesting that given similar quantities of data, ~50 m is likely
 an appropriate social scale for generating social networks in caribou and
