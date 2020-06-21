@@ -31,6 +31,7 @@ source('../scripts/00-variables.R')
 DT <- readRDS('../data/derived-data/01-sub-fogo-caribou.Rds')
 nobs <- readRDS('../data/derived-data/05-number-of-observations.Rds')
 timedefs <- fread('../data/supp-data/timecut-defs.csv')
+timedefs[, c('mindate', 'maxdate') := .(as.IDate(mindate), as.IDate(maxdate))]
 ```
 
 \newpage
