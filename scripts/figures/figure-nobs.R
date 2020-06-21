@@ -76,10 +76,10 @@ gmult <- ggplot(DT, aes(group = ANIMAL_ID)) +
 
 
 # Patchwork ---------------------------------------------------------------
-layout <- 'AAAAAAA
-           BBBBBBC
+layout <- 'AAAAAAB
+           CCCCCCC
            DDDDDDD'
-(g <- gstr + gprop + guide_area() + gmult + 
+(g <- gprop + guide_area() + gstr + gmult + 
    plot_layout(guides = 'collect', 
                design = layout)
 )
