@@ -431,24 +431,41 @@ relevant scales when selecting observational scales for a given study.
 <!-- intro -->
 
 
+<!-- social scale -->
+Defining the social scale to generate networks is an
+essential consideration for social network analysis <!-- with direct impacts on
+outcomes blah-->[@Castles_2014; @Carter_2015; @Farine_2015a]. Proximity-based
+social networks generated using GPS location data require using a social scale,
+specifically a social distance threshold, to define social associations. We
+found increasing individual graph strength across three habitat layers with
+increasing social distance threshold (Figure \@ref(fig:socres)). <!-- This means blah blah for different types of interactions.--> In addition, 
+habitat layers differed in their response to social distance threshold, with
+open and foraging with a larger increase in graph strength and greater variation
+across individuals. <!-- What could this mean biologically? --> These results emphasize that multilayer network metrics are
+directly influenced by social scale, in this case the spatial distance
+threshold.
+<!-- social scale -->
+
+
+
+
+
+<!-- drop 
 Our results highlight the influence of social, spatial and temporal scale on
 multilayer networks. For social scale, we found individuals became more
 connected with increasing social distance threshold. Increasing land cover
 resolution lead to a decrease in availability of patchy and rare habitats and, 
-<!--QW: not sure I'd mention 'rare' since there are only 3 habitat types. 
-Could you just say 'less common' or even just 'patchy'?-->
+
+QW: not sure I'd mention 'rare' since there are only 3 habitat types. 
+Could you just say 'less common' or even just 'patchy'?
+
 correspondingly, lower connectivity of individuals in these habitats. Temporal
 windows highlighted clear periods of increased sociality among individuals.
 Finally, increasing number of observations led to a general stabilization in network
 metrics. As such, scale is inherently tied to the generation  of multilayer
 networks and metrics evaluating them, as well as the individual layers that make
 them up.
-<!--QW: I will pre-empt Eric and say I think this paragraph could maybe not mention the results at all. 
-You could focus on just talking about the importance of scale for behavioural and spatial ecology.
-Why is it important and what are the more broadly applicable ideas that lead us to this paper? 
-Maybe keep this little summary paragraph for now - I think likely we could integrate what I describe 
-above with what you already have-->
-
+--> 
 
 
 Social structure and habitat selection are intimately related: individuals must
