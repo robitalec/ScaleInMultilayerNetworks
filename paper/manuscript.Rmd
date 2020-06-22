@@ -506,6 +506,31 @@ habitat-context [@Battiston_2014]. If the spatial resolution of the habitat data
 are insufficient to capture rare habitats, context-specific relationships
 between individuals may not be captured by multilayer networks.
 
+<!-- habitat+social -->
+
+
+
+
+<!-- drop 
+Our results highlight the influence of social, spatial and temporal scale on
+multilayer networks. For social scale, we found individuals became more
+connected with increasing social distance threshold. Increasing land cover
+resolution lead to a decrease in availability of patchy and rare habitats and, 
+
+QW: not sure I'd mention 'rare' since there are only 3 habitat types. 
+Could you just say 'less common' or even just 'patchy'?
+
+correspondingly, lower connectivity of individuals in these habitats. Temporal
+windows highlighted clear periods of increased sociality among individuals.
+Finally, increasing number of observations led to a general stabilization in network
+metrics. As such, scale is inherently tied to the generation  of multilayer
+networks and metrics evaluating them, as well as the individual layers that make
+them up.
+--> 
+
+
+
+
 Social processes, movement decisions, and space use are inextricably linked and
 multilayer networks represent a potential analytical framework for linking these
 processes [@Mourier_2019]. Movement as a collective group can reduce per capita
