@@ -488,13 +488,12 @@ influence of habitat selection on sociality across scales. Animal social systems
 can be parsed by spatial contexts, for example as defined by habitat types as in
 Figure \@ref(fig:lcres). Given that habitat data are available across a wide
 range of spatial scales, we evaluated the influence of habitat spatial
-resolution on multilayer network metrics. The results indicate varied influence
-of increasing spatial resolution depending on the habitat layer. As spatial
-resolution increased, edge overlap decreased in foraging while remaining stable in
+resolution on multilayer network metrics. <!--The results indicate varied influence
+of increasing spatial resolution depending on the habitat layer.--> As spatial
+resolution increased, edge overlap decreased in foraging habitats while remaining stable in
 open and forest habitats (Figure \@ref(fig:socres) D). Foraging is a rare (13% of the landscape) and
-patchy habitat on Fogo Island, as is indicated by a decrease in the proportion
-of relocations in this habitat type with increasing spatial resolution (Supplementary 1
-Figure 1). Similar to increasing social distance threshold, the influence
+patchy habitat on Fogo Island and the proportion of relocations in foraging habitat
+type decreased as spatial resolution increased (~15% at 30 m - <2% at 1000 m). Similar to increasing social distance threshold, the influence
 of increasing spatial resolution on graph strength was notably different between
 habitat layers. Forest layers showed little change in graph strength with
 increasing spatial resolution and variation between individuals. Foraging and open
