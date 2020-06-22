@@ -328,11 +328,11 @@ any Clutton-Brock red deer paper that uses group size data)-->
 Increasing land cover resolution resulted in decreased availability of foraging habitat,
 a rare habitat, and corresponding low connectivity of individuals in
 these habitats at higher resolution (Figure \@ref(fig:lcres)). Edge overlap were relatively consistent across land cover resolutions for
-forest and open layers (Figure \@ref(fig:lcres) D, E). Edge overlap decreased
+forest and open layers (Figure \@ref(fig:lcres) D). Edge overlap decreased
 sharply between 30 m and 600 m in foraging layers, afterwards remaining stable to
 1000 m (Figure \@ref(fig:lcres) D). Graph strength was more variable within
 foraging habitat layers across land cover resolutions than open and forest habitat layers (Figure
-\@ref(fig:lcres) D). 
+\@ref(fig:lcres) E). 
 The proportion of relocations in forest and open habitats
 increased with increasing spatial resolution, while decreasing in foraging habitat
 (Supplementary 1 Figure 1).  Overall, these results indicate the importance of
@@ -374,7 +374,7 @@ contexts.
 
 
 <!-- Figure: metrics by land cover resolution -->
-(ref:lcres) Varying spatial scale of land cover raster. For each land cover resolution (5, 25, 50, 75, 100, 250 and 500 m), multilayer networks were constructed of caribou social associations (n = `r DT[, uniqueN(get(idcol))]` females) on Fogo Island, Newfoundland between `r DT[, format(min(datetime), '%F')]` and `r DT[, format(max(datetime), '%F')]` across three habitat classes (foraging, forest, and open). A) Edge overlap of habitat layers across spatial resolutions. Open and forest layers show consistent edge overlap with increasing spatial resolution while foraging shows a sharp decline in edge overlap between 30 m and 600 m. Above 600 m, the foraging layers are stable. B) Graph strength (mean of individuals in bold) within habitat layers across spatial resolution. Foraging layers showed high variation in graph strength with many individuals dropping to 0 after 500 m and others increasing with spatial resolution. Open layers and forest layers were relatively stable across spatial resolutions, with higher mean graph strength in open compared to forest. C, D, E) Three land cover rasters: the original resolution (30 m) and two aggregated rasters (500 m and 1000 m). 
+(ref:lcres) Varying spatial scale of land cover raster. For each land cover resolution (5, 25, 50, 75, 100, 250 and 500 m), multilayer networks were constructed of caribou social associations (n = `r DT[, uniqueN(get(idcol))]` females) on Fogo Island, Newfoundland between `r DT[, format(min(datetime), '%F')]` and `r DT[, format(max(datetime), '%F')]` across three habitat classes (foraging, forest, and open). A, B, C) Three land cover rasters: the original resolution (30 m) and two aggregated rasters (500 m and 1000 m). D) Edge overlap of habitat layers across spatial resolutions. Open and forest layers show consistent edge overlap with increasing spatial resolution while foraging shows a sharp decline in edge overlap between 30 m and 600 m. Above 600 m, the foraging layers are stable. E) Graph strength (mean of individuals in bold) within habitat layers across spatial resolution. Foraging layers showed high variation in graph strength with many individuals dropping to 0 after 500 m and others increasing with spatial resolution. Open layers and forest layers were relatively stable across spatial resolutions, with higher mean graph strength in open compared to forest. 
 
 
 

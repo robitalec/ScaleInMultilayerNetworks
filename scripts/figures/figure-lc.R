@@ -66,7 +66,7 @@ gprop <- ggplot(DT) +
   # guides(color = FALSE) +
   scale_color_manual(values = lccolors) +
   base +
-  labs(x = NULL, y = 'Edge Overlap', subtitle = 'A)')
+  labs(x = NULL, y = 'Edge Overlap', subtitle = 'D)')
   
 
 gstr <- ggplot(DT) +
@@ -78,41 +78,39 @@ gstr <- ggplot(DT) +
   guides(color = FALSE) +
   scale_color_manual(values = lccolors) +
   base +
-  labs(x = NULL, y = 'Graph Strength', subtitle = 'B)') + 
+  labs(x = NULL, y = 'Graph Strength', subtitle = 'E)') + 
   theme(panel.spacing = unit(1, "lines"))
 
 
 g30 <- gplot(lc30) + 
   geom_tile(aes(fill = factor(value))) + 
   scale_fill_manual(values = lcvalcolors) +
-  labs(subtitle = 'C) 30 m') +
+  labs(subtitle = 'A) 30 m') +
   themelc + 
   guides(fill = FALSE)
 
 g500 <- gplot(lc500) + 
   geom_tile(aes(fill = factor(value))) + 
   scale_fill_manual(values = lcvalcolors) +
-  labs(subtitle = 'D) 500 m') +
+  labs(subtitle = 'B) 500 m') +
   themelc + 
   guides(fill = FALSE)
 
 g1000 <- gplot(lc1000) + 
   geom_tile(aes(fill = factor(value))) + 
   scale_fill_manual(values = lcvalcolors) +
-  labs(subtitle = 'E) 1000 m') +
+  labs(subtitle = 'C) 1000 m') +
   themelc + 
   guides(fill = FALSE)
 
 
 
 # Patchwork ---------------------------------------------------------------
-layout <- 'AAAAAB
-           CCCCCC
-           DDEEFF'
+layout <- 'AABBCC
+           DDDDDE
+           FFFFFF'
 
-(g <- gprop + guide_area() + gstr +
-   g30 + g500 + g1000 + 
-   # plot_annotation(caption = xlab) +
+(g <- g30 + g500 + g1000 + gprop + guide_area() + gstr +
    plot_layout(design = layout,
                guides = 'collect') + 
    plot_annotation(caption = 'Land Cover Resolution') &
