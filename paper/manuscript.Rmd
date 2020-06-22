@@ -416,6 +416,8 @@ box2: extending qs
 
 
 <!-- intro -->
+<!-- QW: could focus on just talking about the importance of scale for behavioural and spatial ecology. Why is it important and what are the more broadly applicable ideas that lead us to this paper -->
+
 Complex animal social systems are influenced by biological and observation scales.
 By parsing social systems into contexts using multilayer networks,
 we observed differences across social, spatial and temporal scales.
@@ -432,54 +434,38 @@ relevant scales when selecting observational scales for a given study.
 
 
 <!-- social scale -->
-Defining the social scale to generate networks is an
-essential consideration for social network analysis <!-- with direct impacts on
-outcomes blah-->[@Castles_2014; @Carter_2015; @Farine_2015a]. Proximity-based
-social networks generated using GPS location data require using a social scale,
-specifically a social distance threshold, to define social associations. We
-found increasing individual graph strength across three habitat layers with
-increasing social distance threshold (Figure \@ref(fig:socres)). <!-- This means blah blah for different types of interactions.--> In addition, 
-habitat layers differed in their response to social distance threshold, with
-open and foraging with a larger increase in graph strength and greater variation
-across individuals. <!-- What could this mean biologically? --> These results emphasize that multilayer network metrics are
-directly influenced by social scale, in this case the spatial distance
-threshold.
+Social scale is essential consideration for
+social network analysis [@Castles_2014; @Carter_2015; @Farine_2015a].
+Proximity-based social networks generated using GPS location data use a social
+distance threshold to define social associations. Increasing the social distance threshold
+resulted in an increase in graph strength 
+across all three habitat layers  (Figure
+\@ref(fig:socres)). <!-- This means blah blah for different types of
+interactions.--> However, habitat layers differed in their response to
+increasing social distance threshold, with open and foraging with a larger
+increase in graph strength and greater variation across individuals. 
+<!-- What could this mean biologically? --> These results emphasize that multilayer
+network metrics are directly influenced by social scale. In extension, 
+caribou relocations could be classified into behavioural states using hidden
+Markov models to explore the influence of behavioural states on social scale 
+in a multilayer network [see @Jones_2020]. 
 <!-- social scale -->
 
 
-
-
-
-<!-- drop 
-Our results highlight the influence of social, spatial and temporal scale on
-multilayer networks. For social scale, we found individuals became more
-connected with increasing social distance threshold. Increasing land cover
-resolution lead to a decrease in availability of patchy and rare habitats and, 
-
-QW: not sure I'd mention 'rare' since there are only 3 habitat types. 
-Could you just say 'less common' or even just 'patchy'?
-
-correspondingly, lower connectivity of individuals in these habitats. Temporal
-windows highlighted clear periods of increased sociality among individuals.
-Finally, increasing number of observations led to a general stabilization in network
-metrics. As such, scale is inherently tied to the generation  of multilayer
-networks and metrics evaluating them, as well as the individual layers that make
-them up.
---> 
-
-
+<!-- habitat+social -->
 Social structure and habitat selection are intimately related: individuals must
 share space to interact and the distribution of resources influences group
 dynamics and home range size [@Webber_2018]. Social structure is influenced by
 resource availability and seasonality [@Peignier_2019], configuration [@He_2019]
 and fragmentation [@Banks_2007]. Habitat selection, the disproportionate use of
 available resources or landscape features by animals [@Manly_1993; @Boyce_1999],
-is a scale-dependent process [@Mayor_2009]. Johnson (1980) identified four orders of habitat selection: (1)
+is a scale-dependent process [@Mayor_2009]. 
+Johnson (1980) identified four orders of habitat selection: (1)
 the geographical range of a species, (2) the home range of an individual, the
 (3) habitat patches within the home range and (4) specific resources within a
-habitat patch. Kie et al. [-@Kie_2002] found that, independently, third order of
+habitat patch. <!--Kie et al. [-@Kie_2002] found that, independently, third order of
 selection was insufficient for capturing landscape attributes selected for by
-mule deer (*Odocoileus hemionus*), at a scale larger than their home range size.
+mule deer (*Odocoileus hemionus*), at a scale larger than their home range size.-->
 Moving past this hierarchical perspective, Mayor (2007) emphasized the
 importance of considering a broad continuum of scales to reveal scale-dependent
 selection and avoid the bias of predefined scales assumed to be associated with
