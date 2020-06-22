@@ -389,31 +389,6 @@ contexts.
 
 
 # Discussion
-<!-- 1)
-First, to what degree does the social scale of relationships, spatial
-scale of landscapes, and temporal scale of analysis influence our ability to
-interpret complex social systems? 
--->
-
-<!-- 2)
-Second, can variation in the social, spatial,
-and temporal scale improve predictions associated with biological differences in
-seasonal resource availability and social association? 
-
-+
-We conclude with
-perspectives for further development and application of scale in multilayer
-networks with respect to phenotypes and individual fitness,
-movement ecology and collective movement, and habitat selection
-and space use.
--->
-
-
-<!-- TODO: somewhere ref:ml -->
-
-
-
-
 <!-- 
 outline
 
@@ -429,15 +404,14 @@ outline
 
 6. number obs
 
+
+TODO: somewhere ref:ml
+
+
 7. from conclusions
 
 box1: fitness
 box2: extending qs
-
-
-
-
-
 -->
 
 
@@ -733,8 +707,7 @@ Silk et al. (2018) summarized some key multilayer questions in animal behaviour
 research. While these questions are important for linking animal behaviour and
 multilayer networks, we summarize our perspectives on the future of multilayer
 networks with an additional set of questions posed through the lens of spatial
-ecology that are relevant to the promise and problem of scale in multilayer
-networks:
+ecology that are relevant to scale in multilayer networks:
 
 1. How do social phenotypes vary across social, spatial, and temporal scales and
 at which scale might these influence fitness? Are some scales better predictors
