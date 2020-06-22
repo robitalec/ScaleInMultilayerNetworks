@@ -532,30 +532,7 @@ unique opportunity to integrate movement and habitat in multilayer networks to
 answer complex questions about animal socioecology.
 <!-- mov -->
 
-
-<!-- drop 
-Our results highlight the influence of social, spatial and temporal scale on
-multilayer networks. For social scale, we found individuals became more
-connected with increasing social distance threshold. Increasing land cover
-resolution lead to a decrease in availability of patchy and rare habitats and, 
-
-QW: not sure I'd mention 'rare' since there are only 3 habitat types. 
-Could you just say 'less common' or even just 'patchy'?
-
-correspondingly, lower connectivity of individuals in these habitats. Temporal
-windows highlighted clear periods of increased sociality among individuals.
-Finally, increasing number of observations led to a general stabilization in network
-metrics. As such, scale is inherently tied to the generation  of multilayer
-networks and metrics evaluating them, as well as the individual layers that make
-them up.
---> 
-
-
-
-
-
-
-
+<!-- temp -->
 The effect of seasonality of resources on sociality can be directly measured by
 differences across discrete time windows. Using an ordinal multilayer network
 consisting of 20 discrete time windows throughout the study period, we observed
@@ -585,7 +562,10 @@ test hypotheses about social dynamics with a suitable null control
 ordinal layers of discrete time windows provide a way to make appropriate null
 models to test questions about the dynamics of an individual’s social network
 position over multiple aggregated time periods.
+<!-- temp -->
 
+
+<!-- nobs -->
 Finally, it is crucial to consider sufficient data to construct robust networks
 when selecting time windows and study periods. Time windows should be long
 enough for each layer to have enough data for robust networks [@Farine_2017]. To
@@ -599,6 +579,27 @@ and graph strength remained relatively static, while edge overlap and
 multidegree continued to increase slowly. As more observations were added, more
 and rarer relationships were recorded revealing the value of this form of
 sensitivity analysis.
+<!-- temp -->
+
+
+<!-- drop 
+Our results highlight the influence of social, spatial and temporal scale on
+multilayer networks. For social scale, we found individuals became more
+connected with increasing social distance threshold. Increasing land cover
+resolution lead to a decrease in availability of patchy and rare habitats and, 
+
+QW: not sure I'd mention 'rare' since there are only 3 habitat types. 
+Could you just say 'less common' or even just 'patchy'?
+
+correspondingly, lower connectivity of individuals in these habitats. Temporal
+windows highlighted clear periods of increased sociality among individuals.
+Finally, increasing number of observations led to a general stabilization in network
+metrics. As such, scale is inherently tied to the generation  of multilayer
+networks and metrics evaluating them, as well as the individual layers that make
+them up.
+--> 
+
+
 
 
 <!--
