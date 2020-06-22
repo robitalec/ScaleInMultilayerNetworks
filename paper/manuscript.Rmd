@@ -89,7 +89,8 @@ temporal scales (e.g. Piza-Roca et al. 2018). Although the social environment
 clearly scales spatially and temporally, it remains unclear whether coarser
 scales of sociality, including social association and home range overlap, vary
 predictably with social interaction [@Castles_2014;
-@Farine_2015a]. We therefore define social scale as the type of social relationship
+@Farine_2015a]. <!-- careful with this definition of social scale ..
+social scale is the type of and specification/detail/definition of-->We therefore define social scale as the type of social relationship
 observed that can be explicitly defined and measured [@Farine_2015a] and suggest the 
 potential for adaptive variance in social relationships is also scale-dependent. 
 <!--QW: also need to fix up this last sentence- I added the 'adaptive variance part 
