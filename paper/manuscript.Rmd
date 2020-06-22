@@ -411,6 +411,38 @@ and space use.
 <!-- TODO: somewhere ref:ml -->
 
 
+
+
+<!-- 
+outline
+
+1. TODO intro
+
+2. social scale. our results. possible extensions with HMM. observational of dif behaviours
+
+3. habitat+social, implicit -> explicit, our results. 
+
+4. movement, 1 sent biolog
+
+5. seasonality, time windows
+
+6. number obs
+
+7. from conclusions
+
+box1: fitness
+box2: extending qs
+
+
+
+
+
+-->
+
+
+
+
+
 Our results highlight the influence of social, spatial and temporal scale on
 multilayer networks. For social scale, we found individuals became more
 connected with increasing social distance threshold. Increasing land cover
