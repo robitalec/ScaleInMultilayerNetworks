@@ -503,10 +503,34 @@ multilayer network measures related to habitat are explicitly dependent on
 spatial scale.  If the spatial resolution of the habitat data are insufficient
 to capture rare habitats, for example, context-specific relationships between
 individuals may not be captured.
-
 <!-- habitat+social -->
 
 
+<!-- mov -->
+Social processes, movement decisions, and space use are inextricably linked and
+multilayer networks represent a potential analytical framework for linking these
+processes [@Mourier_2019]. Collective movement can reduce per capita predation
+risk via detection-dilution trade-offs and improve information transfer about
+the quality or location of resources [@Jolles_2019]. Multilayer networks could
+be constructed from layers defined by movement parameters, given the existing
+framework using behavioural layers [e.g. @Smith_Aguilar_2019]. For example,
+edges could represent measures of collective movement based on dynamic
+interaction metrics [@Long_2014]. We generated multilayer networks based on
+habitat-specific layers of social association. Integrating habitat-specific
+movement layers could further illuminate the role of movement as a driver of the
+social and spatial environments an individual experiences [@Webber_2018]. For
+example, social processes may be an emergent property of the landscape because
+animals aggregate at resources, such as waterholes [@Chamaill_Jammes_2008].
+Movement to, from, or within habitat patches or territories can also contribute
+to the formation of the social environment [@Spiegel_2016]. For example, in
+sleepy lizards (*Tiliqua rugosa*) males interacted primarily at home range
+edges, presumably driving territorial behaviour [@Spiegel_2018]. Incorporating
+movement ecology within a multilayer network framework is a logical next step
+for a burgeoning field. Importantly, the technological advancements in
+biologging and wildlife tracking technology [@Border_2020] have provided a
+unique opportunity to integrate movement and habitat in multilayer networks to
+answer complex questions about animal socioecology.
+<!-- mov -->
 
 
 <!-- drop 
@@ -529,61 +553,8 @@ them up.
 
 
 
-Social processes, movement decisions, and space use are inextricably linked and
-multilayer networks represent a potential analytical framework for linking these
-processes [@Mourier_2019]. Movement as a collective group can reduce per capita
-predation risk via detection-dilution trade-offs and improve information
-transfer about the quality or location of resources to other group members
-[@Jolles_2019]. Given the existing framework for constructing multilayer networks from
-behavioural layers [e.g. @Smith_Aguilar_2019], monolayer networks that explicitly
-quantify movement parameters could be integrated. For example, edges could
-represent measures of dyadic or collective movement based on dynamic interaction
-metrics [@Long_2014]. Integrating movement layers with habitat-specific social
-association layers could further illuminate the role of movement as a driver
-of the social and spatial environments an individual experiences [@Webber_2018].
-We generated multilayer networks based on habitat-specific layers of 
-social association. Coordinated movement of dyads, or groups, could vary based on
-habitat, and the approach we outline could be used to explore mechanisms linking
-the social and spatial environments.<!--  <- long sentence with two coulds --> For example, social processes may be an 
-emergent property of the landscape because animals aggregate at resources, such
-as waterholes [@Chamaill_Jammes_2008]. Movement to, from, or within habitat
-patches or territories can also contribute to the formation of the social
-environment [@Spiegel_2016]. For example, in sleepy lizards (*Tiliqua rugosa*)
-males interacted primarily at home range edges, presumably driving territorial
-behaviour [@Spiegel_2018]. Incorporating movement ecology within a multilayer
-network framework is a logical next step for a burgeoning field. In particular,
-when association networks are habitat-specific, we suggest the integration of
-movement and space use in multilayer networks provides novel insights into the
-effects of habitat configuration on the formation of the social environment
-[@He_2019; @Webber_2018].
 
 
-<!-- 
-TODO: cut down to this
-
-Given recent technological advancements in biologging and wildlife tracking technology 
-[@Borger_2020], remotely sensed data provides a unique opportunity to use
-multilayer social network analysis to answer complex questions about animal
-socioecology
-
-track the fine-scale movements of groups over large distances and time scales
-[@Torney_2018]
--->
-
-
-Importantly, the key to incorporating movement in multilayer networks across
-scales is the technological advancements available to overcome previous
-limitations [@Hughey_2018]. Biologging and wildlife tracking technology has
-advanced to the point where relocations can be programmed to occur as frequently
-as each second [@B_rger_2016], a practice which has been applied to questions of
-collective movement [e.g @Strandburg_Peshkin_2015]. Meanwhile, remote sensing
-technology, including unmanned aerial vehicles and satellites, can be used to
-track the fine-scale movements of groups over large distances and time scales
-[@Torney_2018]. Using technology to infer behaviour has therefore become
-standard operating procedure for many species in many systems. Our ability to
-collect and process remotely sensed data and infer social processes based on
-animal movement provides an opportunity to use multilayer social network
-analysis to answer complex questions about animal socioecology.
 
 The effect of seasonality of resources on sociality can be directly measured by
 differences across discrete time windows. Using an ordinal multilayer network
