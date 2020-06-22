@@ -708,24 +708,16 @@ linking spatial and social layer in multilayer networks.
 <!-- this was conclusion -->
 
 # Box 1
+<!-- TODO: retrieve from prev versions -->
 Monolayer network approaches have been increasingly used to link social network
 position with individual fitness, including in primates [@Brent_2017;
 @Thompson_2019], dolphins [@Stanton_2012; @Stanton_2011], and birds
 [@McDonald_2007; @Royle_2012]. Social scale has emerged as an important variable
 for understanding fitness consequences in the context of social network
 positions <!-- TODO JWT check-- JWT: these are right, and we could potentially replace the holekamp paper with our recent JAE one if it gets released in time --> [@Almeling_2016; @Berger_2015; @Brent_2017;
-@Holekamp_2011]. Defining the social scale to generate networks is an
-essential consideration for social network analysis <!-- with direct impacts on
-outcomes blah-->[@Castles_2014; @Carter_2015; @Farine_2015a]. Proximity-based
-social networks generated using GPS location data require using a social scale,
-specifically a social distance threshold, to define social associations. We
-found increasing individual graph strength across three habitat layers with
-increasing social distance threshold (Figure \@ref(fig:socres)). <!-- This means blah blah for different types of interactions.--> In addition, 
-habitat layers differed in their response to social distance threshold, with
-open and foraging with a larger increase in graph strength and greater variation
-across individuals. <!-- What could this mean biologically? --> These results emphasize that multilayer network metrics are
-directly influenced by social scale, in this case the spatial distance
-threshold.
+@Holekamp_2011]. 
+
+
 
 
 
