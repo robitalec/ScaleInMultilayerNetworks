@@ -441,7 +441,20 @@ box2: extending qs
 -->
 
 
-
+<!-- intro -->
+Complex animal social systems are influenced by biological and observation scales.
+By parsing social systems into contexts using multilayer networks,
+we observed differences across social, spatial and temporal scales.
+Social scale
+Spatial and temporal contexts 
+including habitats, discrete patches and fragmented landscapes, as well as across 
+seasonal differences in resource availability, or periods of migration, aggregation and disaggregation [@Kivela_2014; @Porter_2018; @Pilosof_2017]. 
+Sociality exists across scales characterized by different 
+types of behaviours as well as spatial and temporal thresholds defining these. 
+Our results highlight the influence of social, spatial and temporal scales
+on multilayer animal social networks, showing a requirement to consider biologically
+relevant scales when selecting observational scales for a given study. 
+<!-- intro -->
 
 
 Our results highlight the influence of social, spatial and temporal scale on
