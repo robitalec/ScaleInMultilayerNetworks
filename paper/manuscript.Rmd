@@ -336,11 +336,13 @@ foraging habitat layers across land cover resolutions than open and forest habit
 \@ref(fig:lcres) E). 
 The proportion of relocations in forest and open habitats
 increased with increasing spatial resolution, while decreasing in foraging habitat
-(Supplementary 1 Figure 1).  Overall, these results indicate the importance of
+(14.5% at 30 m - <2% at 1000 m).  Overall, these results indicate the importance of
 matching land cover resolution to scale of selection as well as ensuring the
 land cover product used has a resolution fine enough to detect landscape
 features and habitats relevant to study species, such as important patchy and
 rare habitats.
+
+
 
 <!--QW: what makes it ordinal again? Is it ordinal OR continuous? -->
 The ordinal multilayer network indicated within-year time windows where social 
@@ -491,9 +493,9 @@ range of spatial scales, we evaluated the influence of habitat spatial
 resolution on multilayer network metrics. <!--The results indicate varied influence
 of increasing spatial resolution depending on the habitat layer.--> As spatial
 resolution increased, edge overlap decreased in foraging habitats while remaining stable in
-open and forest habitats (Figure \@ref(fig:socres) D). Foraging is a rare (13% of the landscape) and
+open and forest habitats (Figure \@ref(fig:socres) D). Foraging is a rare (14.5% of the landscape) and
 patchy habitat on Fogo Island and the proportion of relocations in foraging habitat
-type decreased as spatial resolution increased (~15% at 30 m - <2% at 1000 m). Similar to increasing social distance threshold, the influence
+type decreased as spatial resolution increased (14.5% at 30 m - <2% at 1000 m). Similar to increasing social distance threshold, the influence
 of increasing spatial resolution on graph strength was notably different between
 habitat layers. Forest layers showed little change in graph strength with
 increasing spatial resolution and variation between individuals. Foraging and open
