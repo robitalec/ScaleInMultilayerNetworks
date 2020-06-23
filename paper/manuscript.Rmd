@@ -321,24 +321,25 @@ confirm the use of 50 m buffer that has long been used for studies in the field
 [@Lingle_2003; @Clutton_1982]
 
 
-Increasing land cover resolution resulted in decreased availability of foraging habitat and corresponding low connectivity of individuals at higher land cover resolutions. Edge overlap decreased
-sharply between 30 m and 600 m in foraging layers, afterwards remaining stable to
-1000 m (Figure \@ref(fig:lcres) D). In contrast, edge overlap was relatively consistent across land cover resolutions in
-forest and open layers (Figure \@ref(fig:lcres) D).  Graph strength was more variable within
-foraging habitat layers across land cover resolutions than open and forest habitat layers (Figure
-\@ref(fig:lcres) E). 
-The proportion of relocations in forest (42.1% at 30 m - 48.2% at 1000 m) and open (43.3% at 30 m - 50.3% at 1000 m) habitats
-increased with increasing spatial resolution, while decreasing in foraging habitat
-(14.5% at 30 m - <2% at 1000 m).  Overall, these results indicate the importance of
-matching land cover resolution to scale of selection as well as ensuring the
-land cover product used has a resolution fine enough to detect landscape
-features and habitats relevant to study species, such as important patchy and
-rare habitats.
+Increasing land cover resolution resulted in decreased availability of foraging
+habitat and corresponding low connectivity of individuals at higher land cover
+resolutions. Edge overlap decreased sharply between 30 m and 600 m in foraging
+layers, afterwards remaining stable to 1000 m (Figure \@ref(fig:lcres) D). In
+contrast, edge overlap was relatively consistent across land cover resolutions
+in forest and open layers (Figure \@ref(fig:lcres) D).  Graph strength was more
+variable within foraging habitat layers across land cover resolutions than open
+and forest habitat layers (Figure \@ref(fig:lcres) E). The proportion of
+relocations in forest (42.1% at 30 m - 48.2% at 1000 m) and open (43.3% at 30 m
+- 50.3% at 1000 m) habitats increased with increasing spatial resolution, while
+decreasing in foraging habitat (14.5% at 30 m - <2% at 1000 m).  Overall, these
+results indicate the importance of matching land cover resolution to scale of
+selection as well as ensuring the land cover product used has a resolution fine
+enough to detect landscape features and habitats relevant to study species, such
+as important patchy and rare habitats.
 
 
 
-<!--QW: what makes it ordinal again? Is it ordinal OR continuous? -->
-The ordinal multilayer network indicated within-year time windows where social 
+The temporal multilayer network indicated within-year time windows where social 
 network metrics increased. Edge overlap was higher in time windows 1, 6-11 and 15-20 (between `r timedefs[timecut == 1, paste(mindate, maxdate, sep = ' and ')]`,  
 `r timedefs[timecut %in% 6:11, paste(min(mindate), max(maxdate), sep = ' and ')]`
 and `r timedefs[timecut %in% 15:20, paste(min(mindate), max(maxdate), sep = ' and ')]`) 
