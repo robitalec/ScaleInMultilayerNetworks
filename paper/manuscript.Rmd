@@ -584,93 +584,45 @@ position [@Almeling_2016; @Berger_2015; @Brent_2017; @Holekamp_2011].
 Varying social scales can have different fitness repercussions for individuals.
 Rhesus macaques (*Macaca mulatta*) had higher survivorship when they had fewer
 but stronger and more stable social associates and grooming partners rather than
-simply more associates [@Ellis_2019]. Furthermore, it is a common trope that
+simply more associates [@Ellis_2019].  It is a common trope that
 individuals must be associating to interact, and many studies assume that
-proximity is proxy for interacting [@Farine_2015a]. For instance, baboons need
-to be in proximity to groom each other. Certain animals use interactions that do
+proximity is proxy for interacting [@Farine_2015a]. For instance, baboons must be 
+within proximity of each other for grooming yet other animals use interactions that do
 not require proximity such as long-distance vocalization or olfactory signals
 [@Carter_2015]. It is possible to record social interactions that do not require
-proximity, for example using microphone arrays to construct long-distance
+proximity using, for example, microphone arrays to construct long-distance
 communication networks [@Snijders_2017]. Our results indicate varying social
 patterns in different habitat types, potentially suggesting different types
 of interactions. Higher graph strength in forage and open habitats may 
-be an indication of caribou using visual cues not possible in forest habitats
+indicate that caribou use visual or other cues not relevant in forest habitats
 (Figure \@ref(fig:socres)). 
 
-Changing social phenotypes over ontogeny can affect fitness [@Berger_2015; @Brent_2017].
-Temporal scale is important as individuals progress through development at 
-different rates [@Tarka_2018] and this variation can complicate the selection of 
-time windows. Considering fine temporal scales provide insight across
-developmental stages that may otherwise be missed [@Turner_2017].
-
-Thus, it is
-critical to carefully consider the temporal scale that is meaningful for the
-proposed hypotheses. 
-
 Multilayer networks enable researchers to look at similarities and differences
-between explicit stages of ontogeny, seasons or other temporal windows
+between discrete temporal windows. 
+Changing social phenotypes over ontogeny can affect fitness [@Berger_2015; @Brent_2017].
+Individuals progress through development at 
+different rates [@Tarka_2018] and this variation can complicate the selection of 
+time windows. Considering fine temporal scales provides insight across
+developmental stages that may otherwise be missed [@Turner_2017]. Thus, it
+is critical to carefully consider the effect of
+scale on the relationship between an individual’s social network position and
+fitness using a temporal scale based on the hypotheses being tested and
+logistical constraints.
 
 
-
-
-Multilayer networks provide unique opportunities and challenges, linking these
-various scales, for understanding the social phenotypes and environments of
-individuals and their fitness outcomes. 
-
-
-
-Multilayer network
-metrics could be used to assess the relationship between an individual’s social
-phenotype and fitness. 
-
-It would also be a meaningful reduction of many
-network metrics that could help simplify statistical analyses and deal with the
-frequent correlations between social network metrics in different types of
-networks [@Castles_2014]. 
-
-Furthermore, multilayer networks provide a framework
+Multilayer networks provide a framework
 to test hypotheses linking social phenotypes and fitness across temporal scales.
 Because of the non-independent nature of social interactions and associations,
-especially over time, it is hard to test hypotheses about social dynamics with a
+the selection of a suitable null model  to test hypotheses about social dynamics with a
 suitable null control [@Farine_2017; @Proskurnikov_2017]. Using the framework of
 multilayer networks, making layers of different temporal periods provides a way
 to make appropriate null models to test questions about the dynamics of an
 individual’s social network position over multiple aggregated time periods.
 
 
-In both mono- and multilayer networks, 
-the effect of
-scale on the relationship between an individual’s social network position and
-fitness need to be considered based on the hypotheses being tested and
-logistical constraints.
-<!-- previous version -->
-
-
-
-
-
-
-<!-- TODO: retrieve from prev versions -->
-Monolayer network approaches have been increasingly used to link social network
-position with individual fitness, including in primates [@Brent_2017;
-@Thompson_2019], dolphins [@Stanton_2012; @Stanton_2011], and birds
-[@McDonald_2007; @Royle_2012]. Social scale has emerged as an important variable
-for understanding fitness consequences in the context of social network
-positions <!-- TODO JWT check-- JWT: these are right, and we could potentially replace the holekamp paper with our recent JAE one if it gets released in time --> [@Almeling_2016; @Berger_2015; @Brent_2017;
-@Holekamp_2011]. 
-
-
-
-Selection of appropriate time windows is essential for capturing sociality in specific
-life stages of interest. Social phenotypes can change over ontogeny in ways that
-can affect fitness [@Berger_2015; @Brent_2017]. 
-Further complicating the issue,
-individuals can vary in their rate of development [@Tarka_2018]. This variation
-can make defining the appropriate temporal scale for testing the fitness
-implications of an individual’s social phenotype over different stages of
-ontogeny difficult.  However, considering fine temporal scales has been show to
-provide insight across developmental stages that may otherwise be missed
-[@Turner_2017] <!-- It would be better to cite the more recent one if it gets released in time. -->  
+network metrics that could help simplify statistical analyses and deal with the
+frequent correlations between social network metrics in different types of
+networks [@Castles_2014]. 
 
 
 
