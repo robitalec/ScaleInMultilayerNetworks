@@ -390,17 +390,16 @@ TODO: somewhere ref:ml
 
 
 <!-- intro -->
-<!-- QW: could focus on just talking about the importance of scale for behavioural and spatial ecology. Why is it important and what are the more broadly applicable ideas that lead us to this paper -->
-Animal social systems are characterized and influenced by three types of scale. 
-Social scale defines the type and measurement of social relationships and directly
-impacts observed sociality between individuals. Spatial scale, in this study,
-reflects the resolution of the habitat within which social interactions occur. 
-Finally, temporal scale is related to both study design and network robustness
-as well as seasonal differences in resources, patch dynamics or
-landscape connectivity. By parsing social systems into discrete contexts 
-using multilayer networks, we highlight the influence of social, spatial and temporal scales
-on animal social systems, demonstrating the importance of considering biologically
-relevant and robust observational scales. 
+Animal social systems are characterized and influenced by three types of scale.
+Social scale defines the type and measurement of social relationships and
+directly impacts observed sociality between individuals. Spatial scale, in this
+study, reflects the resolution of the habitat within which social interactions
+occur. Finally, temporal scale is related to both study design and network
+robustness as well as seasonal differences in resources, patch dynamics or
+landscape connectivity. By parsing social systems into discrete contexts using
+multilayer networks, we highlight the influence of social, spatial and temporal
+scales on animal social systems, demonstrating the importance of considering
+biologically relevant and robust observational scales.
 <!-- intro -->
 
 
