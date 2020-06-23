@@ -69,10 +69,13 @@ and temporal scales (e.g. Piza-Roca et al. 2018). Although the social
 environment clearly scales spatially and temporally, it remains unclear
 whether coarser scales of sociality, including social association and
 home range overlap, vary predictably with social interaction (Castles et
-al. 2014; Farine 2015). We therefore define social scale as the type of
-social relationship observed that can be explicitly defined and measured
-(Farine 2015) and suggest the potential for adaptive variance in social
-relationships is also scale-dependent.
+al. 2014; Farine 2015).
+<!-- careful with this definition of social scale ..
+social scale is the type of and specification/detail/definition of-->We
+therefore define social scale as the type of social relationship
+observed that can be explicitly defined and measured (Farine 2015) and
+suggest the potential for adaptive variance in social relationships is
+also scale-dependent.
 <!--QW: also need to fix up this last sentence- I added the 'adaptive variance part 
 under the expectation that there is some scale at which variance is greatest, and presumably
 it is this scale that has the greatest effect on fitness or other traits-->
@@ -334,14 +337,14 @@ foraging habitat, a rare habitat, and corresponding low connectivity of
 individuals in these habitats at higher resolution (Figure
 <a href="#fig:lcres">2</a>). Edge overlap were relatively consistent
 across land cover resolutions for forest and open layers (Figure
-<a href="#fig:lcres">2</a> D, E). Edge overlap decreased sharply between
-30 m and 600 m in foraging layers, afterwards remaining stable to 1000 m
+<a href="#fig:lcres">2</a> D). Edge overlap decreased sharply between 30
+m and 600 m in foraging layers, afterwards remaining stable to 1000 m
 (Figure <a href="#fig:lcres">2</a> D). Graph strength was more variable
 within foraging habitat layers across land cover resolutions than open
-and forest habitat layers (Figure <a href="#fig:lcres">2</a> D). The
+and forest habitat layers (Figure <a href="#fig:lcres">2</a> E). The
 proportion of relocations in forest and open habitats increased with
 increasing spatial resolution, while decreasing in foraging habitat
-(Supplementary 1 Figure 1). Overall, these results indicate the
+(14.5% at 30 m - \<2% at 1000 m). Overall, these results indicate the
 importance of matching land cover resolution to scale of selection as
 well as ensuring the land cover product used has a resolution fine
 enough to detect landscape features and habitats relevant to study
@@ -351,18 +354,19 @@ species, such as important patchy and rare habitats.
 
 The ordinal multilayer network indicated within-year time windows where
 social network metrics increased. Edge overlap was higher in time
-windows 1, 6-11 and 15-20 (between 2017-04-21 and 2017-05-26, 2017-10-15
-and 2018-05-13 and 2018-08-28 and 2019-03-27) than in time windows 2-5
-and 12-15 (between2017-05-27 and 2017-10-14 and 2018-05-14 and
-2018-10-01) (Figure <a href="#fig:temp">3</a> A). Time windows of higher
-edge overlap, between approximately October and May, had correspondingly
-higher graph strength compared to time windows of lower edge overlap,
-between approximately May and October (Figure <a href="#fig:temp">3</a>
-C). Graph strength peaked across the time series between 2018-01-29 and
-2018-04-08. These results suggest that ordinal multilayer networks can
-effectively capture discrete time windows of aggregation and
-dissaggregation related to resource availability, and highlight the
-importance of carefully selecting the temporal scale of analysis.
+windows 1, 6-11 and 15-20 (between 2017-04-21 and 2017-05-26,  
+2017-10-15 and 2018-05-13 and 2018-08-28 and 2019-03-27) than in time
+windows 2-5 and 12-15 (between 2017-05-27 and 2017-10-14 and 2018-05-14
+and 2018-10-01) (Figure <a href="#fig:temp">3</a> A). Time windows of
+higher edge overlap, between approximately October and June, had
+correspondingly higher graph strength compared to time windows of lower
+edge overlap, between approximately June and October (Figure
+<a href="#fig:temp">3</a> C). Graph strength peaked across the time
+series between 2018-01-29 and 2018-04-08. These results suggest that
+ordinal multilayer networks can effectively capture discrete time
+windows of aggregation and dissaggregation related to resource
+availability, and highlight the importance of carefully selecting the
+temporal scale of analysis.
 
 As the number of observations used to generate multilayer networks
 increased, individuals became more connected and variance in metrics
@@ -388,18 +392,18 @@ sufficiently describing social dynamics across contexts.
 cover resolution (5, 25, 50, 75, 100, 250 and 500 m), multilayer
 networks were constructed of caribou social associations (n = 21
 females) on Fogo Island, Newfoundland between 2017-04-21 and 2019-03-27
-across three habitat classes (foraging, forest, and open). A) Edge
-overlap of habitat layers across spatial resolutions. Open and forest
-layers show consistent edge overlap with increasing spatial resolution
-while foraging shows a sharp decline in edge overlap between 30 m and
-600 m. Above 600 m, the foraging layers are stable. B) Graph strength
-(mean of individuals in bold) within habitat layers across spatial
-resolution. Foraging layers showed high variation in graph strength with
-many individuals dropping to 0 after 500 m and others increasing with
-spatial resolution. Open layers and forest layers were relatively stable
-across spatial resolutions, with higher mean graph strength in open
-compared to forest. C, D, E) Three land cover rasters: the original
-resolution (30 m) and two aggregated rasters (500 m and 1000 m).
+across three habitat classes (foraging, forest, and open). A, B, C)
+Three land cover rasters: the original resolution (30 m) and two
+aggregated rasters (500 m and 1000 m). D) Edge overlap of habitat layers
+across spatial resolutions. Open and forest layers show consistent edge
+overlap with increasing spatial resolution while foraging shows a sharp
+decline in edge overlap between 30 m and 600 m. Above 600 m, the
+foraging layers are stable. E) Graph strength (mean of individuals in
+bold) within habitat layers across spatial resolution. Foraging layers
+showed high variation in graph strength with many individuals dropping
+to 0 after 500 m and others increasing with spatial resolution. Open
+layers and forest layers were relatively stable across spatial
+resolutions, with higher mean graph strength in open compared to forest.
 
 <!-- Figure: metrics by number of observations -->
 
@@ -407,71 +411,69 @@ resolution (30 m) and two aggregated rasters (500 m and 1000 m).
 
 # Discussion
 
-<!-- 1)
-First, to what degree does the social scale of relationships, spatial
-scale of landscapes, and temporal scale of analysis influence our ability to
-interpret complex social systems? 
+<!-- 
+outline
+
+1. TODO intro
+
+2. social scale. our results. possible extensions with HMM. observational of dif behaviours
+
+3. habitat+social, implicit -> explicit, our results. 
+
+4. movement, 1 sent biolog
+
+5. seasonality, time windows
+
+6. number obs
+
+
+TODO: somewhere ref:ml
+
+
+7. from conclusions
+
+box1: fitness
+box2: extending qs
 -->
 
-<!-- 2)
-Second, can variation in the social, spatial,
-and temporal scale improve predictions associated with biological differences in
-seasonal resource availability and social association? 
+<!-- intro -->
 
-+
-We conclude with
-perspectives for further development and application of scale in multilayer
-networks with respect to phenotypes and individual fitness,
-movement ecology and collective movement, and habitat selection
-and space use.
--->
+<!-- QW: could focus on just talking about the importance of scale for behavioural and spatial ecology. Why is it important and what are the more broadly applicable ideas that lead us to this paper -->
 
-<!-- TODO: somewhere ref:ml -->
+Complex animal social systems are influenced by biological and
+observation scales. By parsing social systems into contexts using
+multilayer networks, we observed differences across social, spatial and
+temporal scales. Social scale Spatial and temporal contexts including
+habitats, discrete patches and fragmented landscapes, as well as across
+seasonal differences in resource availability, or periods of migration,
+aggregation and disaggregation (Kivela et al. 2014; Pilosof et al. 2017;
+Porter 2018). Sociality exists across scales characterized by different
+types of behaviours as well as spatial and temporal thresholds defining
+these. Our results highlight the influence of social, spatial and
+temporal scales on multilayer animal social networks, showing a
+requirement to consider biologically relevant scales when selecting
+observational scales for a given study. <!-- intro -->
 
-Our results highlight the influence of social, spatial and temporal
-scale on multilayer networks. For social scale, we found individuals
-became more connected with increasing social distance threshold.
-Increasing land cover resolution lead to a decrease in availability of
-patchy and rare habitats and,
-<!--QW: not sure I'd mention 'rare' since there are only 3 habitat types. 
-Could you just say 'less common' or even just 'patchy'?-->
-correspondingly, lower connectivity of individuals in these habitats.
-Temporal windows highlighted clear periods of increased sociality among
-individuals. Finally, increasing number of observations led to a general
-stabilization in network metrics. As such, scale is inherently tied to
-the generation of multilayer networks and metrics evaluating them, as
-well as the individual layers that make them up.
-<!--QW: I will pre-empt Eric and say I think this paragraph could maybe not mention the results at all. 
-You could focus on just talking about the importance of scale for behavioural and spatial ecology.
-Why is it important and what are the more broadly applicable ideas that lead us to this paper? 
-Maybe keep this little summary paragraph for now - I think likely we could integrate what I describe 
-above with what you already have-->
+<!-- social scale -->
 
-Monolayer network approaches have been increasingly used to link social
-network position with individual fitness, including in primates (Brent,
-Ruiz-Lambides and Platt 2017; Thompson 2019), dolphins (Stanton, Gibson
-and Mann 2011; Stanton and Mann 2012), and birds (McDonald 2007; Royle
-et al. 2012). Social scale has emerged as an important variable for
-understanding fitness consequences in the context of social network
-positions
-<!-- TODO JWT check-- JWT: these are right, and we could potentially replace the holekamp paper with our recent JAE one if it gets released in time -->
-(Holekamp et al. 2011; Berger et al. 2015; Almeling et al. 2016; Brent,
-Ruiz-Lambides and Platt 2017). Defining the social scale to generate
-networks is an essential consideration for social network analysis
-<!-- with direct impacts on
-outcomes blah-->(Castles et al. 2014; Carter, Lee and Marshall 2015;
-Farine 2015). Proximity-based social networks generated using GPS
-location data require using a social scale, specifically a social
-distance threshold, to define social associations. We found increasing
-individual graph strength across three habitat layers with increasing
-social distance threshold (Figure <a href="#fig:socres">4</a>).
-<!-- This means blah blah for different types of interactions.--> In
-addition, habitat layers differed in their response to social distance
-threshold, with open and foraging with a larger increase in graph
-strength and greater variation across individuals.
-<!-- What could this mean biologically? --> These results emphasize that
-multilayer network metrics are directly influenced by social scale, in
-this case the spatial distance threshold.
+Social scale is essential consideration for social network analysis
+(Castles et al. 2014; Carter, Lee and Marshall 2015; Farine 2015).
+Proximity-based social networks generated using GPS location data use a
+social distance threshold to define social associations. Increasing the
+social distance threshold resulted in an increase in graph strength
+across all three habitat layers (Figure <a href="#fig:socres">4</a>).
+<!-- This means blah blah for different types of
+interactions.--> However, habitat layers differed in their response to
+increasing social distance threshold, with open and foraging with a
+larger increase in graph strength and greater variation across
+individuals. <!-- What could this mean biologically? --> These results
+emphasize that multilayer network metrics are directly influenced by
+social scale. In extension, caribou relocations could be classified into
+behavioural states using hidden Markov models to explore the influence
+of behavioural states on social scale in a multilayer network (see Jones
+et al. 2020). <!-- social scale -->
+
+<!-- habitat+social -->
 
 Social structure and habitat selection are intimately related:
 individuals must share space to interact and the distribution of
@@ -499,118 +501,109 @@ explored by the distribution and phenology of resources and use of
 social information. For example, cougar (*Puma concolor*) home ranges
 overlapped more in regions with high hunting opportunity, a proxy for
 resource richness (Elbroch et al. 2015). Caribou social network graph
-strength differed between seasons, where graph strength was stronger in
-winter and contrastingly low in summer when resource availability are
-more homogeneous (Peignier et al. 2019). Bison (*Bison bison*) showed
-stronger habitat selection in larger groups, and avoidance of predation
-risk was a main factor contributing to their habitat selection (Fortin
-et al. 2009). These examples, comparing sociality and habitat selection
-across temporal or spatial contexts, are implicitly multilayer analyses.
+strength was higher in winter and contrastingly lower in summer when
+resource availability is more homogeneous (Peignier et al. 2019). Bison
+(*Bison bison*) showed stronger habitat selection in larger groups, and
+avoidance of predation risk was a main factor contributing to their
+habitat selection (Fortin et al. 2009). These examples, comparing
+sociality and habitat selection across spatial and temporal contexts,
+are implicitly multilayer analyses.
 
 Multilayer networks represent a novel framework for explicitly testing
 the influence of habitat selection on sociality across scales. Animal
 social systems can be parsed by spatial contexts, for example as defined
-by habitat types as in Figure <a href="#fig:lcres">2</a>. Given that
-habitat data are available across a wide range of spatial scales, we
-evaluated the influence of habitat spatial resolution on multilayer
-network metrics. The results indicate varied influence of increasing
-spatial resolution depending on the habitat layer. As spatial resolution
-increased, edge overlap decreased in foraging while remaining stable in
-open and forest habitats (Figure <a href="#fig:socres">4</a> D).
-Foraging is a rare (13% of the landscape) and patchy habitat on Fogo
-Island, as is indicated by a decrease in the proportion of relocations
-in this habitat type with increasing spatial resolution (Supplementary 1
-Figure 1). Similar to increasing social distance threshold, the
-influence of increasing spatial resolution on graph strength was notably
-different between habitat layers. Forest layers showed little change in
-graph strength with increasing spatial resolution and variation between
-individuals. Foraging and open layers had greater individual variation
-in graph strength, while foraging was the only layer to show large
-responses in graph strength to increasing spatial resolution (Figure
-<a href="#fig:socres">4</a> E). As such, multilayer network measures
-related to habitat are explicitly dependent on spatial scale. Edge
-overlap can indicate if some associations between individuals are
-dependent on the habitat-context (Battiston, Nicosia and Latora 2014).
-If the spatial resolution of the habitat data are insufficient to
-capture rare habitats, context-specific relationships between
-individuals may not be captured by multilayer networks.
+by habitat type as in Figure <a href="#fig:lcres">2</a>. Since habitat
+data are available across a range of spatial scales, we evaluated the
+influence of increasing spatial resolution on multilayer network
+metrics. As spatial resolution increased, edge overlap remained stable
+in open and forest layers but decreased in foraging layers (Figure
+<a href="#fig:socres">4</a> D). Graph strength did not change in forest
+layers with increasing spatial resolution (Figure
+<a href="#fig:socres">4</a> E). Foraging and open layer had greater
+individual variation in graph strength, and foraging layers showed an
+increase in graph strength with increasing spatial resolution (Figure
+<a href="#fig:socres">4</a> E). Foraging habitat is rare (14.5% of the
+landscape) on Fogo Island and the proportion of relocations in foraging
+habitat decreased as spatial resolution increased (14.5% at 30 m - \<2%
+at 1000 m). Despite this, at 30 m resolution the foraging layer had
+similar edge overlap as the open layer indicating its importance in
+caribou sociality. As such, multilayer network measures related to
+habitat are explicitly dependent on spatial scale. If the spatial
+resolution of the habitat data are insufficient to capture rare
+habitats, for example, context-specific relationships between
+individuals may not be captured. <!-- habitat+social -->
+
+<!-- mov -->
 
 Social processes, movement decisions, and space use are inextricably
 linked and multilayer networks represent a potential analytical
 framework for linking these processes (Mourier, Lédée and Jacoby 2019).
-Movement as a collective group can reduce per capita predation risk via
+Collective movement can reduce per capita predation risk via
 detection-dilution trade-offs and improve information transfer about the
-quality or location of resources to other group members (Jolles, King
-and Killen 2019). Given the existing framework for constructing
-multilayer networks from behavioural layers (e.g. Smith-Aguilar et al.
-2019), monolayer networks that explicitly quantify movement parameters
-could be integrated. For example, edges could represent measures of
-dyadic or collective movement based on dynamic interaction metrics (Long
-et al. 2014). Integrating movement layers with habitat-specific social
-association layers could further illuminate the role of movement as a
-driver of the social and spatial environments an individual experiences
-(Webber and Vander Wal 2018). We generated multilayer networks based on
-habitat-specific layers of social association. Coordinated movement of
-dyads, or groups, could vary based on habitat, and the approach we
-outline could be used to explore mechanisms linking the social and
-spatial environments.<!--  <- long sentence with two coulds --> For
-example, social processes may be an emergent property of the landscape
-because animals aggregate at resources, such as waterholes
-(Chamaill’e-Jammes et al. 2008). Movement to, from, or within habitat
-patches or territories can also contribute to the formation of the
-social environment (Spiegel et al. 2016). For example, in sleepy lizards
-(*Tiliqua rugosa*) males interacted primarily at home range edges,
-presumably driving territorial behaviour (Spiegel et al. 2018).
-Incorporating movement ecology within a multilayer network framework is
-a logical next step for a burgeoning field. In particular, when
-association networks are habitat-specific, we suggest the integration of
-movement and space use in multilayer networks provides novel insights
-into the effects of habitat configuration on the formation of the social
-environment (Webber and Vander Wal 2018; He, Maldonado-Chaparro and
-Farine 2019).
+quality or location of resources (Jolles, King and Killen 2019).
+Multilayer networks could be constructed from layers defined by movement
+parameters, given the existing framework using behavioural layers
+(e.g. Smith-Aguilar et al. 2019). For example, edges could represent
+measures of collective movement based on dynamic interaction metrics
+(Long et al. 2014). We generated multilayer networks based on
+habitat-specific layers of social association. Integrating
+habitat-specific movement layers could further illuminate the role of
+movement as a driver of the social and spatial environments an
+individual experiences (Webber and Vander Wal 2018). For example, social
+processes may be an emergent property of the landscape because animals
+aggregate at resources, such as waterholes (Chamaill’e-Jammes et al.
+2008). Movement to, from, or within habitat patches or territories can
+also contribute to the formation of the social environment (Spiegel et
+al. 2016). For example, in sleepy lizards (*Tiliqua rugosa*) males
+interacted primarily at home range edges, presumably driving territorial
+behaviour (Spiegel et al. 2018). Incorporating movement ecology within a
+multilayer network framework is a logical next step for a burgeoning
+field. Importantly, the technological advancements in biologging and
+wildlife tracking technology
+(<span class="citeproc-not-found" data-reference-id="Border_2020">**???**</span>)
+have enabled this unique opportunity to integrate movement and habitat
+in multilayer networks to answer complex questions about animal
+socioecology. <!-- mov -->
 
-Importantly, the key to incorporating movement in multilayer networks
-across scales is the technological advancements available to overcome
-previous limitations (Hughey et al. 2018). Biologging and wildlife
-tracking technology has advanced to the point where relocations can be
-programmed to occur as frequently as each second (Börger 2016), a
-practice which has been applied to questions of collective movement (e.g
-Strandburg-Peshkin et al. 2015). Meanwhile, remote sensing technology,
-including unmanned aerial vehicles and satellites, can be used to track
-the fine-scale movements of groups over large distances and time scales
-(Torney et al. 2018). Using technology to infer behaviour has therefore
-become standard operating procedure for many species in many systems.
-Our ability to collect and process remotely sensed data and infer social
-processes based on animal movement provides an opportunity to use
-multilayer social network analysis to answer complex questions about
-animal socioecology.
+<!-- temp -->
 
-The effect of seasonality of resources on sociality can be directly
-measured by differences across discrete time windows. Using an ordinal
-multilayer network consisting of 20 discrete time windows throughout the
+Changes in network metrics through time can explain the influence of
+seasonality of resources on animal sociality. Using an ordinal
+multilayer network composed of 20 discrete time windows throughout the
 study period, we observed periods of increased sociality in caribou on
 Fogo Island (Figure <a href="#fig:temp">3</a>). Edge overlap was higher
 between approximately October and May (time windows 1, 6-11, 15-20)
 compared to between approximately May and October (time windows 2-5,
 12-15) (Figure <a href="#fig:temp">3</a> A). These periods of high edge
-overlap correspond to seasons of low resource availability
+overlap correspond to seasons of heterogeneous resource availability
 \[Peigner\_2019\]. Similarly, individual graph strength was also highest
 in these periods (Figure <a href="#fig:temp">3</a> B). By explicitly
 considering the temporal context of social interactions in separate
 layers, multilayer networks provide a detailed and dynamic perspective
-at animal social networks.
+of animal social networks.
+
+TODO: add t bonnell TODO: add autocorrelation
+
+<!-- workworkworkworkworwkrowrk -->
 
 Selection of appropriate time windows is essential for capturing
-sociality in specific life stages of interest. Social phenotypes can
-change over ontogeny in ways that can affect fitness (Berger et al.
-2015; Brent, Ruiz-Lambides and Platt 2017). Further complicating the
-issue, individuals can vary in their rate of development (Tarka et al.
-2018). This variation can make defining the appropriate temporal scale
-for testing the fitness implications of an individual’s social phenotype
-over different stages of ontogeny difficult. However, considering fine
-temporal scales has been show to provide insight across developmental
-stages that may otherwise be missed (Turner, Bills and Holekamp 2017)
+sociality in specific life stages of interest.
+
+<!-- fitness -->
+
+Social phenotypes can change over ontogeny in ways that can affect
+fitness (Berger et al. 2015; Brent, Ruiz-Lambides and Platt 2017).
+Further complicating the issue, individuals can vary in their rate of
+development (Tarka et al. 2018). This variation can make defining the
+appropriate temporal scale for testing the fitness implications of an
+individual’s social phenotype over different stages of ontogeny
+difficult.
+
+However, considering fine temporal scales has been show to provide
+insight across developmental stages that may otherwise be missed
+(Turner, Bills and Holekamp 2017)
 <!-- It would be better to cite the more recent one if it gets released in time. -->
+
 Furthermore, given the non-independent nature of social interactions and
 associations, especially over time, it can be challenging to test
 hypotheses about social dynamics with a suitable null control (Farine
@@ -618,7 +611,9 @@ hypotheses about social dynamics with a suitable null control (Farine
 networks, ordinal layers of discrete time windows provide a way to make
 appropriate null models to test questions about the dynamics of an
 individual’s social network position over multiple aggregated time
-periods.
+periods. <!-- temp -->
+
+<!-- nobs -->
 
 Finally, it is crucial to consider sufficient data to construct robust
 networks when selecting time windows and study periods. Time windows
@@ -633,7 +628,24 @@ approximately 200 observations, the rate of change for all metrics
 decreased and and graph strength remained relatively static, while edge
 overlap and multidegree continued to increase slowly. As more
 observations were added, more and rarer relationships were recorded
-revealing the value of this form of sensitivity analysis.
+revealing the value of this form of sensitivity analysis. <!-- temp -->
+
+<!-- drop 
+Our results highlight the influence of social, spatial and temporal scale on
+multilayer networks. For social scale, we found individuals became more
+connected with increasing social distance threshold. Increasing land cover
+resolution lead to a decrease in availability of patchy and rare habitats and, 
+
+QW: not sure I'd mention 'rare' since there are only 3 habitat types. 
+Could you just say 'less common' or even just 'patchy'?
+
+correspondingly, lower connectivity of individuals in these habitats. Temporal
+windows highlighted clear periods of increased sociality among individuals.
+Finally, increasing number of observations led to a general stabilization in network
+metrics. As such, scale is inherently tied to the generation  of multilayer
+networks and metrics evaluating them, as well as the individual layers that make
+them up.
+-->
 
 <!--
 Multilayer networks can be built with different types of interactions
@@ -666,31 +678,34 @@ devices like microphone arrays [@Snijders_2017].
 
 -->
 
-# Conclusion
+<!-- (this was the) conclusion -->
 
 Multilayer networks remain a nascent but powerful tool in animal
 behavioural ecology. We demonstrate the potential novel analyses that
 vary social, spatial, and temporal scale within a multilayer framework.
-We show that (1) multilayer social networks can be scale-dependent, and
-(2) the use of multilayer networks could be useful for identifying
-habitat or season-specific social processes. Our analyses of social,
-spatial, and temporal scales in a multilayer network framework highlight
-the potential to identify scales at which different properties of layers
-within a multilayer network show the most variability. Furthermore, we
-discuss the potential integration of individual phenotypes and fitness,
-collective movement, and habitat selection for future analyses
-considering spatial ecology using multilayer networks.
+We show that (1) multilayer social networks are scale-dependent, and (2)
+the use of multilayer networks is useful for identifying habitat or
+season-specific social processes. Our analyses of social, spatial, and
+temporal scales in a multilayer network framework highlight the
+potential to identify scales at which different properties of layers
+within a multilayer network show the most variability.
+
+Furthermore, we discuss the potential integration of individual
+phenotypes and fitness, collective movement, and habitat selection for
+future analyses considering spatial ecology using multilayer networks.
 
 Recognition of scale as a fundamental concept in ecology (Levin 1992)
 has lead to an increased attention to the scale at which ecological
-processes are observed (Schneider 2001; Chave 2013). In addition, recent
-technological advances have lead to increased data complexity and
-resolution. Remotely sensed imagery collected by modern satellites
-provide, for example, 10 m spatial resolution optical imagery at a
-temporal revisit period of five days at the equator (Drusch et al.
+processes are observed (Schneider 2001; Chave 2013). <!-- rm tech-->In
+addition, recent technological advances have lead to increased data
+complexity and resolution. Remotely sensed imagery collected by modern
+satellites provide, for example, 10 m spatial resolution optical imagery
+at a temporal revisit period of five days at the equator (Drusch et al.
 2012). Similarly, animal tracking devices have become smaller allowing
 their deployement on a wider variety of organisms (Wikelski et al. 2007)
-and at a higher temporal resolution (Börger 2016). Given this increased
+and at a higher temporal resolution (Börger 2016).
+<!-- rm tech-->Given<!-- the increased.. 
+complex + higher resolution + remotely sensed--> this increased
 availability of complex data, it is important to consider using a broad
 continuum of scales to fully capture ecological processes, carefully
 select and combine sources of data with different temporal and spatial
@@ -713,13 +728,32 @@ across the landscape, and when taken into account with multiple
 individuals<!-- edit--> can indicate association patterns. Thus, a layer
 incorporating relocation data could be a great boon linking spatial and
 social layer in multilayer networks.
+<!-- JWT: It think we need an ending thought or punch or something, not end it on a question. -->
+<!-- (this was the) conclusion -->
+
+# Box 1
+
+<!-- TODO: retrieve from prev versions -->
+
+Monolayer network approaches have been increasingly used to link social
+network position with individual fitness, including in primates (Brent,
+Ruiz-Lambides and Platt 2017; Thompson 2019), dolphins (Stanton, Gibson
+and Mann 2011; Stanton and Mann 2012), and birds (McDonald 2007; Royle
+et al. 2012). Social scale has emerged as an important variable for
+understanding fitness consequences in the context of social network
+positions
+<!-- TODO JWT check-- JWT: these are right, and we could potentially replace the holekamp paper with our recent JAE one if it gets released in time -->
+(Holekamp et al. 2011; Berger et al. 2015; Almeling et al. 2016; Brent,
+Ruiz-Lambides and Platt 2017).
+
+# Box 2
 
 Silk et al. (2018) summarized some key multilayer questions in animal
 behaviour research. While these questions are important for linking
 animal behaviour and multilayer networks, we summarize our perspectives
 on the future of multilayer networks with an additional set of questions
-posed through the lens of spatial ecology that are relevant to the
-promise and problem of scale in multilayer networks:
+posed through the lens of spatial ecology that are relevant to scale in
+multilayer networks:
 
 1.  How do social phenotypes vary across social, spatial, and temporal
     scales and at which scale might these influence fitness? Are some
@@ -734,8 +768,6 @@ promise and problem of scale in multilayer networks:
     environment? What is the role of memory, and by extension social and
     spatial cognition, as animals navigate their environment and make
     decisions about where to move next?
-
-<!-- JWT: It think we need an ending thought or punch or something, not end it on a question. -->
 
 # Acknowledgements
 
@@ -1161,15 +1193,6 @@ Ecology* 2011;**21**:613–32.
 
 </div>
 
-<div id="ref-Hughey_2018">
-
-Hughey LF, Hein AM, Strandburg-Peshkin A, Jensen FH. Challenges and
-solutions for studying collective animal behaviour in the wild.
-*Philosophical Transactions of the Royal Society B: Biological Sciences*
-2018;**373**:20170005.
-
-</div>
-
 <div id="ref-Integrated_2013">
 
 Integrated Informatics Inc. *Sustainable Development & Strategic Science
@@ -1183,6 +1206,15 @@ Development; Strategic Science, Government of Newfoundland; Labrador
 Jolles JW, King AJ, Killen SS. The role of individual heterogeneity in
 collective animal behaviour. *Trends in Ecology & Evolution* 2019, DOI:
 [10.1016/j.tree.2019.11.001](https://doi.org/10.1016/j.tree.2019.11.001).
+
+</div>
+
+<div id="ref-Jones_2020">
+
+Jones TB, Green JA, Patrick SC, Evans JC, Wells MR, Rodríguez-Malagón
+MA, Arnould JPY. Consistent sociality but flexible social associations
+across temporal and spatial foraging contexts in a colonial breeder.
+*Ecology Letters* 2020;**23**:1085–96.
 
 </div>
 
@@ -1416,14 +1448,6 @@ bottlenose dolphins. *PLoS ONE* 2012;**7**:e47508.
 
 </div>
 
-<div id="ref-Strandburg_Peshkin_2015">
-
-Strandburg-Peshkin A, Farine DR, Couzin ID, Crofoot MC. Shared
-decision-making drives collective movement in wild baboons. *Science*
-2015;**348**:1358–61.
-
-</div>
-
 <div id="ref-Sugihara_1989">
 
 Sugihara G, Schoenly K, Trombla A. Scale invariance in food web
@@ -1444,15 +1468,6 @@ meta-analysis. *Behavioral Ecology and Sociobiology* 2018;**72**, DOI:
 
 Thompson NA. Understanding the links between social ties and fitness
 over the life cycle in primates. *Behaviour* 2019;**156**:859–908.
-
-</div>
-
-<div id="ref-Torney_2018">
-
-Torney CJ, Lamont M, Debell L, Angohiatok RJ, Leclerc L-M, Berdahl AM.
-Inferring the rules of social interaction in migrating caribou.
-*Philosophical Transactions of the Royal Society B: Biological Sciences*
-2018;**373**:20170385.
 
 </div>
 
