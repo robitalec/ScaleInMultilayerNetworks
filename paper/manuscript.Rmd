@@ -550,15 +550,15 @@ and spatial scales, and establish a clear link between scales of observation and
 meaningful biology.
 
 Multilayer networks remain a nascent but powerful tool in animal behavioural
-ecology. We demonstrate the novel analyses in varying social, spatial,
-and temporal scale within a multilayer framework. We show that (1) multilayer
-social networks are scale-dependent, and (2) the use of multilayer networks is
-useful for identifying habitat or season-specific social processes. Our analysis
-of caribou multilayer networks incorporating high resolution GPS telemetry data
-and spatial land cover data is grounded in the context of observed animal social
-networks, as the scales we chose to explore, e.g., number of observations and
-sociality across space and time, are ones that have also traditionally been done
-in ethology.
+ecology. We demonstrate the novel analyses in varying social, spatial, and
+temporal scale within a multilayer framework. We show that (1) multilayer social
+networks are scale-dependent, and (2) the use of multilayer networks is useful
+for identifying habitat or season-specific social processes. Our multilayer
+network analysis of caribou sociality incorporating high resolution GPS
+telemetry data and spatial land cover data is grounded in the context of
+observed animal behaviour as the scales we chose to explore, e.g., number of
+observations and sociality across space and time, are ones that have also
+traditionally been done in ethology.
 <!-- TODO: round it out -->
 
 <!-- conclusion -->
