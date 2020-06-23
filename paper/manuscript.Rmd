@@ -547,55 +547,25 @@ networks provide a detailed and dynamic perspective of animal social networks.
 In addition, this could be extended using time-aggregated networks and a moving-window
 approach to inform the temporal scale including time window size and sampling effort
 [@Farine_2017; @Bonnell_2020].
-
-
-
-
-Due to the autocorrelated nature of biologging data that we recommend users ensure social association data are non-randomly distributed [@Farine_2017b].
-
-
-<!-- workworkworkworkworwkrowrk -->
-Selection of appropriate time windows is essential for capturing sociality in specific
-life stages of interest. 
-
-<!-- fitness -->
-Social phenotypes can change over ontogeny in ways that
-can affect fitness [@Berger_2015; @Brent_2017]. 
-Further complicating the issue,
-individuals can vary in their rate of development [@Tarka_2018]. This variation
-can make defining the appropriate temporal scale for testing the fitness
-implications of an individual’s social phenotype over different stages of
-ontogeny difficult. 
-
-However, considering fine temporal scales has been show to
-provide insight across developmental stages that may otherwise be missed
-[@Turner_2017] <!-- It would be better to cite the more recent one if it gets released in time. --> 
-
-Furthermore, given the non-independent nature of social
-interactions and associations, especially over time, it can be challenging to
-test hypotheses about social dynamics with a suitable null control
-[@Farine_2017; @Proskurnikov_2017]. Using the framework of multilayer networks,
-ordinal layers of discrete time windows provide a way to make appropriate null
-models to test questions about the dynamics of an individual’s social network
-position over multiple aggregated time periods.
 <!-- temp -->
 
 
 <!-- nobs -->
-Finally, it is crucial to consider sufficient data to construct robust networks
-when selecting time windows and study periods. Time windows should be long
-enough for each layer to have enough data for robust networks [@Farine_2017]. To
+It is crucial to include sufficient data within sampling periods or
+time windows to construct robust networks [@Farine_2017; Proskurnikov_2017]. To
 test the influence of data quantity on multilayer networks, we used a subset of
-observations to generate multilayer networks. All network metrics across all
-three habitat layers appeared to stabilize with increasing number of
+observations to generate multilayer networks. Variance decreased across
+all network metrics in all three habitat layers with increasing number of
 observations. Individual graph strength showed high variability at low number of
 observations, while edge overlap and multidegree increased sharply. After
 approximately 200 observations, the rate of change for all metrics decreased and
 and graph strength remained relatively static, while edge overlap and
-multidegree continued to increase slowly. As more observations were added, more
-and rarer relationships were recorded revealing the value of this form of
-sensitivity analysis.
-<!-- temp -->
+multidegree continued to increase slowly. As more observations were added, rarer 
+relationships were recorded revealing the value of this form of
+sensitivity analysis. Finally, due to the autocorrelated nature of biologging 
+data it is essential to ensure social association data area non-randomly
+distributed [@Farine_2017b].
+<!-- nobs -->
 
 
 <!-- drop 
