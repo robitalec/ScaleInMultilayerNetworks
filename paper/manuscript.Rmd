@@ -217,8 +217,9 @@ different layers. To measure the role of individuals within layers, we
 calculated degree centrality and graph strength. Degree centrality is the number
 of direct connections an individual has to other individuals in a network layer.
 Graph strength is the degree weighted by the strength of association, in this
-case SRI, in each layer. Extending degree centrality to multiple layers, we calculated multidegree,
-the sum of degree centrality of individuals across layers  [@Berlingerio_2012;
+case SRI, in each layer. We calculated multidegree,
+the sum of degree centrality of individuals across layers, an extension
+of degree centrality to multiple layers [@Berlingerio_2012;
 @Kivela_2014]. Finally, we measured the similarity of layers by calculating edge
 overlap. Edge overlap is defined as the proportion of edges present in each
 network layer out of all observed edges  [@Battiston_2014]. Network metrics were
