@@ -476,14 +476,14 @@ Figure \@ref(fig:lcres). Since habitat data are available across a range of
 spatial scales, we evaluated the influence of increasing spatial resolution on
 multilayer network metrics. As spatial resolution increased, edge overlap
 remained stable in open and forest layers but decreased in foraging layers
-(Figure \@ref(fig:socres) D). Graph strength did not change in forest layers
-with increasing spatial resolution (Figure \@ref(fig:socres) E). Foraging and
+(Figure \@ref(fig:lcres) D). Graph strength did not change in forest layers
+with increasing spatial resolution (Figure \@ref(fig:lcres) E). Foraging and
 open layer had greater individual variation in graph strength, and foraging
 layers showed an increase in graph strength with increasing spatial resolution
-(Figure \@ref(fig:socres) E). Foraging habitat is rare (14.5% of the landscape)
+(Figure \@ref(fig:lcres) E). Foraging habitat is rare (12.8% of the landscape)
 on Fogo Island and the proportion of relocations in foraging habitat decreased
 as spatial resolution increased (14.5% at 30 m - <2% at 1000 m). Despite this,
-at 30 m resolution the foraging layer had similar edge overlap as the open layer
+the foraging layer had similar edge overlap as the open layer at 30 m resolution 
 indicating its importance in caribou sociality. As such, multilayer network
 measures related to habitat are explicitly dependent on spatial scale.  If the
 spatial resolution of the habitat data are insufficient to capture rare
@@ -525,8 +525,8 @@ network composed of 20 discrete time windows throughout the study period, we
 observed periods of increased sociality in caribou on Fogo Island. Edge overlap
 was higher during fall, winter and spring (approximately October - June) than in
 summer (approximately June - October)  (Figure \@ref(fig:temp) A). Similarly,
-individual graph strength was also highest in these periods (Figure
-\@ref(fig:temp) C). Periods of increased sociality correspond to seasons of
+individual graph strength was also higher in these periods (Figure
+\@ref(fig:temp) C). These periods of increased sociality correspond to seasons of
 heterogeneous resource availability [Peigner_2019]. By explicitly considering
 the temporal context of social interactions in separate layers, multilayer
 networks provide a detailed and dynamic perspective of animal social networks.
@@ -539,8 +539,8 @@ and sampling effort [@Farine_2017; @Bonnell_2020].
 <!-- nobs -->
 It is crucial to include sufficient data within sampling periods or time windows
 to construct robust networks [@Farine_2017; Proskurnikov_2017]. To test the
-influence of data quantity on multilayer networks, we used a subset of
-observations to generate multilayer networks. Variance decreased across all
+influence of data quantity on multilayer networks, we generate multilayer networks
+using a subset of observations. Variance decreased across all
 network metrics in all three habitat layers with increasing number of
 observations. Individual graph strength showed high variability at low number of
 observations, while edge overlap and multidegree increased sharply. After
@@ -554,8 +554,7 @@ essential to ensure social association data area non-randomly distributed
 <!-- nobs -->
 
 
-<!-- (this was the) conclusion -->
-
+<!-- conclusion -->
 Recognition of scale as a fundamental concept in ecology [@Levin_1992] has lead
 to an increased attention to the scale at which ecological processes are
 observed [@Schneider_2001; @Chave_2013]. Recent technological advances in
@@ -568,7 +567,6 @@ processes, carefully select and combine sources of data with different temporal
 and spatial scales, and establish a clear link between scales of observation and
 meaningful biology.
 
-
 Multilayer networks remain a nascent but powerful tool in animal behavioural
 ecology. We demonstrate the novel analyses in varying social, spatial,
 and temporal scale within a multilayer framework. We show that (1) multilayer
@@ -579,10 +577,9 @@ and spatial land cover data is grounded in the context of observed animal social
 networks, as the scales we chose to explore, e.g., number of observations and
 sociality across space and time, are ones that have also traditionally been done
 in ethology.
-
 <!-- TODO: round it out -->
 
-<!-- (this was the) conclusion -->
+<!-- conclusion -->
 
 
 # Box 1
