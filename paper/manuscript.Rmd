@@ -315,8 +315,8 @@ strength in forest layers (Figure \@ref(fig:socres)). Individual graph strength
 increased sharply between 5 m and 100 m in all three habitat classes followed by
 a plateau in the rate of increase after 100 m (Figure \@ref(fig:socres)). These
 results suggest the optimal social scale at which groups should be assigned is
-between ~20 - 100 m based on the rate at which graph strength stabilized. GPS
-data allows [e.g. from this study and @Peignier_2019; @Lesmerises_2018] us to
+between ~20 - 100 m based on the rate at which variance in graph strength decreased. 
+GPS data allows [e.g. from this study and @Peignier_2019; @Lesmerises_2018] us to
 confirm the use of 50 m buffer that has long been used for studies in the field
 [@Lingle_2003; @Clutton_1982]
 
