@@ -682,6 +682,18 @@ positions <!-- TODO JWT check-- JWT: these are right, and we could potentially r
 
 
 
+Selection of appropriate time windows is essential for capturing sociality in specific
+life stages of interest. Social phenotypes can change over ontogeny in ways that
+can affect fitness [@Berger_2015; @Brent_2017]. 
+Further complicating the issue,
+individuals can vary in their rate of development [@Tarka_2018]. This variation
+can make defining the appropriate temporal scale for testing the fitness
+implications of an individual’s social phenotype over different stages of
+ontogeny difficult.  However, considering fine temporal scales has been show to
+provide insight across developmental stages that may otherwise be missed
+[@Turner_2017] <!-- It would be better to cite the more recent one if it gets released in time. -->  
+
+
 
 
 # Box 2 
