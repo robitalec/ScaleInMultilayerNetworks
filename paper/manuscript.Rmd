@@ -527,28 +527,31 @@ sleepy lizards (*Tiliqua rugosa*) males interacted primarily at home range
 edges, presumably driving territorial behaviour [@Spiegel_2018]. Incorporating
 movement ecology within a multilayer network framework is a logical next step
 for a burgeoning field. Importantly, the technological advancements in
-biologging and wildlife tracking technology [@Border_2020] have provided a
+biologging and wildlife tracking technology [@Border_2020] have enabled this
 unique opportunity to integrate movement and habitat in multilayer networks to
 answer complex questions about animal socioecology.
 <!-- mov -->
 
 <!-- temp -->
-The effect of seasonality of resources on sociality can be directly measured by
-differences across discrete time windows. Using an ordinal multilayer network
-consisting of 20 discrete time windows throughout the study period, we observed
-periods of increased sociality in caribou on Fogo Island (Figure \@ref(fig:temp)). 
-Edge overlap was higher between approximately October and May
-(time windows 1, 6-11, 15-20) compared to between approximately May and October
-(time windows 2-5, 12-15) (Figure \@ref(fig:temp) A). These periods of high edge
-overlap correspond to seasons of heterogeneous resource availability [Peigner_2019].
-Similarly, individual graph strength was also highest in these periods (Figure
-\@ref(fig:temp) B). By explicitly considering the temporal context of social interactions
-in separate layers, multilayer networks provide a detailed and dynamic perspective of
-animal social networks. 
+Changes in network metrics through time can explain the influence of seasonality
+of resources on animal sociality. Using an ordinal multilayer network composed
+of 20 discrete time windows throughout the study period, we observed periods of
+increased sociality in caribou on Fogo Island. Edge overlap was higher during
+fall, winter and spring (approximately October - June) than in summer
+(approximately June - October)  (Figure \@ref(fig:temp) A). Similarly,
+individual graph strength was also highest in these periods (Figure
+\@ref(fig:temp) C). Periods of increased sociality correspond to seasons of
+heterogeneous resource availability [Peigner_2019]. By explicitly considering
+the temporal context of social interactions in separate layers, multilayer
+networks provide a detailed and dynamic perspective of animal social networks.
+In addition, this could be extended using time-aggregated networks and a moving-window
+approach to inform the temporal scale including time window size and sampling effort
+[@Farine_2017; @Bonnell_2020].
 
 
-TODO: add t bonnell
-TODO: add autocorrelation
+
+
+Due to the autocorrelated nature of biologging data that we recommend users ensure social association data are non-randomly distributed [@Farine_2017b].
 
 
 <!-- workworkworkworkworwkrowrk -->
