@@ -68,16 +68,15 @@ are directly linked to the scale at which they are observed [@Levin_1992;
 @Allen_2015]. Animals are influenced across scales, through ecological processes such as
 species-specific trophic interactions, resource availability
 [@Legendre_1993; @Chave_2013], and global climate and productivity [@Field_2009].
-<!-- JWT: I'm not sure exactly what that sentence was trying to say so my edits may not work -->
-Multiscale ecology has been integrated into species distribution modelling
-[@Elith_2009], habitat selection [@Mayor_2007], and food webs [@Sugihara_1989],
-among other processes. Meanwhile, in the context of animal behaviour, certain behaviours
+Multiscale ecology has been integrated into, for example, species distribution modelling
+[@Elith_2009], habitat selection [@Mayor_2007], and food webs [@Sugihara_1989].
+Meanwhile, in the context of animal behaviour, certain behaviours
 are scale-dependent; for example, acoustic communication in birds varies with
 spatial scales [@Luther_2009]. We posit that it is important to consider that
 animal behaviour within the social environment will be scale-dependent. 
 <!-- QW: I think this last sentence needs to be a bit stronger. Why is it important? -->
 
-Sociality exists across both temporal and spatial scales (Whitehead 2008). For
+Sociality exists across both temporal and spatial scales [@Whitehead_2008]. For
 example, grooming requires close spatial proximity between conspecifics and
 occurs over brief time periods [e.g. @Carter_2015], whereas social association
 represents shared space use by members of the same social group [Figure
@@ -85,59 +84,58 @@ represents shared space use by members of the same social group [Figure
 associations to occur individuals must share space, and thus have overlapping
 home ranges [@Vander_Wal_2013]. In the context of the social environment, home
 range overlap is an example of how animals share space over coarser spatial and
-temporal scales (e.g. Piza-Roca et al. 2018). Although the social environment
+temporal scales [e.g. @Piza_Roca_2018]. Although the social environment
 clearly scales spatially and temporally, it remains unclear whether coarser
 scales of sociality, including social association and home range overlap, vary
 predictably with social interaction [@Castles_2014;
-@Farine_2015a]. <!-- careful with this definition of social scale ..
-social scale is the type of and specification/detail/definition of-->We therefore define social scale as the type of social relationship
-observed that can be explicitly defined and measured [@Farine_2015a] and suggest the 
-potential for adaptive variance in social relationships is also scale-dependent. 
+@Farine_2015a]. We therefore define social scale as the explicit definition 
+and measurement of social relationships [@Farine_2015a]. 
+<!-- for QW:     
+
+-->
+<!-- and suggest the potential for adaptive variance in social relationships is also scale-dependent.  -->
 <!--QW: also need to fix up this last sentence- I added the 'adaptive variance part 
 under the expectation that there is some scale at which variance is greatest, and presumably
 it is this scale that has the greatest effect on fitness or other traits-->
 
-Animal social network analysis is a well-developed tool used to measure the
+Social network analysis is a well-developed tool used to measure the
 relationships of individuals and organization of social systems [@Krause_2009;
-@Wey_2008; @Croft_2011]. Social network analysis provides insight into the
+@Wey_2008; @Croft_2011]. It provides insight into the
 structure of social communities and social network properties, which can
 influence population dynamics and evolutionary processes [@Pinter_Wollman_2013;
 @Kurvers_2014]. Despite the widespread use and innovation of traditional social
 network analysis [@Webber_2019], it typically considers a single scale of
-sociality in a given network (monolayer), drastically simplifying the
+sociality in a monolayer network, drastically simplifying the
 complexity of animal social systems [@Finn_2019].
 
 
-Unlike traditional monolayer social networks, multilayer networks explicitly
+Extending traditional monolayer social networks, multilayer networks explicitly
 consider social systems across scale-dependent contexts
-[@Pilosof_2017]. Multilayer networks are made up of multiple layers, each
+[@Pilosof_2017]. Multilayer networks are composed of multiple layers, each
 representing (i) different classes of individuals, e.g. male or female, (ii)
 types of behaviours, e.g. grooming, travelling, or foraging, (iii) spatial
 areas, e.g. local or regional, (iv) or temporal windows, e.g. daily or seasonal
 [@Kivela_2014; @Porter_2018]. Multilayer networks are relatively novel to
 studies of animal behaviour [@Silk_2018; @Finn_2019], although they have been
 used to describe multidimensional human social systems, complex transportation
-networks, and neural networks [@Silk_2018]. <!-- just "scale".. edit sent -->The role of scale within multilayer
+networks, and neural networks [@Silk_2018]. Scale within multilayer
 social networks remains unexplored but provides a unique opportunity to develop
 novel understanding of variation in the social, spatial, or temporal scales associated
 with social systems.
 
-
-<!-- we examined-->Our examinations are motivated by behavioural, landscape, and spatial ecology to
-build a conceptual and analytical framework for scale-dependent multilayer
-networks, and we apply this framework to a case study of caribou (*Rangifer
-tarandus*) in Newfoundland, Canada [@Peignier_2019]. We use this case study to
+We examined scale-dependent multilayer networks motivated by behavioural, landscape, 
+and spatial ecology to and applied this framework to caribou (*Rangifer
+tarandus*) on Fogo Island, Newfoundland, Canada. We use study to
 address two principal questions associated with scale-dependent multilayer
 networks. First, to what degree does the social scale of relationships, spatial
 scale of landscapes, and temporal scale of analysis influence our ability to
 interpret complex social systems? Second, can variation in the social, spatial,
-and temporal scale improve <!-- replace pred-->predictions associated with biological differences in
-seasonal resource availability and social association? We conclude with
-perspectives for further development and application of scale in multilayer
-networks with respect to phenotypes and individual fitness,
-movement ecology and collective movement, and habitat selection
-and space use.
-<!-- JWT: This part may have to change depending on how we do the disc -->
+and temporal scale improve our understanding of the relationship between 
+social association and seasonal resource availability? We conclude with further 
+development and application of scale in multilayer
+networks with respect to habitat selection and space use, 
+movement ecology and collective movement, and phenotypes and individual fitness.
+
 
 (ref:spacetime) Space-time diagram representing variation the relative spatial and temporal extent required for different types of social and communication processes for four species, including spotted hyaena, passerine birds, sleepy lizards, and elephants. Spatial and temporal extent for social interactions, e.g. mating, grooming, or aggression, are similar for most species because physical contact between two individuals is required for many social interactions. The logical extension is that spatial and temporal extent for social interaction is hierarchically nested within the spatial and temporal extent for social association because individuals must share space to interact. By contrast, different species have potential for greater spatial and temporal extents, for example, temporal extent for vocal communication is similar for most species because most vocal calls only persist in the environment for seconds, but spatial extent for vocal communication is highly variable with elephant calls extending the great distance and passerine calls extending the shortest distance.
 
