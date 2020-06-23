@@ -579,8 +579,8 @@ but stronger and more stable social associates and grooming partners rather than
 simply more associates [@Ellis_2019].  It is a common trope that individuals
 must be associating to interact, and many studies assume that proximity is proxy
 for interacting [@Farine_2015a]. For instance, baboons must be within proximity
-of each other for grooming yet other animals use interactions that do not
-require proximity such as long-distance vocalization or olfactory signals
+of each other for grooming yet other animals interact using communication
+such as long-distance vocalization or olfactory signals 
 [@Carter_2015]. It is possible to record social interactions that do not require
 proximity using, for example, microphone arrays to construct long-distance
 communication networks [@Snijders_2017]. Our results indicate varying social
