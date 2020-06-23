@@ -613,9 +613,8 @@ scale based on the hypotheses being tested and logistical constraints.
 # Box 2 
 Silk et al. (2018) summarized some key multilayer questions in animal behaviour
 research. While these questions are important for linking animal behaviour and
-multilayer networks, we summarize our perspectives on the future of multilayer
-networks with an additional set of questions posed through the lens of spatial
-ecology that are relevant to scale in multilayer networks:
+multilayer networks, we pose an additional set of questions on the future of multilayer
+networks through the lens of scale and behavioural, landscape, and spatial ecology:
 
 1. How do social phenotypes vary across social, spatial, and temporal scales and
 at which scale might these influence fitness? Are some scales better predictors
