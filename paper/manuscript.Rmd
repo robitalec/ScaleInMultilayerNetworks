@@ -568,57 +568,6 @@ distributed [@Farine_2017b].
 <!-- nobs -->
 
 
-<!-- drop 
-Our results highlight the influence of social, spatial and temporal scale on
-multilayer networks. For social scale, we found individuals became more
-connected with increasing social distance threshold. Increasing land cover
-resolution lead to a decrease in availability of patchy and rare habitats and, 
-
-QW: not sure I'd mention 'rare' since there are only 3 habitat types. 
-Could you just say 'less common' or even just 'patchy'?
-
-correspondingly, lower connectivity of individuals in these habitats. Temporal
-windows highlighted clear periods of increased sociality among individuals.
-Finally, increasing number of observations led to a general stabilization in network
-metrics. As such, scale is inherently tied to the generation  of multilayer
-networks and metrics evaluating them, as well as the individual layers that make
-them up.
---> 
-
-
-
-
-<!--
-Multilayer networks can be built with different types of interactions
-
-
-In contrast to multilayer networks formed by combining layers defined
-by different types of interactions, multilayer networks with GPS data are limited to 
-proximity based measures. An alternative which has been explored is using 
-hidden markov models behavioural states, within which individuals are associating. [@Jones_2020]
-
-Another potential application would be
-to generate social networks during times when animals are engaged in different
-behaviours, including travelling, interacting, or foraging [@Muller_2018;
-@Finn_2019] and construct a multilayer network based on behaviour-specific
-monolayer networks [e.g. @Smith_Aguilar_2019].
-
-
-
-netTS
-
-
-However, animals
-have certain interactions that do not require proximity such as long-distance
-vocalization and olfactory signals [@Carter_2015]. 
-
-With the advancement of
-biologging technology, we have the ability to record social interactions that do
-not require proximity, particularly long-distance communication networks with
-devices like microphone arrays [@Snijders_2017]. 
-
--->
-
 <!-- (this was the) conclusion -->
 Multilayer networks remain a nascent but powerful tool in animal behavioural
 ecology. We demonstrate the potential novel analyses that vary social, spatial,
