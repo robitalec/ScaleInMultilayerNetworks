@@ -340,26 +340,34 @@ as important patchy and rare habitats.
 
 
 The temporal multilayer network indicated within-year time windows where social 
-network metrics increased. Edge overlap was higher in time windows 1, 6-11 and 15-20 (between `r timedefs[timecut == 1, paste(mindate, maxdate, sep = ' and ')]`,  
+network metrics increased. Edge overlap was higher in time windows 1, 6-11 and 
+15-20 (between `r timedefs[timecut == 1, paste(mindate, maxdate, sep = ' and ')]`,
 `r timedefs[timecut %in% 6:11, paste(min(mindate), max(maxdate), sep = ' and ')]`
-and `r timedefs[timecut %in% 15:20, paste(min(mindate), max(maxdate), sep = ' and ')]`) 
-than in time windows 2-5 and 12-15 (between `r timedefs[timecut %in% 2:5, paste(min(mindate), max(maxdate), sep = ' and ')]` 
+and `r timedefs[timecut %in% 15:20, paste(min(mindate), max(maxdate), sep = ' and ')]`)
+than in time windows 2-5 and 12-15 (between 
+`r timedefs[timecut %in% 2:5, paste(min(mindate), max(maxdate), sep = ' and ')]`
 and `r timedefs[timecut %in% 12:15, paste(min(mindate), max(maxdate), sep = ' and ')]`)
-(Figure \@ref(fig:temp) A). Time windows of higher edge overlap, between approximately October and June, had correspondingly higher graph strength 
+(Figure \@ref(fig:temp) A). Time windows of higher edge overlap, between 
+approximately October and June, also had higher graph strength 
 compared to time windows of lower edge overlap, between approximately June 
 and October (Figure \@ref(fig:temp) C). Graph strength peaked across the time 
-series between  `r timedefs[timecut %in% 9:10, paste(min(mindate), max(maxdate), sep = ' and ')]`. 
-These results suggest that ordinal multilayer networks can effectively capture discrete time windows of aggregation and dissaggregation related to resource availability, and highlight the importance of carefully selecting the temporal scale of analysis.
+series between  
+`r timedefs[timecut %in% 9:10, paste(min(mindate), max(maxdate), sep = ' and ')]`. 
+These results suggest that ordinal multilayer networks can effectively 
+capture discrete time windows of aggregation and dissaggregation related 
+to resource availability, and highlight the importance of carefully 
+selecting the temporal scale of analysis.
 
 As the number of observations used to generate multilayer networks increased,
-individuals became more connected and variance in metrics decreased.<!--QW: I think throughout you want to say "variance decreased" instead of "stabilized" --> Graph strength across individuals in all three habitat layers was highly
-variable at low number of observations and stabilized after ~100 observations
+individuals became more connected and variance in metrics decreased.
+Graph strength across individuals in all three habitat layers was highly
+variable at low number of observations and variance decreased after ~100 observations
 (Figure \@ref(fig:nobs) A). Edge overlap increased across all three habitat
 layers with increasing number of observations (Figure \@ref(fig:nobs) B).
 Similarly, multidegree for all individuals increased quickly between 10 and 100
 observations, and continued to increase until 1000 observations (Figure
 \@ref(fig:nobs) C). Given the observed trend of these multilayer metrics
-stabilizing after a certain number of observations are included, the results
+decreasing in variance after a certain number of observations are included, the results
 suggest this sensitivity method could be useful for determining the number of
 observations necessary for sufficiently describing social dynamics across
 contexts.
