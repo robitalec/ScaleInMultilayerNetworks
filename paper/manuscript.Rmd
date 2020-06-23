@@ -391,24 +391,10 @@ contexts.
 
 
 # Discussion
-<!-- 
-outline
-
-1. TODO intro
-
-2. social scale. our results. possible extensions with HMM. observational of dif behaviours
-
-3. habitat+social, implicit -> explicit, our results. 
-
-4. movement, 1 sent biolog
-
-5. seasonality, time windows
-
-6. number obs
-
+<!--
+1. intro
 
 TODO: somewhere ref:ml
-
 
 7. from conclusions
 
@@ -436,21 +422,20 @@ relevant scales when selecting observational scales for a given study.
 
 
 <!-- social scale -->
-Social scale is essential consideration for
-social network analysis [@Castles_2014; @Carter_2015; @Farine_2015a].
-Proximity-based social networks generated using GPS location data use a social
-distance threshold to define social associations. Increasing the social distance threshold
-resulted in an increase in graph strength 
-across all three habitat layers  (Figure
+Social scale is essential consideration for social network analysis
+[@Castles_2014; @Carter_2015; @Farine_2015a]. Proximity-based social networks
+generated using GPS location data use a social distance threshold to define
+social associations. Increasing the social distance threshold resulted in an
+increase in graph strength across all three habitat layers  (Figure
 \@ref(fig:socres)). <!-- This means blah blah for different types of
 interactions.--> However, habitat layers differed in their response to
 increasing social distance threshold, with open and foraging with a larger
-increase in graph strength and greater variation across individuals. 
-<!-- What could this mean biologically? --> These results emphasize that multilayer
-network metrics are directly influenced by social scale. In extension, 
-caribou relocations could be classified into behavioural states using hidden
-Markov models to explore the influence of behavioural states on social scale 
-in a multilayer network [see @Jones_2020]. 
+increase in graph strength and greater variation across individuals. <!-- What
+could this mean biologically? --> These results emphasize that multilayer
+network metrics are directly influenced by social scale. In extension, caribou
+relocations could be classified into behavioural states using hidden Markov
+models to explore the influence of behavioural states on social scale in a
+multilayer network [see @Jones_2020].
 <!-- social scale -->
 
 
@@ -476,12 +461,13 @@ The emergent relationship between habitat and sociality has been explored by the
 distribution and phenology of resources and use of social information. For
 example, cougar (*Puma concolor*) home ranges overlapped more in regions with
 high hunting opportunity, a proxy for resource richness [@Elbroch_2015]. Caribou
-social network graph strength was higher in winter and contrastingly lower in summer when
-resource availability is more homogeneous [@Peignier_2019]. Bison (*Bison
-bison*) showed stronger habitat selection in larger groups, and avoidance of
-predation risk was a main factor contributing to their habitat selection
-[@Fortin_2009]. These examples, comparing sociality and habitat selection across
-spatial and temporal contexts, are implicitly multilayer analyses.
+social network graph strength was higher in winter and contrastingly lower in
+summer when resource availability is more homogeneous [@Peignier_2019]. Bison
+(*Bison bison*) showed stronger habitat selection in larger groups, and
+avoidance of predation risk was a main factor contributing to their habitat
+selection [@Fortin_2009]. These examples, comparing sociality and habitat
+selection across spatial and temporal contexts, are implicitly multilayer
+analyses.
 
 Multilayer networks represent a novel framework for explicitly testing the
 influence of habitat selection on sociality across scales. Animal social systems
@@ -490,19 +476,19 @@ Figure \@ref(fig:lcres). Since habitat data are available across a range of
 spatial scales, we evaluated the influence of increasing spatial resolution on
 multilayer network metrics. As spatial resolution increased, edge overlap
 remained stable in open and forest layers but decreased in foraging layers
-(Figure \@ref(fig:socres) D). Graph strength did not change in
-forest layers with increasing spatial resolution (Figure \@ref(fig:socres) E).
-Foraging and open layer had greater individual variation in graph strength, and
-foraging layers showed an increase in graph strength with increasing spatial
-resolution (Figure \@ref(fig:socres) E). Foraging habitat is rare (14.5% of the
-landscape) on Fogo Island and the proportion of relocations in foraging habitat
-decreased as spatial resolution increased (14.5% at 30 m - <2% at 1000 m).
-Despite this, at 30 m resolution the foraging layer had similar edge overlap as
-the open layer indicating its importance in caribou sociality. As such,
-multilayer network measures related to habitat are explicitly dependent on
-spatial scale.  If the spatial resolution of the habitat data are insufficient
-to capture rare habitats, for example, context-specific relationships between
-individuals may not be captured.
+(Figure \@ref(fig:socres) D). Graph strength did not change in forest layers
+with increasing spatial resolution (Figure \@ref(fig:socres) E). Foraging and
+open layer had greater individual variation in graph strength, and foraging
+layers showed an increase in graph strength with increasing spatial resolution
+(Figure \@ref(fig:socres) E). Foraging habitat is rare (14.5% of the landscape)
+on Fogo Island and the proportion of relocations in foraging habitat decreased
+as spatial resolution increased (14.5% at 30 m - <2% at 1000 m). Despite this,
+at 30 m resolution the foraging layer had similar edge overlap as the open layer
+indicating its importance in caribou sociality. As such, multilayer network
+measures related to habitat are explicitly dependent on spatial scale.  If the
+spatial resolution of the habitat data are insufficient to capture rare
+habitats, for example, context-specific relationships between individuals may
+not be captured.
 <!-- habitat+social -->
 
 
@@ -670,11 +656,11 @@ environment and make decisions about where to move next?
 # Acknowledgements
 
 We thank all members of the Wildlife Evolutionary Ecology Lab, including J.
-Hendrix, K. Kingdon, S. Boyle, J. Balluffi-Fry, C. Prokopenko, I. Richmond, J. Hogg, and L.
-Newediuk for their comments on previous versions of this manuscript as well as
-D. C. Schneider for inspiration and helpful discussions about scale. Funding for
-this study was provided by a Vanier Canada Graduate Scholarship to QMRW and a
-NSERC Discovery Grant to EVW.
+Hendrix, K. Kingdon, S. Boyle, J. Balluffi-Fry, C. Prokopenko, I. Richmond, J.
+Hogg, and L. Newediuk for their comments on previous versions of this manuscript
+as well as D. C. Schneider for inspiration and helpful discussions about scale.
+Funding for this study was provided by a Vanier Canada Graduate Scholarship to
+QMRW and a NSERC Discovery Grant to EVW.
 
 \newpage
 
