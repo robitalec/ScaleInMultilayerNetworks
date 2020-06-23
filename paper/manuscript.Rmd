@@ -272,7 +272,6 @@ defined by spatiotemporal overlap within 5 minutes and 50 m. We calculated graph
 strength and multidegree for each habitat layer and spatial scale, and edge
 overlap across the entire series of networks to determine proportion of total
 edges observed in each combination of habitat layer and spatial scale.
-<!-- JWT: Your graphs present things in the order of Foraging, Forest, Open, but in the text you do open, forest, forage. They need to be consistent -->
 
 
 ### Temporal scale
