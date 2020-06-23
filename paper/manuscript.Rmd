@@ -66,6 +66,8 @@ animal social networks is an emerging area of research. Here, we
 incorporate perspectives on how the social environment and spatial processes
 are linked across scales in a multilayer context.
 
+
+
 ## Keywords
 Social network analysis, Landscape ecology, Movement ecology, Space use 
 
@@ -74,21 +76,22 @@ Social network analysis, Landscape ecology, Movement ecology, Space use
 # Introduction
 Our inference regarding the processes underlying ecological patterns
 are directly linked to the scale at which they are observed [@Levin_1992;
-@Allen_2015]. Animals are influenced across scales, through ecological processes such as
-species-specific trophic interactions, resource availability
+@Allen_2015]. Animals are influenced across scales through ecological processes such as
+trophic interactions, resource availability
 [@Legendre_1993; @Chave_2013], and global climate and productivity [@Field_2009].
 Multiscale ecology has been integrated into, for example, species distribution modelling
 [@Elith_2009], habitat selection [@Mayor_2007], and food webs [@Sugihara_1989].
-Meanwhile, in the context of animal behaviour, certain behaviours
+In the context of animal behaviour, certain behaviours
 are scale-dependent; for example, acoustic communication in birds varies with
 spatial scales [@Luther_2009]. We posit that it is important to consider that
 animal behaviour within the social environment will be scale-dependent. 
 <!-- QW: I think this last sentence needs to be a bit stronger. Why is it important? -->
 
-Sociality exists across both temporal and spatial scales [@Whitehead_2008]. For
+Social interactions exists across both temporal and spatial scales [@Whitehead_2008]. For
 example, grooming requires close spatial proximity between conspecifics and
-occurs over brief time periods [e.g. @Carter_2015], whereas social association
-represents shared space use by members of the same social group [Figure
+occurs over brief time periods [e.g. @Carter_2015], whereas social associations
+over long time periods 
+represent shared space use by members of the same social group [Figure
 \@ref(fig:spacetime), @Franks_2009]. Further, for social interactions or
 associations to occur individuals must share space, and thus have overlapping
 home ranges [@Vander_Wal_2013]. In the context of the social environment, home
