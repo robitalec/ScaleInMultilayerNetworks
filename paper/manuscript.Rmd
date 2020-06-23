@@ -518,90 +518,70 @@ unique opportunity to integrate movement and habitat in multilayer networks to
 answer complex questions about animal socioecology.
 <!-- mov -->
 
-<!-- temp -->
-Changes in network metrics through time can explain the influence of seasonality
-of resources on animal sociality. Using an ordinal multilayer network composed
-of 20 discrete time windows throughout the study period, we observed periods of
-increased sociality in caribou on Fogo Island. Edge overlap was higher during
-fall, winter and spring (approximately October - June) than in summer
-(approximately June - October)  (Figure \@ref(fig:temp) A). Similarly,
+<!-- temp --> 
+Changes in network metrics through time can explain the influence
+of seasonality of resources on animal sociality. Using an ordinal multilayer
+network composed of 20 discrete time windows throughout the study period, we
+observed periods of increased sociality in caribou on Fogo Island. Edge overlap
+was higher during fall, winter and spring (approximately October - June) than in
+summer (approximately June - October)  (Figure \@ref(fig:temp) A). Similarly,
 individual graph strength was also highest in these periods (Figure
 \@ref(fig:temp) C). Periods of increased sociality correspond to seasons of
 heterogeneous resource availability [Peigner_2019]. By explicitly considering
 the temporal context of social interactions in separate layers, multilayer
 networks provide a detailed and dynamic perspective of animal social networks.
-In addition, this could be extended using time-aggregated networks and a moving-window
-approach to inform the temporal scale including time window size and sampling effort
-[@Farine_2017; @Bonnell_2020].
+In addition, this could be extended using time-aggregated networks and a
+moving-window approach to inform the temporal scale including time window size
+and sampling effort [@Farine_2017; @Bonnell_2020]. 
 <!-- temp -->
 
 
 <!-- nobs -->
-It is crucial to include sufficient data within sampling periods or
-time windows to construct robust networks [@Farine_2017; Proskurnikov_2017]. To
-test the influence of data quantity on multilayer networks, we used a subset of
-observations to generate multilayer networks. Variance decreased across
-all network metrics in all three habitat layers with increasing number of
+It is crucial to include sufficient data within sampling periods or time windows
+to construct robust networks [@Farine_2017; Proskurnikov_2017]. To test the
+influence of data quantity on multilayer networks, we used a subset of
+observations to generate multilayer networks. Variance decreased across all
+network metrics in all three habitat layers with increasing number of
 observations. Individual graph strength showed high variability at low number of
 observations, while edge overlap and multidegree increased sharply. After
 approximately 200 observations, the rate of change for all metrics decreased and
 and graph strength remained relatively static, while edge overlap and
-multidegree continued to increase slowly. As more observations were added, rarer 
-relationships were recorded revealing the value of this form of
-sensitivity analysis. Finally, due to the autocorrelated nature of biologging 
-data it is essential to ensure social association data area non-randomly
-distributed [@Farine_2017b].
+multidegree continued to increase slowly. As more observations were added, rarer
+relationships were recorded revealing the value of this form of sensitivity
+analysis. Finally, due to the autocorrelated nature of biologging data it is
+essential to ensure social association data area non-randomly distributed
+[@Farine_2017b].
 <!-- nobs -->
 
 
 <!-- (this was the) conclusion -->
-Multilayer networks remain a nascent but powerful tool in animal behavioural
-ecology. We demonstrate the potential novel analyses that vary social, spatial,
-and temporal scale within a multilayer framework. We
-show that (1) multilayer social networks are scale-dependent, and (2) 
-the use of multilayer networks is useful for
-identifying habitat or season-specific social processes. Our analyses of social,
-spatial, and temporal scales in a multilayer network framework highlight the potential
-to identify scales at which different properties of layers within a multilayer
-network show the most variability. 
-
-Furthermore, we discuss the potential
-integration of individual phenotypes and fitness, collective movement, and
-habitat selection for future analyses considering spatial ecology using
-multilayer networks.
-
-
 
 Recognition of scale as a fundamental concept in ecology [@Levin_1992] has lead
 to an increased attention to the scale at which ecological processes are
-observed [@Schneider_2001; @Chave_2013]. <!-- rm tech-->In addition, recent technological
-advances have lead to increased data complexity and resolution. Remotely sensed
-imagery collected by modern satellites provide, for example, 10 m spatial
-resolution optical imagery at a temporal revisit period of five days at the
-equator [@Drusch_2012]. Similarly, animal tracking devices have become smaller
-allowing their deployement on a wider variety of organisms [@Wikelski_2007] and
-at a higher temporal resolution [@B_rger_2016]. <!-- rm tech-->Given<!-- the increased.. 
-complex + higher resolution + remotely sensed--> this increased
-availability of complex data, it is important to consider using a broad
-continuum of scales to fully capture ecological processes, carefully select and
-combine sources of data with different temporal and spatial scales, and
-establish a clear link between scales of observation and meaningful biology.
+observed [@Schneider_2001; @Chave_2013]. Recent technological advances in
+remotely sensed imagery [@Drusch_2012] and animal tracking devices
+[@B_rger_2016; @Wikelski_2007] have increased the availability of complex, high
+resolution data. We highlight ways in which scale should be considered when
+building social networks from both observed and remotely-sensed data. It is
+important to consider a broad continuum of scales to fully capture ecological
+processes, carefully select and combine sources of data with different temporal
+and spatial scales, and establish a clear link between scales of observation and
+meaningful biology.
 
-Multilayer networks are complicated in that they can incorporate data as varied
-as social interactions, landscape features, and seasons, all of which exist at
-different scales and units of measurement. Our analysis of caribou multilayer
-networks which incorporated high resolution GPS telemetry data and spatial land cover
-data is grounded in the context of observed animal social networks, as the
-scales we chose to explore, e.g., number of observations, sociality across space
-and time, are ones that can be observed as has <!-- edit-->traditionally been done in
-ethology. We highlight ways in which scale ought to be considered for both
-observed and remotely-sensed data when building social networks. GPS telemetry 
-data provides a link between large scale landscape properties and
-fine scale social interactions as animal movement occurs across the landscape,
-and when taken into account with multiple individuals<!-- edit--> can indicate association
-patterns. Thus, a layer incorporating relocation data could be a great boon
-linking spatial and social layer in multilayer networks.
-<!-- JWT: It think we need an ending thought or punch or something, not end it on a question. -->
+
+Multilayer networks remain a nascent but powerful tool in animal behavioural
+ecology. We demonstrate the novel analyses in varying social, spatial,
+and temporal scale within a multilayer framework. We show that (1) multilayer
+social networks are scale-dependent, and (2) the use of multilayer networks is
+useful for identifying habitat or season-specific social processes. Our analysis
+of caribou multilayer networks incorporating high resolution GPS telemetry data
+and spatial land cover data is grounded in the context of observed animal social
+networks, as the scales we chose to explore, e.g., number of observations and
+sociality across space and time, are ones that have also traditionally been done
+in ethology.
+
+<!-- TODO: round it out -->
+
 <!-- (this was the) conclusion -->
 
 
