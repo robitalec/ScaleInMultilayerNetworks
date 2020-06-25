@@ -172,18 +172,18 @@ subsequent analyses.
 ### Network layer construction
 
 We generated proximity-based social networks using the R package
-`spatsoc` (Robitaille, Webber and Vander Wal 2019) in R version 4.0.1
-(2020-06-06) (R Core Team 2019). We assumed individuals were associating
-if simultaneous GPS fixes were within the spatial distance threshold of
-one another. Typically for ungulates and other gregarious mammals, the
-‘chain rule’ is used for group assignment (Croft, James and Krause
-2008). For GPS data, the chain rule is applied by assigning a group
-identifier to the union of buffered GPS fixes at each time step. As
-such, individuals in a group are within the social distance threshold of
-at least one other though not necessarily all other individuals
-(Robitaille, Webber and Vander Wal 2019). Group assignment based on the
-chain rule has previously been applied to caribou using a temporal
-threshold of 5 minutes and a social distance threshold of 50 m
+`spatsoc` (Robitaille, Webber and Vander Wal 2019) in R version 4.0.1 (R
+Core Team 2020). We assumed individuals were associating if simultaneous
+GPS fixes were within the spatial distance threshold of one another.
+Typically for ungulates and other gregarious mammals, the ‘chain rule’
+is used for group assignment (Croft, James and Krause 2008). For GPS
+data, the chain rule is applied by assigning a group identifier to the
+union of buffered GPS fixes at each time step. As such, individuals in a
+group are within the social distance threshold of at least one other
+though not necessarily all other individuals (Robitaille, Webber and
+Vander Wal 2019). <!-- TODO: check jwt comment--> Group assignment based
+on the chain rule has previously been applied to caribou using a
+temporal threshold of 5 minutes and a social distance threshold of 50 m
 (Lesmerises, Johnson and St-Laurent 2018; Peignier et al. 2019). In all
 networks, individual caribou were represented as nodes and associations
 between individuals in a given network layer were represented as
@@ -229,18 +229,17 @@ and Vander Wal 2019) and `data.table` (Dowle and Srinivasan 2019).
 We generated multilayer networks across a series of social distance
 thresholds for group assignment. Social distance thresholds (5, 25, 50,
 75, 100, 250 and 500 m) represented a range of visual (short distance)
-to auditory (long distance) sensory modalities of caribou. Multilayer
-networks consisted of the social association between 21 individuals
-across three habitat layers (foraging, forest and open) for the entire
-study period. At the finest scale, individuals within 5 m of one another
-were considered in the same group, whereas at the coarsest scale,
-individuals within 500 m of one another were considered in the same
-group. Increasing social distance threshold is a proxy for potential
-behavioural interactions that occur across these distances. We
-calculated graph strength and multidegree for each habitat layer and
-social distance threshold, and edge overlap across the entire series of
-networks to determine proportion of total edges observed in each
-combination of habitat layer and spatial distance threshold.
+to olfactory and long distance auditory sensory modalities of caribou.
+Multilayer networks consisted of the social association between 21
+individuals across three habitat layers (foraging, forest, and open) for
+the entire study period. At the finest scale, individuals within 5 m of
+one another were considered in the same group, whereas at the coarsest
+scale, individuals within 500 m of one another were considered in the
+same group. Increasing social distance threshold is a proxy for
+potential behavioural interactions that occur across these distances.
+For every social distance threshold, we calculated individual graph
+strength within each habitat layer, and edge overlap and multidegree
+across habitat layers.
 
 ### Spatial scale
 
@@ -252,15 +251,16 @@ corresponding to the above scales (Graham et al. 2019). We assume 30 m
 and 100 m represents fine-scale decision making for caribou during
 foraging, while re-sampling at 500 m , 750 m and 1000 m represents the
 scale at which caribou tend to select and avoid habitat
-(Bastille-Rousseau et al. 2017). For each spatial scale, we generated a
-multilayer network consisting of the social associations between 21
-individuals across three habitat layers (foraging, forest and open) for
-the entire study period. Social associations of individuals were defined
-by spatiotemporal overlap within 5 minutes and 50 m. We calculated graph
-strength and multidegree for each habitat layer and spatial scale, and
-edge overlap across the entire series of networks to determine
-proportion of total edges observed in each combination of habitat layer
-and spatial scale.
+(Bastille-Rousseau et al. 2017). Multilayer networks consisted of the
+social associations between 21 individuals across three habitat layers
+(foraging, forest and open) for the entire study period.
+<!--TODO: check JWT / more clear to
+remove this redundance already mentioned in net lay construction? 
+Social associations of individuals were
+defined by spatiotemporal overlap within 5 minutes and 50 m.--> For each
+land cover resolution, we calculated individual graph strength within
+each habitat layer, and edge overlap and multidegree across habitat
+layers.
 
 ### Temporal scale
 
@@ -271,23 +271,23 @@ caribou sociality. Multilayer networks consisted of the social
 associations between 21 individuals across 20 ordinal sample periods of
 35-36 <!--QW: why 35-36 and not just 35 or 36?--> days taken from the
 entire study period. Social associations were defined by spatiotemporal
-overlap of individuals within 5 minutes and 50 m. In each time window,
-we calculated individual graph strength and multidegree, and across the
-series of networks, we calculated edge overlap to determine proportion
-of total edges observed in each time window.
+overlap of individuals within 5 minutes and 50 m. For each time window,
+we calculated individual graph strength within each time window, and
+edge overlap and multidegree across time windows.
 
 #### Number of observations
 
 Studies of social network analysis vary in the number and frequency of
 observations as well as the data collection technique used to generate
-networks (Davis, Crofoot and Farine 2018; Webber and Vander Wal 2019).
-For example, GPS data is commonly collected at a fixed rate, e.g. every
-\(x\) minutes or hours, continuously throughout the study period. Fix
-rate is a reflection of number of observations an individual would have
-been observed and recorded in traditional ethological studies. To
-investigate the influence of number of observations, we generated
-multilayer networks of social association between 21 individuals across
-three habitat layers (foraging, forest and open) using \(N\) randomly
+networks, ranging from directly observed to remotely sensed (Davis,
+Crofoot and Farine 2018; Webber and Vander Wal 2019). Remotely sensed
+GPS data is commonly collected at a fixed rate, e.g. every \(x\) minutes
+or hours, continuously throughout the study period. Fix rate is a
+reflection of number of observations an individual would have been
+observed and recorded in traditional ethological studies. To investigate
+the influence of number of observations, we generated multilayer
+networks of social association between 21 individuals across three
+habitat layers (foraging, forest, and open) using \(N\) randomly
 selected observations. We first generated a maximum of 1000 timesteps
 and iteratively used \(N\) of these (\(N\) = 10 - 1000 observations by
 steps of 10), to ensure previously included timesteps, and resulting
@@ -300,7 +300,7 @@ observations increased.
 
 # Results
 
-Individuals in multilayer networks became more connected as the spatial
+Individuals in multilayer networks became more connected as the social
 distance threshold increased. Mean graph strength differed across
 habitat layers with similar and higher graph strength in foraging and
 open layers, and lower strength in forest layers (Figure
@@ -770,7 +770,7 @@ increasing number of observations. Individuals showed high variability
 
 <div class="figure">
 
-<img src="../graphics/figure-fogo-ml.png" alt="Multilayer network representing social association of caribou on Fogo Island, Newfoundland between 2017-05-27 and 2019-03-27. Individual caribou (n = 21 females) are represented as nodes in a constant location in layers they were observed. Twelve layers represent combinations of four time windows and three habitat classes (foraging, forest and open) informed by previous social, spatial and temporal scale analyses. Intralayer edges represent association between individuals and line thickness is scaled by strength of association (SRI)." width="\linewidth" />
+<img src="../graphics/figure-fogo-ml.png" alt="Multilayer network representing social association of caribou on Fogo Island, Newfoundland between 2017-05-27 and 2019-03-27. Individual caribou (n = 21 females) are represented as nodes in a constant location in layers they were observed. Twelve layers represent combinations of four time windows and three habitat classes (foraging, forest, and open) informed by previous social, spatial and temporal scale analyses. Intralayer edges represent association between individuals and line thickness is scaled by strength of association (SRI)." width="\linewidth" />
 
 <p class="caption">
 
@@ -779,9 +779,10 @@ on Fogo Island, Newfoundland between 2017-05-27 and 2019-03-27.
 Individual caribou (n = 21 females) are represented as nodes in a
 constant location in layers they were observed. Twelve layers represent
 combinations of four time windows and three habitat classes (foraging,
-forest and open) informed by previous social, spatial and temporal scale
-analyses. Intralayer edges represent association between individuals and
-line thickness is scaled by strength of association (SRI).
+forest, and open) informed by previous social, spatial and temporal
+scale analyses. Intralayer edges represent association between
+individuals and line thickness is scaled by strength of association
+(SRI).
 
 </p>
 
@@ -1283,10 +1284,10 @@ Mathematical Society* 2018;**65**:1.
 
 </div>
 
-<div id="ref-R_Core_Team_2019">
+<div id="ref-R_Core_Team">
 
 R Core Team. *R: A Language and Environment for Statistical Computing*.
-Vienna, Austria: R Foundation for Statistical Computing, 2019.
+Vienna, Austria: R Foundation for Statistical Computing, 2020.
 
 </div>
 
