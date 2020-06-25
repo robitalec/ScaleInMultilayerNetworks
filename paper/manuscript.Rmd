@@ -649,6 +649,13 @@ knitr::include_graphics('../graphics/figure-scales.png')
 
 \newpage
 
+```{r socres, fig.cap='(ref:socres)'}
+knitr::include_graphics('../graphics/figure-soc.png')
+```
+
+
+\newpage
+
 ```{r lcres, fig.cap='(ref:lcres)'}
 knitr::include_graphics('../graphics/figure-lc.png')
 ```
@@ -659,11 +666,6 @@ knitr::include_graphics('../graphics/figure-lc.png')
 knitr::include_graphics('../graphics/figure-temp.png')
 ```
 
-\newpage
-
-```{r socres, fig.cap='(ref:socres)'}
-knitr::include_graphics('../graphics/figure-soc.png')
-```
 
 \newpage
 
