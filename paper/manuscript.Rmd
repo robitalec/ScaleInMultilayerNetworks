@@ -308,7 +308,7 @@ observations increased.
 
 
 # Results
-Individuals in multilayer networks became more connected as the spatial distance
+Individuals in multilayer networks became more connected as the social distance
 threshold increased. Mean graph strength differed across habitat layers with
 similar and higher graph strength in foraging and open layers, and lower
 strength in forest layers (Figure \@ref(fig:socres)). Individual graph strength
