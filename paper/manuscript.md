@@ -10,27 +10,35 @@ Memorial University of Newfoundland
 
 # Abstract
 
+<!-- Scale remains a foundational concept in ecology. Social processes range from 
+fine-scale interactions and co-occurrence to overlapping home ranges. Spatial 
+scale has become a central consideration in the way we understand landscape ecology
+and animal space use. Temporal variation in sociality and
+
+Multilayer networks promise the explicit integration of social, 
+spatial and temporal contexts of animal social networks. 
+
+-->
+
 Scale remains a foundational concept in ecology. Spatial scale, for
 instance, has become a central consideration in the way we understand
 landscape ecology and animal space use. Meanwhile, social processes can
-also scale from fine-scale interactions to co-occurrence to overlapping
-home ranges and vary within and across seasons. Multilayer networks
-promise the integration of monolayer animal social networks with the
-complexity and importance of animal space use and movement in
-heterogeneous landscapes. Despite the complex interplay between social
-networks and animal space use, there remains an important biological and
-methodological gap in our understanding of an animal’s perception of
-scale. Here we discuss the role of scale in the context of multilayer
-networks and provide a social ungulate case study to illustrate the role
-of social, spatial, and temporal scale on multilayer processes.
-<!--We also present perspectives on
+range from fine-scale interactions to co-occurrence and overlapping home
+ranges. <!-- and vary within and 
+across seasons.--> Multilayer networks promise the explicit integration
+of the social, spatial and temporal contexts. Given the complex
+interplay of sociality and animal space use in heterogeneous landscapes,
+there remains an important gap in our understanding of the influence of
+scale on animal social networks. We discuss ways of considering social,
+spatial and temporal scale in the context of multilayer caribou social
+networks. <!--We also present perspectives on
 future development and applications of scale in multilayer networks with respect
 to: phenotypes and individual fitness, movement ecology and collective movement,
 and habitat selection and space use.--> Effective integration of social
 and spatial processes, including biologically meaningful scales, within
 the context of animal social networks is an emerging area of research.
-Here, we incorporate perspectives on how the social environment and
-spatial processes are linked across scales in a multilayer context.
+We incorporate perspectives on how the social environment and spatial
+processes are linked across scales in a multilayer context.
 
 ## Keywords
 
@@ -40,36 +48,36 @@ Social network analysis, Landscape ecology, Movement ecology, Space use
 
 Our inference regarding the processes underlying ecological patterns are
 directly linked to the scale at which they are observed (Levin 1992;
-Allen and Hoekstra 2015). Animals are influenced across scales, through
-ecological processes such as species-specific trophic interactions,
-resource availability (Legendre 1993; Chave 2013), and global climate
-and productivity (Field et al. 2009). Multiscale ecology has been
-integrated into, for example, species distribution modelling (Elith and
-Leathwick 2009), habitat selection (Mayor et al. 2007), and food webs
-(Sugihara, Schoenly and Trombla 1989). Meanwhile, in the context of
-animal behaviour, certain behaviours are scale-dependent; for example,
-acoustic communication in birds varies with spatial scales (Luther
-2009). We posit that it is important to consider that animal behaviour
-within the social environment will be scale-dependent.
+Allen and Hoekstra 2015). Animals are influenced across scales through
+ecological processes such as trophic interactions, resource availability
+(Legendre 1993; Chave 2013), and global climate and productivity (Field
+et al. 2009). Multiscale ecology has been integrated into species
+distribution modelling (Elith and Leathwick 2009), habitat selection
+(Mayor et al. 2007), and food webs (Sugihara, Schoenly and Trombla
+1989). In the context of animal behaviour, certain behaviours are
+scale-dependent; for example, acoustic communication in birds varies
+with spatial scales (Luther 2009). We posit that it is important to
+consider that animal behaviour within the social environment will be
+scale-dependent.
 <!-- QW: I think this last sentence needs to be a bit stronger. Why is it important? -->
 
-Sociality exists across both temporal and spatial scales (Whitehead
-2008). For example, grooming requires close spatial proximity between
-conspecifics and occurs over brief time periods (e.g. Carter, Lee and
-Marshall 2015), whereas social association represents shared space use
-by members of the same social group (Figure
-<a href="#fig:spacetime">1</a>, Franks, Ruxton and James 2009). Further,
-for social interactions or associations to occur individuals must share
-space, and thus have overlapping home ranges (Vander Wal, Laforge and
-McLoughlin 2013). In the context of the social environment, home range
-overlap is an example of how animals share space over coarser spatial
-and temporal scales (e.g. Piza-Roca et al. 2018). Although the social
-environment clearly scales spatially and temporally, it remains unclear
-whether coarser scales of sociality, including social association and
-home range overlap, vary predictably with social interaction (Castles et
-al. 2014; Farine 2015). We therefore define social scale as the explicit
-definition and measurement of social relationships (Farine 2015).
-<!-- for QW:     
+Social interactions exists across both temporal and spatial scales
+(Whitehead 2008). For example, grooming requires close spatial proximity
+between conspecifics and occurs over brief time periods (e.g. Carter,
+Lee and Marshall 2015), whereas social associations over long time
+periods represent shared space use by members of the same social group
+(Figure <a href="#fig:spacetime">1</a>, Franks, Ruxton and James 2009).
+Individuals must share space to interact or associate and thus have
+overlapping home ranges (Vander Wal, Laforge and McLoughlin 2014). Home
+range overlap is an example of how animals share space over coarser
+spatial and temporal scales
+<!-- TODO to create their social environment -->(e.g. Piza-Roca et al.
+2018). Although the social environment clearly scales spatially and
+temporally, it remains unclear whether coarser scales of social
+interactions, such as social association and home range overlap, vary
+predictably (Castles et al. 2014; Farine 2015). We therefore define
+social scale as the explicit definition and measurement of social
+relationships (Farine 2015). <!-- for QW:     
 
 -->
 <!-- and suggest the potential for adaptive variance in social relationships is also scale-dependent.  -->
@@ -107,16 +115,13 @@ social systems.
 We examined scale-dependent multilayer networks motivated by
 behavioural, landscape, and spatial ecology to and applied this
 framework to caribou (*Rangifer tarandus*) on Fogo Island, Newfoundland,
-Canada. We use study to address two principal questions associated with
-scale-dependent multilayer networks. First, to what degree does the
-social scale of relationships, spatial scale of landscapes, and temporal
-scale of analysis influence our ability to interpret complex social
-systems? Second, can variation in the social, spatial, and temporal
-scale improve our understanding of the relationship between social
-association and seasonal resource availability? We conclude with further
-development and application of scale in multilayer networks with respect
-to habitat selection and space use, movement ecology and collective
-movement, and phenotypes and individual fitness.
+Canada. First, we test to what degree the social scale of relationships,
+spatial scale of landscapes, and temporal scale of analysis influences
+our ability to interpret complex social systems. Second, we address how
+variation in the social, spatial, and temporal scale improves our
+understanding of the relationship between social association and
+seasonal resource availability. We conclude with potential future
+developments and applications of scale in multilayer networks.
 
 # Methods
 
@@ -126,8 +131,8 @@ Caribou are gregarious ungulates with fission-fusion dynamics
 (Lesmerises, Johnson and St-Laurent 2018) that display temporal and
 spatial variation in social networks (Peignier et al. 2019). In winter,
 caribou dig holes, termed craters, to access forage beneath the snow
-(Bergerud 1974). Cratering is presumed to be a costly behaviour and as a
-result, caribou tend to occupy and re-use craters once they are
+(Bergerud 1974). Cratering is presumed to be a costly behaviour, and as
+a result, caribou tend to occupy and re-use craters once they are
 established. Importantly, craters exist on the landscape at multiple
 scales: the crater scale (a single crater), the feeding area scale
 (multiple craters in close proximity), and the winter range scale (all
@@ -138,7 +143,7 @@ distribution of craters on the landscape.
 ## Caribou location data
 
 We used GPS location data collected from Fogo Island caribou between
-2017-04-21 and 2019-03-27. Adult female caribou were immobilized and
+April 2017 and March 2019. Adult female caribou were immobilized and
 fitted with global positioning system (GPS) collars (Lotek Wireless
 Inc., Newmarket, ON, Canada, GPS4400M collars, 1,250 g) as described by
 (Schaefer and Mahoney 2013). Collars were programmed to collect location
@@ -361,24 +366,6 @@ sufficiently describing social dynamics across contexts.
 <!-- Figure: metrics by social scale -->
 
 <!-- Figure: metrics by land cover resolution -->
-
-(ref:lcres) Varying spatial scale of land cover raster. For each land
-cover resolution (5, 25, 50, 75, 100, 250 and 500 m), multilayer
-networks were constructed of caribou social associations (n = 21
-females) on Fogo Island, Newfoundland between 2017-04-21 and 2019-03-27
-within three habitat layers (foraging, forest, and open). A, B, C) Three
-land cover rasters: the original resolution (30 m) and two aggregated
-rasters (500 m and 1000 m). D) Edge overlap of habitat layers across
-spatial resolutions. Open and forest layers show consistent edge overlap
-with increasing spatial resolution while foraging shows a sharp decline
-in edge overlap between 30 m and 600 m. Above 600 m, edge overlap in
-foraging layers is stable. E) Graph strength (mean of individuals in
-bold) within habitat layers across spatial resolution. Foraging layers
-showed high variation in graph strength with many individuals dropping
-to 0 after 500 m and others increasing with spatial resolution. Open
-layers and forest layers were relatively stable across spatial
-resolutions, with higher mean graph strength in open compared to forest
-layers.
 
 <!-- Figure: metrics by number of observations -->
 
@@ -686,11 +673,27 @@ passerine calls extending the shortest distance.
 
 <div class="figure">
 
-<img src="../graphics/figure-lc.png" alt="(ref:lcres)" width="\linewidth" />
+<img src="../graphics/figure-lc.png" alt="Varying spatial scale of land cover raster. For each land cover resolution (5, 25, 50, 75, 100, 250 and 500 m), multilayer networks were constructed of caribou social associations (n = 21 females) on Fogo Island, Newfoundland between 2017-04-21 and 2019-03-27 within three habitat layers (foraging, forest, and open). A, B, C) Three land cover rasters: the original resolution (30 m) and two aggregated rasters (500 m and 1000 m). D) Edge overlap of habitat layers across spatial resolutions. Open and forest layers show consistent edge overlap with increasing spatial resolution while foraging shows a sharp decline in edge overlap between 30 m and 600 m. Above 600 m, edge overlap in foraging layers is stable. E) Graph strength (mean of individuals in bold) within habitat layers across spatial resolution. Foraging layers showed high variation in graph strength with many individuals dropping to 0 after 500 m and others increasing with spatial resolution. Open layers and forest layers were relatively stable across spatial resolutions, with higher mean graph strength in open compared to forest layers." width="\linewidth" />
 
 <p class="caption">
 
-Figure 2: (ref:lcres)
+Figure 2: Varying spatial scale of land cover raster. For each land
+cover resolution (5, 25, 50, 75, 100, 250 and 500 m), multilayer
+networks were constructed of caribou social associations (n = 21
+females) on Fogo Island, Newfoundland between 2017-04-21 and 2019-03-27
+within three habitat layers (foraging, forest, and open). A, B, C) Three
+land cover rasters: the original resolution (30 m) and two aggregated
+rasters (500 m and 1000 m). D) Edge overlap of habitat layers across
+spatial resolutions. Open and forest layers show consistent edge overlap
+with increasing spatial resolution while foraging shows a sharp decline
+in edge overlap between 30 m and 600 m. Above 600 m, edge overlap in
+foraging layers is stable. E) Graph strength (mean of individuals in
+bold) within habitat layers across spatial resolution. Foraging layers
+showed high variation in graph strength with many individuals dropping
+to 0 after 500 m and others increasing with spatial resolution. Open
+layers and forest layers were relatively stable across spatial
+resolutions, with higher mean graph strength in open compared to forest
+layers.
 
 </p>
 
@@ -1405,12 +1408,12 @@ Sociobiology* 2017;**72**, DOI:
 
 </div>
 
-<div id="ref-Vander_Wal_2013">
+<div id="ref-Vander_2014">
 
 Vander Wal E, Laforge MP, McLoughlin PD. Density dependence in social
 behaviour: Home range overlap and density interacts to affect
 conspecific encounter rates in a gregarious ungulate. *Behavioral
-Ecology and Sociobiology* 2013;**68**:383–90.
+Ecology and Sociobiology* 2014;**68**:383–90.
 
 </div>
 
