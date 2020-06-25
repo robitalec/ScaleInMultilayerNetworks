@@ -304,10 +304,10 @@ Individuals in multilayer networks became more connected as the social
 distance threshold increased. Mean graph strength differed across
 habitat layers with similar and higher graph strength in foraging and
 open layers, and lower strength in forest layers (Figure
-<a href="#fig:socres">4</a>). Individual graph strength increased
+<a href="#fig:socres">2</a>). Individual graph strength increased
 sharply between 5 m and 100 m in all three habitat classes followed by a
 plateau in the rate of increase after 100 m (Figure
-<a href="#fig:socres">4</a>). These results suggest the optimal social
+<a href="#fig:socres">2</a>). These results suggest the optimal social
 scale at which groups should be assigned is between \~20 - 100 m based
 on the rate at which variance in graph strength decreased. GPS data
 allows (e.g. from this study and Peignier et al. 2019; Lesmerises,
@@ -319,29 +319,30 @@ Increasing land cover resolution resulted in decreased availability of
 foraging habitat and corresponding low connectivity of individuals at
 higher land cover resolutions. Edge overlap decreased sharply between 30
 m and 600 m in foraging layers, afterwards remaining stable to 1000 m
-(Figure <a href="#fig:lcres">2</a> D). In contrast, edge overlap was
+(Figure <a href="#fig:lcres">3</a> D). In contrast, edge overlap was
 relatively consistent across land cover resolutions in forest and open
-layers (Figure <a href="#fig:lcres">2</a> D). Graph strength was more
+layers (Figure <a href="#fig:lcres">3</a> D). Graph strength was more
 variable within foraging habitat layers across land cover resolutions
-than open and forest habitat layers (Figure <a href="#fig:lcres">2</a>
+than open and forest habitat layers (Figure <a href="#fig:lcres">3</a>
 E). The proportion of relocations in forest (42.1% at 30 m - 48.2% at
 1000 m) and open (43.3% at 30 m - 50.3% at 1000 m) habitats increased
 with increasing spatial resolution, while decreasing in foraging habitat
-(14.5% at 30 m - \<2% at 1000 m). Overall, these results indicate the
-importance of matching land cover resolution to scale of selection as
-well as ensuring the land cover product used has a resolution fine
-enough to detect landscape features and habitats relevant to study
-species, such as important patchy and rare habitats.
+(14.5% at 30 m - \<2% at 1000 m). <!-- TODO: 
+break up -->Overall, these results indicate the importance of matching
+land cover resolution to scale of habitat selection as well as ensuring
+the land cover product used has a resolution fine enough to detect
+landscape features and habitats relevant to study species, such as
+important patchy and rare habitats.
 
 The temporal multilayer network indicated within-year time windows where
 social network metrics increased. Edge overlap was higher in time
 windows 1, 6-11 and 15-20 (between 2017-04-21 and 2017-05-26, 2017-10-15
 and 2018-05-13 and 2018-08-28 and 2019-03-27) than in time windows 2-5
 and 12-15 (between 2017-05-27 and 2017-10-14 and 2018-05-14 and
-2018-10-01) (Figure <a href="#fig:temp">3</a> A). Time windows of higher
+2018-10-01) (Figure <a href="#fig:temp">4</a> A). Time windows of higher
 edge overlap, between approximately October and June, also had higher
 graph strength compared to time windows of lower edge overlap, between
-approximately June and October (Figure <a href="#fig:temp">3</a> C).
+approximately June and October (Figure <a href="#fig:temp">4</a> C).
 Graph strength peaked across the time series between  
 2018-01-29 and 2018-04-08. These results suggest that ordinal multilayer
 networks can effectively capture discrete time windows of aggregation
@@ -400,7 +401,7 @@ Social scale is essential consideration for social network analysis
 Proximity-based social networks generated using GPS location data use a
 social distance threshold to define social associations. Increasing the
 social distance threshold resulted in an increase in graph strength
-across all three habitat layers (Figure <a href="#fig:socres">4</a>).
+across all three habitat layers (Figure <a href="#fig:socres">2</a>).
 <!-- This means blah blah for different types of
 interactions.--> However, habitat layers differed in their response to
 increasing social distance threshold, with open and foraging with a
@@ -452,17 +453,17 @@ are implicitly multilayer analyses.
 Multilayer networks represent a novel framework for explicitly testing
 the influence of habitat selection on sociality across scales. Animal
 social systems can be parsed by spatial contexts, for example as defined
-by habitat type as in Figure <a href="#fig:lcres">2</a>. Since habitat
+by habitat type as in Figure <a href="#fig:lcres">3</a>. Since habitat
 data are available across a range of spatial scales, we evaluated the
 influence of increasing spatial resolution on multilayer network
 metrics. As spatial resolution increased, edge overlap remained stable
 in open and forest layers but decreased in foraging layers (Figure
-<a href="#fig:lcres">2</a> D). Graph strength did not change in forest
+<a href="#fig:lcres">3</a> D). Graph strength did not change in forest
 layers with increasing spatial resolution (Figure
-<a href="#fig:lcres">2</a> E). Foraging and open layer had greater
+<a href="#fig:lcres">3</a> E). Foraging and open layer had greater
 individual variation in graph strength, and foraging layers showed an
 increase in graph strength with increasing spatial resolution (Figure
-<a href="#fig:lcres">2</a> E). Foraging habitat is rare (12.8% of the
+<a href="#fig:lcres">3</a> E). Foraging habitat is rare (12.8% of the
 landscape) on Fogo Island and the proportion of relocations in foraging
 habitat decreased as spatial resolution increased (14.5% at 30 m - \<2%
 at 1000 m). Despite this, the foraging layer had similar edge overlap as
@@ -513,9 +514,9 @@ multilayer network composed of 20 discrete time windows throughout the
 study period, we observed periods of increased sociality in caribou on
 Fogo Island. Edge overlap was higher during fall, winter and spring
 (approximately October - June) than in summer (approximately June -
-October) (Figure <a href="#fig:temp">3</a> A). Similarly, individual
+October) (Figure <a href="#fig:temp">4</a> A). Similarly, individual
 graph strength was also higher in these periods (Figure
-<a href="#fig:temp">3</a> C). These periods of increased sociality
+<a href="#fig:temp">4</a> C). These periods of increased sociality
 correspond to seasons of heterogeneous resource availability
 \[Peigner\_2019\]. By explicitly considering the temporal context of
 social interactions in separate layers, multilayer networks provide a
@@ -598,7 +599,7 @@ microphone arrays to construct long-distance communication networks
 in different habitat types, potentially suggesting different types of
 interactions. Higher graph strength in forage and open habitats may
 indicate that caribou use visual or other cues not relevant in forest
-habitats (Figure <a href="#fig:socres">4</a>).
+habitats (Figure <a href="#fig:socres">2</a>).
 
 Multilayer networks enable researchers to look at similarities and
 differences between discrete temporal windows. Changing social
@@ -673,11 +674,32 @@ passerine calls extending the shortest distance.
 
 <div class="figure">
 
+<img src="../graphics/figure-soc.png" alt="Varying scale in social distance threshold. For each social distance threshold (100 - 1000 m by steps of 100 m), multilayer networks were constructed of caribou social associations (n = 21 females) on Fogo Island, Newfoundland between 2017-04-21 and 2019-03-27 within three habitat layers (foraging, forest, and open). Graph strength (mean of individuals in bold) showed a sharp increase between 5 m and 100 m for all habitat classes. After 100 m, graph strength continued to increase at a slower rate. Foraging and open layers showed higher variation in graph strength between individuals while forest layers had less variation and lower mean graph strength." width="\linewidth" />
+
+<p class="caption">
+
+Figure 2: Varying scale in social distance threshold. For each social
+distance threshold (100 - 1000 m by steps of 100 m), multilayer networks
+were constructed of caribou social associations (n = 21 females) on Fogo
+Island, Newfoundland between 2017-04-21 and 2019-03-27 within three
+habitat layers (foraging, forest, and open). Graph strength (mean of
+individuals in bold) showed a sharp increase between 5 m and 100 m for
+all habitat classes. After 100 m, graph strength continued to increase
+at a slower rate. Foraging and open layers showed higher variation in
+graph strength between individuals while forest layers had less
+variation and lower mean graph strength.
+
+</p>
+
+</div>
+
+<div class="figure">
+
 <img src="../graphics/figure-lc.png" alt="Varying spatial scale of land cover raster. For each land cover resolution (5, 25, 50, 75, 100, 250 and 500 m), multilayer networks were constructed of caribou social associations (n = 21 females) on Fogo Island, Newfoundland between 2017-04-21 and 2019-03-27 within three habitat layers (foraging, forest, and open). A, B, C) Three land cover rasters: the original resolution (30 m) and two aggregated rasters (500 m and 1000 m). D) Edge overlap of habitat layers across spatial resolutions. Open and forest layers show consistent edge overlap with increasing spatial resolution while foraging shows a sharp decline in edge overlap between 30 m and 600 m. Above 600 m, edge overlap in foraging layers is stable. E) Graph strength (mean of individuals in bold) within habitat layers across spatial resolution. Foraging layers showed high variation in graph strength with many individuals dropping to 0 after 500 m and others increasing with spatial resolution. Open layers and forest layers were relatively stable across spatial resolutions, with higher mean graph strength in open compared to forest layers." width="\linewidth" />
 
 <p class="caption">
 
-Figure 2: Varying spatial scale of land cover raster. For each land
+Figure 3: Varying spatial scale of land cover raster. For each land
 cover resolution (5, 25, 50, 75, 100, 250 and 500 m), multilayer
 networks were constructed of caribou social associations (n = 21
 females) on Fogo Island, Newfoundland between 2017-04-21 and 2019-03-27
@@ -705,7 +727,7 @@ layers.
 
 <p class="caption">
 
-Figure 3: Varying temporal scale in multilayer networks. Multilayer
+Figure 4: Varying temporal scale in multilayer networks. Multilayer
 networks were generated of caribou social associations (n = 21 females)
 on Fogo Island, Newfoundland within time windows (20 ordinal sample
 periods of 35-36 days) between 2017-04-21 and 2019-03-27. A) Edge
@@ -719,27 +741,6 @@ each layer. C) Graph strength within time windows showing individuals as
 thin grey lines and mean across individuals as thick black lines. Graph
 strength peaked in time window 9, with noticeable higher strength than
 the following year.
-
-</p>
-
-</div>
-
-<div class="figure">
-
-<img src="../graphics/figure-soc.png" alt="Varying scale in social distance threshold. For each social distance threshold (100 - 1000 m by steps of 100 m), multilayer networks were constructed of caribou social associations (n = 21 females) on Fogo Island, Newfoundland between 2017-04-21 and 2019-03-27 within three habitat layers (foraging, forest, and open). Graph strength (mean of individuals in bold) showed a sharp increase between 5 m and 100 m for all habitat classes. After 100 m, graph strength continued to increase at a slower rate. Foraging and open layers showed higher variation in graph strength between individuals while forest layers had less variation and lower mean graph strength." width="\linewidth" />
-
-<p class="caption">
-
-Figure 4: Varying scale in social distance threshold. For each social
-distance threshold (100 - 1000 m by steps of 100 m), multilayer networks
-were constructed of caribou social associations (n = 21 females) on Fogo
-Island, Newfoundland between 2017-04-21 and 2019-03-27 within three
-habitat layers (foraging, forest, and open). Graph strength (mean of
-individuals in bold) showed a sharp increase between 5 m and 100 m for
-all habitat classes. After 100 m, graph strength continued to increase
-at a slower rate. Foraging and open layers showed higher variation in
-graph strength between individuals while forest layers had less
-variation and lower mean graph strength.
 
 </p>
 
