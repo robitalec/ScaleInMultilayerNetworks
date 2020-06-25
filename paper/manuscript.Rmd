@@ -52,17 +52,17 @@ has become a central consideration in the way we understand landscape ecology
 and animal space use. Meanwhile, social processes can range from fine-scale
 interactions to co-occurrence and overlapping home ranges. <!-- and vary within and 
 across seasons.--> Multilayer networks promise the explicit integration
-of the social, spatial and temporal contexts multilayer social networks. 
+of the social, spatial and temporal contexts. 
 Given the complex interplay of
 sociality and animal space use in heterogeneous landscapes, there remains 
 an important gap in our understanding of the influence of scale on animal
-social networks. Here we discuss social, spatial and temporal scale in the 
+social networks. We discuss ways of considering social, spatial and temporal scale in the 
 context of multilayer caribou social networks. <!--We also present perspectives on
 future development and applications of scale in multilayer networks with respect
 to: phenotypes and individual fitness, movement ecology and collective movement,
 and habitat selection and space use.--> Effective integration of social and spatial
 processes, including biologically meaningful scales, within the context of
-animal social networks is an emerging area of research. Here, we
+animal social networks is an emerging area of research. We
 incorporate perspectives on how the social environment and spatial processes
 are linked across scales in a multilayer context.
 
