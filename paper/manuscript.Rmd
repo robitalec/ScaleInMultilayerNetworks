@@ -331,9 +331,10 @@ variable within foraging habitat layers across land cover resolutions than open
 and forest habitat layers (Figure \@ref(fig:lcres) E). The proportion of
 relocations in forest (42.1% at 30 m - 48.2% at 1000 m) and open (43.3% at 30 m
 - 50.3% at 1000 m) habitats increased with increasing spatial resolution, while
-decreasing in foraging habitat (14.5% at 30 m - <2% at 1000 m).  Overall, these
+decreasing in foraging habitat (14.5% at 30 m - <2% at 1000 m).  <!-- TODO: 
+break up -->Overall, these
 results indicate the importance of matching land cover resolution to scale of
-selection as well as ensuring the land cover product used has a resolution fine
+habitat selection as well as ensuring the land cover product used has a resolution fine
 enough to detect landscape features and habitats relevant to study species, such
 as important patchy and rare habitats.
 
@@ -356,17 +357,17 @@ series between
 These results suggest that ordinal multilayer networks can effectively 
 capture discrete time windows of aggregation and dissaggregation related 
 to resource availability, and highlight the importance of carefully 
-selecting the temporal scale of analysis.
+selecting the temporal scale of analysis. <!-- TODO see comment-->
 
 As the number of observations used to generate multilayer networks increased,
 individuals became more connected and variance in metrics decreased.
-Graph strength across individuals in all three habitat layers was highly
-variable at low number of observations and variance decreased after ~100 observations
-(Figure \@ref(fig:nobs) A). Edge overlap increased across all three habitat
+Edge overlap increased across all three habitat
 layers with increasing number of observations (Figure \@ref(fig:nobs) B).
 Similarly, multidegree for all individuals increased quickly between 10 and 100
 observations, and continued to increase until 1000 observations (Figure
-\@ref(fig:nobs) C). Given the observed trend of these multilayer metrics
+\@ref(fig:nobs) C). Graph strength across individuals in all three habitat layers was highly
+variable at low number of observations and variance decreased after ~100 observations
+(Figure \@ref(fig:nobs) A). Given the observed trend of these multilayer metrics
 decreasing in variance after a certain number of observations are included, the results
 suggest this sensitivity method could be useful for determining the number of
 observations necessary for sufficiently describing social dynamics across
