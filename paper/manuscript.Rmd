@@ -463,7 +463,7 @@ selection across spatial and temporal contexts, are implicitly multilayer
 analyses.
 
 Multilayer networks represent a novel framework for explicitly testing the
-influence of habitat selection on sociality across scales. Animal social systems
+influence of habitat selection on sociality across scales <!-- TODO: add fig 6-->. Animal social systems
 can be parsed by spatial contexts, for example as defined by habitat type as in
 Figure \@ref(fig:lcres). Since habitat data are available across a range of
 spatial scales, we evaluated the influence of increasing spatial resolution on
@@ -506,7 +506,7 @@ sleepy lizards (*Tiliqua rugosa*) males interacted primarily at home range
 edges, presumably driving territorial behaviour [@Spiegel_2018]. Incorporating
 movement ecology within a multilayer network framework is a logical next step
 for a burgeoning field. Importantly, the technological advancements in
-biologging and wildlife tracking technology [@Border_2020] have enabled this
+biologging and wildlife tracking technology <!-- TODO: fix-->[@Border_2020] have enabled this
 unique opportunity to integrate movement and habitat in multilayer networks to
 answer complex questions about animal socioecology.
 <!-- mov -->
@@ -531,7 +531,7 @@ and sampling effort [@Farine_2017; @Bonnell_2020].
 
 <!-- nobs -->
 It is crucial to include sufficient data within sampling periods or time windows
-to construct robust networks [@Farine_2017; Proskurnikov_2017]. To test the
+to construct robust networks <!--TODO check--> [@Farine_2017; Proskurnikov_2017]. To test the
 influence of data quantity on multilayer networks, we generate multilayer networks
 using a subset of observations. Variance decreased across all
 network metrics in all three habitat layers with increasing number of
