@@ -454,7 +454,20 @@ perspective, Mayor (2007) emphasized the importance of considering a broad
 continuum of scales to reveal scale-dependent selection and avoid the bias of
 predefined scales assumed to be associated with certain behaviours.
 
-<!-- TODO: missing results -->
+<!-- TODO: missing results 
+
+As spatial resolution increased, edge overlap
+remained stable in open and forest layers but decreased in foraging layers
+(Figure \@ref(fig:lcres) D). Graph strength did not change in forest layers
+with increasing spatial resolution (Figure \@ref(fig:lcres) E). Foraging and
+open layer had greater individual variation in graph strength, and foraging
+layers showed an increase in graph strength with increasing spatial resolution
+(Figure \@ref(fig:lcres) E). Foraging habitat is rare (12.8% of the landscape)
+on Fogo Island and the proportion of relocations in foraging habitat decreased
+as spatial resolution increased (14.5% at 30 m - <2% at 1000 m). Despite this,
+the foraging layer had similar edge overlap as the open layer at 30 m resolution 
+indicating its importance in caribou sociality. 
+-->
 
 <!-- spatial -->
 
@@ -475,27 +488,8 @@ selection [@Fortin_2009]. These examples, comparing sociality and habitat
 selection across spatial and temporal contexts, are implicitly multilayer
 analyses.
 
-Multilayer networks represent a novel framework for explicitly testing the
-influence of habitat selection on sociality across scales <!-- TODO: add fig 6-->. Animal social systems
-can be parsed by spatial contexts, for example as defined by habitat type as in
-Figure \@ref(fig:lcres). Since habitat data are available across a range of
-spatial scales, we evaluated the influence of increasing spatial resolution on
-multilayer network metrics. As spatial resolution increased, edge overlap
-remained stable in open and forest layers but decreased in foraging layers
-(Figure \@ref(fig:lcres) D). Graph strength did not change in forest layers
-with increasing spatial resolution (Figure \@ref(fig:lcres) E). Foraging and
-open layer had greater individual variation in graph strength, and foraging
-layers showed an increase in graph strength with increasing spatial resolution
-(Figure \@ref(fig:lcres) E). Foraging habitat is rare (12.8% of the landscape)
-on Fogo Island and the proportion of relocations in foraging habitat decreased
-as spatial resolution increased (14.5% at 30 m - <2% at 1000 m). Despite this,
-the foraging layer had similar edge overlap as the open layer at 30 m resolution 
-indicating its importance in caribou sociality. As such, multilayer network
-measures related to habitat are explicitly dependent on spatial scale.  If the
-spatial resolution of the habitat data are insufficient to capture rare
-habitats, for example, context-specific relationships between individuals may
-not be captured.
-<!-- habitat+social -->
+
+
 
 
 <!-- mov -->
