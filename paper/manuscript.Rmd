@@ -284,11 +284,11 @@ reflection of number of observations an individual would have been observed and
 recorded in traditional ethological studies. To investigate the influence of
 number of observations, we generated multilayer networks of social association
 between `r DT[, uniqueN(get(idcol))]` individuals across three habitat layers
-(foraging, forest, and open) using $N$ randomly selected observations. We first
-generated a maximum of 1000 timesteps and iteratively used $N$ of these ($N$ =
+(foraging, forest, and open) using $n$ randomly selected observations. We first
+generated a maximum of 1000 timesteps and iteratively used $n$ of these ($n$ =
 10 - 1000 observations by steps of 10), to ensure previously included timesteps,
 and resulting associations, were accumulated with subsequent observations to
-mimic collection of observational data. Within each multilayer network with $N$
+mimic collection of observational data. Within each multilayer network with $n$
 observations, we calculated individual graph strength and multidegree. We
 calculated edge overlap across the entire series of networks to determine
 proportion of total edges as number of observations increased.
