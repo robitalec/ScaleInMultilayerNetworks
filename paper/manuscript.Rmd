@@ -513,25 +513,48 @@ Recognition of scale as a fundamental concept in ecology [@Levin_1992] has lead
 to an increased attention to the scale at which ecological processes are
 observed [@Schneider_2001; @Chave_2013]. Recent technological advances in
 remotely sensed imagery [@Drusch_2012] and animal tracking devices
-[@B_rger_2016; @Wikelski_2007] have increased the availability of complex, high
+[@Borger_2020; @B_rger_2016; @Wikelski_2007] have increased the availability of complex, high
 resolution data. We highlight ways in which scale should be considered when
-building social networks from both observed and remotely-sensed data. It is
-important to consider a broad continuum of scales to fully capture ecological
-processes, carefully select and combine sources of data with different temporal
-and spatial scales, and establish a clear link between scales of observation and
-meaningful biology.
-
-Multilayer networks remain a nascent but powerful tool in animal behavioural
-ecology. We demonstrate the novel analyses in varying social, spatial, and
-temporal scale within a multilayer framework. We show that (1) multilayer social
-networks are scale-dependent, and (2) the use of multilayer networks is useful
-for identifying habitat or season-specific social processes. Our multilayer
+building social networks from both observed and remotely-sensed data. Our multilayer
 network analysis of caribou sociality incorporating high resolution GPS
 telemetry data and spatial land cover data is grounded in the context of
 observed animal behaviour as the scales we chose to explore, e.g., number of
 observations and sociality across space and time, are ones that have also
-traditionally been done in ethology.
+traditionally been done in ethology. 
+
+Multilayer networks remain a nascent but powerful tool in animal behavioural
+ecology and we introduce concepts of scale within the existing multilayer 
+framework. Silk et al. (2018) summarized some 
+key multilayer questions in animal behaviour
+research  and based on our case study of scale in the context of multilayer 
+networks, we conclude by posing an additional set of questions on the future 
+of multilayer networks through the lens of scale and behavioural, landscape, 
+and spatial ecology: 
+
+1. How do social phenotypes vary across social, spatial, and temporal scales and
+at which scale might these influence fitness? Are some scales better predictors
+for different fitness metrics? 
+
+2. Why do individuals associate more strongly with certain conspecifics in some
+habitats? What, if any, is the role of movement in the context of habitat
+networks?
+
+3. How, and why, does the spatial scale of perception influence, e.g. auditory,
+visual, or chemotaxis, influence the social environment? What is the role of
+memory, and by extension social and spatial cognition, as animals navigate their
+environment and make decisions about where to move next?
+
+
+We show that (1) multilayer social networks are scale-dependent, and (2) the use
+of multilayer networks is useful for identifying spatially or temporally
+specific social associations. It is important to consider a broad continuum of
+scales to fully capture ecological processes, carefully select and combine data
+with different temporal and spatial scales, and establish a clear link between
+biologically relevant scales of observation.
+
+
 <!-- TODO: round it out -->
+
 
 <!-- conclusion -->
 
