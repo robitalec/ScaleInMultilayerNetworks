@@ -394,7 +394,7 @@ than between approximately June - October
 
 
 <!-- Figure: Fogo ML Net -->
-(ref:ml) Multilayer network representing social association of caribou on Fogo Island, Newfoundland between `r DT[, format(min(datetime), '%B %Y')]` and `r DT[, format(max(datetime), '%B %Y')]`. Individual caribou (n = `r DT[, uniqueN(get(idcol))]` females) are represented as nodes in a constant location in layers they were observed. Twelve layers represent combinations of four time windows and three habitat classes (foraging, forest, and open) informed by previous social, spatial and temporal scale analyses. Intralayer edges represent association between individuals and line thickness is scaled by strength of association (SRI).
+(ref:ml) Multilayer network representing social association of caribou on Fogo Island, Newfoundland between `r timedefs[timecut == 2, format(mindate, '%B %Y')]` and `r timedefs[timecut == 20, format(mindate, '%B %Y')]`. Individual caribou (n = `r DT[, uniqueN(get(idcol))]` females) are represented as nodes in a constant location in layers they were observed. Twelve layers represent combinations of four time windows and three habitat classes (foraging, forest, and open) informed by previous social, spatial and temporal scale analyses. Intralayer edges represent association between individuals and line thickness is scaled by strength of association (SRI).
 
 
 # Discussion
