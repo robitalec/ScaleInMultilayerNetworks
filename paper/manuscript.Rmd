@@ -416,9 +416,12 @@ biologically relevant and robust scales.
 
 <!-- social scale -->
 Social scale is essential consideration for social network analysis
-[@Castles_2014; @Carter_2015; @Farine_2015a]. Proximity-based social networks
-generated using GPS location data use a social distance threshold to define
-social associations. Increasing the social distance threshold resulted in an
+[@Castles_2014; @Carter_2015; @Farine_2015a]. For example, networks can be
+constructed based on fine-scale social interactions (e.g. grooming or
+aggression), social associations (e.g. group membership or proximity), or
+spatial or home range overlap. Here, we define social associations in a series
+of proximity-based social networks based on a series of social distance
+thresholds. <!-- up to here-->Increasing the social distance threshold resulted in an
 increase in graph strength across all three habitat layers  (Figure
 \@ref(fig:socres)). <!-- This means blah blah for different types of
 interactions.--> However, habitat layers differed in their response to
