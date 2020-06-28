@@ -71,14 +71,12 @@ periods represent shared space use by members of the same social group
 Individuals must share space to interact or associate and thus have
 overlapping home ranges (Vander Wal, Laforge and McLoughlin 2014). Home
 range overlap is an example of how animals share space over coarser
-spatial and temporal scales
-<!-- TODO to create their social environment -->(e.g. Piza-Roca et al.
-2018). Although the social environment clearly scales spatially and
-temporally, it remains unclear whether coarser scales of social
-interactions, such as social association and home range overlap, vary
-predictably (Castles et al. 2014; Farine 2015). We therefore define
-social scale as the explicit definition and measurement of social
-relationships (Farine 2015).
+spatial and temporal scales (e.g. Piza-Roca et al. 2018). Although the
+social environment clearly scales spatially and temporally, it remains
+unclear whether coarser scales of social interactions, such as social
+association and home range overlap, vary predictably (Castles et al.
+2014; Farine 2015). We therefore define social scale as the explicit
+definition and measurement of social relationships (Farine 2015).
 
 Social network analysis is a well-developed tool used to measure the
 relationships of individuals and organization of social systems (Wey et
@@ -176,13 +174,12 @@ data, the chain rule is applied by assigning a group identifier to the
 union of buffered GPS fixes at each time step. As such, individuals in a
 group are within the social distance threshold of at least one other
 though not necessarily all other individuals (Robitaille, Webber and
-Vander Wal 2019). <!-- TODO: check jwt comment--> Group assignment based
-on the chain rule has previously been applied to caribou using a
-temporal threshold of 5 minutes and a social distance threshold of 50 m
-(Lesmerises, Johnson and St-Laurent 2018; Peignier et al. 2019). In all
-networks, individual caribou were represented as nodes and associations
-between individuals in a given network layer were represented as
-intralayer edges.
+Vander Wal 2019). Group assignment based on the chain rule has
+previously been applied to caribou using a temporal threshold of 5
+minutes and a social distance threshold of 50 m (Lesmerises, Johnson and
+St-Laurent 2018; Peignier et al. 2019). In all networks, individual
+caribou were represented as nodes and associations between individuals
+in a given network layer were represented as intralayer edges.
 
 We weighted edges of social networks by the strength of association
 between caribou using the simple ratio index (SRI, Cairns and Schwager
@@ -244,13 +241,13 @@ of scales (100 - 1000 m by steps of 100 m). The land cover raster was
 aggregated using a modal moving window method using a circular window
 corresponding to the above scales (Graham et al. 2019). We assume 30 m
 and 100 m represents fine-scale decision making for caribou during
-foraging, while re-sampling at 500 m , 750 m and 1000 m represents the
-scale at which caribou tend to select and avoid habitat
-(Bastille-Rousseau et al. 2017). Multilayer networks consisted of the
-social associations between 21 individuals across three habitat layers
-(foraging, forest and open) for the entire study period. For each land
-cover resolution, we calculated individual graph strength within each
-habitat layer, and edge overlap and multidegree across habitat layers.
+foraging, while 500 - 1000 m represents the scale at which caribou tend
+to select and avoid habitat (Bastille-Rousseau et al. 2018). Multilayer
+networks consisted of the social associations between 21 individuals
+across three habitat layers (foraging, forest and open) for the entire
+study period. For each land cover resolution, we calculated individual
+graph strength within each habitat layer, and edge overlap and
+multidegree across habitat layers.
 
 ### Temporal scale
 
@@ -313,13 +310,13 @@ relatively consistent across land cover resolutions in forest and open
 layers (Figure <a href="#fig:lcres">3</a> D). Graph strength was more
 variable within foraging habitat layers across land cover resolutions
 than open and forest habitat layers (Figure <a href="#fig:lcres">3</a>
-E). The proportion of relocations in forest (38.685% at 30 m - 50.27% at
-1000 m) and open (37.385% at 30 m - 48.177% at 1000 m) habitats
-increased with increasing spatial resolution, while decreasing in
-foraging habitat (23.93% at 30 m - 1.552% at 1000 m). These results
-indicate the importance of matching land cover resolution to scale of
-habitat selection and choosing a land cover product with a resolution
-sufficient to detect less common habitats.
+E). The proportion of relocations in forest (38.68% at 30 m - 50.27% at
+1000 m) and open (37.39% at 30 m - 48.18% at 1000 m) habitats increased
+with increasing spatial resolution, while decreasing in foraging habitat
+(23.93% at 30 m - 1.55% at 1000 m). These results indicate the
+importance of matching land cover resolution to scale of habitat
+selection and choosing a land cover product with a resolution sufficient
+to detect less common habitats.
 
 The temporal multilayer network indicated within-year time windows where
 social network metrics increased. Edge overlap was higher in time
@@ -329,10 +326,9 @@ between approximately October and June, also had higher graph strength
 compared to time windows of lower edge overlap, between approximately
 June and October (Figure <a href="#fig:temp">4</a> C). Graph strength
 peaked across the time series between January 2018 and April 2018. These
-results suggest that ordinal multilayer networks can effectively capture
-discrete time windows of aggregation and dissaggregation related to
-resource availability, and highlight the importance of carefully
-selecting the temporal scale of analysis. <!-- TODO see comment-->
+results highlight the importance of carefully selecting the temporal
+scale of analysis to effectively capture within- and across-year
+variation in sociality.
 
 As the number of observations used to generate multilayer networks
 increased, individuals became more connected and variance in metrics
@@ -343,20 +339,20 @@ and 100 observations, and continued to increase until 1000 observations
 (Figure <a href="#fig:nobs">5</a> C). Graph strength across individuals
 in all three habitat layers was highly variable at low number of
 observations and variance decreased after \~100 observations (Figure
-<a href="#fig:nobs">5</a> A). <!--TODO double check-->Since the variance
-in these multilayer metrics decreases after a certain number of
-observations, this sensitivity method could be useful for determining
-the number of observations necessary for sufficiently describing social
-dynamics across contexts.
+<a href="#fig:nobs">5</a> A). Since the variance in these multilayer
+metrics decreases after a certain number of observations, this
+sensitivity method could be useful for determining the number of
+observations necessary for sufficiently describing social dynamics
+across contexts.
 
 An illustrative multilayer network was generated, informed by previous
 social, spatial and temporal scale results (Figure
 <a href="#fig:ml">6</a>). <!--The social 
 distance threshold was 50 m. The spatial resolution of the land cover 
-raster was 30 m. -->Relocations were predominantly in open (37.385%) and
-forest (38.685%) habitats compared to foraging habitats (23.93%).
-Despite this, individuals were more strongly connected in foraging and
-open habitats than in forest (mean graph strength in habitat layers;
+raster was 30 m. -->Relocations were predominantly in open (37.39%) and
+forest (38.68%) habitats compared to foraging habitats (23.93%). Despite
+this, individuals were more strongly connected in foraging and open
+habitats than in forest (mean graph strength in habitat layers;
 foraging: 0.21, forest: 0.11, open: 0.23). There was a seasonal
 difference in association, individuals were more connected between
 approximately October - June (mean graph strength in time windows; 2:
@@ -375,13 +371,6 @@ strength in time windows; 1: 0.04, 3: 0.03).
 
 # Discussion
 
-<!--
-1. intro
-TODO: somewhere ref:ml
--->
-
-<!-- intro -->
-
 Animal social systems are characterized and influenced by scale. Three
 types of scale to consider are social, spatial, and temporal scale.
 Social scale defines the type and measurement of social relationships
@@ -392,9 +381,7 @@ study design and seasonal differences in social processes. By
 partitioning social associations into discrete contexts using multilayer
 networks, we highlight the influence of social, spatial and temporal
 scales on animal social systems, demonstrating the importance of
-considering biologically relevant and robust scales. <!-- intro -->
-
-<!-- social scale -->
+considering biologically relevant and robust scales.
 
 Social scale is an essential consideration for social network analysis
 (Castles et al. 2014; Carter, Lee and Marshall 2015; Farine 2015). For
@@ -413,9 +400,7 @@ social scale. An extension of this analysis could be to incorporate
 behavioural states to explore the influence of social scale on patterns
 of association or interaction across habitat and behavioural layers
 (e.g. using focal observations or hidden Markov Models see Muller et al.
-2018; Jones et al. 2020). <!-- social scale -->
-
-<!-- spatial -->
+2018; Jones et al. 2020).
 
 Habitat selection, the use of available resources or landscape features
 by animals (Manly, McDonald and Thomas 1993; Boyce and McDonald 1999),
@@ -427,7 +412,7 @@ with increasing spatial scale (Figure <a href="#fig:lcres">3</a> D).
 Graph strength had greater individual variation in open and foraging
 layers than in forest layers (Figure <a href="#fig:lcres">3</a> E). We
 observed a decrease in the proportion of relocations in foraging habitat
-with increasing spatial resolution (23.93% at 30 m - 1.552% at 1000 m).
+with increasing spatial resolution (23.93% at 30 m - 1.55% at 1000 m).
 As the foraging layer had similar edge overlap and graph strength as the
 open layer at 30 m spatial resolution despite having lower abundance on
 the landscape (foraging: 12.8%, open: 36.9%), this highlights the
@@ -449,9 +434,7 @@ sociality may be more relevant. Moving past this hierarchical
 perspective, Mayor et al. (2007) emphasized the importance of
 considering a broad continuum of scales to reveal scale-dependent
 selection and avoid the bias of predefined scales assumed to be
-associated with certain behaviours. <!-- spatial -->
-
-<!-- temp -->
+associated with certain behaviours.
 
 The emergent relationship between habitat and sociality has been
 explored by the temporal distribution and phenology of resources and use
@@ -477,15 +460,7 @@ found variance decreased in edge overlap and multidegree across habitat
 layers as well as in graph strength within habitat layers (Figure
 <a href="#fig:nobs">5</a>). As more observations were added, rarer
 relationships were recorded demonstrating the value of this form of
-sensitivity analysis. <!-- temp -->
-
-<!-- Finally, due to the autocorrelated nature of biologging data it is -->
-
-<!-- essential to ensure social association data area non-randomly distributed -->
-
-<!-- [@Farine_2017b]. -->
-
-<!-- conclusion -->
+sensitivity analysis.
 
 Recognition of scale as a fundamental concept in ecology (Levin 1992)
 has lead to an increased attention to the scale at which ecological
@@ -529,7 +504,15 @@ useful for identifying spatially or temporally specific social
 associations. When employing multilayer networks, it is critical to
 consider a broad continuum of social, spatial and temporal scales to
 fully capture ecological processes and to establish a clear link between
-biologically relevant scales of observation. <!-- conclusion -->
+biologically relevant scales of observation.
+
+# Box 1
+
+<!-- Finally, due to the autocorrelated nature of biologging data it is -->
+
+<!-- essential to ensure social association data area non-randomly distributed -->
+
+<!-- [@Farine_2017b]. -->
 
 <!-- TODO include mov elsewhere 
 Social processes, movement decisions, and space use are inextricably linked and
@@ -540,8 +523,6 @@ Integrating habitat-specific
 movement layers could further illuminate the role of movement as a driver of the
 social and spatial environments an individual experiences [@Webber_2018]. 
 -->
-
-# Box 1
 
 Social phenotype has been increasingly linked to individual fitness,
 including in primates (Brent, Ruiz-Lambides and Platt 2017; Thompson
@@ -747,6 +728,14 @@ Press, 2015.
 Almeling L, Hammerschmidt K, Sennhenn-Reulen H, Freund AM, Fischer J.
 Motivational shifts in aging monkeys and the origins of social
 selectivity. *Current Biology* 2016;**26**:1744–9.
+
+</div>
+
+<div id="ref-Bastille_2018">
+
+Bastille-Rousseau G, Murray DL, Schaefer JA, Lewis MA, Mahoney SP, Potts
+JR. Spatial scales of habitat selection decisions: Implications for
+telemetry-based movement modelling. *Ecography* 2018;**41**:437–43.
 
 </div>
 
