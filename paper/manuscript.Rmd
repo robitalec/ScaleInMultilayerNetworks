@@ -256,12 +256,12 @@ using the R package `grainchanger` [@Graham_2019] across a series of scales (100
 moving window method using a circular window corresponding to the above scales
 [@Graham_2019a]. We assume 30 m and 100 m represents fine-scale decision making
 for caribou during foraging, while 500 - 1000 m represents the scale at which
-caribou tend to select and avoid habitat [@Bastille_2018].
-Multilayer networks consisted of the social associations between 
-`r DT[, uniqueN(get(idcol))]` individuals across three habitat layers (foraging, 
-forest and open) for the entire study period. For each land cover resolution, we
-calculated individual graph strength within each habitat layer, and edge overlap
-and multidegree across habitat layers.
+caribou tend to select and avoid habitat [@Bastille_2018]. Multilayer networks
+consisted of the social associations between `r DT[, uniqueN(get(idcol))]`
+individuals across three habitat layers (foraging, forest and open) for the
+entire study period. For each land cover resolution, we calculated individual
+graph strength within each habitat layer, and edge overlap and multidegree
+across habitat layers.
 
 
 ### Temporal scale
