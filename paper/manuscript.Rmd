@@ -298,8 +298,6 @@ proportion of total edges as number of observations increased.
 
 
 # Results
-<!-- TODO intro + ml fig -->
-
 Individuals in multilayer networks became more connected as the social distance
 threshold increased. Mean graph strength differed across habitat layers with
 similar and higher graph strength in foraging and open layers, and lower
@@ -346,6 +344,7 @@ capture discrete time windows of aggregation and dissaggregation related
 to resource availability, and highlight the importance of carefully 
 selecting the temporal scale of analysis. <!-- TODO see comment-->
 
+
 As the number of observations used to generate multilayer networks increased,
 individuals became more connected and variance in metrics decreased.
 Edge overlap increased across all three habitat
@@ -360,6 +359,21 @@ of observations, this sensitivity method could be useful for determining the
 number of observations necessary for sufficiently describing social dynamics
 across contexts.
 
+
+An illustrative multilayer network was generated, informed by previous social, 
+spatial and temporal scale results (Figure \@ref(fig:ml)). <!--The social 
+distance threshold was 50 m. The spatial resolution of the land cover 
+raster was 30 m. -->Relocations were predominantly in open 
+(`r count[res == 30 & lc == 1, percent]`%) and forest 
+(`r count[res == 30 & lc == 2, percent]`%) habitats 
+compared to foraging habitats (`r count[res == 30 & lc == 3, percent]`%). 
+Despite this, individuals were more strongly connected in foraging and open 
+habitats than in forest (mean graph strength in habitat layers; foraging: 0.21, 
+forest: 0.11, open: 0.23). There was a seasonal difference in association, 
+individuals were more connected between approximately October - June 
+(mean graph strength in time windows; 2: 0.37, 4: 0.18) 
+than between approximately June - October 
+(mean graph strength in time windows; 1: 0.04, 3: 0.03). 
 
 
 <!-- Figure: metrics by social scale -->
