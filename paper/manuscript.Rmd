@@ -28,8 +28,11 @@ library(data.table)
 
 source('../scripts/00-variables.R')
 
+options(digits = 3)
+
 DT <- readRDS('../data/derived-data/01-sub-fogo-caribou.Rds')
 nobs <- readRDS('../data/derived-data/05-number-of-observations.Rds')
+count <- readRDS('../data/derived-data/02-landcover-scale-count.Rds')
 timedefs <- fread('../data/supp-data/timecut-defs.csv')
 timedefs[, c('mindate', 'maxdate') := .(as.IDate(mindate), as.IDate(maxdate))]
 ```
@@ -429,7 +432,7 @@ open and forest layers but decreasing in foraging layers with increasing spatial
 scale (Figure \@ref(fig:lcres) D). Graph strength had greater individual
 variation in open and foraging layers than in forest layers (Figure
 \@ref(fig:lcres) E). We observed a decrease in the proportion of relocations in
-foraging habitat with increasing spatial resolution (23.9% at 30 m - <2% at 1000
+foraging habitat with increasing spatial resolution (`r count[res == 30 & lc == 3, percent]`% at 30 m - `r count[res == 1000 & lc == 3, percent]`% at 1000
 m). As the foraging layer had similar edge overlap and graph strength as the
 open layer at 30 m spatial resolution despite having lower abundance on the
 landscape (foraging: 12.8%, open: 36.9%), this highlights the importance
