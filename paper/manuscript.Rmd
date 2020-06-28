@@ -412,34 +412,35 @@ biologically relevant and robust scales.
 
 
 <!-- social scale -->
-Social scale is essential consideration for social network analysis
+Social scale is an essential consideration for social network analysis
 [@Castles_2014; @Carter_2015; @Farine_2015a]. For example, networks can be
 constructed based on fine-scale social interactions (e.g. grooming or
 aggression), social associations (e.g. group membership or proximity), or
-spatial or home range overlap. Here, we define social associations in a series
-of proximity-based social networks based on a series of social distance
-thresholds. <!-- up to here-->Increasing the social distance threshold resulted in an
-increase in graph strength across all three habitat layers  (Figure
-\@ref(fig:socres)). <!-- This means blah blah for different types of
-interactions.--> However, habitat layers differed in their response to
-increasing social distance threshold, with open and foraging with a larger
-increase in graph strength and greater variation across individuals. <!-- What
-could this mean biologically? --> These results emphasize that multilayer
-network metrics are directly influenced by social scale. In extension, caribou
-relocations could be classified into behavioural states using hidden Markov
-models to explore the influence of behavioural states on social scale in a
-multilayer network [see @Jones_2020].
+spatial or home range overlap. Here, we define social associations using a series
+of social distance thresholds to generate proximity-based social networks. 
+Across network layers, increasing the social distance threshold resulted in
+an increase in graph strength (Figure
+\@ref(fig:socres)). Specifically, the strength of social associations across 
+habitat layers, with open and foraging habitats demonstrating a more pronounced
+increase in graph strength as well as greater variation across individuals. 
+These results emphasize that multilayer network metrics are directly influenced
+by social scale. An extension of this analysis could be to incorporate 
+behavioural states to explore the influence of social scale on patterns of 
+association or interaction across habitat and behavioural layers [e.g. 
+using focal observations or hidden Markov Models see @Muller_2018; @Jones_2020].
 <!-- social scale -->
 
 
-<!-- habitat+social -->
+<!-- spatial -->
+Habitat selection, the use of
+available resources or landscape features by animals [@Manly_1993; @Boyce_1999],
+is a scale-dependent process [@Mayor_2009].
+
 Social structure and habitat selection are intimately related: individuals must
 share space to interact and the distribution of resources influences group
 dynamics and home range size [@Webber_2018]. Social structure is influenced by
 resource availability and seasonality [@Peignier_2019], configuration [@He_2019]
-and fragmentation [@Banks_2007]. Habitat selection, the disproportionate use of
-available resources or landscape features by animals [@Manly_1993; @Boyce_1999],
-is a scale-dependent process [@Mayor_2009]. Johnson (1980) identified four
+and fragmentation [@Banks_2007].  Johnson (1980) identified four
 orders of habitat selection: (1) the geographical range of a species, (2) the
 home range of an individual, the (3) habitat patches within the home range and
 (4) specific resources within a habitat patch. Kie et al. [-@Kie_2002] found
