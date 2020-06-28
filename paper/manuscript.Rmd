@@ -507,7 +507,7 @@ sleepy lizards (*Tiliqua rugosa*) males interacted primarily at home range
 edges, presumably driving territorial behaviour [@Spiegel_2018]. Incorporating
 movement ecology within a multilayer network framework is a logical next step
 for a burgeoning field. Importantly, the technological advancements in
-biologging and wildlife tracking technology <!-- TODO: fix-->[@Border_2020] have enabled this
+biologging and wildlife tracking technology <!-- TODO: fix-->[@Borger_2020] have enabled this
 unique opportunity to integrate movement and habitat in multilayer networks to
 answer complex questions about animal socioecology.
 <!-- mov -->
