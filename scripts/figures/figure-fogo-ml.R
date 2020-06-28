@@ -121,7 +121,7 @@ nodesize <- 3
         strip.background = element_rect(fill = NA, color = NA),
         strip.text = element_text(size = 14),
         panel.spacing = unit(0, "lines")) +
-    xlab('Temporal Window')
+    xlab('Time Window')
 )
 
 # Number of individuals
