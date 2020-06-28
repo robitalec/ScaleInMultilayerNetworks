@@ -473,56 +473,39 @@ indicating its importance in caribou sociality.
 
 
 <!-- temp -->
-The emergent relationship between habitat and sociality has been explored by the
-temporal distribution and phenology of resources and use of social information. 
 <!-- TODO: results 
 
-Edge overlap
-was higher during fall, winter and spring (approximately October - June) than in
-summer (approximately June - October)  (Figure \@ref(fig:temp) A). Similarly,
-individual graph strength was also higher in these periods (Figure
-\@ref(fig:temp) C). These periods of increased sociality correspond to seasons of
-heterogeneous resource availability [Peigner_2019]. 
 
-By explicitly considering
-the temporal context of social interactions in separate layers, multilayer
-networks provide a detailed and dynamic perspective of animal social networks.
 In addition, this could be extended using time-aggregated networks and a
 moving-window approach to inform the temporal scale including time window size
 and sampling effort [@Farine_2017; @Bonnell_2020]. 
 -->
-
-For
-example, cougar (*Puma concolor*) home ranges overlapped more in regions with
-high hunting opportunity, a proxy for resource richness [@Elbroch_2015]. 
-
-Bison
-(*Bison bison*) showed stronger habitat selection in larger groups, and
-avoidance of predation risk was a main factor contributing to their habitat
-selection [@Fortin_2009]. These examples, comparing sociality and habitat
-selection across spatial and temporal contexts, are implicitly multilayer
-analyses.
-
-
-
-
-<!-- nobs -->
-It is crucial to include sufficient data within sampling periods or time windows
-to construct robust networks <!--TODO check--> [@Farine_2017; Proskurnikov_2017]. To test the
-influence of data quantity on multilayer networks, we generate multilayer networks
-using a subset of observations. Variance decreased across all
-network metrics in all three habitat layers with increasing number of
-observations. Individual graph strength showed high variability at low number of
-observations, while edge overlap and multidegree increased sharply. After
-approximately 200 observations, the rate of change for all metrics decreased and
-and graph strength remained relatively static, while edge overlap and
-multidegree continued to increase slowly. As more observations were added, rarer
+The emergent relationship between habitat and sociality has been explored by the
+temporal distribution and phenology of resources and use of social information. 
+We found increased edge overlap in fall, winter and spring (approximately October - 
+June) than in summer (approximately June - October) (Figure \@ref(fig:temp) A). 
+Similarly, individual graph strength was also higher in these periods 
+(Figure \@ref(fig:temp) C). These periods of increased sociality correspond 
+to seasons of heterogeneous resource availability [Peigner_2019]. By explicitly 
+considering the temporal context of social interactions in separate layers, multilayer
+networks provide a detailed and dynamic perspective of animal social networks.
+For example, female mandrill (*Mandrillus sphinx*) sociality is more completely
+represented using temporal multilayer networks than aggregated networks 
+[@Pereira_2020]. Evans et al. [-@Evans_2020]
+observed seasonal differences in the social structure of mice 
+(*Mus musculus domesticus*) related to temperature and breeding activity. 
+Finally, it is crucial to include sufficient data within sampling periods or time windows
+to construct robust networks [@Farine_2017; Proskurnikov_2017]. We found
+variance decreased in edge overlap and multidegree across habitat layers as well
+as in graph strength within habitat layers with increasing number of 
+observations (Figure \@ref(fig:nobs)). As more observations were added, rarer
 relationships were recorded revealing the value of this form of sensitivity
-analysis. Finally, due to the autocorrelated nature of biologging data it is
-essential to ensure social association data area non-randomly distributed
-[@Farine_2017b].
-<!-- nobs -->
+analysis. 
 
+
+<!-- Finally, due to the autocorrelated nature of biologging data it is -->
+<!-- essential to ensure social association data area non-randomly distributed -->
+<!-- [@Farine_2017b]. -->
 
 <!-- conclusion -->
 Recognition of scale as a fundamental concept in ecology [@Levin_1992] has lead
