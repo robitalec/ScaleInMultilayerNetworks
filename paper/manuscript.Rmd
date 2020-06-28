@@ -597,11 +597,10 @@ between discrete temporal windows. Changing social phenotypes over ontogeny can
 affect fitness [@Berger_2015; @Brent_2017]. Individuals progress through
 development at different rates [@Tarka_2018] and this variation can complicate
 the selection of time windows. Considering fine temporal scales provides insight
-across developmental stages that may otherwise be missed [@Turner_2017]. Thus,
+across developmental stages that may otherwise be missed [@Turner_2020]. Thus,
 it is critical to carefully consider the effect of scale on the relationship
 between an individual’s social network position and fitness using a temporal
 scale based on the hypotheses being tested and logistical constraints.
-
 
 
 # Box 2 
