@@ -424,35 +424,32 @@ or hidden Markov Models see @Muller_2018; @Jones_2020].
 Habitat selection, the use of available resources or landscape features by
 animals [@Manly_1993; @Boyce_1999], is a scale-dependent process [@Mayor_2009].
 Social structure and habitat selection are intimately related and individuals
-must share space to interact [@Webber_2018]. 
-
-We found edge overlap was stable in open and forest layers but decreasing in 
-foraging layers with increasing spatial scale (Figure \@ref(fig:lcres) D).
-Graph strength had greater individual variation in open and foraging layers than
-in forest layers (Figure \@ref(fig:lcres) E). We observed a decrease in 
-the proportion of relocations in foraging habitat with increasing spatial
-resolution (14.5% at 30 m - <2% at 1000 m). As the foraging layer  
-had similar edge overlap and graph strength as the open layer at 30 m spatial 
-resolution despite having lower abundance on the landscape (foraging: 12.8%, 
-open: 36.9%), this result highlights the importance of considering
-spatial scale when including habitat in multilayer networks. Johnson 
-[-@Johson_1980] identified four
-orders of habitat selection: (1) the geographical range of a species, (2) the
-home range of an individual, the (3) habitat patches within the home range and
-(4) specific resources within a habitat patch. Kie et al. [-@Kie_2002] found
-that, independently, third order of selection was insufficient for capturing
-landscape attributes selected for by mule deer (*Odocoileus hemionus*), at a
-scale larger than their home range size. Scales of habitat selection could be
-relevant for multilayer networks and our integration of habitat within a
-multilayer context could be an important first step (see Figure
-\@ref(fig:lcres)). Specifically, if individuals select habitats at the home
-range scale, it may be relevant to assess social structure using home
-range overlap. By contrast, in cases where individuals
-select habitats at the patch-scale, fine-scale measures of sociality may be more
-relevant. Moving past this hierarchical perspective, Mayor et al. [-@Mayor_2007]
-emphasized the importance of considering a broad continuum of scales to reveal
-scale-dependent selection and avoid the bias of predefined scales assumed to be
-associated with certain behaviours.
+must share space to interact [@Webber_2018]. We found edge overlap was stable in
+open and forest layers but decreasing in foraging layers with increasing spatial
+scale (Figure \@ref(fig:lcres) D). Graph strength had greater individual
+variation in open and foraging layers than in forest layers (Figure
+\@ref(fig:lcres) E). We observed a decrease in the proportion of relocations in
+foraging habitat with increasing spatial resolution (14.5% at 30 m - <2% at 1000
+m). As the foraging layer had similar edge overlap and graph strength as the
+open layer at 30 m spatial resolution despite having lower abundance on the
+landscape (foraging: 12.8%, open: 36.9%), this result highlights the importance
+of considering spatial scale when including habitat in multilayer networks.
+Johnson [-@Johson_1980] identified four orders of habitat selection: (1) the
+geographical range of a species, (2) the home range of an individual, the (3)
+habitat patches within the home range and (4) specific resources within a
+habitat patch. Kie et al. [-@Kie_2002] found that, independently, third order of
+selection was insufficient for capturing landscape attributes selected for by
+mule deer (*Odocoileus hemionus*), at a scale larger than their home range size.
+Scales of habitat selection could be relevant for multilayer networks and our
+integration of habitat within a multilayer context could be an important first
+step (see Figure \@ref(fig:lcres)). Specifically, if individuals select habitats
+at the home range scale, it may be relevant to assess social structure using
+home range overlap. By contrast, in cases where individuals select habitats at
+the patch-scale, fine-scale measures of sociality may be more relevant. Moving
+past this hierarchical perspective, Mayor et al. [-@Mayor_2007] emphasized the
+importance of considering a broad continuum of scales to reveal scale-dependent
+selection and avoid the bias of predefined scales assumed to be associated with
+certain behaviours.
 <!-- spatial -->
 
 
