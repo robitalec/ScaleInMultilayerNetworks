@@ -452,7 +452,7 @@ m). As the foraging layer had similar edge overlap and graph strength as the
 open layer at 30 m spatial resolution despite having lower abundance on the
 landscape (foraging: 12.8%, open: 36.9%), this highlights the importance
 of considering spatial scale when including habitat in multilayer networks.
-Johnson [-@Johson_1980] identified four orders of habitat selection: (1) the
+Johnson [-@Johnson_1980] identified four orders of habitat selection: (1) the
 geographical range of a species, (2) the home range of an individual, the (3)
 habitat patches within the home range and (4) specific resources within a
 habitat patch. Kie et al. [-@Kie_2002] found that, independently, third order of
