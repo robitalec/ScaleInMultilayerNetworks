@@ -318,18 +318,19 @@ habitat and corresponding low connectivity of individuals at higher land cover
 resolutions. Edge overlap decreased sharply between 30 m and 600 m in foraging
 layers, afterwards remaining stable to 1000 m (Figure \@ref(fig:lcres) D). In
 contrast, edge overlap was relatively consistent across land cover resolutions
-in forest and open layers (Figure \@ref(fig:lcres) D).  Graph strength was more
+in forest and open layers (Figure \@ref(fig:lcres) D). Graph strength was more
 variable within foraging habitat layers across land cover resolutions than open
 and forest habitat layers (Figure \@ref(fig:lcres) E). The proportion of
-relocations in forest (42.1% at 30 m - 48.2% at 1000 m) and open (43.3% at 30 m
-- 50.3% at 1000 m) habitats increased with increasing spatial resolution, while
-decreasing in foraging habitat (23.9% at 30 m - <2% at 1000 m).  <!-- TODO: 
-break up -->Overall, these
-results indicate the importance of matching land cover resolution to scale of
-habitat selection as well as ensuring the land cover product used has a resolution fine
-enough to detect landscape features and habitats relevant to study species, such
-as important patchy and rare habitats.
-
+relocations in forest (`r count[res == 30 & lc == 2, percent]`% at 30 m - 
+`r count[res == 1000 & lc == 2, percent]`% at 1000 m) and open 
+(`r count[res == 30 & lc == 1, percent]`% at 30 m - 
+`r count[res == 1000 & lc == 1, percent]`% at 1000 m) habitats increased 
+with increasing spatial resolution, while decreasing in foraging habitat 
+(`r count[res == 30 & lc == 3, percent]`% at 30 m
+- `r count[res == 1000 & lc == 3, percent]`% at 1000 m). These results 
+indicate the importance of matching land cover resolution to scale of
+habitat selection and choosing a land cover product with a resolution
+sufficient to detect less common habitats. 
 
 
 The temporal multilayer network indicated within-year time windows where social 
