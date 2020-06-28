@@ -89,21 +89,19 @@ spatial scales [@Luther_2009]. We posit that it is important to consider that
 animal behaviour within the social environment will be scale-dependent. 
 <!-- QW: I think this last sentence needs to be a bit stronger. Why is it important? -->
 
-Social interactions exists across both temporal and spatial scales [@Whitehead_2008]. For
-example, grooming requires close spatial proximity between conspecifics and
-occurs over brief time periods [e.g. @Carter_2015], whereas social associations
-over long time periods 
-represent shared space use by members of the same social group [Figure
-\@ref(fig:spacetime), @Franks_2009]. Individuals must share space to 
-interact or associate and thus have overlapping
-home ranges [@Vander_2014]. Home
-range overlap is an example of how animals share space over coarser spatial and
-temporal scales <!-- TODO to create their social environment -->[e.g. @Piza_Roca_2018]. Although the social environment
-clearly scales spatially and temporally, it remains unclear whether coarser
-scales of social interactions, such as social association and home range overlap, vary
-predictably [@Castles_2014; @Farine_2015a]. 
-We therefore define social scale as the explicit definition 
-and measurement of social relationships [@Farine_2015a]. 
+Social interactions exists across both temporal and spatial scales
+[@Whitehead_2008]. For example, grooming requires close spatial proximity
+between conspecifics and occurs over brief time periods [e.g. @Carter_2015],
+whereas social associations over long time periods represent shared space use by
+members of the same social group [Figure \@ref(fig:spacetime), @Franks_2009].
+Individuals must share space to interact or associate and thus have overlapping
+home ranges [@Vander_2014]. Home range overlap is an example of how animals
+share space over coarser spatial and temporal scales [e.g. @Piza_Roca_2018].
+Although the social environment clearly scales spatially and temporally, it
+remains unclear whether coarser scales of social interactions, such as social
+association and home range overlap, vary predictably [@Castles_2014;
+@Farine_2015a]. We therefore define social scale as the explicit definition and
+measurement of social relationships [@Farine_2015a].
 
 
 Social network analysis is a well-developed tool used to measure the
@@ -122,8 +120,8 @@ consider social systems across scale-dependent contexts [@Pilosof_2017].
 Multilayer networks are composed of multiple layers, each representing (i)
 different classes of individuals, e.g. male or female, (ii) types of behaviours,
 e.g. grooming, travelling, or foraging, (iii) spatial areas, e.g. local or
-regional, (iv) or temporal windows, e.g. daily or seasonal 
-[@Kivela_2014; @Porter_2018]. Multilayer networks are relatively novel to studies of animal
+regional, (iv) or temporal windows, e.g. daily or seasonal [@Kivela_2014;
+@Porter_2018]. Multilayer networks are relatively novel to studies of animal
 behaviour [@Silk_2018; @Finn_2019], although they have been used to describe
 multidimensional human social systems, complex transportation networks, and
 neural networks [@Kivela_2014]. Scale within multilayer social networks remains
@@ -194,7 +192,7 @@ mammals, the ‘chain rule’ is used for group assignment [@Croft_2008]. For GP
 data, the chain rule is applied by assigning a group identifier to the union of
 buffered GPS fixes at each time step. As such, individuals in a group are within
 the social distance threshold of at least one other though not necessarily all
-other individuals [@Robitaille_2019]. <!-- TODO: check jwt comment--> Group assignment based on the chain rule
+other individuals [@Robitaille_2019]. Group assignment based on the chain rule
 has previously been applied to caribou using a temporal threshold of 5 minutes
 and a social distance threshold of 50 m [@Peignier_2019; @Lesmerises_2018]. In
 all networks, individual caribou were represented as nodes and associations between
@@ -306,8 +304,8 @@ increased sharply between 5 m and 100 m in all three habitat classes followed by
 a plateau in the rate of increase after 100 m (Figure \@ref(fig:socres)). These
 results suggest the optimal social scale at which groups should be assigned is
 between ~20 - 100 m based on the rate at which variance in graph strength
-decreased. GPS data allows [e.g. from this study and @Peignier_2019; @Lesmerises_2018] 
-us to confirm the use of 50 m buffer that has long been used
+decreased. GPS data allows [e.g. from this study and @Peignier_2019;
+@Lesmerises_2018] us to confirm the use of 50 m buffer that has long been used
 for studies in the field [@Lingle_2003; @Clutton_1982].
 
 
@@ -331,33 +329,29 @@ habitat selection and choosing a land cover product with a resolution
 sufficient to detect less common habitats. 
 
 
-The temporal multilayer network indicated within-year time windows where social 
-network metrics increased. Edge overlap was higher in time windows 1, 6-11 and 
-15-20 than in time windows 2-5 and 12-15 
-(Figure \@ref(fig:temp) A). Time windows of higher edge overlap, between 
-approximately October and June, also had higher graph strength 
-compared to time windows of lower edge overlap, between approximately June 
-and October (Figure \@ref(fig:temp) C). Graph strength peaked across the time 
-series between January 2018 and April 2018. 
-These results suggest that ordinal multilayer networks can effectively 
-capture discrete time windows of aggregation and dissaggregation related 
-to resource availability, and highlight the importance of carefully 
-selecting the temporal scale of analysis. <!-- TODO see comment-->
+The temporal multilayer network indicated within-year time windows where social
+network metrics increased. Edge overlap was higher in time windows 1, 6-11 and
+15-20 than in time windows 2-5 and 12-15 (Figure \@ref(fig:temp) A). Time
+windows of higher edge overlap, between approximately October and June, also had
+higher graph strength compared to time windows of lower edge overlap, between
+approximately June and October (Figure \@ref(fig:temp) C). Graph strength peaked
+across the time series between January 2018 and April 2018. These results
+highlight the importance of carefully selecting the temporal scale of analysis
+to effectively capture within- and across-year variation in sociality.
 
 
 As the number of observations used to generate multilayer networks increased,
-individuals became more connected and variance in metrics decreased.
-Edge overlap increased across all three habitat
-layers with increasing number of observations (Figure \@ref(fig:nobs) B).
-Similarly, multidegree for all individuals increased quickly between 10 and 100
-observations, and continued to increase until 1000 observations (Figure
-\@ref(fig:nobs) C). Graph strength across individuals in all three habitat layers was highly
-variable at low number of observations and variance decreased after ~100 observations
-(Figure \@ref(fig:nobs) A). <!--TODO double check-->Since the variance in these 
-multilayer metrics decreases after a certain number
-of observations, this sensitivity method could be useful for determining the
-number of observations necessary for sufficiently describing social dynamics
-across contexts.
+individuals became more connected and variance in metrics decreased. Edge
+overlap increased across all three habitat layers with increasing number of
+observations (Figure \@ref(fig:nobs) B). Similarly, multidegree for all
+individuals increased quickly between 10 and 100 observations, and continued to
+increase until 1000 observations (Figure \@ref(fig:nobs) C). Graph strength
+across individuals in all three habitat layers was highly variable at low number
+of observations and variance decreased after ~100 observations (Figure
+\@ref(fig:nobs) A). Since the variance in these multilayer metrics decreases
+after a certain number of observations, this sensitivity method could be useful
+for determining the number of observations necessary for sufficiently describing
+social dynamics across contexts.
 
 
 An illustrative multilayer network was generated, informed by previous social, 
@@ -398,13 +392,6 @@ than between approximately June - October
 
 
 # Discussion
-<!--
-1. intro
-TODO: somewhere ref:ml
--->
-
-
-<!-- intro -->
 Animal social systems are characterized and influenced by scale. Three types of
 scale to consider are social, spatial, and temporal scale. Social scale defines
 the type and measurement of social relationships and directly impacts observed
@@ -415,10 +402,8 @@ social processes. By partitioning social associations into discrete contexts
 using multilayer networks, we highlight the influence of social, spatial and
 temporal scales on animal social systems, demonstrating the importance of
 considering biologically relevant and robust scales.
-<!-- intro -->
 
 
-<!-- social scale -->
 Social scale is an essential consideration for social network analysis
 [@Castles_2014; @Carter_2015; @Farine_2015a]. For example, networks can be
 constructed based on fine-scale social interactions (e.g. grooming or
@@ -435,10 +420,8 @@ scale. An extension of this analysis could be to incorporate behavioural states
 to explore the influence of social scale on patterns of association or
 interaction across habitat and behavioural layers [e.g. using focal observations
 or hidden Markov Models see @Muller_2018; @Jones_2020].
-<!-- social scale -->
 
 
-<!-- spatial -->
 Habitat selection, the use of available resources or landscape features by
 animals [@Manly_1993; @Boyce_1999], is a scale-dependent process [@Mayor_2009].
 Social structure and habitat selection are intimately related and individuals
@@ -468,10 +451,8 @@ past this hierarchical perspective, Mayor et al. [-@Mayor_2007] emphasized the
 importance of considering a broad continuum of scales to reveal scale-dependent
 selection and avoid the bias of predefined scales assumed to be associated with
 certain behaviours.
-<!-- spatial -->
 
 
-<!-- temp -->
 The emergent relationship between habitat and sociality has been explored by the
 temporal distribution and phenology of resources and use of social information.
 We found increased edge overlap and graph strength in fall, winter and spring
@@ -493,15 +474,8 @@ observations, we found variance decreased in edge overlap and multidegree across
 habitat layers as well as in graph strength within habitat layers (Figure
 \@ref(fig:nobs)). As more observations were added, rarer relationships were
 recorded demonstrating the value of this form of sensitivity analysis.
-<!-- temp -->
 
 
-<!-- Finally, due to the autocorrelated nature of biologging data it is -->
-<!-- essential to ensure social association data area non-randomly distributed -->
-<!-- [@Farine_2017b]. -->
-
-
-<!-- conclusion -->
 Recognition of scale as a fundamental concept in ecology [@Levin_1992] has lead
 to an increased attention to the scale at which ecological processes are
 observed [@Schneider_2001; @Chave_2013]. Recent technological advances in
@@ -515,12 +489,13 @@ context of observed animal behaviour as the scales we chose to explore, e.g.,
 number of observations and sociality across space and time, are ones that have
 also traditionally been done in ethology.
 
+
 Multilayer networks remain a nascent but powerful tool in animal behavioural
 ecology and we introduce concepts of scale within the existing multilayer
-framework. Silk et al. [-@Silk_2018] summarized some key multilayer questions in animal
-behaviour research  and based on our case study of scale in the context of
-multilayer networks, we conclude by posing an additional set of questions on the
-future of multilayer networks through the lens of scale and behavioural,
+framework. Silk et al. [-@Silk_2018] summarized some key multilayer questions in
+animal behaviour research  and based on our case study of scale in the context
+of multilayer networks, we conclude by posing an additional set of questions on
+the future of multilayer networks through the lens of scale and behavioural,
 landscape, and spatial ecology:
 
 1. How do social phenotypes vary across social, spatial, and temporal scales and
@@ -536,12 +511,20 @@ visual, or chemotaxis, influence the social environment? What is the role of
 memory, and by extension social and spatial cognition, as animals navigate their
 environment and make decisions about where to move next?
 
+
 We show that multilayer social networks are (1) scale-dependent, and (2) useful
 for identifying spatially or temporally specific social associations. When
 employing multilayer networks, it is critical to consider a broad continuum of
 social, spatial and temporal scales to fully capture ecological processes and to
 establish a clear link between biologically relevant scales of observation.
-<!-- conclusion -->
+
+
+
+
+# Box 1
+<!-- Finally, due to the autocorrelated nature of biologging data it is -->
+<!-- essential to ensure social association data area non-randomly distributed -->
+<!-- [@Farine_2017b]. -->
 
 
 <!-- TODO include mov elsewhere 
@@ -554,9 +537,6 @@ movement layers could further illuminate the role of movement as a driver of the
 social and spatial environments an individual experiences [@Webber_2018]. 
 -->
 
-
-
-# Box 1
 Social phenotype has been increasingly linked to individual fitness, including
 in primates [@Brent_2017; @Thompson_2019], dolphins [@Stanton_2012;
 @Stanton_2011], and birds [@McDonald_2007; @Royle_2012]. Social and temporal
