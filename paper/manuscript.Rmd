@@ -450,7 +450,7 @@ home range scale, it may be relevant to assess social structure at
 the home range overlap scale in a multilayer framework. By contrast,
 in cases where individuals select habitats at the patch-scale, 
 more fine-scale measures of sociality may be relevant. Moving past this hierarchical
-perspective, Mayor (2007) emphasized the importance of considering a broad
+perspective, Mayor et al. [-@Mayor_2007] emphasized the importance of considering a broad
 continuum of scales to reveal scale-dependent selection and avoid the bias of
 predefined scales assumed to be associated with certain behaviours.
 
