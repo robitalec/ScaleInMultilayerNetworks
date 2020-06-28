@@ -367,7 +367,9 @@ forest: 0.11, open: 0.23). There was a seasonal difference in association,
 individuals were more connected between approximately October - June 
 (mean graph strength in time windows; 2: 0.37, 4: 0.18) 
 than between approximately June - October 
-(mean graph strength in time windows; 1: 0.04, 3: 0.03). 
+(mean graph strength in time windows; 1: 0.04, 3: 0.03). The time windows
+were aggregated from the finer scale time windows presented above (time window 1:
+2-5, time window 2: 6-11, time window 3: 12-15, time window 4: 16-20).
 
 
 <!-- Figure: metrics by social scale -->
