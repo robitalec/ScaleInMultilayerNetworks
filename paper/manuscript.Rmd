@@ -33,11 +33,11 @@ options(digits = 2, round = 2)
 DT <- readRDS('../data/derived-data/01-sub-fogo-caribou.Rds')
 nobs <- readRDS('../data/derived-data/05-number-of-observations.Rds')
 count <- readRDS('../data/derived-data/02-landcover-scale-count.Rds')
+count[lc %in% c(1, 2, 3), percent := N / sum(N) * 100, by = res]
 timedefs <- fread('../data/supp-data/timecut-defs.csv')
 timedefs[, c('mindate', 'maxdate') := .(as.IDate(mindate), as.IDate(maxdate))]
 ```
 
-\newpage
 
 # Abstract
 <!-- Scale remains a foundational concept in ecology. Social processes range from 
