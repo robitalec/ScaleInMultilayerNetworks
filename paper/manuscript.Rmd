@@ -6,9 +6,9 @@ date: |
   | ^2^Cognitive and Behavioural Ecology Interdisciplinary Program, Memorial University of Newfoundland 
   | \*Corresponding author: Alec L. Robitaille (robit.alec@gmail.com)
 output:
-   bookdown::github_document2: default
-   # bookdown::word_document2:
-   #   reference_docx: template.docx
+   # bookdown::github_document2: default
+   bookdown::word_document2:
+     reference_docx: template.docx
 knit: (function(inputFile, encoding) {
   rmarkdown::render(input = inputFile, encoding = encoding, output_format = "all") })
 bibliography: ../references/knitcite.bib
@@ -53,7 +53,8 @@ spatial and temporal contexts of animal social networks.
 Scale remains a foundational concept in ecology. Spatial scale, for instance,
 has become a central consideration in the way we understand landscape ecology
 and animal space use. Meanwhile, social processes can range from fine-scale
-interactions to co-occurrence and overlapping home ranges. <!-- and vary within
+interactions to co-occurrence and overlapping home ranges. Lastly,
+sociality can vary within and across seasons. <!-- and vary within
 and across seasons.--> Multilayer networks promise the explicit integration of
 the social, spatial and temporal contexts. Given the complex interplay of
 sociality and animal space use in heterogeneous landscapes, there remains an
