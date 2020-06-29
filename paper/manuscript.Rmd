@@ -510,21 +510,6 @@ establish a clear link between biologically relevant scales of observation.
 
 
 # Box 1
-<!-- Finally, due to the autocorrelated nature of biologging data it is -->
-<!-- essential to ensure social association data area non-randomly distributed -->
-<!-- [@Farine_2017b]. -->
-
-
-<!-- TODO include mov elsewhere 
-Social processes, movement decisions, and space use are inextricably linked and
-multilayer networks represent a potential analytical framework for linking these
-processes [@Mourier_2019]. 
-
-Integrating habitat-specific
-movement layers could further illuminate the role of movement as a driver of the
-social and spatial environments an individual experiences [@Webber_2018]. 
--->
-
 Social phenotype has been increasingly linked to individual fitness, including
 in primates [@Brent_2017; @Thompson_2019], dolphins [@Stanton_2012;
 @Stanton_2011], and birds [@McDonald_2007; @Royle_2012]. Social and temporal
@@ -532,25 +517,25 @@ scales have emerged as important variables for understanding the fitness
 consequences of social network position [@Almeling_2016; @Berger_2015;
 @Brent_2017; @Holekamp_2011].
 
-Varying social scales can have different fitness repercussions for individuals.
+Varying social scales can have different fitness outcomes for individuals.
 Rhesus macaques (*Macaca mulatta*) had higher survivorship when they had fewer
-but stronger and more stable social associates and grooming partners rather than
-simply more associates [@Ellis_2019].  It is a common trope that individuals
+stable social associates and grooming partners compared to many weak social 
+associates [@Ellis_2019]. Typically individuals
 must be associating to interact, and many studies assume that proximity is proxy
-for interacting [@Farine_2015a]. For instance, baboons must be within proximity
-of each other for grooming yet other animals interact using communication
-such as long-distance vocalization or olfactory signals 
-[@Carter_2015]. It is possible to record social interactions that do not require
+for interacting [@Farine_2015a]. For instance, baboons (*Papio* spp.) must be 
+within close proximity of each other for grooming yet, other forms
+of social interaction may occur over long-distances based on vocal or
+olfactory signals [@Carter_2015]. It is possible to record social interactions that do not require
 proximity using, for example, microphone arrays to construct long-distance
 communication networks [@Snijders_2017].
 
-Multilayer networks enable researchers to look at similarities and differences
-between discrete temporal windows. Changing social phenotypes over ontogeny can
+Multilayer networks enable researchers to investigate similarities and differences
+in social processes between discrete temporal windows. Changing social phenotypes over ontogeny can
 affect fitness [@Berger_2015; @Brent_2017]. Individuals progress through
 development at different rates [@Tarka_2018] and this variation can complicate
 the selection of time windows. Considering fine temporal scales provides insight
-across developmental stages that may otherwise be missed [@Turner_2020]. Thus,
-it is critical to carefully consider the effect of scale on the relationship
+across developmental stages that may otherwise be missed [@Turner_2020]. It remains
+critical to carefully consider the effect of scale on the relationship
 between an individual’s social network position and fitness using a temporal
 scale based on the hypotheses being tested and logistical constraints.
 
