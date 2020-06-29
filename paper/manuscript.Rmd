@@ -114,7 +114,7 @@ animal social systems.
 
 We examined scale-dependent multilayer networks motivated by behavioural,
 landscape, and spatial ecology to and applied this framework to caribou
-(*Rangifer tarandus*) on Fogo Island, Newfoundland, Canada. First, we test to
+(*Rangifer tarandus*). First, we test to
 what degree the social scale of relationships, spatial scale of landscapes, and
 temporal scale of analysis influences our ability to interpret complex social
 systems. Second, we address how variation in the social, spatial, and temporal
@@ -137,11 +137,11 @@ result, caribou tend to occupy and re-use craters once they are established.
 Importantly, craters exist on the landscape at multiple scales: the crater scale
 (a single crater), the feeding area scale (multiple craters in close proximity),
 and the winter range scale (all craters within an individual’s range)
-[@Mayor_2009]. Access to forage is therefore heterogeneous in winter depending
+[@Mayor_2009]. Access to forage is therefore heterogeneous in winter and depends
 on snow cover and distribution of craters on the landscape.
 
 ## Caribou location data
-We used GPS location data collected from Fogo Island caribou between 
+We used GPS location data collected from caribou on Fogo Island, Newfoundland, Canada between 
 `r DT[, format(min(datetime), '%B %Y')]` and `r DT[, format(max(datetime), '%B %Y')]`. 
 Adult female caribou were immobilized and fitted with global positioning
 system (GPS) collars (Lotek Wireless Inc., Newmarket, ON, Canada, GPS4400M
@@ -169,9 +169,7 @@ and anthropogenic. Water habitat was excluded from all subsequent analyses.
 ### Network layer construction
 We generated proximity-based social networks using the R package `spatsoc`
 [@Robitaille_2019] in `r substr(version$version.string, 1, 15)` [@R_Core_Team]. 
-<!--We assumed
-individuals were associating if simultaneous GPS fixes were within the spatial
-distance threshold of one another.--> Typically for ungulates and other gregarious
+Typically for ungulates and other gregarious
 mammals, the ‘chain rule’ is used for group assignment [@Croft_2008]. For GPS
 data, the chain rule is applied by assigning a group identifier to the union of
 buffered GPS fixes at each time step. As such, individuals in a group are within
@@ -260,7 +258,7 @@ multidegree across time windows.
 Studies of social network analysis vary in the number and frequency of
 observations as well as the data collection technique used to generate networks,
 ranging from directly observed to remotely sensed [@Davis_2018; @Webber_2019].
-Remotely sensed GPS data is commonly collected at a fixed rate, e.g. every $x$
+Remotely sensed GPS data are commonly collected at a fixed rate, e.g. every $x$
 minutes or hours, continuously throughout the study period. Fix rate is a
 reflection of number of observations an individual would have been observed and
 recorded in traditional ethological studies. To investigate the influence of
