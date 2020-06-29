@@ -450,7 +450,7 @@ temporal distribution and phenology of resources and use of social information.
 We found increased edge overlap and graph strength in fall, winter and spring
 (approximately October - June) than in summer (approximately June - October)
 (Figure \@ref(fig:temp) A, C). These periods of increased sociality correspond
-to seasons of heterogeneous resource availability [Peignier_2019]. This analysis
+to seasons of heterogeneous resource availability [@Peignier_2019]. This analysis
 could be extended using time-aggregated networks and a moving-window approach for
 informing time window size and sampling effort [@Farine_2017; @Bonnell_2020]. By
 explicitly considering the temporal context of social interactions in separate
