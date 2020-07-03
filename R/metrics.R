@@ -68,28 +68,6 @@ layer_neighbors <- function(DT, id, splitBy = NULL) {
 
 
 
-#' Connective Redundancy
-#'
-#' When connective redundancy is 0, all edges on all layers 
-#' are necessary to preserve the social ties
-#' 
-#' DT must be result of `layer_neighbors()` and `multidegree` function, having columns "neigh" 
-#' and "multideg"
-#' 
-#' @param DT 
-#' @return
-#' @export
-#'
-#' @examples
-connective_redudancy <- function(DT) {
-  # TODO: Check cols
-  # TODO: warn overwrite 
-  
-  DT[, connredund := 1 - (neigh / multideg)][]
-}
-
-
-
 #' Multidegree
 #'
 #' @param DT 
