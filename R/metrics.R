@@ -160,9 +160,6 @@ property_matrix <- function(DT, id, metric, by, layer = 'layer') {
 
 
 
-
-
-
 #' Edge overlap
 #'
 #' @param graphLs 
@@ -172,10 +169,6 @@ property_matrix <- function(DT, id, metric, by, layer = 'layer') {
 #'
 #' @examples
 edge_overlap <- function(edges) {
-  # count number of unique edges
-  # for each unique edge, count number of layers it exists on / total
-  # average all overlap 
-  
   uniqueEdges <- edges[, uniqueN(dyadID)]
   uniqueLayers <- edges[, uniqueN(layer)]
   
