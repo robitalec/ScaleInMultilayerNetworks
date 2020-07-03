@@ -142,4 +142,11 @@ count[is.na(res), res := 30]
 saveRDS(out, 'data/derived-data/02-landcover-scale.Rds')
 saveRDS(count, 'data/derived-data/02-landcover-scale-count.Rds')
 
-# lapply(seq_along(lslc), function(r) writeRaster(lslc[[r]], paste0('data/derived-data/02-landcover-res-', names(lslc)[[r]], '.tif'), overwrite = TRUE))
+# lapply(seq_along(lslc),
+#        function(r)
+#          writeRaster(
+#            lslc[[r]],
+#            paste0('data/derived-data/02-landcover-res-',
+#                   names(lslc)[[r]], '.tif'),
+#            overwrite = TRUE
+#          ))
