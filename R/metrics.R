@@ -131,55 +131,6 @@ layer_strength <- function(graphLs) {
 
 
 
-#' Layer similarity
-#'
-#' @param matrices property matrices generated using `property_matrix`
-#' @param splitBy column indicating which groups to compare ensuring each group of rows = 2. 
-#' @param pattern 
-#'
-#' @return
-#' @export
-#'
-#' @examples
-layer_similarity <- function(matrices, pattern, splitBy) {
-  matrices[, layersim := {
-    stopifnot(nrow(.SD) == 2)
-    cors <- cor(t(.SD[1]), t(.SD[2]), use = 'complete.obs')
-  }, by = splitBy, .SDcols = patterns(pattern)]
-}
-
-
-
-#' Layer similarity - ordinal
-#'
-#' @inheritParams layer_similarity
-#' 
-#' Note: splitBy provided to layer_similariy_ordinal must be provided
-#' such that sort(unique()) returns the correct, ordinal levels
-#' (eg. as an integer)
-#'
-#' @return
-#' @export
-#'
-#' @examples
-layer_similarity_ordinal <- function(matrices, pattern, splitBy) {
-  ords <- sort(unique(matrices[[splitBy]]))
-  
-  lapply(ords, function(low) {
-    high <- if(low == max(ords)) low else ords[[which(ords == low) + 1]]
-    matrices[data.table::between(get(splitBy), low, high), 
-             layersim := {
-               fifelse(nrow(.SD) == 2,
-                       cor(t(.SD[1]), t(.SD[2]), use = 'na.or.complete'),
-                       NA_real_)
-             },
-             .SDcols = patterns(pattern)]
-  })
-  
-  matrices
-}
-
-
 #' Property Matrix
 #' 
 #' @param DT 
