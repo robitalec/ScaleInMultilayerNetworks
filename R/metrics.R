@@ -85,31 +85,6 @@ multi_degree <- function(DT, degree, id, splitBy) {
       .(multideg = sum(.SD[[1]])), .SDcols = degree, by = id]
   
   DT[md, multideg := multideg, on = id]
-  # DT[, multideg := sum(.SD),
-  #    .SDcol = degree,
-  #    by = c(id, splitBy)][]
-}
-
-
-#' Degree Deviation
-#'
-#' @param DT 
-#' @param degree 
-#' @param splitBy this is not the splitBy (eg season)
-#' @param id 
-#'
-#' @return
-#' Column added named degdev
-#' @export
-#'
-#' @examples
-deviation_degree <- function(DT, degree, id, splitBy = NULL) {
-  # TODO: check columns
-  # TODO: warn overwrite
-  
-  DT[, degdev := sd(.SD[[1]]),
-     .SDcol = degree,
-     by = c(id, splitBy)][]
 }
 
 
