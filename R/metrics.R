@@ -68,33 +68,11 @@ layer_neighbors <- function(DT, id, splitBy = NULL) {
 
 
 
-#' Connective Redundancy
-#'
-#' When connective redundancy is 0, all edges on all layers 
-#' are necessary to preserve the social ties
-#' 
-#' DT must be result of `layer_neighbors()` and `multidegree` function, having columns "neigh" 
-#' and "multideg"
-#' 
-#' @param DT 
-#' @return
-#' @export
-#'
-#' @examples
-connective_redudancy <- function(DT) {
-  # TODO: Check cols
-  # TODO: warn overwrite 
-  
-  DT[, connredund := 1 - (neigh / multideg)][]
-}
-
-
-
 #' Multidegree
 #'
 #' @param DT 
 #' @param degree 
-#' @param splitBy this is not the splitBy (eg season)
+#' @param splitBy
 #' @param id 
 #'
 #' @return
@@ -102,35 +80,11 @@ connective_redudancy <- function(DT) {
 #' @export
 #'
 #' @examples
-multi_degree <- function(DT, degree, id, splitBy = NULL) {
-  # TODO: check columns
-  # TODO: warn overwrite
+multi_degree <- function(DT, degree, id, splitBy) {
+  md <- DT[, unique(.SD), .SDcols = c(degree, id, splitBy)][, 
+      .(multideg = sum(.SD[[1]])), .SDcols = degree, by = id]
   
-  DT[, multideg := sum(.SD),
-     .SDcol = degree,
-     by = c(id, splitBy)][]
-}
-
-
-#' Degree Deviation
-#'
-#' @param DT 
-#' @param degree 
-#' @param splitBy this is not the splitBy (eg season)
-#' @param id 
-#'
-#' @return
-#' Column added named degdev
-#' @export
-#'
-#' @examples
-deviation_degree <- function(DT, degree, id, splitBy = NULL) {
-  # TODO: check columns
-  # TODO: warn overwrite
-  
-  DT[, degdev := sd(.SD[[1]]),
-     .SDcol = degree,
-     by = c(id, splitBy)][]
+  DT[md, multideg := multideg, on = id]
 }
 
 
@@ -177,31 +131,13 @@ layer_strength <- function(graphLs) {
 
 
 
-#' Layer similarity
-#'
-#' @param matrices property matrices generated using `property_matrix`
-#' @param splitBy column indicating which groups to compare ensuring each group of rows = 2. 
-#' @param pattern 
-#'
-#' @return
-#' @export
-#'
-#' @examples
-layer_similarity <- function(matrices, pattern, splitBy) {
-  matrices[, layersim := {
-    stopifnot(nrow(.SD) == 2)
-    cors <- cor(t(.SD[1]), t(.SD[2]), use = 'complete.obs')
-  }, by = splitBy, .SDcols = patterns(pattern)]
-}
-
-
-
 #' Property Matrix
 #' 
 #' @param DT 
 #' @param id 
 #' @param layer 
 #' @param metric 
+#' @param by
 #'
 #' @return
 #' @references Bródka P, Chmiel A,Magnani M, Ragozini G. 2018 Quantifying layer
@@ -211,8 +147,50 @@ layer_similarity <- function(matrices, pattern, splitBy) {
 #' @export
 #'
 #' @examples
-property_matrix <- function(DT, id, layer, metric) {
-  data.table::dcast(DT, reformulate(id, response = layer), value.var = metric)
+property_matrix <- function(DT, id, metric, by, layer = 'layer') {
+  zzz <- DT[, list(list(data.table::dcast(
+    .SD,
+    reformulate(..id, response = ..layer),
+    value.var = ..metric
+  ))),
+  by = by][, data.table::rbindlist(V1, idcol = 'i', fill = TRUE)]
+  if(!is.null(by)) data.table::setnames(zzz, 'i', by)
+  zzz
 }
 
 
+
+#' Edge overlap
+#'
+#' @param graphLs 
+#'
+#' @return
+#' @export
+#'
+#' @examples
+edge_overlap <- function(edges) {
+  uniqueEdges <- edges[, uniqueN(dyadID)]
+  uniqueLayers <- edges[, uniqueN(layer)]
+  
+  edges[, edgeoverlap := .N / uniqueLayers, by = dyadID]
+  
+  edgeoverlapml <- unique(edges[, .(layer, dyadID, edgeoverlap)])[, mean(edgeoverlap)]
+  propedges <- edges[, uniqueN(dyadID) / uniqueEdges, by = layer]
+  
+  propedges[, .(layer, propedges = V1, edgeoverlap = edgeoverlapml)]
+}
+
+
+#' Edge overlap matrix
+#' 
+#' Layer A vs Layer B, count overlap
+#'
+#' @param edges 
+#'
+#' @return
+#' @export
+#'
+#' @examples
+edge_overlap_mat <- function(edges) {
+  crossprod(table(edges[, .(dyadID = unique(dyadID)), layer][, .(dyadID, layer)]))
+}

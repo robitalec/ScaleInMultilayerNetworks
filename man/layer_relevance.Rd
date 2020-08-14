@@ -15,6 +15,9 @@ layer_relevance(DT, id, splitBy)
 
 \item{var}{}
 }
+\value{
+
+}
 \description{
 Proportion of neighbours present on each layer.
 }

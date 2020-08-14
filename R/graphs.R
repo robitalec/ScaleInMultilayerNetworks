@@ -68,3 +68,34 @@ list_graphs <- function(netLs, mode = 'undirected', diag = FALSE, weighted = TRU
     weighted = weighted
   )
 }
+
+
+#' Edge lists
+#'
+#' @param edgeLs 
+#'
+#' @return
+#' @export
+#'
+#' @examples
+list_edges <- function(graphLs) {
+    edges <- data.table::rbindlist(lapply(graphLs, function(g) {
+      igraph::as_data_frame(g)
+    }), idcol = 'layer', fill = TRUE)
+    spatsoc::dyad_id(edges, 'from', 'to')
+    
+    edges
+}
+
+
+
+
+get_edgelist <- function(DT, group = 'group', id, datetime = 'datetime') {
+  all <- DT[, data.table::CJ(left = .SD[[1]], right = .SD[[1]])[left != right], 
+            by = group, .SDcols = id]
+  
+  spatsoc::dyad_id(all, 'left', 'right')
+  all[, nbydyad := seq.int(.N), by = c('group', 'dyadID')]
+  all[nbydyad == 1]
+}
+

@@ -4,7 +4,7 @@
 \alias{multi_degree}
 \title{Multidegree}
 \usage{
-multi_degree(DT, degree, id, splitBy = NULL)
+multi_degree(DT, degree, id, splitBy)
 }
 \arguments{
 \item{DT}{}
@@ -12,8 +12,6 @@ multi_degree(DT, degree, id, splitBy = NULL)
 \item{degree}{}
 
 \item{id}{}
-
-\item{splitBy}{this is not the splitBy (eg season)}
 }
 \value{
 Column added named multideg

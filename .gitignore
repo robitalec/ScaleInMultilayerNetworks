@@ -2,7 +2,14 @@
 .Rhistory
 .RData
 .Ruserdata
-paper/.~lock.table1.csv#
-data/
-paper/.~lock.manuscript.docx#
+
 .DS_Store
+.~lock*
+
+data/derived-data
+data/raw-data
+data/supp-data/*
+!data/supp-data/timecut-defs.csv
+.drake/
+paper/manuscript.html
+paper/supplement.html

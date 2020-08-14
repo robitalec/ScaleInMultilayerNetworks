@@ -9,6 +9,9 @@ connective_redudancy(DT)
 \arguments{
 \item{DT}{}
 }
+\value{
+
+}
 \description{
 When connective redundancy is 0, all edges on all layers 
 are necessary to preserve the social ties

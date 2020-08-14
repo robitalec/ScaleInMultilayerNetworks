@@ -13,6 +13,9 @@ list_nets(gbiLs, format = "GBI", ai = "SRI")
 
 \item{ai}{}
 }
+\value{
+
+}
 \description{
 Networks
 }

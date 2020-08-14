@@ -14,40 +14,15 @@ grep -rni 'paper/manuscript.Rmd' -e 'TODO' || true;
 #> R/etc.R:13:  # TODO: check that coordcols exist in DT and are length two
 #> R/metrics.R:85:  # TODO: Check cols
 #> R/metrics.R:86:  # TODO: warn overwrite 
-#> R/metrics.R:106:  # TODO: check columns
-#> R/metrics.R:107:  # TODO: warn overwrite
-#> R/metrics.R:128:  # TODO: check columns
-#> R/metrics.R:129:  # TODO: warn overwrite
-#> R/metrics.R:154:  # TODO: check for splitNeigh variable and neigh
-#> R/metrics.R:155:  # TODO: check overwrite
-#> scripts/1-data-prep.R:8:# TODO: timezones
-#> 42:interactions to co-occurrence to overlapping home ranges. <!-- TODO: add
-#> 131:<!-- TODO: we answer the first question in the discussion, but not the second-->
-#> 132:<!-- TODO: Webber reference should be 2018, but defaulting to 2017-->
-#> 136:<!-- TODO: units of spatial scale? --> 
-#> 137:<!-- TODO: citations? -->
-#> 229:<!-- TODO: expand + simplify + examples individual A, B etc --> 
-#> 305:<!-- TODO: Add intro/general to results?-->
-#> 380:<!-- TODO: I'm not sure this is relevant since this is the main way it
-#> 615:social connections (Figure \@ref(fig:socres)).<!--TODO: what??, while increasing temporal scale had little effect
-#> 672:<!-- TODO: point to figure 1 -->
-#> 704:<!-- TODO: weak -->
-#> 732:TODO: Schneider 2001, Levin og, 
-#> 776:<!-- TODO: In summary, -->
+#> R/metrics.R:129:  # TODO: check columns
+#> R/metrics.R:130:  # TODO: warn overwrite
+#> R/metrics.R:155:  # TODO: check for splitNeigh variable and neigh
+#> R/metrics.R:156:  # TODO: check overwrite
+#> scripts/plan.R:41:# TODO: fogo car ml
+#> scripts/plan.R:71:  # TODO: fogo car ml
+#> scripts/00-variables.R:2:# TODO: save as data
+#> scripts/figures/archive/08-plots.R:49:# TODO: fix
+#> scripts/01-data-prep.R:85:# TODO: drop if drop time sensitivity
+#> 166:[@Integrated_2013]<!--TODO: check ref-->. Available land cover classification
+#> 409:positions <!-- TODO JWT check --> [@Almeling_2016; @Berger_2015; @Brent_2017;
 ```
-
-## Info
-
-[Special Column
-info](https://academic.oup.com/CZ/pages/animal_social_system)
-
-### Deadlines
-
-  - ~~Abstract submission: 30 August 2019~~
-  - Manuscript submission: 31 January 2020
-  - Printing: June 2020
-
-### Guidelines
-
-[General Instructions
-page](https://academic.oup.com/cz/pages/General_Instructions)
