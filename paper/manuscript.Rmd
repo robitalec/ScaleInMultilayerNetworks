@@ -64,9 +64,9 @@ Rangifer, Social network analysis, Habitat selection, Landscape ecology, Space u
 \newpage
 
 # Introduction
-Our inference regarding the processes underlying ecological patterns
+Our inferences regarding the processes underlying ecological patterns
 are directly linked to the scale at which they are observed [@Levin_1992;
-@Allen_2015]. Animals are influenced across scales through ecological processes such as
+@Allen_2015]. Animals are influenced across scales by ecological processes such as
 trophic interactions, resource availability
 [@Legendre_1993; @Chave_2013], and global climate and productivity [@Field_2009].
 Multiscale ecology has been integrated into species distribution modelling
@@ -112,8 +112,8 @@ behaviour [@Silk_2018; @Finn_2019] and integrating scale within these
 remains an unexplored opportunity to develop novel understanding of
 animal social systems.
 
-We examined scale-dependent multilayer networks motivated by behavioural,
-landscape, and spatial ecology to and applied this framework to caribou
+We examined scale-dependent multilayer networks of behavioural,
+landscape, and spatial ecology and applied this framework to caribou
 (*Rangifer tarandus*). First, we test to
 what degree the social scale of relationships, spatial scale of landscapes, and
 temporal scale of analysis influences our ability to interpret complex social
@@ -131,7 +131,7 @@ developments and applications of scale in multilayer networks.
 ## Caribou socioecology
 Caribou are gregarious ungulates with fission-fusion dynamics [@Lesmerises_2018]
 that display temporal and spatial variation in social networks [@Peignier_2019].
-In winter, caribou dig holes, termed craters, to access forage beneath the snow
+Caribou dig holes, termed craters, in winter to access forage beneath the snow
 [@Bergerud_1974]. Cratering is presumed to be a costly behaviour, and as a
 result, caribou tend to occupy and re-use craters once they are established.
 Importantly, craters exist on the landscape at multiple scales: the crater scale
@@ -161,7 +161,7 @@ types into three categories using the R package `raster` [@Hijmans_2019]:
 foraging, forest, and open habitats. Foraging habitat consisted of lichen,
 forest habitat consisted of coniferous forest, conifer scrub, broad leaf forest,
 and mixed-wood forest, while open habitat consisted of wetland, rocky barrens,
-and anthropogenic. Water habitat was excluded from all subsequent analyses.
+and anthropogenic areas. Water was excluded from all subsequent analyses.
 
 
 ## Caribou multilayer social networks
@@ -223,7 +223,8 @@ across three habitat layers (foraging, forest, and open) for the entire study
 period. At the finest scale, individuals within 5 m of one another were
 considered in the same group, whereas at the coarsest scale, individuals within
 500 m of one another were considered in the same group. Increasing social
-distance threshold is a proxy for potential behavioural interactions that occur
+distance threshold is a proxy for potential behavioural interactions (eg. vocal communication)
+that occur
 across these distances. For every social distance threshold, we calculated
 individual graph strength within each habitat layer, and edge overlap and
 multidegree across habitat layers.
@@ -433,7 +434,7 @@ the patch-scale, fine-scale measures of sociality may be more relevant. Moving
 past this hierarchical perspective, Mayor et al. [-@Mayor_2007] emphasized the
 importance of considering a broad continuum of scales to reveal scale-dependent
 selection and avoid the bias of predefined scales assumed to associate with
-certain behaviours. We highlight the concept of scale of scale in multilayer 
+certain behaviours. We highlight the concept of scale in multilayer 
 networks should be approached based on explicit and precise definitions
 to ensure robust measurements. 
 
@@ -464,6 +465,7 @@ the value of this form of sensitivity analysis to social networks in general
 and multilayer networks in particular.
 
 
+<!-- rm:
 Recognition of scale as a fundamental concept in ecology [@Levin_1992] has lead
 to an increased attention to the scale at which ecological processes are
 observed [@Schneider_2001; @Chave_2013]. Recent technological advances in
@@ -476,14 +478,14 @@ resolution GPS telemetry data and spatial land cover data is grounded in the
 context of observed animal behaviour as the scales we chose to explore, e.g.,
 social, spatial, and temporal, are scales that have
 also been investigated using traditional behavioural ethological methods. 
+-->
 
 
 Multilayer networks remain a nascent but powerful tool in animal behavioural
 ecology. Silk et al. [-@Silk_2018] summarized some key multilayer questions in
 animal behaviour research and, based on our study of scale, 
-we conclude by posing an additional set of questions on
-the future of multilayer networks through the lens of scale and behavioural,
-landscape, and spatial ecology:
+we conclude by posing an additional set of questions centered on scale in
+behavioural, landscape, and spatial ecology:
 
 1. How do multilayer social network metrics vary across social, spatial, and temporal scales and
 at which scale might these influence fitness (Box 1)? Are some scales better predictors
