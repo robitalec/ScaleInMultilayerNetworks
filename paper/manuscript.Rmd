@@ -301,9 +301,9 @@ sufficient to detect less common habitats.
 
 
 The temporal multilayer network indicated within-year time windows where social
-network metrics increased. Edge overlap was higher in time windows 1, 6-11 and
-15-20 (between approximately October and June) than in time windows 2-5 and 12-15 
-(between approximately June and October) (Figure \@ref(fig:temp) A). Time
+network metrics increased. Edge overlap was higher in between approximately November and May (time windows 1, 6-11 and
+15-20) than between approximately June and October (time windows 2-5 and 12-15 
+ (Figure \@ref(fig:temp) A). Time
 windows of higher edge overlap also had
 higher graph strength compared to time windows of lower edge overlap, between
 approximately June and October (Figure \@ref(fig:temp) C). Graph strength peaked
@@ -353,7 +353,7 @@ were aggregated from the finer scale time windows presented above (time window 1
 
 
 <!-- Figure: Time window -->
-(ref:temp) Varying temporal scale in multilayer networks. Multilayer networks were generated of caribou social associations (n = `r DT[, uniqueN(get(idcol))]` females) on Fogo Island, Newfoundland within time windows (20 ordinal sample periods) between `r DT[, format(min(datetime), '%B %Y')]` and `r DT[, format(max(datetime), '%B %Y')]`. A) Edge overlap across time windows showed two periods of low overlap (time windows 2-5 and 12-15), and three periods of high overlap (time windows 1, 6-11, 15-20). B) Ordinal network layers showing unweighted edges between individuals within time windows. Like edge overlap, individuals were more connected in time windows 1, 6-11, and 15-20, compared to 2-5 and 12-15. Number of individuals in each time window is reported below each layer. C) Graph strength within time windows showing individuals as thin grey lines and mean across individuals as thick black lines. Graph strength peaked in time window 9, with noticeable higher strength than the following year.
+(ref:temp) Varying temporal scale in multilayer networks. Multilayer networks were generated of caribou social associations (n = `r DT[, uniqueN(get(idcol))]` females) on Fogo Island, Newfoundland within time windows (20 ordinal sample periods) between `r DT[, format(min(datetime), '%B %Y')]` and `r DT[, format(max(datetime), '%B %Y')]`. A) Edge overlap was high between approximately November and May (time windows 1, 6-11, 15-20) and low between approximately June and October (time windows 2-5 and 12-15). B) Ordinal network layers showing unweighted edges between individuals within time windows. Like edge overlap, individuals were more connected between November and May, compared to between June and October.  C) Graph strength within time windows showing individuals as thin grey lines and mean across individuals as thick black lines. Graph strength peaked in time window 9, with noticeable higher strength than the following year.
 
 
 <!-- Figure: metrics by number of observations -->
