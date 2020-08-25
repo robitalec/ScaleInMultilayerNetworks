@@ -76,17 +76,13 @@ animal behaviour within the social environment to effectively understand
 complex social systems. 
 
 Social interactions exists across both temporal and spatial scales [Figure \@ref(fig:spacetime), @Whitehead_2008].
-For example, conspecific grooming requires close spatial proximity and occurs over brief time periods [e.g. @Carter_2015] whereas <!--Social
-associations occur over longer time periods and represent
-whereas social associations over longer time periods represent shared space use by
-members of the same social group [Figure \@ref(fig:spacetime), @Franks_2009].
-<!--Individuals must share space to interact or associate and thus have overlapping
-home ranges [@Vander_2014].--> home range overlap and shared space use occur over
+For example, conspecific grooming requires close spatial proximity and occurs over brief time periods [e.g. @Carter_2015] whereas social associations
+represent shared space use by members of the same social group over longer time periods [@Franks_2009], and home range overlap occurs over
 coarser spatial and temporal scales [e.g. @Piza_Roca_2018].
 Although the social environment scales spatially and temporally, it
 remains unclear whether coarser scales of social interactions, such as social
 association and home range overlap, vary predictably [@Castles_2014;
-@Farine_2015a]. Social scale 
+@Farine_2015a; @Evans_2019]. Social scale 
 is defined by the temporal and spatial scales across which different forms of sociality are measured  [@Farine_2015a].
 
 
