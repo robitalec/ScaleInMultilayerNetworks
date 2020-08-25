@@ -170,14 +170,13 @@ and anthropogenic areas. Water was excluded from all subsequent analyses.
 We generated proximity-based social networks using the R package `spatsoc`
 [@Robitaille_2019] in `r substr(version$version.string, 1, 15)` [@R_Core_Team]. 
 Typically for ungulates and other gregarious
-mammals, the ‘chain rule’ is used for group assignment [@Croft_2008]. For GPS
-data, the chain rule is applied by assigning a group identifier to the union of
-buffered GPS fixes at each time step. As such, individuals in a group are within
+mammals, the ‘chain rule’ is used for group assignment [@Croft_2008]. The chain rule is applied by assigning a group identifier to the union of
+buffered GPS fixes collected at each two hour time step. As such, individuals in a group are within
 the social distance threshold of at least one other though not necessarily all
-other individuals [@Robitaille_2019]. Group assignment based on the chain rule
-has previously been applied to caribou using a temporal threshold of 5 minutes
-and a social distance threshold of 50 m [@Peignier_2019; @Lesmerises_2018]. In
-all networks, individual caribou were represented as nodes and associations between
+other individuals [@Robitaille_2019]. Group assignment is defined using a 
+temporal threshold of 5 minutes
+and a social distance threshold of 50 m [@Peignier_2019; @Lesmerises_2018]. 
+In all networks, individual caribou were represented as nodes and associations between
 individuals were represented as edges. We weighted edges by the strength of 
 association between individuals using the simple ratio index [SRI, @Cairns_1987]. 
 
