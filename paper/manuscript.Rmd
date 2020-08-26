@@ -1,14 +1,25 @@
 ---
 title: Considering scale in multilayer animal social networks
-author: Alec L. Robitaille^1\*^, Quinn M.R. Webber^2^, Julie W. Turner^1^, Eric Vander Wal^1,2^
-date: |
-  | ^1^Department of Biology, Memorial University of Newfoundland, Canada
-  | ^2^Cognitive and Behavioural Ecology Interdisciplinary Program, Memorial University of Newfoundland 
-  | \*Corresponding author: Alec L. Robitaille (robit.alec@gmail.com)
+author:
+  - name: Alec L. Robitaille
+    email: robit.alec@gmail.com
+    institute: bio
+    correspondence: true
+  - name: Quinn M.R. Webber
+    institute: cabe
+  - name: Julie W. Turner
+    institute: bio
+  - name: Eric Vander Wal
+    institute: [bio, cabe]
+institute: 
+  - bio: Department of Biology, Memorial University of Newfoundland, Canada
+  - cabe: Cognitive and Behavioural Ecology Interdisciplinary Program, Memorial University of Newfoundland 
 output:
-   # bookdown::github_document2: default
    bookdown::word_document2:
      reference_docx: template.docx
+     pandoc_args:
+      - '--lua-filter=scholarly-metadata.lua'
+      - '--lua-filter=author-info-blocks.lua'
 knit: (function(inputFile, encoding) {
   rmarkdown::render(input = inputFile, encoding = encoding, output_format = "all") })
 bibliography: ../references/knitcite.bib
