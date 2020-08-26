@@ -434,7 +434,7 @@ layers, multilayer networks provide a detailed and dynamic perspective of animal
 social systems. For example, female mandrill (*Mandrillus sphinx*) sociality is
 more completely represented by temporal multilayer networks than aggregated
 networks [@Pereira_2020]. Evans et al. [-@Evans_2020] observed seasonal
-differences in the multilayer social structure of mice (*Mus musculus domesticus*) related
+differences in how the multilayer social structure of mice (*Mus musculus domesticus*) related
 to genetic structure. Finally, it is crucial to include
 sufficient data within sampling periods or time windows to construct robust
 networks [@Farine_2017; @Proskurnikov_2017]. With increasing number of
