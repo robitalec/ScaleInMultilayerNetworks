@@ -73,7 +73,7 @@ Multiscale ecology has been integrated into species distribution modelling
 [@Elith_2009], habitat selection [@Mayor_2007], and food webs [@Sugihara_1989].
 We posit that it is important to consider the scale dependence of 
 animal behaviour within the social environment to effectively understand 
-complex social systems. 
+complex social systems [@Whitehead_2008; @Webber_2018]. 
 
 Social interactions exists across both temporal and spatial scales [Figure \@ref(fig:spacetime), @Whitehead_2008].
 For example, conspecific grooming requires close spatial proximity and occurs over brief time periods [e.g. @Carter_2015] whereas social associations
