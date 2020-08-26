@@ -173,7 +173,6 @@ individuals were represented as edges. We weighted edges by the strength of
 association between individuals using the simple ratio index [SRI, @Cairns_1987]. 
 
 
-
 ### Network metrics 
 We used a series of metrics to characterize the multilayer networks, focusing on
 the role of individuals within layers and the similarity of edges across layers.
@@ -443,22 +442,6 @@ habitat layers and in graph strength within habitat layers (Figure
 were more likely to be recorded with increasing number of observations, demonstrating 
 the value of this form of sensitivity analysis to social networks in general
 and multilayer networks in particular.
-
-
-<!-- rm:
-Recognition of scale as a fundamental concept in ecology [@Levin_1992] has lead
-to an increased attention to the scale at which ecological processes are
-observed [@Schneider_2001; @Chave_2013]. Recent technological advances in
-remotely sensed imagery [@Drusch_2012] and animal tracking devices
-[@Borger_2020; @B_rger_2016; @Wikelski_2007] have increased the availability of
-complex, high-resolution data. We highlight ways in which scale should be
-considered when building social networks from both observed and remotely sensed
-data. Our multilayer network analysis of caribou sociality incorporating high
-resolution GPS telemetry data and spatial land cover data is grounded in the
-context of observed animal behaviour as the scales we chose to explore, e.g.,
-social, spatial, and temporal, are scales that have
-also been investigated using traditional behavioural ethological methods. 
--->
 
 
 Multilayer networks remain a nascent but powerful tool in animal behavioural
