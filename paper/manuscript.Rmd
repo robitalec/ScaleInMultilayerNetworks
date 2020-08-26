@@ -527,6 +527,21 @@ as well as D. C. Schneider for inspiration and helpful discussions about scale.
 Funding for this study was provided by a Vanier Canada Graduate Scholarship to
 QMRW and a NSERC Discovery Grant to EVW.
 
+
+# Code Availability
+
+Code for performing all multilayer social network analyses and generating the
+figures is available at 
+https://github.com/robitalec/scale-in-multilayer-networks [@Robitaille_2020] <!-- TODO: zenodo-->
+and released under the GNU General Public License 3.0. We depended on numerous R
+packages notably for the analysis: igraph, data.table, spatsoc, asnipe, and
+grainchanger, for the figures: ggplot2 and patchwork, and for reproducibility
+and workflow management drake, renv, and knitr.
+
+
+
+
+
 \newpage
 
 ```{r spacetime, fig.cap='(ref:spacetime)'}
