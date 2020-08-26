@@ -172,14 +172,6 @@ In all networks, individual caribou were represented as nodes and associations b
 individuals were represented as edges. We weighted edges by the strength of 
 association between individuals using the simple ratio index [SRI, @Cairns_1987]. 
 
-$$ SRI = \frac{x}{x + y_{AB} + y_{A} + y_{B}} $$
-
-where x is the number of fixes where individuals A and B were in the same group,
-$y_{A}$ is the number of fixes from individual A when individual B did not have
-a simultaneous fix, $y_{B}$ is the number of fixes from individual B when
-individual A did not have a simultaneous fix, and $y_{AB}$ is the number of
-simultaneous fixes from individuals A and B that were separated by more than the
-social distance threshold [@Farine_2015].
 
 
 ### Network metrics 
