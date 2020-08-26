@@ -226,7 +226,7 @@ To assess the influence of land cover spatial scale, we aggregated the land cove
 using the R package `grainchanger` [@Graham_2019] across a series of scales 
 (100 - 1000 m by steps of 100 m) using a modal moving window method [@Graham_2019a]. 
 We assume 30 m and 100 m represents fine-scale decision making
-for caribou, while 500 - 1000 m represents the scale at which
+for caribou [@Mayor_2007], while 500 - 1000 m represents the scale at which
 caribou tend to select and avoid habitat [@Bastille_2018]. Multilayer networks
 consisted of the social associations between `r DT[, uniqueN(get(idcol))]`
 individuals across three habitat layers (foraging, forest and open) for the
