@@ -317,14 +317,14 @@ to effectively capture within- and across-year variation in sociality.
 
 
 As the number of observations used to generate multilayer networks increased,
-individuals became more connected and variance in metrics decreased. Edge
-overlap increased across all three habitat layers with increasing number of
-observations (Figure \@ref(fig:nobs) B). Similarly, multidegree for all
-individuals increased quickly between 10 and 100 observations and continued to
-increase until 1000 observations (Figure \@ref(fig:nobs) C). Graph strength
-across individuals in all three habitat layers was highly variable at low number
-of observations and variance decreased after ~100 observations (Figure
-\@ref(fig:nobs) A). Since the variance in these multilayer metrics decreases
+individuals became more connected and variance in metrics decreased. Graph
+strength across individuals in all three habitat layers was highly variable at
+low number of observations and variance decreased after ~100 observations
+(Figure \@ref(fig:nobs) A). Edge overlap increased across all three habitat
+layers with increasing number of observations (Figure \@ref(fig:nobs) B).
+Similarly, multidegree for all individuals increased quickly between 10 and 100
+observations and continued to increase until 1000 observations (Figure
+\@ref(fig:nobs) C).  Since the variance in these multilayer metrics decreases
 after a certain number of observations, this sensitivity method could be useful
 for determining the number of observations necessary for sufficiently describing
 social dynamics across contexts.
