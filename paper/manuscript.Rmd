@@ -277,9 +277,10 @@ all three habitat layers followed by
 a plateau in the rate of increase after 100 m (Figure \@ref(fig:socres)). These
 results suggest the optimal social scale at which groups should be assigned is
 between ~20 - 100 m based on the rate at which variance in graph strength
-decreased. GPS data allowed [e.g. from this study and @Peignier_2019;
-@Lesmerises_2018] us to confirm the use of 50 m buffer that has long been used
-for studies of ungulate social behaviour in the field [@Lingle_2003; @Clutton_1982].
+decreased. GPS data allowed  us to confirm the use of 50 m buffer 
+[e.g. from this study and @Peignier_2019; @Lesmerises_2018] that has long been used
+for studies of ungulate social behaviour in the field 
+[@Lingle_2003; @Clutton_1982; @Kasozi_2020].
 
 
 Increasing land cover resolution resulted in decreased availability of foraging
@@ -298,16 +299,16 @@ relocations in forest (`r count[res == 30 & lc == 2, percent]`% at 30 m -
 with increasing spatial resolution, while decreasing in foraging habitat 
 (`r count[res == 30 & lc == 3, percent]`% at 30 m
 - `r count[res == 1000 & lc == 3, percent]`% at 1000 m). These results 
-indicated the importance of matching land cover resolution to scale of
+highlight the importance of matching land cover resolution to scale of
 habitat selection and choosing a land cover product with a resolution
 sufficient to detect less common habitats. 
 
 
 The temporal multilayer network indicated within-year time windows where social
-network metrics increased. Edge overlap was higher in between approximately November and May (time windows 1, 6-11 and
+network metrics increased. Edge overlap was higher in between approximately 
+November and May (time windows 1, 6-11 and
 15-20) than between approximately June and October (time windows 2-5 and 12-15 
- (Figure \@ref(fig:temp) A). Time
-windows of higher edge overlap also had
+ (Figure \@ref(fig:temp) A). Time windows of higher edge overlap also had
 higher graph strength compared to time windows of lower edge overlap, between
 approximately June and October (Figure \@ref(fig:temp) C). Graph strength peaked
 across the time series throughout winter 2018 (January to April). These results
