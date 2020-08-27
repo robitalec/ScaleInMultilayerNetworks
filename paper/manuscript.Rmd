@@ -86,15 +86,18 @@ We posit that it is important to consider the scale dependence of
 animal behaviour within the social environment to effectively understand 
 complex social systems [@Whitehead_2008; @Webber_2018]. 
 
-Social interactions exists across both temporal and spatial scales [Figure \@ref(fig:spacetime), @Whitehead_2008].
-For example, conspecific grooming requires close spatial proximity and occurs over brief time periods [e.g. @Carter_2015] whereas social associations
-represent shared space use by members of the same social group over longer time periods [@Franks_2009], and home range overlap occurs over
-coarser spatial and temporal scales [e.g. @Piza_Roca_2018].
-Although the social environment scales spatially and temporally, it
-remains unclear whether coarser scales of social interactions, such as social
-association and home range overlap, vary predictably [@Castles_2014;
-@Farine_2015a; @Evans_2019]. Social scale 
-is defined by the temporal and spatial scales across which different forms of sociality are measured  [@Farine_2015a].
+Social interactions exists across both temporal and spatial scales [Figure
+\@ref(fig:spacetime), @Whitehead_2008]. For example, conspecific grooming
+requires close spatial proximity and occurs over brief time periods 
+[e.g. @Carter_2015], social associations represent shared space use by members of the
+same social group over relatively longer time periods [@Franks_2009], and home
+range overlap occurs over coarser spatial and temporal scales [e.g.
+@Piza_Roca_2018]. Although the social environment scales spatially and
+temporally, it remains unclear whether coarser scales of social behaviour, such
+as social association and home range overlap, vary predictably 
+[@Castles_2014; @Farine_2015a; @Evans_2019]. Thus, social scale is defined by 
+the temporal and spatial scales across which different forms of sociality are measured
+[@Farine_2015a].
 
 
 Social network analysis is a well-developed tool used to measure the
