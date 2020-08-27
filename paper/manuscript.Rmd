@@ -137,15 +137,13 @@ potential future developments and applications of scale in multilayer networks.
 Caribou are gregarious ungulates with fission-fusion dynamics [@Lesmerises_2018]
 that display temporal and spatial variation in social networks [@Peignier_2019].
 Caribou dig holes, termed craters, in winter to access forage beneath the snow
-[@Bergerud_1974]. Cratering is presumed to be a costly behaviour, and as a
+[@Bergerud_1974]. Cratering is presumed to be a costly behaviour [@Boertje_1985], and as a
 result, caribou tend to occupy and re-use craters once they are established.
 Importantly, craters exist on the landscape at multiple scales: the crater scale
 (a single crater), the feeding area scale (multiple craters in close proximity),
 and the winter range scale (all craters within an individual’s range)
 [@Mayor_2009]. Access to forage is therefore heterogeneous in winter and depends
-on snow cover and distribution of craters on the landscape. Home range sizes for 
-caribou on Fogo Island are on average 50.1 $km^2$ in winter and 17.5 $km^2$ in 
-summer [@Peignier_2019].
+on snow cover and distribution of craters on the landscape. 
 
 ## Caribou location data
 We used GPS location data collected from `r DT[, uniqueN(get(idcol))]` adult female caribou on Fogo Island, Newfoundland, Canada between 
