@@ -543,12 +543,13 @@ Grant to EVW.
 # Code Availability
 
 Code for performing all multilayer social network analyses and generating the
-figures is available at 
-https://github.com/robitalec/scale-in-multilayer-networks [@Robitaille_2020] <!-- TODO: zenodo-->
-and released under the GNU General Public License 3.0. We depended on numerous R
-packages notably for the analysis: igraph, data.table, spatsoc, asnipe, and
-grainchanger, for the figures: ggplot2 and patchwork, and for reproducibility
-and workflow management drake, renv, and knitr.
+figures is available at https://github.com/robitalec/scale-in-multilayer-networks 
+[@Robitaille_2020] and released under the GNU General Public License 3.0. 
+We depend on numerous R packages notably for the analysis: `igraph` [@Csardi_2006],
+`data.table` [@Dowle_2019], `spatsoc` [@Robitaille_2019], `asnipe` [@Farine_2019],
+and `grainchanger` [@Graham_2019], for the figures: `ggplot2` [@Wickham_2016] and
+`patchwork` [@Pedersen_2019], and for reproducibility and workflow management: 
+`drake` [@Landau_2018], `renv` [@Ushey_2020], and `knitr` [@Xie_2015]. 
 
 
 
