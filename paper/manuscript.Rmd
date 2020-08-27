@@ -412,7 +412,9 @@ must share space to interact [@Webber_2018]. We found edge overlap was stable in
 open and forest layers but decreased in foraging layers as spatial
 scale increased (Figure \@ref(fig:lcres) D). Graph strength had greater individual
 variation in open and foraging layers than in forest layers (Figure
-\@ref(fig:lcres) E). Furthermore, we observed a decrease in the proportion of relocations in
+\@ref(fig:lcres) E). On average, graph strength was highest in foraging habitat, 
+compared to forest and open habitat, despite the fact that foraging habitat was 
+the least common. Furthermore, we observed a decrease in the proportion of relocations in
 foraging habitat with increasing spatial resolution 
 (`r count[res == 30 & lc == 3, percent]`% at 30 m - `r count[res == 1000 & lc == 3, percent]`% at 1000
 m). As the foraging layer had similar edge overlap and graph strength as the
@@ -469,10 +471,10 @@ behavioural, landscape, and spatial ecology:
 
 1. How do multilayer social network metrics vary across social, spatial, and temporal scales and
 at which scale might these influence fitness (Box 1)? Are some scales better predictors
-for different fitness components, e.g. reproductive success or suvival? 
+for different fitness components, e.g. reproductive success or survival? 
 
 2. Why do individuals associate more strongly with certain conspecifics in some
-habitats? What is the role of movement in the context of habitat
+habitats? What is the role of movement in the context of habitat-specific social
 networks?
 
 3. How, and why, does the spatial scale of perception influence, e.g. auditory,
