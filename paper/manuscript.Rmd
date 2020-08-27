@@ -70,7 +70,7 @@ in a multilayer context.
 
 
 ## Keywords
-Rangifer, Social network analysis, Habitat selection, Landscape ecology, Space use 
+Caribou, *Rangifer*, Social network analysis, Habitat selection, Landscape ecology, Space use 
 
 \newpage
 
