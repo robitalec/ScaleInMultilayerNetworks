@@ -39,7 +39,7 @@ library(data.table)
 
 source('../scripts/00-variables.R')
 
-options(digits = 2, round = 2)
+options(digits = 1, round = 2)
 
 DT <- readRDS('../data/derived-data/01-sub-fogo-caribou.Rds')
 nobs <- readRDS('../data/derived-data/05-number-of-observations.Rds')
