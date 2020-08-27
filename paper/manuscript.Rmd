@@ -217,10 +217,10 @@ across three habitat layers (foraging, forest, and open) for the entire study
 period. At the finest scale, individuals within 5 m of one another were
 considered in the same group, whereas at the coarsest scale, individuals within
 500 m of one another were considered in the same group. Increasing social
-distance threshold is a proxy for potential behavioural interactions (eg. vocal communication)
-that occur
-across these distances. For every social distance threshold, we calculated
-individual graph strength within each habitat layer, and edge overlap and
+distance threshold is a proxy for potential behavioural interactions 
+that occur across these distances (eg. grooming through vocal communication). 
+For every social distance threshold, we calculated
+individual graph strength within habitat layers, and edge overlap and
 multidegree across habitat layers.
 
 
@@ -233,8 +233,8 @@ for caribou [@Mayor_2007], while 500 - 1000 m represents the scale at which
 caribou tend to select and avoid habitat [@Bastille_2018]. Multilayer networks
 consisted of the social associations between `r DT[, uniqueN(get(idcol))]`
 individuals across three habitat layers (foraging, forest and open) for the
-entire study period. For each land cover resolution, we calculated individual
-graph strength within each habitat layer, and edge overlap and multidegree
+entire study period. For each land cover scale, we calculated individual
+graph strength within habitat layers, and edge overlap and multidegree
 across habitat layers.
 
 
@@ -244,7 +244,7 @@ We used a temporal multilayer network to assess the seasonality of caribou
 sociality. Multilayer networks consisted of the social associations between 
 `r DT[, uniqueN(get(idcol))]` individuals across 20 ordinal sample periods from the
 entire study period. For each time window, we calculated
-individual graph strength within each time window, and edge overlap and
+individual graph strength within time windows, and edge overlap and
 multidegree across time windows.
 
 
@@ -259,7 +259,7 @@ recorded in traditional ethological studies. To investigate the influence of
 number of observations, we generated multilayer networks of social association
 between `r DT[, uniqueN(get(idcol))]` individuals across three habitat layers
 (foraging, forest, and open) using $n$ randomly selected observations. We first
-generated a maximum of 1000 timesteps and iteratively used $n$ of these ($n$ =
+selected a maximum of 1000 timesteps and iteratively used $n$ of these ($n$ =
 10 - 1000 observations by steps of 10), to ensure previously included timesteps,
 and resulting associations, were accumulated with subsequent observations to
 mimic collection of observational data. Within each multilayer network with $n$
