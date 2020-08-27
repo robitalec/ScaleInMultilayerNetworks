@@ -162,7 +162,7 @@ summer [@Peignier_2019].
 
 ## Landscape data and habitat classification
 Land cover data were provided by the Newfoundland and Labrador Wildlife Division
-[@Integrated_2013]<!--TODO: check ref-->. Available land cover classification
+[@Integrated_2013]. Available land cover classification
 included nine habitat types at 30 m resolution. We reclassified the land cover
 types into three categories using the R package `raster` [@Hijmans_2019]:
 foraging, forest, and open habitats. Foraging habitat consisted of lichen,
@@ -177,7 +177,8 @@ and anthropogenic areas. Water was excluded from all subsequent analyses.
 We generated proximity-based social networks using the R package `spatsoc`
 [@Robitaille_2019] in `r substr(version$version.string, 1, 15)` [@R_Core_Team]. 
 Typically for ungulates and other gregarious
-mammals, the ‘chain rule’ is used for group assignment [@Croft_2008]. The chain rule is applied by assigning a group identifier to the union of
+mammals, the ‘chain rule’ is used for group assignment [@Croft_2008; @Kasozi_2020]. 
+The chain rule is applied by assigning a group identifier to the union of
 buffered GPS fixes collected at each two hour time step. As such, individuals in a group are within
 the social distance threshold of at least one other though not necessarily all
 other individuals [@Robitaille_2019]. Group assignment is defined using a 
