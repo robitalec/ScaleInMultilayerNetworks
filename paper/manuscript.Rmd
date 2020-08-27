@@ -156,7 +156,9 @@ to remove all erroneous and outlier GPS fixes following
 [@Bjorneraas_2010]. We did not collar all caribou in the herd; however, the
 proportion of marked adult females was ~10% of all adult females and ~5% of all
 individuals in the herd. We assumed these individuals were randomly distributed
-throughout the population.
+throughout the population. Home range sizes for 
+caribou on Fogo Island are on average 50.1 $km^2$ in winter and 17.5 $km^2$ in 
+summer [@Peignier_2019].
 
 ## Landscape data and habitat classification
 Land cover data were provided by the Newfoundland and Labrador Wildlife Division
