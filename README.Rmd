@@ -2,6 +2,12 @@
 output: github_document
 ---
 
+
+
+[![DOI](https://zenodo.org/badge/291094231.svg)](https://zenodo.org/badge/latestdoi/291094231)
+
+
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r, include = FALSE}
@@ -15,13 +21,11 @@ knitr::opts_chunk$set(
 
 
 # The problem and promise of scale in multilayer networks
-Alec Robitaille, Quinn M.R. Webber, Julie Turner and Eric Vander Wal
 
-## TODO
-```{bash}
-grep -rni 'R/' -e 'TODO' || true;
-grep -rni 'scripts/' -e 'TODO' || true;
-grep -rni 'paper/manuscript.Rmd' -e 'TODO' || true;
-```
 
+* Authors:
+    + [Alec L. Robitaille](http://robitalec.ca)
+    + [Quinn M.R. Webber](https://qwebber.weebly.com/)
+    + [Julie W. Turner](https://www.julwturner.com/)
+    + [Eric Vander Wal](http://weel.gitlab.io)
 
