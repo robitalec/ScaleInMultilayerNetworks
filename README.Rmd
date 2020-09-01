@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 ```
 
 
-# The problem and promise of scale in multilayer networks
+# The problem and promise of scale in multilayer animal social networks
 
 
 * Authors:

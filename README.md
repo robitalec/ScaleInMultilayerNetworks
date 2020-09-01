@@ -3,8 +3,8 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-The problem and promise of scale in multilayer networks
-=======================================================
+The problem and promise of scale in multilayer animal social networks
+=====================================================================
 
 -   Authors:
     -   [Alec L. Robitaille](http://robitalec.ca)

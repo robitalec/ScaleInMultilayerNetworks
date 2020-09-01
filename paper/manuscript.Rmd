@@ -1,5 +1,5 @@
 ---
-title: The problem and promise of scale in animal social multilayer networks
+title: The problem and promise of scale in multilayer animal social networks
 author:
   - name: Alec L. Robitaille
     email: robit.alec@gmail.com
