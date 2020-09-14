@@ -47,9 +47,6 @@ plan <- drake_plan(
   # Prep data
   data = data_prep(scalepkg),
   
-  # Figure 1 
-  # figure1 = fig_1(), 
-  
   # Land cover
   lc = scale_lc(data),
   lc_figure = fig_lc(lc),
@@ -70,13 +67,4 @@ plan <- drake_plan(
   fogo_ml = ml_fogo(data),
   fogo_ml_figure = fig_ml_fogo(fogo_ml)
   
-  # Manuscript
-  # manuscript = rmarkdown::render(
-  #   knitr_in('paper/manuscript.Rmd')
-  # ),
-  # 
-  # # Supplement
-  # supplement = rmarkdown::render(
-  #   knitr_in('paper/supplement.Rmd')
-  # )
 )
