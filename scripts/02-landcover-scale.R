@@ -37,6 +37,7 @@ lsres <- as.integer(gsub(".tif", "", unlist(tstrsplit(
 ))))
 names(lslc) <- lsres
 
+# If not already run
 # lsres <- seq(100, 1000, by = 100)
 # lslc <- lapply(lsres, function(res) {
 #   w <- winmove(lc, res, type = 'circle', win_fun = modal)
@@ -142,6 +143,7 @@ count[is.na(res), res := 30]
 saveRDS(out, 'data/derived-data/02-landcover-scale.Rds')
 saveRDS(count, 'data/derived-data/02-landcover-scale-count.Rds')
 
+# If not already run
 # lapply(seq_along(lslc),
 #        function(r)
 #          writeRaster(
