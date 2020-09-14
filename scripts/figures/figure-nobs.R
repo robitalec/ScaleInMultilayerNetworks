@@ -57,15 +57,6 @@ gstr <- ggplot(DT, aes(color = lcname, group = lcname)) +
   labs(x = NULL, y = 'Graph Strength', subtitle = 'B)')
 
 
-# Layer similarity
-# gsim <- ggplot(DT, aes(color = lcname)) +
-#   geom_line(aes(x = nobs, y = layersim)) +
-#   guides(color = FALSE) +
-#   scale_color_manual(values = lccolors) +
-#   base +
-#   labs(x = xlab, y = 'Layer Similarity') +
-#   scale_x_continuous(expand = c(0, 0))
-
 # Multidegree
 gmult <- ggplot(DT, aes(group = ANIMAL_ID)) +
   geom_line(aes(x = nobs, y = multideg)) +
@@ -88,6 +79,3 @@ layout <- 'AAAAAAB
 # Output ------------------------------------------------------------------
 ggsave('graphics/figure-nobs.png',
        g, width = 10, height = 8)
-
-# ggsave('graphics/supp-temp-nid.png',
-#        gnid, width = 5, height = 5)
