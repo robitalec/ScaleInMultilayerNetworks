@@ -64,17 +64,6 @@ gstr <- ggplot(DT) +
   scale_x_date(expand = c(0, 0), date_breaks = '1 month', date_labels = '%b')
 
 
-# Layer similarity
-# gsim <- ggplot(DT) +
-#     geom_line(aes(x = middate, layersim)) + 
-#     geom_segment(aes(x = mindate, xend = maxdate, 
-#                      y = layersim, yend = layersim),
-#                  size = 0.5, alpha = 0.3) + 
-#     guides(color = FALSE) +
-#     base +
-#     labs(x = xlab, y = 'Layer Similarity') +
-#   scale_x_date(expand = c(0, 0), breaks = pretty_breaks(n = 10))
-
 # Network
 netDT[, degree := paste0('N=', uniqueN(name)), layer]
 netDT[, c('capX', 'capY') := .(mean(x), min(y) - 0.2), layer]
@@ -120,8 +109,6 @@ layout <- 'A
    plot_layout(design = layout)
 )
 
-
-# gsimm
 
 # Output ------------------------------------------------------------------
 ggsave('graphics/figure-temp.png',
