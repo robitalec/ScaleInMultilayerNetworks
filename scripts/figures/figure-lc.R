@@ -1,5 +1,4 @@
 # === Figure: Land Cover Resolution ---------------------------------------
-# Land Cover Resolution
 # Alec Robitaille
 
 
