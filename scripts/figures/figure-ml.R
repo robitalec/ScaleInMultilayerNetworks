@@ -123,14 +123,6 @@ zzbox[layer %in% c('winter-1', 'summer-1'),
       c('modx', 'mody') := .(slideright * (.GRP - 1), 3), by = layer]
 
 
-#Edges between same individuals
-# zzz[layer == 'summer-3', c('xendsame', 'yendsame') := .(shearx + slideright, sheary)]
-# zzz[layer == 'summer-2', c('xendsame', 'yendsame') := .(shearx + slideright, sheary + mody)]
-# zzz[layer == 'summer-1', c('xendsame', 'yendsame') := .(shearx + slideright, sheary + mody)]
-
-# a <- zzz[!is.na(xend) & !is.na(yend)][name == 'FO2016004', .SD]
-# merge(a, a[, .(V1e = V1, V2e = V2, name)], allow.cartesian = TRUE)
-
 
 # Plot --------------------------------------------------------------------
 p <- theme(legend.text = element_text(size = 12, color = "black"),
@@ -168,11 +160,6 @@ labels <- data.table(
                    size = weight)
     ) +
     scale_size(range = c(0.1, 2)) + 
-    # geom_edges(aes(xend = xendsame,
-    #                yend = yendsame),
-    #            size = 0.1,
-    #            alpha = 0.5
-    # ) +
     geom_nodes(aes(color = name), size = 5) +
     scale_color_viridis_d() + 
     guides(color = FALSE, size = FALSE) +
