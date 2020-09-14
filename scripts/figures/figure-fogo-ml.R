@@ -13,8 +13,8 @@ p <- lapply(pkgs, library, character.only = TRUE)
 
 
 # Input -------------------------------------------------------------------
-DT <- readRDS('data/derived-data/07-fogo-ml.Rds')
-netDT <- readRDS('data/derived-data/07-fogo-ml-network-fig-data.Rds')
+DT <- readRDS('data/derived-data/06-fogo-ml.Rds')
+netDT <- readRDS('data/derived-data/06-fogo-ml-network-fig-data.Rds')
 
 
 # Theme -------------------------------------------------------------------

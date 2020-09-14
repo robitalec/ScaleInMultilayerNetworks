@@ -165,5 +165,5 @@ only <- merge(unique(rbindxy[, .(layer, name)]),
 
 
 # Output ------------------------------------------------------------------
-saveRDS(out, 'data/derived-data/07-fogo-ml.Rds')
-saveRDS(only, 'data/derived-data/07-fogo-ml-network-fig-data.Rds')
+saveRDS(out, 'data/derived-data/06-fogo-ml.Rds')
+saveRDS(only, 'data/derived-data/06-fogo-ml-network-fig-data.Rds')
