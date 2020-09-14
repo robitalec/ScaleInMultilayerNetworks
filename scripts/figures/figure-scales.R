@@ -9,17 +9,19 @@ library(gridExtra)
 library(remotes)
 library(scales)
 
-remotes::install_github("sckott/rphylopic")
+# remotes::install_github("sckott/rphylopic")
 library(rphylopic)
 
 
 
-# Select phylopic ---------------------------------------------------------
-hyeana <- rphylopic::image_data('f1b665ae-8fe9-42e4-b03a-4e9ae8213244', 512)[[1]]
-bird <- rphylopic::image_data('dfdfb59e-8126-44e1-a7a9-1bf698113e1c', 512)[[1]]
-lizard <- rphylopic::image_data('83ba27dd-ad53-45e4-acf4-d75bf74105a6', 512)[[1]]
-elephant <- rphylopic::image_data('fb84ef24-5eb8-4fb7-bf36-d20ebbfdd125', 512)[[1]] 
-## load coordinate data for ellipses
+# Input -------------------------------------------------------------------
+# Select phylopic
+hyeana <- image_data('f1b665ae-8fe9-42e4-b03a-4e9ae8213244', 512)[[1]]
+bird <- image_data('dfdfb59e-8126-44e1-a7a9-1bf698113e1c', 512)[[1]]
+lizard <- image_data('83ba27dd-ad53-45e4-acf4-d75bf74105a6', 512)[[1]]
+elephant <- image_data('fb84ef24-5eb8-4fb7-bf36-d20ebbfdd125', 512)[[1]] 
+
+# Load coordinate data for ellipses
 df <- fread("data/raw-data/figure1.csv")
 
 
@@ -45,8 +47,8 @@ p <- theme(legend.position = 'none',
 
 
 # Variables ---------------------------------------------------------------
-ysize = 5 # silhouette size
-
+# silhouette size
+ysize = 5 
 
 
 
