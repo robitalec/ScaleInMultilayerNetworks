@@ -131,21 +131,6 @@ nodesize <- 3
     labs(x = xlab, y = 'Number of Individuals'))
 
 
-# Patchwork ---------------------------------------------------------------
-# layout <- 'A
-#            A
-#            B
-#            C
-#            C'
-
-
-# (g <- gprop / gnn / gstr + 
-#    plot_layout(design = layout) 
-# )
-
-
-g <- gnn
-
 # Output ------------------------------------------------------------------
 ggsave('graphics/figure-fogo-ml.png',
-       g, width = 10, height = 9)
+       gnn, width = 10, height = 9)
