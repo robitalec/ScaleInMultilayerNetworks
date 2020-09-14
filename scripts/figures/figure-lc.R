@@ -62,7 +62,6 @@ gprop <- ggplot(DT) +
   geom_line(aes(lcres, propedges, 
                 color = lcname),
             size = 2) + 
-  # guides(color = FALSE) +
   scale_color_manual(values = lccolors) +
   base +
   labs(x = NULL, y = 'Edge Overlap', subtitle = 'D)')
