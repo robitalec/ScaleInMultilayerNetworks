@@ -22,7 +22,7 @@ output:
       - '--lua-filter=author-info-blocks.lua'
 knit: (function(inputFile, encoding) {
   rmarkdown::render(input = inputFile, encoding = encoding, output_format = "all") })
-bibliography: ../references/knitcite.bib
+bibliography: ../references/refs.bib
 csl: csl.csl
 ---
 
