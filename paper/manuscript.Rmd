@@ -492,7 +492,7 @@ establish a clear link between biologically relevant scales of observation.
 
 
 
-# Box 1
+# Box 1: Phenotypes and Individual Fitness
 Social phenotype has been increasingly linked to individual fitness, including
 in primates [@Brent_2017; @Thompson_2019], dolphins [@Stanton_2012;
 @Stanton_2011], and birds [@McDonald_2007; @Royle_2012]. Social and temporal
