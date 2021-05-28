@@ -1,13 +1,13 @@
 Package: ScaleInMultilayerNetworks
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Package Accompanying: The Problem And Promise Of Scale In Multilayer Animal Social Networks.
+Version: 0.1.0
 Authors@R: 
     person(given = "Alec L.",
            family = "Robitaille",
            role = c("aut", "cre"),
            email = "robit.alec@gmail.com",
            comment = c(ORCID = "0000-0002-4706-1762"))
-Description: What the package does (one paragraph).
+Description: Scale remains a foundational concept in ecology. Spatial scale, for instance, has become a central consideration in the way we understand landscape ecology and animal space use. Meanwhile, scale-dependent social processes can range from fine-scale interactions to co-occurrence and overlapping home ranges. Furthermore, sociality can vary within and across seasons. Multilayer networks promise the explicit integration of the social, spatial and, temporal contexts. Given the complex interplay of sociality and animal space use in heterogeneous landscapes, there remains an important gap in our understanding of the influence of scale on animal social networks. Using an empirical case study, we discuss ways of considering social, spatial and, temporal scale in the context of multilayer caribou social networks. Effective integration of social and spatial processes, including biologically meaningful scales, within the context of animal social networks is an emerging area of research. We incorporate perspectives that link the social environment to spatial processes across scales in a multilayer context.
 License: GPL-3 | file LICENSE
 Encoding: UTF-8
 LazyData: true
