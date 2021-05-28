@@ -29,8 +29,11 @@
 #' # Spatial grouping with timegroup
 #' group_pts(DT, threshold = 5, id = 'ID',
 #'           coords = c('X', 'Y'), timegroup = 'timegroup')
+#'           
+#' # Pseudo-season
+#' DT[, season := sample(c(1, 2), .N, replace = TRUE)]
 #' 
-#' layer_neighbors(DT, 'id', splitBy = 'season')
+#' layer_neighbors(DT, 'ID', splitBy = 'season')
 layer_neighbors <- function(DT, id, splitBy = NULL) {
   cols <- c(id, 'group', splitBy)
   

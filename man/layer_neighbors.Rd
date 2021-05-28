@@ -36,6 +36,9 @@ group_times(DT, datetime = 'datetime', threshold = '20 minutes')
 # Spatial grouping with timegroup
 group_pts(DT, threshold = 5, id = 'ID',
           coords = c('X', 'Y'), timegroup = 'timegroup')
+          
+# Pseudo-season
+DT[, season := sample(c(1, 2), .N, replace = TRUE)]
 
-layer_neighbors(DT, 'id', splitBy = 'season')
+layer_neighbors(DT, 'ID', splitBy = 'season')
 }
