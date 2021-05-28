@@ -1,6 +1,6 @@
 Package: ScaleInMultilayerNetworks
 Title: Package Accompanying: The Problem And Promise Of Scale In Multilayer Animal Social Networks.
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: 
     person(given = "Alec L.",
            family = "Robitaille",
